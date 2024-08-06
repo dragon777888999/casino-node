@@ -189,24 +189,30 @@ const Header = () => {
   return (
     <>
       <header>
-        <img
-          src="/enTheme2/images/logo.png"
-          alt="GAMBOL LOGO"
-          style={{ height: "100px", width: "100px" }}
-        />
-        <img src="/enTheme2/images/title.png" alt="GAMBOL" className="title" />
+        <div className="header_div">
+          <img
+            src="/enTheme2/images/logo.png"
+            alt="GAMBOL LOGO"
+            style={{ height: "100px", width: "100px" }}
+          />
+          <img
+            src="/enTheme2/images/title.png"
+            alt="GAMBOL"
+            className="title"
+          />
 
-        {connected ? (
-          <UserInfo xrpAddress={xrpAddress} />
-        ) : (
-          <button
-            className="select-wallet-btn"
-            type="button"
-            onClick={() => setShowModal(true)}
-          >
-            Connect wallet
-          </button>
-        )}
+          {connected ? (
+            <UserInfo xrpAddress={xrpAddress} />
+          ) : (
+            <button
+              className="select-wallet-btn"
+              type="button"
+              onClick={() => setShowModal(true)}
+            >
+              Connect wallet
+            </button>
+          )}
+        </div>
       </header>
 
       {showModal ? (

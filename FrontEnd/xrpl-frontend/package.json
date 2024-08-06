@@ -12,6 +12,7 @@
     "@crossmarkio/sdk": "^0.3.7",
     "@gemwallet/api": "^3.7.0",
     "@nextui-org/react": "^2.4.6",
+    "@nice-xrpl/react-xrpl": "^4.0.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",

@@ -15,11 +15,15 @@ import {
 
 Modal.setAppElement("#root");
 const UserInfo = (xrpAddr) => {
-  console.log(xrpAddr.xrpAddress);
   const domain = window.location.host;
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [nickName, setNickName] = useState("");
+  const [desAddress, setDesAdress] = useState("");
+
+  useEffect(() => {
+    setDesAdress(xrpAddr.xrpAddress);
+  }, [xrpAddr.xrpAddress]);
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -163,7 +167,11 @@ const UserInfo = (xrpAddr) => {
         <img src="/enTheme2/images/avatar.png" alt="Profile Picture" />
       </div>
       {/* <WalletModal isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
-      <WalletModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+      <WalletModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        address={desAddress}
+      />
     </div>
   );
 };
