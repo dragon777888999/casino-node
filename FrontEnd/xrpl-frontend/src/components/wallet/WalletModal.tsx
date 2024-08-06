@@ -8,6 +8,9 @@ import Modal from "react-modal";
 // import { ComputeBudgetProgram, PublicKey, Transaction } from '@solana/web3.js';
 // import { createAssociatedTokenAccountIdempotentInstruction, createTransferInstruction, getAssociatedTokenAddressSync } from '@solana/spl-token';
 
+import { backendUrl } from "../../anchor/setup";
+import { accessToken, setAccessToken, siteInfo, setSiteInfo, userInfo, setUserInfo } from '../../anchor/global';
+
 interface WalletModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -74,59 +77,59 @@ const WalletModal: React.FC<WalletModalProps> = ({
   //     );
   //     const status = confirmResult.value;
   //   };
-  //   const onWithdraw = async () => {
-  //     try {
-  //       if (accessToken == "") return;
-  //       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           "X-Access-Token": accessToken,
-  //         },
-  //         body: JSON.stringify({
-  //           method: "WithdrawCoin",
-  //           chain: siteInfo.chain,
-  //           coinType: userInfo.selectedCoinType,
-  //           amount: withdrawAmount,
-  //         }),
-  //       });
-  //       const result = await response.json();
-  //       if (result.status == 0) {
-  //         window.alert("Withdraw success");
-  //       } else {
-  //         window.alert(result.msg);
-  //       }
-  //     } catch (error) {
-  //       window.alert(error);
-  //     }
-  //   };
-  //   useEffect(() => {
-  //     const fetchData = async () => {
-  //       try {
-  //         if (accessToken == "") return;
-  //         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             "X-Access-Token": accessToken,
-  //           },
-  //           body: JSON.stringify({
-  //             method: "GetDepositAddress",
-  //             chain: siteInfo.chain,
-  //             coinType: userInfo.selectedCoinType,
-  //           }),
-  //         });
-  //         const result = await response.json();
-  //         if (result.status == 0) {
-  //           setDepositAddress(result.depositAddress);
-  //         }
-  //       } catch (error) {
-  //         console.error("Fetch error:", error);
-  //       }
-  //     };
+    const onWithdraw = async () => {
+      try {
+        if (accessToken == "") return;
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Access-Token": accessToken,
+          },
+          body: JSON.stringify({
+            method: "WithdrawCoin",
+            chain: siteInfo.chain,
+            coinType: userInfo.selectedCoinType,
+            amount: withdrawAmount,
+          }),
+        });
+        const result = await response.json();
+        if (result.status == 0) {
+          window.alert("Withdraw success");
+        } else {
+          window.alert(result.msg);
+        }
+      } catch (error) {
+        window.alert(error);
+      }
+    };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (accessToken == "") return;
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Access-Token": accessToken,
+          },
+          body: JSON.stringify({
+            method: "GetDepositAddress",
+            chain: siteInfo.chain,
+            coinType: userInfo.selectedCoinType,
+          }),
+        });
+        const result = await response.json();
+        if (result.status == 0) {
+          setDepositAddress(result.depositAddress);
+        }
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
 
-  //     fetchData();
-  //   });
+    fetchData();
+  });
   return (
     <Modal
       id="modal"
@@ -145,14 +148,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
             <section>
               <p style={{ fontSize: `12px` }}>Available Balance</p>
               <p style={{ fontSize: `26px`, margin: 0 }}>
-                {/* {userInfo.balances[userInfo.selectedCoinType]}{" "}
-                {userInfo.selectedCoinType} */}
-                user.info Coin.type
+                {userInfo.balances[userInfo.selectedCoinType]}{" "}
+                {userInfo.selectedCoinType}
               </p>
             </section>
             <section>
               <p style={{ fontSize: `12px` }}>withdraw Amount</p>
               <input
+              style={{color:`black`}}
                 type="number"
                 id="withdrawAmount"
                 name="withdrawAmount"
@@ -166,8 +169,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
               />
             </section>
             <section>
-              <button>WITHDRAW</button>
-              {/* <button onClick={onWithdraw}>WITHDRAW</button> */}
+               <button onClick={onWithdraw}>WITHDRAW</button>
             </section>
           </div>
           <div className="deposit">

@@ -3,9 +3,9 @@ import React from "react";
 import UserInfo from "./UserInfo";
 import sdk from "@crossmarkio/sdk";
 import { useCookies } from "react-cookie";
-
-import { useEffect, useState } from "react";
 import { isInstalled, getPublicKey, signMessage } from "@gemwallet/api";
+import { useEffect, useState } from "react";
+
 import Home from "../pages/index";
 
 const Header = () => {
@@ -54,6 +54,7 @@ const Header = () => {
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
+
       const data = await payload.json();
 
       setQrcode(data.payload.refs.qr_png);
@@ -153,8 +154,7 @@ const Header = () => {
     const hashJson = await hashR.json();
     const hash = hashJson.hash;
     const id = await sdk.methods.signInAndWait(hash);
-    // console.log("1111111111");
-    console.log(id);
+    // console.log(id);
     const address = id.response.data.address;
     const pubkey = id.response.data.publicKey;
     const signature = id.response.data.signature;
@@ -186,7 +186,6 @@ const Header = () => {
       // console.log(xrpAddress);
     }
   };
-
   return (
     <>
       <header>

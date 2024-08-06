@@ -109,7 +109,18 @@ const UserInfo = (xrpAddr) => {
     }, 1000 * 10);
     return () => clearInterval(timer);
   });
-  const handleDisconnectCrossmark = async () => {};
+  const handleDisconnectCrossmark = async () => {
+    try {
+      localStorage.removeItem("xrpAddress");
+      localStorage.removeItem("connected");
+      localStorage.removeItem("token");
+      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      window.location.reload();
+      console.log("Wallet disconnected and information cleared");
+    } catch (error) {
+      console.error("Error disconnecting from Crossmark wallet:", error);
+    }
+  };
   return (
     <div className="subHeader">
       <div className="position: relative">

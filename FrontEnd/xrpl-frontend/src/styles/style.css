@@ -199,7 +199,7 @@ footer a {
 
 .footer-left {
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   font-size: 30px;
   color: rgb(255, 149, 21);
 }
@@ -590,7 +590,7 @@ footer a {
 .deposit input {
   border: 1px solid #bdbdbd;
   border-radius: 4px;
-  color: white;
+  color: black;
   padding-left: 10px;
 }
 .ReactModal__Content {
