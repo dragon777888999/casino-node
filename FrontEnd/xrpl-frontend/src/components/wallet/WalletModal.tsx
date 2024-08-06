@@ -36,17 +36,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [depositAmount, setDepositAmount] = useState(0);
   const [depositAddress, setDepositAddress] = useState("");
 
-  const [destinationAddress, setDestinationAddress] = useState("");
-  const [amount, setAmount] = useState();
   const [sending, setSending] = useState(false);
   const sendXRP = useSendXRP();
-  // const balance = useBalance();
-  useEffect(() => {
-    setDestinationAddress(address);
-  }, [address]);
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log("GetDepositAddress");
         if (accessToken == "") return;
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -76,7 +71,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const onDeposit = async () => {
     setSending(true);
     try {
-      const result = await sendXRP(destinationAddress, amount);
+      const result = await sendXRP(depositAddress, depositAmount);
       console.log("UI: ", result);
     } catch (e) {
       alert(e);
@@ -170,7 +165,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 id="depositAmount"
                 name="depositAmount"
                 placeholder=""
-                value={amount}
+                value={depositAmount}
+                onChange={(e) => {
+                  setDepositAmount(
+                    Number.parseFloat(e.target.value.toString())
+                  );
+                }}
               />
             </section>
             <section>
