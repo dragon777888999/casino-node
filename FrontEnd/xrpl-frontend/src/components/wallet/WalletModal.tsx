@@ -37,14 +37,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [depositAddress, setDepositAddress] = useState("");
 
   const [destinationAddress, setDestinationAddress] = useState("");
-  const [amount, setAmount] = useState();
+
   const [sending, setSending] = useState(false);
   const sendXRP = useSendXRP();
   // const balance = useBalance();
   useEffect(() => {
-    setDestinationAddress(address);
+    setDepositAddress(address);
   }, [address]);
   useEffect(() => {
+    console.log("dddddddddddddddddd");
     const fetchData = async () => {
       try {
         if (accessToken == "") return;
@@ -76,7 +77,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const onDeposit = async () => {
     setSending(true);
     try {
-      const result = await sendXRP(destinationAddress, amount);
+      const result = await sendXRP(depositAddress, depositAmount);
       console.log("UI: ", result);
     } catch (e) {
       alert(e);
@@ -155,12 +156,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
             <section>
               <p style={{ fontSize: `12px` }}>Deposit Address</p>
               <input
+                style={{ width: "265px", paddingLeft: "5px" }}
                 type="text"
                 id="depositAddress"
                 name="depositAddress"
                 placeholder=""
                 value={depositAddress}
-                readOnly
+                onChange={(e) => {
+                  setDepositAddress(e.target.value);
+                }}
               />
             </section>
             <section>
@@ -170,7 +174,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 id="depositAmount"
                 name="depositAmount"
                 placeholder=""
-                value={amount}
+                value={depositAmount}
+                onChange={(e) => {
+                  setDepositAmount(
+                    Number.parseFloat(e.target.value.toString())
+                  );
+                }}
               />
             </section>
             <section>

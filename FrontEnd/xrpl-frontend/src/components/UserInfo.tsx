@@ -41,7 +41,7 @@ const UserInfo = (xrpAddr) => {
   const onClickMenu = () => {
     openModal();
   };
-  const [selectedKey, setSelectedKey] = useState<string>("0 ROOG");
+  const [selectedKey, setSelectedKey] = useState<string>("");
 
   const handleSelect = async (key: string) => {
     setSelectedKey(key);
