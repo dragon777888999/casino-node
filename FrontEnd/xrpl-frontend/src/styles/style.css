@@ -199,7 +199,7 @@ footer a {
 
 .footer-left {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   font-size: 30px;
   color: rgb(255, 149, 21);
 }

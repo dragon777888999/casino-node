@@ -1,11 +1,8 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import Modal from "react-modal";
 import WalletModal from "./wallet/WalletModal";
-const backendUrl = "https://localhost:7020";
 import sdk from "@crossmarkio/sdk";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
-<<<<<<< Updated upstream
-=======
 import { backendUrl } from "../anchor/setup";
 import {
   accessToken,
@@ -15,12 +12,12 @@ import {
   userInfo,
   setUserInfo,
 } from "../anchor/global";
->>>>>>> Stashed changes
 
 Modal.setAppElement("#root");
-const UserInfo = (xrpAddress) => {
-  const xrpAdd = xrpAddress;
-  console.log(xrpAdd.xrpAddress);
+const UserInfo = (xrpAddr) => {
+  console.log(xrpAddr.xrpAddress);
+  const domain = window.location.host;
+
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [nickName, setNickName] = useState("");
   const openModal = () => {
@@ -45,9 +42,6 @@ const UserInfo = (xrpAddress) => {
   const handleSelect = async (key: string) => {
     setSelectedKey(key);
   };
-<<<<<<< Updated upstream
-
-=======
   const updateUserInfo = async () => {
     try {
       const response = await fetch(
@@ -60,7 +54,7 @@ const UserInfo = (xrpAddress) => {
         }
       );
       const result = await response.json();
-      console.log(result);
+      //        console.log(result);
       if (result.status == 0) {
         setUserInfo(result);
         setNickName(userInfo.nickName);
@@ -115,38 +109,14 @@ const UserInfo = (xrpAddress) => {
     }, 1000 * 10);
     return () => clearInterval(timer);
   });
-  const handleDisconnectCrossmark = async () => {
-    try {
-      if (xrpAddr.xrpAddress) {
-        // await client.disconnect();
-        console.log("Disconnected from Crossmark");
-      }
-
-      localStorage.removeItem("xrpAddress");
-      localStorage.removeItem("connected");
-      localStorage.removeItem("token");
-      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      window.location.reload();
-      console.log("Wallet disconnected and information cleared");
-    } catch (error) {
-      console.error("Error disconnecting from Crossmark wallet:", error);
-    }
-  };
->>>>>>> Stashed changes
+  const handleDisconnectCrossmark = async () => {};
   return (
     <div className="subHeader">
       <div className="position: relative">
         <div className="balance">
-          {/* <span> {nickName} </span> */}
-          <span>
-            {xrpAdd.xrpAddress.slice(0, 3)}...{xrpAdd.xrpAddress.slice(-3)}
-          </span>
+          {<span> {nickName} </span>}
           <SelectCoinTypeMenu
-<<<<<<< Updated upstream
-            items={0}
-=======
             items={userInfo.balances}
->>>>>>> Stashed changes
             selectedKey={selectedKey}
             onSelect={handleSelect}
           />
