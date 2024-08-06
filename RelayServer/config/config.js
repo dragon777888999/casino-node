@@ -19,6 +19,6 @@ module.exports = {
     Solana_ROOG: 9,
     Solana_USDC: 6,
     Oraichain_orai: 6,
-    Xrpl_xrpl: 3,
+    Xrpl_xrpl: 6,
   },
 };

@@ -8,6 +8,6 @@ const xrplController = require("../controllers/xrplController");
 
 router.post("/Oraichain/entry", oraiController.entry);
 router.post("/Solana/entry", solanaController.entry);
-router.post("/xrpl/entry", xrplController.entry);
+router.post("/Xrpl/entry", xrplController.entry);
 
 module.exports = router;

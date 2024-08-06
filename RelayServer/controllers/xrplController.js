@@ -21,11 +21,11 @@ exports.entry = async (req, res) => {
         res.send({ status: 1, msg: "Invalid method" });
     }
   } catch (err) {
-    console.log("----------------Input--------------------------------");
-    console.log(JSON.stringify(data));
-    console.log("----------------Error--------------------------------");
-    console.log(err);
-    console.log("-----------------------------------------------------");
+    // console.log("----------------Input--------------------------------");
+    // console.log(JSON.stringify(data));
+    // console.log("----------------Error--------------------------------");
+    // console.log(err);
+    // console.log("-----------------------------------------------------");
     res.send({ status: 1, err });
   }
 };
@@ -48,7 +48,8 @@ const createAddressFunc_xrpl = async (req, res) => {
 
 const getBlockFunc_xrpl = async (req, res) => {
   const data = req.body;
-  const ledgerIndex = data.ledgerIndex;
+  const chain = data.chain;
+  const ledgerIndex = data.height;
   const walletAddressList = data.walletAddressList;
   const tokenAddress2CoinType = data.tokenAddress2CoinType;
   const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
@@ -82,16 +83,19 @@ const getBlockFunc_xrpl = async (req, res) => {
       ) {
         const destination = tx.tx_json.Destination;
         const amount = tx.tx_json.DeliverMax;
-        const currency = amount.currency || "XRP";
-        const value = amount.value || amount / 1000000; // Convert drops to XRP if necessary
+        const issuer = amount.issuer || "";
+        if (!tokenAddress2CoinType || !tokenAddress2CoinType.hasOwnProperty(issuer))
+          continue;
+        const coinType = tokenAddress2CoinType[issuer];
+        const value = amount.value || amount / 10 ** config.digits[`${chain}_${coinType}`]; // Convert drops to XRP if necessary
 
-        // if (walletAddressList.includes(destination)) {
-        results.push({
-          walletAddress: destination,
-          tokenAddress: currency === "XRP" ? "" : amount.issuer,
-          amount: value,
-        });
-        // }
+        if (walletAddressList.includes(destination)) {
+          results.push({
+            walletAddress: destination,
+            tokenAddress: issuer,
+            amount: value,
+          });
+        }
       }
     }
 
@@ -113,44 +117,19 @@ const sendCoinFunc_xrpl = async (req, res) => {
 
   const amount = Math.floor(
     parseFloat(data.amount) *
-      10 ** config.digits[`${data.chain}_${data.coinType}`] -
-      fees
+    10 ** config.digits[`${data.chain}_${data.coinType}`] -
+    fees
   ).toString();
   try {
-    if (data.mnemonic && data.mnemonic.trim().length > 0) {
-      console.log("Using mnemonic for wallet creation");
-      const mnemonic = data.mnemonic.trim().toLowerCase();
-      console.log("Mnemonic:", mnemonic);
-
-      try {
-        wallet = xrpl.Wallet.fromMnemonic(mnemonic);
-        console.log("Address (from mnemonic):", wallet.address);
-        console.log("Seed (from mnemonic):", wallet.seed);
-      } catch (error) {
-        console.error("Error creating wallet from mnemonic:", error);
-        res.status(400).send({ status: 1, error: "Invalid mnemonic" });
-        return;
-      }
-    } else if (data.seed && data.seed.trim().length > 0) {
+if (data.mnemonic && data.mnemonic.trim().length > 0) {
       console.log("Using seed for wallet creation");
       try {
-        wallet = xrpl.Wallet.fromSeed(data.seed.trim());
+        wallet = xrpl.Wallet.fromSeed(data.mnemonic.trim());
         console.log("Address (from seed):", wallet.address);
         console.log("Seed (from seed):", wallet.seed);
       } catch (error) {
         console.error("Error creating wallet from seed:", error);
         res.status(400).send({ status: 1, error: "Invalid seed" });
-        return;
-      }
-    } else if (data.entropy && data.entropy.trim().length > 0) {
-      console.log("Using entropy for wallet creation");
-      try {
-        wallet = xrpl.Wallet.fromEntropy(data.entropy.trim());
-        console.log("Address (from entropy):", wallet.address);
-        console.log("Seed (from entropy):", wallet.seed);
-      } catch (error) {
-        console.error("Error creating wallet from entropy:", error);
-        res.status(400).send({ status: 1, error: "Invalid entropy" });
         return;
       }
     } else {
@@ -164,6 +143,55 @@ const sendCoinFunc_xrpl = async (req, res) => {
     console.error("Unexpected error:", error);
     res.status(500).send({ status: 1, error: "An unexpected error occurred." });
   }
+
+  // try {
+  //   if (data.mnemonic && data.mnemonic.trim().length > 0) {
+  //     console.log("Using mnemonic for wallet creation");
+  //     const mnemonic = data.mnemonic.trim().toLowerCase();
+  //     console.log("Mnemonic:", mnemonic);
+
+  //     try {
+  //       wallet = xrpl.Wallet.fromMnemonic(mnemonic);
+  //       console.log("Address (from mnemonic):", wallet.address);
+  //       console.log("Seed (from mnemonic):", wallet.seed);
+  //     } catch (error) {
+  //       console.error("Error creating wallet from mnemonic:", error);
+  //       res.status(400).send({ status: 1, error: "Invalid mnemonic" });
+  //       return;
+  //     }
+  //   } else if (data.seed && data.seed.trim().length > 0) {
+  //     console.log("Using seed for wallet creation");
+  //     try {
+  //       wallet = xrpl.Wallet.fromSeed(data.seed.trim());
+  //       console.log("Address (from seed):", wallet.address);
+  //       console.log("Seed (from seed):", wallet.seed);
+  //     } catch (error) {
+  //       console.error("Error creating wallet from seed:", error);
+  //       res.status(400).send({ status: 1, error: "Invalid seed" });
+  //       return;
+  //     }
+  //   } else if (data.entropy && data.entropy.trim().length > 0) {
+  //     console.log("Using entropy for wallet creation");
+  //     try {
+  //       wallet = xrpl.Wallet.fromEntropy(data.entropy.trim());
+  //       console.log("Address (from entropy):", wallet.address);
+  //       console.log("Seed (from entropy):", wallet.seed);
+  //     } catch (error) {
+  //       console.error("Error creating wallet from entropy:", error);
+  //       res.status(400).send({ status: 1, error: "Invalid entropy" });
+  //       return;
+  //     }
+  //   } else {
+  //     console.error("No valid mnemonic or seed provided.");
+  //     res
+  //       .status(400)
+  //       .send({ status: 1, error: "No valid mnemonic or seed provided." });
+  //     return;
+  //   }
+  // } catch (error) {
+  //   console.error("Unexpected error:", error);
+  //   res.status(500).send({ status: 1, error: "An unexpected error occurred." });
+  // }
 
   try {
     await client.connect();
