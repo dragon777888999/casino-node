@@ -4,15 +4,26 @@ import WalletModal from "./wallet/WalletModal";
 import sdk from "@crossmarkio/sdk";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { backendUrl } from "../anchor/setup";
-import { accessToken, setAccessToken, siteInfo, setSiteInfo, userInfo, setUserInfo } from '../anchor/global';
+import {
+  accessToken,
+  setAccessToken,
+  siteInfo,
+  setSiteInfo,
+  userInfo,
+  setUserInfo,
+} from "../anchor/global";
 
 Modal.setAppElement("#root");
 const UserInfo = (xrpAddr) => {
-  console.log(xrpAddr.xrpAddress);
   const domain = window.location.host;
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [nickName, setNickName] = useState("");
+  const [desAddress, setDesAdress] = useState("");
+
+  useEffect(() => {
+    setDesAdress(xrpAddr.xrpAddress);
+  }, [xrpAddr.xrpAddress]);
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -37,12 +48,15 @@ const UserInfo = (xrpAddr) => {
   };
   const updateUserInfo = async () => {
     try {
-      const response = await fetch(`${backendUrl}/Account/UserInfo?domain=${domain}`, {
-        method: 'GET',
-        headers: {
-          'X-Access-Token': accessToken
-        },
-      });
+      const response = await fetch(
+        `${backendUrl}/Account/UserInfo?domain=${domain}`,
+        {
+          method: "GET",
+          headers: {
+            "X-Access-Token": accessToken,
+          },
+        }
+      );
       const result = await response.json();
       //        console.log(result);
       if (result.status == 0) {
@@ -53,23 +67,27 @@ const UserInfo = (xrpAddr) => {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
   useEffect(() => {
     const handleWalletConnect = async () => {
       if (xrpAddr.xrpAddress) {
         try {
           console.log("############  Connect wallet   ##############");
-          if (siteInfo.agentCode == '') {
-            const response1 = await fetch(`${backendUrl}/Account/SiteInfo?domain=${domain}`);
+          if (siteInfo.agentCode == "") {
+            const response1 = await fetch(
+              `${backendUrl}/Account/SiteInfo?domain=${domain}`
+            );
             const result1 = await response1.json();
             console.log(result1);
             setSiteInfo(result1);
           }
 
-          const response = await fetch(`${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo.agentCode}&userCode=${xrpAddr.xrpAddress}`);
+          const response = await fetch(
+            `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo.agentCode}&userCode=${xrpAddr.xrpAddress}`
+          );
 
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("Network response was not ok");
           }
           const responseBody = await response.json();
           const token = responseBody.token;
@@ -95,13 +113,25 @@ const UserInfo = (xrpAddr) => {
     }, 1000 * 10);
     return () => clearInterval(timer);
   });
+  const handleDisconnectCrossmark = async () => {
+    try {
+      localStorage.removeItem("xrpAddress");
+      localStorage.removeItem("connected");
+      localStorage.removeItem("token");
+      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      window.location.reload();
+      console.log("Wallet disconnected and information cleared");
+    } catch (error) {
+      console.error("Error disconnecting from Crossmark wallet:", error);
+    }
+  };
   return (
     <div className="subHeader">
       <div className="position: relative">
         <div className="balance">
           {<span> {nickName} </span>}
           <SelectCoinTypeMenu
-            items={userInfo.balances} 
+            items={userInfo.balances}
             selectedKey={selectedKey}
             onSelect={handleSelect}
           />
@@ -128,7 +158,7 @@ const UserInfo = (xrpAddr) => {
             <p> MANAGE BALANCE </p>
             <img src="/enTheme2/images/arrowRight.png" />
           </button>
-          <button>
+          <button onClick={handleDisconnectCrossmark}>
             <p> DISCONNECT </p>
           </button>
         </div>
@@ -137,7 +167,11 @@ const UserInfo = (xrpAddr) => {
         <img src="/enTheme2/images/avatar.png" alt="Profile Picture" />
       </div>
       {/* <WalletModal isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
-      <WalletModal isOpen={modalIsOpen} onRequestClose={closeModal} />
+      <WalletModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        address={desAddress}
+      />
     </div>
   );
 };
