@@ -5,7 +5,7 @@ import sdk from "@crossmarkio/sdk";
 import { useCookies } from "react-cookie";
 
 import { useEffect, useState } from "react";
-
+import { isInstalled, getPublicKey, signMessage } from "@gemwallet/api";
 import Home from "../pages/index";
 
 const Header = () => {
@@ -44,7 +44,108 @@ const Header = () => {
           }
         });
     }
+    const getDataFromLocalStorage = (key) => {
+      const data = localStorage.getItem(key);
+      return data ? data : null;
+    };
+    setConnected(getDataFromLocalStorage("connected"));
+    setXrpAddress(getDataFromLocalStorage("xrpAddress"));
   }, []);
+  const getQrCode = async () => {
+    try {
+      const payload = await fetch("/api/auth/xumm/createpayload");
+      const data = await payload.json();
+
+      setQrcode(data.payload.refs.qr_png);
+      setJumpLink(data.payload.next.always);
+
+      if (isMobile) {
+        //open in new tab
+        window.open(data.payload.next.always, "_blank");
+      }
+
+      const ws = new WebSocket(data.payload.refs.websocket_status);
+
+      ws.onmessage = async (e) => {
+        let responseObj = JSON.parse(e.data);
+        if (responseObj.signed !== null && responseObj.signed !== undefined) {
+          const payload = await fetch(
+            `/api/auth/xumm/getpayload?payloadId=${responseObj.payload_uuidv4}`
+          );
+          const payloadJson = await payload.json();
+
+          const hex = payloadJson.payload.response.hex;
+          const checkSign = await fetch(`/api/auth/xumm/checksign?hex=${hex}`);
+          const checkSignJson = await checkSign.json();
+          setXrpAddress(checkSignJson.xrpAddress);
+          if (enableJwt) {
+            setCookie("jwt", checkSignJson.token, { path: "/" });
+          }
+          setShowModal(false);
+          setConnected(true);
+          localStorage.setItem("xrpAddress", address);
+          localStorage.setItem("connected", "true");
+        } else {
+          console.log(responseObj);
+        }
+      };
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleConnectGem = () => {
+    isInstalled().then((response) => {
+      if (response.result.isInstalled) {
+        getPublicKey().then((response) => {
+          // console.log(`${response.result?.address} - ${response.result?.publicKey}`);
+          const pubkey = response.result?.publicKey;
+          //fetch nonce from /api/gem/nonce?pubkey=pubkey
+          fetch(
+            `/api/auth/gem/nonce?pubkey=${pubkey}&address=${response.result?.address}`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              const nonceToken = data.token;
+              const opts = {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${nonceToken}`,
+                },
+              };
+              signMessage(nonceToken).then((response) => {
+                const signedMessage = response.result?.signedMessage;
+                if (signedMessage !== undefined) {
+                  //post at /api/gem/checksign?signature=signature
+                  fetch(
+                    `/api/auth/gem/checksign?signature=${signedMessage}`,
+                    opts
+                  )
+                    .then((response) => response.json())
+                    .then((data) => {
+                      const { token, address } = data;
+                      if (token === undefined) {
+                        console.log("error");
+                        return;
+                      }
+                      setXrpAddress(address);
+                      setShowModal(false);
+                      setConnected(true);
+                      localStorage.setItem("xrpAddress", address);
+                      localStorage.setItem("token", token);
+                      localStorage.setItem("connected", "true");
+                      if (enableJwt) {
+                        setCookie("jwt", token, { path: "/" });
+                      }
+                    });
+                }
+              });
+            });
+        });
+      }
+    });
+  };
   const handleConnectCrossmark = async () => {
     //sign in first, then generate nonce
     const hashUrl = "/api/auth/crossmark/hash";
@@ -52,7 +153,8 @@ const Header = () => {
     const hashJson = await hashR.json();
     const hash = hashJson.hash;
     const id = await sdk.methods.signInAndWait(hash);
-    // console.log(id);
+    // console.log("1111111111");
+    console.log(id);
     const address = id.response.data.address;
     const pubkey = id.response.data.publicKey;
     const signature = id.response.data.signature;
@@ -79,9 +181,12 @@ const Header = () => {
       }
       setShowModal(false);
       setConnected(true);
+      localStorage.setItem("xrpAddress", address);
+      localStorage.setItem("connected", "true");
       // console.log(xrpAddress);
     }
   };
+
   return (
     <>
       <header>
@@ -140,6 +245,7 @@ const Header = () => {
                         className="wallet-adapter-button"
                         tabIndex={0}
                         type="button"
+                        onClick={getQrCode}
                       >
                         <i className="wallet-adapter-button-start-icon">
                           <img></img>
@@ -153,6 +259,7 @@ const Header = () => {
                         className="wallet-adapter-button"
                         tabIndex={1}
                         type="button"
+                        onClick={handleConnectGem}
                       >
                         <i className="wallet-adapter-button-start-icon">
                           <img></img>
