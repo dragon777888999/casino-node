@@ -134,7 +134,7 @@ const UserInfo = (xrpAddr) => {
 
   return (
     <div className="subHeader">
-      <div className="position: relative">
+      <div className="position: relative" onMouseLeave={hideMenu}>
         <div className="balance">
           {<span> {nickName} </span>}
           <SelectCoinTypeMenu
