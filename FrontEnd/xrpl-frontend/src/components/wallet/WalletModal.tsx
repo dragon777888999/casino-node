@@ -39,6 +39,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [sending, setSending] = useState(false);
   const sendXRP = useSendXRP();
   useEffect(() => {
+    console.log("dddddddddddddddddd");
     const fetchData = async () => {
       try {
         console.log("GetDepositAddress");
@@ -150,12 +151,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
             <section>
               <p style={{ fontSize: `12px` }}>Deposit Address</p>
               <input
+                style={{ width: "265px", paddingLeft: "5px" }}
                 type="text"
                 id="depositAddress"
                 name="depositAddress"
                 placeholder=""
                 value={depositAddress}
-                readOnly
+                onChange={(e) => {
+                  setDepositAddress(e.target.value);
+                }}
               />
             </section>
             <section>
