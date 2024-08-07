@@ -20,17 +20,19 @@ const UserInfo = (xrpAddr) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [nickName, setNickName] = useState("");
   const [desAddress, setDesAdress] = useState("");
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [selectedKey, setSelectedKey] = useState<string>("");
 
   useEffect(() => {
     setDesAdress(xrpAddr.xrpAddress);
   }, [xrpAddr.xrpAddress]);
+
   const openModal = () => {
     setModalIsOpen(true);
   };
   const closeModal = () => {
     setModalIsOpen(false);
   };
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const showMenu = () => {
     setIsMenuVisible(true);
@@ -41,11 +43,11 @@ const UserInfo = (xrpAddr) => {
   const onClickMenu = () => {
     openModal();
   };
-  const [selectedKey, setSelectedKey] = useState<string>("");
 
   const handleSelect = async (key: string) => {
     setSelectedKey(key);
   };
+
   const updateUserInfo = async () => {
     try {
       const response = await fetch(
@@ -68,6 +70,7 @@ const UserInfo = (xrpAddr) => {
       console.log(err);
     }
   };
+
   useEffect(() => {
     const handleWalletConnect = async () => {
       if (xrpAddr.xrpAddress) {
@@ -89,6 +92,7 @@ const UserInfo = (xrpAddr) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");
           }
+
           const responseBody = await response.json();
           const token = responseBody.token;
           if (token) {
@@ -107,12 +111,14 @@ const UserInfo = (xrpAddr) => {
 
     handleWalletConnect();
   }, [xrpAddr.xrpAddress]);
+
   useEffect(() => {
     const timer = setInterval(async () => {
       await updateUserInfo();
     }, 1000 * 10);
     return () => clearInterval(timer);
-  });
+  }, []);
+
   const handleDisconnectCrossmark = async () => {
     try {
       localStorage.removeItem("xrpAddress");
@@ -125,6 +131,7 @@ const UserInfo = (xrpAddr) => {
       console.error("Error disconnecting from Crossmark wallet:", error);
     }
   };
+
   return (
     <div className="subHeader">
       <div className="position: relative">
@@ -135,6 +142,7 @@ const UserInfo = (xrpAddr) => {
             selectedKey={selectedKey}
             onSelect={handleSelect}
           />
+
           {/* <div className="deposit-btn" id="openModalBtn">{balance} {siteInfo.coinType}</div> */}
           <button className="arrowDown" id="arrowBtn" onClick={showMenu}>
             <img
@@ -153,6 +161,7 @@ const UserInfo = (xrpAddr) => {
           <button
             onClick={() => {
               onClickMenu();
+              hideMenu();
             }}
           >
             <p> MANAGE BALANCE </p>

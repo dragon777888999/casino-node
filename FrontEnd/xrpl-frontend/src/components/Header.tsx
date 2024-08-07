@@ -44,13 +44,16 @@ const Header = () => {
           }
         });
     }
+
     const getDataFromLocalStorage = (key) => {
       const data = localStorage.getItem(key);
       return data ? data : null;
     };
+
     setConnected(getDataFromLocalStorage("connected"));
     setXrpAddress(getDataFromLocalStorage("xrpAddress"));
   }, []);
+
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
@@ -209,7 +212,7 @@ const Header = () => {
               type="button"
               onClick={() => setShowModal(true)}
             >
-              Connect wallet
+              <p> Connect wallet</p>
             </button>
           )}
         </div>

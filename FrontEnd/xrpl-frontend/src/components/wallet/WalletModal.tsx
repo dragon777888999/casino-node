@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  useAnchorWallet,
-  useConnection,
-  useWallet,
-} from "@solana/wallet-adapter-react";
+
 import Modal from "react-modal";
 import {
   useBalance,
@@ -20,6 +16,7 @@ import {
   userInfo,
   setUserInfo,
 } from "../../anchor/global";
+import Image from "next/image";
 
 interface WalletModalProps {
   address: string;
@@ -122,7 +119,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
         <div className="modal-content">
           <div>
             <p>MANAGE BALANCE</p>
-            <button onClick={onRequestClose}>BACK</button>
+            <button onClick={onRequestClose}>
+              <img
+                src="/enTheme2/images/arrowleft.png"
+                alt="arrow"
+                width={40}
+              />
+            </button>
           </div>
           <div className="withdraw">
             <section>
@@ -149,7 +152,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
               />
             </section>
             <section>
-              <button onClick={onWithdraw}>WITHDRAW</button>
+              <button className="balance" onClick={onWithdraw}>
+                WITHDRAW
+              </button>
             </section>
           </div>
           <div className="deposit">
@@ -183,7 +188,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
               />
             </section>
             <section>
-              <button onClick={onDeposit}>DEPOSIT</button>
+              <button className="balance" onClick={onDeposit}>
+                DEPOSIT
+              </button>
             </section>
           </div>
         </div>

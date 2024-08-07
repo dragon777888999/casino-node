@@ -25,12 +25,14 @@
     opacity: 1;
   }
 }
+
 header {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px 80px;
   background-color: rgb(80, 80, 80);
-  background-image: linear-gradient(#8266ff, #291439);
+  /* background-image: linear-gradient(#6c499b, #170227); */
+  background-image: linear-gradient(#1b062c, #321657, #130221);
 }
 .header_div {
   display: flex;
@@ -51,13 +53,14 @@ body {
   background-color: rgb(25, 25, 25);
 }
 #root {
-  background-color: rgb(25, 25, 25);
+  background-image: radial-gradient(#26255f 5%, #080053 15%, #14011e 60%);
+  /* background-color: rgb(25, 25, 25); */
 }
 
 .container {
   margin: 0 auto;
   padding: 20px 80px;
-  background-color: rgb(25, 25, 25);
+  /* background-color: rgb(25, 25, 25); */
 }
 @media only screen and (max-width: 600px) {
   .container {
@@ -118,8 +121,23 @@ body {
   width: 30%;
   height: 2px;
 }
+@keyframes title_color {
+  0% {
+    color: rgb(255, 149, 21);
+    font-size: 35px;
+  }
 
+  50% {
+    color: green;
+    font-size: 37px;
+  }
+  100% {
+    color: rgb(255, 149, 21);
+  }
+}
 .bannerDownText {
+  /* text-shadow: rgb(1, 104, 239) 1px 0 10px; */
+  /* text-shadow: 1px 1px 2px rgb(255, 0, 225), 0 0 1em blue, 0 0 0.2em blue; */
   font-size: 35px;
   color: rgb(255, 149, 21);
   font-style: normal;
@@ -127,6 +145,10 @@ body {
   line-height: 60px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  animation-name: title_color;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 .game-grid {
   display: grid;
@@ -143,6 +165,7 @@ body {
 .title {
   height: 120px;
   width: 500px;
+  margin-left: 5%;
 }
 .game:hover {
   transform: scale(1.1);
@@ -259,8 +282,9 @@ footer a {
   overflow-y: auto;
 }
 
-.select-wallet-btn {
+/* .select-wallet-btn {
   background-color: rgb(255, 149, 21) !important;
+  background-image: linear-gradient(rgb(180 98 0), #e57904, #492600);
   color: #fff;
   font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -268,13 +292,87 @@ footer a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   height: 48px;
   line-height: 48px;
-  padding: 0 24px;
+  padding: 0 15px;
   border-radius: 4px;
+} */
+/* From Uiverse.io by mrhyddenn */
+.select-wallet-btn {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
+
+.select-wallet-btn:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.select-wallet-btn:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.select-wallet-btn::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.select-wallet-btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
 .wallet-adapter-modal-wrapper {
   box-sizing: border-box;
   position: relative;
@@ -338,7 +436,7 @@ footer a {
   right: 18px;
   padding: 12px;
   cursor: pointer;
-  background-color: rgb(255, 149, 21);
+  /* background-color: rgb(255, 149, 21); */
   border: none;
   border-radius: 50%;
 }
@@ -397,19 +495,98 @@ footer a {
   border-radius: 5px;
   width: 220px;
   z-index: 5;
-  background: #ff8400;
-  /* background: linear-gradient(180deg, #140805 0%, #633275 100%); */
+  display: block;
+  /* background: #ff8400;
+  background: linear-gradient(180deg, #140805 0%, #633275 100%); */
 }
 
-.menu button {
+/* .menu button {
   display: flex;
   justify-content: space-between;
   padding: 8px 14px;
   background: rgba(255, 229, 172, 0.09);
+  /* background-image: linear-gradient(rgb(180 98 0), #d77001, #a96011); */
+/* background: linear-gradient(138deg, #ff8500a6 8.29%, #2002318f 109.96%);
   align-items: center;
   gap: 5px;
   width: 100%;
   border: none;
+} */
+.menu button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 10px 0px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.menu button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.menu button:hover::before {
+  -webkit-animation: bal02 0.5s 0s linear;
+  -moz-animation: bal02 0.5s 0s linear;
+  animation: bal02 0.5s 0s linear;
+}
+
+.menu button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes bal02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.menu button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
 
 .menu button p {
@@ -449,15 +626,165 @@ footer a {
 .dropdown-menu .selected {
   font-weight: bold;
 }
-.balance {
+/* .balance {
   display: flex;
   align-items: center;
   background-color: #ff8400;
+  background-image: linear-gradient(rgb(139 78 6), #d2750a, #603302);
   border-radius: 4px;
   padding: 6px 10px;
 
   font-family: oswald;
   color: #161b2a;
+} */
+.balance {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 0px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.balance:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.balance:hover::before {
+  -webkit-animation: bal02 0.5s 0s linear;
+  -moz-animation: bal02 0.5s 0s linear;
+  animation: bal02 0.5s 0s linear;
+}
+
+.balance::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes bal02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.balance:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.withdraw_btn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 0px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.withdraw_btn:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.withdraw_btn:hover::before {
+  -webkit-animation: with02 0.5s 0s linear;
+  -moz-animation: with02 0.5s 0s linear;
+  animation: with02 0.5s 0s linear;
+}
+
+.withdraw_btn::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes with02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.withdraw_btn:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
 
 .balance span {
@@ -484,10 +811,12 @@ footer a {
   width: 80%;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 8px rgba(100, 10, 10, 0.7);
+  border: 2px solid #0f1b5c;
   color: white;
   position: relative;
-  background-color: #5c4795;
+  background-color: black;
+  opacity: 0.85;
   z-index: 1;
 }
 
@@ -505,16 +834,21 @@ footer a {
   margin: 0;
 }
 .modal-content button {
-  border-radius: 20.5px;
-  border: 1px solid #454545;
-  background: rgb(255, 149, 21);
-  color: #242424;
+  /* border-radius: 50px; */
+  /* border: 1px solid #f28100; */
+  /* background: rgb(255, 149, 21); */
+  color: #f3f3f3;
   font-size: 23px;
   padding: 4px 12px;
   text-align: center;
   font-weight: 600;
 }
-
+.modal-content button:first-child:hover {
+  /* background: linear-gradient(151deg, #6b3800 8.29%, #aa5e0e 109.96%); */
+}
+.modal-content button img {
+  filter: invert(1);
+}
 @media only screen and (max-width: 1100px) {
   .title {
     display: none;
@@ -529,7 +863,7 @@ footer a {
   justify-content: center;
 }
 .withdraw {
-  background: linear-gradient(91deg, #8b47a5 8.29%, #502859 109.96%);
+  background: linear-gradient(358deg, #361145 8.29%, #100b13 109.96%);
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -538,7 +872,9 @@ footer a {
   margin-bottom: 10px;
   display: block !important;
 }
-
+.withdraw button {
+  font-size: 17px;
+}
 .withdraw div {
   color: white;
   display: flex;
@@ -546,22 +882,15 @@ footer a {
   justify-content: center;
 }
 
-.withdraw button {
-  border-radius: 3px;
-  border: none;
-  background-color: rgb(255, 149, 21);
-  color: #161b2a;
-  font-weight: 600;
-  font-size: 17px;
-  padding: 4px 30px;
-  font-weight: 600;
-}
 .deposit {
-  background: linear-gradient(91deg, #8b47a5 8.29%, #502859 109.96%);
+  background: linear-gradient(358deg, #361145 8.29%, #100b13 109.96%);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   padding: 50px 40px 10px 40px;
   border-radius: 10px;
   display: block !important;
+}
+.deposit button {
+  font-size: 17px;
 }
 .deposit-btn {
   background-color: #161b2a;
@@ -571,17 +900,6 @@ footer a {
   cursor: pointer;
   border-radius: 3px;
   font-weight: 800;
-}
-.deposit button {
-  border-radius: 3px;
-  border: none;
-  background-color: rgb(255, 149, 21);
-  color: #161b2a;
-  font-weight: 600;
-  font-size: 17px;
-  padding: 4px 30px;
-  margin-block: 10px;
-  font-weight: 600;
 }
 
 .deposit label {
