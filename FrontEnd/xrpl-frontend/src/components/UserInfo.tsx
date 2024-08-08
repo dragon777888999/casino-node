@@ -159,6 +159,7 @@ const UserInfo = (xrpAddr) => {
           onMouseLeave={hideMenu}
         >
           <button
+            className="menu-button"
             onClick={() => {
               onClickMenu();
               hideMenu();
@@ -167,7 +168,7 @@ const UserInfo = (xrpAddr) => {
             <p> MANAGE BALANCE </p>
             <img src="/enTheme2/images/arrowRight.png" />
           </button>
-          <button onClick={handleDisconnectCrossmark}>
+          <button className="menu-button2" onClick={handleDisconnectCrossmark}>
             <p> DISCONNECT </p>
           </button>
         </div>

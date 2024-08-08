@@ -20,6 +20,7 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [enableJwt, setEnableJwt] = useState(false);
   const [retrieved, setRetrieved] = useState(false);
+  const [walleteType, setWalletType] = useState("");
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
 
   useEffect(() => {
@@ -52,6 +53,7 @@ const Header = () => {
 
     setConnected(getDataFromLocalStorage("connected"));
     setXrpAddress(getDataFromLocalStorage("xrpAddress"));
+    setWalletType(getDataFromLocalStorage("walleteType"));
   }, []);
 
   const getQrCode = async () => {
@@ -89,6 +91,7 @@ const Header = () => {
           setConnected(true);
           localStorage.setItem("xrpAddress", address);
           localStorage.setItem("connected", "true");
+          localStorage.setItem("walleteType", "xum");
         } else {
           console.log(responseObj);
         }
@@ -139,6 +142,7 @@ const Header = () => {
                       localStorage.setItem("xrpAddress", address);
                       localStorage.setItem("token", token);
                       localStorage.setItem("connected", "true");
+                      localStorage.setItem("walleteType", "gem");
                       if (enableJwt) {
                         setCookie("jwt", token, { path: "/" });
                       }
@@ -186,6 +190,7 @@ const Header = () => {
       setConnected(true);
       localStorage.setItem("xrpAddress", address);
       localStorage.setItem("connected", "true");
+      localStorage.setItem("walleteType", "cross");
       // console.log(xrpAddress);
     }
   };

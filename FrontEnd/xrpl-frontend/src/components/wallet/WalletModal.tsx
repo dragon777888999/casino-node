@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
-
+import sdk from "@crossmarkio/sdk";
+import { isConnected, sendPayment } from "@gemwallet/api";
 import Modal from "react-modal";
-import {
-  useBalance,
-  useSendXRP,
-  ReserveRequirement,
-} from "@nice-xrpl/react-xrpl";
-
+const { XummSdk } = require("xumm-sdk");
 import { backendUrl } from "../../anchor/setup";
 import {
   accessToken,
@@ -16,13 +12,16 @@ import {
   userInfo,
   setUserInfo,
 } from "../../anchor/global";
-import Image from "next/image";
 
 interface WalletModalProps {
   address: string;
   isOpen: boolean;
   onRequestClose: () => void;
 }
+const getDataFromLocalStorage = (key) => {
+  const data = localStorage.getItem(key);
+  return data ? data : null;
+};
 
 const WalletModal: React.FC<WalletModalProps> = ({
   address,
@@ -32,17 +31,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [withdrawAmount, setWithdrawAmount] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
   const [depositAddress, setDepositAddress] = useState("");
+  const [qrcode, setQrcode] = useState("");
+  const [jumpLink, setJumpLink] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
 
-  const [destinationAddress, setDestinationAddress] = useState("");
-
-  const [sending, setSending] = useState(false);
-  const sendXRP = useSendXRP();
-  // const balance = useBalance();
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
     setDepositAddress(address);
   }, [address]);
   useEffect(() => {
-    console.log("dddddddddddddddddd");
     const fetchData = async () => {
       try {
         if (accessToken == "") return;
@@ -72,14 +71,49 @@ const WalletModal: React.FC<WalletModalProps> = ({
   }, []);
 
   const onDeposit = async () => {
-    setSending(true);
+    // const walletType = getDataFromLocalStorage("walleteType");
     try {
-      const result = await sendXRP(depositAddress, depositAmount);
-      console.log("UI: ", result);
+      if (getDataFromLocalStorage("walleteType") == "cross") {
+        sdk.sync.signAndSubmit({
+          TransactionType: "Payment",
+          Destination: depositAddress,
+          Amount: (depositAmount * 6).toString(), // XRP in drops
+        });
+      } else if (getDataFromLocalStorage("walleteType") == "gem") {
+        const payment = {
+          Amount: (depositAmount * 6).toString(),
+          destination: depositAddress,
+        };
+
+        sendPayment(payment).then((trHash) => {
+          console.log("Transaction Hash: ", trHash);
+        });
+      } else {
+        const xumm = new XummSdk(
+          process.env.XUMM_KEY,
+          process.env.XUMM_KEY_SECRET
+        );
+        const Payload = {
+          txjson: {
+            TransactionType: "Payment",
+            Amount: (depositAmount * 6).toString(),
+            destination: depositAddress,
+          },
+        };
+        const payload = await xumm.payload.create(Payload, true);
+        const data = await payload.json();
+
+        setQrcode(data.payload.refs.qr_png);
+        setJumpLink(data.payload.next.always);
+
+        if (isMobile) {
+          //open in new tab
+          window.open(data.payload.next.always, "_blank");
+        }
+      }
     } catch (e) {
       alert(e);
     }
-    setSending(false);
   };
   const onWithdraw = async () => {
     try {
