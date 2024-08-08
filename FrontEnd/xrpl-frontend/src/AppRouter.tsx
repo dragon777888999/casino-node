@@ -7,13 +7,15 @@ import Footer from "./components/Footer";
 const AppRouter = () => {
   return (
     <>
-      <Header />
-      <div className="container">
-        <Link href="/">
-          <MainPage />
-        </Link>
+      <div className="body_color">
+        <Header />
+        <div className="container">
+          <Link href="/">
+            <MainPage />
+          </Link>
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
     </>
   );
