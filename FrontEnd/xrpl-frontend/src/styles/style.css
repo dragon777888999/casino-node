@@ -56,7 +56,11 @@ body {
   background-image: radial-gradient(#26255f 5%, #080053 15%, #14011e 60%);
   /* background-color: rgb(25, 25, 25); */
 }
-
+.qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   margin: 0 auto;
   padding: 20px 80px;

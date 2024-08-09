@@ -33,6 +33,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,17 +66,24 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const onDeposit = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
+    setIsHidden(false);
     console.log(process.env.XUMM_KEY);
     try {
       if (getDataFromLocalStorage("walleteType") == "cross") {
         sdk.sync.signAndSubmit({
           TransactionType: "Payment",
           Destination: depositAddress,
-          Amount: (depositAmount * (10 ** siteInfo.digitsMap[userInfo.selectedCoinType])).toString(), // XRP in drops
+          Amount: (
+            depositAmount *
+            10 ** siteInfo.digitsMap[userInfo.selectedCoinType]
+          ).toString(), // XRP in drops
         });
       } else if (getDataFromLocalStorage("walleteType") == "gem") {
         const payment = {
-          amount: (depositAmount * (10 ** siteInfo.digitsMap[userInfo.selectedCoinType])).toString(),
+          amount: (
+            depositAmount *
+            10 ** siteInfo.digitsMap[userInfo.selectedCoinType]
+          ).toString(),
           destination: depositAddress,
         };
 
@@ -83,17 +91,29 @@ const WalletModal: React.FC<WalletModalProps> = ({
           console.log("Transaction Hash: ", trHash);
         });
       } else {
-        const payload = await fetch(`/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`);
+        const payload = await fetch(
+          `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`
+        );
         const data = await payload.json();
 
         setQrcode(data.payload.refs.qr_png);
         setJumpLink(data.payload.next.always);
 
-        //if (isMobile) 
-        {
-          //open in new tab
-          window.open(data.payload.next.always, "_blank");
-        }
+        const ws = new WebSocket(data.payload.refs.websocket_status);
+        ws.onmessage = async (e) => {
+          let responseObj = JSON.parse(e.data);
+          if (responseObj.signed !== null && responseObj.signed !== undefined) {
+            if (responseObj.signed) {
+              alert("Your payment successed")!;
+            } else {
+              alert("Your payment failed");
+            }
+            setIsHidden(true);
+          }
+          console.log(responseObj);
+        };
+
+        console.log(payload);
       }
     } catch (e) {
       alert(e);
@@ -210,6 +230,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 DEPOSIT
               </button>
             </section>
+            {isHidden ? null : (
+              <div
+                className="qrcode"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <img src={qrcode}></img>
+              </div>
+            )}
           </div>
         </div>
       </div>

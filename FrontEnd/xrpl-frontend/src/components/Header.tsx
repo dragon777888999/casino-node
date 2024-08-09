@@ -56,10 +56,6 @@ const Header = () => {
     setWalletType(getDataFromLocalStorage("walleteType"));
   }, []);
 
-  XUMM_KEY="3a9665dc-1860-4699-aeea-cb9453bc7aba"
-XUMM_KEY_SECRET="4d65239f-c0b5-4cf6-a8de-268bd4c711c3"
-ENC_KEY="SomeSuperSecretKey"
-
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
@@ -68,12 +64,6 @@ ENC_KEY="SomeSuperSecretKey"
 
       setQrcode(data.payload.refs.qr_png);
       setJumpLink(data.payload.next.always);
-
-      if (isMobile) 
-        {
-        //open in new tab
-        window.open(data.payload.next.always, "_blank");
-      }
 
       const ws = new WebSocket(data.payload.refs.websocket_status);
 
@@ -90,7 +80,7 @@ ENC_KEY="SomeSuperSecretKey"
           const checkSignJson = await checkSign.json();
           setXrpAddress(checkSignJson.xrpAddress);
           const address = checkSignJson.xrpAddress;
-          console.log(address);
+
           if (enableJwt) {
             setCookie("jwt", checkSignJson.token, { path: "/" });
           }
@@ -241,7 +231,10 @@ ENC_KEY="SomeSuperSecretKey"
                   <div className="row">
                     <button
                       className="wallet-adapter-modal-button-close"
-                      onClick={() => setShowModal(false)}
+                      onClick={() => {
+                        setShowModal(false);
+                        setQrcode("");
+                      }}
                     >
                       <svg width={14} height={14}>
                         <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
@@ -273,6 +266,26 @@ ENC_KEY="SomeSuperSecretKey"
                         Open in Xaman
                         <span>Detected</span>
                       </button>
+                      {qrcode ? (
+                        <div style={{ display: "block" }}>
+                          <div className="qrcode">
+                            <img src={qrcode}></img>
+                          </div>
+
+                          <button
+                            className="wallet-adapter-button"
+                            tabIndex={0}
+                            type="button"
+                            onClick={() => setQrcode("")}
+                            style={{
+                              display: "block",
+                              justifyContent: "center",
+                            }}
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : null}
                     </li>
                     <li>
                       <button
