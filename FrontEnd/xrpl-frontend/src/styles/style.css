@@ -941,7 +941,7 @@ footer a {
 .deposit {
   background: linear-gradient(358deg, #361145 8.29%, #100b13 109.96%);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
-  padding: 50px 40px 10px 40px;
+  padding: 30px 40px 10px 40px;
   border-radius: 10px;
   display: block !important;
 }

@@ -66,8 +66,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const onDeposit = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
+    if (depositAmount <= 0) {
+      window.alert("Deposit amount cannot be 0");
+      return;
+    }
     setIsHidden(false);
-    console.log(process.env.XUMM_KEY);
     try {
       if (getDataFromLocalStorage("walleteType") == "cross") {
         sdk.sync.signAndSubmit({
@@ -203,6 +206,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
           </div>
           <div className="deposit">
             <section>
+              <span>Your first deposit will require an additional 10xrp to initialize.</span>
+            </section>
+            <section>
+
               <p style={{ fontSize: `12px` }}>Deposit Address</p>
               <input
                 style={{ width: "265px", paddingLeft: "5px" }}
