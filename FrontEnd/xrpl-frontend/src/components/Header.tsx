@@ -56,6 +56,10 @@ const Header = () => {
     setWalletType(getDataFromLocalStorage("walleteType"));
   }, []);
 
+  XUMM_KEY="3a9665dc-1860-4699-aeea-cb9453bc7aba"
+XUMM_KEY_SECRET="4d65239f-c0b5-4cf6-a8de-268bd4c711c3"
+ENC_KEY="SomeSuperSecretKey"
+
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
@@ -65,7 +69,7 @@ const Header = () => {
       setQrcode(data.payload.refs.qr_png);
       setJumpLink(data.payload.next.always);
 
-      //if (isMobile) 
+      if (isMobile) 
         {
         //open in new tab
         window.open(data.payload.next.always, "_blank");
