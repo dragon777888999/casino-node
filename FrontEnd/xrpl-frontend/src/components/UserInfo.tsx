@@ -23,10 +23,6 @@ const UserInfo = (xrpAddr) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [selectedKey, setSelectedKey] = useState<string>("");
 
-  useEffect(() => {
-    setDesAdress(xrpAddr.xrpAddress);
-  }, [xrpAddr.xrpAddress]);
-
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -99,6 +95,7 @@ const UserInfo = (xrpAddr) => {
             setAccessToken(token);
             await updateUserInfo();
           }
+          setDesAdress(xrpAddr.xrpAddress);
         } catch (err) {
           //wallet.disconnect();
         }

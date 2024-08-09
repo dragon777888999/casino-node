@@ -1,16 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  useAnchorWallet,
-  useConnection,
-  useWallet,
-} from "@solana/wallet-adapter-react";
+import sdk from "@crossmarkio/sdk";
+import { isConnected, sendPayment } from "@gemwallet/api";
 import Modal from "react-modal";
-import {
-  useBalance,
-  useSendXRP,
-  ReserveRequirement,
-} from "@nice-xrpl/react-xrpl";
-
 import { backendUrl } from "../../anchor/setup";
 import {
   accessToken,
@@ -26,6 +17,10 @@ interface WalletModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
 }
+const getDataFromLocalStorage = (key) => {
+  const data = localStorage.getItem(key);
+  return data ? data : null;
+};
 
 const WalletModal: React.FC<WalletModalProps> = ({
   address,
@@ -35,14 +30,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [withdrawAmount, setWithdrawAmount] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
   const [depositAddress, setDepositAddress] = useState("");
+  const [qrcode, setQrcode] = useState("");
+  const [jumpLink, setJumpLink] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
 
-  const [sending, setSending] = useState(false);
-  const sendXRP = useSendXRP();
   useEffect(() => {
-    console.log("dddddddddddddddddd");
     const fetchData = async () => {
       try {
-        console.log("GetDepositAddress");
         if (accessToken == "") return;
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -67,17 +61,43 @@ const WalletModal: React.FC<WalletModalProps> = ({
     };
 
     fetchData();
-  }, []);
+  }, [address]);
 
   const onDeposit = async () => {
-    setSending(true);
+    // const walletType = getDataFromLocalStorage("walleteType");
+    console.log(process.env.XUMM_KEY);
     try {
-      const result = await sendXRP(depositAddress, depositAmount);
-      console.log("UI: ", result);
+      if (getDataFromLocalStorage("walleteType") == "cross") {
+        sdk.sync.signAndSubmit({
+          TransactionType: "Payment",
+          Destination: depositAddress,
+          Amount: (depositAmount * (10 ** siteInfo.digitsMap[userInfo.selectedCoinType])).toString(), // XRP in drops
+        });
+      } else if (getDataFromLocalStorage("walleteType") == "gem") {
+        const payment = {
+          amount: (depositAmount * (10 ** siteInfo.digitsMap[userInfo.selectedCoinType])).toString(),
+          destination: depositAddress,
+        };
+
+        sendPayment(payment).then((trHash) => {
+          console.log("Transaction Hash: ", trHash);
+        });
+      } else {
+        const payload = await fetch(`/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`);
+        const data = await payload.json();
+
+        setQrcode(data.payload.refs.qr_png);
+        setJumpLink(data.payload.next.always);
+
+        //if (isMobile) 
+        {
+          //open in new tab
+          window.open(data.payload.next.always, "_blank");
+        }
+      }
     } catch (e) {
       alert(e);
     }
-    setSending(false);
   };
   const onWithdraw = async () => {
     try {
@@ -117,7 +137,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
         <div className="modal-content">
           <div>
             <p>MANAGE BALANCE</p>
-            <button onClick={onRequestClose}>BACK</button>
+            <button onClick={onRequestClose}>
+              <img
+                src="/enTheme2/images/arrowleft.png"
+                alt="arrow"
+                width={40}
+              />
+            </button>
           </div>
           <div className="withdraw">
             <section>
@@ -144,7 +170,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
               />
             </section>
             <section>
-              <button onClick={onWithdraw}>WITHDRAW</button>
+              <button className="balance" onClick={onWithdraw}>
+                WITHDRAW
+              </button>
             </section>
           </div>
           <div className="deposit">
@@ -178,7 +206,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
               />
             </section>
             <section>
-              <button onClick={onDeposit}>DEPOSIT</button>
+              <button className="balance" onClick={onDeposit}>
+                DEPOSIT
+              </button>
             </section>
           </div>
         </div>

@@ -65,7 +65,8 @@ const Header = () => {
       setQrcode(data.payload.refs.qr_png);
       setJumpLink(data.payload.next.always);
 
-      if (isMobile) {
+      //if (isMobile) 
+        {
         //open in new tab
         window.open(data.payload.next.always, "_blank");
       }
@@ -84,6 +85,8 @@ const Header = () => {
           const checkSign = await fetch(`/api/auth/xumm/checksign?hex=${hex}`);
           const checkSignJson = await checkSign.json();
           setXrpAddress(checkSignJson.xrpAddress);
+          const address = checkSignJson.xrpAddress;
+          console.log(address);
           if (enableJwt) {
             setCookie("jwt", checkSignJson.token, { path: "/" });
           }
@@ -201,7 +204,7 @@ const Header = () => {
           <img
             src="/enTheme2/images/logo.png"
             alt="GAMBOL LOGO"
-            style={{ height: "100px", width: "100px" }}
+            style={{ height: "80px", width: "80px" }}
           />
           <img
             src="/enTheme2/images/title.png"
