@@ -157,7 +157,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
         <div className="modal-content">
           <div>
             <p>MANAGE BALANCE</p>
-            <button onClick={onRequestClose}>
+            <button
+              onClick={() => {
+                onRequestClose();
+                setQrcode("");
+                setDepositAmount(0);
+              }}
+            >
               <img
                 src="/enTheme2/images/arrowleft.png"
                 alt="arrow"
