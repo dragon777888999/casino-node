@@ -1,7 +1,7 @@
 const { ComputeBudgetProgram, Connection, Keypair, PublicKey, SystemInstruction, SystemProgram, Transaction, sendAndConfirmTransaction } = require("@solana/web3.js");
 const base58 = require("bs58").default;
 const { createAssociatedTokenAccountIdempotentInstruction, createCloseAccountInstruction, createTransferInstruction, getAssociatedTokenAddressSync } = require("@solana/spl-token");
-const connection = new Connection("https://mainnet.helius-rpc.com/?api-key=7676ad08-d009-4d7b-ad36-2df7214b03c1");
+const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
 const config = require('../config/config');
 
 exports.entry = async (req, res) => {
