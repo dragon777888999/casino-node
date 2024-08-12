@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import { Doughnut } from "react-chartjs-2";
-import Slider from "react-slick";
-import { TodoListComponent } from "../apps/TodoList";
-import { VectorMap } from "react-jvectormap";
 
 const mapData = {
   BZ: 75.0,
@@ -679,32 +675,146 @@ export class Dashboard extends Component {
           <div className="row">
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/prgmaticplay.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/bgaming.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/endorphina.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/evolution.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/playngo.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
             <div className="col-xl-2 col-sm-4 grid-margin stretch-card">
               <div className="card">
-                <div className="card-body"></div>
+                <div className="card-body">
+                  <a href="" style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      alt="Pragmatic Play"
+                      loading="lazy"
+                      data-nimg="fill"
+                      decoding="async"
+                      style={{
+                        position: "absolute",
+                        height: "80%",
+                        width: "100%",
+                        inset: "0px",
+                        objectFit: "contain",
+                        color: "transparent",
+                        marginTop: "5px",
+                      }}
+                      src={require("../../assets/images/provider/thunderkick.svg")}
+                    ></img>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="container-scroller">
         {sidebarComponent}
-        <div className="container-fluid page-body-wrapper">
+        <div className="container-fluid page-body-wrapper mr-0">
           {navbarComponent}
           <div className="main-panel">
             <div className="content-wrapper">

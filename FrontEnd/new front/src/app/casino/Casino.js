@@ -85,8 +85,8 @@ class Casino extends Component {
         ) : (
           <>
             <section className="banner"></section>
-            <section className="games">
-              <div className="game-grid">
+            <section className="games ">
+              <div className="game-grid ">
                 {this.listGames.map((gameCode) => (
                   <div key={gameCode} className="game">
                     <img

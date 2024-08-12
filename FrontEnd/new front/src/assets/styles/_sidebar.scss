@@ -1,7 +1,9 @@
 /* Sidebar */
 
 .sidebar {
-  min-height: calc(100vh - #{$navbar-height});
+  position: fixed;
+  top: 0px;
+  min-height: 100vh;
   background: $sidebar-bg;
   font-weight: normal;
   padding: 0;
