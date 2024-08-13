@@ -18,7 +18,9 @@ const Casino = () => {
   ];
   const onClickGame = async (vendorCode: string, gameCode: string) => {};
   const setUrl = () => {
-    setGameUrl("https://www.freeslots.com/slot101.htm");
+    setGameUrl(
+      "https://app.roogsino.io/keno?currency=USD&operator=xyz_.1.2.6&jurisdiction=CW&lang=en&user=16792&token=9bb0ef63198c1ed7b2840aa0",
+    );
   };
   return (
     <div>
