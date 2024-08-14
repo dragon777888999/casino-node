@@ -3,7 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 import ClickOutside from "@/components/ClickOutside";
 
-const DropdownWallet = () => {
+interface DropdownProps {
+  items: { [key: string]: number };
+  selectedKey: string;
+  onSelect: (key: string) => void;
+}
+
+const DropdownWallet: React.FC<DropdownProps> = (
+  items,
+  selectedKey,
+  onSelect,
+) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -14,7 +24,7 @@ const DropdownWallet = () => {
       >
         <span className=" block text-right">
           <span className="block text-sm font-medium text-black text-meta-3">
-            0.00 XRPL
+            {items[selectedKey]}
           </span>
         </span>
       </button>
