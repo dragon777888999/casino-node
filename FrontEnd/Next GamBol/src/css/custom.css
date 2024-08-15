@@ -316,7 +316,10 @@
 .ReactModal__Overlay {
   background-color: transparent !important;
 }
-
+.qrcode {
+  display: flex;
+  justify-content: center;
+}
 .main-contain {
   background-color: #191f3b;
   border-radius: 6px;

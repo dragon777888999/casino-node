@@ -137,6 +137,7 @@ const UserInfo = () => {
       localStorage.removeItem("address");
       localStorage.removeItem("connected");
       localStorage.removeItem("token");
+      localStorage.removeItem("walletType");
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       window.location.reload();
       console.log("Wallet disconnected and information cleared");

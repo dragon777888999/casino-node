@@ -1,21 +1,10 @@
 import Link from "next/link";
 
-import DropdownWallet from "./DropdownWallet";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import WalletModal from "../modal/xrpl/WalleSettingModal";
-import ConnectWalletModal from "../modal/xrpl/ConnectWalletModal";
-import UserInfo from "./UserInfo";
-import { backendUrl } from "@/anchor/setup";
 
-import {
-  accessToken,
-  setAccessToken,
-  siteInfo,
-  setSiteInfo,
-  userInfo,
-  setUserInfo,
-} from "../../anchor/global";
+import ConnectWalletModal from "../wallet-connecter/xrpl/ConnectWalletModal";
+import UserInfo from "./UserInfo";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -26,19 +15,10 @@ const Header = (props: {
   const [showWalletModal, setShowWalletModal] = useState(false);
 
   const domain = window.location.host;
-  const [nickName, setNickName] = useState("");
-  const [desAddress, setDesAdress] = useState("");
   const [selectedKey, setSelectedKey] = useState<string>("");
   const [address, setAddress] = useState(" ");
   const [walleteType, setWalletType] = useState("");
 
-  const openWalletModal = () => {
-    setShowWalletModal(true);
-  };
-
-  const closeModal = () => {
-    setShowWalletModal(false);
-  };
   const openConnectWallet = () => {
     setShowConnectModal(true);
   };
@@ -155,10 +135,7 @@ const Header = (props: {
           )}
         </div>
       </header>
-      <WalletModal
-        showWalletModal={showWalletModal}
-        onRequestClose={closeModal}
-      />
+
       <ConnectWalletModal
         showConnectModal={showConnectModal}
         onRequestClose={closeConnectModal}

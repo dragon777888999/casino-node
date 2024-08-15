@@ -39,9 +39,12 @@ const Header = () => {
       })
         .then((response) => response.json())
         .then((data) => {
+          console.log(data);
           if (data.hasOwnProperty("xrpAddress")) {
             setXrpAddress(data.xrpAddress);
             setRetrieved(true);
+            console.log("--------setxrp-----");
+            console.log(xrpAddress);
           }
         });
     }
