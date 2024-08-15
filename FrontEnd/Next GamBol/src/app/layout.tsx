@@ -29,7 +29,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         style={{ background: "rgb(26 34 44)" }}
       >
-        <div className="dark dark:bg-boxdark-2 dark:text-bodydark">
+        <div className="dark dark:bg-boxdark-2 dark:text-bodydark" id="root">
           {loading ? <Loader /> : children}
         </div>
       </body>

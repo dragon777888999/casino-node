@@ -35,7 +35,7 @@
     transform: scale(1.02);
   }
   .custom-procard:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
   }
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */

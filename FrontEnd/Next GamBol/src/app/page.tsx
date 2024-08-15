@@ -14,11 +14,15 @@ import { setSiteInfo } from "@/anchor/global";
 // };
 
 export default function Home() {
+  const domain = window.location.host;
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${backendUrl}/Account/SiteInfo`);
+        const response = await fetch(
+          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+        );
         const result = await response.json();
+        console.log("--------------site info------------");
         console.log(result);
         setSiteInfo(result);
       } catch (error) {

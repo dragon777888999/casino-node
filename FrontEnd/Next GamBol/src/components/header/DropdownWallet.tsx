@@ -9,11 +9,7 @@ interface DropdownProps {
   onSelect: (key: string) => void;
 }
 
-const DropdownWallet: React.FC<DropdownProps> = (
-  items,
-  selectedKey,
-  onSelect,
-) => {
+const DropdownWallet: React.FC<DropdownProps> = (items, selectedKey) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (

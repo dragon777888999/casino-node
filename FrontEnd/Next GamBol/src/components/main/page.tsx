@@ -6,7 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 const Main: React.FC = () => {
   const gameurl =
-    "https://app.roogsino.io/mines?currency=USD&operator=xyz_.1.2.6&jurisdiction=CW&lang=en&user=16792&token=3891eaf725dde508f2b57300";
+    "https://app.roogsino.io/mines?currency=USD&operator=xyz_.1.2.6&jurisdiction=CW&lang=en&user=16792&token=dc2a1680a7b7a0684eaf4b4d";
 
   return (
     <div className=" max-w-screen mx-auto">
@@ -862,144 +862,307 @@ const Main: React.FC = () => {
               width: "150px",
             }}
           >
-            <Link href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}>
-              <Image
-                src="/images/project/mini/1.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "100%" }}
-              />
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
+            >
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/1.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "100%" }}
+                />
+              </div>
             </Link>
           </div>
 
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/2.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/2.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/3.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/3.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/4.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/4.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/1.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/1.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/1.png" // Path relative to the public directory
-                alt="Project Thumbnail"
-                layout="responsive" // Ensures the image scales based on its container
-                width={800} // Set the width based on aspect ratio
-                height={450} // Set the height based on aspect ratio
-                style={{ width: "90%" }} // Apply inline styles if needed
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/4.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/2.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/2.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/3.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/3.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="SlotsList_list_container mt-10">
@@ -1022,79 +1185,162 @@ const Main: React.FC = () => {
           Original
         </h3>
 
-        <div className="mt-3 flex grid grid-cols-3 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+        <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/1.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/1.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/2.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/2.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/3.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
-          <a>
-            <div
-              style={{
-                position: "relative",
-                height: "100%",
-                width: "150px",
-              }}
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/3.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "150px",
+            }}
+          >
+            {" "}
+            <Link
+              className="Quick_Link"
+              href={`/casino?gameurl= ${encodeURIComponent(gameurl)}`}
             >
-              <Image
-                src="/images/project/mini/4.png"
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={800}
-                height={450}
-                style={{ width: "90%" }}
-              />
-            </div>
-          </a>
+              <div>
+                <div className="SlotsList_slot-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="34"
+                    viewBox="0 0 28 34"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.055 14.9547L2.695 0.283333C2.3975 0.10625 2.09125 0 1.74125 0C0.7875 0 0.00874987 0.796875 0.00874987 1.77083H0V32.2292H0.00874987C0.00874987 33.2031 0.7875 34 1.74125 34C2.1 34 2.3975 33.876 2.72125 33.699L27.055 19.0453C27.6325 18.5583 28 17.8234 28 17C28 16.1766 27.6325 15.4505 27.055 14.9547Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+                <Image
+                  src="/images/project/mini/4.png"
+                  alt="Project Thumbnail"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  style={{ width: "90%" }}
+                />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="mt-10">

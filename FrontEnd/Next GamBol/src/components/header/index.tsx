@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import WalletModal from "../modal/xrpl/WalleSettingModal";
 import ConnectWalletModal from "../modal/xrpl/ConnectWalletModal";
+import UserInfo from "./UserInfo";
 import { backendUrl } from "@/anchor/setup";
 
 import {
@@ -29,14 +30,7 @@ const Header = (props: {
   const [desAddress, setDesAdress] = useState("");
   const [selectedKey, setSelectedKey] = useState<string>("");
   const [address, setAddress] = useState(" ");
-
-  const getDataFromLocalStorage = (key: any) => {
-    const data = localStorage.getItem(key);
-    return data ? data : " ";
-  };
-  // ----------get data from local storage---------
-  getDataFromLocalStorage("connected");
-  getDataFromLocalStorage("address");
+  const [walleteType, setWalletType] = useState("");
 
   const openWalletModal = () => {
     setShowWalletModal(true);
@@ -51,33 +45,17 @@ const Header = (props: {
   const closeConnectModal = () => {
     setShowConnectModal(false);
   };
+  const getDataFromLocalStorage = (key) => {
+    const data = localStorage.getItem(key);
+    return data ? data : null;
+  };
+  // ----------get data from local storage---------
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        if (accessToken == "") return;
-        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-Access-Token": accessToken,
-          },
-          body: JSON.stringify({
-            method: "GetDepositAddress",
-            chain: siteInfo.chain,
-            coinType: userInfo.selectedCoinType,
-          }),
-        });
-
-        const result = await response.json();
-        if (result.status == 0) {
-        }
-      } catch (error) {
-        console.error("Fetch error:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+    setConnected(getDataFromLocalStorage("connected"));
+    setAddress(getDataFromLocalStorage("address"));
+    setWalletType(getDataFromLocalStorage("walleteType"));
+  }, [showConnectModal]);
 
   return (
     <>
@@ -142,23 +120,8 @@ const Header = (props: {
             </button>
           </div>
 
-          <div
-            className="sm:block"
-            style={{
-              marginLeft: "10%",
-            }}
-          ></div>
           {connected ? (
-            <ul className="flex items-center gap-2 2xsm:gap-4">
-              <li>
-                <button
-                  className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                  onClick={() => openWalletModal()}
-                >
-                  <p> Wallet</p>
-                </button>
-              </li>
-            </ul>
+            <UserInfo />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
               <ul className="flex items-center gap-2 2xsm:gap-4"></ul>
@@ -188,9 +151,6 @@ const Header = (props: {
                   </button>
                 </li>
               </ul>
-              {/* <!-- User Area --> */}
-              {/* <DropdownUser /> */}
-              {/* <!-- User Area --> */}
             </div>
           )}
         </div>

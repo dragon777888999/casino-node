@@ -206,10 +206,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
           </div>
           <div className="deposit">
             <section>
-              <span>Your first deposit will require an additional 10xrp to initialize.</span>
+              <span>
+                Your first deposit will require an additional 10xrp to
+                initialize.
+              </span>
             </section>
             <section>
-
               <p style={{ fontSize: `12px` }}>Deposit Address</p>
               <input
                 style={{ width: "265px", paddingLeft: "5px" }}
