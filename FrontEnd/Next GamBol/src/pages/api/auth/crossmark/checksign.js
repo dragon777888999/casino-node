@@ -2,6 +2,8 @@ const jwt = require("jsonwebtoken");
 const rippleKP = require("ripple-keypairs");
 
 export default async function handler(req, res) {
+    //console.log("**************************************");
+    //console.log(process.env.ENC_KEY);
     try {
         const authHeader = req.headers.authorization;
         const token = authHeader && authHeader.split(" ")[1];
