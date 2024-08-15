@@ -3,7 +3,7 @@ import Main from "@/components/main/page";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import { useEffect } from "react";
-import { backendUrl } from "@/anchor/setup";
+import { backendUrl } from "@/anchor/global";
 
 // import { Provider } from "react-redux";
 // import { store } from "../store/store";

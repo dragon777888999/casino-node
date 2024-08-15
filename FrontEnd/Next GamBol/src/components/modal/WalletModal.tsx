@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import sdk from "@crossmarkio/sdk";
 import { isConnected, sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
-import { backendUrl } from "@/anchor/setup";
+import { backendUrl } from "@/anchor/global";
 import {
   accessToken,
   setAccessToken,
@@ -11,7 +11,7 @@ import {
   setSiteInfo,
   userInfo,
   setUserInfo,
-} from "../../../anchor/global";
+} from "../../anchor/global";
 // Define the WalletModal component
 interface WalletModalProps {
   showWalletModal: boolean;

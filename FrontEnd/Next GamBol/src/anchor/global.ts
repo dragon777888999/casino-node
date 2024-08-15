@@ -5,6 +5,7 @@ export function setAccessToken(value: string) {
 }
 
 interface SiteInfo {
+    isLoginMode: boolean,
     agentCode: string;
     chain: string;
     availableCoinTypes:Array<string>;
@@ -14,6 +15,7 @@ interface SiteInfo {
 }
 
 export let siteInfo : SiteInfo={
+    isLoginMode: false,
     agentCode:"",
     chain:"",
     availableCoinTypes : [],
@@ -39,3 +41,5 @@ export let userInfo : UserInfo={status:0,selectedCoinType:"",balances : {}, nick
 export function setUserInfo(value: UserInfo) {
     userInfo = value;
 }
+
+export const backendUrl = "https://api.roogsino.io"
