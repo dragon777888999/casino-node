@@ -49,3 +49,19 @@ export function setUserInfo(value: UserInfo) {
 }
 
 export const backendUrl = "https://api.roogsino.io";
+export async function updateSiteInfo(){
+  try {
+    if (siteInfo.chain!="")
+      return;
+    const domain = window.location.host;
+    const response = await fetch(
+      `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+    );
+    const result = await response.json();
+    console.log("--------------site info------------");
+    console.log(result);
+    setSiteInfo(result);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}

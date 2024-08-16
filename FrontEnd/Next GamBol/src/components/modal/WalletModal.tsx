@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import sdk from "@crossmarkio/sdk";
-import { isConnected, sendPayment } from "@gemwallet/api";
+import { sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
 import {
@@ -17,7 +17,7 @@ interface WalletModalProps {
   showWalletModal: boolean;
   onRequestClose: () => void;
 }
-const getDataFromLocalStorage = (key) => {
+const getDataFromLocalStorage = (key : string) => {
   const data = localStorage.getItem(key);
   return data ? data : null;
 };
