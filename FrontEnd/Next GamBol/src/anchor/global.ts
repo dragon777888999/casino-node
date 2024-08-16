@@ -49,6 +49,8 @@ export function setUserInfo(value: UserInfo) {
 }
 
 export const backendUrl = "https://api.roogsino.io";
+export const solanaNetworkUrl = "https://api.devnet.solana.com";
+
 export async function updateSiteInfo(){
   try {
     if (siteInfo.chain!="")

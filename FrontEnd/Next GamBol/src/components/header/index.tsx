@@ -7,6 +7,7 @@ import ConnectXrplWalletModal from "../wallet-connecter/xrpl/ConnectXrplWalletMo
 import { WalletMultiButton, useWalletModal } from "@solana/wallet-adapter-react-ui";
 import UserInfo from "./UserInfo";
 import ConnectButton from "./ConnectButton";
+import LoginButton from "./LoginButton";
 
 import { backendUrl, siteInfo, setSiteInfo } from "@/anchor/global";
 const Header = (props: {
@@ -16,7 +17,7 @@ const Header = (props: {
   const [connected, setConnected] = useState(false);
   const domain = window.location.host;
 
-  const getDataFromLocalStorage = (key : string) => {
+  const getDataFromLocalStorage = (key: string) => {
     const data = localStorage.getItem(key);
     return data ? data : null;
   };
@@ -109,28 +110,11 @@ const Header = (props: {
             <div className="flex items-center gap-3 2xsm:gap-7">
               <ul className="flex items-center gap-2 2xsm:gap-4"></ul>
               {siteInfo.isLoginMode && (
-                <ul className="flex items-center gap-2 2xsm:gap-4">
-                  <li>
-                    <Link
-                      href="/auth/signin"
-                      className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                    >
-                      <p>Log in</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/auth/signup"
-                      className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                    >
-                      <p> Register</p>
-                    </Link>
-                  </li>
-                </ul>
+                <LoginButton />
               )}
               {!siteInfo.isLoginMode && (
                 <ConnectButton />
-                )
+              )
               }
             </div>
           )}
