@@ -35,7 +35,7 @@ const gameData: InfoList[] = [
 const TableAll = () => {
   return (
     <div className="rounded-sm border border-stroke bg-white  dark:border-strokedark dark:bg-boxdark">
-      <div className="grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
+      <div className="flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
         <div className="col-span-2 flex items-center">
           <p className="font-medium">Game Name</p>
         </div>
@@ -48,7 +48,7 @@ const TableAll = () => {
         <div className="col-span-1 flex hidden items-center justify-center md:flex">
           <p className="font-medium">Multiplier</p>
         </div>
-        <div className="col-span-2 flex items-center justify-end">
+        <div className="col-span-3 flex items-center justify-end md:col-span-2 ">
           <p className="font-medium">Payout</p>
         </div>
       </div>
@@ -157,7 +157,7 @@ const TableAll = () => {
               {product.multiplier} X
             </p>
           </div>
-          <div className="col-span-2 flex items-center justify-end">
+          <div className="col-span-3 flex items-center justify-end md:col-span-2">
             <div className="flex items-center justify-center gap-2">
               <div className="">
                 <Image
