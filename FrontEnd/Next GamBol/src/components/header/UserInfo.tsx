@@ -1,6 +1,6 @@
 import { useContext, useEffect, useMemo, useState } from "react";
 import Modal from "react-modal";
-import WalletModal from "../modal/WalletModal";
+import WalletModal from "../modal/WalleSettingModal";
 import sdk from "@crossmarkio/sdk";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { backendUrl } from "../../anchor/global";

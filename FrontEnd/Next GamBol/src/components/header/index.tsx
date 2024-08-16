@@ -3,14 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import ConnectWalletModal from "../wallet-connecter/xrpl/ConnectWalletModal";
+import ConnectXrplWalletModal from "../wallet-connecter/xrpl/ConnectXrplWalletModal";
+import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import UserInfo from "./UserInfo";
 
+import { backendUrl } from "@/anchor/global";
+import { siteInfo, setSiteInfo } from "@/anchor/global";
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const [showConnectModal, setShowConnectModal] = useState(false);
+  const [showXrplConnectModal, setShowXrplConnectModal] = useState(false);
+  const { setVisible: setModalVisible } = useWalletModal();
   const [connected, setConnected] = useState(false);
   const [showWalletModal, setShowWalletModal] = useState(false);
 
@@ -20,10 +24,22 @@ const Header = (props: {
   const [walleteType, setWalletType] = useState("");
 
   const openConnectWallet = () => {
-    setShowConnectModal(true);
+    switch (siteInfo.chain) {
+      case "Xrpl":
+        setShowXrplConnectModal(true);
+        break;
+      case "Solana":
+        setModalVisible(true);
+        break;
+      case "Orai":
+        break;
+
+      default:
+        alert("No chain ");
+    }
   };
   const closeConnectModal = () => {
-    setShowConnectModal(false);
+    setShowXrplConnectModal(false);
   };
   const getDataFromLocalStorage = (key) => {
     const data = localStorage.getItem(key);
@@ -32,10 +48,27 @@ const Header = (props: {
   // ----------get data from local storage---------
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+        );
+        const result = await response.json();
+        console.log("--------------site info------------");
+        console.log(result);
+        setSiteInfo(result);
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+
+    fetchData();
+  });
+  useEffect(() => {
     setConnected(getDataFromLocalStorage("connected"));
     setAddress(getDataFromLocalStorage("address"));
     setWalletType(getDataFromLocalStorage("walleteType"));
-  }, [showConnectModal]);
+  }, [siteInfo]);
 
   return (
     <>
@@ -105,41 +138,41 @@ const Header = (props: {
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
               <ul className="flex items-center gap-2 2xsm:gap-4"></ul>
-              <ul className="flex items-center gap-2 2xsm:gap-4">
-                {/* <li>
-                <Link
-                  href="/auth/signin"
-                  className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                >
-                  <p>Log in</p>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/auth/signup"
-                  className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                >
-                  <p> Register</p>
-                </Link>
-              </li> */}
-                <li>
-                  <button
-                    onClick={() => openConnectWallet()}
-                    className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-                  >
-                    <p> Connect</p>
-                  </button>
-                </li>
-              </ul>
+              {siteInfo.isLoginMode && (
+                <ul className="flex items-center gap-2 2xsm:gap-4">
+                  <li>
+                    <Link
+                      href="/auth/signin"
+                      className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+                    >
+                      <p>Log in</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/auth/signup"
+                      className="inline-flex items-center justify-center rounded-md border border-meta-3 px-10 py-4 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+                    >
+                      <p> Register</p>
+                    </Link>
+                  </li>
+                </ul>
+              )}
+              <button
+                onClick={() => openConnectWallet()}
+                className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+              >
+                <p> Connect</p>
+              </button>
             </div>
           )}
         </div>
       </header>
 
-      <ConnectWalletModal
-        showConnectModal={showConnectModal}
+      <ConnectXrplWalletModal
+        showConnectModal={showXrplConnectModal}
         onRequestClose={closeConnectModal}
-      ></ConnectWalletModal>
+      ></ConnectXrplWalletModal>
     </>
   );
 };

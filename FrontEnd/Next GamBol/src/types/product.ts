@@ -1,8 +1,7 @@
-export type Product = {
-  image: string;
+export type InfoList = {
   name: string;
-  category: string;
-  price: number;
-  sold: number;
-  profit: number;
+  user: string;
+  amount: number;
+  multiplier: number;
+  payout: number;
 };

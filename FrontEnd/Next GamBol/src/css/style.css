@@ -20,13 +20,13 @@
   }
 
   .custom-card {
-    @apply rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark;
+    @apply rounded-sm border border-stroke bg-white px-7.5 py-6  dark:border-strokedark dark:bg-boxdark;
     transition:
       transform 0.3s ease,
       filter 0.3s ease;
   }
   .custom-procard {
-    @apply flex items-center justify-center rounded-sm  border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark;
+    @apply flex items-center justify-center rounded-sm  border border-stroke bg-white  dark:border-strokedark dark:bg-boxdark;
     transition:
       transform 0.3s ease,
       filter 0.3s ease;

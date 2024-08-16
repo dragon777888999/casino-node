@@ -195,7 +195,24 @@
   .wallet-adapter-modal-container {
     margin-top: 15%;
     /* margin: 1rem; */
-    min-height: calc(100vh - 3rem); /* 100vh - 2 * margin */
+    /* min-height: calc(100vh - 3rem); */
+  }
+  .wallet-adapter-modal-container button {
+    display: flex;
+    justify-content: center;
+  }
+  .wallet-adapter-modal-list span {
+    display: none;
+    list-style: none;
+  }
+  .wallet-adapter-modal-list li {
+    margin-bottom: 10px;
+  }
+  .wallet-adapter-button {
+    line-height: 25px;
+  }
+  .wallet-adapter-modal-wrapper {
+    min-height: cal(100vh-40%);
   }
 }
 .games {
@@ -400,4 +417,14 @@
 }
 .scroll-change {
   background-color: rgb(36 48 63);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+}
+.footer-container {
+  width: 1000%;
 }

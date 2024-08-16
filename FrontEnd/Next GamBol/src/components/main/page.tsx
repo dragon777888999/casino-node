@@ -854,7 +854,7 @@ const Main: React.FC = () => {
           Recommended
         </h3>
 
-        <div className="mt-3 flex grid grid-cols-2 gap-2  md:grid-cols-4 xl:grid-cols-7  2xl:grid-cols-8 ">
+        <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
           <div
             style={{
               position: "relative",
@@ -1347,7 +1347,7 @@ const Main: React.FC = () => {
         <h4 style={{ marginBottom: "15px", color: "white", fontSize: "20px" }}>
           Provider
         </h4>
-        <div className="mt-3 flex grid grid-cols-3 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
+        <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
           <div className="custom-procard mt-2 p-1 ">
             <a>
               <Image

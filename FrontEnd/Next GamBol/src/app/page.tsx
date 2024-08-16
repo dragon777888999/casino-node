@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import { useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
-
+import { NextUIProvider } from "@nextui-org/react";
 // import { Provider } from "react-redux";
 // import { store } from "../store/store";
 import { setSiteInfo } from "@/anchor/global";
@@ -14,31 +14,15 @@ import { setSiteInfo } from "@/anchor/global";
 // };
 
 export default function Home() {
-  const domain = window.location.host;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
-        );
-        const result = await response.json();
-        console.log("--------------site info------------");
-        console.log(result);
-        setSiteInfo(result);
-      } catch (error) {
-        console.error("Fetch error:", error);
-      }
-    };
-
-    fetchData();
-  });
-
   return (
     <>
       {/* <Provider store={store}> */}
-      <DefaultLayout>
-        <Main />
-      </DefaultLayout>
+      <NextUIProvider>
+        <DefaultLayout>
+          <Main />
+        </DefaultLayout>
+      </NextUIProvider>
+
       {/* </Provider> */}
     </>
   );
