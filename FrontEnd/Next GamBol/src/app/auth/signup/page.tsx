@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const SignUp: React.FC = () => {
   return (
     <DefaultLayout>
-      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+      <div className="rounded-sm border border-stroke bg-white  dark:border-strokedark dark:bg-boxdark">
         <div className="flex flex-wrap items-center">
           <div className="hidden w-full xl:block xl:w-1/2">
             <div className="px-26 py-17.5 text-center">
@@ -35,8 +35,8 @@ const SignUp: React.FC = () => {
                 />
               </Link>
               <p className="2xl:px-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                suspendisse.
+                Discover the best free-to-play play and earn blockchain games
+                and free-to-play games with this site. Constantly updated.
               </p>
 
               <span className="mt-15 inline-block">
@@ -166,10 +166,22 @@ const SignUp: React.FC = () => {
 
           <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
-              <span className="mb-1.5 block font-medium">Start for free</span>
-              <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign Up to TailAdmin
-              </h2>
+              <span className="mb-1.5 block font-medium"></span>
+              <div className="flex justify-between">
+                <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
+                  Sign Up to GamBol
+                </h2>
+
+                <Link href="/">
+                  <Image
+                    width={60}
+                    height={60}
+                    src={"/images/project/arrowLeft.png"}
+                    alt="Logo"
+                    priority
+                  />
+                </Link>
+              </div>
 
               <form>
                 <div className="mb-4">
