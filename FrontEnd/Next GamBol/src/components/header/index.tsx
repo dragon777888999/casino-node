@@ -14,14 +14,17 @@ import {
 import UserInfo from "./UserInfo";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
+import { useAppContext } from '../../context/AppContext';
+import { backendUrl } from "@/anchor/global";
 
-import { backendUrl, siteInfo, setSiteInfo } from "@/anchor/global";
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   const [connected, setConnected] = useState(false);
   const domain = window.location.host;
+ 
+  const { loading, setLoading, siteInfo,setSiteInfo } = useAppContext();
 
   const getDataFromLocalStorage = (key: string) => {
     const data = localStorage.getItem(key);
@@ -31,6 +34,8 @@ const Header = (props: {
 
   useEffect(() => {
     const fetchData = async () => {
+      if (!loading)
+        return;
       try {
         const response = await fetch(
           `${backendUrl}/Account/SiteInfo?domain=${domain}`,
@@ -41,6 +46,9 @@ const Header = (props: {
         setSiteInfo(result);
       } catch (error) {
         console.error("Fetch error:", error);
+      }
+      finally{
+        setLoading(false);
       }
     };
 
@@ -124,6 +132,13 @@ const Header = (props: {
               {siteInfo.isLoginMode && <LoginButton />}
               {!siteInfo.isLoginMode && <ConnectButton />}
 =======
+              {siteInfo?.isLoginMode && (
+                <LoginButton />
+              )}
+              {!siteInfo?.isLoginMode && (
+                <ConnectButton />
+              )
+              }
 >>>>>>> Stashed changes
             </div>
           )}
