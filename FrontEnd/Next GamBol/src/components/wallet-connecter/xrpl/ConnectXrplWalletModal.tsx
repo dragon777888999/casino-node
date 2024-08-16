@@ -3,6 +3,7 @@ import { isInstalled, getPublicKey, signMessage } from "@gemwallet/api";
 import sdk from "@crossmarkio/sdk";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+import Modal from "react-modal";
 
 interface ConnectXrpltWalletModalProps {
   showConnectModal: boolean;
@@ -195,102 +196,110 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 
   return (
     <>
-      <div className="wallet-adapter-modal wallet-adapter-modal-fade-in">
-        <div className=" wallet-adapter-modal-container">
-          {/*content*/}
-          <div className="wallet-adapter-modal-wrapper ">
-            {/*header*/}
-            <div className="border-blueGray-200 items-start justify-between rounded-t border-b border-solid p-5">
-              <div className="row">
-                <button
-                  className="wallet-adapter-modal-button-close"
-                  onClick={() => onRequestClose()}
-                >
-                  <svg width={14} height={14}>
-                    <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                  </svg>
-                </button>
-              </div>
-              <div>
-                <h3
-                  className="text-3xl font-semibold"
-                  style={{ marginTop: "-40px" }}
-                >
-                  <br></br>Select a wallet
-                </h3>
-              </div>
-            </div>
-            {/*body*/}
-            <div className="mt-5 flex w-full  items-start justify-end rounded-t">
-              <ul className="wallet-adapter-modal-list">
-                <li>
+      <Modal
+        id="modal"
+        className="modal"
+        isOpen={showConnectModal}
+        onRequestClose={onRequestClose}
+        contentLabel="Example Modal"
+      >
+        <div className="wallet-adapter-modal wallet-adapter-modal-fade-in">
+          <div className=" wallet-adapter-modal-container">
+            {/*content*/}
+            <div className="wallet-adapter-modal-wrapper ">
+              {/*header*/}
+              <div className="border-blueGray-200 items-start justify-between rounded-t border-b border-solid p-5">
+                <div className="row">
                   <button
-                    className="wallet-adapter-button"
-                    tabIndex={0}
-                    type="button"
-                    onClick={getQrCode}
+                    className="wallet-adapter-modal-button-close"
+                    onClick={() => onRequestClose()}
                   >
-                    <i className="wallet-adapter-button-start-icon">
-                      <img></img>
-                    </i>
-                    Open in Xaman
-                    <span>Detected</span>
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
                   </button>
-                </li>
-                <li>
-                  <button
-                    className="wallet-adapter-button"
-                    tabIndex={1}
-                    type="button"
-                    onClick={handleConnectGem}
+                </div>
+                <div>
+                  <h3
+                    className="text-3xl font-semibold"
+                    style={{ marginTop: "-40px" }}
                   >
-                    <i className="wallet-adapter-button-start-icon">
-                      <img></img>
-                    </i>
-                    Connect with GEM
-                    <span>Detected</span>
-                  </button>
-                  {qrcode ? (
-                    <div style={{ display: "block" }}>
-                      <div className="qrcode">
-                        <img src={qrcode}></img>
-                      </div>
+                    <br></br>Select a wallet
+                  </h3>
+                </div>
+              </div>
+              {/*body*/}
+              <div className="mt-5 flex w-full  items-start justify-end rounded-t">
+                <ul className="wallet-adapter-modal-list">
+                  <li>
+                    <button
+                      className="wallet-adapter-button"
+                      tabIndex={0}
+                      type="button"
+                      onClick={getQrCode}
+                    >
+                      <i className="wallet-adapter-button-start-icon">
+                        <img></img>
+                      </i>
+                      Open in Xaman
+                      <span>Detected</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      className="wallet-adapter-button"
+                      tabIndex={1}
+                      type="button"
+                      onClick={handleConnectGem}
+                    >
+                      <i className="wallet-adapter-button-start-icon">
+                        <img></img>
+                      </i>
+                      Connect with GEM
+                      <span>Detected</span>
+                    </button>
+                    {qrcode ? (
+                      <div style={{ display: "block" }}>
+                        <div className="qrcode">
+                          <img src={qrcode}></img>
+                        </div>
 
-                      <button
-                        className="wallet-adapter-button"
-                        tabIndex={0}
-                        type="button"
-                        onClick={() => setQrcode("")}
-                        style={{
-                          display: "block",
-                          justifyContent: "center",
-                        }}
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  ) : null}
-                </li>
-                <li>
-                  <button
-                    className="wallet-adapter-button"
-                    tabIndex={2}
-                    type="button"
-                    onClick={handleConnectCrossmark}
-                  >
-                    <i className="wallet-adapter-button-start-icon">
-                      <img></img>
-                    </i>
-                    Connect with Crossmark
-                    <span>Detected</span>
-                  </button>
-                </li>
-              </ul>
+                        <button
+                          className="wallet-adapter-button"
+                          tabIndex={0}
+                          type="button"
+                          onClick={() => setQrcode("")}
+                          style={{
+                            display: "block",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    ) : null}
+                  </li>
+                  <li>
+                    <button
+                      className="wallet-adapter-button"
+                      tabIndex={2}
+                      type="button"
+                      onClick={handleConnectCrossmark}
+                    >
+                      <i className="wallet-adapter-button-start-icon">
+                        <img></img>
+                      </i>
+                      Connect with Crossmark
+                      <span>Detected</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+        <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+      </Modal>
     </>
   );
 };
