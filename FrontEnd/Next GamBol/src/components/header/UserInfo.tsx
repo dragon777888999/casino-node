@@ -109,6 +109,7 @@ const UserInfo = () => {
           const token = responseBody.token;
           if (token) {
             setAccessToken(token);
+            localStorage.setItem("token", token);
             await updateUserInfo();
           }
           setDesAdress(address);

@@ -4,25 +4,67 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import React, { useRef } from "react";
+import { backendUrl } from "@/anchor/global";
+import GamePanel from "../main/GamePanel";
+// import { accessToken } from "@/anchor/global";
 
 const Casino = () => {
   const searchParams = useSearchParams();
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const gameUrl = searchParams.get("gameurl");
-  const decodedGameUrl = gameUrl ? decodeURIComponent(gameUrl) : " ";
 
-  const listGames = [
-    "aviator",
-    "mines",
-    "goal",
-    "dice",
-    "plinko",
-    "keno",
-    "hilo",
-    "hotline",
-    "mini-roulette",
-  ];
+  const vendorCode = searchParams?.get("vendorcode");
 
+  const gameCode = searchParams?.get("gameCode");
+  const [launchUrl, setLaunchUrl] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [accessToken, setAccessToken] = useState("");
+  //  const vendorCod = gameUrl ? decodeURIComponent(gameUrl) : " ";
+
+  console.log(vendorCode);
+  const getDataFromLocalStorage = (key: any) => {
+    const data = localStorage.getItem(key);
+    return data ? data : " ";
+  };
+  useEffect(() => {
+    setAccessToken(getDataFromLocalStorage("token"));
+
+    const getLaunchUrl = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+
+          headers: {
+            "X-Access-Token": accessToken,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            method: "GetLaunchUrl",
+            currencyCode: "",
+            userCode: null,
+            gameCode: gameCode,
+            vendorCode: vendorCode,
+          }),
+        });
+        console.log("-----------getLaunchUrl-------");
+        console.log(response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+        if (result.status === 0) {
+          setLaunchUrl(result.launchUrl || []);
+        } else {
+          throw new Error("Unexpected status code");
+        }
+      } catch (error) {
+        console.error("Error fetching game data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getLaunchUrl(); // Fetch for original games
+  }, []);
   function toggleFullScreen(isFull: boolean): void {
     // Check if the document is currently in fullscreen mode
 
@@ -47,7 +89,7 @@ const Casino = () => {
 
   return (
     <div>
-      {decodedGameUrl != " " ? (
+      {launchUrl != " " ? (
         <section>
           <div className="main-contain">
             <div className="game-content">
@@ -55,7 +97,7 @@ const Casino = () => {
                 <div className="game-container">
                   <iframe
                     ref={iframeRef}
-                    src={decodedGameUrl}
+                    src={launchUrl}
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     width="560"
                     height="315"
@@ -110,20 +152,7 @@ const Casino = () => {
               style={{ width: "100%" }}
             />
           </section>
-          <section className="games">
-            <div className="bannerDown">
-              <div className="bannerDownLeftLine"></div>
-              <p className="bannerDownText">PLAY BIG WIN BIG</p>
-              <div className="bannerDownRightLine"></div>
-            </div>
-            <div className="game-grid">
-              {listGames.map((gameCode, index) => (
-                <div key={gameCode} className="game">
-                  <img src={`/images/project/${gameCode}.png`} />
-                </div>
-              ))}
-            </div>
-          </section>
+          <GamePanel title={"Original Games"} gameType={9} />
         </>
       )}
     </div>

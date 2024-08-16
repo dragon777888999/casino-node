@@ -139,7 +139,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       onRequestClose();
                       setConnected(true);
                       localStorage.setItem("address", address);
-                      localStorage.setItem("token", token);
+                      // localStorage.setItem("token", token);
                       localStorage.setItem("connected", "true");
                       localStorage.setItem("walleteType", "gem");
                       if (enableJwt) {
