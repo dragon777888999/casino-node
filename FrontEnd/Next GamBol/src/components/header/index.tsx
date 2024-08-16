@@ -2,15 +2,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import  { useSelector } from 'react-redux';
-import { fetchData } from '../../store';
-import { useAppDispatch } from '../../store';
 
-import ConnectXrplWalletModal from "../wallet-connecter/xrpl/ConnectXrplWalletModal";
-import {
-  WalletMultiButton,
-  useWalletModal,
-} from "@solana/wallet-adapter-react-ui";
 import UserInfo from "./UserInfo";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
@@ -26,10 +18,6 @@ const Header = (props: {
  
   const { loading, setLoading, siteInfo,setSiteInfo } = useAppContext();
 
-  const getDataFromLocalStorage = (key: string) => {
-    const data = localStorage.getItem(key);
-    return data ? data : null;
-  };
   // ----------get data from local storage---------
 
   useEffect(() => {
@@ -54,11 +42,7 @@ const Header = (props: {
 
     fetchData();
   });
-  useEffect(() => {
-    //setConnected(getDataFromLocalStorage("connected"));
-    // setAddress(getDataFromLocalStorage("address"));
-    // setWalletType(getDataFromLocalStorage("walleteType"));
-  }, [siteInfo]);
+
 
   return (
     <>

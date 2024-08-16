@@ -4,14 +4,9 @@ import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
-import {
-  accessToken,
-  setAccessToken,
-  siteInfo,
-  setSiteInfo,
-  userInfo,
-  setUserInfo,
-} from "../../anchor/global";
+import { useAppContext } from '../../context/AppContext';
+
+
 // Define the WalletModal component
 interface WalletModalProps {
   showWalletModal: boolean;
@@ -27,6 +22,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
   onRequestClose,
 }) => {
   if (!showWalletModal) return null;
+
+
+const {
+  accessToken,
+  siteInfo,
+  userInfo,
+}  = useAppContext();
 
   const [withdrawAmount, setWithdrawAmount] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
@@ -48,8 +50,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetDepositAddress",
-            chain: siteInfo.chain,
-            coinType: userInfo.selectedCoinType,
+            chain: siteInfo?.chain,
+            coinType: userInfo?.selectedCoinType
           }),
         });
 
@@ -80,14 +82,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
           Destination: depositAddress,
           Amount: (
             depositAmount *
-            10 ** siteInfo.digitsMap[userInfo.selectedCoinType]
+            10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
           ).toString(), // XRP in drops
         });
       } else if (getDataFromLocalStorage("walleteType") == "gem") {
         const payment = {
           amount: (
             depositAmount *
-            10 ** siteInfo.digitsMap[userInfo.selectedCoinType]
+            10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
           ).toString(),
           destination: depositAddress,
         };
@@ -135,8 +137,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
         },
         body: JSON.stringify({
           method: "WithdrawCoin",
-          chain: siteInfo.chain,
-          coinType: userInfo.selectedCoinType,
+          chain: siteInfo?.chain,
+          coinType: userInfo?.selectedCoinType,
           amount: withdrawAmount,
         }),
       });
@@ -203,8 +205,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
                   /> */}
                   <p style={{ fontSize: `26px`, marginLeft: "30px" }}>
-                    {userInfo.balances[userInfo.selectedCoinType]}{" "}
-                    {userInfo.selectedCoinType}
+                    {userInfo?.balances[userInfo?.selectedCoinType]}{" "}
+                    {userInfo?.selectedCoinType}
                   </p>
                 </div>
                 <div className="mb-5 flex items-center gap-2">
