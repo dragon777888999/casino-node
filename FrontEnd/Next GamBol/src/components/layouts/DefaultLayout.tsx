@@ -3,7 +3,7 @@ import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/sidebar";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
+import { AppProvider } from '../../context/AppContext';
 export default function DefaultLayout({
   children,
 }: {
@@ -11,7 +11,7 @@ export default function DefaultLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <>
+    <AppProvider>
       <div className="flex">
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
@@ -31,6 +31,6 @@ export default function DefaultLayout({
           <Footer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         </div>
       </div>
-    </>
+    </AppProvider>
   );
 }

@@ -7,8 +7,6 @@ import { backendUrl } from "../../anchor/global";
 import {
   accessToken,
   setAccessToken,
-  siteInfo,
-  setSiteInfo,
   userInfo,
   setUserInfo,
 } from "../../anchor/global";

@@ -31,7 +31,7 @@ const Main: React.FC = () => {
           style={{ width: "100%" }}
         />
       </div>
-      <GamePanel title={"Original Games"} gameType={9} />
+      <GamePanel title={"Original"} gameType={9} />
       <GamePanel title = {"Slot"} gameType={1} />
 
       <div className="mt-10">
