@@ -48,25 +48,22 @@ export function setUserInfo(value: UserInfo) {
   userInfo = value;
 }
 
-interface GameData {
-  vendorCode: string;
-  gameType: number;
-  imageUrl: string;
-  gameCode: string;
-  gameName: string;
+export const backendUrl = "https://api.roogsino.io";
+export const solanaNetworkUrl = "https://api.devnet.solana.com";
+
+export async function updateSiteInfo(){
+  try {
+    if (siteInfo.chain!="")
+      return;
+    const domain = window.location.host;
+    const response = await fetch(
+      `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+    );
+    const result = await response.json();
+    console.log("--------------site info------------");
+    console.log(result);
+    setSiteInfo(result);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
 }
-
-export let gameData: GameData = {
-  vendorCode: "",
-  gameType: 0,
-  gameCode: "",
-  imageUrl: "",
-  gameName: "",
-};
-
-export function setGameData(value: GameData) {
-  gameData = value;
-}
-
-// export const backendUrl = "https://api.roogsino.io";"
-export const backendUrl = "https://test.oraicasino.io";

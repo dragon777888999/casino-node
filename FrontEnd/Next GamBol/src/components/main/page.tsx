@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import { backendUrl, gameData } from "@/anchor/global";
-// import { gameData, setGameData } from "@/anchor/global";
+import { backendUrl, siteInfo } from "@/anchor/global";
 import { useEffect } from "react";
 import { Tuple } from "@reduxjs/toolkit";
 
@@ -33,7 +32,7 @@ const Main: React.FC = () => {
         body: JSON.stringify({
           method: "GetVendorGames",
           gametype: type,
-          agentCode: "testagent",
+          agentCode: siteInfo.agentCode,
         }),
       });
 
@@ -150,10 +149,10 @@ const Main: React.FC = () => {
         </h3>
 
         <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
-          {originalData.map((gameDate) => {
+          {originalData.map((gameData) => {
             // Parse JSON strings
-            const gameName = JSON.parse(gameDate.gameName);
-            const imageUrl = JSON.parse(gameDate.imageUrl);
+            const gameName = JSON.parse(gameData.gameName);
+            const imageUrl = JSON.parse(gameData.imageUrl);
 
             return (
               <div
@@ -186,7 +185,7 @@ const Main: React.FC = () => {
                     </div>
                     <Image
                       src={imageUrl.en}
-                      alt={gameDate.gameName || "Game Thumbnail"} // Provide fallback alt text
+                      alt={gameData.gameName || "Game Thumbnail"} // Provide fallback alt text
                       layout="responsive"
                       width={800}
                       height={450}
