@@ -6,9 +6,7 @@ import { useCookies } from "react-cookie";
 import Modal from "react-modal";
 
 import { useAppContext } from '../../../context/AppContext';
-
-
-
+import { getUserInfoFromWalletAddress } from "../GetUserInfo";
 
 interface ConnectXrpltWalletModalProps {
   showConnectModal: boolean;
@@ -19,40 +17,21 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
   onRequestClose,
 }) => {
   if (!showConnectModal) return null;
-  const [connected, setConnected] = useState(false);
+  const {
+    userInfo,
+    setUserInfo,
+    siteInfo,
+    setSiteInfo,
+    accessToken,
+    setAccessToken,
+  } = useAppContext();
 
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
-
+  const [walletAddress, setWalletAddress] = useState("");
 
   const [enableJwt, setEnableJwt] = useState(false);
-  const [retrieved, setRetrieved] = useState(false);
-  const [walleteType, setWalletType] = useState("");
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
-
-
-      const {  userInfo,
-        setUserInfo,
-        siteInfo,
-        setSiteInfo,
-        loading,
-        setLoading,
-        accessToken,
-        setAccessToken } = useAppContext();
-
- const updateUserCode = (newUserCode: string) => {
-        if (userInfo) {
-            setUserInfo({
-                ...userInfo,
-                userCode: newUserCode
-            });
-        }
-    };
-
-    const handleTokenChange = (newToken: string) => {
-        setAccessToken(newToken);
-    };
-
 
   useEffect(() => {
     if (cookies.jwt !== undefined && cookies.jwt !== null) {
@@ -68,8 +47,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
         .then((data) => {
           console.log(data);
           if (data.hasOwnProperty("xrpAddress")) {
-            updateUserCode(data.xrpAddress)
-            setRetrieved(true);
+            setWalletAddress(data.xrpAddress)
             console.log("--------setxrp-----");
           }
         });
@@ -79,13 +57,22 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
       const data = localStorage.getItem(key);
       return data ? data : " ";
     };
-    setWalletType(getDataFromLocalStorage("walleteType"));
   }, []);
+
+  useEffect(()=>{
+    getUserInfoFromWalletAddress(walletAddress,{
+      userInfo,
+      setUserInfo,
+      siteInfo,
+      setSiteInfo,
+      accessToken,
+      setAccessToken,
+    });
+  },[walletAddress]);
 
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
-
       const data = await payload.json();
 
       setQrcode(data.payload.refs.qr_png);
@@ -110,7 +97,8 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
           if (enableJwt) {
             setCookie("jwt", checkSignJson.token, { path: "/" });
           }
-          updateUserCode(address);
+
+          setWalletAddress(address);
           onRequestClose();
           localStorage.setItem("walleteType", "xum");
         } else {
@@ -157,11 +145,8 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                         console.log("error");
                         return;
                       }
-                      updateUserCode(address);
+                      setWalletAddress(address);
                       onRequestClose();
-          
-
-
 
                       localStorage.setItem("walleteType", "gem");
                       if (enableJwt) {
@@ -203,16 +188,12 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 
     const checkSignJson = await checkSign.json();
     if (checkSignJson.hasOwnProperty("token")) {
-      updateUserCode(address);
+      setWalletAddress(address);
       if (enableJwt) {
         setCookie("jwt", checkSignJson.token, { path: "/" });
       }
       onRequestClose();
-      setConnected(true);
-      localStorage.setItem("address", address);
-      localStorage.setItem("connected", "true");
       localStorage.setItem("walleteType", "cross");
-      // console.log(xrpAddress);
     }
   };
 

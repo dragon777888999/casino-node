@@ -15,8 +15,7 @@ const Header = (props: {
 }) => {
   const [connected, setConnected] = useState(false);
   const domain = window.location.host;
- 
-  const { loading, setLoading, siteInfo,setSiteInfo } = useAppContext();
+  const { loading, setLoading, siteInfo,setSiteInfo, userInfo } = useAppContext();
 
   // ----------get data from local storage---------
 
@@ -43,6 +42,10 @@ const Header = (props: {
     fetchData();
   });
 
+  useEffect(() => {
+    if (userInfo != null && userInfo.userCode != "")
+      setConnected(true);
+  },[userInfo]);
 
   return (
     <>

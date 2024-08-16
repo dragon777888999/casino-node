@@ -4,9 +4,6 @@ import ConnectXrplWalletModal from "./ConnectXrplWalletModal";
 
 
 export default function ConnectXrplButton() {
-
-
-
     const [showXrplConnectModal, setShowXrplConnectModal] = useState(false);
     const openConnectWallet = () => {
         setShowXrplConnectModal(true);

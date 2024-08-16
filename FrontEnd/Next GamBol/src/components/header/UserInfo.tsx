@@ -9,8 +9,6 @@ import { connect } from "http2";
 import DropdownWallet from "./DropdownWallet";
 
 import { useAppContext } from '../../context/AppContext';
-import GetUserInfo from "../wallet-connecter/xrpl/GetUserInfo";
-
 
 Modal.setAppElement("#root");
 const UserInfo = () => {
@@ -51,17 +49,6 @@ const UserInfo = () => {
   const hideMenu = () => {
     setIsMenuVisible(false);
   };
-
-
-
-  useEffect(() => {
-
-   GetUserInfo();
-
-
-  }, []);
-
-
 
   const handleDisconnectCrossmark = async () => {
     try {

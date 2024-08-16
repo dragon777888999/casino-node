@@ -6,19 +6,19 @@ import { useSearchParams } from "next/navigation";
 import React, { useRef } from "react";
 import { backendUrl } from "@/anchor/global";
 import GamePanel from "../main/GamePanel";
+import { useAppContext } from '../../context/AppContext';
 // import { accessToken } from "@/anchor/global";
 
 const Casino = () => {
+  const { siteInfo,setSiteInfo, userInfo, accessToken } = useAppContext();
+
   const searchParams = useSearchParams();
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const vendorCode = searchParams?.get("vendorcode");
-
   const gameCode = searchParams?.get("gameCode");
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
-  const [accessToken, setAccessToken] = useState("");
-  //  const vendorCod = gameUrl ? decodeURIComponent(gameUrl) : " ";
 
   console.log(vendorCode);
   const getDataFromLocalStorage = (key: any) => {
@@ -26,8 +26,6 @@ const Casino = () => {
     return data ? data : " ";
   };
   useEffect(() => {
-    setAccessToken(getDataFromLocalStorage("token"));
-
     const getLaunchUrl = async () => {
       try {
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
@@ -39,8 +37,8 @@ const Casino = () => {
           },
           body: JSON.stringify({
             method: "GetLaunchUrl",
-            currencyCode: "",
-            userCode: null,
+            currencyCode: userInfo?.selectedCoinType,
+            userCode: userInfo?.userCode,
             gameCode: gameCode,
             vendorCode: vendorCode,
           }),
