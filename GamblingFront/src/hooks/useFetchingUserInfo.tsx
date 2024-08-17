@@ -1,0 +1,58 @@
+import { useEffect } from "react";
+import { useAppContext } from "@/hooks/AppContext";
+import { backendUrl } from "@/anchor/global";
+
+const useFetchUserInfo = () => {
+  const { userInfo, setUserInfo, siteInfo, setAccessToken } = useAppContext();
+  console.log("here is usefetch");
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      const domain = window.location.host;
+      console.log("here is usefetch");
+      const updateUserInfo = async (newToken: string) => {
+        try {
+          const response = await fetch(
+            `${backendUrl}/Account/UserInfo?domain=${domain}`,
+            {
+              method: "GET",
+              headers: {
+                "X-Access-Token": newToken,
+              },
+            },
+          );
+          const result = await response.json();
+          if (result.status === 0) {
+            setUserInfo(result);
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      };
+      alert(siteInfo?.agentCode);
+      try {
+        if (!userInfo?.userCode) return;
+        const response = await fetch(
+          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${userInfo.userCode}`,
+        );
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const responseBody = await response.json();
+        const token = responseBody.token;
+        console.log(token);
+        if (token) {
+          setAccessToken(token);
+          await updateUserInfo(token);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchUserInfo();
+  }, [siteInfo]);
+};
+
+export default useFetchUserInfo;
