@@ -1,39 +1,33 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import WalletModal from "../modal/WalletModal";
-import sdk from "@crossmarkio/sdk";
-import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
-import { backendUrl } from "../../anchor/global";
 
-import { connect } from "http2";
-import DropdownWallet from "./DropdownWallet";
+import { useWallet } from "@solana/wallet-adapter-react";
 
-import { useAppContext } from '../../context/AppContext';
-
-Modal.setAppElement("#root");
-const UserInfo = () => {
+import { useAppContext } from "../../hooks/AppContext";
+import useFetchUserInfo from "../../hooks/useFetchingUserInfo";
+import { backendUrl } from "@/anchor/global";
+// Modal.setAppElement("#root");
+const MenuBar = () => {
   const domain = window.location.host;
 
-
-  const {  userInfo,
-        setUserInfo,
-        siteInfo,
-        setSiteInfo,
-        accessToken,
-        setAccessToken } = useAppContext();
-
-
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [nickName, setNickName] = useState("");
-  const [desAddress, setDesAdress] = useState("");
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [selectedKey, setSelectedKey] = useState<string>("");
-
+  const { userInfo, setUserInfo, siteInfo, accessToken } = useAppContext();
 
   const [showWalletModal, setShowWalletModal] = useState(false);
-
-
-  // ----------get data from local storage---------
+  const wallet = useWallet();
+  // ----------solana-------------
+  const updateUserCode = (newUserCode: string) => {
+    if (userInfo) {
+      setUserInfo({
+        ...userInfo,
+        userCode: newUserCode,
+      });
+    }
+  };
+  useEffect(() => {
+    console.log("Site Info userinfo:", siteInfo);
+    console.log("User Info userinfo:", userInfo);
+  }, [siteInfo, userInfo]);
 
   const openWalletModal = () => {
     setShowWalletModal(true);
@@ -43,17 +37,24 @@ const UserInfo = () => {
     setShowWalletModal(false);
   };
 
-  const showMenu = () => {
-    setIsMenuVisible(true);
-  };
-  const hideMenu = () => {
-    setIsMenuVisible(false);
-  };
+  useFetchUserInfo();
 
-  const handleDisconnectCrossmark = async () => {
+  const handleDisconnect = async () => {
     try {
+      if (siteInfo?.chain == "Solana") {
+        wallet.disconnect();
+        // alert("1");
+      }
+      // alert("2");
+      const response = await fetch(`${backendUrl}/Account/Logout`, {
+        method: "GET",
+        headers: {
+          "X-Access-Token": accessToken,
+        },
+      });
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       window.location.reload();
+      updateUserCode("");
       console.log("Wallet disconnected and information cleared");
     } catch (error) {
       console.error("Error disconnecting from Crossmark wallet:", error);
@@ -65,9 +66,12 @@ const UserInfo = () => {
       <div className="balance flex ">
         <div className="flex justify-center gap-5">
           <div className="flex items-center">
-
             <button className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10">
-              <p> {userInfo?.balances[0]} Xrpl</p>
+              <p>
+                {" "}
+                {userInfo?.balances[userInfo.selectedCoinType]}
+                {userInfo?.selectedCoinType}
+              </p>
             </button>
           </div>
 
@@ -82,7 +86,7 @@ const UserInfo = () => {
       <div className="justify-end">
         <button
           className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
-          onClick={handleDisconnectCrossmark}
+          onClick={handleDisconnect}
         >
           <p> Disconnect </p>
         </button>
@@ -94,4 +98,4 @@ const UserInfo = () => {
     </>
   );
 };
-export default UserInfo;
+export default MenuBar;

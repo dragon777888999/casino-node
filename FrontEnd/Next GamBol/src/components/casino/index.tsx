@@ -6,11 +6,11 @@ import { useSearchParams } from "next/navigation";
 import React, { useRef } from "react";
 import { backendUrl } from "@/anchor/global";
 import GamePanel from "../main/GamePanel";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from "../../hooks/AppContext";
 // import { accessToken } from "@/anchor/global";
 
 const Casino = () => {
-  const { siteInfo,setSiteInfo, userInfo, accessToken } = useAppContext();
+  const { siteInfo, setSiteInfo, userInfo, accessToken } = useAppContext();
 
   const searchParams = useSearchParams();
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -19,12 +19,10 @@ const Casino = () => {
   const gameCode = searchParams?.get("gameCode");
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
-
+  console.log("here is casino");
+  console.log(siteInfo);
   console.log(vendorCode);
-  const getDataFromLocalStorage = (key: any) => {
-    const data = localStorage.getItem(key);
-    return data ? data : " ";
-  };
+
   useEffect(() => {
     const getLaunchUrl = async () => {
       try {
@@ -76,12 +74,6 @@ const Casino = () => {
         // Enter fullscreen mode for iframe
         if (iframe.requestFullscreen) {
           iframe.requestFullscreen();
-        } else if (iframe.mozRequestFullScreen) {
-          iframe.mozRequestFullScreen();
-        } else if (iframe.webkitRequestFullscreen) {
-          iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) {
-          iframe.msRequestFullscreen();
         }
       }
     }

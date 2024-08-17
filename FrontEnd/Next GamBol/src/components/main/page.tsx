@@ -1,12 +1,8 @@
 "use client";
-import dynamic from "next/dynamic";
+
 import React from "react";
 import Image from "next/image";
-import { useState } from "react";
-import Link from "next/link";
-import { backendUrl, siteInfo } from "@/anchor/global";
-import { useEffect } from "react";
-import { Tuple } from "@reduxjs/toolkit";
+
 import GamePanel from "./GamePanel";
 
 interface GameData {
@@ -16,7 +12,10 @@ interface GameData {
   gameCode: string;
   gameName: string;
 }
-
+const imgUrls = [
+  "/images/project/recommend.png",
+  "/images/project/original.png",
+];
 const Main: React.FC = () => {
   return (
     <div className=" max-w-screen mx-auto">
@@ -31,8 +30,8 @@ const Main: React.FC = () => {
           style={{ width: "100%" }}
         />
       </div>
-      <GamePanel title={"Original"} gameType={9} />
-      <GamePanel title = {"Slot"} gameType={1} />
+      <GamePanel title={"Original"} gameType={9} imgUrl={imgUrls[0]} />
+      <GamePanel title={"Slot"} gameType={1} imgUrl={imgUrls[1]} />
 
       <div className="mt-10">
         <h4 style={{ marginBottom: "15px", color: "white", fontSize: "20px" }}>

@@ -4,4 +4,5 @@ export type InfoList = {
   amount: number;
   multiplier: number;
   payout: number;
+  imgUrl: string;
 };
