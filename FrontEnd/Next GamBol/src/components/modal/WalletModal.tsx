@@ -45,6 +45,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [isHidden, setIsHidden] = useState(false);
   const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
     useAppContext();
+  const wallet = useWallet();
+  const { connection } = useConnection();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,64 +77,91 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, []);
 
-  // const useDepositPhantom = () => {
-  //   const wallet = useWallet();
-  //   const { connection } = useConnection();
+  const useDepositPhantom = async () => {
+    if (!wallet.publicKey) return;
 
-  //   const deposit = async () => {
-  //     if (!wallet.publicKey) return;
+    const tokenAddress =
+      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
+    console.log("here is wallet modal deposit ");
+    console.log(userInfo);
+    console.log(siteInfo);
 
-  //     const tokenAddress =
-  //       siteInfo?.tokenAddressMap[userInfo?.selectedCoinType];
-  //     const ata = getAssociatedTokenAddressSync(
-  //       new PublicKey(tokenAddress),
-  //       wallet.publicKey,
-  //     );
+    const ata = getAssociatedTokenAddressSync(
+      new PublicKey(tokenAddress),
+      wallet.publicKey,
+    );
 
-  //     const nextAta = getAssociatedTokenAddressSync(
-  //       new PublicKey(tokenAddress),
-  //       new PublicKey(depositAddress),
-  //       true,
-  //     );
+    const nextAta = getAssociatedTokenAddressSync(
+      new PublicKey(tokenAddress),
+      new PublicKey(depositAddress),
+      true,
+    );
 
-  //     const transaction = new Transaction();
-  //     const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-  //       microLamports: 210000,
-  //     });
-  //     transaction.add(addPriorityFee);
+    const transaction = new Transaction();
+    const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+      microLamports: 210000,
+    });
+    transaction.add(addPriorityFee);
 
-  //     transaction.add(
-  //       createAssociatedTokenAccountIdempotentInstruction(
-  //         wallet.publicKey,
-  //         nextAta,
-  //         new PublicKey(depositAddress),
-  //         new PublicKey(tokenAddress),
-  //       ),
-  //     );
+    transaction.add(
+      createAssociatedTokenAccountIdempotentInstruction(
+        wallet.publicKey,
+        nextAta,
+        new PublicKey(depositAddress),
+        new PublicKey(tokenAddress),
+      ),
+    );
 
-  //     transaction.add(
-  //       createTransferInstruction(
-  //         ata,
-  //         nextAta,
-  //         wallet.publicKey,
-  //         depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType],
-  //       ),
-  //     );
+    transaction.add(
+      createTransferInstruction(
+        ata,
+        nextAta,
+        wallet.publicKey,
+        depositAmount * 10 ** siteInfo?.digitsMap[siteInfo.availableCoinTypes], //Instead userInfo.selectCoinType
+      ),
+    );
 
-  //     const transactionSignature = await wallet.sendTransaction(
-  //       transaction,
-  //       connection,
-  //       { skipPreflight: true, preflightCommitment: "finalized" },
-  //     );
-  //     const confirmResult = await connection.confirmTransaction(
-  //       transactionSignature,
-  //       "confirmed",
-  //     );
-  //     const status = confirmResult.value;
-  //     console.log(status);
-  //   };
-  // };
-
+    const transactionSignature = await wallet.sendTransaction(
+      transaction,
+      connection,
+      { skipPreflight: true, preflightCommitment: "finalized" },
+    );
+    const confirmResult = await connection.confirmTransaction(
+      transactionSignature,
+      "confirmed",
+    );
+    const status = confirmResult.value;
+    console.log(status);
+  };
+  const onWithdrawPhantom = async () => {
+    try {
+      if (accessToken == "") return;
+      // alert(accessToken);
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Access-Token": accessToken,
+        },
+        body: JSON.stringify({
+          method: "WithdrawCoin",
+          chain: siteInfo?.chain,
+          coinType: siteInfo?.availableCoinTypes, //Instead userInfo.selectCoinType
+          amount: withdrawAmount,
+        }),
+      });
+      console.log("here is withdraw");
+      console.log(withdrawAmount);
+      const result = await response.json();
+      if (result.status == 0) {
+        window.alert("Withdraw success");
+      } else {
+        window.alert(result.msg);
+      }
+    } catch (error) {
+      window.alert(error);
+    }
+  };
   const onDeposit = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
     if (depositAmount <= 0) {
@@ -141,6 +170,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     }
     // alert(depositAmount);
     setIsHidden(false);
+
     try {
       if (getDataFromLocalStorage("walleteType") == "cross") {
         sdk.sync.signAndSubmit({
@@ -193,8 +223,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
         };
 
         console.log(payload);
-      } else if (getDataFromLocalStorage("walleteType") == "phantom") {
-        useDepositPhantom();
       }
     } catch (e) {
       alert(e);
@@ -297,13 +325,24 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     aria-label="Withdraw amount"
                     defaultValue={withdrawAmount}
                     style={{ color: "white" }}
+                    onChange={(e) => {
+                      setWithdrawAmount(
+                        Number.parseFloat(e.target.value.toString()),
+                      );
+                    }}
                   />
                 </div>
 
                 <div className=" mt-2 flex justify-center">
                   <button
                     type="button"
-                    onClick={onWithdraw}
+                    onClick={() => {
+                      if (siteInfo?.chain == "Xrpl") {
+                        onWithdraw();
+                      } else {
+                        onWithdrawPhantom();
+                      }
+                    }}
                     className="m-auto inline-flex items-center justify-center rounded-md bg-meta-3 px-5 py-2 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
                   >
                     Withdraw
@@ -358,7 +397,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 <div className="mt-3 flex justify-end">
                   <button
                     type="button"
-                    onClick={onDeposit}
+                    onClick={() => {
+                      if (siteInfo?.chain == "Xrpl") {
+                        onDeposit();
+                      } else {
+                        useDepositPhantom();
+                      }
+                    }}
                     className="m-auto inline-flex items-center justify-center rounded-md bg-meta-3 px-5 py-2 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
                   >
                     Deposit

@@ -8,7 +8,7 @@ const useFetchUserInfo = () => {
   useEffect(() => {
     const fetchUserInfo = async () => {
       const domain = window.location.host;
-
+      console.log("here is usefetch");
       const updateUserInfo = async (newToken: string) => {
         try {
           const response = await fetch(
@@ -28,7 +28,7 @@ const useFetchUserInfo = () => {
           console.error(err);
         }
       };
-
+      alert(siteInfo?.agentCode);
       try {
         if (!userInfo?.userCode) return;
         const response = await fetch(
@@ -41,6 +41,7 @@ const useFetchUserInfo = () => {
 
         const responseBody = await response.json();
         const token = responseBody.token;
+        console.log(token);
         if (token) {
           setAccessToken(token);
           await updateUserInfo(token);
@@ -51,7 +52,7 @@ const useFetchUserInfo = () => {
     };
 
     fetchUserInfo();
-  }, []);
+  }, [siteInfo]);
 };
 
 export default useFetchUserInfo;

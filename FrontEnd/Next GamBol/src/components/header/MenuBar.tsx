@@ -27,7 +27,7 @@ const MenuBar = () => {
   useEffect(() => {
     console.log("Site Info userinfo:", siteInfo);
     console.log("User Info userinfo:", userInfo);
-  }, [siteInfo, userInfo]);
+  }, []);
 
   const openWalletModal = () => {
     setShowWalletModal(true);

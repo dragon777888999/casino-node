@@ -49,7 +49,7 @@ const Header = (props: {
     console.log("Site Info:", siteInfo);
     console.log("User Info:", userInfo);
     fetchData();
-  });
+  }, []);
 
   return (
     <>
