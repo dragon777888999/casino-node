@@ -17,6 +17,14 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
   onRequestClose,
 }) => {
   if (!showConnectModal) return null;
+
+  const [qrcode, setQrcode] = useState("");
+  const [jumpLink, setJumpLink] = useState("");
+  const [walletAddress, setWalletAddress] = useState("");
+
+  const [enableJwt, setEnableJwt] = useState(false);
+  const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
+
   const {
     userInfo,
     setUserInfo,
@@ -26,12 +34,6 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
     setAccessToken,
   } = useAppContext();
 
-  const [qrcode, setQrcode] = useState("");
-  const [jumpLink, setJumpLink] = useState("");
-  const [walletAddress, setWalletAddress] = useState("");
-
-  const [enableJwt, setEnableJwt] = useState(false);
-  const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
 
   useEffect(() => {
     if (cookies.jwt !== undefined && cookies.jwt !== null) {

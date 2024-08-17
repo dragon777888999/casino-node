@@ -28,6 +28,8 @@ const Casino = () => {
   useEffect(() => {
     const getLaunchUrl = async () => {
       try {
+        if (accessToken == "")
+          return;
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
 
