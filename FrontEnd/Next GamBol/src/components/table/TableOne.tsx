@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InfoList } from "@/types/product";
+import { InfoList } from "@/types/gameListInfo";
 
 const gameData: InfoList[] = [
   {
@@ -8,6 +8,7 @@ const gameData: InfoList[] = [
     amount: 296,
     multiplier: 22,
     payout: 45,
+    imgUrl: "/images/project/original.png",
   },
   {
     name: "Macbook Pro M1",
@@ -15,6 +16,7 @@ const gameData: InfoList[] = [
     amount: 546,
     multiplier: 12,
     payout: 125,
+    imgUrl: "/images/project/original.png",
   },
   {
     name: "Dell Inspiron 15",
@@ -22,6 +24,7 @@ const gameData: InfoList[] = [
     amount: 443,
     multiplier: 64,
     payout: 247,
+    imgUrl: "/images/project/original.png",
   },
 ];
 

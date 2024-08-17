@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
+
 import SidebarItem from "@/components/sidebar/SidebarItem";
 import ClickOutside from "@/components/ClickOutside";
 import useLocalStorage from "@/hooks/useLocalStorage";
@@ -102,9 +101,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   {group.name}
                 </h3> */}
-                <div className="flex justify-end py-5">
+                <div className="mb-5 flex justify-end">
                   <button
-                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    onClick={() => setSidebarOpen(false)}
                     aria-controls="sidebar"
                     className="block"
                   >

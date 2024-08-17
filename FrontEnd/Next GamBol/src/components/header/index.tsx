@@ -3,49 +3,53 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import UserInfo from "./UserInfo";
+import MenuBar from "./MenuBar";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from "../.././hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const [connected, setConnected] = useState(false);
   const domain = window.location.host;
-  const { loading, setLoading, siteInfo,setSiteInfo, userInfo } = useAppContext();
 
-  // ----------get data from local storage---------
+  const { loading, setLoading, siteInfo, setSiteInfo, userInfo } =
+    useAppContext();
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!loading)
-        return;
+      if (!loading) return;
       try {
         const response = await fetch(
           `${backendUrl}/Account/SiteInfo?domain=${domain}`,
         );
         const result = await response.json();
         console.log("--------------site info------------");
+
+        setSiteInfo({
+          isLoginMode: result.isLoginMode,
+          agentCode: result.agentCode,
+          chain: result.chain,
+          availableCoinTypes: result.availableCoinTypes,
+          digitsMap: result.digitsMap,
+          tokenAddressMap: result.tokenAddressMap,
+          mark: result.mark,
+        });
         console.log(result);
-        setSiteInfo(result);
+        // updateSiteInfo();
       } catch (error) {
         console.error("Fetch error:", error);
-      }
-      finally{
+      } finally {
         setLoading(false);
       }
     };
-
+    console.log("header----------------index");
+    console.log("Site Info:", siteInfo);
+    console.log("User Info:", userInfo);
     fetchData();
   });
-
-  useEffect(() => {
-    if (userInfo != null && userInfo.userCode != "")
-      setConnected(true);
-  },[userInfo]);
 
   return (
     <>
@@ -72,9 +76,9 @@ const Header = (props: {
               aria-controls="sidebar"
               onClick={(e) => {
                 e.stopPropagation();
-                props.setSidebarOpen(props.sidebarOpen ? false : true);
+                props.setSidebarOpen(!props.sidebarOpen);
               }}
-              className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark "
+              className="z-99999 block rounded-sm  bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark "
             >
               <span className="relative block h-5.5 w-5.5 cursor-pointer">
                 <span className="du-block absolute right-0 h-full w-full">
@@ -94,7 +98,7 @@ const Header = (props: {
                     }`}
                   ></span>
                 </span>
-                <span className="absolute right-0 h-full w-full rotate-45">
+                <span className="absolute right-0 hidden h-full w-full">
                   <span
                     className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
                       !props.sidebarOpen && "!h-0 !delay-[0]"
@@ -110,18 +114,13 @@ const Header = (props: {
             </button>
           </div>
 
-          {connected ? (
-            <UserInfo />
+          {userInfo?.userCode ? (
+            <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
               <ul className="flex items-center gap-2 2xsm:gap-4"></ul>
-              {siteInfo?.isLoginMode && (
-                <LoginButton />
-              )}
-              {!siteInfo?.isLoginMode && (
-                <ConnectButton />
-              )
-              }
+              {siteInfo?.isLoginMode && <LoginButton />}
+              {!siteInfo?.isLoginMode && <ConnectButton />}
             </div>
           )}
         </div>

@@ -4,15 +4,28 @@ import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from "../../hooks/AppContext";
 
+// ---------solana wallet------------
+import { ComputeBudgetProgram, PublicKey, Transaction } from "@solana/web3.js";
+import {
+  createAssociatedTokenAccountIdempotentInstruction,
+  createTransferInstruction,
+  getAssociatedTokenAddressSync,
+} from "@solana/spl-token";
+import {
+  useAnchorWallet,
+  useConnection,
+  useWallet,
+} from "@solana/wallet-adapter-react";
 
+Modal.setAppElement("#root");
 // Define the WalletModal component
 interface WalletModalProps {
   showWalletModal: boolean;
   onRequestClose: () => void;
 }
-const getDataFromLocalStorage = (key : string) => {
+const getDataFromLocalStorage = (key: string) => {
   const data = localStorage.getItem(key);
   return data ? data : null;
 };
@@ -23,13 +36,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
 }) => {
   if (!showWalletModal) return null;
 
-
-const {
-  accessToken,
-  siteInfo,
-  userInfo,
-}  = useAppContext();
-
   const [withdrawAmount, setWithdrawAmount] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
   const [depositAddress, setDepositAddress] = useState("");
@@ -37,6 +43,8 @@ const {
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
+  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
+    useAppContext();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +59,7 @@ const {
           body: JSON.stringify({
             method: "GetDepositAddress",
             chain: siteInfo?.chain,
-            coinType: userInfo?.selectedCoinType
+            coinType: userInfo?.selectedCoinType,
           }),
         });
 
@@ -66,6 +74,64 @@ const {
 
     fetchData();
   }, []);
+
+  // const useDepositPhantom = () => {
+  //   const wallet = useWallet();
+  //   const { connection } = useConnection();
+
+  //   const deposit = async () => {
+  //     if (!wallet.publicKey) return;
+
+  //     const tokenAddress =
+  //       siteInfo?.tokenAddressMap[userInfo?.selectedCoinType];
+  //     const ata = getAssociatedTokenAddressSync(
+  //       new PublicKey(tokenAddress),
+  //       wallet.publicKey,
+  //     );
+
+  //     const nextAta = getAssociatedTokenAddressSync(
+  //       new PublicKey(tokenAddress),
+  //       new PublicKey(depositAddress),
+  //       true,
+  //     );
+
+  //     const transaction = new Transaction();
+  //     const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+  //       microLamports: 210000,
+  //     });
+  //     transaction.add(addPriorityFee);
+
+  //     transaction.add(
+  //       createAssociatedTokenAccountIdempotentInstruction(
+  //         wallet.publicKey,
+  //         nextAta,
+  //         new PublicKey(depositAddress),
+  //         new PublicKey(tokenAddress),
+  //       ),
+  //     );
+
+  //     transaction.add(
+  //       createTransferInstruction(
+  //         ata,
+  //         nextAta,
+  //         wallet.publicKey,
+  //         depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType],
+  //       ),
+  //     );
+
+  //     const transactionSignature = await wallet.sendTransaction(
+  //       transaction,
+  //       connection,
+  //       { skipPreflight: true, preflightCommitment: "finalized" },
+  //     );
+  //     const confirmResult = await connection.confirmTransaction(
+  //       transactionSignature,
+  //       "confirmed",
+  //     );
+  //     const status = confirmResult.value;
+  //     console.log(status);
+  //   };
+  // };
 
   const onDeposit = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
@@ -82,14 +148,20 @@ const {
           Destination: depositAddress,
           Amount: (
             depositAmount *
-            10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+            10 **
+              (siteInfo?.digitsMap[
+                userInfo?.selectedCoinType || "defaultCoinType"
+              ] || 0)
           ).toString(), // XRP in drops
         });
       } else if (getDataFromLocalStorage("walleteType") == "gem") {
         const payment = {
           amount: (
             depositAmount *
-            10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+            10 **
+              (siteInfo?.digitsMap[
+                userInfo?.selectedCoinType || "defaultCoinType"
+              ] || 0)
           ).toString(),
           destination: depositAddress,
         };
@@ -97,7 +169,7 @@ const {
         sendPayment(payment).then((trHash) => {
           console.log("Transaction Hash: ", trHash);
         });
-      } else {
+      } else if (getDataFromLocalStorage("walleteType") == "xum") {
         const payload = await fetch(
           `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
         );
@@ -121,6 +193,8 @@ const {
         };
 
         console.log(payload);
+      } else if (getDataFromLocalStorage("walleteType") == "phantom") {
+        useDepositPhantom();
       }
     } catch (e) {
       alert(e);
@@ -160,6 +234,7 @@ const {
       isOpen={showWalletModal}
       onRequestClose={onRequestClose}
       contentLabel="Example Modal"
+      ariaHideApp={false}
     >
       <div className="mt-10 sm:mt-15" style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
@@ -204,9 +279,13 @@ const {
                     aria-label="Balance"
 
                   /> */}
-                  <p style={{ fontSize: `26px`, marginLeft: "30px" }}>
-                    {userInfo?.balances[userInfo?.selectedCoinType]}{" "}
-                    {userInfo?.selectedCoinType}
+                  <p
+                    style={{ fontSize: `26px`, marginLeft: "30px", gap: "5px" }}
+                  >
+                    <span>
+                      {userInfo?.balances[userInfo?.selectedCoinType]}
+                    </span>
+                    <span> {userInfo?.selectedCoinType}</span>
                   </p>
                 </div>
                 <div className="mb-5 flex items-center gap-2">
@@ -217,9 +296,11 @@ const {
                     placeholder="Withdraw amount"
                     aria-label="Withdraw amount"
                     defaultValue={withdrawAmount}
+                    style={{ color: "white" }}
                   />
                 </div>
-                <div className=" flex justify-center">
+
+                <div className=" mt-2 flex justify-center">
                   <button
                     type="button"
                     onClick={onWithdraw}
@@ -241,12 +322,13 @@ const {
                     placeholder="Deposit address"
                     aria-label="Deposit address"
                     defaultValue={depositAddress}
+                    style={{ color: "white" }}
                     onChange={(e) => {
                       setDepositAddress(e.target.value);
                     }}
                   />
                 </div>
-                <div className="mb-3 flex items-center gap-2">
+                <div className=" flex items-center gap-2">
                   <label>Amount :</label>
                   <input
                     type="text"
@@ -254,6 +336,7 @@ const {
                     placeholder="Deposit Amount"
                     aria-label="Deposit Amount"
                     defaultValue={depositAmount}
+                    style={{ color: "white" }}
                     onChange={(e) => {
                       setDepositAmount(
                         Number.parseFloat(e.target.value.toString()),
@@ -263,7 +346,7 @@ const {
                 </div>
                 {isHidden ? null : (
                   <div
-                    className="qrcode mb-5"
+                    className="qrcode "
                     style={{
                       display: "flex",
                       justifyContent: "center",
@@ -272,7 +355,7 @@ const {
                     <img style={{ width: "60%" }} src={qrcode}></img>
                   </div>
                 )}
-                <div className="flex justify-end">
+                <div className="mt-3 flex justify-end">
                   <button
                     type="button"
                     onClick={onDeposit}
