@@ -3,12 +3,12 @@ import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 
 const useFetchUserInfo = () => {
-  const { userInfo, setUserInfo, siteInfo, setAccessToken } = useAppContext();
-  console.log("here is usefetch");
+  const { walletAddress,userInfo, setUserInfo, siteInfo, setAccessToken } = useAppContext();
   useEffect(() => {
     const fetchUserInfo = async () => {
-      const domain = window.location.host;
-      console.log("here is usefetch");
+      if (walletAddress == "")
+        return;
+        const domain = window.location.host;
       const updateUserInfo = async (newToken: string) => {
         try {
           const response = await fetch(
@@ -28,11 +28,10 @@ const useFetchUserInfo = () => {
           console.error(err);
         }
       };
-      alert(siteInfo?.agentCode);
+
       try {
-        if (!userInfo?.userCode) return;
         const response = await fetch(
-          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${userInfo.userCode}`,
+          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}`,
         );
 
         if (!response.ok) {
@@ -41,7 +40,6 @@ const useFetchUserInfo = () => {
 
         const responseBody = await response.json();
         const token = responseBody.token;
-        console.log(token);
         if (token) {
           setAccessToken(token);
           await updateUserInfo(token);
@@ -52,7 +50,7 @@ const useFetchUserInfo = () => {
     };
 
     fetchUserInfo();
-  }, [siteInfo]);
+  }, [walletAddress]);
 };
 
 export default useFetchUserInfo;

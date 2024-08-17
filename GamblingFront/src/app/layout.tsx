@@ -8,7 +8,7 @@ import "@/css/custom.css";
 import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
-import { AppProvider } from "@/context/AppContext";
+import { AppProvider } from "@/hooks/AppContext";
 // --------------solana----------
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {

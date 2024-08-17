@@ -6,8 +6,9 @@ import { useState, useEffect } from "react";
 import MenuBar from "./MenuBar";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
-import { useAppContext } from "../.././hooks/AppContext";
+import { useAppContext } from "../../hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
+import useFetchUserInfo from "../../hooks/useFetchingUserInfo";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -28,15 +29,7 @@ const Header = (props: {
         const result = await response.json();
         console.log("--------------site info------------");
 
-        setSiteInfo({
-          isLoginMode: result.isLoginMode,
-          agentCode: result.agentCode,
-          chain: result.chain,
-          availableCoinTypes: result.availableCoinTypes,
-          digitsMap: result.digitsMap,
-          tokenAddressMap: result.tokenAddressMap,
-          mark: result.mark,
-        });
+        setSiteInfo(result);
         console.log(result);
         // updateSiteInfo();
       } catch (error) {
@@ -50,7 +43,7 @@ const Header = (props: {
     console.log("User Info:", userInfo);
     fetchData();
   }, []);
-
+  useFetchUserInfo();
   return (
     <>
       <header

@@ -17,17 +17,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 }) => {
   if (!showConnectModal) return null;
 
-  const { userInfo, setUserInfo, siteInfo, setSiteInfo, setAccessToken } =
-    useAppContext();
-
-  const updateUserCode = (newUserCode: string) => {
-    if (userInfo) {
-      setUserInfo({
-        ...userInfo,
-        userCode: newUserCode,
-      });
-    }
-  };
+  const { setWalletAddress } = useAppContext();
 
   const [qrcode, setQrcode] = useState("");
   const [setJumpLink] = useState("");
@@ -49,17 +39,12 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
         .then((data) => {
           console.log(data);
           if (data.hasOwnProperty("xrpAddress")) {
-            updateUserCode(data.xrpAddress);
-            setAccessToken(data.xrpAddress);
+            setWalletAddress(data.xrpAddress);
             console.log("--------setxrp-----");
           }
         });
     }
   }, []);
-  React.useEffect(() => {
-    console.log("Site Info wallet:", siteInfo);
-    console.log("User Info waleet:", userInfo);
-  }, [siteInfo, userInfo]);
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
@@ -88,7 +73,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
             setCookie("jwt", checkSignJson.token, { path: "/" });
           }
 
-          updateUserCode(address);
+          setWalletAddress(address);
           onRequestClose();
           localStorage.setItem("walleteType", "xum");
         } else {
@@ -136,9 +121,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                         return;
                       }
                       // updateSiteLogin(true);
-                      updateUserCode(address);
-                      setAccessToken(token);
-                      // alert(accessToken);
+                      setWalletAddress(address);
                       onRequestClose();
 
                       localStorage.setItem("walleteType", "gem");
@@ -181,7 +164,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 
     const checkSignJson = await checkSign.json();
     if (checkSignJson.hasOwnProperty("token")) {
-      updateUserCode(address);
+      setWalletAddress(address);
       if (enableJwt) {
         setCookie("jwt", checkSignJson.token, { path: "/" });
       }

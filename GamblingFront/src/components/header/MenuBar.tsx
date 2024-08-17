@@ -5,7 +5,7 @@ import WalletModal from "../modal/WalletModal";
 import { useWallet } from "@solana/wallet-adapter-react";
 
 import { useAppContext } from "../../hooks/AppContext";
-import useFetchUserInfo from "../../hooks/useFetchingUserInfo";
+
 import { backendUrl } from "@/anchor/global";
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -37,7 +37,7 @@ const MenuBar = () => {
     setShowWalletModal(false);
   };
 
-  useFetchUserInfo();
+
 
   const handleDisconnect = async () => {
     try {
