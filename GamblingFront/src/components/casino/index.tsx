@@ -7,6 +7,7 @@ import React, { useRef } from "react";
 import { backendUrl } from "@/anchor/global";
 import GamePanel from "../main/GamePanel";
 import { useAppContext } from "../../hooks/AppContext";
+
 // import { accessToken } from "@/anchor/global";
 
 const Casino = () => {
@@ -23,11 +24,11 @@ const Casino = () => {
   console.log(siteInfo);
   console.log(vendorCode);
 
+  const router = useRouter();
   useEffect(() => {
     const getLaunchUrl = async () => {
       try {
-        if (accessToken == "")
-          return;
+        if (accessToken == "") return router.push("/");
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
 

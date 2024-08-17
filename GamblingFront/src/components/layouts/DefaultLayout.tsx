@@ -12,11 +12,11 @@ export default function DefaultLayout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     // <AppProvider>
-    <div className="flex">
+    <div className="flex bg-black">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
       <div
-        className={`relative flex flex-1 flex-col ${
+        className={`relative flex flex-1 flex-col bg-black ${
           sidebarOpen ? "ml-72.5$" : "ml-auto"
         }`}
       >

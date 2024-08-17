@@ -3,12 +3,12 @@ import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 
 const useFetchUserInfo = () => {
-  const { walletAddress,userInfo, setUserInfo, siteInfo, setAccessToken } = useAppContext();
+  const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken } =
+    useAppContext();
   useEffect(() => {
     const fetchUserInfo = async () => {
-      if (walletAddress == "")
-        return;
-        const domain = window.location.host;
+      if (walletAddress == "") return;
+      const domain = window.location.host;
       const updateUserInfo = async (newToken: string) => {
         try {
           const response = await fetch(
@@ -28,6 +28,7 @@ const useFetchUserInfo = () => {
           console.error(err);
         }
       };
+      console.log("here is get userinfo");
 
       try {
         const response = await fetch(
@@ -50,6 +51,7 @@ const useFetchUserInfo = () => {
     };
 
     fetchUserInfo();
+    console.log(userInfo);
   }, [walletAddress]);
 };
 

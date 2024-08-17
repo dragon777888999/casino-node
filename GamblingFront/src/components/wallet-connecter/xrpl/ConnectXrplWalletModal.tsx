@@ -223,20 +223,6 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       Open in Xaman
                       <span>Detected</span>
                     </button>
-                  </li>
-                  <li>
-                    <button
-                      className="wallet-adapter-button"
-                      tabIndex={1}
-                      type="button"
-                      onClick={handleConnectGem}
-                    >
-                      <i className="wallet-adapter-button-start-icon">
-                        <img></img>
-                      </i>
-                      Connect with GEM
-                      <span>Detected</span>
-                    </button>
                     {qrcode ? (
                       <div style={{ display: "block" }}>
                         <div className="qrcode">
@@ -257,6 +243,20 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                         </button>
                       </div>
                     ) : null}
+                  </li>
+                  <li>
+                    <button
+                      className="wallet-adapter-button"
+                      tabIndex={1}
+                      type="button"
+                      onClick={handleConnectGem}
+                    >
+                      <i className="wallet-adapter-button-start-icon">
+                        <img></img>
+                      </i>
+                      Connect with GEM
+                      <span>Detected</span>
+                    </button>
                   </li>
                   <li>
                     <button

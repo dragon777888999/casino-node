@@ -8,7 +8,7 @@ const Footer = (props: {
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-black">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div className="footer-container">
           <div className="flex w-full flex-col">

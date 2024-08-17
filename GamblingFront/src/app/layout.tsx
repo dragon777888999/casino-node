@@ -52,7 +52,7 @@ export default function RootLayout({
                 style={{ background: "rgb(26 34 44)" }}
               >
                 <div
-                  className="dark dark:bg-boxdark-2 dark:text-bodydark"
+                  className="bg-black dark dark:bg-boxdark-2 dark:text-bodydark"
                   id="root"
                 >
                   {loading ? <Loader /> : children}

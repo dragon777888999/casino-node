@@ -154,7 +154,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
       console.log(withdrawAmount);
       const result = await response.json();
       if (result.status == 0) {
-        window.alert("Withdraw success");
+        // window.alert("Withdraw success");
+        setWithdrawAmount(0);
       } else {
         window.alert(result.msg);
       }
@@ -213,11 +214,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
           let responseObj = JSON.parse(e.data);
           if (responseObj.signed !== null && responseObj.signed !== undefined) {
             if (responseObj.signed) {
-              alert("Your payment successed")!;
+              // ?alert("Your payment successed")!;
             } else {
-              alert("Your payment failed");
+              // alert("Your payment failed");
             }
             setIsHidden(true);
+            setDepositAmount(0);
           }
           console.log(responseObj);
         };
@@ -228,6 +230,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       alert(e);
     }
   };
+
   const onWithdraw = async () => {
     try {
       if (accessToken == "") return;
@@ -246,13 +249,25 @@ const WalletModal: React.FC<WalletModalProps> = ({
       });
       const result = await response.json();
       if (result.status == 0) {
-        window.alert("Withdraw success");
+        // window.alert("Withdraw success");
+        setWithdrawAmount(0);
       } else {
         window.alert(result.msg);
       }
     } catch (error) {
       window.alert(error);
     }
+  };
+  // alert(depositAmount);
+  const handleCopy = () => {
+    navigator.clipboard.writeText(depositAddress).then(
+      () => {
+        alert("Copied to clipboard!");
+      },
+      (err) => {
+        console.error("Failed to copy: ", err);
+      },
+    );
   };
 
   return (
@@ -323,7 +338,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     className=" ml-1 mt-2 h-10 pl-2 text-black"
                     placeholder="Withdraw amount"
                     aria-label="Withdraw amount"
-                    defaultValue={withdrawAmount}
+                    value={withdrawAmount}
                     style={{ color: "white" }}
                     onChange={(e) => {
                       setWithdrawAmount(
@@ -361,11 +376,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     placeholder="Deposit address"
                     aria-label="Deposit address"
                     defaultValue={depositAddress}
-                    style={{ color: "white" }}
+                    style={{ color: "white", textOverflow: "ellipsis" }}
                     onChange={(e) => {
                       setDepositAddress(e.target.value);
                     }}
                   />
+                  <button
+                    onClick={handleCopy}
+                    className="ml-2 h-9 bg-black px-3 text-white"
+                  >
+                    Copy
+                  </button>
                 </div>
                 <div className=" flex items-center gap-2">
                   <label>Amount :</label>
@@ -374,7 +395,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
                     placeholder="Deposit Amount"
                     aria-label="Deposit Amount"
-                    defaultValue={depositAmount}
+                    value={depositAmount}
                     style={{ color: "white" }}
                     onChange={(e) => {
                       setDepositAmount(
