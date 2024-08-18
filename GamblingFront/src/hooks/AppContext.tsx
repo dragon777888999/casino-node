@@ -8,6 +8,7 @@ interface SiteInfo {
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   mark: string;
+  walletModalMessage : string;
 }
 interface UserInfo {
   status: number;
