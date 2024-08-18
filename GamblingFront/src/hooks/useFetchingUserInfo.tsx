@@ -43,6 +43,7 @@ const useFetchUserInfo = () => {
         const token = responseBody.token;
         if (token) {
           setAccessToken(token);
+          document.cookie = "X-Access-Token="+token+"; path="+backendUrl;
           await updateUserInfo(token);
         }
       } catch (err) {

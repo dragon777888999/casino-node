@@ -1,7 +1,7 @@
 "use client";
 import "jsvectormap/dist/jsvectormap.css";
 // import "flatpickr/dist/flatpickr.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+//import "@fontawesome/fontawesome-free/css/all.min.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";

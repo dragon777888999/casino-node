@@ -16,18 +16,7 @@ const Header = (props: {
 }) => {
   const domain = window.location.host;
  
-  function getWebSocketAddress(url:string) {
-    // Create a new URL object from the string
-    let parsedUrl = new URL(url);
-
-    // Determine the WebSocket protocol (ws or wss)
-    let wsProtocol = parsedUrl.protocol === "https:" ? "wss:" : "ws:";
-
-    // Construct the WebSocket URL
-    let wsUrl = `${wsProtocol}//${parsedUrl.host}/websocket`;
-
-    return wsUrl;
-}
+ 
   const { loading, setLoading, siteInfo, setSiteInfo, userInfo, socket, setSocket, socketData, setSocketData } =
     useAppContext();
 
@@ -51,31 +40,6 @@ const Header = (props: {
       }
     };
     fetchData();
-
-    const ws = new WebSocket(getWebSocketAddress(backendUrl));
-
-    ws.onopen = () => {
-      console.log('WebSocket connection opened');
-    };
-
-    ws.onmessage = (event) => {
-      console.log('Received:', event.data);
-      setSocketData(event.data); // Update the state with received data
-    };
-
-    ws.onclose = () => {
-      console.log('WebSocket connection closed');
-    };
-
-    ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
-    };
-
-    setSocket(ws);
-
-    return () => {
-      ws.close();
-    };
   }, []);
   useFetchUserInfo();
   return (
