@@ -428,3 +428,30 @@
 .footer-container {
   width: 1000%;
 }
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+.tooltip {
+  width: max-content;
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the button */
+  /* left: 50%; */
+  right: 0;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltipContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

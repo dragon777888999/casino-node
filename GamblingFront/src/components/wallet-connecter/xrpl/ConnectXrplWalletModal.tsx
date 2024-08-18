@@ -54,7 +54,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
       // setJumpLink(data.payload.next.always);
 
       const ws = new WebSocket(data.payload.refs.websocket_status);
-
+      // alert(data.payload.refs.websocket_status);
       ws.onmessage = async (e) => {
         let responseObj = JSON.parse(e.data);
         if (responseObj.signed !== null && responseObj.signed !== undefined) {

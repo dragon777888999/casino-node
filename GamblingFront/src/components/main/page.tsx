@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 
 import GamePanel from "./GamePanel";
-
+import WebSocketComponent from "@/webSocket/socket";
+import { backendUrl } from "@/anchor/global";
 interface GameData {
   vendorCode: string;
   gameType: number;
@@ -32,6 +33,8 @@ const Main: React.FC = () => {
       </div>
       <GamePanel title={"Original"} gameType={9} imgUrl={imgUrls[0]} />
       <GamePanel title={"Slot"} gameType={1} imgUrl={imgUrls[1]} />
+
+      <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} />
 
       <div className="mt-10">
         <h4 style={{ marginBottom: "15px", color: "white", fontSize: "20px" }}>
