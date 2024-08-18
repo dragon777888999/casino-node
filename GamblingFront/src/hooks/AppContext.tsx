@@ -31,6 +31,10 @@ interface AppState {
   setAccessToken: (accessToken: string) => void;
   walletAddress: string;
   setWalletAddress: (walletAddress: string) => void;
+  socket : WebSocket | null;
+  setSocket : (socket : WebSocket | null) => void;
+  socketData : string;
+  setSocketData : (data :string) => void;
 }
 
 // Create the context with a default value
@@ -52,6 +56,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [accessToken, setAccessToken] = useState<string>("");
   const [walletAddress, setWalletAddress] = useState<string>("");
+  const [socket, setSocket] = useState<WebSocket | null>(null);
+  const [socketData, setSocketData] = useState<string>("");
   const value = {
     userInfo,
     setUserInfo,
@@ -62,7 +68,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     accessToken,
     setAccessToken,
     walletAddress,
-    setWalletAddress
+    setWalletAddress,
+    socket,
+    setSocket,
+    socketData,
+    setSocketData
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
