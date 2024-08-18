@@ -3,8 +3,7 @@ import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 
 const useFetchUserInfo = () => {
-  const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken } =
-    useAppContext();
+  const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken, socket } = useAppContext();
   useEffect(() => {
     const fetchUserInfo = async () => {
       if (walletAddress == "") return;
@@ -23,6 +22,11 @@ const useFetchUserInfo = () => {
           const result = await response.json();
           if (result.status === 0) {
             setUserInfo(result);
+            const authMessage = {
+              type: "auth",
+              token: newToken
+            };
+            socket?.send(JSON.stringify(authMessage));
           }
         } catch (err) {
           console.error(err);
@@ -43,7 +47,7 @@ const useFetchUserInfo = () => {
         const token = responseBody.token;
         if (token) {
           setAccessToken(token);
-          document.cookie = "X-Access-Token="+token+"; path="+backendUrl;
+          document.cookie = "X-Access-Token=" + token + "; path=" + backendUrl;
           await updateUserInfo(token);
         }
       } catch (err) {
