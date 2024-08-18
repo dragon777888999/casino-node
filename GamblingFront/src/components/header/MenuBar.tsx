@@ -37,8 +37,6 @@ const MenuBar = () => {
     setShowWalletModal(false);
   };
 
-
-
   const handleDisconnect = async () => {
     try {
       if (siteInfo?.chain == "Solana") {
@@ -64,7 +62,7 @@ const MenuBar = () => {
   return (
     <>
       <div className="balance flex ">
-        <div className="flex justify-center gap-5">
+        <div className="flex justify-center gap-5 sm:gap-3">
           <div className="flex items-center">
             <button className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10">
               <p>
@@ -76,7 +74,7 @@ const MenuBar = () => {
           </div>
 
           <button
-            className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+            className="ml-2 inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
             onClick={() => openWalletModal()}
           >
             <p> Wallet</p>
@@ -85,7 +83,7 @@ const MenuBar = () => {
       </div>
       <div className="justify-end">
         <button
-          className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+          className="ml-3 inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90  lg:px-8 xl:px-10"
           onClick={handleDisconnect}
         >
           <p> Disconnect </p>

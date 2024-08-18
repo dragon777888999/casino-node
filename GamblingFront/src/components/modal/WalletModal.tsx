@@ -381,12 +381,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       setDepositAddress(e.target.value);
                     }}
                   />
-                  <button
-                    onClick={handleCopy}
-                    className="ml-2 h-9 bg-black px-3 text-white"
-                  >
-                    Copy
-                  </button>
+                  <div className="tooltipContainer ">
+                    <button
+                      onClick={handleCopy}
+                      className="ml-2 h-9 bg-black px-3 text-white"
+                    >
+                      <i className="fa-regular fa-copy" />
+                    </button>
+                    <div className="tooltip">Copy your address</div>
+                  </div>
                 </div>
                 <div className=" flex items-center gap-2">
                   <label>Amount :</label>
