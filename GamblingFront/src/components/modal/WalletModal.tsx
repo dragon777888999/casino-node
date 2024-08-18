@@ -174,7 +174,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
     try {
       if (getDataFromLocalStorage("walleteType") == "cross") {
-        sdk.sync.signAndSubmit({
+        const response = sdk.sync.signAndSubmit({
           TransactionType: "Payment",
           Destination: depositAddress,
           Amount: (
@@ -185,6 +185,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
               ] || 0)
           ).toString(), // XRP in drops
         });
+        console.log(response);
+        if (response.result === "tesSUCCESS") {
+          console.log("Transaction successful!");
+          setDepositAmount(0);
+        } else {
+          console.error("Transaction failed with status:", response.result);
+        }
       } else if (getDataFromLocalStorage("walleteType") == "gem") {
         const payment = {
           amount: (
@@ -197,9 +204,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
           destination: depositAddress,
         };
 
-        sendPayment(payment).then((trHash) => {
-          console.log("Transaction Hash: ", trHash);
-        });
+        sendPayment(payment)
+          .then((trHash) => {
+            console.log("Transaction Hash: ", trHash);
+            setDepositAmount(0);
+          })
+          .catch((error) => {
+            console.error("Payment failed:", error);
+            setDepositAmount(0);
+            // Handle error or alert the user
+          });
       } else if (getDataFromLocalStorage("walleteType") == "xum") {
         const payload = await fetch(
           `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
@@ -210,20 +224,30 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink(data.payload.next.always);
 
         const ws = new WebSocket(data.payload.refs.websocket_status);
+        console.log("111111");
+        console.log(ws);
+        console.log("111111");
+        // const ws1 = new WebSocket(`${backendUrl}/websocket`);
+        // alert("2");
+        // console.log("222222222");
+        // console.log(ws1);
+        // console.log("222222222");
         ws.onmessage = async (e) => {
           let responseObj = JSON.parse(e.data);
+          console.log("message");
+          console.log(responseObj);
           if (responseObj.signed !== null && responseObj.signed !== undefined) {
             if (responseObj.signed) {
               // ?alert("Your payment successed")!;
             } else {
               // alert("Your payment failed");
             }
-            setIsHidden(true);
             setDepositAmount(0);
+            setIsHidden(true);
           }
           console.log(responseObj);
         };
-
+        // setDepositAmount(0);
         console.log(payload);
       }
     } catch (e) {
@@ -253,6 +277,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setWithdrawAmount(0);
       } else {
         window.alert(result.msg);
+        setWithdrawAmount(0);
       }
     } catch (error) {
       window.alert(error);
@@ -334,16 +359,20 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 <div className="mb-5 flex items-center gap-2">
                   <label>Amount :</label>
                   <input
-                    type="text"
+                    type="number"
                     className=" ml-1 mt-2 h-10 pl-2 text-black"
                     placeholder="Withdraw amount"
                     aria-label="Withdraw amount"
+                    defaultValue={0}
                     value={withdrawAmount}
                     style={{ color: "white" }}
                     onChange={(e) => {
-                      setWithdrawAmount(
-                        Number.parseFloat(e.target.value.toString()),
-                      );
+                      // if (e.target.value.toString() == "") alert("000");
+                      setWithdrawAmount(Number.parseFloat(e.target.value));
+                      const value = Number.parseFloat(e.target.value);
+                      // if (value >= 0 || e.target.value === "") {
+                      //   setWithdrawAmount(value);
+                      // }
                     }}
                   />
                 </div>
@@ -394,16 +423,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 <div className=" flex items-center gap-2">
                   <label>Amount :</label>
                   <input
-                    type="text"
+                    type="number"
                     className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
                     placeholder="Deposit Amount"
                     aria-label="Deposit Amount"
+                    defaultValue={0}
                     value={depositAmount}
                     style={{ color: "white" }}
                     onChange={(e) => {
-                      setDepositAmount(
-                        Number.parseFloat(e.target.value.toString()),
-                      );
+                      setDepositAmount(Number.parseFloat(e.target.value));
                     }}
                   />
                 </div>
