@@ -9,6 +9,7 @@ interface SiteInfo {
   tokenAddressMap: { [key: string]: string };
   mark: string;
   walletModalMessage : string;
+  themeCode : string;
 }
 interface UserInfo {
   status: number;

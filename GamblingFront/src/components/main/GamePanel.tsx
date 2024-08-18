@@ -70,6 +70,10 @@ export default function GamePanel({
           // Parse JSON strings
           const gameName = JSON.parse(gameData.gameName);
           const imageUrl = JSON.parse(gameData.imageUrl);
+          let imageSrc = imageUrl.en;
+          if (siteInfo?.themeCode){
+            imageSrc = `/${siteInfo?.themeCode}/images/${gameData.vendorCode}/${gameData.gameCode}.png`;
+          }
           // console.log("--------vender------");
           // console.log(gameData.vendorCode);
           return (
@@ -101,8 +105,8 @@ export default function GamePanel({
                     </svg>
                   </div>
                   <Image
-                    src={imageUrl.en}
-                    alt={gameData.gameName || "Game Thumbnail"} // Provide fallback alt text
+                    src={imageSrc}
+                    alt={gameName.en || "Game Thumbnail"} // Provide fallback alt text
                     layout="responsive"
                     width={800}
                     height={450}
