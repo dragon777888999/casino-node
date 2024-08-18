@@ -15,9 +15,9 @@ const Header = (props: {
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   const domain = window.location.host;
- 
- 
-  const { loading, setLoading, siteInfo, setSiteInfo, userInfo, socket, setSocket, socketData, setSocketData } =
+
+
+  const { loading, setLoading, siteInfo, setSiteInfo, userInfo, setUserInfo, setSocket, socketData, setSocketData } =
     useAppContext();
 
   useEffect(() => {
@@ -41,6 +41,26 @@ const Header = (props: {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    try {
+      const cmd = JSON.parse(socketData);
+      if (cmd.type === "balance") {
+        if (userInfo) {
+          let balances = userInfo?.balances;
+          if (balances) {
+            balances[cmd.currencyCode] = cmd.balance;
+            setUserInfo({
+              ...userInfo,
+              balances: balances
+            });
+          }
+        }
+      }
+    } catch (error) {
+      console.error("Failed to parse JSON:", error);
+    }
+  }, [socketData]);
+
   useFetchUserInfo();
   return (
     <>

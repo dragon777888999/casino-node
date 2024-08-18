@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
+import { useRadioGroupContext } from "@nextui-org/react";
 
 const useFetchUserInfo = () => {
   const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken, socket } = useAppContext();
@@ -24,7 +25,8 @@ const useFetchUserInfo = () => {
             setUserInfo(result);
             const authMessage = {
               type: "auth",
-              token: newToken
+              agentCode: siteInfo?.agentCode,
+              userCode: result.userCode
             };
             socket?.send(JSON.stringify(authMessage));
           }
