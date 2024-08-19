@@ -2,17 +2,26 @@ import Image from "next/image";
 import TableAll from "../table/TableAll";
 import TableOne from "../table/TableOne";
 import { Tabs, Tab } from "@nextui-org/react";
+import { useAppContext } from "@/hooks/AppContext";
 
 const Footer = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
+  const { userInfo } = useAppContext();
+  const isUserInfoEmpty = !userInfo || Object.keys(userInfo).length === 0;
   return (
     <div className="flex justify-center bg-black">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div className="footer-container">
           <div className="flex w-full flex-col">
-            <Tabs aria-label="Options" color={"primary"} variant={"light"}>
+            <Tabs
+              aria-label="Options"
+              color={"primary"}
+              variant={"light"}
+              disabledKeys={isUserInfoEmpty ? ["MyBets"] : []}
+              aria-label="Disabled Options"
+            >
               <Tab
                 key="All Bets"
                 title="All Bets"
@@ -21,17 +30,18 @@ const Footer = (props: {
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
                 }}
               >
-                <TableAll></TableAll>
+                <TableAll isAll={true}></TableAll>
               </Tab>
               <Tab
-                key="My Bets "
+                key="MyBets"
                 title="My Bets"
                 style={{
                   width: "150px",
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
                 }}
               >
-                <TableOne></TableOne>
+                <TableAll isAll={false}></TableAll>
+                {/* <TableOne></TableOne> */}
               </Tab>
             </Tabs>
           </div>

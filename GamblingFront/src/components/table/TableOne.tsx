@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { InfoList } from "@/types/gameListInfo";
+import { useEffect, useState } from "react";
 
 const gameData: InfoList[] = [
   {

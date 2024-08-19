@@ -15,8 +15,8 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = () => {
-    // setIsOpen(!isOpen);
-    setIsOpen(false);
+    setIsOpen(!isOpen);
+    //setIsOpen(false);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -30,7 +30,7 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
 
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    key: string
+    key: string,
   ) => {
     event.preventDefault();
     onSelect(key);
@@ -46,20 +46,25 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
 
   return (
     <div ref={dropdownRef} className="dropdown-container">
-      <div className="dropdown-button" onClick={handleToggle}>
+      <div
+        className="dropdown-button rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3"
+        onClick={handleToggle}
+      >
         {items[selectedKey]} {selectedKey}
       </div>
       {isOpen && (
         <div className="dropdown-menu">
           {Object.keys(items).map((key) => (
-            <a
-              key={key}
-              href="#"
-              onClick={(event) => handleMenuItemClick(event, key)}
-              className={selectedKey === key ? "selected" : ""}
-            >
-              {items[key]} {key}
-            </a>
+            <div className="block">
+              <a
+                key={key}
+                href="#"
+                onClick={(event) => handleMenuItemClick(event, key)}
+                className={selectedKey === key ? "selected" : ""}
+              >
+                {items[key]} {key}
+              </a>
+            </div>
           ))}
         </div>
       )}

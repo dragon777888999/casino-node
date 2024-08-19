@@ -34,7 +34,7 @@ const Main: React.FC = () => {
       <GamePanel title={"Original"} gameType={9} imgUrl={imgUrls[0]} />
       <GamePanel title={"Slot"} gameType={1} imgUrl={imgUrls[1]} />
 
-      <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} />
+      {/* <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} /> */}
 
       <div className="mt-10">
         <h4 style={{ marginBottom: "15px", color: "white", fontSize: "20px" }}>

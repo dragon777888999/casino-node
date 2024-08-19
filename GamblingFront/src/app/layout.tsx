@@ -1,7 +1,7 @@
 "use client";
 import "jsvectormap/dist/jsvectormap.css";
 // import "flatpickr/dist/flatpickr.min.css";
-//import "@fontawesome/fontawesome-free/css/all.min.css";
+
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
@@ -10,6 +10,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
 import { AppProvider } from "@/hooks/AppContext";
+
 // --------------solana----------
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {
@@ -19,7 +20,7 @@ import {
 } from "@solana/wallet-adapter-react";
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { solanaNetworkUrl } from "../anchor/global";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function RootLayout({
   children,
 }: Readonly<{

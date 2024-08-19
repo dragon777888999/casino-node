@@ -117,7 +117,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         ata,
         nextAta,
         wallet.publicKey,
-        depositAmount * 10 ** siteInfo?.digitsMap[siteInfo.availableCoinTypes], //Instead userInfo.selectCoinType
+        depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType], //Instead userInfo.selectCoinType
       ),
     );
 
@@ -126,6 +126,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
       connection,
       { skipPreflight: true, preflightCommitment: "finalized" },
     );
+    console.log(transactionSignature);
+    setDepositAmount(0);
     const confirmResult = await connection.confirmTransaction(
       transactionSignature,
       "confirmed",
@@ -146,7 +148,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         body: JSON.stringify({
           method: "WithdrawCoin",
           chain: siteInfo?.chain,
-          coinType: siteInfo?.availableCoinTypes, //Instead userInfo.selectCoinType
+          coinType: userInfo?.selectedCoinType, //Instead userInfo.selectCoinType
           amount: withdrawAmount,
         }),
       });
@@ -413,7 +415,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   <div className="tooltipContainer ">
                     <button
                       onClick={handleCopy}
-                      className="ml-2 h-9 bg-black px-3 text-white"
+                      className="ml-2 h-9 items-center bg-black px-3 text-white"
                     >
                       <i className="fa-regular fa-copy" />
                     </button>

@@ -7,6 +7,8 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
+import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
+
 // Modal.setAppElement("#root");
 const MenuBar = () => {
   const domain = window.location.host;
@@ -23,6 +25,24 @@ const MenuBar = () => {
         userCode: newUserCode,
       });
     }
+  };
+
+  const [selectedKey, setSelectedKey] = useState<string>(
+    userInfo?.selectedCoinType,
+  );
+
+  const handleSelect = async (key: string) => {
+    userInfo.selectedCoinType = key;
+    const response = await fetch(
+      `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
+      {
+        method: "GET",
+        headers: {
+          "X-Access-Token": accessToken,
+        },
+      },
+    );
+    setSelectedKey(key);
   };
   useEffect(() => {
     console.log("Site Info userinfo:", siteInfo);
@@ -47,7 +67,7 @@ const MenuBar = () => {
       const response = await fetch(`${backendUrl}/Account/Logout`, {
         method: "GET",
         headers: {
-          "X-Access-Token": accessToken,
+          "X-Access-Token": wallet.publicKey,
         },
       });
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -64,13 +84,18 @@ const MenuBar = () => {
       <div className="balance flex ">
         <div className="flex justify-center gap-5 sm:gap-3">
           <div className="flex items-center">
-            <button className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10">
+            {/* <button className="inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10">
               <p>
                 {" "}
                 {userInfo?.balances[userInfo.selectedCoinType]}
                 {userInfo?.selectedCoinType}
               </p>
-            </button>
+            </button> */}
+            <SelectCoinTypeMenu
+              items={userInfo?.balances}
+              selectedKey={selectedKey}
+              onSelect={handleSelect}
+            />
           </div>
 
           <button
