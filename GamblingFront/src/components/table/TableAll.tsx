@@ -4,7 +4,11 @@ import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
 const displayLength = 6;
-const TableAll = (isAll: Boolean) => {
+
+interface TableAllProps {
+  isAll: boolean;
+}
+const TableAll = ({isAll}: TableAllProps) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
   const [visible, setVisible] = useState(false);
@@ -41,7 +45,7 @@ const TableAll = (isAll: Boolean) => {
         };
         console.log("new", parsedData);
 
-        if (!isAll.isAll) {
+        if (!isAll) {
           // isAll true:: get all data; false :: get only userdata
           if (parsedData.userCode == userInfo?.userCode)
             buffer.unshift(parsedData);
@@ -81,7 +85,7 @@ const TableAll = (isAll: Boolean) => {
           </div>
         </div>
         {/* Table Rows */}
-        {!isAll.isAll && tableData.length == 0 && (
+        {!isAll && tableData.length == 0 && (
           <div>
             <div
               className="flex items-center justify-center"

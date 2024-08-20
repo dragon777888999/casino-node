@@ -15,14 +15,15 @@ interface GameData {
 export default function GamePanel({
   title,
   gameType,
-  imgUrl,
 }: {
   title: string;
   gameType: number;
-  imgUrl: string;
 }) {
   const { loading, siteInfo } = useAppContext();
   const [vendorGames, setVendorGames] = useState<GameData[]>([]);
+  let imgUrl = `/default/images/gamePanel/${gameType}.png`;
+  if (siteInfo?.themeCode)
+    imgUrl = `/${siteInfo.themeCode}/images/gamePanel/${gameType}.png`;
   useEffect(() => {
     const fetchGameData = async () => {
       try {

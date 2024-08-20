@@ -34,8 +34,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
   showWalletModal,
   onRequestClose,
 }) => {
-  if (!showWalletModal) return null;
-
   const [withdrawAmount, setWithdrawAmount] = useState(0);
   const [depositAmount, setDepositAmount] = useState(0);
   const [depositAddress, setDepositAddress] = useState("");
@@ -296,7 +294,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       },
     );
   };
-
+  if (!showWalletModal) return null;
   return (
     <Modal
       id="modal"

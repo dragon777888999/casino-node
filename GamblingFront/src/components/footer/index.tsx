@@ -20,7 +20,6 @@ const Footer = (props: {
               color={"primary"}
               variant={"light"}
               disabledKeys={isUserInfoEmpty ? ["MyBets"] : []}
-              aria-label="Disabled Options"
             >
               <Tab
                 key="All Bets"
