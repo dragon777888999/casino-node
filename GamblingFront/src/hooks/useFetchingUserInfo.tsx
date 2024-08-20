@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
-import { useRadioGroupContext } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
 
 const useFetchUserInfo = () => {
+  const searchParams = useSearchParams();
+  const affiliaterCode = searchParams?.get("affiliaterCode=");
+
   const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken, socket } = useAppContext();
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -38,7 +41,7 @@ const useFetchUserInfo = () => {
 
       try {
         const response = await fetch(
-          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}`,
+          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}&affiliaterCode=${affiliaterCode}`,
         );
 
         if (!response.ok) {
