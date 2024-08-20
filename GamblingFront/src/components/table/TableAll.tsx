@@ -43,7 +43,7 @@ const TableAll = (isAll: Boolean) => {
         };
         console.log("new", parsedData);
 
-        if (!isAll.isAll) {
+        if (!isAll) {
           // isAll true:: get all data; false :: get only userdata
           if (parsedData.userCode == userInfo?.userCode)
             buffer.unshift(parsedData);
@@ -83,7 +83,7 @@ const TableAll = (isAll: Boolean) => {
           </div>
         </div>
         {/* Table Rows */}
-        {!isAll.isAll && tableData.length == 0 && (
+        {!isAll && tableData.length == 0 && (
           <div>
             <div
               className="flex items-center justify-center"

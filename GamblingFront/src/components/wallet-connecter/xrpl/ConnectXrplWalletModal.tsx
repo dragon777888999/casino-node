@@ -15,8 +15,6 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
   showConnectModal,
   onRequestClose,
 }) => {
-  if (!showConnectModal) return null;
-
   const { setWalletAddress } = useAppContext();
 
   const [qrcode, setQrcode] = useState("");
@@ -172,7 +170,8 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
       localStorage.setItem("walleteType", "cross");
     }
   };
-
+  if (!showConnectModal) return null;
+  
   return (
     <>
       <Modal
