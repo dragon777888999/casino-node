@@ -4,11 +4,19 @@ import {
   createAssociatedTokenAccountIdempotentInstruction,
   createTransferInstruction,
 } from "@solana/spl-token";
+import { useAppContext } from "./AppContext";
 import { PublicKey, Transaction, ComputeBudgetProgram } from "@solana/web3.js";
+import {
+  useAnchorWallet,
+  useConnection,
+  useWallet,
+} from "@solana/wallet-adapter-react";
 
-const useDepositPhantom = (wallet, connection, siteInfo, depositAddress) => {
+const useDepositPhantom = (depositAddress: string) => {
+  const { siteInfo } = useAppContext();
+  const { connection } = useConnection();
   const [depositAmount, setDepositAmount] = useState(0);
-
+  const wallet = useWallet();
   const deposit = useCallback(async () => {
     if (!wallet.publicKey) return;
     if (depositAmount <= 0) {

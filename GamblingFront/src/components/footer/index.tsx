@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TableAll from "../table/TableAll";
-import TableOne from "../table/TableOne";
+
 import { Tabs, Tab } from "@nextui-org/react";
 import { useAppContext } from "@/hooks/AppContext";
 

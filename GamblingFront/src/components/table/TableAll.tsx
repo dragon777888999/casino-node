@@ -3,6 +3,9 @@ import Image from "next/image";
 import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
+
+import { InfoList } from "@/types/gameListInfo";
+
 const displayLength = 10;
 interface TableAllProps {
   isAll: boolean;
@@ -11,7 +14,8 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
   const [visible, setVisible] = useState(false);
-  const [selectedRow, setSelectedRow] = useState(null);
+  // const [selectedRow, setSelectedRow] = useState(null);
+  const [selectedRow, setSelectedRow] = useState<InfoList | null>(null);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -59,7 +63,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         console.error("Error parsing JSON:", error);
       }
     }
-  }, [isAll, socketData, tableData, userInfo]);
+  }, [socketData]);
   const handleRowClick = (info: InfoList) => {
     setSelectedRow(info);
     openModal();
@@ -106,7 +110,12 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                 {/* Render vendor image if you have a URL */}
                 {info.vendorName.en && (
                   <div className="h-5 w-5 rounded-md">
-                    <Image width={60} height={50} alt={"info"} />
+                    <Image
+                      src={info.vendorName.en}
+                      width={60}
+                      height={50}
+                      alt={"info"}
+                    />
                   </div>
                 )}
                 <p className="text-sm text-black dark:text-white">
@@ -170,11 +179,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
           </div>
         ))}{" "}
       </div>
-      <DispalyGameInfoModal
-        showModal={showModal}
-        gameData={selectedRow}
-        onRequestClose={closeModal}
-      />
+      {selectedRow && (
+        <DispalyGameInfoModal
+          showModal={showModal}
+          gameData={selectedRow}
+          onRequestClose={closeModal}
+        />
+      )}
     </>
   );
 };

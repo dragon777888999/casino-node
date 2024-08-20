@@ -3,23 +3,20 @@ import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useAppContext } from "../../hooks/AppContext";
+import { InfoList } from "@/types/gameListInfo";
 // Define the WalletModal component
 interface LangName {
+  en: string;
+  ko: string;
+}
+
+interface VendorName {
   en: string;
 }
 
 interface DispalyGameInfoModalProps {
   showModal: boolean;
-  gameData: {
-    type: string;
-    currencyCode: string;
-    gameName: LangName;
-    betAmount: number;
-    payoutAmount: number;
-    multiplier: number;
-    userCode: string;
-    vendorName: LangName;
-  };
+  gameData: InfoList | null;
   onRequestClose: () => void;
 }
 const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
@@ -27,8 +24,6 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
   gameData,
   onRequestClose,
 }) => {
- 
-
   const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
     useAppContext();
 
@@ -102,13 +97,13 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                     color: "white",
                   }}
                 >
-                  {gameData.gameName.en}
+                  <h2>{gameData?.gameName.en}</h2>
                 </h2>
               </div>
               <div className="BetResult-game-detail">
                 <div className="BetResult-gam-detail-content">
                   <p>Bet ID:333000</p>
-                  <p>Placed by {gameData.userCode}</p>
+                  <p>Placed by {gameData?.userCode}</p>
                 </div>
                 {/* </div> */}
 
@@ -135,19 +130,19 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                         height={20}
                         alt={"info.currencyCode"}
                       />
-                      <span>{gameData.betAmount}</span>
+                      <span>{gameData?.betAmount}</span>
                     </div>
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Multipier</span>
                     <div className="footer-modal-small-card">
-                      {gameData.multiplier}
+                      {gameData?.payoutAmount}
                     </div>
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Payout </span>
                     <div className="footer-modal-small-card">
-                      {gameData.payoutAmount.toFixed(2)} $
+                      {gameData?.payoutAmount.toFixed(2)} $
                     </div>
                   </div>
                 </div>

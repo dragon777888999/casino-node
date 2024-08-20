@@ -103,7 +103,10 @@ const MenuBar = () => {
             className="menu-button-wallet"
             onClick={() => openWalletModal()}
           >
-            <p> Wallet</p>
+            <div className=" flex gap-1">
+              <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>
+              <span>{userInfo?.selectedCoinType}</span>
+            </div>
           </button>
         </div>
       </div>

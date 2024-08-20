@@ -19,11 +19,13 @@ import {
   useConnection,
   useWallet,
 } from "@solana/wallet-adapter-react";
+import useDepositPhantom from "@/hooks/useDepositPhantom";
 
 Modal.setAppElement("#root");
 // Define the WalletModal component
 interface WalletModalProps {
   showWalletModal: boolean;
+
   onRequestClose: () => void;
 }
 const getDataFromLocalStorage = (key: string) => {
@@ -50,8 +52,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [selectedKey, setSelectedKey] = useState<string>(
     userInfo?.selectedCoinType ?? "",
   );
+  const { deposit } = useDepositPhantom(depositAddress);
 
   const handleSelect = async (key: string) => {
+    userInfo.selectedCoinType = key;
     const response = await fetch(
       `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
       {
@@ -92,68 +96,65 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [accessToken, userInfo, siteInfo]);
 
-  const useDepositPhantom = async () => {
-    if (!wallet.publicKey) return;
-    if (depositAmount <= 0) {
-      window.alert("Deposit amount cannot be 0");
-      return;
-    }
+  // const useDepositPhantom = async () => {
+  //   if (!wallet.publicKey) return;
+  //   if (depositAmount <= 0) {
+  //     window.alert("Deposit amount cannot be 0");
+  //     return;
+  //   }
 
-    const tokenAddress =
-      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
-    // console.log("here is wallet modal deposit ");
-    // console.log(userInfo);
-    // console.log(siteInfo);
+  //   const tokenAddress =
+  //     siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
 
-    const ata = getAssociatedTokenAddressSync(
-      new PublicKey(tokenAddress),
-      wallet.publicKey,
-    );
+  //   const ata = getAssociatedTokenAddressSync(
+  //     new PublicKey(tokenAddress),
+  //     wallet.publicKey,
+  //   );
 
-    const nextAta = getAssociatedTokenAddressSync(
-      new PublicKey(tokenAddress),
-      new PublicKey(depositAddress),
-      true,
-    );
+  //   const nextAta = getAssociatedTokenAddressSync(
+  //     new PublicKey(tokenAddress),
+  //     new PublicKey(depositAddress),
+  //     true,
+  //   );
 
-    const transaction = new Transaction();
-    const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-      microLamports: 210000,
-    });
-    transaction.add(addPriorityFee);
+  //   const transaction = new Transaction();
+  //   const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+  //     microLamports: 210000,
+  //   });
+  //   transaction.add(addPriorityFee);
 
-    transaction.add(
-      createAssociatedTokenAccountIdempotentInstruction(
-        wallet.publicKey,
-        nextAta,
-        new PublicKey(depositAddress),
-        new PublicKey(tokenAddress),
-      ),
-    );
+  //   transaction.add(
+  //     createAssociatedTokenAccountIdempotentInstruction(
+  //       wallet.publicKey,
+  //       nextAta,
+  //       new PublicKey(depositAddress),
+  //       new PublicKey(tokenAddress),
+  //     ),
+  //   );
 
-    transaction.add(
-      createTransferInstruction(
-        ata,
-        nextAta,
-        wallet.publicKey,
-        depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType], //Instead userInfo.selectCoinType
-      ),
-    );
+  //   transaction.add(
+  //     createTransferInstruction(
+  //       ata,
+  //       nextAta,
+  //       wallet.publicKey,
+  //       depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType], //Instead userInfo.selectCoinType
+  //     ),
+  //   );
 
-    const transactionSignature = await wallet.sendTransaction(
-      transaction,
-      connection,
-      { skipPreflight: true, preflightCommitment: "finalized" },
-    );
-    console.log(transactionSignature);
-    setDepositAmount(0);
-    const confirmResult = await connection.confirmTransaction(
-      transactionSignature,
-      "confirmed",
-    );
-    const status = confirmResult.value;
-    console.log(status);
-  };
+  //   const transactionSignature = await wallet.sendTransaction(
+  //     transaction,
+  //     connection,
+  //     { skipPreflight: true, preflightCommitment: "finalized" },
+  //   );
+  //   console.log(transactionSignature);
+  //   setDepositAmount(0);
+  //   const confirmResult = await connection.confirmTransaction(
+  //     transactionSignature,
+  //     "confirmed",
+  //   );
+  //   const status = confirmResult.value;
+  //   console.log(status);
+  // };
   const onWithdrawPhantom = async () => {
     try {
       if (accessToken == "") return;
@@ -250,11 +251,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         console.log("111111");
         console.log(ws);
         console.log("111111");
-        // const ws1 = new WebSocket(`${backendUrl}/websocket`);
-        // alert("2");
-        // console.log("222222222");
-        // console.log(ws1);
-        // console.log("222222222");
+
         ws.onmessage = async (e) => {
           let responseObj = JSON.parse(e.data);
           console.log("message");
@@ -500,6 +497,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                           onDeposit();
                         } else {
                           // useDepositPhantom();
+                          deposit();
                         }
                       }}
                       className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"

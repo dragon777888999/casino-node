@@ -8,7 +8,8 @@ export default function ConnectSolanaButton() {
   const { setWalletAddress } = useAppContext();
 
   useEffect(() => {
-    if (wallet.connected) setWalletAddress(wallet.publicKey); //phantom wallet address
+    if (wallet.connected && wallet.publicKey)
+      setWalletAddress(wallet.publicKey.toString()); //phantom wallet address
     localStorage.setItem("walleteType", "phantom");
     console.log("wallet publickey");
     // alert(wallet.publicKey);

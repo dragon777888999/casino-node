@@ -3,7 +3,7 @@ interface LangName {
 }
 
 // Define the main type
-interface InfoList {
+export interface InfoList {
   type: string;
   currencyCode: string;
   betAmount: number;
