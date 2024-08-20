@@ -5,6 +5,7 @@ import { sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
+import Image from "next/image";
 import SelectCoinTypeMenu from "../header/SelectCoinTypeMenu";
 // ---------solana wallet------------
 import { ComputeBudgetProgram, PublicKey, Transaction } from "@solana/web3.js";
@@ -89,16 +90,20 @@ const WalletModal: React.FC<WalletModalProps> = ({
     };
 
     fetchData();
-  }, []);
+  }, [accessToken, userInfo, siteInfo]);
 
   const useDepositPhantom = async () => {
     if (!wallet.publicKey) return;
+    if (depositAmount <= 0) {
+      window.alert("Deposit amount cannot be 0");
+      return;
+    }
 
     const tokenAddress =
-      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]] ?? "";
-    console.log("here is wallet modal deposit ");
-    console.log(userInfo);
-    console.log(siteInfo);
+      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
+    // console.log("here is wallet modal deposit ");
+    // console.log(userInfo);
+    // console.log(siteInfo);
 
     const ata = getAssociatedTokenAddressSync(
       new PublicKey(tokenAddress),
@@ -196,13 +201,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
           Amount: (
             depositAmount *
             10 **
-            (siteInfo?.digitsMap[
-              userInfo?.selectedCoinType || "defaultCoinType"
-            ] || 0)
+              (siteInfo?.digitsMap[
+                userInfo?.selectedCoinType || "defaultCoinType"
+              ] || 0)
           ).toString(), // XRP in drops
         });
         console.log(response);
-        //if (response.result === "tesSUCCESS") 
+        //if (response.result === "tesSUCCESS")
         {
           console.log("Transaction successful!");
           setDepositAmount(0);
@@ -215,9 +220,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
           amount: (
             depositAmount *
             10 **
-            (siteInfo?.digitsMap[
-              userInfo?.selectedCoinType || "defaultCoinType"
-            ] || 0)
+              (siteInfo?.digitsMap[
+                userInfo?.selectedCoinType || "defaultCoinType"
+              ] || 0)
           ).toString(),
           destination: depositAddress,
         };
@@ -465,17 +470,28 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       }}
                     />
                   </div>
-                  {isHidden ? null : (
-                    <div
-                      className="qrcode "
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <img style={{ width: "60%" }} src={qrcode}></img>
-                    </div>
-                  )}
+
+                  <div
+                    className="qrcode"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {isHidden && (
+                      <Image
+                        src={qrcode}
+                        alt="QR code"
+                        width={600}
+                        height={400} // Adjust these values based on your image size
+                        style={{ width: "60%" }} // Apply additional styling if needed
+                      />
+                    )}
+                    {/* {isHidden && (
+                      <img style={{ width: "60%" }} src={qrcode} alt="qr"></img>
+                    )} */}
+                  </div>
+
                   <div className="mt-3 flex justify-end">
                     <button
                       type="button"
@@ -483,7 +499,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         if (siteInfo?.chain == "Xrpl") {
                           onDeposit();
                         } else {
-                          //useDepositPhantom();
+                          // useDepositPhantom();
                         }
                       }}
                       className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"

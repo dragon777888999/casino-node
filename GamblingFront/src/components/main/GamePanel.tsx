@@ -3,6 +3,7 @@ import Link from "next/link";
 import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
+import { userInfo } from "os";
 
 interface GameData {
   vendorCode: string;
@@ -55,7 +56,7 @@ export default function GamePanel({
       }
     };
     fetchGameData(); // Fetch for original games
-  }, [loading]);
+  }, [siteInfo, loading, gameType]);
   if (loading) return <></>;
 
   return (
@@ -137,7 +138,7 @@ export default function GamePanel({
           // console.log("--------vender------");
           // console.log(gameData.vendorCode);
           return (
-            <div key={gameData.gameCode} className="games-block-item">
+            <div className="games-block-item" key={gameData.gameCode}>
               <div className="game-block-item-inner">
                 <div className="game-block-item-content">
                   <Link

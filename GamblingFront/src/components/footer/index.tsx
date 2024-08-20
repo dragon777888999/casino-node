@@ -10,6 +10,7 @@ const Footer = (props: {
 }) => {
   const { userInfo } = useAppContext();
   const isUserInfoEmpty = !userInfo || Object.keys(userInfo).length === 0;
+
   return (
     <div className="flex justify-center bg-black">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">

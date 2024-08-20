@@ -7,6 +7,8 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
+import DropdownUser from "./DropdownUser";
+import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -27,8 +29,22 @@ const MenuBar = () => {
   };
 
   const [selectedKey, setSelectedKey] = useState<string>(
-    userInfo?.selectedCoinType??"",
+    userInfo?.selectedCoinType ?? "",
   );
+
+  const handleSelect = async (key: string) => {
+    userInfo.selectedCoinType = key;
+    const response = await fetch(
+      `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
+      {
+        method: "GET",
+        headers: {
+          "X-Access-Token": accessToken,
+        },
+      },
+    );
+    setSelectedKey(key);
+  };
 
   const openWalletModal = () => {
     setShowWalletModal(true);
@@ -92,9 +108,14 @@ const MenuBar = () => {
         </div>
       </div>
       <div className="justify-end">
-        <button className="menu-button-connect " onClick={handleDisconnect}>
+        <div className="flex items-center gap-3 2xsm:gap-7">
+          {/* <!-- User Area --> */}
+          <DropdownUser />
+          {/* <!-- User Area --> */}
+        </div>
+        {/* <button className="menu-button-connect " onClick={handleDisconnect}>
           <p> Disconnect </p>
-        </button>
+        </button> */}
       </div>
       <WalletModal
         showWalletModal={showWalletModal}

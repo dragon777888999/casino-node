@@ -12,7 +12,7 @@ export default function ConnectSolanaButton() {
     localStorage.setItem("walleteType", "phantom");
     console.log("wallet publickey");
     // alert(wallet.publicKey);
-  }, [wallet.connected]);
+  }, [wallet, setWalletAddress]);
 
   return (
     <>

@@ -56,8 +56,8 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
         <div className="dropdown-menu">
           {Object.keys(items).map((key) => (
             <div key={key} className="block">
+              {/* Added key here */}
               <a
-                key={key}
                 href="#"
                 onClick={(event) => handleMenuItemClick(event, key)}
                 className={selectedKey === key ? "selected" : ""}

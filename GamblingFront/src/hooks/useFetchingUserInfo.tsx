@@ -7,7 +7,14 @@ const useFetchUserInfo = () => {
   const searchParams = useSearchParams();
   const affiliaterCode = searchParams?.get("affiliaterCode");
 
-  const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken, socket } = useAppContext();
+  const {
+    walletAddress,
+    userInfo,
+    setUserInfo,
+    siteInfo,
+    setAccessToken,
+    socket,
+  } = useAppContext();
   useEffect(() => {
     const fetchUserInfo = async () => {
       if (walletAddress == "") return;
@@ -29,7 +36,7 @@ const useFetchUserInfo = () => {
             const authMessage = {
               type: "auth",
               agentCode: siteInfo?.agentCode,
-              userCode: result.userCode
+              userCode: result.userCode,
             };
             socket?.send(JSON.stringify(authMessage));
           }
@@ -62,7 +69,13 @@ const useFetchUserInfo = () => {
 
     fetchUserInfo();
     console.log(userInfo);
-  }, [walletAddress]);
+  }, [
+    walletAddress,
+    affiliaterCode,
+    setUserInfo,
+    setAccessToken,
+    siteInfo?.agentCode,
+  ]);
 };
 
 export default useFetchUserInfo;

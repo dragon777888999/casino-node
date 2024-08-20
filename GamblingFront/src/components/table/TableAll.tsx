@@ -7,8 +7,7 @@ const displayLength = 10;
 interface TableAllProps {
   isAll: boolean;
 }
-
-const TableAll = ({ isAll }: TableAllProps) => {
+const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
   const [visible, setVisible] = useState(false);
@@ -60,7 +59,7 @@ const TableAll = ({ isAll }: TableAllProps) => {
         console.error("Error parsing JSON:", error);
       }
     }
-  }, []);
+  }, [isAll, socketData, tableData, userInfo]);
   const handleRowClick = (info: InfoList) => {
     setSelectedRow(info);
     openModal();

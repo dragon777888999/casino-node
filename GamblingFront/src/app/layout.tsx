@@ -35,7 +35,7 @@ export default function RootLayout({
     setTimeout(() => setLoading(false), 1000);
     // setColorMode("dark");
     (setColorMode as (value: string) => void)("dark");
-  }, []);
+  }, [setColorMode]);
 
   const wallets = useMemo(
     () => [new PhantomWalletAdapter()],

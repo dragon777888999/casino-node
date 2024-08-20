@@ -48,7 +48,7 @@ const Header = (props: {
     };
 
     fetchData();
-  }, []);
+  }, [domain, loading, setLoading, setSiteInfo]);
   useEffect(() => {
     try {
       const cmd = JSON.parse(socketData);
@@ -67,7 +67,7 @@ const Header = (props: {
     } catch (error) {
       console.error("Failed to parse JSON:", error);
     }
-  }, [socketData]);
+  }, [socketData, userInfo, setUserInfo]);
 
   useFetchUserInfo();
   return (

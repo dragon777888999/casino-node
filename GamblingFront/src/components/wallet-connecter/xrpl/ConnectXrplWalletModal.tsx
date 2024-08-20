@@ -4,7 +4,7 @@ import sdk from "@crossmarkio/sdk";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import Modal from "react-modal";
-
+import Image from "next/image";
 import { useAppContext } from "../../../hooks/AppContext";
 
 interface ConnectXrpltWalletModalProps {
@@ -42,7 +42,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
           }
         });
     }
-  }, []);
+  }, [setWalletAddress, cookies.jwt]);
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
@@ -171,7 +171,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
     }
   };
   if (!showConnectModal) return null;
-  
+
   return (
     <>
       <Modal
@@ -219,16 +219,21 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       type="button"
                       onClick={getQrCode}
                     >
-                      <i className="wallet-adapter-button-start-icon">
-                        <img></img>
-                      </i>
+                      <i className="wallet-adapter-button-start-icon"></i>
                       Open in Xaman
                       <span>Detected</span>
                     </button>
-                    {qrcode ? (
+                    {qrcode && (
                       <div style={{ display: "block" }}>
                         <div className="qrcode">
-                          <img src={qrcode}></img>
+                          <Image
+                            src={qrcode} // URL of the image
+                            alt="QR code" // Accessibility text
+                            width={600} // Width of the image
+                            height={400} // Height of the image
+                            style={{ width: "60%" }} // Inline styles, if needed
+                            layout="responsive" // Optional: adjust layout as needed
+                          />
                         </div>
 
                         <button
@@ -244,7 +249,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                           Cancel
                         </button>
                       </div>
-                    ) : null}
+                    )}
                   </li>
                   <li>
                     <button
@@ -253,9 +258,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       type="button"
                       onClick={handleConnectGem}
                     >
-                      <i className="wallet-adapter-button-start-icon">
-                        <img></img>
-                      </i>
+                      <i className="wallet-adapter-button-start-icon"></i>
                       Connect with GEM
                       <span>Detected</span>
                     </button>
@@ -267,9 +270,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       type="button"
                       onClick={handleConnectCrossmark}
                     >
-                      <i className="wallet-adapter-button-start-icon">
-                        <img></img>
-                      </i>
+                      <i className="wallet-adapter-button-start-icon"></i>
                       Connect with Crossmark
                       <span>Detected</span>
                     </button>

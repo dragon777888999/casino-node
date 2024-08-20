@@ -63,7 +63,7 @@ const Casino = () => {
       }
     };
     getLaunchUrl(); // Fetch for original games
-  }, []);
+  }, [accessToken, userInfo, gameCode, vendorCode, router]);
   function toggleFullScreen(isFull: boolean): void {
     // Check if the document is currently in fullscreen mode
 
