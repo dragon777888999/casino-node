@@ -22,10 +22,10 @@ interface UserInfo {
 
 // Define the shape of your context's data
 interface AppState {
-  userInfo: UserInfo | null;
-  setUserInfo: (userInfo: UserInfo | null) => void;
-  siteInfo: SiteInfo | null;
-  setSiteInfo: (siteInfo: SiteInfo | null) => void;
+  userInfo: UserInfo;
+  setUserInfo: (userInfo: UserInfo ) => void;
+  siteInfo: SiteInfo ;
+  setSiteInfo: (siteInfo: SiteInfo ) => void;
   loading: boolean;
   setLoading: (loading: boolean) => void;
   accessToken: string;
@@ -52,8 +52,24 @@ export const useAppContext = () => {
 
 // Create the provider component
 export const AppProvider = ({ children }: { children: ReactNode }) => {
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
-  const [siteInfo, setSiteInfo] = useState<SiteInfo | null>(null);
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    status: 0,
+    selectedCoinType: '',
+    balances: {},
+    userCode: '',
+    nickName: ''
+  });
+  const [siteInfo, setSiteInfo] = useState<SiteInfo>({
+    isLoginMode: false,           // default to false (not in login mode)
+    agentCode: '',                // empty string for agent code
+    chain: '',                    // empty string for blockchain type
+    availableCoinTypes: [],       // empty array for available coin types
+    digitsMap: {},                // empty object for digits mapping
+    tokenAddressMap: {},          // empty object for token addresses
+    mark: '',                     // empty string for mark
+    walletModalMessage: '',       // empty string for wallet modal message
+    themeCode: ''                 // empty string for theme code
+  });
   const [loading, setLoading] = useState<boolean>(true);
   const [accessToken, setAccessToken] = useState<string>("");
   const [walletAddress, setWalletAddress] = useState<string>("");

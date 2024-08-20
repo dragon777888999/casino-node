@@ -42,8 +42,8 @@ const TableAll = ({ isAll }: TableAllProps) => {
 
         const parsedData: InfoList = {
           ...newData,
-          vendorName: JSON.parse(newData.vendorName),
-          gameName: JSON.parse(newData.gameName),
+          vendorName: newData.vendorName,
+          gameName: newData.gameName,
         };
         console.log("new", parsedData);
 

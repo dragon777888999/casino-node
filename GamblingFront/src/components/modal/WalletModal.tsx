@@ -47,11 +47,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const { connection } = useConnection();
 
   const [selectedKey, setSelectedKey] = useState<string>(
-    userInfo?.selectedCoinType,
+    userInfo?.selectedCoinType ?? "",
   );
 
   const handleSelect = async (key: string) => {
-    userInfo.selectedCoinType = key;
     const response = await fetch(
       `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
       {
@@ -96,7 +95,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     if (!wallet.publicKey) return;
 
     const tokenAddress =
-      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
+      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]] ?? "";
     console.log("here is wallet modal deposit ");
     console.log(userInfo);
     console.log(siteInfo);
@@ -197,26 +196,28 @@ const WalletModal: React.FC<WalletModalProps> = ({
           Amount: (
             depositAmount *
             10 **
-              (siteInfo?.digitsMap[
-                userInfo?.selectedCoinType || "defaultCoinType"
-              ] || 0)
+            (siteInfo?.digitsMap[
+              userInfo?.selectedCoinType || "defaultCoinType"
+            ] || 0)
           ).toString(), // XRP in drops
         });
         console.log(response);
-        if (response.result === "tesSUCCESS") {
+        //if (response.result === "tesSUCCESS") 
+        {
           console.log("Transaction successful!");
           setDepositAmount(0);
-        } else {
-          console.error("Transaction failed with status:", response.result);
         }
+        // else {
+        //   console.error("Transaction failed with status:", response.result);
+        // }
       } else if (getDataFromLocalStorage("walleteType") == "gem") {
         const payment = {
           amount: (
             depositAmount *
             10 **
-              (siteInfo?.digitsMap[
-                userInfo?.selectedCoinType || "defaultCoinType"
-              ] || 0)
+            (siteInfo?.digitsMap[
+              userInfo?.selectedCoinType || "defaultCoinType"
+            ] || 0)
           ).toString(),
           destination: depositAddress,
         };
@@ -482,7 +483,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         if (siteInfo?.chain == "Xrpl") {
                           onDeposit();
                         } else {
-                          useDepositPhantom();
+                          //useDepositPhantom();
                         }
                       }}
                       className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"

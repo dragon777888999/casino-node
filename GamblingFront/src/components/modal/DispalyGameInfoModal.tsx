@@ -4,12 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useAppContext } from "../../hooks/AppContext";
 // Define the WalletModal component
-interface GameName {
-  en: string;
-  ko: string;
-}
-
-interface VendorName {
+interface LangName {
   en: string;
 }
 
@@ -18,12 +13,12 @@ interface DispalyGameInfoModalProps {
   gameData: {
     type: string;
     currencyCode: string;
-    gameName: string;
+    gameName: LangName;
     betAmount: number;
     payoutAmount: number;
     multiplier: number;
     userCode: string;
-    vendorName: string;
+    vendorName: LangName;
   };
   onRequestClose: () => void;
 }
@@ -59,9 +54,9 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
         style={{
           zIndex: "1000",
 
-          overlay: {
-            zIndex: 1000, // Overlay should be on top of other content
-          },
+          // overlay: {
+          //   zIndex: 1000, // Overlay should be on top of other content
+          // },
         }}
       >
         <div className="wallet-adapter-modal-container">

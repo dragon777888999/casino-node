@@ -7,7 +7,6 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
-import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -28,26 +27,8 @@ const MenuBar = () => {
   };
 
   const [selectedKey, setSelectedKey] = useState<string>(
-    userInfo?.selectedCoinType,
+    userInfo?.selectedCoinType??"",
   );
-
-  const handleSelect = async (key: string) => {
-    userInfo.selectedCoinType = key;
-    const response = await fetch(
-      `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
-      {
-        method: "GET",
-        headers: {
-          "X-Access-Token": accessToken,
-        },
-      },
-    );
-    setSelectedKey(key);
-  };
-  useEffect(() => {
-    console.log("Site Info userinfo:", siteInfo);
-    console.log("User Info userinfo:", userInfo);
-  }, []);
 
   const openWalletModal = () => {
     setShowWalletModal(true);
@@ -67,7 +48,7 @@ const MenuBar = () => {
       const response = await fetch(`${backendUrl}/Account/Logout`, {
         method: "GET",
         headers: {
-          "X-Access-Token": wallet.publicKey,
+          "X-Access-Token": accessToken,
         },
       });
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";

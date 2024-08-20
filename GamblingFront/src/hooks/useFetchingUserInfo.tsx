@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 
 const useFetchUserInfo = () => {
   const searchParams = useSearchParams();
-  const affiliaterCode = searchParams?.get("affiliaterCode=");
+  const affiliaterCode = searchParams?.get("affiliaterCode");
 
   const { walletAddress, userInfo, setUserInfo, siteInfo, setAccessToken, socket } = useAppContext();
   useEffect(() => {
@@ -41,7 +41,7 @@ const useFetchUserInfo = () => {
 
       try {
         const response = await fetch(
-          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}&affiliaterCode=${affiliaterCode}`,
+          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}&affiliaterCode=${affiliaterCode??""}`,
         );
 
         if (!response.ok) {

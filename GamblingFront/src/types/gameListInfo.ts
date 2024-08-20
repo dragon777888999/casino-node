@@ -1,9 +1,4 @@
-interface GameName {
-  en: string;
-  ko: string;
-}
-
-interface VendorName {
+interface LangName {
   en: string;
 }
 
@@ -14,6 +9,6 @@ interface InfoList {
   betAmount: number;
   payoutAmount: number;
   userCode: string;
-  vendorName: string; // This will be a JSON string that needs to be parsed
-  gameName: string; // This will be a JSON string that needs to be parsed
+  vendorName: LangName; // This will be a JSON string that needs to be parsed
+  gameName: LangName; // This will be a JSON string that needs to be parsed
 }
