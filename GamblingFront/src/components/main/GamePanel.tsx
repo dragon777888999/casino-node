@@ -137,7 +137,7 @@ export default function GamePanel({
           // console.log("--------vender------");
           // console.log(gameData.vendorCode);
           return (
-            <div className="games-block-item">
+            <div key={gameData.gameCode} className="games-block-item">
               <div className="game-block-item-inner">
                 <div className="game-block-item-content">
                   <Link

@@ -4,7 +4,11 @@ import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
 const displayLength = 10;
-const TableAll = (isAll: Boolean) => {
+interface TableAllProps {
+  isAll: boolean;
+}
+
+const TableAll = ({ isAll }: TableAllProps) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
   const [visible, setVisible] = useState(false);
