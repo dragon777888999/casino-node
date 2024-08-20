@@ -5,7 +5,7 @@ import { sendPayment } from "@gemwallet/api";
 import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
-
+import SelectCoinTypeMenu from "../header/SelectCoinTypeMenu";
 // ---------solana wallet------------
 import { ComputeBudgetProgram, PublicKey, Transaction } from "@solana/web3.js";
 import {
@@ -48,6 +48,23 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const wallet = useWallet();
   const { connection } = useConnection();
 
+  const [selectedKey, setSelectedKey] = useState<string>(
+    userInfo?.selectedCoinType,
+  );
+
+  const handleSelect = async (key: string) => {
+    userInfo.selectedCoinType = key;
+    const response = await fetch(
+      `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
+      {
+        method: "GET",
+        headers: {
+          "X-Access-Token": accessToken,
+        },
+      },
+    );
+    setSelectedKey(key);
+  };
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -306,162 +323,175 @@ const WalletModal: React.FC<WalletModalProps> = ({
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
-      <div className="mt-10 sm:mt-15" style={{ zIndex: "1" }}>
+      <div className="footer-modal mt-10 sm:mt-15" style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
           <div
             className="wallet-adapter-modal-wrapper"
             style={{ maxWidth: "800px" }}
           >
-            <div
-              className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
-              style={{ marginBottom: "10px" }}
-            >
-              <div className="row">
-                <h3 style={{ fontSize: "20px", fontWeight: "700" }}>
-                  Manage Balance
-                </h3>
-                <button
-                  className="wallet-adapter-modal-button-close"
-                  onClick={() => {
-                    onRequestClose();
-                    setQrcode("");
-                    setDepositAmount(0);
-                  }}
-                >
-                  <svg width={14} height={14}>
-                    <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <div className="block gap-5 pb-4 md:flex md:gap-5">
+            <div className="">
               <div
-                className="custom-card"
-                style={{ backgroundColor: "rgb(20 28 39)" }}
+                className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
+                style={{ marginBottom: "10px", width: "100%" }}
               >
-                <div className=" flex items-center gap-2 py-4">
-                  <label>Balance :</label>
-                  {/* <input
-                    type="text"
-                    className="mb-2 mt-2 h-10 pl-2 text-black"
-                    placeholder="Balance"
-                    aria-label="Balance"
-
-                  /> */}
-                  <p
-                    style={{ fontSize: `26px`, marginLeft: "30px", gap: "5px" }}
-                  >
-                    <span>
-                      {userInfo?.balances[userInfo?.selectedCoinType]}
-                    </span>
-                    <span> {userInfo?.selectedCoinType}</span>
-                  </p>
-                </div>
-                <div className="mb-5 flex items-center gap-2">
-                  <label>Amount :</label>
-                  <input
-                    type="number"
-                    className=" ml-1 mt-2 h-10 pl-2 text-black"
-                    placeholder="Withdraw amount"
-                    aria-label="Withdraw amount"
-                    defaultValue={0}
-                    value={withdrawAmount}
-                    style={{ color: "white" }}
-                    onChange={(e) => {
-                      // if (e.target.value.toString() == "") alert("000");
-                      setWithdrawAmount(Number.parseFloat(e.target.value));
-                      const value = Number.parseFloat(e.target.value);
-                      // if (value >= 0 || e.target.value === "") {
-                      //   setWithdrawAmount(value);
-                      // }
-                    }}
+                <div className="justify-start">
+                  <SelectCoinTypeMenu
+                    items={userInfo?.balances}
+                    selectedKey={selectedKey}
+                    onSelect={handleSelect}
                   />
                 </div>
-
-                <div className=" mt-2 flex justify-center">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (siteInfo?.chain == "Xrpl") {
-                        onWithdraw();
-                      } else {
-                        onWithdrawPhantom();
-                      }
-                    }}
-                    className="m-auto inline-flex items-center justify-center rounded-md bg-meta-3 px-5 py-2 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
-                  >
-                    Withdraw
-                  </button>
-                </div>
-              </div>
-              <div
-                className="custom-card"
-                style={{ backgroundColor: "rgb(20 28 39)" }}
-              >
-                <div className="flex items-center gap-2">
-                  <label>Address :</label>
-                  <input
-                    type="text"
-                    className="my-2 h-10 pl-2 text-black"
-                    placeholder="Deposit address"
-                    aria-label="Deposit address"
-                    defaultValue={depositAddress}
-                    style={{ color: "white", textOverflow: "ellipsis" }}
-                    onChange={(e) => {
-                      setDepositAddress(e.target.value);
-                    }}
-                  />
-                  <div className="tooltipContainer ">
-                    <button
-                      onClick={handleCopy}
-                      className="ml-2 h-9 items-center bg-black px-3 text-white"
-                    >
-                      <i className="fa-regular fa-copy" />
-                    </button>
-                    <div className="tooltip">Copy your address</div>
-                  </div>
-                </div>
-                <div className=" flex items-center gap-2">
-                  <label>Amount :</label>
-                  <input
-                    type="number"
-                    className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
-                    placeholder="Deposit Amount"
-                    aria-label="Deposit Amount"
-                    defaultValue={0}
-                    value={depositAmount}
-                    style={{ color: "white" }}
-                    onChange={(e) => {
-                      setDepositAmount(Number.parseFloat(e.target.value));
-                    }}
-                  />
-                </div>
-                {isHidden ? null : (
-                  <div
-                    className="qrcode "
+                <div className="flex items-center">
+                  <h3
                     style={{
-                      display: "flex",
-                      justifyContent: "center",
+                      fontSize: "25px",
+                      fontWeight: "700",
+                      color: "white",
                     }}
                   >
-                    <img style={{ width: "60%" }} src={qrcode}></img>
-                  </div>
-                )}
-                <div className="mt-3 flex justify-end">
+                    Manage Balance
+                  </h3>
+                </div>
+
+                <div className="row ">
                   <button
-                    type="button"
+                    className="wallet-adapter-modal-button-close"
                     onClick={() => {
-                      if (siteInfo?.chain == "Xrpl") {
-                        onDeposit();
-                      } else {
-                        useDepositPhantom();
-                      }
+                      onRequestClose();
+                      setQrcode("");
+                      setDepositAmount(0);
                     }}
-                    className="m-auto inline-flex items-center justify-center rounded-md bg-meta-3 px-5 py-2 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
                   >
-                    Deposit
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
                   </button>
+                </div>
+              </div>
+
+              <div className="block gap-5 pb-4 md:flex md:gap-5">
+                <div
+                  className="custom-wallet-modal-card"
+                  style={{ backgroundColor: "rgb(20 28 39)" }}
+                >
+                  <div className=" flex items-center gap-2 py-4">
+                    <label>Balance :</label>
+
+                    <p
+                      style={{
+                        fontSize: `26px`,
+                        marginLeft: "30px",
+                        gap: "5px",
+                        color: "white",
+                      }}
+                    >
+                      <span>
+                        {userInfo?.balances[userInfo?.selectedCoinType]}
+                      </span>
+                      <span> {userInfo?.selectedCoinType}</span>
+                    </p>
+                  </div>
+                  <div className="mb-5 flex items-center gap-2">
+                    <label>Amount :</label>
+                    <input
+                      type="number"
+                      className=" ml-1 mt-2 h-10 pl-2 text-black"
+                      placeholder="Withdraw amount"
+                      aria-label="Withdraw amount"
+                      defaultValue={0}
+                      value={withdrawAmount}
+                      style={{ color: "white" }}
+                      onChange={(e) => {
+                        setWithdrawAmount(Number.parseFloat(e.target.value));
+                        const value = Number.parseFloat(e.target.value);
+                      }}
+                    />
+                  </div>
+
+                  <div className=" mt-2 flex justify-center">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (siteInfo?.chain == "Xrpl") {
+                          onWithdraw();
+                        } else {
+                          onWithdrawPhantom();
+                        }
+                      }}
+                      className="wallet-manage-modal-button"
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                </div>
+                <div
+                  className="custom-wallet-modal-card"
+                  style={{ backgroundColor: "rgb(20 28 39)" }}
+                >
+                  <div className="flex items-center gap-2">
+                    <label>Address :</label>
+                    <input
+                      type="text"
+                      className="my-2 h-10 pl-2 text-black"
+                      placeholder="Deposit address"
+                      aria-label="Deposit address"
+                      defaultValue={depositAddress}
+                      style={{ color: "white", textOverflow: "ellipsis" }}
+                      onChange={(e) => {
+                        setDepositAddress(e.target.value);
+                      }}
+                    />
+                    <div className="tooltipContainer ">
+                      <button
+                        onClick={handleCopy}
+                        className="ml-2 h-9 items-center bg-black px-3 text-white"
+                      >
+                        <i className="fa-regular fa-copy" />
+                      </button>
+                      <div className="tooltip">Copy your address</div>
+                    </div>
+                  </div>
+                  <div className=" flex items-center gap-2">
+                    <label>Amount :</label>
+                    <input
+                      type="number"
+                      className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
+                      placeholder="Deposit Amount"
+                      aria-label="Deposit Amount"
+                      defaultValue={0}
+                      value={depositAmount}
+                      style={{ color: "white" }}
+                      onChange={(e) => {
+                        setDepositAmount(Number.parseFloat(e.target.value));
+                      }}
+                    />
+                  </div>
+                  {isHidden ? null : (
+                    <div
+                      className="qrcode "
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <img style={{ width: "60%" }} src={qrcode}></img>
+                    </div>
+                  )}
+                  <div className="mt-3 flex justify-end">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (siteInfo?.chain == "Xrpl") {
+                          onDeposit();
+                        } else {
+                          useDepositPhantom();
+                        }
+                      }}
+                      className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"
+                    >
+                      Deposit
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

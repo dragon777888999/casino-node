@@ -91,15 +91,19 @@ const MenuBar = () => {
                 {userInfo?.selectedCoinType}
               </p>
             </button> */}
-            <SelectCoinTypeMenu
+            {/* <SelectCoinTypeMenu
               items={userInfo?.balances}
               selectedKey={selectedKey}
               onSelect={handleSelect}
-            />
+            /> */}
           </div>
 
+          {/* <button
+            className="ml-2 inline-flex items-center justify-center rounded-md border border-meta-3 px-4 py-1 text-center font-medium text-meta-3 hover:bg-opacity-90"
+            onClick={() => openWalletModal()}
+          > */}
           <button
-            className="ml-2 inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-8 xl:px-10"
+            className="menu-button-wallet"
             onClick={() => openWalletModal()}
           >
             <p> Wallet</p>
@@ -107,10 +111,7 @@ const MenuBar = () => {
         </div>
       </div>
       <div className="justify-end">
-        <button
-          className="ml-3 inline-flex items-center justify-center rounded-md border border-meta-3 px-6 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90  lg:px-8 xl:px-10"
-          onClick={handleDisconnect}
-        >
+        <button className="menu-button-connect " onClick={handleDisconnect}>
           <p> Disconnect </p>
         </button>
       </div>

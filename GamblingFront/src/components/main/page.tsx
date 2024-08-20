@@ -13,10 +13,7 @@ interface GameData {
   gameCode: string;
   gameName: string;
 }
-const imgUrls = [
-  "/images/project/recommend.png",
-  "/images/project/original.png",
-];
+const imgUrls = ["/images/icon/original.png", "/images/icon/slot.png"];
 const Main: React.FC = () => {
   return (
     <div className=" max-w-screen mx-auto">
@@ -32,14 +29,21 @@ const Main: React.FC = () => {
         />
       </div>
       <GamePanel title={"Original"} gameType={9} imgUrl={imgUrls[0]} />
-      <GamePanel title={"Slot"} gameType={1} imgUrl={imgUrls[1]} />
+      <GamePanel title={"Slots"} gameType={1} imgUrl={imgUrls[1]} />
 
       {/* <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} /> */}
 
       <div className="mt-10">
-        <h4 style={{ marginBottom: "15px", color: "white", fontSize: "20px" }}>
-          Provider
-        </h4>
+        <div className="sub-title ">
+          <Image
+            src="/images/icon/provider.png"
+            alt="Project Thumbnail"
+            width={26}
+            height={26}
+          />
+          <span className="ml-3">Provider</span>
+        </div>
+
         <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5">
           <div className="custom-procard mt-2 p-1 ">
             <a>

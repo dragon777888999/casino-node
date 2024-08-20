@@ -49,7 +49,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       ariaHideApp={false}
       style={{
         overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.75)",
+          backgroundColor: "#141a2b",
           zIndex: 1000,
         },
       }}
@@ -58,6 +58,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
         className="footer-modal mt-10 sm:mt-15"
         style={{
           zIndex: "1000",
+
           overlay: {
             zIndex: 1000, // Overlay should be on top of other content
           },
@@ -65,8 +66,8 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       >
         <div className="wallet-adapter-modal-container">
           <div
-            className="wallet-adapter-modal-wrapper"
-            style={{ padding: "25px" }}
+            className="footer--modal-wrapper"
+            style={{ padding: "25px", backgroundColor: "#141a2b" }}
           >
             <div
               className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
@@ -84,6 +85,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 </h3>
                 <button
                   className="wallet-adapter-modal-button-close"
+                  style={{ backgroundColor: "#181f33" }}
                   onClick={() => {
                     onRequestClose();
                   }}
@@ -150,7 +152,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   <div className="BetResult-detail-item">
                     <span>Payout </span>
                     <div className="footer-modal-small-card">
-                      {gameData.payoutAmount.toFixed(2)}
+                      {gameData.payoutAmount.toFixed(2)} $
                     </div>
                   </div>
                 </div>

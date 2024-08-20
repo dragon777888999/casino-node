@@ -201,7 +201,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                 <div>
                   <h3
                     className="text-3xl font-semibold"
-                    style={{ marginTop: "-40px" }}
+                    style={{ marginTop: "-40px", color: "white" }}
                   >
                     <br></br>Select a wallet
                   </h3>
@@ -209,10 +209,13 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
               </div>
               {/*body*/}
               <div className="mt-5 flex w-full  items-start justify-end rounded-t">
-                <ul className="wallet-adapter-modal-list">
+                <ul
+                  className="wallet-adapter-modal-list"
+                  style={{ color: "white" }}
+                >
                   <li>
                     <button
-                      className="wallet-adapter-button"
+                      className="wallet-modal-button"
                       tabIndex={0}
                       type="button"
                       onClick={getQrCode}
@@ -246,7 +249,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                   </li>
                   <li>
                     <button
-                      className="wallet-adapter-button"
+                      className="wallet-modal-button"
                       tabIndex={1}
                       type="button"
                       onClick={handleConnectGem}
@@ -260,7 +263,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                   </li>
                   <li>
                     <button
-                      className="wallet-adapter-button"
+                      className="wallet-modal-button"
                       tabIndex={2}
                       type="button"
                       onClick={handleConnectCrossmark}

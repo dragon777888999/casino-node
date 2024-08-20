@@ -76,14 +76,14 @@ const Header = (props: {
         className="max-w-screen sticky top-0  z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none"
         style={{ borderBottom: "1px solid #49577b" }}
       >
-        <div className="mx-auto flex w-full max-w-screen-2xl flex-grow items-center justify-between px-4 py-4 shadow-2 md:px-6 2xl:px-11">
+        <div className="mx-auto flex w-full max-w-screen-2xl flex-grow items-center justify-between px-4 py-2 shadow-2 md:px-6 2xl:px-11">
           <div className="flex items-center gap-2 sm:gap-4 ">
             {/* <!-- Hamburger Toggle BTN --> */}
             <div className="flex hidden md:block">
               <Link href="/">
                 <Image
-                  width={176}
-                  height={32}
+                  width={110}
+                  height={15}
                   src={"/images/logo/logo.svg"}
                   alt="Logo"
                   priority

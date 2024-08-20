@@ -15,10 +15,10 @@ const DropdownWallet: React.FC<DropdownProps> = (items, selectedKey) => {
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="inline-flex items-center justify-center rounded-md border border-meta-3 px-3 py-2 text-center font-medium text-meta-3 hover:bg-opacity-90 lg:px-5 xl:px-7 "
+        className="inline-flex items-center justify-center rounded-md border border-meta-3 px-3 py-2 text-center font-medium  hover:bg-opacity-90 lg:px-5 xl:px-7 "
       >
         <span className=" block text-right">
-          <span className="block text-sm font-medium text-black text-meta-3">
+          <span className="block text-sm font-medium text-black">
             {items[selectedKey]}
           </span>
         </span>

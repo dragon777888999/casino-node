@@ -16,7 +16,7 @@ export default function ConnectSolanaButton() {
 
   return (
     <>
-      <WalletMultiButton className="balance" />
+      <WalletMultiButton className="" />
     </>
   );
 }

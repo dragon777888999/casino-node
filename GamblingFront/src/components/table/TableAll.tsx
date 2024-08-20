@@ -3,7 +3,7 @@ import Image from "next/image";
 import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
-const displayLength = 6;
+const displayLength = 10;
 const TableAll = (isAll: Boolean) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
@@ -20,19 +20,21 @@ const TableAll = (isAll: Boolean) => {
     setShowModal(false);
   };
   // alert(isAll);
+  // console.log("iii", tableData);
 
   useEffect(() => {
+    console.log(tableData);
     const buffer = tableData;
-
+    console.log("first buffer", buffer);
     if (socketData) {
-      if (buffer.length == displayLength) {
+      if (buffer.length >= displayLength) {
         buffer.pop();
       }
 
       try {
         const newData: InfoList = JSON.parse(socketData); // Parse the incoming JSON data
 
-        console.log("table", tableData);
+        console.log("table", newData);
 
         const parsedData: InfoList = {
           ...newData,
@@ -54,16 +56,16 @@ const TableAll = (isAll: Boolean) => {
         console.error("Error parsing JSON:", error);
       }
     }
-  }, [socketData]);
+  }, []);
   const handleRowClick = (info: InfoList) => {
     setSelectedRow(info);
     openModal();
   };
   return (
     <>
-      <div className="rounded-sm border border-stroke bg-white dark:border-strokedark dark:bg-boxdark">
+      <div className="ktable-row rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark ">
         {/* Table Header */}
-        <div className="flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
+        <div className="flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
           <div className="col-span-2 flex items-center">
             <p className="font-medium">Game Name</p>
           </div>
@@ -93,20 +95,15 @@ const TableAll = (isAll: Boolean) => {
         )}
         {tableData.map((info, index) => (
           <div
-            className="flex grid grid-cols-6 border-t border-stroke px-4 py-4.5 dark:border-strokedark sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
+            className="flex grid grid-cols-6  px-4 py-3  sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
             key={index}
           >
             <div className="col-span-2 flex items-center">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 {/* Render vendor image if you have a URL */}
                 {info.vendorName.en && (
-                  <div className="h-12.5 w-15 rounded-md">
-                    <Image
-                      src={`/images/vendor/${info.vendorName.en.replace(/\s+/g, "-").toLowerCase()}.png`} // Adjust path and naming if needed
-                      width={60}
-                      height={50}
-                      alt={info.vendorName.en}
-                    />
+                  <div className="h-5 w-5 rounded-md">
+                    <Image width={60} height={50} alt={"info"} />
                   </div>
                 )}
                 <p className="text-sm text-black dark:text-white">
