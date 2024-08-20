@@ -4,8 +4,6 @@ import React from "react";
 import Image from "next/image";
 
 import GamePanel from "./GamePanel";
-import WebSocketComponent from "@/webSocket/socket";
-import { backendUrl } from "@/anchor/global";
 interface GameData {
   vendorCode: string;
   gameType: number;
