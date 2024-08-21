@@ -14,28 +14,34 @@ interface GameData {
 }
 const Main: React.FC = () => {
   const { siteInfo } = useAppContext();
-  let bannerImgSrc = "/default/images/banner.png";
+  let bannerImgSrc = "";
 
   let width = 40;
   let height = 40;
-  if (siteInfo.themeMap?.banner) {
-    bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
-    width = Number(siteInfo.themeMap.bannerWidth);
-    height = Number(siteInfo.themeMap.bannerWidth);
+  if (siteInfo.mark) {
+    if (siteInfo.themeMap?.banner) {
+      bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
+      width = Number(siteInfo.themeMap.bannerWidth);
+      height = Number(siteInfo.themeMap.bannerWidth);
+    } else {
+      bannerImgSrc = "/default/images/banner.png";
+    }
   }
 
   return (
     <div className=" max-w-screen mx-auto">
       <div className="banner">
         {/* <div className="banner"></div> */}
-        <Image
-          src={bannerImgSrc}
-          alt="Project Thumbnail"
-          layout="responsive"
-          width={width}
-          height={height}
-          style={{ width: "100%" }}
-        />
+        {siteInfo.mark && (
+          <Image
+            src={bannerImgSrc}
+            alt="Project Thumbnail"
+            layout="responsive"
+            width={width}
+            height={height}
+            style={{ width: "100%" }}
+          />
+        )}
       </div>
       <GamePanel title={"Original"} gameType={9} />
       <GamePanel title={"Slots"} gameType={1} />
