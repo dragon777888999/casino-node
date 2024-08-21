@@ -70,11 +70,14 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   };
   return (
     <>
-      <div className="ktable-row rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark ">
+      <div
+        className="ktable-row rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark "
+        style={{ fontSize: "14px", color: "#7b808e" }}
+      >
         {/* Table Header */}
         <div className="flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
           <div className="col-span-2 flex items-center">
-            <p className="font-medium">Game Name</p>
+            <p className="font-medium">Game </p>
           </div>
           <div className="col-span-1 hidden items-center md:flex">
             <p className="font-medium">User</p>
@@ -103,6 +106,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         {tableData.map((info, index) => (
           <div
             className="flex grid grid-cols-6  px-4 py-3  sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
+            style={{ fontSize: "14px" }}
             key={index}
           >
             <div className="col-span-2 flex items-center">
@@ -130,8 +134,8 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                 </p>
               </div>
             </div>
-            <div className="col-span-1 hidden items-center md:flex">
-              <p className="text-sm text-black dark:text-white">
+            <div className="col-span-1 hidden items-center justify-center md:flex">
+              <p className="truncate text-sm text-black dark:text-white">
                 {info.userCode}
               </p>
             </div>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const Affiliates = () => {
   const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
@@ -16,7 +17,7 @@ const Affiliates = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
-        alert("Copied to clipboard!");
+        toast.success("Copied to clipboard!");
       },
       (err) => {
         console.error("Failed to copy: ", err);
@@ -45,7 +46,8 @@ const Affiliates = () => {
   // };
   const setCode = async () => {
     try {
-      if (affiliateCode == "") alert("Invalid value: Please enter the code");
+      if (affiliateCode == "")
+        toast.error("Invalid value: Please enter the code");
 
       if (accessToken == "") return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
@@ -67,9 +69,9 @@ const Affiliates = () => {
 
       const result = await response.json();
       if (result.status === 0) {
-        alert("success");
+        toast.success("success");
       } else {
-        alert("Operation failed");
+        toast.warn("Operation failed");
         throw new Error("Unexpected status code");
       }
     } catch (error) {
@@ -88,19 +90,11 @@ const Affiliates = () => {
                 Affiliates
               </h3>
               <Link href="/">
-                <svg
-                  className="fill-current"
-                  width="20"
-                  height="18"
-                  viewBox="0 0 20 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M19 8.175H2.98748L9.36248 1.6875C9.69998 1.35 9.69998 0.825 9.36248 0.4875C9.02498 0.15 8.49998 0.15 8.16248 0.4875L0.399976 8.3625C0.0624756 8.7 0.0624756 9.225 0.399976 9.5625L8.16248 17.4375C8.31248 17.5875 8.53748 17.7 8.76248 17.7C8.98748 17.7 9.17498 17.625 9.36248 17.475C9.69998 17.1375 9.69998 16.6125 9.36248 16.275L3.02498 9.8625H19C19.45 9.8625 19.825 9.4875 19.825 9.0375C19.825 8.55 19.45 8.175 19 8.175Z"
-                    fill=""
-                  />
-                </svg>
+                <div className="close-button">
+                  <svg width={16} height={16}>
+                    <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                  </svg>
+                </div>
               </Link>
             </div>
             <div></div>

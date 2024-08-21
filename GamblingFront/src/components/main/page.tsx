@@ -35,8 +35,8 @@ const Main: React.FC = () => {
           <Image
             src="/images/icon/provider.png"
             alt="Project Thumbnail"
-            width={26}
-            height={26}
+            width={28}
+            height={28}
           />
           <span className="ml-3">Provider</span>
         </div>

@@ -34,6 +34,7 @@ const Footer = (props: {
                 style={{
                   width: "150px",
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
+                  fontSize: "16px",
                 }}
               >
                 <TableAll isAll={true}></TableAll>
@@ -54,7 +55,7 @@ const Footer = (props: {
 
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
-              <p className="" style={{ fontSize: "25px" }}>
+              <p className="" style={{ fontSize: "20px" }}>
                 Join Our Community
               </p>
             </div>
@@ -80,7 +81,10 @@ const Footer = (props: {
                 ))}
             </div>
           </div>
-          <p className="flex justify-center">{`Copyright © 2024 ${siteInfo.mark}. All rights reserved.`}</p>
+          <p
+            className="flex justify-center"
+            style={{ color: "#7b7f82", fontSize: "13px" }}
+          >{`Copyright © 2024 ${siteInfo.mark}. All rights reserved.`}</p>
         </div>
       </div>
     </div>
