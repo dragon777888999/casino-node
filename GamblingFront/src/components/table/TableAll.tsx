@@ -10,6 +10,8 @@ const displayLength = 10;
 interface TableAllProps {
   isAll: boolean;
 }
+
+// other language properties..
 const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
@@ -33,6 +35,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     console.log(tableData);
     const buffer = tableData;
     console.log("first buffer", buffer);
+
     if (socketData) {
       if (buffer.length >= displayLength) {
         buffer.pop();
@@ -42,7 +45,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         const newData: InfoList = JSON.parse(socketData); // Parse the incoming JSON data
 
         console.log("table", newData);
-
+        // gameName = JSON.parse(newData.gameName);
         const parsedData: InfoList = {
           ...newData,
           vendorName: newData.vendorName,
@@ -68,6 +71,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     setSelectedRow(info);
     openModal();
   };
+  // const gameNameEn = gameName.en ?? "No Name Available";
   return (
     <>
       <div
@@ -79,7 +83,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
           <div className="col-span-2 flex items-center">
             <p className="font-medium">Game </p>
           </div>
-          <div className="col-span-1 hidden items-center md:flex">
+          <div className="col-span-1 flex hidden items-center justify-center md:flex">
             <p className="font-medium">User</p>
           </div>
           <div className="col-span-2 flex hidden items-center justify-center md:flex">
@@ -112,10 +116,10 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             <div className="col-span-2 flex items-center">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 {/* Render vendor image if you have a URL */}
-                {info.vendorName.en && (
+                {info.gameName.en && (
                   <div className="h-5 w-5 rounded-md">
                     <Image
-                      src={info.vendorName.en}
+                      src={info.gameName.en}
                       width={60}
                       height={50}
                       alt={"info"}
@@ -128,7 +132,8 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                     onClick={() => handleRowClick(info)}
                     style={{ cursor: "pointer" }}
                   >
-                    {info.gameName.en} {/* Render the English name */}
+                    {JSON.parse(info.gameName).en}
+                    {/* Render the English name */}
                   </a>
                   {/* Render the English name or switch based on locale */}
                 </p>
@@ -141,12 +146,12 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             </div>
             <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
               <div>
-                <Image
+                {/* <Image
                   src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
                   width={20}
                   height={20}
                   alt={info.currencyCode}
-                />
+                /> */}
               </div>
               <p className="text-sm text-black dark:text-white">
                 {info.betAmount}
@@ -154,18 +159,21 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             </div>
             <div className="col-span-1 flex hidden items-center justify-center md:flex">
               <p className="text-sm text-black dark:text-white">
-                {info.payoutAmount.toFixed(2)} X
+                {info.payoutAmount !== 0
+                  ? (info.betAmount / info.payoutAmount).toFixed(2)
+                  : "0.00"}{" "}
+                X
               </p>
             </div>
             <div className="col-span-3 flex items-center justify-end md:col-span-2">
               <div className="flex items-center justify-center gap-2">
                 <div className="">
-                  <Image
+                  {/* <Image
                     src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
                     width={20}
                     height={20}
                     alt={info.currencyCode}
-                  />
+                  /> */}
                 </div>
                 <div>
                   <p
@@ -181,7 +189,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
               </div>
             </div>
           </div>
-        ))}{" "}
+        ))}
       </div>
       {selectedRow && (
         <DispalyGameInfoModal

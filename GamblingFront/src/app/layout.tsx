@@ -21,8 +21,7 @@ import {
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { solanaNetworkUrl } from "../anchor/global";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,18 +61,6 @@ export default function RootLayout({
                   {loading ? <Loader /> : children}
                 </div>
               </body>
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-              ></ToastContainer>
             </WalletModalProvider>
           </WalletProvider>
         </ConnectionProvider>

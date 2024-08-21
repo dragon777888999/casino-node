@@ -6,6 +6,7 @@ import Image from "next/image";
 import { userInfo } from "os";
 interface LangName {
   en: string;
+  ko: string;
 }
 interface GameData {
   vendorCode: string;
