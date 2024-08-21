@@ -13,10 +13,9 @@ interface GameData {
   gameName: string;
 }
 const Main: React.FC = () => {
-  const {
-    siteInfo
-  } = useAppContext();
+  const { siteInfo } = useAppContext();
   let bannerImgSrc = "/default/images/banner.png";
+
   let width = 40;
   let height = 40;
   if (siteInfo.themeMap?.banner) {
