@@ -7,6 +7,9 @@ import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
 import SelectCoinTypeMenu from "../header/SelectCoinTypeMenu";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // ---------solana wallet------------
 import { ComputeBudgetProgram, PublicKey, Transaction } from "@solana/web3.js";
 import {
@@ -37,8 +40,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   showWalletModal,
   onRequestClose,
 }) => {
-  const [withdrawAmount, setWithdrawAmount] = useState(0);
-  const [depositAmount, setDepositAmount] = useState(0);
+  const [withdrawAmount, setWithdrawAmount] = useState<number | null>(null);
+  const [depositAmount, setDepositAmount] = useState<number | null>(null);
   const [depositAddress, setDepositAddress] = useState("");
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
@@ -60,9 +63,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     await deposit();
 
     if (status || error) {
-      alert(status);
-      alert(error);
-      setDepositAmount(0);
+      setDepositAmount(null);
     }
   };
 
@@ -97,6 +98,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         });
 
         const result = await response.json();
+        console.log("address", result.depositAddress);
         if (result.status == 0) {
           setDepositAddress(result.depositAddress);
         }
@@ -170,7 +172,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const onWithdrawPhantom = async () => {
     try {
       if (accessToken == "") return;
-      // alert(accessToken);
+
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
         headers: {
@@ -188,13 +190,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
       console.log(withdrawAmount);
       const result = await response.json();
       if (result.status == 0) {
-        // window.alert("Withdraw success");
-        setWithdrawAmount(0);
+        setWithdrawAmount(null);
       } else {
-        window.alert(result.msg);
+        toast.info(result.msg);
       }
     } catch (error) {
-      window.alert(error);
+      toast.error("An unknown error occurred");
+      console.log(error);
     }
   };
   const onDeposit = () => {
@@ -208,8 +210,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const onDepositXrpl = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
-    if (depositAmount <= 0) {
-      window.alert("Deposit amount cannot be 0");
+    if (depositAmount == null) {
+      toast.warn("You must set a deposit amount");
       return;
     }
     // alert(depositAmount);
@@ -232,7 +234,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         //if (response.result === "tesSUCCESS")
         {
           console.log("Transaction successful!");
-          setDepositAmount(0);
+          setDepositAmount(null);
         }
         // else {
         //   console.error("Transaction failed with status:", response.result);
@@ -252,11 +254,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
         sendPayment(payment)
           .then((trHash) => {
             console.log("Transaction Hash: ", trHash);
-            setDepositAmount(0);
+            setDepositAmount(null);
           })
           .catch((error) => {
             console.error("Payment failed:", error);
-            setDepositAmount(0);
+            setDepositAmount(null);
             // Handle error or alert the user
           });
       } else if (getDataFromLocalStorage("walleteType") == "xum") {
@@ -269,9 +271,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink(data.payload.next.always);
 
         const ws = new WebSocket(data.payload.refs.websocket_status);
-        console.log("111111");
-        console.log(ws);
-        console.log("111111");
+        // console.log("111111");
+        // console.log(ws);
+        // console.log("111111");
 
         ws.onmessage = async (e) => {
           let responseObj = JSON.parse(e.data);
@@ -283,7 +285,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
             } else {
               // alert("Your payment failed");
             }
-            setDepositAmount(0);
+            setDepositAmount(null);
             setIsHidden(true);
           }
           console.log(responseObj);
@@ -292,7 +294,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
         console.log(payload);
       }
     } catch (e) {
-      alert(e);
+      toast.error("failed");
+      console.log(e);
     }
   };
 
@@ -315,13 +318,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
       const result = await response.json();
       if (result.status == 0) {
         // window.alert("Withdraw success");
-        setWithdrawAmount(0);
+        setWithdrawAmount(null);
       } else {
-        window.alert(result.msg);
-        setWithdrawAmount(0);
+        // window.alert(result.msg);
+        setWithdrawAmount(null);
       }
     } catch (error) {
-      window.alert(error);
+      toast.error("failed");
+      console.log(error);
     }
   };
 
@@ -336,7 +340,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const handleCopy = () => {
     navigator.clipboard.writeText(depositAddress).then(
       () => {
-        alert("Copied to clipboard!");
+        toast.success("Copied to clipboard!");
       },
       (err) => {
         console.error("Failed to copy: ", err);
@@ -353,13 +357,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
-      <div className="footer-modal mt-10 sm:mt-15" style={{ zIndex: "1" }}>
+      <div className="footer-modal " style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
-          <div
-            className="wallet-adapter-modal-wrapper"
-            style={{ maxWidth: "800px" }}
-          >
-            <div className="">
+          <div className="wallet-adapter-modal-wrapper">
+            <div className="w-full">
               <div
                 className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
                 style={{ marginBottom: "10px", width: "100%" }}
@@ -389,7 +390,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     onClick={() => {
                       onRequestClose();
                       setQrcode("");
-                      setDepositAmount(0);
+                      setDepositAmount(null);
+                      setWithdrawAmount(null);
                     }}
                   >
                     <svg width={14} height={14}>
@@ -398,8 +400,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </button>
                 </div>
               </div>
-              <div className="wallet-modal-message my-3 p-3">
-                <span>{siteInfo.walletModalMessage}</span>
+              <div className="wallet-modal-message my-3  max-w-xs p-3">
+                <div className="block w-full  break-words">
+                  <span>{siteInfo.walletModalMessage}</span>
+                </div>
               </div>
               <div className="block gap-5 pb-4 md:flex md:gap-5">
                 <div
@@ -428,10 +432,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <input
                       type="number"
                       className=" ml-1 mt-2 h-10 pl-2 text-black"
-                      placeholder="Withdraw amount"
                       aria-label="Withdraw amount"
-                      defaultValue={0}
-                      value={withdrawAmount}
+                      value={withdrawAmount ?? ""}
                       style={{ color: "white" }}
                       onChange={(e) => {
                         setWithdrawAmount(Number.parseFloat(e.target.value));
@@ -443,6 +445,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   <div className=" mt-2 flex justify-center">
                     <button
                       type="button"
+                      disabled={!withdrawAmount}
                       onClick={() => {
                         onWithdraw();
                       }}
@@ -485,13 +488,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <input
                       type="number"
                       className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
-                      placeholder="Deposit Amount"
                       aria-label="Deposit Amount"
-                      defaultValue={0}
-                      value={depositAmount}
+                      defaultValue=""
+                      value={depositAmount ?? ""}
                       style={{ color: "white" }}
                       onChange={(e) => {
                         setDepositAmount(Number.parseFloat(e.target.value));
+                        const value = Number.parseFloat(e.target.value);
                       }}
                     />
                   </div>
@@ -517,10 +520,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   <div className="mt-3 flex justify-end">
                     <button
                       type="button"
+                      disabled={!depositAmount}
                       onClick={() => {
                         onDeposit();
                       }}
-                      className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"
+                      className="wallet-manage-modal-button  m-auto  "
                     >
                       Deposit
                     </button>
@@ -532,6 +536,18 @@ const WalletModal: React.FC<WalletModalProps> = ({
         </div>
         <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
       </div>
+      {/* <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      /> */}
     </Modal>
   );
 };

@@ -9,7 +9,7 @@ import React, {
 
 interface SiteInfo {
   isLoginMode: boolean;
-  enableSideBar: boolean;
+
   communityMap: string;
   agentCode: string;
   chain: string;
@@ -36,6 +36,8 @@ interface AppState {
   setSiteInfo: (siteInfo: SiteInfo) => void;
   loading: boolean;
   setLoading: (loading: boolean) => void;
+  loginStep: Number;
+  setLoginStep: (loginStep: Number) => void;
   accessToken: string;
   setAccessToken: (accessToken: string) => void;
   walletAddress: string;
@@ -81,6 +83,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     themeCode: "", // empty string for theme code
   });
   const [loading, setLoading] = useState<boolean>(true);
+  const [loginStep, setLoginStep] = useState<Number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
   const [walletAddress, setWalletAddress] = useState<string>("");
   const [socket, setSocket] = useState<WebSocket | null>(null);
@@ -92,6 +95,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSiteInfo,
     loading,
     setLoading,
+    loginStep,
+    setLoginStep,
     accessToken,
     setAccessToken,
     walletAddress,

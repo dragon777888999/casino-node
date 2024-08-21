@@ -6,6 +6,8 @@ import {
 } from "@solana/spl-token";
 import { useAppContext } from "./AppContext";
 import { PublicKey, Transaction, ComputeBudgetProgram } from "@solana/web3.js";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   useAnchorWallet,
   useConnection,
@@ -23,7 +25,7 @@ const useDepositPhantom = (depositAddress: string, depositAmount: any) => {
   const deposit = useCallback(async () => {
     if (!wallet.publicKey) return;
     if (depositAmount <= 0) {
-      window.alert("Deposit amount cannot be 0");
+      console.log("Deposit amount cannot be 0");
       return;
     }
 

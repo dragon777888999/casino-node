@@ -19,17 +19,20 @@ const Header = (props: {
   const {
     loading,
     setLoading,
+    loginStep,
+    setLoginStep,
     siteInfo,
     setSiteInfo,
     userInfo,
     setUserInfo,
     socketData,
-    walletAddress
+    walletAddress,
   } = useAppContext();
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!loading) return;
+      // if (!loading) return;
+      if (loginStep != 0) return;
       try {
         const response = await fetch(
           `${backendUrl}/Account/SiteInfo?domain=${domain}`,
@@ -44,11 +47,12 @@ const Header = (props: {
         console.error("Fetch error:", error);
       } finally {
         setLoading(false);
+        setLoginStep(1);
       }
     };
 
     fetchData();
-  }, [domain, loading, setLoading, setSiteInfo]);
+  }, [domain, loading, setLoading, setSiteInfo, setLoginStep]);
   useEffect(() => {
     try {
       const cmd = JSON.parse(socketData);
@@ -85,6 +89,17 @@ const Header = (props: {
                   width={140}
                   height={15}
                   src={"/images/logo/logo.svg"}
+                  alt="Logo"
+                  priority
+                />
+              </Link>
+            </div>
+            <div className="block flex md:hidden">
+              <Link href="/">
+                <Image
+                  width={35}
+                  height={15}
+                  src={"/images/logo/favicon.ico"}
                   alt="Logo"
                   priority
                 />

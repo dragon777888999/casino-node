@@ -49,6 +49,7 @@ export default function GamePanel({
         }
 
         const result = await response.json();
+        console.log("game", result.vendorGames);
         if (result.status === 0) {
           setVendorGames(result.vendorGames || []);
         } else {
