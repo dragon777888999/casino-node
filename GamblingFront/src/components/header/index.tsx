@@ -28,25 +28,29 @@ const Header = (props: {
     socketData,
     walletAddress,
   } = useAppContext();
-
-  let logoImgSrc = "/default/images/logo.png";
-  let miniLogoImgSrc = "/default/images/miniLogo.png";
-
-  if (siteInfo.themeMap?.logo) {
-    logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
-    miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
-  }
+  let logoImgSrc = "";
+  let miniLogoImgSrc = "";
+  let logoWidth = 45;
+  let logoHeight = 45;
   useEffect(() => {
     const fetchData = async () => {
-      // if (!loading) return;
-      if (loginStep != 0) return;
+      if (!loading) return;
+      // if (loginStep != 0) return;
       try {
         const response = await fetch(
           `${backendUrl}/Account/SiteInfo?domain=${domain}`,
         );
+
         const result = await response.json();
         console.log("--------------site info------------");
-
+        console.log("result", result);
+        if (result.themeMap.banner) {
+          logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
+          miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+        } else {
+          logoImgSrc = "/default/images/logo.png";
+          miniLogoImgSrc = "/default/images/miniLogo.png";
+        }
         setSiteInfo(result);
         console.log(result);
         // updateSiteInfo();
@@ -54,7 +58,7 @@ const Header = (props: {
         console.error("Fetch error:", error);
       } finally {
         setLoading(false);
-        setLoginStep(1);
+        // setLoginStep(1);
       }
     };
 
@@ -79,6 +83,15 @@ const Header = (props: {
       console.error("Failed to parse JSON:", error);
     }
   }, [socketData, userInfo, setUserInfo]);
+  if (siteInfo.mark) {
+    if (siteInfo.themeMap?.logo) {
+      logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
+      miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+    } else {
+      logoImgSrc = "/default/images/logo.png";
+      miniLogoImgSrc = "/default/images/miniLogo.png";
+    }
+  }
 
   useFetchUserInfo();
   return (
@@ -93,8 +106,8 @@ const Header = (props: {
             <div className="flex hidden md:block">
               <Link href="/">
                 <Image
-                  width={140}
-                  height={15}
+                  width={logoWidth}
+                  height={logoHeight}
                   src={logoImgSrc}
                   alt="Logo"
                   priority
@@ -112,6 +125,9 @@ const Header = (props: {
                 />
               </Link>
             </div>
+            <p style={{ fontSize: "28px", fontWeight: "700" }}>
+              {siteInfo.mark}
+            </p>
             {/* !props.sidebarOpen && */}
             {siteInfo.enableSideBar && (
               <button
