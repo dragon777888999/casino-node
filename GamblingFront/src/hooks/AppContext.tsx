@@ -9,7 +9,7 @@ import React, {
 
 interface SiteInfo {
   isLoginMode: boolean;
-  enableSideBar : boolean;
+  enableSideBar: boolean;
   communityMap: string;
   agentCode: string;
   chain: string;

@@ -29,6 +29,13 @@ const Header = (props: {
     walletAddress,
   } = useAppContext();
 
+  let logoImgSrc = "/default/images/logo.png";
+  let miniLogoImgSrc = "/default/images/miniLogo.png";
+
+  if (siteInfo.themeMap?.logo) {
+    logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
+    miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+  }
   useEffect(() => {
     const fetchData = async () => {
       // if (!loading) return;
@@ -88,7 +95,7 @@ const Header = (props: {
                 <Image
                   width={140}
                   height={15}
-                  src={"/images/logo/logo.svg"}
+                  src={logoImgSrc}
                   alt="Logo"
                   priority
                 />
@@ -99,7 +106,7 @@ const Header = (props: {
                 <Image
                   width={35}
                   height={15}
-                  src={"/images/logo/favicon.ico"}
+                  src={miniLogoImgSrc}
                   alt="Logo"
                   priority
                 />
