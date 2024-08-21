@@ -23,8 +23,8 @@ const Header = (props: {
     setSiteInfo,
     userInfo,
     setUserInfo,
-
     socketData,
+    walletAddress
   } = useAppContext();
 
   useEffect(() => {
@@ -135,7 +135,7 @@ const Header = (props: {
             )}
           </div>
 
-          {userInfo?.userCode ? (
+          {walletAddress != null && walletAddress != "" ? (
             <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">

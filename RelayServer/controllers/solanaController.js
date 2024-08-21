@@ -47,9 +47,9 @@ getUserTransaction_solana = async (req, res) => {
         const confirmedSignatureInfos = await connection.getSignaturesForAddress(ata, { limit: 20 }, 'confirmed');
         for (let i = 0; i < confirmedSignatureInfos.length; i++) {
             let txHash = confirmedSignatureInfos[i].signature;
+//            console.log(txHash);
             if (!lastSignature)
                 lastSignature = txHash;
-            //console.log(txHash);
             if (txHash == beforeSignature) {
                 break;
             }
@@ -64,14 +64,13 @@ getUserTransaction_solana = async (req, res) => {
             try {
                 const ixs = txData.transaction.message.instructions;
                 for (let i = 0; i < ixs.length; i++) {
-
-                    // console.log(ixs[i])
                     if (ixs[i]['parsed'] && !txData.meta.err) {
-                        if (ixs[i].parsed?.type == "transferChecked" && ixs[i].programId.toBase58() == "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA") {
-                            //console.log(ixs[i].parsed.info);
-                            if (ata.toBase58() == ixs[i].parsed.info.destination) {
-                                results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.tokenAmount.uiAmount });
-                            }
+                        if (ixs[i].programId.toBase58() != "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+                            continue;
+                        if (ixs[i].parsed?.type == "transferChecked" && ata.toBase58() == ixs[i].parsed.info.destination) {
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.tokenAmount.uiAmount });
+                        } else if (ixs[i].parsed?.type == "transfer" && ata.toBase58() == ixs[i].parsed.info.destination) {
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.amount / (10 ** config.digits[`${data.chain}_${data.coinType}`])});
                         }
                     }
                 }
@@ -103,7 +102,7 @@ sendFeeFunc_solana = async (req, res) => {
 sendCoinFunc_solana = async (req, res) => {
     const data = req.body;
     console.log(JSON.stringify(data));
-    
+
     if (data.tokenAddress == "")
         await sendNativeTokenFunc_solana(data, res);
     else

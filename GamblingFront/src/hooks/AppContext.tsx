@@ -11,6 +11,7 @@ interface SiteInfo {
   mark: string;
   walletModalMessage: string;
   themeCode: string;
+  enableSideBar : boolean;
 }
 interface UserInfo {
   status: number;
@@ -68,7 +69,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     tokenAddressMap: {},          // empty object for token addresses
     mark: '',                     // empty string for mark
     walletModalMessage: '',       // empty string for wallet modal message
-    themeCode: ''                 // empty string for theme code
+    themeCode: ''   ,             // empty string for theme code
+    enableSideBar : false
   });
   const [loading, setLoading] = useState<boolean>(true);
   const [accessToken, setAccessToken] = useState<string>("");

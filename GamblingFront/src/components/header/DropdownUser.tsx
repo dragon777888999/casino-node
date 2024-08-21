@@ -9,7 +9,7 @@ import { backendUrl } from "@/anchor/global";
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
+  const { userInfo, setUserInfo, loading, siteInfo, setWalletAddress } =
     useAppContext();
   const wallet = useWallet();
   const updateUserCode = (newUserCode: string) => {
@@ -36,8 +36,9 @@ const DropdownUser = () => {
         headers: headers,
       });
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      window.location.reload();
       updateUserCode("");
+      setWalletAddress("");
+      window.location.reload();
       console.log("Wallet disconnected and information cleared");
     } catch (error) {
       console.error("Error disconnecting from Crossmark wallet:", error);
