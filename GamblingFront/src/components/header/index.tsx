@@ -135,7 +135,7 @@ const Header = (props: {
             )}
           </div>
 
-          {walletAddress != null && walletAddress != "" ? (
+          {userInfo?.userCode ? (
             <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">

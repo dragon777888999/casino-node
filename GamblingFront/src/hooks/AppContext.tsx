@@ -19,7 +19,6 @@ interface SiteInfo {
   mark: string;
   walletModalMessage: string;
   themeCode: string;
-  enableSideBar: boolean;
 }
 interface UserInfo {
   status: number;

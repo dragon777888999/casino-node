@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import GamePanel from "./GamePanel";
+import { useAppContext } from "../../hooks/AppContext";
 interface GameData {
   vendorCode: string;
   gameType: number;
@@ -12,16 +13,21 @@ interface GameData {
   gameName: string;
 }
 const Main: React.FC = () => {
+  const {
+    siteInfo
+  } = useAppContext();
+  let bannerImgSrc="/default/images/banner.png";
+  let width=40;
   return (
     <div className=" max-w-screen mx-auto">
       <div className="banner">
         {/* <div className="banner"></div> */}
         <Image
-          src="/images/project/banner.png"
+          src={bannerImgSrc}
           alt="Project Thumbnail"
           layout="responsive"
-          width={800}
-          height={450}
+          width={width}
+          height={width}
           style={{ width: "100%" }}
         />
       </div>
