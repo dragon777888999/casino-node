@@ -16,6 +16,7 @@ interface SiteInfo {
   availableCoinTypes: Array<string>;
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
+  themeMap: { [key: string]: string };
   mark: string;
   walletModalMessage: string;
   themeCode: string;
@@ -78,6 +79,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     availableCoinTypes: [], // empty array for available coin types
     digitsMap: {}, // empty object for digits mapping
     tokenAddressMap: {}, // empty object for token addresses
+    themeMap: {}, // empty object for token addresses
     mark: "", // empty string for mark
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code

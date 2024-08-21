@@ -16,8 +16,15 @@ const Main: React.FC = () => {
   const {
     siteInfo
   } = useAppContext();
-  let bannerImgSrc="/default/images/banner.png";
-  let width=40;
+  let bannerImgSrc = "/default/images/banner.png";
+  let width = 40;
+  let height = 40;
+  if (siteInfo.themeMap?.banner) {
+    bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
+    width = Number(siteInfo.themeMap.bannerWidth);
+    height = Number(siteInfo.themeMap.bannerWidth);
+  }
+
   return (
     <div className=" max-w-screen mx-auto">
       <div className="banner">
@@ -27,7 +34,7 @@ const Main: React.FC = () => {
           alt="Project Thumbnail"
           layout="responsive"
           width={width}
-          height={width}
+          height={height}
           style={{ width: "100%" }}
         />
       </div>
