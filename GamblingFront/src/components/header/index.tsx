@@ -82,7 +82,7 @@ const Header = (props: {
             <div className="flex hidden md:block">
               <Link href="/">
                 <Image
-                  width={110}
+                  width={140}
                   height={15}
                   src={"/images/logo/logo.svg"}
                   alt="Logo"
@@ -90,8 +90,8 @@ const Header = (props: {
                 />
               </Link>
             </div>
-
-            {!props.sidebarOpen && (
+            {/* !props.sidebarOpen && */}
+            {siteInfo.enableSideBar && (
               <button
                 aria-controls="sidebar"
                 onClick={(e) => {

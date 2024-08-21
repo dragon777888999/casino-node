@@ -43,6 +43,7 @@ const DropdownUser = () => {
     } catch (error) {
       console.error("Error disconnecting from Crossmark wallet:", error);
     }
+    window.location.reload();
   };
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
@@ -51,7 +52,7 @@ const DropdownUser = () => {
         className="flex items-center gap-4"
         href="#"
       >
-        <button className="menu-button-connect mr-3">
+        <button className="menu-button-connect mr-3 w-35">
           <p> Account </p>
           {/* <svg
             className="hidden fill-current sm:block"
@@ -74,12 +75,12 @@ const DropdownUser = () => {
       {/* <!-- Dropdown Start --> */}
       {dropdownOpen && (
         <div
-          className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark`}
+          className={`absolute right-0 mt-4 flex w-40 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark`}
         >
-          <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
+          <ul className="flex flex-col gap-5 border-b border-stroke px-4 py-5 dark:border-strokedark">
             <li>
               <Link
-                href="/original"
+                href="/"
                 className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
               >
                 <svg
@@ -99,7 +100,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                profile
+                Profile
               </Link>
             </li>
             <li>
@@ -149,9 +150,10 @@ const DropdownUser = () => {
               </Link>
             </li> */}
           </ul>
-          <button
+          <Link
             onClick={handleDisconnect}
-            className="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+            href="/"
+            className="flex items-center gap-3.5 px-4 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
           >
             <svg
               className="fill-current"
@@ -170,8 +172,8 @@ const DropdownUser = () => {
                 fill=""
               />
             </svg>
-            disconnect
-          </button>
+            Disconnect
+          </Link>
         </div>
       )}
       {/* <!-- Dropdown End --> */}

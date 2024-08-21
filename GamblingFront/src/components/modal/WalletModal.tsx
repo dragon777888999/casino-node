@@ -52,7 +52,19 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [selectedKey, setSelectedKey] = useState<string>(
     userInfo?.selectedCoinType ?? "",
   );
-  const { deposit } = useDepositPhantom(depositAddress);
+  const { deposit, status, error } = useDepositPhantom(
+    depositAddress,
+    depositAmount,
+  );
+  const phantomDeposit = async () => {
+    await deposit();
+
+    if (status || error) {
+      alert(status);
+      alert(error);
+      setDepositAmount(0);
+    }
+  };
 
   const handleSelect = async (key: string) => {
     userInfo.selectedCoinType = key;
@@ -185,7 +197,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
       window.alert(error);
     }
   };
-  const onDeposit = async () => {
+  const onDeposit = () => {
+    if (siteInfo?.chain == "Xrpl") {
+      onDepositXrpl();
+    } else {
+      phantomDeposit();
+      // useDepositPhantom();
+    }
+  };
+
+  const onDepositXrpl = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
     if (depositAmount <= 0) {
       window.alert("Deposit amount cannot be 0");
@@ -275,7 +296,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     }
   };
 
-  const onWithdraw = async () => {
+  const onWithdrawXrol = async () => {
     try {
       if (accessToken == "") return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
@@ -301,6 +322,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
       }
     } catch (error) {
       window.alert(error);
+    }
+  };
+
+  const onWithdraw = () => {
+    if (siteInfo?.chain == "Xrpl") {
+      onWithdrawXrol();
+    } else {
+      onWithdrawPhantom();
     }
   };
   // alert(depositAmount);
@@ -369,7 +398,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </button>
                 </div>
               </div>
-
+              <div className="wallet-modal-message my-3 p-3">
+                <span>{siteInfo.walletModalMessage}</span>
+              </div>
               <div className="block gap-5 pb-4 md:flex md:gap-5">
                 <div
                   className="custom-wallet-modal-card"
@@ -413,11 +444,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <button
                       type="button"
                       onClick={() => {
-                        if (siteInfo?.chain == "Xrpl") {
-                          onWithdraw();
-                        } else {
-                          onWithdrawPhantom();
-                        }
+                        onWithdraw();
                       }}
                       className="wallet-manage-modal-button"
                     >
@@ -440,6 +467,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       style={{ color: "white", textOverflow: "ellipsis" }}
                       onChange={(e) => {
                         setDepositAddress(e.target.value);
+                        const value = Number.parseFloat(e.target.value);
                       }}
                     />
                     <div className="tooltipContainer ">
@@ -484,21 +512,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         style={{ width: "60%" }} // Apply additional styling if needed
                       />
                     )}
-                    {/* {isHidden && (
-                      <img style={{ width: "60%" }} src={qrcode} alt="qr"></img>
-                    )} */}
                   </div>
 
                   <div className="mt-3 flex justify-end">
                     <button
                       type="button"
                       onClick={() => {
-                        if (siteInfo?.chain == "Xrpl") {
-                          onDeposit();
-                        } else {
-                          // useDepositPhantom();
-                          deposit();
-                        }
+                        onDeposit();
                       }}
                       className="wallet-manage-modal-button m-auto inline-flex items-center justify-center rounded-md"
                     >

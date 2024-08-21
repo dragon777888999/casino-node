@@ -4,10 +4,15 @@ import { useState } from "react";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
+import { backendUrl } from "@/anchor/global";
+import Link from "next/link";
+
 const Affiliates = () => {
   const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
     useAppContext();
   const [referralLink, setReferralLink] = useState("");
+  const [affiliateCode, setAffiliateCode] = useState("");
+
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -19,15 +24,84 @@ const Affiliates = () => {
     );
   };
 
+  // const setCode = async () => {
+  //   try {
+  //     if (affiliateCode == "") alert("Invalid value: Please enter the code");
+  //     alert(affiliateCode);
+  //     if (accessToken == "") return;
+  //     const params = new URLSearchParams({
+  //       affiliatecode: affiliateCode,
+  //     });
+  //     const response = await fetch(
+  //       `${backendUrl}/backend/authorizeapi/createAffiliater?{param.toString()}`,
+  //     );
+  //     console.log("setCodd", response);
+  //     const result = await response.json();
+  //     if (result.status == 0) {
+  //     }
+  //   } catch (error) {
+  //     console.error("Fetch error:", error);
+  //   }
+  // };
+  const setCode = async () => {
+    try {
+      if (affiliateCode == "") alert("Invalid value: Please enter the code");
+
+      if (accessToken == "") return;
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+
+        headers: {
+          "X-Access-Token": accessToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "createAffiliater",
+          affiliateCode: affiliateCode,
+        }),
+      });
+      console.log(response);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      if (result.status === 0) {
+        alert("success");
+      } else {
+        alert("Operation failed");
+        throw new Error("Unexpected status code");
+      }
+    } catch (error) {
+      console.error("Error fetching game data:", error);
+    } finally {
+      console.log(Response);
+    }
+  };
   return (
     <DefaultLayout>
       <div className="mx-auto max-w-270">
         <div className="grid gap-8">
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-            <div className="border-b border-stroke px-7 py-4 dark:border-strokedark">
+            <div className="flex items-center justify-between border-b border-stroke px-7 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
                 Affiliates
               </h3>
+              <Link href="/">
+                <svg
+                  className="fill-current"
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 8.175H2.98748L9.36248 1.6875C9.69998 1.35 9.69998 0.825 9.36248 0.4875C9.02498 0.15 8.49998 0.15 8.16248 0.4875L0.399976 8.3625C0.0624756 8.7 0.0624756 9.225 0.399976 9.5625L8.16248 17.4375C8.31248 17.5875 8.53748 17.7 8.76248 17.7C8.98748 17.7 9.17498 17.625 9.36248 17.475C9.69998 17.1375 9.69998 16.6125 9.36248 16.275L3.02498 9.8625H19C19.45 9.8625 19.825 9.4875 19.825 9.0375C19.825 8.55 19.45 8.175 19 8.175Z"
+                    fill=""
+                  />
+                </svg>
+              </Link>
             </div>
             <div></div>
             <div className="p-7">
@@ -43,13 +117,17 @@ const Affiliates = () => {
                     <input
                       className="w-full rounded border border-stroke bg-gray py-3 pl-7.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                       type="text"
-                      name="fullName"
-                      id="fullName"
+                      name="affiliateCode"
+                      id="affiliateCode"
                       placeholder=""
                       defaultValue=""
+                      value={affiliateCode}
+                      onChange={(e) => {
+                        setAffiliateCode(e.target.value);
+                      }}
                     />
                     <div className="Input_btn-container">
-                      <button className="input-btn">
+                      <button className="input-btn" onClick={setCode}>
                         <div className="Button_inner-content">
                           <span style={{ fontSize: "13px" }}>Set Code</span>
                         </div>

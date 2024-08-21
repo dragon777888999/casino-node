@@ -15,9 +15,5 @@ export default function ConnectSolanaButton() {
     // alert(wallet.publicKey);
   }, [wallet, setWalletAddress]);
 
-  return (
-    <>
-      <WalletMultiButton className="" />
-    </>
-  );
+  return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
 }

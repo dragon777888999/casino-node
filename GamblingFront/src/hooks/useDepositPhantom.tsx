@@ -12,10 +12,13 @@ import {
   useWallet,
 } from "@solana/wallet-adapter-react";
 
-const useDepositPhantom = (depositAddress: string) => {
+const useDepositPhantom = (depositAddress: string, depositAmount: any) => {
   const { siteInfo } = useAppContext();
   const { connection } = useConnection();
-  const [depositAmount, setDepositAmount] = useState(0);
+
+  const [status, setStatus] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
   const wallet = useWallet();
   const deposit = useCallback(async () => {
     if (!wallet.publicKey) return;
@@ -67,20 +70,19 @@ const useDepositPhantom = (depositAddress: string) => {
         connection,
         { skipPreflight: true, preflightCommitment: "finalized" },
       );
-      console.log(transactionSignature);
-      setDepositAmount(0);
+      console.log("transaction", transactionSignature);
+      setStatus("Deposit successful");
       const confirmResult = await connection.confirmTransaction(
         transactionSignature,
-        "confirmed",
+        "processed",
       );
-      const status = confirmResult.value;
-      console.log(status);
     } catch (error) {
       console.error("Transaction error:", error);
     }
+    console.log("status", status);
   }, [wallet, connection, siteInfo, depositAddress, depositAmount]);
 
-  return { deposit, setDepositAmount };
+  return { deposit, status, error };
 };
 
 export default useDepositPhantom;

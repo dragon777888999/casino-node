@@ -4,13 +4,16 @@ import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
 import { userInfo } from "os";
-
+interface LangName {
+  en: string;
+}
 interface GameData {
   vendorCode: string;
   gameType: number;
   imageUrl: string;
   gameCode: string;
   gameName: string;
+  vendorName: string;
 }
 
 export default function GamePanel({
@@ -131,6 +134,7 @@ export default function GamePanel({
           // Parse JSON strings
           const gameName = JSON.parse(gameData.gameName);
           const imageUrl = JSON.parse(gameData.imageUrl);
+          const vendorName = JSON.parse(gameData.vendorName);
           let imageSrc = imageUrl.en;
           if (siteInfo?.themeCode) {
             imageSrc = `/${siteInfo?.themeCode}/images/${gameData.vendorCode}/${gameData.gameCode}.png`;
@@ -173,7 +177,7 @@ export default function GamePanel({
                   </Link>
                   <div className="game-item-title">
                     <div className="game-item-title-vender">
-                      {gameData.vendorCode}
+                      {vendorName.en}
                     </div>
                     <p className="game-item-title-p">{gameName.en}</p>
                   </div>

@@ -8,8 +8,14 @@ const Footer = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { userInfo } = useAppContext();
+  const { userInfo, siteInfo } = useAppContext();
   const isUserInfoEmpty = !userInfo || Object.keys(userInfo).length === 0;
+
+  let communityEntries: [string, string][] = [];
+  if (siteInfo.communityMap) {
+    console.log(siteInfo.communityMap);
+    communityEntries = Object.entries(siteInfo.communityMap);
+  }
 
   return (
     <div className="flex justify-center bg-black">
@@ -48,141 +54,33 @@ const Footer = (props: {
 
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
-              <p className="" style={{ fontSize: "30px" }}>
+              <p className="" style={{ fontSize: "25px" }}>
                 Join Our Community
               </p>
             </div>
-
             <div className="my-10 flex flex justify-center gap-4">
-              <a
-                className="telegram"
-                href="https://t.me/bcgamewin"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/telegram.png"}
-                  alt="telegram"
-                  priority
-                />
-              </a>
-              <a
-                className="github"
-                href="https://github.com/bcgame-project"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/github.png"}
-                  alt="github"
-                  priority
-                />
-              </a>
-              <a
-                className="twitter"
-                href="https://twitter.com/BCGameOfficial"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/twitter.png"}
-                  alt="twitter"
-                  priority
-                />
-              </a>
-              <a
-                className="facebook"
-                href="https://www.facebook.com/bcgameofficial"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/facebook.png"}
-                  alt="facebook"
-                  priority
-                />
-              </a>
-              <a
-                className="discord"
-                href="https://discord.gg/xqUMQesZQq"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/discord.png"}
-                  alt="discord"
-                  priority
-                />
-              </a>
-              <a
-                className="bitcoin"
-                href="https://bitcointalk.org/index.php?topic=5088875.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/bitcoin.png"}
-                  alt="bitcoin"
-                  priority
-                />
-              </a>
-              <a
-                className="instagram"
-                href="https://instagram.com/bcgamecom"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/instagram.png"}
-                  alt="instagram"
-                  priority
-                />
-              </a>
-              <a
-                className="reddit"
-                href="https://www.reddit.com/r/bcgamecom"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/reddit.png"}
-                  alt="reddit"
-                  priority
-                />
-              </a>
-              <a
-                className="global-tele"
-                href="/telegram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={60}
-                  height={60}
-                  src={"/images/join/global-tele.png"}
-                  alt="global-tele"
-                  priority
-                />
-              </a>
+              {communityEntries.length > 0 &&
+                communityEntries.map(([platform, url]) => (
+                  <div key={platform} className="flex items-center">
+                    <a
+                      className="platform"
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        width={40}
+                        height={40}
+                        src={`/images/join/${platform.toLowerCase()}.png`}
+                        alt="telegram"
+                        priority
+                      />
+                    </a>
+                  </div>
+                ))}
             </div>
           </div>
-          <p className="flex justify-center">{`© 2024 . All rights reserved.`}</p>
+          <p className="flex justify-center">{`Copyright © 2024 ${siteInfo.mark}. All rights reserved.`}</p>
         </div>
       </div>
     </div>

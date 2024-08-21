@@ -41,87 +41,32 @@ const Main: React.FC = () => {
           <span className="ml-3">Provider</span>
         </div>
         {/* <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5"></div> */}
-        <div className=" mt-3 flex grid grid-cols-2 gap-3">
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/spribe.svg" // Path relative to the public directory
-                alt="Logo"
-                width={80} // Adjust width
-                height={80} // Adjust height
-              />
-            </a>
+
+        <div className="games-block ">
+          <div className="games-block-item ">
+            <div className="custom-procard mt-2 p-1 ">
+              <a>
+                <Image
+                  src="/images/provider/spribe.svg" // Path relative to the public directory
+                  alt="Logo"
+                  width={80} // Adjust width
+                  height={80} // Adjust height
+                />
+              </a>
+            </div>
           </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/croco.png" // Path relative to the public directory
-                alt="Logo"
-                width={200} // Adjust width
-                height={200} // Adjust height
-              />
-            </a>
+          <div className="games-block-item ">
+            <div className="custom-procard mt-2 p-1 ">
+              <a>
+                <Image
+                  src="/images/provider/croco.svg" // Path relative to the public directory
+                  alt="Logo"
+                  width={80} // Adjust width
+                  height={80} // Adjust height
+                />
+              </a>
+            </div>
           </div>
-          {/* <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/endorphina.svg" // Path relative to the public directory
-                alt="Logo"
-                width={100} // Adjust width
-                height={100} // Adjust height
-              />
-            </a>
-          </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/evolution.svg" // Path relative to the public directory
-                alt="Logo"
-                width={100} // Adjust width
-                height={100} // Adjust height
-              />
-            </a>
-          </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/nolimit.svg" // Path relative to the public directory
-                alt="Logo"
-                width={100} // Adjust width
-                height={100} // Adjust height
-              />
-            </a>
-          </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/playngo.svg" // Path relative to the public directory
-                alt="Logo"
-                width={100} // Adjust width
-                height={100} // Adjust height
-              />
-            </a>
-          </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/prgmaticplay.svg" // Path relative to the public directory
-                alt="Logo"
-                width={100} // Adjust width
-                height={100} // Adjust height
-              />
-            </a>
-          </div>
-          <div className="custom-procard mt-2 p-1 ">
-            <a>
-              <Image
-                src="/images/provider/thunderkick.svg" // Path relative to the public directory
-                alt="Logo"
-                width={40} // Adjust width
-                height={40} // Adjust height
-              />
-            </a>
-          </div> */}
         </div>
       </div>
       <hr

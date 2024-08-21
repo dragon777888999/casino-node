@@ -866,6 +866,18 @@
   justify-content: space-between;
   transition: border 0.3s ease-in-out;
 }
+.input-inline-btn-container input:focus {
+  border-color: transparent;
+  outline: none;
+  border: none;
+}
+.input-inline-btn-container input:focus ~ .Input_btn-container {
+  border-color: #2099ff;
+}
+.input-inline-btn-container:focus-within {
+  border-color: #2099ff;
+}
+
 .Input_btn-container {
   align-items: center;
   flex-grow: 0;
@@ -887,4 +899,16 @@
 }
 .Button_inner-content {
   line-height: normal;
+}
+.wallet-modal-message {
+  flex: 1 1;
+  height: 68px;
+  background-color: #141c27;
+  border: 1px solid rgb(46 58 71 / var(--tw-border-opacity));
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -1,8 +1,16 @@
 import { backendUrl } from "@/anchor/global";
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
 
 interface SiteInfo {
   isLoginMode: boolean;
+  enableSideBar: boolean;
+  communityMap: string;
   agentCode: string;
   chain: string;
   availableCoinTypes: Array<string>;
@@ -11,7 +19,7 @@ interface SiteInfo {
   mark: string;
   walletModalMessage: string;
   themeCode: string;
-  enableSideBar : boolean;
+  enableSideBar: boolean;
 }
 interface UserInfo {
   status: number;
@@ -24,9 +32,9 @@ interface UserInfo {
 // Define the shape of your context's data
 interface AppState {
   userInfo: UserInfo;
-  setUserInfo: (userInfo: UserInfo ) => void;
-  siteInfo: SiteInfo ;
-  setSiteInfo: (siteInfo: SiteInfo ) => void;
+  setUserInfo: (userInfo: UserInfo) => void;
+  siteInfo: SiteInfo;
+  setSiteInfo: (siteInfo: SiteInfo) => void;
   loading: boolean;
   setLoading: (loading: boolean) => void;
   accessToken: string;
@@ -55,22 +63,23 @@ export const useAppContext = () => {
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [userInfo, setUserInfo] = useState<UserInfo>({
     status: 0,
-    selectedCoinType: '',
+    selectedCoinType: "",
     balances: {},
-    userCode: '',
-    nickName: ''
+    userCode: "",
+    nickName: "",
   });
   const [siteInfo, setSiteInfo] = useState<SiteInfo>({
-    isLoginMode: false,           // default to false (not in login mode)
-    agentCode: '',                // empty string for agent code
-    chain: '',                    // empty string for blockchain type
-    availableCoinTypes: [],       // empty array for available coin types
-    digitsMap: {},                // empty object for digits mapping
-    tokenAddressMap: {},          // empty object for token addresses
-    mark: '',                     // empty string for mark
-    walletModalMessage: '',       // empty string for wallet modal message
-    themeCode: ''   ,             // empty string for theme code
-    enableSideBar : false
+    isLoginMode: false, // default to false (not in login mode)
+    enableSideBar: false,
+    communityMap: "",
+    agentCode: "", // empty string for agent code
+    chain: "", // empty string for blockchain type
+    availableCoinTypes: [], // empty array for available coin types
+    digitsMap: {}, // empty object for digits mapping
+    tokenAddressMap: {}, // empty object for token addresses
+    mark: "", // empty string for mark
+    walletModalMessage: "", // empty string for wallet modal message
+    themeCode: "", // empty string for theme code
   });
   const [loading, setLoading] = useState<boolean>(true);
   const [accessToken, setAccessToken] = useState<string>("");
@@ -91,11 +100,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     socket,
     setSocket,
     socketData,
-    setSocketData
+    setSocketData,
   };
 
   useEffect(() => {
-     // Create a new URL object from the string
+    // Create a new URL object from the string
     let parsedUrl = new URL(backendUrl);
 
     // Determine the WebSocket protocol (ws or wss)
@@ -107,20 +116,20 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     const ws = new WebSocket(wsUrl);
 
     ws.onopen = () => {
-      console.log('WebSocket connection opened');
+      console.log("WebSocket connection opened");
     };
 
     ws.onmessage = (event) => {
-      console.log('Received:', event.data);
+      console.log("Received:", event.data);
       setSocketData(event.data); // Update the state with received data
     };
 
     ws.onclose = () => {
-      console.log('WebSocket connection closed');
+      console.log("WebSocket connection closed");
     };
 
     ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
+      console.error("WebSocket error:", error);
     };
 
     setSocket(ws);
