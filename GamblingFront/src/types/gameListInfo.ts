@@ -1,5 +1,6 @@
 interface LangName {
   en: string;
+  ko: string;
 }
 
 // Define the main type

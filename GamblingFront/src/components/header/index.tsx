@@ -45,8 +45,9 @@ const Header = (props: {
         console.log("--------------site info------------");
         console.log("result", result);
         if (result.themeMap.banner) {
-          logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
-          miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+          // logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
+          logoImgSrc = "/RebelGames/images/logo.png";
+          // miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
         } else {
           logoImgSrc = "/default/images/logo.png";
           miniLogoImgSrc = "/default/images/miniLogo.png";
@@ -85,14 +86,15 @@ const Header = (props: {
   }, [socketData, userInfo, setUserInfo]);
   if (siteInfo.mark) {
     if (siteInfo.themeMap?.logo) {
-      logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
-      miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+      // logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
+      // miniLogoImgSrc = `/${siteInfo.themeMap.logo}/images/minilogo.png`;
+      logoImgSrc = "/RebelGames/images/logo.png";
     } else {
       logoImgSrc = "/default/images/logo.png";
       miniLogoImgSrc = "/default/images/miniLogo.png";
     }
   }
-
+  logoImgSrc = "/RebelGames/images/logo.png";
   useFetchUserInfo();
   return (
     <>
@@ -125,7 +127,10 @@ const Header = (props: {
                 />
               </Link>
             </div>
-            <p style={{ fontSize: "28px", fontWeight: "700" }}>
+            <p
+              style={{ fontSize: "28px", fontWeight: "700" }}
+              className="flex hidden md:block"
+            >
               {siteInfo.mark}
             </p>
             {/* !props.sidebarOpen && */}

@@ -5,7 +5,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
 import "@/css/custom.css";
-
+import "@/css/rebel.css";
 import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
@@ -21,20 +21,44 @@ import {
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { solanaNetworkUrl } from "../anchor/global";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { backendUrl } from "../anchor/global";
 
-import { useAppContext } from "../hooks/AppContext";
+import RebelLayout from "@/divide/Rebel";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const [colorMode, setColorMode] = useColorMode();
+  const [divider, setDivider] = useState("");
   const [loading, setLoading] = useState(true);
+
   // const pathname = usePathname();
  
   useEffect(() => {
+    const domain = window.location.host;
+    const fetchData = async () => {
+      if (!loading) return;
+      // if (loginStep != 0) return;
+      try {
+        const response = await fetch(
+          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+        );
+
+        const result = await response.json();
+        console.log("----------divide----site info------------");
+        console.log("result", result);
+
+        setDivider(result.mark);
+        console.log(result);
+        // updateSiteInfo();
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+
+    fetchData();
     setTimeout(() => setLoading(false), 1000);
     // setColorMode("dark");
     (setColorMode as (value: string) => void)("dark");
@@ -63,20 +87,9 @@ export default function RootLayout({
                   id="root"
                 >
                   {loading ? <Loader /> : children}
+                  {/* {loading ? <Loader /> : <RebelLayout />} */}
                 </div>
               </body>
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-              ></ToastContainer>
             </WalletModalProvider>
           </WalletProvider>
         </ConnectionProvider>

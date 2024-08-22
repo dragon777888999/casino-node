@@ -1,0 +1,78 @@
+.rebel-header-btn {
+  border: 1px solid white;
+}
+.Roogsino-block-item {
+  padding: 5px;
+  width: 25%;
+}
+
+@media (max-width: 920px) {
+  .Roogsino-block-item {
+    padding: 5px;
+    width: 33.33333%;
+  }
+}
+@media (max-width: 480px) {
+  .Roogsino-block-item {
+    padding: 5px;
+    width: 50%;
+  }
+}
+.Roogsino-card {
+  width: 100%;
+  /* background-image: ; */
+}
+.Roogsino-card-header {
+  /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.Roogsino-card-footer {
+  /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.Roogsino-card-body {
+  background-color: #3a3a3c;
+  margin: 0;
+  padding: 0;
+}
+.Roogsino-card-body-contain {
+  width: inherit;
+  padding: 20px;
+}
+.Roogsino-table-row {
+  margin: 0 5px;
+  transition:
+    max-height 0.3s,
+    padding 0.3s;
+}
+.Roogsino-th-row {
+  background-color: #3a3a3c;
+
+  transition:
+    max-height 0.3s,
+    padding 0.3s;
+}
+.Roogsino-tbody-row {
+  background-color: #545454;
+  border-bottom: 5px solid #3a3a3c;
+}
+.connect-btn {
+  background-image: url("/../../public/RebelGames/images/component/btnImg.png"); /* Path to your image */
+  background-size: cover; /* Adjust size to cover the button */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent repeating the background image */
+  border: none; /* Remove border if needed */
+  width: 150px; /* Set width */
+  height: 50px; /* Set height */
+  color: #fff; /* Text color (optional) */
+  text-align: center; /* Center text horizontally */
+  line-height: 50px; /* Center text vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for the button text */
+  font-family: Arial, sans-serif; /* Font family for the button text */
+  border-radius: 5px; /* Rounded corners (optional) */
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ConnectXrplWalletModal from "./ConnectXrplWalletModal";
+import { useAppContext } from "@/hooks/AppContext";
 
 export default function ConnectXrplButton() {
   const [showXrplConnectModal, setShowXrplConnectModal] = useState(false);
@@ -9,9 +10,14 @@ export default function ConnectXrplButton() {
   const closeConnectModal = () => {
     setShowXrplConnectModal(false);
   };
-
+  const { siteInfo } = useAppContext();
   return (
     <>
+      {siteInfo.mark === "Roogsino" && (
+        <div>
+          <button className="connect-btn">connect wallet</button>
+        </div>
+      )}
       <button
         onClick={() => openConnectWallet()}
         className="menu-button-connect"

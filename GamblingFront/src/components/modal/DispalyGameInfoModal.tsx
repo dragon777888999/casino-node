@@ -5,10 +5,6 @@ import Image from "next/image";
 import { useAppContext } from "../../hooks/AppContext";
 import { InfoList } from "@/types/gameListInfo";
 // Define the WalletModal component
-interface LangName {
-  en: string;
-  ko: string;
-}
 
 interface VendorName {
   en: string;
@@ -136,7 +132,12 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   <div className="BetResult-detail-item">
                     <span>Multipier</span>
                     <div className="footer-modal-small-card">
-                      {gameData?.payoutAmount}
+                      {gameData?.payoutAmount !== 0
+                        ? (
+                            (gameData?.betAmount ?? 0) /
+                            (gameData?.payoutAmount ?? 0)
+                          ).toFixed(2)
+                        : "0.00"}
                     </div>
                   </div>
                   <div className="BetResult-detail-item">

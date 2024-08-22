@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import TableAll from "../table/TableAll";
 
@@ -16,13 +17,17 @@ const Footer = (props: {
     console.log(siteInfo.communityMap);
     communityEntries = Object.entries(siteInfo.communityMap);
   }
+  const cardHeaderImg = `/RebelGames/images/gamePanel/card-header.png`;
+  const cardfooterImg = `/RebelGames/images/gamePanel/card-footer.png`;
 
+  let width = 40;
+  let height = 40;
   return (
     <div className="flex justify-center bg-black">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div className="footer-container">
           <div className="flex w-full flex-col">
-            <Tabs
+            {/* <Tabs
               aria-label="Options"
               color={"primary"}
               variant={"light"}
@@ -49,10 +54,36 @@ const Footer = (props: {
               >
                 <TableAll isAll={false}></TableAll>
                 {/* <TableOne></TableOne> */}
-              </Tab>
-            </Tabs>
+            {/* </Tab>
+            </Tabs> */}
           </div>
-
+          <div className={`${siteInfo.mark}-card`}>
+            <div className="Roogsino-card-header">
+              <Image
+                src={cardHeaderImg}
+                alt="Project Thumbnail"
+                layout="responsive"
+                width={width}
+                height={height}
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div className={`${siteInfo.mark}-card-body`}>
+              <div className={`${siteInfo.mark}-card-body-contain`}>
+                <TableAll isAll={true}></TableAll>
+              </div>
+            </div>
+            <div className={`${siteInfo.mark}-card-footer`}>
+              <Image
+                src={cardfooterImg}
+                alt="Project Thumbnail"
+                layout="responsive"
+                width={width}
+                height={height}
+                style={{ width: "100%" }}
+              />
+            </div>
+          </div>
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
               <p className="" style={{ fontSize: "20px" }}>
