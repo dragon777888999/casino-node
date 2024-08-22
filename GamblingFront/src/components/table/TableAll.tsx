@@ -79,12 +79,16 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   // const gameNameEn = gameName.en ?? "No Name Available";
   return (
     <>
+      {/* <div
+        className="ktable-row rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark"
+        style={{ fontSize: "14px", color: "#7b808e" }}
+      > */}
       <div
-        className="ktable-row rounded-sm  bg-white dark:border-strokedark dark:bg-boxdark "
+        className="Roogsino-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark"
         style={{ fontSize: "14px", color: "#7b808e" }}
       >
         {/* Table Header */}
-        <div className="flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
+        <div className="Roogsino-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
           <div className="col-span-2 flex items-center">
             <p className="font-medium">Game </p>
           </div>
@@ -114,7 +118,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         )}
         {tableData.map((info, index) => (
           <div
-            className="flex grid grid-cols-6  px-4 py-3  sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
+            className="Roogsino-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
             style={{ fontSize: "14px" }}
             key={index}
           >

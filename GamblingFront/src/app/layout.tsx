@@ -6,6 +6,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
 import "@/css/custom.css";
+import "@/css/rebel.css";
 import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
