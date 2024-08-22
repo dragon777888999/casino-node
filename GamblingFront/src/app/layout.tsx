@@ -24,8 +24,6 @@ import { solanaNetworkUrl } from "../anchor/global";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { backendUrl } from "../anchor/global";
 
-import RebelLayout from "@/divide/Rebel";
-
 export default function RootLayout({
   children,
 }: Readonly<{

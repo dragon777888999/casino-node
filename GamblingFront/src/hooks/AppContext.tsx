@@ -144,5 +144,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       ws.close();
     };
   }, []);
+<<<<<<< Updated upstream
+=======
+  let cssPath = "/default/styles/main.css";
+  if (siteInfo.themeMap.style)
+    cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
+>>>>>>> Stashed changes
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

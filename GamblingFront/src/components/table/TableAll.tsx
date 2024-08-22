@@ -93,19 +93,19 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
           className={`${style}-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5`}
         >
           <div className="col-span-2 flex items-center">
-            <p className="font-medium">Game </p>
+            <p>Game </p>
           </div>
           <div className="col-span-1 flex hidden items-center justify-center md:flex">
-            <p className="font-medium">User</p>
+            <p>User</p>
           </div>
           <div className="col-span-2 flex hidden items-center justify-center md:flex">
-            <p className="font-medium">Bet Amount</p>
+            <p>Bet Amount</p>
           </div>
           <div className="col-span-1 flex hidden items-center justify-center md:flex">
-            <p className="font-medium">Multiplier</p>
+            <p>Multiplier</p>
           </div>
           <div className="col-span-3 flex items-center justify-end md:col-span-2 ">
-            <p className="font-medium">Payout</p>
+            <p>Payout</p>
           </div>
         </div>
         {/* Table Rows */}
@@ -122,7 +122,6 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         {tableData.map((info, index) => (
           <div
             className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
-            style={{ fontSize: "14px" }}
             key={index}
           >
             <div className="col-span-2 flex items-center">
@@ -133,13 +132,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                     <Image src={""} width={60} height={50} alt={"info"} />
                   </div>
                 )} */}
-                <p className="text-sm text-black dark:text-white">
+                <p className="text-black dark:text-white">
                   <a
                     type="button"
                     onClick={() => handleRowClick(info)}
                     style={{ cursor: "pointer" }}
                   >
-                    {info.gameName.en}
+                    {JSON.parse(info.gameName).en}
                     {/* Render the English name */}
                   </a>
                   {/* Render the English name or switch based on locale */}
@@ -147,7 +146,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
               </div>
             </div>
             <div className="col-span-1 hidden items-center justify-center md:flex">
-              <p className="truncate text-sm text-black dark:text-white">
+              <p className="truncate  text-black dark:text-white">
                 {info.userCode}
               </p>
             </div>
@@ -160,12 +159,10 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                   alt={info.currencyCode}
                 /> */}
               </div>
-              <p className="text-sm text-black dark:text-white">
-                {info.betAmount}
-              </p>
+              <p className="text-black dark:text-white">{info.betAmount}</p>
             </div>
             <div className="col-span-1 flex hidden items-center justify-center md:flex">
-              <p className="text-sm text-black dark:text-white">
+              <p className=" text-black dark:text-white">
                 {info.payoutAmount !== 0
                   ? (info.betAmount / info.payoutAmount).toFixed(2)
                   : "0.00"}{" "}
@@ -184,7 +181,6 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                 </div>
                 <div>
                   <p
-                    className="text-sm"
                     style={{
                       color: "#7DD934",
                     }}

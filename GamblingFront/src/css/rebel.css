@@ -24,10 +24,13 @@
 }
 .RebelGames-card-header {
   /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
-  display: inline-block;
+  display: block;
   position: relative;
   margin: 0;
   padding: 0;
+}
+.RebelGames-card-header #card-img {
+  height: 100px;
 }
 .RebelGames-card-footer {
   /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
@@ -50,6 +53,10 @@
     max-height 0.3s,
     padding 0.3s;
 }
+.RebelGames-table-row > p {
+  font-size: 30px;
+}
+
 .RebelGames-th-row {
   background-color: #3a3a3c;
 
@@ -57,9 +64,15 @@
     max-height 0.3s,
     padding 0.3s;
 }
+.RebelGames-th-row p {
+  font-size: 30px;
+}
 .RebelGames-tbody-row {
   background-color: #545454;
   border-bottom: 5px solid #3a3a3c;
+}
+.RebelGames-tbody-row {
+  font-size: 30px;
 }
 .connect-btn {
   background-image: url("/../../public/RebelGames/images/component/btnImg.png"); /* Path to your image */
@@ -111,5 +124,11 @@
 @media (max-width: 480px) {
   .logo-img {
     width: 20px;
+  }
+  .RebelGames-th-row p {
+    font-size: 30px;
+  }
+  .RebelGames-tbody-row {
+    font-size: 20px;
   }
 }
