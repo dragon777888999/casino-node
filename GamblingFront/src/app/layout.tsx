@@ -1,11 +1,11 @@
 "use client";
 import "jsvectormap/dist/jsvectormap.css";
 // import "flatpickr/dist/flatpickr.min.css";
-
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
 import "@/css/custom.css";
+
 import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
@@ -23,16 +23,17 @@ import { solanaNetworkUrl } from "../anchor/global";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { useAppContext } from "../hooks/AppContext";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [loading, setLoading] = useState<boolean>(true);
   const [colorMode, setColorMode] = useColorMode();
+  const [loading, setLoading] = useState(true);
   // const pathname = usePathname();
-
+ 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
     // setColorMode("dark");
@@ -45,8 +46,10 @@ export default function RootLayout({
     [solanaNetworkUrl],
   );
 
+
   return (
     <html lang="en">
+    
       <AppProvider>
         <ConnectionProvider endpoint={solanaNetworkUrl}>
           <WalletProvider wallets={wallets} autoConnect>

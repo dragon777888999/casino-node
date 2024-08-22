@@ -144,5 +144,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       ws.close();
     };
   }, []);
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  let cssPath = "/default/styles/main.css";
+  if (siteInfo.themeMap.style)
+    cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
+  return <AppContext.Provider value={value}>  <link id="theme-link" rel="stylesheet" href={cssPath} />{children}</AppContext.Provider>;
 };

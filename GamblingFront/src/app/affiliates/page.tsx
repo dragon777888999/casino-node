@@ -58,8 +58,8 @@ const Affiliates = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          method: "createAffiliater",
-          affiliateCode: affiliateCode,
+          method: "CreateAffiliater",
+          affiliaterCode: affiliateCode,
         }),
       });
       console.log(response);
