@@ -139,8 +139,8 @@ export default function GamePanel({
           const imageUrl = JSON.parse(gameData.imageUrl);
           const vendorName = JSON.parse(gameData.vendorName);
           let imageSrc = imageUrl.en;
-          if (siteInfo?.themeCode) {
-            imageSrc = `/${siteInfo?.themeCode}/images/${gameData.vendorCode}/${gameData.gameCode}.png`;
+          if (siteInfo?.themeMap.vendorImage) {
+            imageSrc = `/${siteInfo?.themeMap.vendorImage}/images/vendorGame/${gameData.vendorCode}/${gameData.gameCode}.png`;
           }
           // console.log("--------vender------");
           // console.log(gameData.vendorCode);
