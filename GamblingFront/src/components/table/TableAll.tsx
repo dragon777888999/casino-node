@@ -53,8 +53,8 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         // gameName = JSON.parse(newData.gameName);
         const parsedData: InfoList = {
           ...newData,
-          vendorName: JSON.parse(newData.vendorName) as LangName,
-          gameName: JSON.parse(newData.gameName) as LangName,
+          vendorName: newData.vendorName,
+          gameName: newData.gameName,
         };
         console.log("new", parsedData);
 

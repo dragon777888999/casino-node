@@ -47,7 +47,7 @@ getUserTransaction_solana = async (req, res) => {
         const confirmedSignatureInfos = await connection.getSignaturesForAddress(ata, { limit: 20 }, 'confirmed');
         for (let i = 0; i < confirmedSignatureInfos.length; i++) {
             let txHash = confirmedSignatureInfos[i].signature;
-//            console.log(txHash);
+            //            console.log(txHash);
             if (!lastSignature)
                 lastSignature = txHash;
             if (txHash == beforeSignature) {
@@ -70,7 +70,41 @@ getUserTransaction_solana = async (req, res) => {
                         if (ixs[i].parsed?.type == "transferChecked" && ata.toBase58() == ixs[i].parsed.info.destination) {
                             results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.tokenAmount.uiAmount });
                         } else if (ixs[i].parsed?.type == "transfer" && ata.toBase58() == ixs[i].parsed.info.destination) {
-                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.amount / (10 ** config.digits[`${data.chain}_${data.coinType}`])});
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.amount / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
+                        }
+                    }
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    } else {
+        const confirmedSignatureInfos = await connection.getSignaturesForAddress(accountPublicKey, { limit: 20 }, 'confirmed');
+        for (let i = 0; i < confirmedSignatureInfos.length; i++) {
+            let txHash = confirmedSignatureInfos[i].signature;
+            //            console.log(txHash);
+            if (!lastSignature)
+                lastSignature = txHash;
+            if (txHash == beforeSignature) {
+                break;
+            }
+
+            const txData = await connection.getParsedTransaction(
+                txHash,
+                {
+                    commitment: "confirmed",
+                    maxSupportedTransactionVersion: 0
+                }
+            );
+            try {
+                const ixs = txData.transaction.message.instructions;
+                for (let i = 0; i < ixs.length; i++) {
+
+                    if (ixs[i]['parsed'] && !txData.meta.err) {
+                        if (ixs[i].programId.toBase58() != "11111111111111111111111111111111")
+                            continue;
+                        if (ixs[i].parsed && ixs[i].parsed.type == "transfer" && ixs[i].parsed.info && ixs[i].parsed.info.destination == data.walletAddress) {
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.lamports/ (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
                         }
                     }
                 }
