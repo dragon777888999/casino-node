@@ -71,9 +71,7 @@ export default function RootLayout({
     [solanaNetworkUrl],
   );
 
-  let cssPath = "/default/styles/main.css";
-  // if (siteInfo.themeMap.style)
-  //   cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
+
 
   return (
     <html lang="en">
@@ -87,7 +85,7 @@ export default function RootLayout({
               <body
                 suppressHydrationWarning={true}
                 style={{ background: "rgb(26 34 44)" }}
-              >        <link id="theme-link" rel="stylesheet" href={cssPath} />
+              >        
                 <div
                   className="bg-black dark dark:bg-boxdark-2 dark:text-bodydark"
                   id="root"
