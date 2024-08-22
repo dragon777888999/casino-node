@@ -18,7 +18,7 @@ interface TableAllProps {
 
 // other language properties..
 const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
-  const { socketData, userInfo } = useAppContext();
+  const { socketData, userInfo, siteInfo } = useAppContext();
   const [tableData, setTableData] = useState<InfoList[]>([]);
   const [visible, setVisible] = useState(false);
   // const [selectedRow, setSelectedRow] = useState(null);
@@ -76,6 +76,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     setSelectedRow(info);
     openModal();
   };
+  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
   // const gameNameEn = gameName.en ?? "No Name Available";
   return (
     <>
@@ -84,11 +85,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         style={{ fontSize: "14px", color: "#7b808e" }}
       > */}
       <div
-        className="Roogsino-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark"
+        className={`${style}-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark`}
         style={{ fontSize: "14px", color: "#7b808e" }}
       >
         {/* Table Header */}
-        <div className="Roogsino-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
+        <div
+          className={`${style}-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5`}
+        >
           <div className="col-span-2 flex items-center">
             <p className="font-medium">Game </p>
           </div>
@@ -118,7 +121,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         )}
         {tableData.map((info, index) => (
           <div
-            className="Roogsino-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5"
+            className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
             style={{ fontSize: "14px" }}
             key={index}
           >

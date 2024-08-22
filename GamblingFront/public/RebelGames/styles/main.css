@@ -24,8 +24,7 @@
 }
 .RebelGames-card-header {
   /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
-  display: inline-block;
-  position: relative;
+  display: block;
   margin: 0;
   padding: 0;
 }
@@ -76,40 +75,4 @@
   font-size: 16px; /* Font size for the button text */
   font-family: Arial, sans-serif; /* Font family for the button text */
   border-radius: 5px; /* Rounded corners (optional) */
-}
-.RebelGames-game-block-item-content {
-  border-radius: 4px;
-  cursor: pointer;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.RebelGames-game-block-item-inner {
-  border-radius: 4px;
-  flex: 0 1 auto;
-  overflow: hidden;
-  position: relative;
-}
-.RebelGames-Quick_Link {
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  box-sizing: border-box;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-.RebelGames-connect-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;
-}
-@media (max-width: 480px) {
-  .logo-img {
-    width: 20px;
-  }
 }
