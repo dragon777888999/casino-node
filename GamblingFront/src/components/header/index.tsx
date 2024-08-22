@@ -125,7 +125,10 @@ const Header = (props: {
                 />
               </Link>
             </div>
-            <p style={{ fontSize: "28px", fontWeight: "700" }}>
+            <p
+              style={{ fontSize: "28px", fontWeight: "700" }}
+              className="flex hidden md:block"
+            >
               {siteInfo.mark}
             </p>
             {/* !props.sidebarOpen && */}

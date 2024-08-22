@@ -21,6 +21,9 @@ import {
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { solanaNetworkUrl } from "../anchor/global";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { backendUrl } from "../anchor/global";
+
+import RebelLayout from "@/divide/Rebel";
 
 export default function RootLayout({
   children,
@@ -30,9 +33,33 @@ export default function RootLayout({
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [colorMode, setColorMode] = useColorMode();
+  const [divider, setDivider] = useState("");
+
   // const pathname = usePathname();
 
   useEffect(() => {
+    const domain = window.location.host;
+    const fetchData = async () => {
+      if (!loading) return;
+      // if (loginStep != 0) return;
+      try {
+        const response = await fetch(
+          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+        );
+
+        const result = await response.json();
+        console.log("----------divide----site info------------");
+        console.log("result", result);
+
+        setDivider(result.mark);
+        console.log(result);
+        // updateSiteInfo();
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+
+    fetchData();
     setTimeout(() => setLoading(false), 1000);
     // setColorMode("dark");
     (setColorMode as (value: string) => void)("dark");
@@ -59,6 +86,7 @@ export default function RootLayout({
                   id="root"
                 >
                   {loading ? <Loader /> : children}
+                  {/* {loading ? <Loader /> : <RebelLayout />} */}
                 </div>
               </body>
             </WalletModalProvider>

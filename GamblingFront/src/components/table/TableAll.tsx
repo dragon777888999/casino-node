@@ -6,6 +6,11 @@ import { useAppContext } from "@/hooks/AppContext";
 
 import { InfoList } from "@/types/gameListInfo";
 
+interface LangName {
+  en: string;
+  ko: string;
+}
+
 const displayLength = 10;
 interface TableAllProps {
   isAll: boolean;
@@ -48,8 +53,8 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         // gameName = JSON.parse(newData.gameName);
         const parsedData: InfoList = {
           ...newData,
-          vendorName: newData.vendorName,
-          gameName: newData.gameName,
+          vendorName: JSON.parse(newData.vendorName) as LangName,
+          gameName: JSON.parse(newData.gameName) as LangName,
         };
         console.log("new", parsedData);
 
@@ -116,23 +121,18 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             <div className="col-span-2 flex items-center">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 {/* Render vendor image if you have a URL */}
-                {info.gameName.en && (
+                {/* {info.gameName.en && (
                   <div className="h-5 w-5 rounded-md">
-                    <Image
-                      src={info.gameName.en}
-                      width={60}
-                      height={50}
-                      alt={"info"}
-                    />
+                    <Image src={""} width={60} height={50} alt={"info"} />
                   </div>
-                )}
+                )} */}
                 <p className="text-sm text-black dark:text-white">
                   <a
                     type="button"
                     onClick={() => handleRowClick(info)}
                     style={{ cursor: "pointer" }}
                   >
-                    {JSON.parse(info.gameName).en}
+                    {info.gameName.en}
                     {/* Render the English name */}
                   </a>
                   {/* Render the English name or switch based on locale */}

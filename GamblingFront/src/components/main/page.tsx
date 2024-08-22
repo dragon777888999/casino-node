@@ -29,7 +29,7 @@ const Main: React.FC = () => {
   }
 
   return (
-    <div className=" max-w-screen mx-auto">
+    <div className=" max-w-screen mx-auto" id="root">
       <div className="banner">
         {/* <div className="banner"></div> */}
         {siteInfo.mark && (
