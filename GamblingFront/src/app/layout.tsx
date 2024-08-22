@@ -10,6 +10,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import Loader from "@/components/common/Loader";
 import useColorMode from "@/hooks/useColorMode";
 import { AppProvider } from "@/hooks/AppContext";
+import Head from "next/head";
 
 // --------------solana----------
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
@@ -70,10 +71,15 @@ export default function RootLayout({
     [solanaNetworkUrl],
   );
 
+  let cssPath = "/default/styles/main.css";
+  // if (siteInfo.themeMap.style)
+  //   cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
 
   return (
     <html lang="en">
-
+      <Head>
+        <link id="theme-link" rel="stylesheet" href={cssPath} />
+      </Head>
       <AppProvider>
         <ConnectionProvider endpoint={solanaNetworkUrl}>
           <WalletProvider wallets={wallets} autoConnect>

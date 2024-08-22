@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useAppContext } from "../../hooks/AppContext";
-import { InfoList } from "@/types/gameListInfo";
+import { WagerInfo } from "@/types/gameListInfo";
 // Define the WalletModal component
 
 interface VendorName {
@@ -12,7 +12,7 @@ interface VendorName {
 
 interface DispalyGameInfoModalProps {
   showModal: boolean;
-  gameData: InfoList | null;
+  gameData: WagerInfo;
   onRequestClose: () => void;
 }
 const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
@@ -93,7 +93,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                     color: "white",
                   }}
                 >
-                  <h2>{gameData?.gameName.en}</h2>
+                  <h2>{JSON.parse(gameData?.gameName).en}</h2>
                 </h2>
               </div>
               <div className="BetResult-game-detail">
