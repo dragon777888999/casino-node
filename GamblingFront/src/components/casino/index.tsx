@@ -20,6 +20,7 @@ const Casino = () => {
   const gameCode = searchParams?.get("gameCode");
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
+  const style = siteInfo.themeMap.style;
   console.log("here is casino");
   console.log(siteInfo);
   console.log(vendorCode);
@@ -63,7 +64,7 @@ const Casino = () => {
       }
     };
     getLaunchUrl(); // Fetch for original games
-  }, [accessToken, userInfo, gameCode, vendorCode, router]);
+  }, []);
   function toggleFullScreen(isFull: boolean): void {
     // Check if the document is currently in fullscreen mode
 
@@ -104,9 +105,9 @@ const Casino = () => {
                 <div className="flex items-center">
                   {" "}
                   <Image
-                    width={176}
+                    width={32}
                     height={32}
-                    src={"/images/logo/logo.svg"}
+                    src={`/${style}/images/logo.png`}
                     alt="Logo"
                     priority
                   />

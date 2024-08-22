@@ -148,5 +148,5 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   let cssPath = "/default/styles/main.css";
   if (siteInfo.themeMap.style)
     cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
-  return <AppContext.Provider value={value}> <Head><link id="theme-link" rel="stylesheet" href={cssPath} /></Head>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

@@ -55,6 +55,7 @@ const Main: React.FC = () => {
         <div className="RebelGames-card-header">
           <div className="">
             <Image
+              id="card-img"
               src={cardHeaderImg}
               alt="Project Thumbnail"
               layout="responsive"

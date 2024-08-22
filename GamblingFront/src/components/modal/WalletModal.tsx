@@ -108,7 +108,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     };
 
     fetchData();
-  }, [accessToken, userInfo, siteInfo]);
+  }, []);
 
   // const useDepositPhantom = async () => {
   //   if (!wallet.publicKey) return;
