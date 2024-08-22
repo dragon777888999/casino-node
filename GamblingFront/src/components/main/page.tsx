@@ -34,12 +34,13 @@ const Main: React.FC = () => {
   // const cardHeaderImg = `/${siteInfo.mark}/images/gamePanel/card-header.png`;
   const cardHeaderImg = `/RebelGames/images/gamePanel/card-header.png`;
   const cardfooterImg = `/RebelGames/images/gamePanel/card-footer.png`;
-  const mark = siteInfo.mark ? siteInfo.mark : "";
+  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
+
   return (
     <div className=" max-w-screen mx-auto" id="root">
       <div className="banner">
         {/* <div className="banner"></div> */}
-        {siteInfo.mark && (
+        {style && (
           <Image
             src={bannerImgSrc}
             alt="Project Thumbnail"
@@ -50,23 +51,25 @@ const Main: React.FC = () => {
           />
         )}
       </div>
-      <div className={`${siteInfo.mark}-card`}>
-        <div className="Roogsino-card-header">
-          <Image
-            src={cardHeaderImg}
-            alt="Project Thumbnail"
-            layout="responsive"
-            width={width}
-            height={height}
-            style={{ width: "100%" }}
-          />
+      <div className={`${style}-card`}>
+        <div className="RebelGames-card-header">
+          <div className="">
+            <Image
+              src={cardHeaderImg}
+              alt="Project Thumbnail"
+              layout="responsive"
+              width={width}
+              height={height}
+              style={{ width: "100%" }}
+            />
+          </div>
         </div>
-        <div className={`${siteInfo.mark}-card-body`}>
-          <div className={`${siteInfo.mark}-card-body-contain`}>
+        <div className={`${style}-card-body`}>
+          <div className={`${style}-card-body-contain`}>
             <GamePanel title={"Original"} gameType={9} />
           </div>
         </div>
-        <div className={`${siteInfo.mark}-card-footer`}>
+        <div className={`${style}-card-footer`}>
           <Image
             src={cardfooterImg}
             alt="Project Thumbnail"
@@ -121,14 +124,14 @@ const Main: React.FC = () => {
           </div>
         </div>
       )}
-      <hr
+      {/* <hr
         className="max-w-screen-2xl"
         style={{
           marginTop: "48px",
           transform: "scaleX(1.05)",
           color: "#2b4265",
         }}
-      ></hr>
+      ></hr> */}
     </div>
   );
 };

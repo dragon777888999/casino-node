@@ -27,8 +27,8 @@ export default function GamePanel({
   const { loading, siteInfo } = useAppContext();
   const [vendorGames, setVendorGames] = useState<GameData[]>([]);
   let imgUrl = `/default/images/gamePanel/${gameType}.png`;
-  if (siteInfo?.themeCode)
-    imgUrl = `/${siteInfo.themeCode}/images/gamePanel/${gameType}.png`;
+  if (siteInfo?.themeMap.style)
+    imgUrl = `/${siteInfo.themeMap.style}/images/gamePanel/${gameType}.png`;
   useEffect(() => {
     const fetchGameData = async () => {
       try {
@@ -62,6 +62,7 @@ export default function GamePanel({
     };
     fetchGameData(); // Fetch for original games
   }, [siteInfo, loading, gameType]);
+  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
   if (loading) return <></>;
 
   return (
@@ -146,13 +147,13 @@ export default function GamePanel({
           return (
             <div
               // className={`games-block-item,${siteInfo.mark}-block-item`}
-              className={`${siteInfo.mark}-block-item`}
+              className={`${style}-block-item`}
               key={gameData.gameCode}
             >
-              <div className="game-block-item-inner">
-                <div className="game-block-item-content">
+              <div className={`${style}-game-block-item-inner`}>
+                <div className={`${style}-game-block-item-content`}>
                   <Link
-                    className="Quick_Link"
+                    className={`${style}-Quick_Link`}
                     href={`/casino?vendorcode=${encodeURIComponent(gameData.vendorCode)}&gameCode=${gameData.gameCode}`}
                   >
                     <div>
@@ -181,12 +182,12 @@ export default function GamePanel({
                       />
                     </div>
                   </Link>
-                  <div className="game-item-title">
+                  {/* <div className="game-item-title">
                     <div className="game-item-title-vender">
                       {vendorName.en}
                     </div>
                     <p className="game-item-title-p">{gameName.en}</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
