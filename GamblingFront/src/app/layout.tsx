@@ -30,12 +30,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  console.log("layout------------------");
   const [colorMode, setColorMode] = useColorMode();
   const [divider, setDivider] = useState("");
   const [loading, setLoading] = useState(true);
 
   // const pathname = usePathname();
- 
+
   useEffect(() => {
     const domain = window.location.host;
     const fetchData = async () => {
@@ -73,7 +75,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-    
+
       <AppProvider>
         <ConnectionProvider endpoint={solanaNetworkUrl}>
           <WalletProvider wallets={wallets} autoConnect>

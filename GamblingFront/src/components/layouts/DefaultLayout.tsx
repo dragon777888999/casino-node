@@ -9,6 +9,7 @@ export default function DefaultLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("DefaultLayout------------------");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     // <AppProvider>

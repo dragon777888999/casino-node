@@ -6,6 +6,7 @@ import React, {
   useState,
   ReactNode,
 } from "react";
+import Head from 'next/head';
 
 interface SiteInfo {
   isLoginMode: boolean;
@@ -147,5 +148,5 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   let cssPath = "/default/styles/main.css";
   if (siteInfo.themeMap.style)
     cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
-  return <AppContext.Provider value={value}>  <link id="theme-link" rel="stylesheet" href={cssPath} />{children}</AppContext.Provider>;
+  return <AppContext.Provider value={value}> <Head><link id="theme-link" rel="stylesheet" href={cssPath} /></Head>{children}</AppContext.Provider>;
 };

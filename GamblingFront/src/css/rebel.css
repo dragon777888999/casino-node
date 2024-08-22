@@ -24,7 +24,7 @@
 }
 .RebelGames-card-header {
   /* background-image: url("../../public/RebelGames/images/gamePanel/card-header.png"); */
-  display: inline-block;
+  display: block;
   position: relative;
   margin: 0;
   padding: 0;
