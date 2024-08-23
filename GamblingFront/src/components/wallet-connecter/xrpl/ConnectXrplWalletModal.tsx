@@ -228,15 +228,17 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                     </button>
                     {qrcode && (
                       <div style={{ display: "block" }}>
-                        <div className="qrcode">
-                          <Image
-                            src={qrcode} // URL of the image
-                            alt="QR code" // Accessibility text
-                            width={600} // Width of the image
-                            height={400} // Height of the image
-                            style={{ width: "60%" }} // Inline styles, if needed
-                            layout="responsive" // Optional: adjust layout as needed
-                          />
+                        <div className="m-2 flex justify-center">
+                          <div className="qrcode">
+                            <Image
+                              src={qrcode} // URL of the image
+                              alt="QR code" // Accessibility text
+                              width={300} // Width of the image
+                              height={200} // Height of the image
+                              style={{ width: "30%" }} // Inline styles, if needed
+                              layout="responsive" // Optional: adjust layout as needed
+                            />
+                          </div>
                         </div>
 
                         <button
