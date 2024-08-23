@@ -17,13 +17,16 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 }) => {
   const { setWalletAddress, setLoginStep, setWalletType } = useAppContext();
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [qrcode, setQrcode] = useState("");
-  const [setJumpLink] = useState("");
-
   const [enableJwt, setEnableJwt] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
 
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+
     if (cookies.jwt !== undefined && cookies.jwt !== null) {
       const url = "/api/auth";
       fetch(url, {
@@ -43,14 +46,18 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
           }
         });
     }
-  }, [setWalletAddress, cookies.jwt]);
+  }, []);
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
       const data = await payload.json();
 
       setQrcode(data.payload.refs.qr_png);
-      // setJumpLink(data.payload.next.always);
+      //setJumpLink(data.payload.next.always);
+      if (isMobile) {
+        //open in new tab
+        window.open(data.payload.next.always, "_blank");
+      }
 
       const ws = new WebSocket(data.payload.refs.websocket_status);
       // alert(data.payload.refs.websocket_status);
