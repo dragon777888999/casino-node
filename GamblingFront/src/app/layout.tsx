@@ -34,13 +34,41 @@ export default function RootLayout({
   const [colorMode, setColorMode] = useColorMode();
   const [divider, setDivider] = useState("");
 
+<<<<<<< Updated upstream
   // const pathname = usePathname();
 
+=======
+  return (
+    <html lang="en">
+      <AppProvider>
+        <SolanaWalletProvider>
+          <body suppressHydrationWarning={true}>
+            <div
+              className=" dark dark:bg-boxdark-2 dark:text-bodydark"
+              id="root"
+            >
+              <FetchSiteInfo>{children}</FetchSiteInfo>
+            </div>
+          </body>
+        </SolanaWalletProvider>
+      </AppProvider>
+    </html>
+  );
+}
+
+const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
+  const { siteInfo, setSiteInfo, loginStep, setLoginStep } = useAppContext();
+>>>>>>> Stashed changes
   useEffect(() => {
     const domain = window.location.host;
     const fetchData = async () => {
+<<<<<<< Updated upstream
       if (!loading) return;
       // if (loginStep != 0) return;
+=======
+      if (loginStep != 0) return;
+      const domain = window.location.host;
+>>>>>>> Stashed changes
       try {
         const response = await fetch(
           `${backendUrl}/Account/SiteInfo?domain=${domain}`,
@@ -59,10 +87,14 @@ export default function RootLayout({
     };
 
     fetchData();
+<<<<<<< Updated upstream
     setTimeout(() => setLoading(false), 1000);
     // setColorMode("dark");
     (setColorMode as (value: string) => void)("dark");
   }, [setColorMode]);
+=======
+  }, []);
+>>>>>>> Stashed changes
 
   const wallets = useMemo(
     () => [new PhantomWalletAdapter()],
@@ -71,6 +103,7 @@ export default function RootLayout({
   );
 
   return (
+<<<<<<< Updated upstream
     <html lang="en">
       <AppProvider>
         <ConnectionProvider endpoint={solanaNetworkUrl}>
@@ -95,3 +128,11 @@ export default function RootLayout({
     </html>
   );
 }
+=======
+    <>
+      <link id="theme-link" rel="stylesheet" href={cssPath} />
+      {children}
+    </>
+  );
+};
+>>>>>>> Stashed changes

@@ -11,6 +11,7 @@ export default function DefaultLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
+<<<<<<< Updated upstream
     // <AppProvider>
     <div className="flex bg-black">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
@@ -21,6 +22,18 @@ export default function DefaultLayout({
         }`}
       >
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+=======
+    <NextUIProvider>
+      <div className="flex ">
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+
+        <div
+          className={`relative flex flex-1 flex-col ${
+            sidebarOpen ? "ml-72.5$" : "ml-auto"
+          }`}
+        >
+          <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+>>>>>>> Stashed changes
 
         <main>
           <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
@@ -30,6 +43,22 @@ export default function DefaultLayout({
 
         <Footer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       </div>
+<<<<<<< Updated upstream
     </div>
+=======
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+    </NextUIProvider>
+>>>>>>> Stashed changes
   );
 }

@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Organetto";
+  src: url("/fonts/Organetto-BoldExp.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Organetto";
+  src: url("/fonts/Organetto-BoldSemiExp.ttf") format("truetype");
+  font-weight: 600; /* Example weight */
+}
+
+@font-face {
+  font-family: "Organetto";
+  src: url("/fonts/Organetto-RegularExp.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Organetto";
+  src: url("/fonts/Organetto-RegularSemiExt.ttf") format("truetype");
+  font-weight: 400; /* Example weight */
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  /* background: "rgb(26 34 44)"; */
+  font-family: "Organetto";
+}
+
 .rebel-header-btn {
   border: 1px solid white;
 }

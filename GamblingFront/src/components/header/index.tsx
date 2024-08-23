@@ -14,6 +14,7 @@ const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
+<<<<<<< Updated upstream
   const domain = window.location.host;
 
   const {
@@ -65,6 +66,10 @@ const Header = (props: {
 
     fetchData();
   }, [domain, loading, setLoading, setSiteInfo, setLoginStep]);
+=======
+  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =
+    useAppContext();
+>>>>>>> Stashed changes
   useEffect(() => {
     try {
       const cmd = JSON.parse(socketData);
@@ -147,29 +152,49 @@ const Header = (props: {
                 <span className="relative block h-5.5 w-5.5 cursor-pointer">
                   <span className="du-block absolute right-0 h-full w-full">
                     <span
+<<<<<<< Updated upstream
                       className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${
+=======
+                      className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm delay-[0] duration-200 ease-in-out dark:bg-white ${
+>>>>>>> Stashed changes
                         !props.sidebarOpen && "!w-full delay-300"
                       }`}
                     ></span>
                     <span
+<<<<<<< Updated upstream
                       className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${
+=======
+                      className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm  delay-150 duration-200 ease-in-out dark:bg-white ${
+>>>>>>> Stashed changes
                         !props.sidebarOpen && "delay-400 !w-full"
                       }`}
                     ></span>
                     <span
+<<<<<<< Updated upstream
                       className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${
+=======
+                      className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm delay-200 duration-200 ease-in-out dark:bg-white ${
+>>>>>>> Stashed changes
                         !props.sidebarOpen && "!w-full delay-500"
                       }`}
                     ></span>
                   </span>
                   <span className="absolute right-0 hidden h-full w-full">
                     <span
+<<<<<<< Updated upstream
                       className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${
+=======
+                      className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm  delay-300 duration-200 ease-in-out dark:bg-white ${
+>>>>>>> Stashed changes
                         !props.sidebarOpen && "!h-0 !delay-[0]"
                       }`}
                     ></span>
                     <span
+<<<<<<< Updated upstream
                       className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${
+=======
+                      className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm duration-200 ease-in-out dark:bg-white ${
+>>>>>>> Stashed changes
                         !props.sidebarOpen && "!h-0 !delay-200"
                       }`}
                     ></span>
