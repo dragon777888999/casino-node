@@ -23,7 +23,7 @@ const Footer = (props: {
   let width = 40;
   let height = 40;
   return (
-    <div className="flex justify-center bg-black">
+    <div className="flex justify-center ">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div className="footer-container">
           <div className="flex w-full flex-col">

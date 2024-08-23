@@ -6,6 +6,7 @@ import React, {
   useState,
   ReactNode,
 } from "react";
+import Head from 'next/head';
 
 export interface SiteInfo {
   isLoginMode: boolean;

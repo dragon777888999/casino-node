@@ -1,6 +1,6 @@
 export const Data = {
   Rogoosino: {
-    provider: false,
+    provider: true,
     slot: false,
   },
 };

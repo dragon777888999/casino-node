@@ -284,7 +284,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
             </div>
           </div>
         </div>
-        <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
+        <div className="fixed inset-0 z-40  opacity-25"></div>
       </Modal>
     </>
   );

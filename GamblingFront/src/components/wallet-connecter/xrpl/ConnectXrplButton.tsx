@@ -19,7 +19,7 @@ export default function ConnectXrplButton() {
           <button className="connect-btn">connect wallet</button>
         </div>
       )} */}
-      <div className="RebelGames-connect-btn">
+      {/* <div className="RebelGames-connect-btn">
         <button onClick={() => openConnectWallet()}>
           <Image
             src="/RebelGames/images/component/btnImg.png"
@@ -30,13 +30,13 @@ export default function ConnectXrplButton() {
             style={{ width: "100%" }}
           />
         </button>
-      </div>
-      {/* <button
+      </div> */}
+      <button
         onClick={() => openConnectWallet()}
         className="menu-button-connect"
       >
         <p> Connect</p>
-      </button> */}
+      </button>
       <ConnectXrplWalletModal
         showConnectModal={showXrplConnectModal}
         onRequestClose={closeConnectModal}

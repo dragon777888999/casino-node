@@ -20,12 +20,13 @@ export default function DefaultLayout({
   useFetchUserInfo();
   return (
     <NextUIProvider>
-      <div className="flex bg-black">
+      <div className="flex ">
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <div
-          className={`relative flex flex-1 flex-col bg-black ${sidebarOpen ? "ml-72.5$" : "ml-auto"
-            }`}
+          className={`relative flex flex-1 flex-col ${
+            sidebarOpen ? "ml-72.5$" : "ml-auto"
+          }`}
         >
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
@@ -39,17 +40,17 @@ export default function DefaultLayout({
         </div>
       </div>
       <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="colored"
-          />
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </NextUIProvider>
   );
 }

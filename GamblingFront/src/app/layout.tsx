@@ -24,11 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <AppProvider>
         <SolanaWalletProvider>
-          <body suppressHydrationWarning={true} style={{ background: "rgb(26 34 44)" }}>
-            <div className="bg-black dark dark:bg-boxdark-2 dark:text-bodydark" id="root">
-              <FetchSiteInfo>
-                {children}
-              </FetchSiteInfo>
+          <body suppressHydrationWarning={true}>
+            <div
+              className=" dark dark:bg-boxdark-2 dark:text-bodydark"
+              id="root"
+            >
+              <FetchSiteInfo>{children}</FetchSiteInfo>
             </div>
           </body>
         </SolanaWalletProvider>
@@ -37,16 +38,11 @@ export default function RootLayout({
   );
 }
 
-const FetchSiteInfo = ({
-  children
-}: {
-  children: React.ReactNode;
-}) => {
+const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
   const { siteInfo, setSiteInfo, loginStep, setLoginStep } = useAppContext();
   useEffect(() => {
     const fetchData = async () => {
-      if (loginStep != 0)
-        return;
+      if (loginStep != 0) return;
       const domain = window.location.host;
       try {
         const response = await fetch(
