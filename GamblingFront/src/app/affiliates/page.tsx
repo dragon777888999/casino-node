@@ -6,14 +6,12 @@ import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
-import { toast } from "react-toastify";
 
+import { ToastContainer, toast } from "react-toastify";
 const Affiliates = () => {
-  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
-    useAppContext();
+  const { accessToken } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
-
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -58,8 +56,8 @@ const Affiliates = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          method: "createAffiliater",
-          affiliateCode: affiliateCode,
+          method: "CreateAffiliater",
+          affiliaterCode: affiliateCode,
         }),
       });
       console.log(response);

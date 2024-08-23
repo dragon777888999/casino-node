@@ -4,7 +4,7 @@ import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
 
-import { InfoList } from "@/types/gameListInfo";
+import { WagerInfo } from "@/types/gameListInfo";
 
 interface LangName {
   en: string;
@@ -19,10 +19,10 @@ interface TableAllProps {
 // other language properties..
 const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const { socketData, userInfo, siteInfo } = useAppContext();
-  const [tableData, setTableData] = useState<InfoList[]>([]);
+  const [tableData, setTableData] = useState<WagerInfo[]>([]);
   const [visible, setVisible] = useState(false);
   // const [selectedRow, setSelectedRow] = useState(null);
-  const [selectedRow, setSelectedRow] = useState<InfoList | null>(null);
+  const [selectedRow, setSelectedRow] = useState<WagerInfo | null>(null);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -47,23 +47,17 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
       }
 
       try {
-        const newData: InfoList = JSON.parse(socketData); // Parse the incoming JSON data
-
-        console.log("table", newData);
-        // gameName = JSON.parse(newData.gameName);
-        const parsedData: InfoList = {
-          ...newData,
-          vendorName: JSON.parse(newData.vendorName) as LangName,
-          gameName: JSON.parse(newData.gameName) as LangName,
-        };
-        console.log("new", parsedData);
+        const cmd = JSON.parse(socketData);
+        if (cmd.type != "wager")
+          return;
+        const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
 
         if (!isAll) {
           // isAll true:: get all data; false :: get only userdata
-          if (parsedData.userCode == userInfo?.userCode)
-            buffer.unshift(parsedData);
+          if (newData.userCode == userInfo?.userCode)
+            buffer.unshift(newData);
         } else {
-          buffer.unshift(parsedData);
+          buffer.unshift(newData);
         }
 
         setTableData(buffer);
@@ -72,7 +66,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
       }
     }
   }, [socketData]);
-  const handleRowClick = (info: InfoList) => {
+  const handleRowClick = (info: WagerInfo) => {
     setSelectedRow(info);
     openModal();
   };

@@ -13,7 +13,8 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
+console.log("items",items);
+console.log("items",selectedKey);
   const handleToggle = () => {
     setIsOpen(!isOpen);
     //setIsOpen(false);

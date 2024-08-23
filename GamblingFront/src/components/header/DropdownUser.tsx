@@ -9,17 +9,9 @@ import { backendUrl } from "@/anchor/global";
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { userInfo, setUserInfo, loading, siteInfo, setWalletAddress } =
+  const { userInfo, setUserInfo, loginStep, setLoginStep, siteInfo, setWalletAddress } =
     useAppContext();
   const wallet = useWallet();
-  const updateUserCode = (newUserCode: string) => {
-    if (userInfo) {
-      setUserInfo({
-        ...userInfo,
-        userCode: newUserCode,
-      });
-    }
-  };
   const handleDisconnect = async () => {
     try {
       if (siteInfo?.chain == "Solana") {
@@ -36,7 +28,7 @@ const DropdownUser = () => {
         headers: headers,
       });
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      updateUserCode("");
+      setLoginStep(1);
       setWalletAddress("");
       window.location.reload();
       console.log("Wallet disconnected and information cleared");

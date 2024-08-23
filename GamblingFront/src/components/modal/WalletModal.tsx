@@ -24,6 +24,9 @@ import {
 } from "@solana/wallet-adapter-react";
 import useDepositPhantom from "@/hooks/useDepositPhantom";
 
+import depositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import depositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+
 Modal.setAppElement("#root");
 // Define the WalletModal component
 interface WalletModalProps {
@@ -47,14 +50,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
-    useAppContext();
+  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } = useAppContext();
   const wallet = useWallet();
   const { connection } = useConnection();
 
-  const [selectedKey, setSelectedKey] = useState<string>(
-    userInfo?.selectedCoinType ?? "",
-  );
   const { deposit, status, error } = useDepositPhantom(
     depositAddress,
     depositAmount,
@@ -68,7 +67,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
   };
 
   const handleSelect = async (key: string) => {
-    userInfo.selectedCoinType = key;
     const response = await fetch(
       `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
       {
@@ -78,12 +76,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
         },
       },
     );
-    setSelectedKey(key);
+    setUserInfo({
+      ...userInfo,
+      selectedCoinType: key
+    });
   };
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (accessToken == "") return;
+        if (loginStep == 3)
+          return;
+
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
           headers: {
@@ -108,7 +111,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     };
 
     fetchData();
-  }, []);
+  }, [loginStep]);
 
   // const useDepositPhantom = async () => {
   //   if (!wallet.publicKey) return;
@@ -200,20 +203,19 @@ const WalletModal: React.FC<WalletModalProps> = ({
     }
   };
   const onDeposit = () => {
+    if (depositAmount == null) {
+      toast.warn("You must set a deposit amount");
+      return;
+    }
     if (siteInfo?.chain == "Xrpl") {
-      onDepositXrpl();
+      const { deposit, status, error } = depositOnXrpl(depositAddress, depositAmount,);
     } else {
-      phantomDeposit();
-      // useDepositPhantom();
+      const { deposit, status, error } = depositOnSolana(depositAddress, depositAmount,);
     }
   };
 
   const onDepositXrpl = async () => {
     // const walletType = getDataFromLocalStorage("walleteType");
-    if (depositAmount == null) {
-      toast.warn("You must set a deposit amount");
-      return;
-    }
     // alert(depositAmount);
     setIsHidden(false);
 
@@ -225,9 +227,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
           Amount: (
             depositAmount *
             10 **
-              (siteInfo?.digitsMap[
-                userInfo?.selectedCoinType || "defaultCoinType"
-              ] || 0)
+            (siteInfo?.digitsMap[
+              userInfo?.selectedCoinType || "defaultCoinType"
+            ] || 0)
           ).toString(), // XRP in drops
         });
         console.log(response);
@@ -244,9 +246,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
           amount: (
             depositAmount *
             10 **
-              (siteInfo?.digitsMap[
-                userInfo?.selectedCoinType || "defaultCoinType"
-              ] || 0)
+            (siteInfo?.digitsMap[
+              userInfo?.selectedCoinType || "defaultCoinType"
+            ] || 0)
           ).toString(),
           destination: depositAddress,
         };
@@ -368,7 +370,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                 <div className="justify-start">
                   <SelectCoinTypeMenu
                     items={userInfo?.balances}
-                    selectedKey={selectedKey}
+                    selectedKey={userInfo?.selectedCoinType}
                     onSelect={handleSelect}
                   />
                 </div>
