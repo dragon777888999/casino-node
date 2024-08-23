@@ -9,11 +9,9 @@ import Link from "next/link";
 
 import { ToastContainer, toast } from "react-toastify";
 const Affiliates = () => {
-  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
-    useAppContext();
+  const { accessToken } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
-  toast.success("success");
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {

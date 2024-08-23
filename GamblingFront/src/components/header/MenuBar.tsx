@@ -18,15 +18,6 @@ const MenuBar = () => {
 
   const [showWalletModal, setShowWalletModal] = useState(false);
   const wallet = useWallet();
-  // ----------solana-------------
-  const updateUserCode = (newUserCode: string) => {
-    if (userInfo) {
-      setUserInfo({
-        ...userInfo,
-        userCode: newUserCode,
-      });
-    }
-  };
 
   const [selectedKey, setSelectedKey] = useState<string>(
     userInfo?.selectedCoinType ?? "",
@@ -52,28 +43,6 @@ const MenuBar = () => {
 
   const closeModal = () => {
     setShowWalletModal(false);
-  };
-
-  const handleDisconnect = async () => {
-    try {
-      if (siteInfo?.chain == "Solana") {
-        wallet.disconnect();
-        // alert("1");
-      }
-      // alert("2");
-      const response = await fetch(`${backendUrl}/Account/Logout`, {
-        method: "GET",
-        headers: {
-          "X-Access-Token": accessToken,
-        },
-      });
-      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-      window.location.reload();
-      updateUserCode("");
-      console.log("Wallet disconnected and information cleared");
-    } catch (error) {
-      console.error("Error disconnecting from Crossmark wallet:", error);
-    }
   };
 
   return (

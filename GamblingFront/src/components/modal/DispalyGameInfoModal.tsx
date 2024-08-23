@@ -20,10 +20,6 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
   gameData,
   onRequestClose,
 }) => {
-  const { userInfo, setUserInfo, loading, siteInfo, accessToken } =
-    useAppContext();
-
-  useEffect(() => {}, []);
   if (!showModal) return null;
   return (
     <Modal

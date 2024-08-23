@@ -32,14 +32,13 @@ interface UserInfo {
 
 // Define the shape of your context's data
 interface AppState {
-  userInfo: UserInfo;
-  setUserInfo: (userInfo: UserInfo) => void;
+  loginStep: number;
+  setLoginStep: (loginStep: number) => void;
   siteInfo: SiteInfo;
   setSiteInfo: (siteInfo: SiteInfo) => void;
-  loading: boolean;
-  setLoading: (loading: boolean) => void;
-  loginStep: Number;
-  setLoginStep: (loginStep: Number) => void;
+  userInfo: UserInfo;
+  setUserInfo: (userInfo: UserInfo) => void;
+
   accessToken: string;
   setAccessToken: (accessToken: string) => void;
   walletAddress: string;
@@ -85,8 +84,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code
   });
-  const [loading, setLoading] = useState<boolean>(true);
-  const [loginStep, setLoginStep] = useState<Number>(0);
+  const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
   const [walletAddress, setWalletAddress] = useState<string>("");
   const [socket, setSocket] = useState<WebSocket | null>(null);
@@ -96,8 +94,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setUserInfo,
     siteInfo,
     setSiteInfo,
-    loading,
-    setLoading,
     loginStep,
     setLoginStep,
     accessToken,

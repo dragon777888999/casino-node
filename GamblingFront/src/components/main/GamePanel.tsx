@@ -24,7 +24,7 @@ export default function GamePanel({
   title: string;
   gameType: number;
 }) {
-  const { loading, siteInfo } = useAppContext();
+  const { siteInfo } = useAppContext();
   const [vendorGames, setVendorGames] = useState<GameData[]>([]);
   let imgUrl = `/default/images/gamePanel/${gameType}.png`;
   if (siteInfo?.themeMap.style)
@@ -32,7 +32,6 @@ export default function GamePanel({
   useEffect(() => {
     const fetchGameData = async () => {
       try {
-        if (loading) return;
         const response = await fetch(`${backendUrl}/backend/unauthorizeapi`, {
           method: "POST",
           headers: {
@@ -61,9 +60,8 @@ export default function GamePanel({
       }
     };
     fetchGameData(); // Fetch for original games
-  }, [siteInfo, loading, gameType]);
+  },[]);
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-  if (loading) return <></>;
 
   return (
     <div className="SlotsList_list_container  mt-10 ">
