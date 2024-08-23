@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import Modal from "react-modal";
 import Image from "next/image";
-import { useAppContext } from "../../../hooks/AppContext";
+import { useAppContext, WalletType } from "../../../hooks/AppContext";
 
 interface ConnectXrpltWalletModalProps {
   showConnectModal: boolean;
@@ -15,7 +15,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
   showConnectModal,
   onRequestClose,
 }) => {
-  const { setWalletAddress, setLoginStep } = useAppContext();
+  const { setWalletAddress, setLoginStep, setWalletType } = useAppContext();
 
   const [qrcode, setQrcode] = useState("");
   const [setJumpLink] = useState("");
@@ -74,8 +74,8 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 
           setWalletAddress(address);
           setLoginStep(2);
+          setWalletType(WalletType.Xumm);
           onRequestClose();
-          localStorage.setItem("walleteType", "xum");
         } else {
           console.log(responseObj);
         }
@@ -124,8 +124,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                       setWalletAddress(address);
                       setLoginStep(2);
                       onRequestClose();
-
-                      localStorage.setItem("walleteType", "gem");
+                      setWalletType(WalletType.Gem);
                       if (enableJwt) {
                         setCookie("jwt", token, { path: "/" });
                       }
@@ -171,7 +170,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
         setCookie("jwt", checkSignJson.token, { path: "/" });
       }
       onRequestClose();
-      localStorage.setItem("walleteType", "cross");
+      setWalletType(WalletType.Crossmark);
     }
   };
   if (!showConnectModal) return null;

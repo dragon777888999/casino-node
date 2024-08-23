@@ -12,8 +12,7 @@ const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =
-    useAppContext();
+  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =    useAppContext();
   useEffect(() => {
     try {
       const cmd = JSON.parse(socketData);

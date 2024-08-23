@@ -6,7 +6,13 @@ import React, {
   useState,
   ReactNode,
 } from "react";
-import Head from 'next/head';
+
+export enum WalletType {
+  Phantom = 1,
+  Crossmark,
+  Gem,
+  Xumm
+}
 
 export interface SiteInfo {
   isLoginMode: boolean;
@@ -43,6 +49,9 @@ interface AppState {
   setAccessToken: (accessToken: string) => void;
   walletAddress: string;
   setWalletAddress: (walletAddress: string) => void;
+  walletType: number;
+  setWalletType: (walletType: number) => void;
+
   socket: WebSocket | null;
   setSocket: (socket: WebSocket | null) => void;
   socketData: string;
@@ -86,6 +95,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
+  const [walletType, setWalletType] = useState<number>(0);
   const [walletAddress, setWalletAddress] = useState<string>("");
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [socketData, setSocketData] = useState<string>("");
@@ -100,6 +110,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setAccessToken,
     walletAddress,
     setWalletAddress,
+    walletType,
+    setWalletType,
     socket,
     setSocket,
     socketData,

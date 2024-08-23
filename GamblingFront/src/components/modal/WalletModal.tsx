@@ -24,8 +24,8 @@ import {
 } from "@solana/wallet-adapter-react";
 import useDepositPhantom from "@/hooks/useDepositPhantom";
 
-import depositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
-import depositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
 
 Modal.setAppElement("#root");
 // Define the WalletModal component
@@ -54,19 +54,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const wallet = useWallet();
   const { connection } = useConnection();
 
-  const { deposit, status, error } = useDepositPhantom(
-    depositAddress,
-    depositAmount,
-  );
-  const phantomDeposit = async () => {
-    await deposit();
+  const { depositOnSolana } = useDepositOnSolana();
+  const { depositOnXrpl } = useDepositOnXrpl();
 
-    if (status || error) {
-      setDepositAmount(null);
-    }
-  };
-
-  const handleSelect = async (key: string) => {
+  const onSelectCoinType = async (key: string) => {
     const response = await fetch(
       `${backendUrl}/Account/SwitchCoinType?coinType=${key}`,
       {
@@ -113,108 +104,24 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [loginStep]);
 
+  const depositResultCallback = (status: number) => {
+    console.log(status);
+  }
   const onDeposit = () => {
     if (depositAmount == null) {
       toast.warn("You must set a deposit amount");
       return;
     }
     if (siteInfo?.chain == "Xrpl") {
-      const { status } = depositOnXrpl(siteInfo, userInfo,"cross",depositAddress, depositAmount);
+      depositOnXrpl(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
     } else {
-      const { deposit, status, error } = depositOnSolana(depositAddress, depositAmount,);
-    }
-  };
-
-  const onDepositXrpl = async () => {
-    // const walletType = getDataFromLocalStorage("walleteType");
-    // alert(depositAmount);
-    setIsHidden(false);
-
-    try {
-      if (getDataFromLocalStorage("walleteType") == "cross") {
-        const response = sdk.sync.signAndSubmit({
-          TransactionType: "Payment",
-          Destination: depositAddress,
-          Amount: (
-            depositAmount *
-            10 **
-            (siteInfo?.digitsMap[
-              userInfo?.selectedCoinType || "defaultCoinType"
-            ] || 0)
-          ).toString(), // XRP in drops
-        });
-        console.log(response);
-        //if (response.result === "tesSUCCESS")
-        {
-          console.log("Transaction successful!");
-          setDepositAmount(null);
-        }
-        // else {
-        //   console.error("Transaction failed with status:", response.result);
-        // }
-      } else if (getDataFromLocalStorage("walleteType") == "gem") {
-        const payment = {
-          amount: (
-            depositAmount *
-            10 **
-            (siteInfo?.digitsMap[
-              userInfo?.selectedCoinType || "defaultCoinType"
-            ] || 0)
-          ).toString(),
-          destination: depositAddress,
-        };
-
-        sendPayment(payment)
-          .then((trHash) => {
-            console.log("Transaction Hash: ", trHash);
-            setDepositAmount(null);
-          })
-          .catch((error) => {
-            console.error("Payment failed:", error);
-            setDepositAmount(null);
-            // Handle error or alert the user
-          });
-      } else if (getDataFromLocalStorage("walleteType") == "xum") {
-        const payload = await fetch(
-          `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
-        );
-        const data = await payload.json();
-
-        setQrcode(data.payload.refs.qr_png);
-        setJumpLink(data.payload.next.always);
-
-        const ws = new WebSocket(data.payload.refs.websocket_status);
-        // console.log("111111");
-        // console.log(ws);
-        // console.log("111111");
-
-        ws.onmessage = async (e) => {
-          let responseObj = JSON.parse(e.data);
-          console.log("message");
-          console.log(responseObj);
-          if (responseObj.signed !== null && responseObj.signed !== undefined) {
-            if (responseObj.signed) {
-              // ?alert("Your payment successed")!;
-            } else {
-              // alert("Your payment failed");
-            }
-            setDepositAmount(null);
-            setIsHidden(true);
-          }
-          console.log(responseObj);
-        };
-        // setDepositAmount(0);
-        console.log(payload);
-      }
-    } catch (e) {
-      toast.error("failed");
-      console.log(e);
+      depositOnSolana(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
     }
   };
 
   const onWithdraw = async () => {
     try {
-      if (accessToken == "") 
+      if (accessToken == "")
         return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
@@ -241,7 +148,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       console.log(error);
     }
   };
-  const handleCopy = () => {
+  const onCopy = () => {
     navigator.clipboard.writeText(depositAddress).then(
       () => {
         toast.success("Copied to clipboard!");
@@ -251,7 +158,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       },
     );
   };
-  if (!showWalletModal) 
+  if (!showWalletModal)
     return null;
 
   return (
@@ -275,7 +182,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   <SelectCoinTypeMenu
                     items={userInfo?.balances}
                     selectedKey={userInfo?.selectedCoinType}
-                    onSelect={handleSelect}
+                    onSelect={onSelectCoinType}
                   />
                 </div>
                 <div className="flex items-center">
@@ -381,7 +288,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     />
                     <div className="tooltipContainer ">
                       <button
-                        onClick={handleCopy}
+                        onClick={onCopy}
                         className="ml-2 h-9 items-center bg-black px-3 text-white"
                       >
                         <i className="fa-regular fa-copy" />
