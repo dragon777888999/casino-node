@@ -1,86 +1,83 @@
-import { useState, useCallback } from "react";
-import {
-  getAssociatedTokenAddressSync,
-  createAssociatedTokenAccountIdempotentInstruction,
-  createTransferInstruction,
-} from "@solana/spl-token";
-import { useAppContext } from "../../../hooks/AppContext";
-import { PublicKey, Transaction, ComputeBudgetProgram } from "@solana/web3.js";
-import {
-  useAnchorWallet,
-  useConnection,
-  useWallet,
-} from "@solana/wallet-adapter-react";
-
+import { useState } from "react";
 import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
+import { useAppContext, WalletType } from "../../../hooks/AppContext";
 
-
-const depositOnXrpl = async (siteInfo: SiteInfo, userInfo: UserInfo, walletType: string, depositAddress: string, depositAmount: number) => {
-  try {
-    if (walletType == "cross") {
-      const response = sdk.sync.signAndSubmit({
-        TransactionType: "Payment",
-        Destination: depositAddress,
-        Amount: (depositAmount * 10 ** (siteInfo?.digitsMap[userInfo?.selectedCoinType])
-        ).toString(), // XRP in drops
-      });
-      console.log(response);
-      //if (response.result === "tesSUCCESS")
-      {
-        console.log("Transaction successful!");
-      }
-      // else {
-      //   console.error("Transaction failed with status:", response.result);
-      // }
-    } else if (walletType == "gem") {
-      const payment = {
-        amount: (depositAmount * 10 ** (siteInfo?.digitsMap[userInfo?.selectedCoinType])).toString(),
-        destination: depositAddress,
-      };
-
-      sendPayment(payment)
-        .then((trHash) => {
-          console.log("Transaction Hash: ", trHash);
-        })
-        .catch((error) => {
-          console.error("Payment failed:", error);
-          // Handle error or alert the user
+const useDepositOnXrpl = () => {
+  const [status, setStatus] = useState<number | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const { siteInfo, userInfo, walletType } =    useAppContext();
+  const depositOnXrpl = async (
+    depositAddress: string,
+    depositAmount: number,
+    resultCallback: (status: number) => void, 
+    setQrcode: (qr_png: any) => void,
+    setJumpLink: (link: any) => void
+  ) => {
+    console.log(walletType, depositAddress, depositAmount);
+    try {
+      if (walletType == WalletType.Crossmark) {
+        const response = sdk.sync.signAndSubmit({
+          TransactionType: "Payment",
+          Destination: depositAddress,
+          Amount: (
+            depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+          ).toString(), // XRP in drops
         });
-    } else if (walletType == "xum") {
-      const payload = await fetch(
-        `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
-      );
-      const data = await payload.json();
+        setStatus(0);
+        resultCallback(0);
+      } else if (walletType == WalletType.Gem) {
+        const payment = {
+          amount: (
+            depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+          ).toString(),
+          destination: depositAddress,
+        };
 
-      setQrcode(data.payload.refs.qr_png);
-      setJumpLink(data.payload.next.always);
+        sendPayment(payment)
+          .then((trHash) => {
+            console.log("Transaction Hash: ", trHash);
+            setStatus(0);
+            resultCallback(0);
+          })
+          .catch((error) => {
+            console.error("Payment failed:", error);
+            setStatus(1);
+            setError(error.message);
+            resultCallback(1);
+          });
+      } else if (walletType == WalletType.Xumm) {
+        const payload = await fetch(
+          `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
+        );
+        const data = await payload.json();
 
-      const ws = new WebSocket(data.payload.refs.websocket_status);
-      // console.log("111111");
-      // console.log(ws);
-      // console.log("111111");
+        setQrcode(data.payload.refs.qr_png);
+        setJumpLink(data.payload.next.always);
 
-      ws.onmessage = async (e) => {
-        let responseObj = JSON.parse(e.data);
-        console.log("message");
-        console.log(responseObj);
-        if (responseObj.signed !== null && responseObj.signed !== undefined) {
-          if (responseObj.signed) {
-            // ?alert("Your payment successed")!;
-          } else {
-            // alert("Your payment failed");
+        const ws = new WebSocket(data.payload.refs.websocket_status);
+        ws.onmessage = async (e) => {
+          let responseObj = JSON.parse(e.data);
+          if (responseObj.signed !== null && responseObj.signed !== undefined) {
+            if (responseObj.signed) {
+              setStatus(0);
+              resultCallback(0);
+            } else {
+              setStatus(1);
+              resultCallback(1);
+            }
           }
-        }
-        console.log(responseObj);
-      };
-      // setDepositAmount(0);
-      console.log(payload);
+        };
+      }
+    } catch (e) {
+      console.error("Transaction error:", e);
+      const errorMessage = (e as Error).message || "An unknown error occurred";
+      setError(errorMessage);
+      resultCallback(1);
     }
-  } catch (e) {
-    console.log(e);
-  }
-  return { deposit, status, error };
+  };
+
+  return { depositOnXrpl, status, error};
 };
 
-export default depositOnXrpl;
+export default useDepositOnXrpl;
