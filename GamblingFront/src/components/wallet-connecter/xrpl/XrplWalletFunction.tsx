@@ -14,7 +14,7 @@ import {
 
 import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
-
+import { SiteInfo,UserInfo } from '../../../hooks/AppContext';
 
 const depositOnXrpl = async (siteInfo: SiteInfo, userInfo: UserInfo, walletType: string, depositAddress: string, depositAmount: number) => {
   try {
@@ -29,6 +29,7 @@ const depositOnXrpl = async (siteInfo: SiteInfo, userInfo: UserInfo, walletType:
       //if (response.result === "tesSUCCESS")
       {
         console.log("Transaction successful!");
+        return {status:0};
       }
       // else {
       //   console.error("Transaction failed with status:", response.result);

@@ -84,7 +84,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (loginStep == 3)
+        if (loginStep != 3)
           return;
 
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
@@ -113,102 +113,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [loginStep]);
 
-  // const useDepositPhantom = async () => {
-  //   if (!wallet.publicKey) return;
-  //   if (depositAmount <= 0) {
-  //     window.alert("Deposit amount cannot be 0");
-  //     return;
-  //   }
-
-  //   const tokenAddress =
-  //     siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
-
-  //   const ata = getAssociatedTokenAddressSync(
-  //     new PublicKey(tokenAddress),
-  //     wallet.publicKey,
-  //   );
-
-  //   const nextAta = getAssociatedTokenAddressSync(
-  //     new PublicKey(tokenAddress),
-  //     new PublicKey(depositAddress),
-  //     true,
-  //   );
-
-  //   const transaction = new Transaction();
-  //   const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-  //     microLamports: 210000,
-  //   });
-  //   transaction.add(addPriorityFee);
-
-  //   transaction.add(
-  //     createAssociatedTokenAccountIdempotentInstruction(
-  //       wallet.publicKey,
-  //       nextAta,
-  //       new PublicKey(depositAddress),
-  //       new PublicKey(tokenAddress),
-  //     ),
-  //   );
-
-  //   transaction.add(
-  //     createTransferInstruction(
-  //       ata,
-  //       nextAta,
-  //       wallet.publicKey,
-  //       depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType], //Instead userInfo.selectCoinType
-  //     ),
-  //   );
-
-  //   const transactionSignature = await wallet.sendTransaction(
-  //     transaction,
-  //     connection,
-  //     { skipPreflight: true, preflightCommitment: "finalized" },
-  //   );
-  //   console.log(transactionSignature);
-  //   setDepositAmount(0);
-  //   const confirmResult = await connection.confirmTransaction(
-  //     transactionSignature,
-  //     "confirmed",
-  //   );
-  //   const status = confirmResult.value;
-  //   console.log(status);
-  // };
-  const onWithdrawPhantom = async () => {
-    try {
-      if (accessToken == "") return;
-
-      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Access-Token": accessToken,
-        },
-        body: JSON.stringify({
-          method: "WithdrawCoin",
-          chain: siteInfo?.chain,
-          coinType: userInfo?.selectedCoinType, //Instead userInfo.selectCoinType
-          amount: withdrawAmount,
-        }),
-      });
-      console.log("here is withdraw");
-      console.log(withdrawAmount);
-      const result = await response.json();
-      if (result.status == 0) {
-        setWithdrawAmount(null);
-      } else {
-        toast.info(result.msg);
-      }
-    } catch (error) {
-      toast.error("An unknown error occurred");
-      console.log(error);
-    }
-  };
   const onDeposit = () => {
     if (depositAmount == null) {
       toast.warn("You must set a deposit amount");
       return;
     }
     if (siteInfo?.chain == "Xrpl") {
-      const { deposit, status, error } = depositOnXrpl(depositAddress, depositAmount,);
+      const { status } = depositOnXrpl(siteInfo, userInfo,"cross",depositAddress, depositAmount);
     } else {
       const { deposit, status, error } = depositOnSolana(depositAddress, depositAmount,);
     }
@@ -301,9 +212,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
     }
   };
 
-  const onWithdrawXrol = async () => {
+  const onWithdraw = async () => {
     try {
-      if (accessToken == "") return;
+      if (accessToken == "") 
+        return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
         headers: {
@@ -319,26 +231,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
       });
       const result = await response.json();
       if (result.status == 0) {
-        // window.alert("Withdraw success");
+        toast.error("Withdraw success");
         setWithdrawAmount(null);
       } else {
-        // window.alert(result.msg);
-        setWithdrawAmount(null);
+        toast.error(result.msg);
       }
     } catch (error) {
       toast.error("failed");
       console.log(error);
     }
   };
-
-  const onWithdraw = () => {
-    if (siteInfo?.chain == "Xrpl") {
-      onWithdrawXrol();
-    } else {
-      onWithdrawPhantom();
-    }
-  };
-  // alert(depositAmount);
   const handleCopy = () => {
     navigator.clipboard.writeText(depositAddress).then(
       () => {
@@ -349,7 +251,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
       },
     );
   };
-  if (!showWalletModal) return null;
+  if (!showWalletModal) 
+    return null;
+
   return (
     <Modal
       id="modal"

@@ -6,9 +6,8 @@ import React, {
   useState,
   ReactNode,
 } from "react";
-import Head from 'next/head';
 
-interface SiteInfo {
+export interface SiteInfo {
   isLoginMode: boolean;
   enableSideBar: boolean;
   communityMap: string;
@@ -22,7 +21,7 @@ interface SiteInfo {
   walletModalMessage: string;
   themeCode: string;
 }
-interface UserInfo {
+export interface UserInfo {
   status: number;
   selectedCoinType: string;
   balances: { [key: string]: number };

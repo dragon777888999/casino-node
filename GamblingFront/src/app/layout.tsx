@@ -24,14 +24,8 @@ export default function RootLayout({
     <html lang="en">
       <AppProvider>
         <SolanaWalletProvider>
-          <body
-            suppressHydrationWarning={true}
-            style={{ background: "rgb(26 34 44)" }}
-          >
-            <div
-              className="bg-black dark dark:bg-boxdark-2 dark:text-bodydark"
-              id="root"
-            >
+          <body suppressHydrationWarning={true} style={{ background: "rgb(26 34 44)" }}>
+            <div className="bg-black dark dark:bg-boxdark-2 dark:text-bodydark" id="root">
               <FetchSiteInfo>
                 {children}
               </FetchSiteInfo>
@@ -71,7 +65,7 @@ const FetchSiteInfo = ({
     };
 
     fetchData();
-  },[]);
+  }, []);
 
   if (loginStep == 0) {
     return <Loader />; // Show Loader while user data is being fetched
@@ -86,5 +80,5 @@ const FetchSiteInfo = ({
       <link id="theme-link" rel="stylesheet" href={cssPath} />
       {children}
     </>
-  ); 
+  );
 };
