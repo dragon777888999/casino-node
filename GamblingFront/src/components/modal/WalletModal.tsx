@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
-import SelectCoinTypeMenu from "../header/SelectCoinTypeMenu";
+import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
