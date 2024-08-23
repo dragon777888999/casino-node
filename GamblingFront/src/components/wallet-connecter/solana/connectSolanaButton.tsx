@@ -17,6 +17,7 @@ export default function ConnectSolanaButton() {
 
     localStorage.setItem("walleteType", "phantom");
     console.log("wallet publickey");
+<<<<<<< Updated upstream
     // alert(wallet.publicKey);
   }, [wallet, setWalletAddress]);
   return (
@@ -36,5 +37,10 @@ export default function ConnectSolanaButton() {
     </>
   );
   // return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
+=======
+  }, [wallet]);
+
+  return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
+>>>>>>> Stashed changes
   // return <>{ loginStep != 2 && <WalletMultiButton className="" />}</>;
 }

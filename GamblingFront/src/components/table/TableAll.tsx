@@ -48,14 +48,12 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
 
       try {
         const cmd = JSON.parse(socketData);
-        if (cmd.type != "wager")
-          return;
+        if (cmd.type != "wager") return;
         const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
 
         if (!isAll) {
           // isAll true:: get all data; false :: get only userdata
-          if (newData.userCode == userInfo?.userCode)
-            buffer.unshift(newData);
+          if (newData.userCode == userInfo?.userCode) buffer.unshift(newData);
         } else {
           buffer.unshift(newData);
         }
@@ -79,13 +77,11 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         style={{ fontSize: "14px", color: "#7b808e" }}
       > */}
       <div
-        className={`${style}-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark`}
+        className="style-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark"
         style={{ fontSize: "14px", color: "#7b808e" }}
       >
         {/* Table Header */}
-        <div
-          className={`${style}-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5`}
-        >
+        <div className="style-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
           <div className="col-span-2 flex items-center">
             <p>Game </p>
           </div>
@@ -115,9 +111,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         )}
         {tableData.map((info, index) => (
           <div
-            className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
+            className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
             key={index}
           >
+            {/* <div
+            className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
+            key={index}
+          > */}
             <div className="col-span-2 flex items-center">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 {/* Render vendor image if you have a URL */}

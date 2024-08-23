@@ -26,8 +26,8 @@ const Footer = (props: {
     <div className="flex justify-center ">
       <div className="footer mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
         <div className="footer-container">
-          <div className="flex w-full flex-col">
-            {/* <Tabs
+          <div className="footer-wargerinfo-table flex w-full flex-col">
+            <Tabs
               aria-label="Options"
               color={"primary"}
               variant={"light"}
@@ -53,12 +53,11 @@ const Footer = (props: {
                 }}
               >
                 <TableAll isAll={false}></TableAll>
-                {/* <TableOne></TableOne> */}
-            {/* </Tab>
-            </Tabs> */}
+              </Tab>
+            </Tabs>
           </div>
-          <div className={`${style}-card`}>
-            <div className={`${style}-card-header`}>
+          <div className="style-card">
+            <div className="RebelGames-card-header">
               <Image
                 src={cardHeaderImg}
                 alt="Project Thumbnail"
@@ -73,7 +72,7 @@ const Footer = (props: {
                 <TableAll isAll={true}></TableAll>
               </div>
             </div>
-            <div className={`${style}-card-footer`}>
+            <div className="RebelGames-card-footer">
               <Image
                 src={cardfooterImg}
                 alt="Project Thumbnail"
@@ -84,6 +83,7 @@ const Footer = (props: {
               />
             </div>
           </div>
+          <TableAll isAll={true}></TableAll>
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
               <p className="" style={{ fontSize: "20px" }}>

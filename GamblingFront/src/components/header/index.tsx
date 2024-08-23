@@ -63,17 +63,7 @@ const Header = (props: {
                 />
               </Link>
             </div>
-            {/* <div className="block flex md:hidden">
-              <Link href="/">
-                <Image
-                  width={35}
-                  height={15}
-                  src={miniLogoImgSrc}
-                  alt="Logo"
-                  priority
-                />
-              </Link>
-            </div> */}
+
             <p
               style={{ fontSize: "28px", fontWeight: "700" }}
               className="flex hidden md:block"

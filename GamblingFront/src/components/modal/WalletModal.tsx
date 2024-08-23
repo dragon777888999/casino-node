@@ -50,7 +50,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } = useAppContext();
+  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
+    useAppContext();
   const wallet = useWallet();
   const { connection } = useConnection();
 
@@ -78,14 +79,18 @@ const WalletModal: React.FC<WalletModalProps> = ({
     );
     setUserInfo({
       ...userInfo,
-      selectedCoinType: key
+      selectedCoinType: key,
     });
   };
   useEffect(() => {
     const fetchData = async () => {
       try {
+<<<<<<< Updated upstream
         if (loginStep == 3)
           return;
+=======
+        if (loginStep != 3) return;
+>>>>>>> Stashed changes
 
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -113,6 +118,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [loginStep]);
 
+<<<<<<< Updated upstream
   // const useDepositPhantom = async () => {
   //   if (!wallet.publicKey) return;
   //   if (depositAmount <= 0) {
@@ -201,6 +207,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
       toast.error("An unknown error occurred");
       console.log(error);
     }
+=======
+  const depositResultCallback = (status: number) => {
+    console.log(status);
+>>>>>>> Stashed changes
   };
   const onDeposit = () => {
     if (depositAmount == null) {
@@ -208,9 +218,27 @@ const WalletModal: React.FC<WalletModalProps> = ({
       return;
     }
     if (siteInfo?.chain == "Xrpl") {
+<<<<<<< Updated upstream
       const { deposit, status, error } = depositOnXrpl(depositAddress, depositAmount,);
     } else {
       const { deposit, status, error } = depositOnSolana(depositAddress, depositAmount,);
+=======
+      depositOnXrpl(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
+    } else {
+      depositOnSolana(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
+>>>>>>> Stashed changes
     }
   };
 
@@ -220,6 +248,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     setIsHidden(false);
 
     try {
+<<<<<<< Updated upstream
       if (getDataFromLocalStorage("walleteType") == "cross") {
         const response = sdk.sync.signAndSubmit({
           TransactionType: "Payment",
@@ -303,6 +332,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const onWithdrawXrol = async () => {
     try {
+=======
+>>>>>>> Stashed changes
       if (accessToken == "") return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
@@ -350,6 +381,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
     );
   };
   if (!showWalletModal) return null;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   return (
     <Modal
       id="modal"
@@ -361,7 +396,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
     >
       <div className="footer-modal " style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
-          <div className="wallet-adapter-modal-wrapper">
+          <div
+            className="wallet-adapter-modal-wrapper"
+            style={{ maxWidth: "800px" }}
+          >
             <div className="w-full">
               <div
                 className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
@@ -436,7 +474,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       className=" ml-1 mt-2 h-10 pl-2 text-black"
                       aria-label="Withdraw amount"
                       value={withdrawAmount ?? ""}
-                      style={{ color: "white" }}
+                      // style={{ color: "white" }}
                       onChange={(e) => {
                         setWithdrawAmount(Number.parseFloat(e.target.value));
                         const value = Number.parseFloat(e.target.value);
@@ -469,7 +507,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       placeholder="Deposit address"
                       aria-label="Deposit address"
                       defaultValue={depositAddress}
-                      style={{ color: "white", textOverflow: "ellipsis" }}
+                      style={{ textOverflow: "ellipsis" }}
                       onChange={(e) => {
                         setDepositAddress(e.target.value);
                         const value = Number.parseFloat(e.target.value);
@@ -493,7 +531,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       aria-label="Deposit Amount"
                       defaultValue=""
                       value={depositAmount ?? ""}
-                      style={{ color: "white" }}
+                      // style={{ color: "white" }}
                       onChange={(e) => {
                         setDepositAmount(Number.parseFloat(e.target.value));
                         const value = Number.parseFloat(e.target.value);
