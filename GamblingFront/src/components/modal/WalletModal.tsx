@@ -50,7 +50,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } = useAppContext();
+  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
+    useAppContext();
   const wallet = useWallet();
   const { connection } = useConnection();
 
@@ -69,7 +70,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     );
     setUserInfo({
       ...userInfo,
-      selectedCoinType: key
+      selectedCoinType: key,
     });
   };
   useEffect(() => {
@@ -172,7 +173,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
     >
       <div className="footer-modal " style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
-          <div className="wallet-adapter-modal-wrapper">
+          <div
+            className="wallet-adapter-modal-wrapper"
+            style={{ maxWidth: "800px" }}
+          >
             <div className="w-full">
               <div
                 className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
@@ -247,7 +251,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       className=" ml-1 mt-2 h-10 pl-2 text-black"
                       aria-label="Withdraw amount"
                       value={withdrawAmount ?? ""}
-                      style={{ color: "white" }}
+                      // style={{ color: "white" }}
                       onChange={(e) => {
                         setWithdrawAmount(Number.parseFloat(e.target.value));
                         const value = Number.parseFloat(e.target.value);
@@ -280,7 +284,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       placeholder="Deposit address"
                       aria-label="Deposit address"
                       defaultValue={depositAddress}
-                      style={{ color: "white", textOverflow: "ellipsis" }}
+                      style={{ textOverflow: "ellipsis" }}
                       onChange={(e) => {
                         setDepositAddress(e.target.value);
                         const value = Number.parseFloat(e.target.value);
@@ -304,7 +308,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       aria-label="Deposit Amount"
                       defaultValue=""
                       value={depositAmount ?? ""}
-                      style={{ color: "white" }}
+                      // style={{ color: "white" }}
                       onChange={(e) => {
                         setDepositAmount(Number.parseFloat(e.target.value));
                         const value = Number.parseFloat(e.target.value);

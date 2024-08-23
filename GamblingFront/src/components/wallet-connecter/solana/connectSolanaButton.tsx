@@ -18,22 +18,7 @@ export default function ConnectSolanaButton() {
     localStorage.setItem("walleteType", "phantom");
     console.log("wallet publickey");
   }, [wallet]);
-  return (
-    <>
-      {
-        <Link href="/">
-          <Image
-            src="/RebelGames/images/component/btnImg.png"
-            alt="Project Thumbnail"
-            layout="responsive"
-            width={40}
-            height={40}
-            style={{ width: "100%" }}
-          />
-        </Link>
-      }
-    </>
-  );
-  // return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
+
+  return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
   // return <>{ loginStep != 2 && <WalletMultiButton className="" />}</>;
 }
