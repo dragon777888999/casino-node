@@ -7,7 +7,11 @@ import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+
+import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+export const metadata = MainPageMetadata;
+
 const Affiliates = () => {
   const { accessToken } = useAppContext();
   const [referralLink, setReferralLink] = useState("");

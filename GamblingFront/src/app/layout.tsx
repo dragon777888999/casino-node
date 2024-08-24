@@ -14,44 +14,13 @@ import { AppProvider, useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "../anchor/global";
 import SolanaWalletProvider from "../components/wallet-connecter/solana/SolanaWalletProvider";
 
-import Head from 'next/head';
-
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [title, setTitle] = useState('Sample'); // Default favicon
-  const [faviconUrl, setFaviconUrl] = useState('/default/images/favicon.ico'); // Default favicon
-  const [description, setDescription] = useState(''); // Default favicon
-
-  useEffect(() => {
-    async function fetchData() {
-      const domain = window.location.host;
-      try {
-        const response = await fetch(
-          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
-        );
-
-        const result = await response.json();
-        setTitle(result.title);
-        setFaviconUrl(`/${result.themeCode}/images/favicon.ico`); 
-        setDescription(result.description);
-      } catch (error) {
-        console.error("Fetch error:", error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
   return (
     <html lang="en">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="icon" href={faviconUrl} />
-      </Head>
       <AppProvider>
         <SolanaWalletProvider>
           <body suppressHydrationWarning={true}>

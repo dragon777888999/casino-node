@@ -9,13 +9,32 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import useFetchUserInfo from "../../hooks/useFetchUserInfo";
+import { useAppContext } from "../../hooks/AppContext";
 
 export default function DefaultLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  console.log("------------------------DefaultLayout------------------");
+  const { siteInfo} =    useAppContext();
+  useEffect(() => {
+   
+    document.title = siteInfo.title;
+    const metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+      metaDescription.setAttribute("content", siteInfo.description);
+    }
+    
+    let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
+  
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    
+    link.href = `/${siteInfo.themeCode}/images/favicon.ico`;
+  }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   useFetchUserInfo();
   return (

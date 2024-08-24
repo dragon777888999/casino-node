@@ -2,10 +2,9 @@ import Casino from "@/components/casino";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 
-export const metadata: Metadata = {
-  title: "Gambol | Casino",
-  description: "This is  Casino page for Everyone",
-};
+import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+export const metadata = MainPageMetadata;
+
 
 const CasinoPage = () => {
   return (

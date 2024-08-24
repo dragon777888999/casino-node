@@ -2,14 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Metadata } from "next";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 
-export const metadata: Metadata = {
-  title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js SignUp Page TailAdmin Dashboard Template",
-  // other metadata
-};
+import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+export const metadata = MainPageMetadata;
 
 const SignUp: React.FC = () => {
   return (
