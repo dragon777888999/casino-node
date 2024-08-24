@@ -9,8 +9,8 @@ import Link from "next/link";
 
 import { toast } from "react-toastify";
 
-import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
-export const metadata = MainPageMetadata;
+// import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+// export const metadata = MainPageMetadata;
 
 const Affiliates = () => {
   const { accessToken } = useAppContext();
