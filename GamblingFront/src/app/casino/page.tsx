@@ -8,9 +8,7 @@ export const metadata = MainPageMetadata;
 
 const CasinoPage = () => {
   return (
-    <DefaultLayout>
       <Casino />
-    </DefaultLayout>
   );
 };
 

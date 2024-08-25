@@ -83,7 +83,7 @@ const Affiliates = () => {
     }
   };
   return (
-    <DefaultLayout>
+
       <div className="mx-auto max-w-270">
         <div className="grid gap-8">
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
@@ -490,7 +490,7 @@ const Affiliates = () => {
           </div>
         </div>
       </div>
-    </DefaultLayout>
+
   );
 };
 

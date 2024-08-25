@@ -6,11 +6,6 @@ import { useAppContext } from "@/hooks/AppContext";
 
 import { WagerInfo } from "@/types/gameListInfo";
 
-interface LangName {
-  en: string;
-  ko: string;
-}
-
 const displayLength = 10;
 interface TableAllProps {
   isAll: boolean;
@@ -18,10 +13,8 @@ interface TableAllProps {
 
 // other language properties..
 const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
-  const { socketData, userInfo, siteInfo } = useAppContext();
+  const { socketData, userInfo } = useAppContext();
   const [tableData, setTableData] = useState<WagerInfo[]>([]);
-  const [visible, setVisible] = useState(false);
-  // const [selectedRow, setSelectedRow] = useState(null);
   const [selectedRow, setSelectedRow] = useState<WagerInfo | null>(null);
 
   const [showModal, setShowModal] = useState(false);
@@ -33,32 +26,32 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const closeModal = () => {
     setShowModal(false);
   };
-  // alert(isAll);
-  // console.log("iii", tableData);
 
   useEffect(() => {
-    console.log(tableData);
-    const buffer = tableData;
-    console.log("first buffer", buffer);
-
     if (socketData) {
-      if (buffer.length >= displayLength) {
-        buffer.pop();
-      }
-
       try {
         const cmd = JSON.parse(socketData);
-        if (cmd.type != "wager") return;
+        if (cmd.type != "wager") 
+          return;
         const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
 
+        // Create a new array based on the existing tableData
+        let updatedTableData = [...tableData];
+  
         if (!isAll) {
-          // isAll true:: get all data; false :: get only userdata
-          if (newData.userCode == userInfo?.userCode) buffer.unshift(newData);
+          // isAll true: get all data; false: get only user data
+          if (newData.userCode === userInfo?.userCode) {
+            updatedTableData = [newData, ...updatedTableData];
+          }
         } else {
-          buffer.unshift(newData);
+          updatedTableData = [newData, ...updatedTableData];
         }
-
-        setTableData(buffer);
+  
+        if (updatedTableData.length > displayLength) {
+          updatedTableData.pop();
+        }
+  
+        setTableData(updatedTableData); // Set the new array to state
       } catch (error) {
         console.error("Error parsing JSON:", error);
       }
@@ -68,8 +61,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     setSelectedRow(info);
     openModal();
   };
-  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-  // const gameNameEn = gameName.en ?? "No Name Available";
+
   return (
     <>
       {/* <div
@@ -99,7 +91,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
           </div>
         </div>
         {/* Table Rows */}
-        {!isAll && tableData.length == 0 && (
+        {/* {!isAll && tableData.length == 0 && (
           <div>
             <div
               className="flex items-center justify-center"
@@ -108,9 +100,9 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
               You have not made any recent bets
             </div>
           </div>
-        )}
-        {tableData.map((info, index) => (
-          <div
+        )} */}
+        {tableData.map((info, index) => {console.log(index,info);return (
+                    <div
             className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
             key={index}
           >
@@ -158,9 +150,9 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             <div className="col-span-1 flex hidden items-center justify-center md:flex">
               <p className=" text-black dark:text-white">
                 {info.payoutAmount !== 0
-                  ? (info.betAmount / info.payoutAmount).toFixed(2)
+                  ? (info.payoutAmount / info.betAmount).toFixed(2)
                   : "0.00"}{" "}
-                X
+                x
               </p>
             </div>
             <div className="col-span-3 flex items-center justify-end md:col-span-2">
@@ -186,7 +178,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
               </div>
             </div>
           </div>
-        ))}
+        );})}
       </div>
       {selectedRow && (
         <DispalyGameInfoModal

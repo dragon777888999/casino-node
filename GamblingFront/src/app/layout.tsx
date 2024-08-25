@@ -13,6 +13,7 @@ import Loader from "@/components/common/Loader";
 import { AppProvider, useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "../anchor/global";
 import SolanaWalletProvider from "../components/wallet-connecter/solana/SolanaWalletProvider";
+import DefaultLayout from "@/components/layouts/DefaultLayout";
 
 export default function RootLayout({
   children
@@ -28,7 +29,11 @@ export default function RootLayout({
               className=" dark dark:bg-boxdark-2 dark:text-bodydark"
               id="root"
             >
-              <FetchSiteInfo>{children}</FetchSiteInfo>
+              <FetchSiteInfo>
+                <DefaultLayout>
+                  {children}
+                </DefaultLayout>
+              </FetchSiteInfo>
             </div>
           </body>
         </SolanaWalletProvider>

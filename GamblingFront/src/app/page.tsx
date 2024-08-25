@@ -7,9 +7,6 @@ export const metadata = MainPageMetadata;
 
 export default function Home() {
   return (
-  
-      <DefaultLayout>
-        <Main />
-      </DefaultLayout>
+    <Main />
   );
 }
