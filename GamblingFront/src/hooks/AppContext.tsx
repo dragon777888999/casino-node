@@ -4,6 +4,7 @@ import React, {
   useContext,
   useEffect,
   useState,
+  useRef,
   ReactNode,
 } from "react";
 
@@ -29,7 +30,7 @@ export interface SiteInfo {
   themeCode: string;
   title: string;
   description: string;
-  showProvider:boolean;
+  showProvider: boolean;
 }
 export interface UserInfo {
   status: number;
@@ -95,9 +96,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     mark: "", // empty string for mark
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code
-    title:"",
-    description:"",
-    showProvider:true
+    title: "",
+    description: "",
+    showProvider: true
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
@@ -124,7 +125,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSocketData,
   };
 
-  useEffect(() => {
+  const reconnectInterval = useRef(1000); // Initial reconnect interval (1 second)
+  const maxReconnectInterval = useRef(30000); // Maximum reconnect interval (30 seconds)
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const connectWebSocket = () => {
     // Create a new URL object from the string
     let parsedUrl = new URL(backendUrl);
 
@@ -147,16 +152,43 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     ws.onclose = () => {
       console.log("WebSocket connection closed");
+      handleReconnect();
     };
 
     ws.onerror = (error) => {
       console.error("WebSocket error:", error);
+      ws.close();
     };
 
     setSocket(ws);
 
+  };
+  const handleReconnect = () => {
+     // Clear any existing timeouts
+     if (timeout.current !== null) {
+      clearTimeout(timeout.current);
+    }
+
+    // Attempt to reconnect after a delay
+    timeout.current = setTimeout(() => {
+      console.log(`Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`);
+      connectWebSocket();
+
+      // Increase the reconnect interval, but don't exceed the maximum
+      reconnectInterval.current = Math.min(reconnectInterval.current * 2, maxReconnectInterval.current);
+    }, reconnectInterval.current);
+  };
+
+  useEffect(() => {
+    connectWebSocket();
+
     return () => {
-      ws.close();
+      if (socket) {
+        socket.close();
+      }
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
     };
   }, []);
 

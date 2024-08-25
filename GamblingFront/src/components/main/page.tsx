@@ -95,14 +95,10 @@ const Main: React.FC = () => {
         </div>
       </div>
       {/* <GamePanel title={"Original"} gameType={9} /> */}
-      <div className="default-panel">
-        <GamePanel title={"Original"} gameType={9} />
-      </div>
-      <div className="default-panel-slots">
-        <GamePanel title={"Slots"} gameType={1} />
-      </div>
-      {/* <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} /> */}
-      {siteInfo.showProvider? <ProviderPanel />:<></>}
+      <GamePanel title={"Original"} gameType={9} />
+      <GamePanel title={"Slots"} gameType={1} />
+      {siteInfo.showProvider ? <ProviderPanel /> : <></>}
+      
       <div className="splite-line">
         <hr
           className="max-w-screen-2xl"

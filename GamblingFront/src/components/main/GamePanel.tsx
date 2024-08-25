@@ -61,9 +61,11 @@ export default function GamePanel({
     };
     fetchGameData(); // Fetch for original games
   }, []);
+  if (!vendorGames || vendorGames.length == 0)
+    return null;
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
 
-  return (
+  return (<div className="default-panel">
     <div className="SlotsList_list_container  mt-10 ">
       <h3 className="SlotsList_heading-item sub-title mb-3 flex items-center gap-3 text-white">
         <Image src={imgUrl} alt="Project Thumbnail" width={28} height={18} />
@@ -197,5 +199,6 @@ export default function GamePanel({
         })}
       </div>
     </div>
+  </div>
   );
 }

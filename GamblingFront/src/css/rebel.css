@@ -122,9 +122,6 @@
   max-width: 300px;
 }
 @media (max-width: 480px) {
-  .logo-img {
-    width: 20px;
-  }
   .RebelGames-th-row p {
     font-size: 30px;
   }

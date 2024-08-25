@@ -14,7 +14,7 @@ import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
 const MenuBar = () => {
   const domain = window.location.host;
 
-  const { userInfo, setUserInfo, siteInfo, accessToken } = useAppContext();
+  const { userInfo, loginStep, accessToken } = useAppContext();
 
   const [showWalletModal, setShowWalletModal] = useState(false);
   const wallet = useWallet();
@@ -68,7 +68,7 @@ const MenuBar = () => {
             className="ml-2 inline-flex items-center justify-center rounded-md border border-meta-3 px-4 py-1 text-center font-medium text-meta-3 hover:bg-opacity-90"
             onClick={() => openWalletModal()}
           > */}
-          <button
+          {loginStep ==3 && <button
             className="menu-button-wallet"
             onClick={() => openWalletModal()}
           >
@@ -76,7 +76,7 @@ const MenuBar = () => {
               <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>
               <span>{userInfo?.selectedCoinType}</span>
             </div>
-          </button>
+          </button>}
         </div>
       </div>
       <div className="justify-end">
