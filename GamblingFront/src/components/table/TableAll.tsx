@@ -3,7 +3,6 @@ import Image from "next/image";
 import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
-
 import { WagerInfo } from "@/types/gameListInfo";
 
 const displayLength = 10;
@@ -31,13 +30,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     if (socketData) {
       try {
         const cmd = JSON.parse(socketData);
-        if (cmd.type != "wager") 
+        if (cmd.type != "wager")
           return;
         const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
 
         // Create a new array based on the existing tableData
         let updatedTableData = [...tableData];
-  
+
         if (!isAll) {
           // isAll true: get all data; false: get only user data
           if (newData.userCode === userInfo?.userCode) {
@@ -46,11 +45,11 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
         } else {
           updatedTableData = [newData, ...updatedTableData];
         }
-  
+
         if (updatedTableData.length > displayLength) {
           updatedTableData.pop();
         }
-  
+
         setTableData(updatedTableData); // Set the new array to state
       } catch (error) {
         console.error("Error parsing JSON:", error);
@@ -62,8 +61,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     openModal();
   };
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-
-  // const gameNameEn = gameName.en ?? "No Name Available";
+  const currencyDir = siteInfo.themeMap.currency ? siteInfo.themeMap.currency : "default";
   return (
     <>
       {/* <div
@@ -103,12 +101,13 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             </div>
           </div>
         )} */}
-        {tableData.map((info, index) => {console.log(index,info);return (
-                    <div
-            className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
-            key={index}
-          >
-            {/* <div
+        {tableData.map((info, index) => {
+          return (
+            <div
+              className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
+              key={index}
+            >
+              {/* <div
             className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
             key={index}
           > */}
@@ -141,7 +140,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
               <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
                 <div>
                   <Image
-                    src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+                    src={`/${currencyDir}/images/currency/${info.currencyCode}.png`} // Adjust path and naming if needed
                     width={20}
                     height={20}
                     alt={info.currencyCode}
@@ -161,7 +160,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                 <div className="flex items-center justify-center gap-2">
                   <div className="">
                     <Image
-                      src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+                      src={`/${currencyDir}/images/currency/${info.currencyCode}.png`} // Adjust path and naming if needed
                       width={20}
                       height={20}
                       alt={info.currencyCode}

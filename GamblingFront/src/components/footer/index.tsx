@@ -10,7 +10,6 @@ const Footer = (props: {
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
   const { userInfo, siteInfo } = useAppContext();
-  const isUserInfoEmpty = !userInfo || Object.keys(userInfo).length === 0;
 
   let communityEntries: [string, string][] = [];
   if (siteInfo.communityMap) {
@@ -31,7 +30,6 @@ const Footer = (props: {
               aria-label="Options"
               color={"primary"}
               variant={"light"}
-              disabledKeys={isUserInfoEmpty ? ["MyBets"] : []}
             >
               <Tab
                 key="All Bets"

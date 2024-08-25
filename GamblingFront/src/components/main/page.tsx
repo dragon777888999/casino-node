@@ -17,19 +17,23 @@ interface GameData {
 }
 const Main: React.FC = () => {
   const { siteInfo } = useAppContext();
+
   let bannerImgSrc = "";
+  let smallBannerImgSrc = "";
 
   let width = 40;
   let height = 40;
   if (siteInfo.mark) {
     if (siteInfo.themeMap?.banner) {
       bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
+      smallBannerImgSrc = `/${siteInfo.themeMap.banner}/images/smallBanner.png`;
 
       //bannerImgSrc = "/RebelGames/images/banner.png";
       width = Number(siteInfo.themeMap.bannerWidth);
       height = Number(siteInfo.themeMap.bannerWidth);
     } else {
       bannerImgSrc = "/default/images/banner.png";
+      smallBannerImgSrc = `/default/images/smallBanner.png`;
       width = 800;
       height = 450;
     }
@@ -38,7 +42,6 @@ const Main: React.FC = () => {
   const cardHeaderImg = `/RebelGames/images/gamePanel/card-header.png`;
   const cardfooterImg = `/RebelGames/images/gamePanel/card-footer.png`;
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-  const smallBannerImg = `/${siteInfo.themeMap.banner}/images/smallBanner.png`;
 
   return (
     <div className=" max-w-screen mx-auto" id="root">
@@ -56,7 +59,7 @@ const Main: React.FC = () => {
       <div className="smallBanner">
         {/* <div className="banner"></div> */}
         <Image
-          src={smallBannerImg}
+          src={smallBannerImgSrc}
           alt="Project Thumbnail"
           layout="responsive"
           width={width}
@@ -98,7 +101,7 @@ const Main: React.FC = () => {
       <GamePanel title={"Original"} gameType={9} />
       <GamePanel title={"Slots"} gameType={1} />
       {siteInfo.showProvider ? <ProviderPanel /> : <></>}
-      
+
       <div className="splite-line">
         <hr
           className="max-w-screen-2xl"
