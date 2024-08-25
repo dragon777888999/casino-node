@@ -17,13 +17,16 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 }) => {
   const { setWalletAddress, setLoginStep, setWalletType } = useAppContext();
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const [qrcode, setQrcode] = useState("");
-  const [setJumpLink] = useState("");
-
   const [enableJwt, setEnableJwt] = useState(false);
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
 
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+
     if (cookies.jwt !== undefined && cookies.jwt !== null) {
       const url = "/api/auth";
       fetch(url, {
@@ -43,14 +46,18 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
           }
         });
     }
-  }, [setWalletAddress, cookies.jwt]);
+  }, []);
   const getQrCode = async () => {
     try {
       const payload = await fetch("/api/auth/xumm/createpayload");
       const data = await payload.json();
 
       setQrcode(data.payload.refs.qr_png);
-      // setJumpLink(data.payload.next.always);
+      //setJumpLink(data.payload.next.always);
+      if (isMobile) {
+        //open in new tab
+        window.open(data.payload.next.always, "_blank");
+      }
 
       const ws = new WebSocket(data.payload.refs.websocket_status);
       // alert(data.payload.refs.websocket_status);
@@ -193,7 +200,10 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                 <div className="row">
                   <button
                     className="wallet-adapter-modal-button-close"
-                    onClick={() => onRequestClose()}
+                    onClick={() => {
+                      onRequestClose();
+                      setQrcode("");
+                    }}
                   >
                     <svg width={14} height={14}>
                       <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
@@ -247,6 +257,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
                           type="button"
                           onClick={() => setQrcode("")}
                           style={{
+                            background: "rgb(16 20 31)",
                             display: "block",
                             justifyContent: "center",
                           }}

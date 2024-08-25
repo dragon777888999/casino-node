@@ -8,7 +8,7 @@ import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
 import DropdownUser from "./DropdownUser";
-import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
+import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {

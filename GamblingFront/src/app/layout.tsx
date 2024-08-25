@@ -8,19 +8,18 @@ import "@/css/style.css";
 import "@/css/custom.css";
 import "@/css/rebel.css";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import { AppProvider, useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "../anchor/global";
 import SolanaWalletProvider from "../components/wallet-connecter/solana/SolanaWalletProvider";
+import DefaultLayout from "@/components/layouts/DefaultLayout";
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("------------------------layout------------------");
-
   return (
     <html lang="en">
       <AppProvider>
@@ -30,7 +29,11 @@ export default function RootLayout({
               className=" dark dark:bg-boxdark-2 dark:text-bodydark"
               id="root"
             >
-              <FetchSiteInfo>{children}</FetchSiteInfo>
+              <FetchSiteInfo>
+                <DefaultLayout>
+                  {children}
+                </DefaultLayout>
+              </FetchSiteInfo>
             </div>
           </body>
         </SolanaWalletProvider>

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
-import SelectCoinTypeMenu from "../header/SelectCoinTypeMenu";
+import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -76,7 +76,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (loginStep != 3) return;
+        if (loginStep != 3)
+          return;
 
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -106,34 +107,23 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const depositResultCallback = (status: number) => {
     console.log(status);
-  };
+  }
   const onDeposit = () => {
     if (depositAmount == null) {
       toast.warn("You must set a deposit amount");
       return;
     }
     if (siteInfo?.chain == "Xrpl") {
-      depositOnXrpl(
-        depositAddress,
-        depositAmount,
-        depositResultCallback,
-        setQrcode,
-        setJumpLink,
-      );
+      depositOnXrpl(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
     } else {
-      depositOnSolana(
-        depositAddress,
-        depositAmount,
-        depositResultCallback,
-        setQrcode,
-        setJumpLink,
-      );
+      depositOnSolana(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
     }
   };
 
   const onWithdraw = async () => {
     try {
-      if (accessToken == "") return;
+      if (accessToken == "")
+        return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
         headers: {
@@ -169,7 +159,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
       },
     );
   };
-  if (!showWalletModal) return null;
+  if (!showWalletModal)
+    return null;
 
   return (
     <Modal
@@ -188,7 +179,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
           >
             <div className="w-full">
               <div
-                className="border-blueGray-200 flex items-center justify-between rounded-t  pt-4"
+                className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
                 style={{ marginBottom: "10px", width: "100%" }}
               >
                 <div className="justify-start">
@@ -226,8 +217,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </button>
                 </div>
               </div>
-              <div className="wallet-modal-message   max-w-xs ">
-                <div className=" flex  w-full justify-center break-words">
+              <div className="wallet-modal-message my-3  max-w-xs p-3">
+                <div className="block w-full  break-words">
                   <span>{siteInfo.walletModalMessage}</span>
                 </div>
               </div>

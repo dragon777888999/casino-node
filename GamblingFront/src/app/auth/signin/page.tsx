@@ -2,17 +2,15 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Metadata } from "next";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 
-export const metadata: Metadata = {
-  title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Signin Page TailAdmin Dashboard Template",
-};
+import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+export const metadata = MainPageMetadata;
+
 
 const SignIn: React.FC = () => {
   return (
-    <DefaultLayout>
+
       <div className="rounded-sm border border-stroke  dark:border-strokedark dark:bg-boxdark">
         <div className="flex flex-wrap items-center">
           <div className="hidden w-full xl:block xl:w-1/2">
@@ -307,7 +305,6 @@ const SignIn: React.FC = () => {
           </div>
         </div>
       </div>
-    </DefaultLayout>
   );
 };
 

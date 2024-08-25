@@ -1,17 +1,24 @@
 "use client";
 // import { metadata } from "../page";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
+import { AffiliaterInfo } from "@/types/affiliaterInfo";
 
 import { ToastContainer, toast } from "react-toastify";
+
+// import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
+// export const metadata = MainPageMetadata;
+
 const Affiliates = () => {
-  const { accessToken } = useAppContext();
+  const { accessToken, userInfo } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
+  const [affiliaterInfo, setAffiliaterInfo] = useState<AffiliaterInfo[]>();
+
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -42,6 +49,47 @@ const Affiliates = () => {
   //     console.error("Fetch error:", error);
   //   }
   // };
+
+  useEffect(() => {
+    const GetAffiliaterInfo = async () => {
+      try {
+        // if (accessToken == "") return;
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+
+          headers: {
+            "X-Access-Token": accessToken,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            method: GetAffiliaterInfo,
+            currencyCode: userInfo.selectedCoinType,
+          }),
+        });
+        alert(accessToken);
+        console.log("afilliate", response);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+        if (result.status === 0) {
+          setAffiliaterInfo(result);
+          toast.success("success");
+        } else {
+          toast.warn("Operation failed");
+          throw new Error("Unexpected status code");
+        }
+      } catch (error) {
+        console.error("Error fetching game data:", error);
+      } finally {
+        console.log(Response);
+      }
+    };
+    alert(accessToken);
+    GetAffiliaterInfo();
+    console.log("affiliaterinfo", affiliaterInfo);
+  }, []);
   const setCode = async () => {
     try {
       if (affiliateCode == "")
@@ -60,7 +108,7 @@ const Affiliates = () => {
           affiliaterCode: affiliateCode,
         }),
       });
-      console.log(response);
+      console.log("setcode", response);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -79,10 +127,10 @@ const Affiliates = () => {
     }
   };
   return (
-    <DefaultLayout>
+
       <div className="mx-auto max-w-270">
         <div className="grid gap-8">
-          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="rounded-sm border border-stroke  dark:border-strokedark dark:bg-boxdark">
             <div className="flex items-center justify-between border-b border-stroke px-7 py-4 dark:border-strokedark">
               <h3 className="font-medium text-black dark:text-white">
                 Affiliates
@@ -486,7 +534,7 @@ const Affiliates = () => {
           </div>
         </div>
       </div>
-    </DefaultLayout>
+
   );
 };
 

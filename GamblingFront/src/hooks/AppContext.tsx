@@ -27,6 +27,8 @@ export interface SiteInfo {
   mark: string;
   walletModalMessage: string;
   themeCode: string;
+  title: string;
+  description: string;
 }
 export interface UserInfo {
   status: number;
@@ -92,6 +94,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     mark: "", // empty string for mark
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code
+    title:"",
+    description:""
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");

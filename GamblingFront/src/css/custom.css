@@ -980,3 +980,84 @@ input[type="number"] {
   margin-top: 10px;
   padding: 20px;
 }
+.card-title {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card-title-inner {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+.card-detail-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+.card-detail-row-title {
+  color: #a9afc1;
+  flex: none;
+  font-size: 14px;
+  font-weight: 700;
+  width: 40%;
+}
+.card-detail-row-content {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 60%;
+}
+.card-detail-row-content-left {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 70%;
+}
+.card-detail-row-content-left-inner {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: flex-start;
+}
+
+.card-detail-row-content-right {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 30%;
+}
+.card-detail-row-content-right-inner {
+  align-items: center;
+  background-color: #09f219;
+  border-radius: 6px;
+  color: #22262f;
+  cursor: pointer;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 700;
+  height: 26px;
+  justify-content: center;
+  min-width: 80px;
+}
