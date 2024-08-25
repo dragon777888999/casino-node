@@ -29,6 +29,7 @@ export interface SiteInfo {
   themeCode: string;
   title: string;
   description: string;
+  showProvider:boolean;
 }
 export interface UserInfo {
   status: number;
@@ -95,7 +96,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code
     title:"",
-    description:""
+    description:"",
+    showProvider:true
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
