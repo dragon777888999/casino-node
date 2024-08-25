@@ -103,7 +103,7 @@ const Footer = (props: {
                       <Image
                         width={40}
                         height={40}
-                        src={`/images/join/${platform.toLowerCase()}.png`}
+                        src={`/default/images/join/${platform.toLowerCase()}.png`}
                         alt="telegram"
                         priority
                       />
