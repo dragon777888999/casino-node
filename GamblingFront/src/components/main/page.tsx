@@ -98,7 +98,7 @@ const Main: React.FC = () => {
         </div>
       </div>
       {/* <GamePanel title={"Original"} gameType={9} /> */}
-      <GamePanel title={"Original"} gameType={9} />
+      <GamePanel title={"Featured Games"} gameType={9} />
       <GamePanel title={"Slots"} gameType={1} />
       {siteInfo.showProvider ? <ProviderPanel /> : <></>}
 
