@@ -26,7 +26,7 @@ const Casino = () => {
   console.log(siteInfo);
   console.log(vendorCode);
   if (style) {
-    logoImgUrl = `/${style}/games/logo.png`;
+    logoImgUrl = `/${style}/images/logo.png`;
   }
   const router = useRouter();
   useEffect(() => {
