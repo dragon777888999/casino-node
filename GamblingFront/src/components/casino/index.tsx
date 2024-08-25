@@ -20,13 +20,10 @@ const Casino = () => {
   const gameCode = searchParams?.get("gameCode");
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
-  const style = siteInfo.themeMap.style;
+  
   let logoImgUrl = "/default/images/logo.png";
-  console.log("here is casino");
-  console.log(siteInfo);
-  console.log(vendorCode);
-  if (style) {
-    logoImgUrl = `/${style}/images/logo.png`;
+  if (siteInfo.themeMap.logo) {
+    logoImgUrl = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
   const router = useRouter();
   useEffect(() => {
