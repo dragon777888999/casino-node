@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProviderPannel() {
+export default function ProviderPanel() {
     return (<div className="mt-10">
         <div className="sub-title ">
             <Image

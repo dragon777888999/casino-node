@@ -35,7 +35,7 @@ export default function ConnectXrplButton() {
         onClick={() => openConnectWallet()}
         className="menu-button-connect"
       >
-        <p className="connect-btn"> Connect</p>
+        <p > Connect</p>
       </button>
       <ConnectXrplWalletModal
         showConnectModal={showXrplConnectModal}

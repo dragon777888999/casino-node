@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
-import { AffiliaterInfo } from "@/types/affiliaterInfo";
+//import { AffiliaterInfo } from "@/types/affiliaterInfo";
 
 import { toast } from "react-toastify";
 
@@ -17,7 +17,7 @@ const Affiliates = () => {
   const { accessToken, userInfo } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
-  const [affiliaterInfo, setAffiliaterInfo] = useState<AffiliaterInfo[]>();
+//  const [affiliaterInfo, setAffiliaterInfo] = useState<AffiliaterInfo[]>();
 
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
@@ -50,46 +50,46 @@ const Affiliates = () => {
   //   }
   // };
 
-  useEffect(() => {
-    const GetAffiliaterInfo = async () => {
-      try {
-        // if (accessToken == "") return;
-        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-          method: "POST",
+  // useEffect(() => {
+  //   const GetAffiliaterInfo = async () => {
+  //     try {
+  //       // if (accessToken == "") return;
+  //       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+  //         method: "POST",
 
-          headers: {
-            "X-Access-Token": accessToken,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            method: GetAffiliaterInfo,
-            currencyCode: userInfo.selectedCoinType,
-          }),
-        });
-        alert(accessToken);
-        console.log("afilliate", response);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+  //         headers: {
+  //           "X-Access-Token": accessToken,
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           method: GetAffiliaterInfo,
+  //           currencyCode: userInfo.selectedCoinType,
+  //         }),
+  //       });
+  //       alert(accessToken);
+  //       console.log("afilliate", response);
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
 
-        const result = await response.json();
-        if (result.status === 0) {
-          setAffiliaterInfo(result);
-          toast.success("success");
-        } else {
-          toast.warn("Operation failed");
-          throw new Error("Unexpected status code");
-        }
-      } catch (error) {
-        console.error("Error fetching game data:", error);
-      } finally {
-        console.log(Response);
-      }
-    };
-    alert(accessToken);
-    GetAffiliaterInfo();
-    console.log("affiliaterinfo", affiliaterInfo);
-  }, []);
+  //       const result = await response.json();
+  //       if (result.status === 0) {
+  //         setAffiliaterInfo(result);
+  //         toast.success("success");
+  //       } else {
+  //         toast.warn("Operation failed");
+  //         throw new Error("Unexpected status code");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching game data:", error);
+  //     } finally {
+  //       console.log(Response);
+  //     }
+  //   };
+  //   alert(accessToken);
+  //   GetAffiliaterInfo();
+  //   console.log("affiliaterinfo", affiliaterInfo);
+  // }, []);
   const setCode = async () => {
     try {
       if (affiliateCode == "")

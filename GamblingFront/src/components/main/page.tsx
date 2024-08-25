@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import GamePanel from "./GamePanel";
-import ProviderPannel from "./ProviderPannel";
+import ProviderPanel from "./ProviderPanel";
 import { useAppContext } from "../../hooks/AppContext";
 
 import { Data } from "@/anchor/divide_css";
@@ -102,7 +102,7 @@ const Main: React.FC = () => {
         <GamePanel title={"Slots"} gameType={1} />
       </div>
       {/* <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} /> */}
-      {siteInfo.showProvider? <ProviderPannel />:<></>}
+      {siteInfo.showProvider? <ProviderPanel />:<></>}
       <div className="splite-line">
         <hr
           className="max-w-screen-2xl"

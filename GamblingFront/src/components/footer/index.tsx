@@ -39,7 +39,7 @@ const Footer = (props: {
                 style={{
                   width: "150px",
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
-                  fontSize: "16px",
+
                 }}
               >
                 <TableAll isAll={true}></TableAll>
