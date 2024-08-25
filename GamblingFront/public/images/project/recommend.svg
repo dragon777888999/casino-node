@@ -15,8 +15,8 @@
               gradientTransform="matrix(1 0 0 -1 0 51.36)"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stopColor="#5cb4ff"></stop>
-              <stop offset="1" stopColor="#0082f0"></stop>
+              <stop offset="0" stop-color="#5cb4ff"></stop>
+              <stop offset="1" stop-color="#0082f0"></stop>
             </linearGradient>
             <linearGradient
               id="linear-gradient-2"
@@ -27,8 +27,8 @@
               gradientTransform="matrix(1 0 0 -1 0 51.36)"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stopColor="#87c1f2"></stop>
-              <stop offset="1" stopColor="#3a8dda"></stop>
+              <stop offset="0" stop-color="#87c1f2"></stop>
+              <stop offset="1" stop-color="#3a8dda"></stop>
             </linearGradient>
             <linearGradient
               id="linear-gradient-3"
@@ -39,8 +39,8 @@
               gradientTransform="matrix(1 0 0 -1 0 51.36)"
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="0" stopColor="#fff" stopOpacity="0.75"></stop>
-              <stop offset="1" stopColor="#fff" stopOpacity="0.05"></stop>
+              <stop offset="0" stop-color="#fff" stopOpacity="0.75"></stop>
+              <stop offset="1" stop-color="#fff" stopOpacity="0.05"></stop>
             </linearGradient>
           </defs>
           <path

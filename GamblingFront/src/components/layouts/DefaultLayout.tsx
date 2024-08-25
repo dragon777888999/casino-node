@@ -24,7 +24,7 @@ export default function DefaultLayout({
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <div
-          className={`relative flex flex-1 flex-col ${
+          className={`relative flex flex-1 flex-col bg-black ${
             sidebarOpen ? "ml-72.5$" : "ml-auto"
           }`}
         >

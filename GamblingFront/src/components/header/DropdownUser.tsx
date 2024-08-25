@@ -9,8 +9,14 @@ import { backendUrl } from "@/anchor/global";
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { userInfo, setUserInfo, loginStep, setLoginStep, siteInfo, setWalletAddress } =
-    useAppContext();
+  const {
+    userInfo,
+    setUserInfo,
+    loginStep,
+    setLoginStep,
+    siteInfo,
+    setWalletAddress,
+  } = useAppContext();
   const wallet = useWallet();
   const handleDisconnect = async () => {
     try {
@@ -73,7 +79,7 @@ const DropdownUser = () => {
           <ul className="flex flex-col gap-2 border-b border-stroke px-3 py-3 dark:border-strokedark">
             <li>
               <Link
-                href="/"
+                href="/profile"
                 className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
               >
                 <svg
@@ -88,7 +94,7 @@ const DropdownUser = () => {
                     fill="#E8E5FF"
                   ></path>
                 </svg>
-                <p style={{ fontSize: "14px" }}> Profile</p>
+                <p style={{ fontSize: "12px" }}> Profile</p>
               </Link>
             </li>
             <li>
@@ -108,7 +114,7 @@ const DropdownUser = () => {
                     fill="#E8E5FF"
                   ></path>
                 </svg>
-                <p style={{ fontSize: "14px" }}>Affiliates</p>
+                <p style={{ fontSize: "12px" }}>Affiliates</p>
               </Link>
             </li>
             <li>

@@ -21,10 +21,13 @@ const Casino = () => {
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
   const style = siteInfo.themeMap.style;
+  let logoImgUrl = "/default/images/logo.png";
   console.log("here is casino");
   console.log(siteInfo);
   console.log(vendorCode);
-
+  if (style) {
+    logoImgUrl = `/${style}/games/logo.png`;
+  }
   const router = useRouter();
   useEffect(() => {
     const getLaunchUrl = async () => {
@@ -107,7 +110,7 @@ const Casino = () => {
                   <Image
                     width={32}
                     height={32}
-                    src={`/${style}/images/logo.png`}
+                    src={logoImgUrl}
                     alt="Logo"
                     priority
                   />

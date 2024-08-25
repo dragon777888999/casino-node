@@ -69,6 +69,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     openModal();
   };
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
+
   // const gameNameEn = gameName.en ?? "No Name Available";
   return (
     <>
@@ -146,12 +147,12 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             </div>
             <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
               <div>
-                {/* <Image
-                  src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+                <Image
+                  src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
                   width={20}
                   height={20}
                   alt={info.currencyCode}
-                /> */}
+                />
               </div>
               <p className="text-black dark:text-white">{info.betAmount}</p>
             </div>
@@ -160,18 +161,18 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
                 {info.payoutAmount !== 0
                   ? (info.betAmount / info.payoutAmount).toFixed(2)
                   : "0.00"}{" "}
-                X
+                x
               </p>
             </div>
             <div className="col-span-3 flex items-center justify-end md:col-span-2">
               <div className="flex items-center justify-center gap-2">
                 <div className="">
-                  {/* <Image
-                    src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+                  <Image
+                    src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
                     width={20}
                     height={20}
                     alt={info.currencyCode}
-                  /> */}
+                  />
                 </div>
                 <div>
                   <p

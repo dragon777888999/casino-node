@@ -188,7 +188,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
           >
             <div className="w-full">
               <div
-                className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
+                className="border-blueGray-200 flex items-center justify-between rounded-t  pt-4"
                 style={{ marginBottom: "10px", width: "100%" }}
               >
                 <div className="justify-start">
@@ -226,8 +226,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </button>
                 </div>
               </div>
-              <div className="wallet-modal-message my-3  max-w-xs p-3">
-                <div className="block w-full  break-words">
+              <div className="wallet-modal-message   max-w-xs ">
+                <div className=" flex  w-full justify-center break-words">
                   <span>{siteInfo.walletModalMessage}</span>
                 </div>
               </div>
@@ -257,7 +257,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <label>Amount :</label>
                     <input
                       type="number"
-                      className=" ml-1 mt-2 h-10 pl-2 text-black"
+                      className=" ml-1 mt-2 h-8 pl-2 text-black"
                       aria-label="Withdraw amount"
                       value={withdrawAmount ?? ""}
                       // style={{ color: "white" }}
@@ -286,10 +286,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   style={{ backgroundColor: "rgb(20 28 39)" }}
                 >
                   <div className="flex items-center gap-2">
-                    <label>Address :</label>
+                    <label
+                      style={{
+                        width: "60px",
+                      }}
+                    >
+                      Address :
+                    </label>
                     <input
                       type="text"
-                      className="my-2 h-10 pl-2 text-black"
+                      className="my-2 h-8 pl-2 text-black"
                       placeholder="Deposit address"
                       aria-label="Deposit address"
                       defaultValue={depositAddress}
@@ -313,7 +319,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <label>Amount :</label>
                     <input
                       type="number"
-                      className="mb-2 ml-1 mt-2 h-10 pl-2 text-black"
+                      className="mb-2 ml-1 mt-2 h-8 pl-2 text-black"
                       aria-label="Deposit Amount"
                       defaultValue=""
                       value={depositAmount ?? ""}

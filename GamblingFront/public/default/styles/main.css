@@ -45,7 +45,23 @@ body {
 
   transform: translateY(-3px);
 }
+.menu-button-connect {
+  align-items: center;
+  background: linear-gradient(90deg, #5fa5ea, #2f71de);
 
+  border-radius: 4px;
+  border-right: none;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 200;
+  height: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 100px;
+  padding: 0 20px;
+  gap: 20px;
+}
 .Quick_Link:hover {
   transform: translateY(-3px);
   cursor: pointer;

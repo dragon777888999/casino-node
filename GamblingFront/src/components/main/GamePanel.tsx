@@ -24,7 +24,7 @@ export default function GamePanel({
   title: string;
   gameType: number;
 }) {
-  const { siteInfo } = useAppContext();
+  const { siteInfo, loginStep } = useAppContext();
   const [vendorGames, setVendorGames] = useState<GameData[]>([]);
   let imgUrl = `/default/images/gamePanel/${gameType}.png`;
   if (siteInfo?.themeMap.style)
@@ -152,7 +152,11 @@ export default function GamePanel({
                 <div className="game-block-item-content">
                   <Link
                     className="Quick_Link"
-                    href={`/casino?vendorcode=${encodeURIComponent(gameData.vendorCode)}&gameCode=${gameData.gameCode}`}
+                    href={
+                      loginStep > 1
+                        ? `/casino?vendorcode=${encodeURIComponent(gameData.vendorCode)}&gameCode=${gameData.gameCode}`
+                        : ""
+                    }
                   >
                     <div>
                       <div className="SlotsList_slot-image">
