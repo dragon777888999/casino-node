@@ -13,7 +13,7 @@ interface TableAllProps {
 
 // other language properties..
 const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
-  const { socketData, userInfo } = useAppContext();
+  const { socketData, userInfo, siteInfo } = useAppContext();
   const [tableData, setTableData] = useState<WagerInfo[]>([]);
   const [selectedRow, setSelectedRow] = useState<WagerInfo | null>(null);
 
@@ -61,7 +61,9 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
     setSelectedRow(info);
     openModal();
   };
+  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
 
+  // const gameNameEn = gameName.en ?? "No Name Available";
   return (
     <>
       {/* <div
@@ -110,75 +112,76 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
             className={`${style}-tbody-row flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
             key={index}
           > */}
-            <div className="col-span-2 flex items-center">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                {/* Render vendor image if you have a URL */}
-                {/* {info.gameName.en && (
+              <div className="col-span-2 flex items-center">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  {/* Render vendor image if you have a URL */}
+                  {/* {info.gameName.en && (
                   <div className="h-5 w-5 rounded-md">
                     <Image src={""} width={60} height={50} alt={"info"} />
                   </div>
                 )} */}
-                <p className="text-black dark:text-white">
-                  <a
-                    type="button"
-                    onClick={() => handleRowClick(info)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    {JSON.parse(info.gameName).en}
-                    {/* Render the English name */}
-                  </a>
-                  {/* Render the English name or switch based on locale */}
+                  <p className="text-black dark:text-white">
+                    <a
+                      type="button"
+                      onClick={() => handleRowClick(info)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      {JSON.parse(info.gameName).en}
+                      {/* Render the English name */}
+                    </a>
+                    {/* Render the English name or switch based on locale */}
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-1 hidden items-center justify-center md:flex">
+                <p className="truncate  text-black dark:text-white">
+                  {info.userCode}
                 </p>
               </div>
-            </div>
-            <div className="col-span-1 hidden items-center justify-center md:flex">
-              <p className="truncate  text-black dark:text-white">
-                {info.userCode}
-              </p>
-            </div>
-            <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
-              <div>
-                {/* <Image
-                  src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
-                  width={20}
-                  height={20}
-                  alt={info.currencyCode}
-                /> */}
-              </div>
-              <p className="text-black dark:text-white">{info.betAmount}</p>
-            </div>
-            <div className="col-span-1 flex hidden items-center justify-center md:flex">
-              <p className=" text-black dark:text-white">
-                {info.payoutAmount !== 0
-                  ? (info.payoutAmount / info.betAmount).toFixed(2)
-                  : "0.00"}{" "}
-                x
-              </p>
-            </div>
-            <div className="col-span-3 flex items-center justify-end md:col-span-2">
-              <div className="flex items-center justify-center gap-2">
-                <div className="">
-                  {/* <Image
-                    src={`/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+              <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
+                <div>
+                  <Image
+                    src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
                     width={20}
                     height={20}
                     alt={info.currencyCode}
-                  /> */}
+                  />
                 </div>
-                <div>
-                  <p
-                    style={{
-                      color: "#7DD934",
-                    }}
-                  >
-                    {info.payoutAmount.toFixed(2)}
-                  </p>
+                <p className="text-black dark:text-white">{info.betAmount}</p>
+              </div>
+              <div className="col-span-1 flex hidden items-center justify-center md:flex">
+                <p className=" text-black dark:text-white">
+                  {info.payoutAmount !== 0
+                    ? (info.payoutAmount / info.betAmount).toFixed(2)
+                    : "0.00"}{" "}
+                  x
+                </p>
+              </div>
+              <div className="col-span-3 flex items-center justify-end md:col-span-2">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="">
+                    <Image
+                      src={`/${siteInfo.themeMap.banner}/images/currency/${info.currencyCode.toLowerCase()}.png`} // Adjust path and naming if needed
+                      width={20}
+                      height={20}
+                      alt={info.currencyCode}
+                    />
+                  </div>
+                  <div>
+                    <p
+                      style={{
+                        color: "#7DD934",
+                      }}
+                    >
+                      {info.payoutAmount.toFixed(2)}
+                    </p>
+                  </div>
+                  {/* SVG icons or other elements */}
                 </div>
-                {/* SVG icons or other elements */}
               </div>
             </div>
-          </div>
-        );})}
+          );
+        })}
       </div>
       {selectedRow && (
         <DispalyGameInfoModal
