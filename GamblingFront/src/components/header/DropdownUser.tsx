@@ -77,7 +77,7 @@ const DropdownUser = () => {
           className={`absolute right-0 mt-4 flex w-35 flex-col rounded-sm border border-stroke bg-white  dark:border-strokedark dark:bg-boxdark`}
         >
           <ul className="flex flex-col gap-2 border-b border-stroke px-3 py-3 dark:border-strokedark">
-            <li>
+            {siteInfo.featureMap && siteInfo.featureMap.profile && <li>
               <Link
                 href="/profile"
                 className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
@@ -96,8 +96,8 @@ const DropdownUser = () => {
                 </svg>
                 <p style={{ fontSize: "12px" }}> Profile</p>
               </Link>
-            </li>
-            <li>
+            </li>}
+            {siteInfo.featureMap && siteInfo.featureMap.referral && <li>
               <Link
                 href="/affiliates"
                 className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
@@ -116,7 +116,7 @@ const DropdownUser = () => {
                 </svg>
                 <p style={{ fontSize: "12px" }}>Affiliates</p>
               </Link>
-            </li>
+            </li>}
             <li>
               <Link
                 onClick={handleDisconnect}

@@ -25,6 +25,7 @@ export interface SiteInfo {
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   themeMap: { [key: string]: string };
+  featureMap: { [key: string]: boolean };
   mark: string;
   walletModalMessage: string;
   themeCode: string;
@@ -98,7 +99,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     themeCode: "", // empty string for theme code
     title: "",
     description: "",
-    showProvider: true
+    showProvider: true,
+    featureMap:{}
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
