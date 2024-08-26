@@ -76,8 +76,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (loginStep != 3)
-          return;
+        if (loginStep != 3) return;
 
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -107,23 +106,34 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const depositResultCallback = (status: number) => {
     console.log(status);
-  }
+  };
   const onDeposit = () => {
     if (depositAmount == null) {
       toast.warn("You must set a deposit amount");
       return;
     }
     if (siteInfo?.chain == "Xrpl") {
-      depositOnXrpl(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
+      depositOnXrpl(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
     } else {
-      depositOnSolana(depositAddress, depositAmount, depositResultCallback, setQrcode, setJumpLink);
+      depositOnSolana(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
     }
   };
 
   const onWithdraw = async () => {
     try {
-      if (accessToken == "")
-        return;
+      if (accessToken == "") return;
       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
         method: "POST",
         headers: {
@@ -159,8 +169,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       },
     );
   };
-  if (!showWalletModal)
-    return null;
+  if (!showWalletModal) return null;
 
   return (
     <Modal
@@ -227,13 +236,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   className="custom-wallet-modal-card"
                   style={{ backgroundColor: "rgb(20 28 39)" }}
                 >
-                  <div className=" flex items-center gap-2 py-4">
+                  <div className="balance-label flex items-center gap-2 py-4">
                     <label>Balance :</label>
 
                     <p
                       style={{
                         fontSize: `26px`,
-                        marginLeft: "30px",
+
                         gap: "5px",
                         color: "white",
                       }}
@@ -277,16 +286,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   style={{ backgroundColor: "rgb(20 28 39)" }}
                 >
                   <div className="flex items-center gap-2">
-                    <label
-                      style={{
-                        width: "60px",
-                      }}
-                    >
-                      Address :
-                    </label>
+                    <label>Address :</label>
                     <input
                       type="text"
-                      className="my-2 h-8 pl-2 text-black"
+                      className="my-2 ml-1 h-8 pl-2 text-black"
                       placeholder="Deposit address"
                       aria-label="Deposit address"
                       defaultValue={depositAddress}

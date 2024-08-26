@@ -62,16 +62,7 @@ body {
   padding: 0 20px;
   gap: 20px;
 }
-.Quick_Link:hover {
-  transform: translateY(-3px);
-  cursor: pointer;
-  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(
-    149deg,
-    rgba(13, 34, 52, 0.85) -1.28%,
-    rgba(4, 13, 21, 0.85)
-  );
-}
+
 .Quick_Link :hover {
   transform: translateY(-3px);
   cursor: pointer;
@@ -143,4 +134,10 @@ body {
     rgba(73, 131, 181, 0.65) -1.28%,
     rgba(5, 42, 72, 0.65)
   );
+}
+.game-block-item-content-img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 100%;
+  width: 100%;
 }

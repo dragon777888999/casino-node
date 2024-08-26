@@ -7,6 +7,7 @@ import React, { useRef } from "react";
 import { backendUrl } from "@/anchor/global";
 import GamePanel from "../main/GamePanel";
 import { useAppContext } from "../../hooks/AppContext";
+import Link from "next/link";
 
 // import { accessToken } from "@/anchor/global";
 
@@ -20,13 +21,10 @@ const Casino = () => {
   const gameCode = searchParams?.get("gameCode");
   const [launchUrl, setLaunchUrl] = useState("");
   const [loading, setLoading] = useState(true);
-  const style = siteInfo.themeMap.style;
+  
   let logoImgUrl = "/default/images/logo.png";
-  console.log("here is casino");
-  console.log(siteInfo);
-  console.log(vendorCode);
-  if (style) {
-    logoImgUrl = `/${style}/games/logo.png`;
+  if (siteInfo.themeMap.logo) {
+    logoImgUrl = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
   const router = useRouter();
   useEffect(() => {
@@ -115,6 +113,13 @@ const Casino = () => {
                     priority
                   />
                 </div>
+                <Link href="/">
+                  <div className="close-button">
+                    <svg width={16} height={16}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </div>
+                </Link>
                 <div className="flex items-center ">
                   <button onClick={() => toggleFullScreen(true)}>
                     <div>

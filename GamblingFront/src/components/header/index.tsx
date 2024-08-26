@@ -64,7 +64,8 @@ const Header = (props: {
             </div>
 
             <p
-              style={{ fontSize: "28px", fontWeight: "500" }}
+              style={{ fontSize: "28px", fontWeight: "500",color:"#d5993d",fontFamily:"Ovo"
+               }}
               className="flex hidden md:block"
             >
               {siteInfo.mark}

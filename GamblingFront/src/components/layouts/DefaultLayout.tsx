@@ -34,7 +34,7 @@ export default function DefaultLayout({
     }
     
     link.href = `/${siteInfo.themeCode}/images/favicon.ico`;
-  }, []);
+  });
   const [sidebarOpen, setSidebarOpen] = useState(false);
   useFetchUserInfo();
   return (

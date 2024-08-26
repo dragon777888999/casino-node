@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import GamePanel from "./GamePanel";
+import ProviderPanel from "./ProviderPanel";
 import { useAppContext } from "../../hooks/AppContext";
 
 import { Data } from "@/anchor/divide_css";
@@ -16,19 +17,23 @@ interface GameData {
 }
 const Main: React.FC = () => {
   const { siteInfo } = useAppContext();
+
   let bannerImgSrc = "";
+  let smallBannerImgSrc = "";
 
   let width = 40;
   let height = 40;
   if (siteInfo.mark) {
     if (siteInfo.themeMap?.banner) {
       bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
+      smallBannerImgSrc = `/${siteInfo.themeMap.banner}/images/smallBanner.png`;
 
       //bannerImgSrc = "/RebelGames/images/banner.png";
       width = Number(siteInfo.themeMap.bannerWidth);
       height = Number(siteInfo.themeMap.bannerWidth);
     } else {
       bannerImgSrc = "/default/images/banner.png";
+      smallBannerImgSrc = `/default/images/smallBanner.png`;
       width = 800;
       height = 450;
     }
@@ -37,7 +42,6 @@ const Main: React.FC = () => {
   const cardHeaderImg = `/RebelGames/images/gamePanel/card-header.png`;
   const cardfooterImg = `/RebelGames/images/gamePanel/card-footer.png`;
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-  const smallBannerImg = `/${siteInfo.themeMap.banner}/images/smallBanner.png`;
 
   return (
     <div className=" max-w-screen mx-auto" id="root">
@@ -55,7 +59,7 @@ const Main: React.FC = () => {
       <div className="smallBanner">
         {/* <div className="banner"></div> */}
         <Image
-          src={smallBannerImg}
+          src={smallBannerImgSrc}
           alt="Project Thumbnail"
           layout="responsive"
           width={width}
@@ -94,53 +98,11 @@ const Main: React.FC = () => {
         </div>
       </div>
       {/* <GamePanel title={"Original"} gameType={9} /> */}
-      <div className="default-panel">
-        <GamePanel title={"Original"} gameType={9} />
-      </div>
-      <div className="default-panel-slots">
-        <GamePanel title={"Slots"} gameType={1} />
-      </div>
-      {/* <WebSocketComponent websocketUrl={`${backendUrl}/websocket`} /> */}
 
-      <div className="mt-10">
-        <div className="sub-title ">
-          <Image
-            src="/images/icon/provider.png"
-            alt="Project Thumbnail"
-            width={28}
-            height={28}
-          />
-          <span className="ml-3">Provider</span>
-        </div>
-        {/* <div className="mt-3 flex grid grid-cols-2 gap-3 gap-4 md:grid-cols-5 md:gap-6 xl:grid-cols-6 xl:gap-4 2xl:grid-cols-8 2xl:gap-7.5"></div> */}
+      <GamePanel title={"Featured Games"} gameType={9} />
+      <GamePanel title={"Slots"} gameType={1} />
+      {siteInfo.showProvider ? <ProviderPanel /> : <></>}
 
-        <div className="games-block ">
-          <div className="games-block-item ">
-            <div className="custom-procard mt-2 p-1 ">
-              <a>
-                <Image
-                  src="/images/provider/spribe.svg" // Path relative to the public directory
-                  alt="Logo"
-                  width={80} // Adjust width
-                  height={80} // Adjust height
-                />
-              </a>
-            </div>
-          </div>
-          <div className="games-block-item ">
-            <div className="custom-procard mt-2 p-1 ">
-              <a>
-                <Image
-                  src="/images/provider/croco.svg" // Path relative to the public directory
-                  alt="Logo"
-                  width={80} // Adjust width
-                  height={80} // Adjust height
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="splite-line">
         <hr
           className="max-w-screen-2xl"

@@ -19,7 +19,7 @@ const Footer = (props: {
   }
   const cardHeaderImg = `/RebelGames/images/gamePanel/card-header.png`;
   const cardfooterImg = `/RebelGames/images/gamePanel/card-footer.png`;
-  const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
+  const style = siteInfo.themeMap.mark ? siteInfo.themeMap.style : "";
   let width = 40;
   let height = 40;
   return (
@@ -39,7 +39,7 @@ const Footer = (props: {
                 style={{
                   width: "150px",
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
-                  fontSize: "16px",
+
                 }}
               >
                 <TableAll isAll={true}></TableAll>
@@ -103,7 +103,7 @@ const Footer = (props: {
                       <Image
                         width={40}
                         height={40}
-                        src={`/images/join/${platform.toLowerCase()}.png`}
+                        src={`/default/images/join/${platform.toLowerCase()}.png`}
                         alt="telegram"
                         priority
                       />
@@ -115,7 +115,7 @@ const Footer = (props: {
           <p
             className="flex justify-center"
             style={{ color: "#7b7f82", fontSize: "13px" }}
-          >{`Copyright © 2024 ${style}. All rights reserved.`}</p>
+          >{`Copyright © 2024 ${siteInfo.mark}. All rights reserved.`}</p>
         </div>
       </div>
     </div>

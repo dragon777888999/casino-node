@@ -3,7 +3,11 @@
   src: url("/RebelGames/fonts/Organetto-BoldExp.ttf") format("truetype");
   font-weight: bold;
 }
-
+@font-face {
+  font-family: "Organetto";
+  src: url("/RebelGames/fonts/Organetto-BoldExp.ttf") format("truetype");
+  font-weight: bold;
+}
 @font-face {
   font-family: "Organetto";
   src: url("/RebelGames/fonts/Organetto-BoldSemiExp.ttf") format("truetype");
@@ -21,13 +25,30 @@
   src: url("/RebelGames/fonts/Organetto-RegularSemiExt.ttf") format("truetype");
   font-weight: 400; /* Example weight */
 /* }  */
+@font-face {
+  font-family: "Ovo";
+  src: url("/RebelGames/fonts/Ovo-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Century";
+  src: url("/RebelGames/fonts/Century Handtooled ITC Std Regular.otf")
+    format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Bangers";
+  src: url("/RebelGames/fonts/Bangers-Regular.ttf") format("truetype");
+}
 
 body {
   background-color: rgb(26 34 44);
   /* background-color: rgb(0, 0, 0); */
   /* background: "rgb(26 34 44)"; */
-  /* font-family: "Organetto"; */
-  font-family: sans-serif;
+  font-family: "Bangers";
+  /* font-family: sans-serif; */
 }
 
 .rebel-header-btn {
@@ -120,7 +141,7 @@ body {
   text-align: center; /* Center text horizontally */
   line-height: 50px; /* Center text vertically */
   cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Font size for the button text */
+  /* font-size: 16px;  */
   font-family: Arial, sans-serif; /* Font family for the button text */
   border-radius: 5px; /* Rounded corners (optional) */
 }
@@ -135,9 +156,6 @@ body {
   display: none;
 }
 .footer-wargerinfo-table {
-}
-.default-panel-slots {
-  display: none;
 }
 .SlotsList_slot-image {
   display: none;
@@ -158,4 +176,13 @@ body {
   min-width: 100px;
   padding: 0 20px;
   gap: 20px;
+}
+.game-block-item-content-img {
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+}
+
+.game-block-item-content-img:hover {
+  box-shadow: 2px 2px 2px 5px green; /* Shadow that acts as a border, following the image outline */
+  cursor: pointer; /* Changes the cursor to a pointer */
+  scale: 1.05;
 }

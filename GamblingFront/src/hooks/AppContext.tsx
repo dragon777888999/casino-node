@@ -4,6 +4,7 @@ import React, {
   useContext,
   useEffect,
   useState,
+  useRef,
   ReactNode,
 } from "react";
 
@@ -24,11 +25,13 @@ export interface SiteInfo {
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   themeMap: { [key: string]: string };
+  featureMap: { [key: string]: boolean };
   mark: string;
   walletModalMessage: string;
   themeCode: string;
   title: string;
   description: string;
+  showProvider: boolean;
 }
 export interface UserInfo {
   status: number;
@@ -42,6 +45,10 @@ export interface UserInfo {
 interface AppState {
   loginStep: number;
   setLoginStep: (loginStep: number) => void;
+  
+  siteInfoList: { [key: string]: SiteInfo };
+  setSiteInfoList: (siteInfoList: { [key: string]: SiteInfo }) => void;
+
   siteInfo: SiteInfo;
   setSiteInfo: (siteInfo: SiteInfo) => void;
   userInfo: UserInfo;
@@ -81,6 +88,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     userCode: "",
     nickName: "",
   });
+  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>({});
   const [siteInfo, setSiteInfo] = useState<SiteInfo>({
     isLoginMode: false, // default to false (not in login mode)
     enableSideBar: false,
@@ -94,8 +102,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     mark: "", // empty string for mark
     walletModalMessage: "", // empty string for wallet modal message
     themeCode: "", // empty string for theme code
-    title:"",
-    description:""
+    title: "",
+    description: "",
+    showProvider: true,
+    featureMap:{}
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
@@ -106,6 +116,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const value = {
     userInfo,
     setUserInfo,
+    siteInfoList,
+    setSiteInfoList,
     siteInfo,
     setSiteInfo,
     loginStep,
@@ -122,7 +134,11 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSocketData,
   };
 
-  useEffect(() => {
+  const reconnectInterval = useRef(1000); // Initial reconnect interval (1 second)
+  const maxReconnectInterval = useRef(30000); // Maximum reconnect interval (30 seconds)
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const connectWebSocket = () => {
     // Create a new URL object from the string
     let parsedUrl = new URL(backendUrl);
 
@@ -145,16 +161,43 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     ws.onclose = () => {
       console.log("WebSocket connection closed");
+      handleReconnect();
     };
 
     ws.onerror = (error) => {
       console.error("WebSocket error:", error);
+      ws.close();
     };
 
     setSocket(ws);
 
+  };
+  const handleReconnect = () => {
+     // Clear any existing timeouts
+     if (timeout.current !== null) {
+      clearTimeout(timeout.current);
+    }
+
+    // Attempt to reconnect after a delay
+    timeout.current = setTimeout(() => {
+      console.log(`Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`);
+      connectWebSocket();
+
+      // Increase the reconnect interval, but don't exceed the maximum
+      reconnectInterval.current = Math.min(reconnectInterval.current * 2, maxReconnectInterval.current);
+    }, reconnectInterval.current);
+  };
+
+  useEffect(() => {
+    connectWebSocket();
+
     return () => {
-      ws.close();
+      if (socket) {
+        socket.close();
+      }
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
     };
   }, []);
 

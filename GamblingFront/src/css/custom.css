@@ -740,12 +740,12 @@
   position: relative;
   width: 100%;
 } */
-.game-block-item-content-img {
+/* .game-block-item-content-img {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   height: 100%;
   width: 100%;
-}
+} */
 .game-item-title {
   padding: 8px 0;
   text-align: center;
@@ -1000,12 +1000,28 @@ input[type="number"] {
   justify-content: flex-start;
   margin-top: 20px;
 }
-.card-detail-row-title {
-  color: #a9afc1;
-  flex: none;
+.select-wrapper {
+  height: 50px;
+  overflow-y: visible;
+}
+.timezone-selector {
+  display: flex;
+  align-items: center;
+  gap: 3;
+  min-height: 50px;
+  padding: 5px;
+}
+.timezone-selector select {
+  background-color: rgb(43 51 68);
+  color: #fff;
+  border: none;
+  padding: 0 5px;
+  min-height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.timezone-selector select option {
   font-size: 14px;
-  font-weight: 700;
-  width: 40%;
 }
 .card-detail-row-content {
   align-items: center;
@@ -1016,6 +1032,32 @@ input[type="number"] {
   justify-content: flex-start;
   width: 60%;
 }
+@media (max-width: 720px) {
+  .card-detail-row {
+    display: block;
+  }
+  .timezone-selector {
+    display: block;
+
+    align-items: center;
+    gap: 3;
+    padding: 5px;
+  }
+  .card-detail-row-content {
+    width: 100%;
+  }
+  .timezone-selector select option {
+    font-size: 10px;
+  }
+}
+.card-detail-row-title {
+  color: #a9afc1;
+  flex: none;
+  font-size: 14px;
+  font-weight: 700;
+  width: 40%;
+}
+
 .card-detail-row-content-left {
   align-items: center;
   display: flex;
@@ -1034,6 +1076,9 @@ input[type="number"] {
   font-size: 16px;
   font-weight: 700;
   justify-content: flex-start;
+  max-width: 100%;
+
+  overflow-x: hidden;
 }
 
 .card-detail-row-content-right {
@@ -1060,4 +1105,22 @@ input[type="number"] {
   height: 26px;
   justify-content: center;
   min-width: 80px;
+}
+.balance-label p {
+  margin-left: 30px;
+}
+
+@media (max-width: 780px) {
+  .custom-wallet-modal-card input {
+    width: 60%;
+  }
+  .custom-wallet-modal-card label {
+    width: 20%;
+  }
+  .tooltipContainer {
+    width: 10%;
+  }
+  .balance-label p {
+    margin-left: 20%;
+  }
 }

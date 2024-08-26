@@ -37,7 +37,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       }}
     >
       <div
-        className="footer-modal mt-10 sm:mt-15"
+        className="footer-modal"
         style={{
           zIndex: "1000",
 

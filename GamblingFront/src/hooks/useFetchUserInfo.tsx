@@ -29,7 +29,7 @@ const useFetchUserInfo = () => {
         setAccessToken(token);
         //          document.cookie = "X-Access-Token=" + token + "; path=" + backendUrl;
         const userInfoResponse = await fetch(
-          `${backendUrl}/Account/UserInfo?domain=${domain}`,
+          `${backendUrl}/Account/UserInfo?domain=${domain}&chain=${siteInfo.chain}`,
           {
             method: "GET",
             headers: {
