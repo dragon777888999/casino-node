@@ -6,7 +6,6 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
 import "@/css/custom.css";
-import "@/css/rebel.css";
 
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
@@ -14,6 +13,7 @@ import { AppProvider, useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "../anchor/global";
 import SolanaWalletProvider from "../components/wallet-connecter/solana/SolanaWalletProvider";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function RootLayout({
   children
@@ -43,21 +43,31 @@ export default function RootLayout({
 }
 
 const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
-  const { siteInfo, setSiteInfo, loginStep, setLoginStep } = useAppContext();
+  const { siteInfo, setSiteInfo, siteInfoList, setSiteInfoList, loginStep, setLoginStep } = useAppContext();
+  const [chain, setChain] = useLocalStorage("chain", "");
+
   useEffect(() => {
     const fetchData = async () => {
       if (loginStep != 0) return;
       const domain = window.location.host;
       try {
         const response = await fetch(
-          `${backendUrl}/Account/SiteInfo?domain=${domain}`,
+          `${backendUrl}/Account/SiteInfoList?domain=${domain}`,
         );
 
         const result = await response.json();
         console.log("----------site info------------");
         console.log("result", result);
 
-        setSiteInfo(result);
+        setSiteInfoList(result);
+        const chains = Object.keys(result);
+        var curChain = chain;
+        if (curChain == "" || !chains.includes(curChain)) {
+          curChain = chains[0];
+          setChain(curChain);
+        }
+        const info = result[curChain];
+        setSiteInfo(info);
         setLoginStep(1);
       } catch (error) {
         console.error("Fetch error:", error);

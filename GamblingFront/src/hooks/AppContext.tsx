@@ -45,6 +45,10 @@ export interface UserInfo {
 interface AppState {
   loginStep: number;
   setLoginStep: (loginStep: number) => void;
+  
+  siteInfoList: { [key: string]: SiteInfo };
+  setSiteInfoList: (siteInfoList: { [key: string]: SiteInfo }) => void;
+
   siteInfo: SiteInfo;
   setSiteInfo: (siteInfo: SiteInfo) => void;
   userInfo: UserInfo;
@@ -84,6 +88,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     userCode: "",
     nickName: "",
   });
+  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>({});
   const [siteInfo, setSiteInfo] = useState<SiteInfo>({
     isLoginMode: false, // default to false (not in login mode)
     enableSideBar: false,
@@ -111,6 +116,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const value = {
     userInfo,
     setUserInfo,
+    siteInfoList,
+    setSiteInfoList,
     siteInfo,
     setSiteInfo,
     loginStep,

@@ -1,10 +1,10 @@
 const TronWeb = require('tronweb');
 
-// Set up TronWeb instance
-const tronWeb = new TronWeb({
-    fullHost: 'https://api.trongrid.io', // TronGrid is the default full node provider
-    headers: { "TRON-PRO-API-KEY": "your-api-key-here" }, // Use your API key if needed
-});
+// // Set up TronWeb instance
+// const tronWeb = new TronWeb({
+//     fullHost: 'https://api.trongrid.io', // TronGrid is the default full node provider
+//     headers: { "TRON-PRO-API-KEY": "your-api-key-here" }, // Use your API key if needed
+// });
 
 const config = require("../config/config");
 
