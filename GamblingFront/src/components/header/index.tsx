@@ -64,7 +64,7 @@ const Header = (props: {
             </div>
 
             <p
-              style={{ fontSize: "28px", fontWeight: "500",color:"#EB9F19",fontFamily:"Ovo"
+              style={{ fontSize: "28px", fontWeight: "500",color:"#EB9F19",fontFamily:"Century"
                }}
               className="flex hidden md:block"
             >
