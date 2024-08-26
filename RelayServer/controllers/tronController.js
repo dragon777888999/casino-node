@@ -1,12 +1,12 @@
-const Cosmos = require("@oraichain/cosmosjs").default;
-const createHash = require("create-hash");
-const lcdUrl = "https://lcd.orai.io";
-const chainId = "Oraichain";
-const message = Cosmos.message;
-const cosmos = new Cosmos(lcdUrl, chainId);
-const config = require("../config/config");
+const TronWeb = require('tronweb');
 
-cosmos.setBech32MainPrefix("orai");
+// Set up TronWeb instance
+const tronWeb = new TronWeb({
+    fullHost: 'https://api.trongrid.io', // TronGrid is the default full node provider
+    headers: { "TRON-PRO-API-KEY": "your-api-key-here" }, // Use your API key if needed
+});
+
+const config = require("../config/config");
 
 exports.entry = async (req, res) => {
   const data = req.body;
@@ -14,13 +14,13 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-        await getBlockFunc_orai(req, res);
+        await getBlockFunc_tron(req, res);
         break;
       case "CreateAddress":
-        await createAddressFunc_orai(req, res);
+        await createAddressFunc_tron(req, res);
         break;
       case "SendCoin":
-        await sendCoinFunc_orai(req, res);
+        await sendCoinFunc_tron(req, res);
         break;
       default:
         res.send({ status: 1, msg: "Invalid method" });
@@ -36,18 +36,22 @@ exports.entry = async (req, res) => {
   }
 };
 
-getBlockFunc_orai = async (req, res) => {
+getBlockFunc_tron = async (req, res) => {
   const data = req.body;
-  const height = data.height;
+  const blockNumber = data.height;
   const walletAddressList = data.walletAddressList;
   const tokenAddress2CoinType = data.tokenAddress2CoinType;
-  const block = await cosmos.get(`/blocks/${height}`);
   const chain = data.chain;
+
+  const block = await tronWeb.trx.getBlock(blockNumber);
+  
   const results = [];
-  if (!block || !block.block || !block.block.data || !block.block.data.txs) {
+  if (!block || !block.transactions) {
     res.send({ status: 1 });
     return;
   }
+
+  console.log("transactions", block.transactions);
 
   for (let index = 0; index < block.block.data.txs.length; index++) {
     for (const tokenAddress in tokenAddress2CoinType) {
@@ -88,12 +92,12 @@ getBlockFunc_orai = async (req, res) => {
 
   res.send({ status: 0, data: results });
 };
-createAddressFunc_orai = async (req, res) => {
+createAddressFunc_tron = async (req, res) => {
   const mnemonic = cosmos.generateMnemonic(128);
   const address = cosmos.getAddress(mnemonic);
   res.send({ status: 0, mnemonic, address });
 };
-sendCoinFunc_orai = async (req, res) => {
+sendCoinFunc_tron = async (req, res) => {
   const data = req.body;
   const fees = config.fee[data.chain];
 
