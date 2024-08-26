@@ -37,12 +37,17 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Bangers";
+  src: url("/RebelGames/fonts/Bangers-Regular.ttf") format("truetype");
+}
+
 body {
   background-color: rgb(26 34 44);
   /* background-color: rgb(0, 0, 0); */
   /* background: "rgb(26 34 44)"; */
-  /* font-family: "Organetto"; */
-  font-family: sans-serif;
+  font-family: "Bangers";
+  /* font-family: sans-serif; */
 }
 
 .rebel-header-btn {
