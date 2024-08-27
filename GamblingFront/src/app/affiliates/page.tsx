@@ -23,7 +23,7 @@ const Affiliates = () => {
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
   const [info, setInfo] = useState<AffiliaterInfo | null>(null);
-
+  const isButtonDisabled = Boolean(affiliateCode);
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -63,6 +63,10 @@ const Affiliates = () => {
 
         if (result.status === 0) {
           setInfo(result);
+          setAffiliateCode(result.affiliateCodes[0]);
+
+          console.log("code", result.affiliateCodes[0]);
+          setReferralLink(`${backendUrl}/${result.affiliateCodes[0]}`);
           toast.success("success");
         } else {
           toast.warn("Operation failed");
@@ -104,6 +108,7 @@ const Affiliates = () => {
       const result = await response.json();
       if (result.status === 0) {
         toast.success("success");
+        GetAffiliaterInfo();
       } else {
         toast.warn("Operation failed");
         throw new Error("Unexpected status code");
@@ -115,8 +120,13 @@ const Affiliates = () => {
     }
   };
   console.log("parse", info);
+  const totalBetAmount = info?.totalBetAmount ?? 0; // Default to 0 if undefined
+  const totalPayoutAmount = info?.totalPayoutAmount ?? 0;
+  const totalEarning = totalBetAmount - totalPayoutAmount;
+  // setReferralLink(info?.affiliateCodes[0]);
   // if (info?.referralInfos.length > 0)
   //   setAffiliateCode(info?.referralInfos[0]);
+
   return (
     <div className="mx-auto max-w-270">
       <div className="grid gap-8">
@@ -157,7 +167,11 @@ const Affiliates = () => {
                     }}
                   />
                   <div className="Input_btn-container">
-                    <button className="input-btn" onClick={setCode}>
+                    <button
+                      className="input-btn"
+                      onClick={setCode}
+                      disabled={isButtonDisabled}
+                    >
                       <div className="Button_inner-content">
                         <span style={{ fontSize: "13px" }}>Set Code</span>
                       </div>
@@ -184,7 +198,9 @@ const Affiliates = () => {
                       type="text"
                       name="linkurl"
                       id="linkurl"
-                      defaultValue={referralLink}
+                      // value={`${backendUrl}/${affiliateCode}`}
+                      value={referralLink}
+                      readOnly
                     />
                     <button onClick={handleCopy}>
                       <div className="">
@@ -413,7 +429,7 @@ const Affiliates = () => {
                           alt="Product"
                         />
                       </div>
-                      <span>{info?.totalBetAmount.toString()}</span>
+                      <span>{totalEarning}</span>
                     </div>
                   </div>
                 </div>
@@ -501,7 +517,9 @@ const Affiliates = () => {
                   className="flex flex w-full items-center justify-center rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                   style={{ height: "200px" }}
                 >
-                  <span>No Referrals</span>
+                  {!info?.referralInfos}
+                  &&<span>No Referrals</span>
+                  <span>{info?.referralInfos}</span>
                 </div>
               </div>
             </div>

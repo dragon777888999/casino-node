@@ -505,10 +505,10 @@
   border: 1px solid #252b4e;
 }
 .BetResult-user-display {
-  padding: 25px 35px 20px;
+  padding: 20px 20px 20px;
   width: 100%;
   border-radius: 6px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #111625;
   display: flex;
   justify-content: flex-start;
@@ -800,7 +800,7 @@
   box-sizing: border-box;
   /* padding: 20px 20px 30px 20px; */
   position: relative;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -969,6 +969,10 @@
   color: #fff;
   border: none;
   border: 1px solid hsla(0, 0%, 100%, 0.082);
+}
+.input-btn:disabled {
+  background: linear-gradient(149.01deg, #7f6519 20.89%, #563d1e 84.15%);
+  background-color: #5f5230;
 }
 .Button_inner-content {
   line-height: normal;

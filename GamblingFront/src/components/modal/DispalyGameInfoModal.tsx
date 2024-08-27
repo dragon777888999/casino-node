@@ -63,7 +63,11 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
         <div className="wallet-adapter-modal-container">
           <div
             className="custom-modal-wrapper"
-            style={{ padding: "25px", backgroundColor: "#141a2b" }}
+            style={{
+              padding: "25px",
+              backgroundColor: "#141a2b",
+              maxWidth: "400px",
+            }}
           >
             <div
               className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
@@ -72,7 +76,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
               <div className="row">
                 <h3
                   style={{
-                    fontSize: "30px",
+                    fontSize: "18px",
                     fontWeight: "700",
                     color: "white",
                   }}
@@ -98,7 +102,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
               <div className="BetResult-gamename m-0 p-0">
                 <h2
                   style={{
-                    fontSize: "30px",
+                    fontSize: "18px",
                     lineHeight: "1",
                     color: "white",
                   }}
@@ -107,8 +111,11 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 </h2>
               </div>
               <div className="BetResult-game-detail">
-                <div className="BetResult-gam-detail-content">
-                  <p>Bet ID: {(gameData?.time / 10000).toFixed(0)}</p>
+                <div
+                  className="BetResult-gam-detail-content"
+                  style={{ fontSize: "14px" }}
+                >
+                  <p>Bet ID: {(gameData?.time).toString().slice(-8)}</p>
                   <p>
                     Placed by{" "}
                     {gameData?.userCode.length > 5
@@ -132,7 +139,10 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
             <div className="BetResult-detail-content">
               <div className="BetResult_item-content">
                 <h3 style={{ fontSize: "16px", color: "white" }}>Bet Result</h3>
-                <div className="BetResult-detail-item-row">
+                <div
+                  className="BetResult-detail-item-row"
+                  style={{ fontSize: "14px" }}
+                >
                   <div className="BetResult-detail-item">
                     <span>Bet</span>
                     <div className="custom-modal-small-card">
@@ -154,6 +164,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                             (gameData?.payoutAmount ?? 0)
                           ).toFixed(2)
                         : "0.00"}{" "}
+                      x
                     </div>
                   </div>
                   <div className="BetResult-detail-item">
