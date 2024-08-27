@@ -184,7 +184,7 @@ export default function GamePanel({
                             layout="responsive"
                             width={1200}
                             height={800}
-                            // style={{ width: "100%", borderRadius: "6px" }}
+                          // style={{ width: "100%", borderRadius: "6px" }}
                           />
                           {/* <div className="image-outline">
                             <Image
@@ -213,6 +213,5 @@ export default function GamePanel({
         </div>
       </div>
     </div>
-  </div>
   );
 }

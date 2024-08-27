@@ -54,34 +54,6 @@ const Footer = (props: {
               </Tab>
             </Tabs>
           </div>
-          <div className="style-card">
-            <div className="RebelGames-card-header">
-              <Image
-                src={cardHeaderImg}
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={width}
-                height={height}
-                style={{ width: "100%" }}
-              />
-            </div>
-            <div className={`${style}-card-body`}>
-              <div className={`${style}-card-body-contain`}>
-                <TableAll isAll={true}></TableAll>
-              </div>
-            </div>
-            <div className="RebelGames-card-footer">
-              <Image
-                src={cardfooterImg}
-                alt="Project Thumbnail"
-                layout="responsive"
-                width={width}
-                height={height}
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-          {/* <TableAll isAll={true}></TableAll> */}
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
               <p className="" style={{ fontSize: "20px" }}>
