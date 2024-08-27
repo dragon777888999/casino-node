@@ -7,12 +7,15 @@ import MenuBar from "./MenuBar";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
 import { useAppContext } from "../../hooks/AppContext";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =    useAppContext();
+  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =
+    useAppContext();
+  const [chain, setChain] = useLocalStorage("chain", "");
   useEffect(() => {
     try {
       const cmd = JSON.parse(socketData);
@@ -36,10 +39,15 @@ const Header = (props: {
   let logoImgSrc = "/default/images/logo.png";
   let logoWidth = 45;
   let logoHeight = 45;
-
+  let imageSolanaSrc = "/default/images/chain/Solana.png";
+  let imageXrplSrc = "/default/images/chain/Xrpl.png";
   if (siteInfo.themeMap?.logo) {
     logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
+  const onSetChain = (value: string) => {
+    setChain(value);
+    window.location.reload();
+  };
 
   return (
     <>
@@ -64,8 +72,12 @@ const Header = (props: {
             </div>
 
             <p
-              style={{ fontSize: "28px", fontWeight: "500",color:"#EB9F19",fontFamily:"Century"
-               }}
+              style={{
+                fontSize: "28px",
+                fontWeight: "500",
+                color: "#EB9F19",
+                fontFamily: "Century",
+              }}
               className="flex hidden md:block"
             >
               {siteInfo.mark}
@@ -114,12 +126,48 @@ const Header = (props: {
               </button>
             )}
           </div>
-
+          <div>
+            <ul className="flex items-center gap-2 2xsm:gap-4">
+              <li
+                className={`${chain === "Solana" ? "active-chain" : ""} chain-btn`}
+              >
+                <button style={{ width: "30px", padding: "5px" }}>
+                  {" "}
+                  <Image
+                    src={imageSolanaSrc}
+                    alt={"chain"} // Provide fallback alt text
+                    layout="responsive"
+                    width={30}
+                    height={30}
+                    onClick={() => {
+                      onSetChain("Solana");
+                    }}
+                  />
+                </button>
+              </li>
+              <li
+                className={`${chain === "Xrpl" ? "active-chain" : ""} chain-btn`}
+              >
+                <button style={{ width: "30px", padding: "5px" }}>
+                  {" "}
+                  <Image
+                    src={imageXrplSrc}
+                    alt={"chain"} // Provide fallback alt text
+                    layout="responsive"
+                    width={30}
+                    height={30}
+                    onClick={() => {
+                      onSetChain("Xrpl");
+                    }}
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
           {loginStep > 1 ? (
             <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
-              <ul className="flex items-center gap-2 2xsm:gap-4"></ul>
               {siteInfo?.isLoginMode && <LoginButton />}
               {!siteInfo?.isLoginMode && <ConnectButton />}
             </div>

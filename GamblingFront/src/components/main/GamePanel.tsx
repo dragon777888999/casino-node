@@ -213,6 +213,5 @@ export default function GamePanel({
         </div>
       </div>
     </div>
-  </div>
   );
 }
