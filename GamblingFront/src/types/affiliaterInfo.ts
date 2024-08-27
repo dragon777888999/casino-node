@@ -2,10 +2,10 @@ export type AffiliaterInfo = {
   currencyCode: String;
   lastSettleTime: Date;
   msg: string;
-  totalBetCount: Number;
-  totalBetAmount: Number;
-  totalPayoutAmount: Number;
-  totalIncome: Number;
-  totalRefferalCount: Number;
+  totalBetCount: number;
+  totalBetAmount: number;
+  totalPayoutAmount: number;
+  totalIncome: number;
+  totalRefferalCount: number;
   referralInfos: string;
 };

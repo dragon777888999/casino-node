@@ -35,53 +35,52 @@ const Affiliates = () => {
     );
   };
   const router = useRouter();
-  useEffect(() => {
-    const GetAffiliaterInfo = async () => {
-      try {
-        if (accessToken == "") return router.push("/");
-        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-          method: "POST",
+  const GetAffiliaterInfo = async () => {
+    try {
+      if (accessToken == "") return router.push("/");
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
 
-          headers: {
-            "X-Access-Token": accessToken,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            method: "GetAffiliaterInfo",
-            currencyCode: userInfo.selectedCoinType,
-            // currencyCode: "ROOG",
-          }),
-        });
-        // alert(accessToken);
+        headers: {
+          "X-Access-Token": accessToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "GetAffiliaterInfo",
+          currencyCode: userInfo.selectedCoinType,
+          // currencyCode: "ROOG",
+        }),
+      });
+      // alert(accessToken);
 
-        console.log("userinfo", userInfo.selectedCoinType);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-
-        const result = await response.json();
-
-        if (result.status === 0) {
-          setInfo(result);
-          setAffiliateCode(result.affiliateCodes[0]);
-
-          console.log("code", result.affiliateCodes[0]);
-          setReferralLink(`${backendUrl}/${result.affiliateCodes[0]}`);
-          toast.success("success");
-        } else {
-          toast.warn("Operation failed");
-          throw new Error("Unexpected status code");
-        }
-      } catch (error) {
-        console.error("Error fetching game data:", error);
-      } finally {
-        console.log(Response);
+      console.log("userinfo", userInfo.selectedCoinType);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
-    };
 
+      const result = await response.json();
+
+      if (result.status === 0) {
+        setInfo(result);
+        setAffiliateCode(result.affiliateCodes[0]);
+
+        console.log("code", result.affiliateCodes[0]);
+        setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        toast.success("success");
+      } else {
+        toast.warn("Operation failed");
+        throw new Error("Unexpected status code");
+      }
+    } catch (error) {
+      console.error("Error fetching game data:", error);
+    } finally {
+      console.log(Response);
+    }
+  };
+useEffect(() => {
     GetAffiliaterInfo();
     console.log("affiliaterinfo", info);
-  }, [accessToken]);
+  }, []);
   const setCode = async () => {
     try {
       if (affiliateCode == "")
@@ -108,7 +107,7 @@ const Affiliates = () => {
       const result = await response.json();
       if (result.status === 0) {
         toast.success("success");
-        GetAffiliaterInfo();
+        await GetAffiliaterInfo();
       } else {
         toast.warn("Operation failed");
         throw new Error("Unexpected status code");
@@ -120,9 +119,9 @@ const Affiliates = () => {
     }
   };
   console.log("parse", info);
-  const totalBetAmount = info?.totalBetAmount ?? 0; // Default to 0 if undefined
-  const totalPayoutAmount = info?.totalPayoutAmount ?? 0;
-  const totalEarning = totalBetAmount - totalPayoutAmount;
+  const totalBetAmount : number = info?.totalBetAmount ?? 0; // Default to 0 if undefined
+  const totalPayoutAmount : number = info?.totalPayoutAmount ?? 0;
+  const totalEarning : number = totalBetAmount - totalPayoutAmount;
   // setReferralLink(info?.affiliateCodes[0]);
   // if (info?.referralInfos.length > 0)
   //   setAffiliateCode(info?.referralInfos[0]);
