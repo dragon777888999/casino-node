@@ -1,12 +1,11 @@
 export type AffiliaterInfo = {
-  msg: string;
-  lastSettleTime: Date;
-
   currencyCode: String;
+  lastSettleTime: Date;
+  msg: string;
   totalBetCount: Number;
   totalBetAmount: Number;
   totalPayoutAmount: Number;
   totalIncome: Number;
-  totalReferralCount: Number;
+  totalRefferalCount: Number;
   referralInfos: string;
 };

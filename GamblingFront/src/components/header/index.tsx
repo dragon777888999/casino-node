@@ -8,6 +8,8 @@ import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
 import { useAppContext } from "../../hooks/AppContext";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import { Switch } from "@nextui-org/react";
+import ToogleButton from "./ToogleButton";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -35,7 +37,7 @@ const Header = (props: {
       console.error("Failed to parse JSON:", error);
     }
   }, [socketData]);
-
+  const [isSelected, setIsSelected] = useState(true);
   let logoImgSrc = "/default/images/logo.png";
   let logoWidth = 45;
   let logoHeight = 45;
@@ -44,10 +46,15 @@ const Header = (props: {
   if (siteInfo.themeMap?.logo) {
     logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
-  const onSetChain = (value: string) => {
-    setChain(value);
+
+  const onSetChain = () => {
+    if (isSelected) setChain("Solana");
+    else setChain("Xrpl");
     window.location.reload();
   };
+  useEffect(() => {
+    if (chain === "Solana") setIsSelected(false);
+  }, []);
 
   return (
     <>
@@ -58,6 +65,7 @@ const Header = (props: {
         <div className="mx-auto flex w-full max-w-screen-2xl flex-grow items-center justify-between px-2 py-1 shadow-2 md:px-6 2xl:px-11">
           <div className="flex items-center gap-2 sm:gap-4 ">
             {/* <!-- Hamburger Toggle BTN --> */}
+
             <div className="flex md:block">
               <Link href="/">
                 <Image
@@ -126,48 +134,12 @@ const Header = (props: {
               </button>
             )}
           </div>
-          <div>
-            <ul className="flex items-center gap-2 2xsm:gap-4">
-              <li
-                className={`${chain === "Solana" ? "active-chain" : ""} chain-btn`}
-              >
-                <button style={{ width: "30px", padding: "5px" }}>
-                  {" "}
-                  <Image
-                    src={imageSolanaSrc}
-                    alt={"chain"} // Provide fallback alt text
-                    layout="responsive"
-                    width={30}
-                    height={30}
-                    onClick={() => {
-                      onSetChain("Solana");
-                    }}
-                  />
-                </button>
-              </li>
-              <li
-                className={`${chain === "Xrpl" ? "active-chain" : ""} chain-btn`}
-              >
-                <button style={{ width: "30px", padding: "5px" }}>
-                  {" "}
-                  <Image
-                    src={imageXrplSrc}
-                    alt={"chain"} // Provide fallback alt text
-                    layout="responsive"
-                    width={30}
-                    height={30}
-                    onClick={() => {
-                      onSetChain("Xrpl");
-                    }}
-                  />
-                </button>
-              </li>
-            </ul>
-          </div>
+
           {loginStep > 1 ? (
             <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
+              <ToogleButton />
               {siteInfo?.isLoginMode && <LoginButton />}
               {!siteInfo?.isLoginMode && <ConnectButton />}
             </div>

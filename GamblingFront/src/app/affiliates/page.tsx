@@ -7,19 +7,22 @@ import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
-//import { AffiliaterInfo } from "@/types/affiliaterInfo";
+import { AffiliaterInfo } from "@/types/affiliaterInfo";
 
 import { toast } from "react-toastify";
 // import { useRouter } from "next/router";
 
 // import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
 // export const metadata = MainPageMetadata;
+interface Props {
+  info: AffiliaterInfo;
+}
 
 const Affiliates = () => {
   const { accessToken, userInfo } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
-//  const [affiliaterInfo, setAffiliaterInfo] = useState<AffiliaterInfo[]>();
+  const [info, setInfo] = useState<AffiliaterInfo | null>(null);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
@@ -44,19 +47,22 @@ const Affiliates = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            method: GetAffiliaterInfo,
+            method: "GetAffiliaterInfo",
             currencyCode: userInfo.selectedCoinType,
+            // currencyCode: "ROOG",
           }),
         });
         // alert(accessToken);
-        console.log("afilliate", response);
+
+        console.log("userinfo", userInfo.selectedCoinType);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
 
         const result = await response.json();
+
         if (result.status === 0) {
-          setAffiliaterInfo(result);
+          setInfo(result);
           toast.success("success");
         } else {
           toast.warn("Operation failed");
@@ -70,7 +76,7 @@ const Affiliates = () => {
     };
 
     GetAffiliaterInfo();
-    console.log("affiliaterinfo", affiliaterInfo);
+    console.log("affiliaterinfo", info);
   }, [accessToken]);
   const setCode = async () => {
     try {
@@ -108,6 +114,9 @@ const Affiliates = () => {
       console.log(Response);
     }
   };
+  console.log("parse", info);
+  // if (info?.referralInfos.length > 0)
+  //   setAffiliateCode(info?.referralInfos[0]);
   return (
     <div className="mx-auto max-w-270">
       <div className="grid gap-8">
@@ -171,7 +180,7 @@ const Affiliates = () => {
                     style={{ width: "100%" }}
                   >
                     <input
-                      className="w-full rounded border border-stroke bg-gray px-4.5 py-3 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                      className="w-full rounded border border-stroke bg-gray py-3 pl-7.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                       type="text"
                       name="linkurl"
                       id="linkurl"
@@ -240,7 +249,7 @@ const Affiliates = () => {
                   </div>
                   <div className="affiliates-text">
                     <h3>Total Referrals</h3>
-                    <span>0</span>
+                    <span>{info?.totalRefferalCount?.toString()}</span>
                   </div>
                 </div>
               </div>
@@ -339,7 +348,7 @@ const Affiliates = () => {
                           alt="Product"
                         />
                       </div>
-                      <span>0.00</span>
+                      <span>{info?.totalBetCount.toString()}</span>
                     </div>
                   </div>
                 </div>
@@ -404,7 +413,7 @@ const Affiliates = () => {
                           alt="Product"
                         />
                       </div>
-                      <span>0.00</span>
+                      <span>{info?.totalBetAmount.toString()}</span>
                     </div>
                   </div>
                 </div>
@@ -467,7 +476,7 @@ const Affiliates = () => {
                           alt="Product"
                         />
                       </div>
-                      <span>0.00</span>
+                      <span>{info?.totalIncome.toString()}</span>
                     </div>
                   </div>
                 </div>
