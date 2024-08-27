@@ -76,8 +76,7 @@
   border: 1px solid #1c2d32;
   background: #10141f !important;
 
-  font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: inherit;
   flex: 1;
 }
 .wallet-adapter-modal-wrapper label {
@@ -95,8 +94,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   height: 48px;
@@ -108,13 +106,13 @@
 .wallet-adapter-button {
   align-items: center;
   background: linear-gradient(90deg, #5fa5ea, #2f71de);
-
   border-radius: 4px;
   border-right: none;
   color: #fff;
   display: flex;
   font-size: 14px;
   font-weight: 700;
+  font-family: inherit;
   height: 40px;
   justify-content: center;
   margin: 0 auto;
@@ -810,8 +808,7 @@
   border: 1px solid #1c2d32;
   background: #141a2b;
 
-  font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: inherit;
   flex: 1;
 }
 .wallet-manage-modal-button {

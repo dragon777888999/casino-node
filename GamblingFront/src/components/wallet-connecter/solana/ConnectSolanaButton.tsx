@@ -19,6 +19,6 @@ export default function ConnectSolanaButton() {
     console.log("wallet publickey");
   }, [wallet]);
 
-  return <>{!wallet.connected && <WalletMultiButton className="" />}</>;
+  return <>{!wallet.connected && <WalletMultiButton className="">Connect</WalletMultiButton>}</>;
   // return <>{ loginStep != 2 && <WalletMultiButton className="" />}</>;
 }
