@@ -11,4 +11,3 @@ export type AffiliaterInfo = {
   totalRefferalCount: number;
   referralInfos: ReferralInfo[];
 };
-

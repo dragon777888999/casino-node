@@ -31,7 +31,7 @@ const AffiliateTable: React.FC<AffiliateTableProps> = ({ data }) => {
         style={{ fontSize: "14px", color: "#7b808e" }}
       >
         {/* Table Header */}
-        <div className="style-th-row flex grid w-full grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-6 md:px-6 2xl:px-7.5">
+        <div className="style-th-row flex grid w-full grid-cols-2 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-6 md:px-6 2xl:px-7.5">
           <div className="col-span-1 flex items-center">
             <p>Affiliate Code </p>
           </div>
@@ -44,17 +44,17 @@ const AffiliateTable: React.FC<AffiliateTableProps> = ({ data }) => {
           <div className="col-span-1 flex hidden items-center justify-center md:flex">
             <p>BetAmount</p>
           </div>
-          <div className="col-span-1 flex items-center justify-center md:col-span-1 ">
+          <div className="col-span-1 flex hidden items-center justify-center md:col-span-1  md:flex">
             <p>Payout</p>
           </div>
-          <div className="col-span-1 flex items-center justify-end md:col-span-1 ">
+          <div className="col-span-1 flex items-center justify-end md:col-span-1  ">
             <p>Income</p>
           </div>
         </div>
         {tableData ? (
           tableData.map((info, index) => (
             <div
-              className="flex grid grid-cols-6 gap-1 px-4 py-3 md:px-6 2xl:px-7.5"
+              className="flex grid grid-cols-2 gap-1 px-4 py-3 sm:grid-cols-6 md:px-6 2xl:px-7.5"
               key={index}
             >
               <div className="col-span-1 flex items-center">
@@ -75,31 +75,49 @@ const AffiliateTable: React.FC<AffiliateTableProps> = ({ data }) => {
                 <p className="text-black dark:text-white">
                   {" "}
                   {info.betCount !== undefined
-                    ? info.betCount.toString()
+                    ? info.betCount.toString().slice(0, 6)
                     : "N/A"}
                 </p>
               </div>
-              <div className="col-span-1 flex hidden items-center justify-center md:flex">
+              <div className="col-span-1 flex hidden items-center justify-center gap-1 md:flex">
+                <Image
+                  src={`/default/images/currency/${info.currencyCode}.png`} // Adjust path and naming if needed
+                  width={15}
+                  height={15}
+                  alt={userInfo.selectedCoinType}
+                />
                 <p className="text-black dark:text-white">
                   {info.betAmount !== undefined
-                    ? info.betAmount.toString()
+                    ? info.betAmount.toString().slice(0, 6)
                     : "N/A"}
                 </p>
               </div>
-              <div className="col-span-1 flex hidden items-center justify-center md:flex">
+              <div className="col-span-1 flex hidden items-center justify-center gap-1 md:flex">
+                <Image
+                  src={`/default/images/currency/${info.currencyCode}.png`} // Adjust path and naming if needed
+                  width={15}
+                  height={15}
+                  alt={userInfo.selectedCoinType}
+                />
                 <p className="text-black dark:text-white">
                   {info.payoutAmount !== undefined
-                    ? info.payoutAmount.toString()
+                    ? info.payoutAmount.toString().slice(0, 6)
                     : "N/A"}
                 </p>
               </div>
               <div className="col-span-1 flex items-center justify-end md:col-span-1">
                 <div className="flex items-center justify-center gap-2">
                   <div></div>
-                  <div>
+                  <div className="flex items-center gap-1">
+                    <Image
+                      src={`/default/images/currency/${info.currencyCode}.png`} // Adjust path and naming if needed
+                      width={15}
+                      height={15}
+                      alt={userInfo.selectedCoinType}
+                    />
                     <p className="text-black dark:text-white">
-                      {info.payoutAmount !== undefined
-                        ? info.payoutAmount.toString()
+                      {info.income !== undefined
+                        ? info.income.toString().slice(0, 6)
                         : "N/A"}
                     </p>
                   </div>
