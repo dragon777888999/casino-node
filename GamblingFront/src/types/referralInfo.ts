@@ -7,5 +7,4 @@ export type ReferralInfo = {
   nickName: string;
   payoutAmount: Number;
   userCode: string;
-  //   referralInfos: string;
 };

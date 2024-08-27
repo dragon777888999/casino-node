@@ -3,18 +3,17 @@ import Image from "next/image";
 import DispalyGameInfoModal from "../modal/DispalyGameInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
-import { ReferralInfo } from "@/types/referralinfo";
+import { ReferralInfo } from "@/types/referralInfo";
 
 const displayLength = 10;
 interface AffiliateTableProps {
-  data: ReferralInfo[];
-  info: ReferralInfo[];
+  data: ReferralInfo[] | null;
 }
 
 const AffiliateTable: React.FC<AffiliateTableProps> = ({ data }) => {
   const { userInfo, siteInfo } = useAppContext();
 
-  const [tableData, setTableData] = useState<ReferralInfo[]>([]);
+  const [tableData, setTableData] = useState<ReferralInfo[] | null>([]);
   useEffect(() => {
     // Initialize with the passed data
     setTableData(data);

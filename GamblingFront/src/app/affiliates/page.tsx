@@ -519,7 +519,7 @@ const Affiliates = () => {
                 > */}
                 {!info?.referralInfos && <span>No Referrals</span>}
                 {/* <span>{info?.referralInfos}</span> */}
-                <AffiliateTable data={info?.referralInfos}></AffiliateTable>
+                <AffiliateTable data={info?.referralInfos ?? null}></AffiliateTable>
                 {/* </div> */}
               </div>
             </div>

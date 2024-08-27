@@ -1,3 +1,5 @@
+import { ReferralInfo } from "./referralInfo";
+
 export type AffiliaterInfo = {
   currencyCode: String;
   lastSettleTime: Date;
@@ -7,6 +9,6 @@ export type AffiliaterInfo = {
   totalPayoutAmount: number;
   totalIncome: number;
   totalRefferalCount: number;
-  referralInfos: string;
+  referralInfos: ReferralInfo[];
 };
-a;
+
