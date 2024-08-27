@@ -19,7 +19,7 @@ const ConnectXrplWalletModal: React.FC<ConnectXrpltWalletModalProps> = ({
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [qrcode, setQrcode] = useState("");
-  const [enableJwt, setEnableJwt] = useState(false);
+  const [enableJwt, setEnableJwt] = useState(true);
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
 
   useEffect(() => {
