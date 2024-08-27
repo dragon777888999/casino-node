@@ -16,7 +16,6 @@ const useDepositOnSolana = () => {
   //const { connection } = useConnection();
   const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
   const wallet = useWallet();
-  const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const { siteInfo, userInfo, walletType } = useAppContext();
 
@@ -108,16 +107,17 @@ const useDepositOnSolana = () => {
       );
       if (confirmResult.value.err) {
         console.error("Transaction confirmation failed:", confirmResult.value.err);
-        setStatus("Deposit failed");
+        resultCallback(1);
         return;
       }
       console.log("Transaction confirmed");
-      setStatus("Deposit successful");
+      resultCallback(0);
     } catch (error) {
       console.error("Transaction error:", error);
       const errorMessage = (error as Error).message || "An unknown error occurred";
       setError(errorMessage);
     }
+    resultCallback(1);
     console.log("status", status);
   };
 
