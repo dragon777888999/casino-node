@@ -4,7 +4,7 @@ import {
   createAssociatedTokenAccountIdempotentInstruction,
   createTransferInstruction,
 } from "@solana/spl-token";
-import { PublicKey, Transaction, ComputeBudgetProgram } from "@solana/web3.js";
+import { PublicKey, Transaction, ComputeBudgetProgram, SystemProgram } from "@solana/web3.js";
 import {
   useAnchorWallet,
   useConnection,
@@ -17,7 +17,7 @@ const useDepositOnSolana = () => {
   const wallet = useWallet();
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { siteInfo, userInfo, walletType } =    useAppContext();
+  const { siteInfo, userInfo, walletType } = useAppContext();
 
   const depositOnSolana = async (
     depositAddress: string,
@@ -26,63 +26,78 @@ const useDepositOnSolana = () => {
     setQrcode: (qr_png: any) => void,
     setJumpLink: (link: any) => void
   ) => {
-    if (!wallet.publicKey) return;
+    if (!wallet.publicKey)
+      return;
     if (depositAmount <= 0) {
       console.log("Deposit amount cannot be 0");
       return;
     }
-
-    const tokenAddress =
-      siteInfo?.tokenAddressMap[siteInfo.availableCoinTypes[0]];
-    const ata = getAssociatedTokenAddressSync(
-      new PublicKey(tokenAddress),
-      wallet.publicKey,
-    );
-    const nextAta = getAssociatedTokenAddressSync(
-      new PublicKey(tokenAddress),
-      new PublicKey(depositAddress),
-      true,
-    );
-
+    const maxLamports = 2000000;
+    const tokenAddress = siteInfo?.tokenAddressMap[userInfo.selectedCoinType];
     const transaction = new Transaction();
-    const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
-      microLamports: 210000,
-    });
-    transaction.add(addPriorityFee);
-
-    transaction.add(
-      createAssociatedTokenAccountIdempotentInstruction(
-        wallet.publicKey,
-        nextAta,
-        new PublicKey(depositAddress),
+    if (tokenAddress) {
+      const ata = getAssociatedTokenAddressSync(
         new PublicKey(tokenAddress),
-      ),
-    );
-
-    transaction.add(
-      createTransferInstruction(
-        ata,
-        nextAta,
         wallet.publicKey,
-        depositAmount *
-          10 ** siteInfo?.digitsMap[siteInfo.availableCoinTypes[0]],
-      ),
-    );
+      );
+      const nextAta = getAssociatedTokenAddressSync(
+        new PublicKey(tokenAddress),
+        new PublicKey(depositAddress),
+        true,
+      );
 
+      const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+        microLamports: maxLamports,
+      });
+      transaction.add(addPriorityFee);
+      transaction.add(
+        createAssociatedTokenAccountIdempotentInstruction(
+          wallet.publicKey,
+          nextAta,
+          new PublicKey(depositAddress),
+          new PublicKey(tokenAddress),
+        ),
+      );
+      transaction.add(
+        createTransferInstruction(
+          ata,
+          nextAta,
+          wallet.publicKey,
+          depositAmount * 10 ** siteInfo?.digitsMap[userInfo.selectedCoinType],
+        ),
+      );
+    }
+    else {
+      const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+        microLamports: maxLamports,
+      });
+      const modifyComputeUnits = ComputeBudgetProgram.setComputeUnitLimit({
+        units: 500,
+      });
+      transaction.add(addPriorityFee);
+      transaction.add(modifyComputeUnits);
+      transaction.add(
+        SystemProgram.transfer({
+          fromPubkey: wallet.publicKey,
+          toPubkey: new PublicKey(depositAddress),
+          lamports: Math.floor(depositAmount * 10 ** siteInfo?.digitsMap[userInfo.selectedCoinType]),
+        })
+      );
+    }
     try {
       const transactionSignature = await wallet.sendTransaction(
         transaction,
         connection,
-        { skipPreflight: true, preflightCommitment: "finalized" },
+        { preflightCommitment: "confirmed", maxRetries: 20 },
       );
       console.log("transaction", transactionSignature);
       setStatus("Deposit successful");
       const confirmResult = await connection.confirmTransaction(
         transactionSignature,
-        "processed",
+        "confirmed",
       );
     } catch (error) {
-      console.error("Transaction error:", error);  
+      console.error("Transaction error:", error);
       const errorMessage = (error as Error).message || "An unknown error occurred";
       setError(errorMessage);
     }
