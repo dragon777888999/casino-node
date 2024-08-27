@@ -8,8 +8,9 @@ import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import Link from "next/link";
 import { AffiliaterInfo } from "@/types/affiliaterInfo";
-
+import AffiliateTable from "@/components/table/AffiliateTable";
 import { toast } from "react-toastify";
+// import { ReferralInfo } from "@/types/referralinfo";
 // import { useRouter } from "next/router";
 
 // import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
@@ -35,6 +36,7 @@ const Affiliates = () => {
     );
   };
   const router = useRouter();
+
   useEffect(() => {
     const GetAffiliaterInfo = async () => {
       try {
@@ -81,7 +83,7 @@ const Affiliates = () => {
 
     GetAffiliaterInfo();
     console.log("affiliaterinfo", info);
-  }, [accessToken]);
+  }, [accessToken, affiliateCode]);
   const setCode = async () => {
     try {
       if (affiliateCode == "")
@@ -108,7 +110,6 @@ const Affiliates = () => {
       const result = await response.json();
       if (result.status === 0) {
         toast.success("success");
-        GetAffiliaterInfo();
       } else {
         toast.warn("Operation failed");
         throw new Error("Unexpected status code");
@@ -120,9 +121,9 @@ const Affiliates = () => {
     }
   };
   console.log("parse", info);
-  const totalBetAmount = info?.totalBetAmount ?? 0; // Default to 0 if undefined
-  const totalPayoutAmount = info?.totalPayoutAmount ?? 0;
-  const totalEarning = totalBetAmount - totalPayoutAmount;
+  const totalBetAmount: number = Number(info?.totalBetAmount) || 0;
+  const totalPayoutAmount: number = Number(info?.totalPayoutAmount) || 0;
+  const totalEarning: string = (totalBetAmount - totalPayoutAmount).toFixed(2);
   // setReferralLink(info?.affiliateCodes[0]);
   // if (info?.referralInfos.length > 0)
   //   setAffiliateCode(info?.referralInfos[0]);
@@ -492,7 +493,7 @@ const Affiliates = () => {
                           alt="Product"
                         />
                       </div>
-                      <span>{info?.totalIncome.toString()}</span>
+                      <span>{info?.totalIncome.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
@@ -513,31 +514,16 @@ const Affiliates = () => {
               </label>
 
               <div className="">
-                <div
+                {/* <div
                   className="flex flex w-full items-center justify-center rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                   style={{ height: "200px" }}
-                >
-                  {!info?.referralInfos}
-                  &&<span>No Referrals</span>
-                  <span>{info?.referralInfos}</span>
-                </div>
+                > */}
+                {!info?.referralInfos && <span>No Referrals</span>}
+                {/* <span>{info?.referralInfos}</span> */}
+                <AffiliateTable data={info?.referralInfos}></AffiliateTable>
+                {/* </div> */}
               </div>
             </div>
-
-            {/* <div className="flex justify-end gap-4.5">
-                  <button
-                    className="flex justify-center rounded border border-stroke px-6 py-2 font-medium text-black hover:shadow-1 dark:border-strokedark dark:text-white"
-                    type="submit"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    className="flex justify-center rounded bg-primary px-6 py-2 font-medium text-gray hover:bg-opacity-90"
-                    type="submit"
-                  >
-                    Save
-                  </button>
-                </div> */}
           </div>
         </div>
       </div>

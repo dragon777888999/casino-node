@@ -579,6 +579,7 @@
   align-items: flex-start;
   justify-content: center;
   overflow: scroll;
+  font-family: Bangers;
 }
 /* @media (max-width: 920px) {
   .wallet-adapter-modal-wrapper {
@@ -810,8 +811,8 @@
   border: 1px solid #1c2d32;
   background: #141a2b;
 
-  font-family: "DM Sans", "Roboto", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "Bangers";
+
   flex: 1;
 }
 .wallet-manage-modal-button {
