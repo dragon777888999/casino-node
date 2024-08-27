@@ -47,11 +47,11 @@ const Header = (props: {
     logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
 
-  const onSetChain = () => {
-    if (isSelected) setChain("Solana");
-    else setChain("Xrpl");
-    window.location.reload();
-  };
+  // const onSetChain = () => {
+  //   if (isSelected) setChain("Solana");
+  //   else setChain("Xrpl");
+  //   window.location.reload();
+  // };
   useEffect(() => {
     if (chain === "Solana") setIsSelected(false);
   }, []);

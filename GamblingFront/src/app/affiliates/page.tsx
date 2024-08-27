@@ -266,7 +266,15 @@ const Affiliates = () => {
                   </div>
                   <div className="affiliates-text">
                     <h3>Total Referrals</h3>
-                    <span>{info?.totalRefferalCount?.toString()}</span>
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src={`/default/images/currency/${userInfo.selectedCoinType}.png`} // Adjust path and naming if needed
+                        width={15}
+                        height={15}
+                        alt={userInfo.selectedCoinType}
+                      />
+                      <span>{info?.totalRefferalCount?.toString()}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -359,10 +367,10 @@ const Affiliates = () => {
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
-                          src={"/images/project/aud.png"}
-                          width={20}
-                          height={20}
-                          alt="Product"
+                          src={`/default/images/currency/${userInfo.selectedCoinType}.png`} // Adjust path and naming if needed
+                          width={15}
+                          height={15}
+                          alt={userInfo.selectedCoinType}
                         />
                       </div>
                       <span>{info?.totalBetCount.toString()}</span>
@@ -424,10 +432,10 @@ const Affiliates = () => {
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
-                          src={"/images/project/aud.png"}
-                          width={20}
-                          height={20}
-                          alt="Product"
+                          src={`/default/images/currency/${userInfo.selectedCoinType}.png`} // Adjust path and naming if needed
+                          width={15}
+                          height={15}
+                          alt={userInfo.selectedCoinType}
                         />
                       </div>
                       <span>{totalEarning}</span>
@@ -487,10 +495,10 @@ const Affiliates = () => {
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
-                          src={"/images/project/aud.png"}
-                          width={20}
-                          height={20}
-                          alt="Product"
+                          src={`/default/images/currency/${userInfo.selectedCoinType}.png`} // Adjust path and naming if needed
+                          width={15}
+                          height={15}
+                          alt={userInfo.selectedCoinType}
                         />
                       </div>
                       <span>{info?.totalIncome.toFixed(4)}</span>

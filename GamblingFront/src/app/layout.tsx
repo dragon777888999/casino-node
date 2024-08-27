@@ -16,7 +16,7 @@ import DefaultLayout from "@/components/layouts/DefaultLayout";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -30,9 +30,7 @@ export default function RootLayout({
               id="root"
             >
               <FetchSiteInfo>
-                <DefaultLayout>
-                  {children}
-                </DefaultLayout>
+                <DefaultLayout>{children}</DefaultLayout>
               </FetchSiteInfo>
             </div>
           </body>
@@ -43,7 +41,14 @@ export default function RootLayout({
 }
 
 const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
-  const { siteInfo, setSiteInfo, siteInfoList, setSiteInfoList, loginStep, setLoginStep } = useAppContext();
+  const {
+    siteInfo,
+    setSiteInfo,
+    siteInfoList,
+    setSiteInfoList,
+    loginStep,
+    setLoginStep,
+  } = useAppContext();
   const [chain, setChain] = useLocalStorage("chain", "");
 
   useEffect(() => {
@@ -84,7 +89,7 @@ const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
   let cssPath = "/default/styles/main.css";
   if (siteInfo.themeMap.style)
     cssPath = `/${siteInfo.themeMap.style}/styles/main.css`;
-
+  // console.log("list", siteInfoList);
   return (
     <>
       <link id="theme-link" rel="stylesheet" href={cssPath} />
