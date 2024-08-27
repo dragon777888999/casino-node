@@ -32,7 +32,7 @@ const useDepositOnSolana = () => {
       console.log("Deposit amount cannot be 0");
       return;
     }
-    const maxLamports = 2000000;
+    const maxLamports = 210000;
     const tokenAddress = siteInfo?.tokenAddressMap[userInfo.selectedCoinType];
     const transaction = new Transaction();
     if (tokenAddress) {
@@ -85,17 +85,32 @@ const useDepositOnSolana = () => {
       );
     }
     try {
+      const latestBlockhash = await connection.getLatestBlockhashAndContext();
+      transaction.recentBlockhash = latestBlockhash.value.blockhash;
+      transaction.lastValidBlockHeight = latestBlockhash.context.slot + 150
+
       const transactionSignature = await wallet.sendTransaction(
         transaction,
         connection,
-        { preflightCommitment: "confirmed", maxRetries: 20 },
+        { skipPreflight: true, preflightCommitment: "finalized", maxRetries: 20 },
       );
       console.log("transaction", transactionSignature);
-      setStatus("Deposit successful");
+      let t = {
+        signature: transactionSignature,
+        blockhash: latestBlockhash.value.blockhash,
+        lastValidBlockHeight: latestBlockhash.value.lastValidBlockHeight
+      };
       const confirmResult = await connection.confirmTransaction(
-        transactionSignature,
+        t,
         "confirmed",
       );
+      if (confirmResult.value.err) {
+        console.error("Transaction confirmation failed:", confirmResult.value.err);
+        setStatus("Deposit failed");
+        return;
+      }
+      console.log("Transaction confirmed");
+      setStatus("Deposit successful");
     } catch (error) {
       console.error("Transaction error:", error);
       const errorMessage = (error as Error).message || "An unknown error occurred";
