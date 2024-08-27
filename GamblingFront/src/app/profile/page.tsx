@@ -33,7 +33,7 @@ const Profile = () => {
   const [isCurrentZone, setIsCurrentZone] = useState(true);
   const [isSelected, setIsSelected] = useState(true);
   const [isHidden, setIsHidden] = useState(true);
-  const handleTimeZoneChange = (e) => {
+  const handleTimeZoneChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTimeZone(e.target.value);
   };
 

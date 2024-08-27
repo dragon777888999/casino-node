@@ -68,15 +68,17 @@ const MenuBar = () => {
             className="ml-2 inline-flex items-center justify-center rounded-md border border-meta-3 px-4 py-1 text-center font-medium text-meta-3 hover:bg-opacity-90"
             onClick={() => openWalletModal()}
           > */}
-          {loginStep ==3 && <button
-            className="menu-button-wallet"
-            onClick={() => openWalletModal()}
-          >
-            <div className=" flex gap-1">
-              <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>
-              <span>{userInfo?.selectedCoinType}</span>
-            </div>
-          </button>}
+          {loginStep == 3 && (
+            <button
+              className="menu-button-wallet"
+              onClick={() => openWalletModal()}
+            >
+              <div className=" flex gap-1">
+                <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>
+                <span>{userInfo?.selectedCoinType}</span>
+              </div>
+            </button>
+          )}
         </div>
       </div>
       <div className="justify-end">

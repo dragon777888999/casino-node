@@ -1177,5 +1177,19 @@ input[type="number"] {
   border-radius: 5px;
   background: linear-gradient(90deg, #5fa5ea, #2f71de);
   border: 1px solid #445172;
-  border-radius: "5px";
+}
+.toggle-btn {
+  position: absolute;
+  right: 15%;
+}
+/* .menu-bar {
+  display: flex;
+} */
+@media (max-width: 720px) {
+  .toggle-btn {
+    right: 35%;
+  }
+  /* .menu-bar {
+    display: block;
+  } */
 }
