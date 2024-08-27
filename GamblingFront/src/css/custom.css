@@ -1169,3 +1169,13 @@ input[type="number"] {
   display: flex;
   width: 100%;
 }
+.chain-btn {
+  border: 1px solid #445172;
+  border-radius: "5px";
+}
+.active-chain {
+  border-radius: 5px;
+  background: linear-gradient(90deg, #5fa5ea, #2f71de);
+  border: 1px solid #445172;
+  border-radius: "5px";
+}
