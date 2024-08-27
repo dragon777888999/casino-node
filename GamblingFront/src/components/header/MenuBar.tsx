@@ -9,7 +9,7 @@ import { useAppContext } from "../../hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
 import DropdownUser from "./DropdownUser";
 import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
-
+import ToogleButton from "./ToogleButton";
 // Modal.setAppElement("#root");
 const MenuBar = () => {
   const domain = window.location.host;
@@ -81,7 +81,9 @@ const MenuBar = () => {
           )}
         </div>
       </div>
-      <div className="justify-end">
+
+      <div className="flex items-center justify-end gap-3">
+        <ToogleButton />
         <div className="flex items-center gap-3 2xsm:gap-7">
           {/* <!-- User Area --> */}
           <DropdownUser />

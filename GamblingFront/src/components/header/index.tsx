@@ -9,6 +9,7 @@ import LoginButton from "./LoginButton";
 import { useAppContext } from "../../hooks/AppContext";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import { Switch } from "@nextui-org/react";
+import ToogleButton from "./ToogleButton";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -134,87 +135,11 @@ const Header = (props: {
             )}
           </div>
 
-          <div className="toggle-btn">
-            <div className="flex  gap-2">
-              <div style={{ width: "30px", padding: "5px" }} className="">
-                <Image
-                  src={imageSolanaSrc}
-                  alt={"chain"} // Provide fallback alt text
-                  layout="responsive"
-                  width={30}
-                  height={30}
-                  onClick={() => {
-                    setIsSelected(true);
-                    onSetChain();
-                  }}
-                />
-              </div>
-
-              <Switch
-                isSelected={isSelected}
-                onValueChange={() => {
-                  setIsSelected;
-                  onSetChain();
-                }}
-              ></Switch>
-              <div
-                className="active-chain"
-                style={{ width: "30px", padding: "5px" }}
-              >
-                <Image
-                  src={imageXrplSrc}
-                  alt={"chain"} // Provide fallback alt text
-                  layout="responsive"
-                  width={30}
-                  height={30}
-                  onClick={() => {
-                    setIsSelected(false);
-                    onSetChain();
-                  }}
-                />
-              </div>
-            </div>
-            {/* <ul className="flex items-center gap-2 2xsm:gap-4">
-              <li
-                className={`${chain === "Solana" ? "active-chain" : ""} chain-btn`}
-              >
-                <button style={{ width: "30px", padding: "5px" }}>
-                  {" "}
-                  <Image
-                    src={imageSolanaSrc}
-                    alt={"chain"} // Provide fallback alt text
-                    layout="responsive"
-                    width={30}
-                    height={30}
-                    onClick={() => {
-                      onSetChain("Solana");
-                    }}
-                  />
-                </button>
-              </li>
-              <li
-                className={`${chain === "Xrpl" ? "active-chain" : ""} chain-btn`}
-              >
-                <button style={{ width: "30px", padding: "5px" }}>
-                  {" "}
-                  <Image
-                    src={imageXrplSrc}
-                    alt={"chain"} // Provide fallback alt text
-                    layout="responsive"
-                    width={30}
-                    height={30}
-                    onClick={() => {
-                      onSetChain("Xrpl");
-                    }}
-                  />
-                </button>
-              </li>
-            </ul> */}
-          </div>
           {loginStep > 1 ? (
             <MenuBar />
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
+              <ToogleButton />
               {siteInfo?.isLoginMode && <LoginButton />}
               {!siteInfo?.isLoginMode && <ConnectButton />}
             </div>

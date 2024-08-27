@@ -1179,8 +1179,8 @@ input[type="number"] {
   border: 1px solid #445172;
 }
 .toggle-btn {
-  position: absolute;
-  right: 15%;
+  /* position: absolute;
+  right: 15%; */
 }
 /* .menu-bar {
   display: flex;
