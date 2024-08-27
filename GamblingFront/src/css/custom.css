@@ -577,6 +577,7 @@
   align-items: flex-start;
   justify-content: center;
   overflow: scroll;
+  font-family: Bangers;
 }
 /* @media (max-width: 920px) {
   .wallet-adapter-modal-wrapper {

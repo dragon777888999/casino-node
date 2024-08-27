@@ -9,3 +9,4 @@ export type AffiliaterInfo = {
   totalRefferalCount: number;
   referralInfos: string;
 };
+a;
