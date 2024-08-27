@@ -4,7 +4,7 @@ import {
   createAssociatedTokenAccountIdempotentInstruction,
   createTransferInstruction,
 } from "@solana/spl-token";
-import { PublicKey, Transaction, ComputeBudgetProgram, SystemProgram } from "@solana/web3.js";
+import { PublicKey, Transaction, ComputeBudgetProgram, SystemProgram, Connection } from "@solana/web3.js";
 import {
   useAnchorWallet,
   useConnection,
@@ -13,7 +13,8 @@ import {
 import { useAppContext } from "../../../hooks/AppContext";
 
 const useDepositOnSolana = () => {
-  const { connection } = useConnection();
+  //const { connection } = useConnection();
+  const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
   const wallet = useWallet();
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -35,6 +36,7 @@ const useDepositOnSolana = () => {
     const maxLamports = 210000;
     const tokenAddress = siteInfo?.tokenAddressMap[userInfo.selectedCoinType];
     const transaction = new Transaction();
+    
     if (tokenAddress) {
       const ata = getAssociatedTokenAddressSync(
         new PublicKey(tokenAddress),
