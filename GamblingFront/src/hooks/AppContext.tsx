@@ -22,6 +22,7 @@ export interface SiteInfo {
   agentCode: string;
   chain: string;
   availableCoinTypes: Array<string>;
+  virtualCoinType:string;
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   themeMap: { [key: string]: string };
@@ -96,6 +97,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     agentCode: "", // empty string for agent code
     chain: "", // empty string for blockchain type
     availableCoinTypes: [], // empty array for available coin types
+    virtualCoinType:"",
     digitsMap: {}, // empty object for digits mapping
     tokenAddressMap: {}, // empty object for token addresses
     themeMap: {}, // empty object for token addresses
