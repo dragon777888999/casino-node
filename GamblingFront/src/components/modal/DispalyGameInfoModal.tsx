@@ -21,6 +21,20 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
   onRequestClose,
 }) => {
   if (!showModal) return null;
+  const timestampMillis = gameData.time;
+
+  // Create a Date object
+  const date = new Date(timestampMillis);
+
+  // Extract and format date components
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const year = date.getFullYear();
+
+  // Format the date as DD/MM/YYYY
+  const formattedDate = `${day}/${month}/${year}`;
+
+  console.log(formattedDate); // Example output: 27/08/2024
   return (
     <Modal
       id="modal"
@@ -37,7 +51,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       }}
     >
       <div
-        className="footer-modal mt-10 sm:mt-15"
+        className="custom-modal"
         style={{
           zIndex: "1000",
 
@@ -48,7 +62,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       >
         <div className="wallet-adapter-modal-container">
           <div
-            className="footer--modal-wrapper"
+            className="custom-modal-wrapper"
             style={{ padding: "25px", backgroundColor: "#141a2b" }}
           >
             <div
@@ -94,8 +108,14 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
               </div>
               <div className="BetResult-game-detail">
                 <div className="BetResult-gam-detail-content">
-                  <p>Bet ID:333000</p>
-                  <p>Placed by {gameData?.userCode}</p>
+                  <p>Bet ID: {(gameData?.time / 10000).toFixed(0)}</p>
+                  <p>
+                    Placed by{" "}
+                    {gameData?.userCode.length > 5
+                      ? gameData?.userCode.slice(0, 5) + `...`
+                      : gameData?.userCode}{" "}
+                    on {formattedDate}
+                  </p>
                 </div>
                 {/* </div> */}
 
@@ -115,31 +135,37 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 <div className="BetResult-detail-item-row">
                   <div className="BetResult-detail-item">
                     <span>Bet</span>
-                    <div className="footer-modal-small-card">
+                    <div className="custom-modal-small-card">
                       <Image
                         src={"/images/project/aud.png"}
                         width={20}
                         height={20}
                         alt={"info.currencyCode"}
                       />
-                      <span>{gameData?.betAmount}</span>
+                      <span>{gameData?.betAmount.toFixed(2)}</span>
                     </div>
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Multipier</span>
-                    <div className="footer-modal-small-card">
+                    <div className="custom-modal-small-card">
                       {gameData?.payoutAmount !== 0
                         ? (
                             (gameData?.betAmount ?? 0) /
                             (gameData?.payoutAmount ?? 0)
                           ).toFixed(2)
-                        : "0.00"}
+                        : "0.00"}{" "}
                     </div>
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Payout </span>
-                    <div className="footer-modal-small-card">
-                      {gameData?.payoutAmount.toFixed(2)} $
+                    <div className="custom-modal-small-card">
+                      <Image
+                        src={"/images/project/aud.png"}
+                        width={20}
+                        height={20}
+                        alt={"info.currencyCode"}
+                      />
+                      {gameData?.payoutAmount.toFixed(2)}
                     </div>
                   </div>
                 </div>
@@ -152,7 +178,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
               </p>
             </div>
             <div className=" mt-2 flex justify-center">
-              <button type="button" className="footer-modal-button">
+              <button type="button" className="custom-modal-button">
                 Play Toshi Video Club
               </button>
             </div>
