@@ -180,7 +180,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       contentLabel="Example Modal"
       ariaHideApp={false}
     >
-      <div className="footer-modal " style={{ zIndex: "1" }}>
+      <div className="custom-modal " style={{ zIndex: "1" }}>
         <div className="wallet-adapter-modal-container">
           <div
             className="wallet-adapter-modal-wrapper"

@@ -37,7 +37,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       }}
     >
       <div
-        className="footer-modal"
+        className="custom-modal"
         style={{
           zIndex: "1000",
 
@@ -48,7 +48,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
       >
         <div className="wallet-adapter-modal-container">
           <div
-            className="footer--modal-wrapper"
+            className="custom-modal-wrapper"
             style={{ padding: "25px", backgroundColor: "#141a2b" }}
           >
             <div
@@ -115,7 +115,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 <div className="BetResult-detail-item-row">
                   <div className="BetResult-detail-item">
                     <span>Bet</span>
-                    <div className="footer-modal-small-card">
+                    <div className="custom-modal-small-card">
                       <Image
                         src={"/images/project/aud.png"}
                         width={20}
@@ -127,7 +127,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Multipier</span>
-                    <div className="footer-modal-small-card">
+                    <div className="custom-modal-small-card">
                       {gameData?.payoutAmount !== 0
                         ? (
                             (gameData?.betAmount ?? 0) /
@@ -138,7 +138,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   </div>
                   <div className="BetResult-detail-item">
                     <span>Payout </span>
-                    <div className="footer-modal-small-card">
+                    <div className="custom-modal-small-card">
                       {gameData?.payoutAmount.toFixed(2)} $
                     </div>
                   </div>
@@ -152,7 +152,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
               </p>
             </div>
             <div className=" mt-2 flex justify-center">
-              <button type="button" className="footer-modal-button">
+              <button type="button" className="custom-modal-button">
                 Play Toshi Video Club
               </button>
             </div>

@@ -178,11 +178,13 @@ body {
   gap: 20px;
 }
 .game-block-item-content-img {
-  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
 .game-block-item-content-img:hover {
   box-shadow: 2px 2px 2px 5px green; /* Shadow that acts as a border, following the image outline */
   cursor: pointer; /* Changes the cursor to a pointer */
-  scale: 1.05;
+  transform: scale(1.05);
 }

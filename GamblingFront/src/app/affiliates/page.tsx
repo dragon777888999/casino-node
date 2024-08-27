@@ -1,6 +1,7 @@
 "use client";
 // import { metadata } from "../page";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import Image from "next/image";
 import { useAppContext } from "@/hooks/AppContext";
@@ -9,6 +10,7 @@ import Link from "next/link";
 import { AffiliaterInfo } from "@/types/affiliaterInfo";
 
 import { toast } from "react-toastify";
+// import { useRouter } from "next/router";
 
 // import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
 // export const metadata = MainPageMetadata;
@@ -29,11 +31,11 @@ const Affiliates = () => {
       },
     );
   };
-
+  const router = useRouter();
   useEffect(() => {
     const GetAffiliaterInfo = async () => {
       try {
-        if (accessToken == "") return;
+        if (accessToken == "") return router.push("/");
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
 
@@ -66,7 +68,7 @@ const Affiliates = () => {
         console.log(Response);
       }
     };
-    alert(accessToken);
+
     GetAffiliaterInfo();
     console.log("affiliaterinfo", affiliaterInfo);
   }, [accessToken]);
