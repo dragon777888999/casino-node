@@ -177,14 +177,41 @@ body {
   padding: 0 20px;
   gap: 20px;
 }
+.game-block-item-content-img:hover {
+  transform: scale(1.05);
+}
+.image-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px;
+  opacity: 1;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.image-container:hover .image-outline {
+  opacity: 1;
+}
+
 .game-block-item-content-img {
+  z-index: 4;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
+}
+.game-block-out-content-img {
+  z-index: 2;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
-.game-block-item-content-img:hover {
-  box-shadow: 2px 2px 2px 5px green; /* Shadow that acts as a border, following the image outline */
+.game-block-out-content-img:hover {
   cursor: pointer; /* Changes the cursor to a pointer */
-  transform: scale(1.05);
+  transform: scale(1.5);
 }

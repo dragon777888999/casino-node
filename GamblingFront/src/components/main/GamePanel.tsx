@@ -63,7 +63,7 @@ export default function GamePanel({
   }, []);
   if (!vendorGames || vendorGames.length == 0) return null;
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
-
+  const imageOutlineSrc = `/${siteInfo.themeMap.style}/images/vendorGame/mini-spribe/outline.png`;
   return (
     <div className="default-panel">
       <div className="SlotsList_list_container  mt-10 ">
@@ -175,6 +175,7 @@ export default function GamePanel({
                             ></path>
                           </svg>
                         </div>
+
                         <div className="image-container">
                           <Image
                             className="game-block-item-content-img"
@@ -185,6 +186,16 @@ export default function GamePanel({
                             height={800}
                             // style={{ width: "100%", borderRadius: "6px" }}
                           />
+                          {/* <div className="image-outline">
+                            <Image
+                              className="game-block-out-content-img"
+                              src={imageOutlineSrc}
+                              alt={gameName.en || "Game Thumbnail"}
+                              layout="responsive"
+                              width={1250}
+                              height={850}
+                            />
+                          </div> */}
                         </div>
                       </div>
                     </Link>
