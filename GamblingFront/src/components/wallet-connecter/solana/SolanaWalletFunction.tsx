@@ -87,12 +87,12 @@ const useDepositOnSolana = () => {
     try {
       const latestBlockhash = await connection.getLatestBlockhashAndContext();
       transaction.recentBlockhash = latestBlockhash.value.blockhash;
-      transaction.lastValidBlockHeight = latestBlockhash.context.slot + 150
+      //transaction.lastValidBlockHeight = latestBlockhash.context.slot + 150
 
       const transactionSignature = await wallet.sendTransaction(
         transaction,
         connection,
-        { skipPreflight: true, preflightCommitment: "finalized", maxRetries: 20 },
+        { skipPreflight: true, preflightCommitment: "finalized" },
       );
       console.log("transaction", transactionSignature);
       let t = {
