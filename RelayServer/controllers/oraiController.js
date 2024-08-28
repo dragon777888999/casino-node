@@ -14,7 +14,10 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-        await getBlockFunc_orai(req, res);
+        try {
+          await getBlockFunc_orai(req, res);
+        }
+        catch (getBlockErr) { }
         break;
       case "CreateAddress":
         await createAddressFunc_orai(req, res);
@@ -107,8 +110,8 @@ sendCoinFunc_orai = async (req, res) => {
         amount: String(
           Math.floor(
             data.amount *
-              10 ** config.digits[`${data.chain}_${data.coinType}`] -
-              fees
+            10 ** config.digits[`${data.chain}_${data.coinType}`] -
+            fees
           )
         ),
       },

@@ -8,7 +8,11 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-        await getBlockFunc_xrpl(req, res);
+        try {
+          await getBlockFunc_xrpl(req, res);
+        } catch (getBlockErr) {
+
+        }
         break;
       case "CreateAddress":
         await createAddressFunc_xrpl(req, res);
@@ -121,7 +125,7 @@ const sendCoinFunc_xrpl = async (req, res) => {
     fees
   ).toString();
   try {
-if (data.mnemonic && data.mnemonic.trim().length > 0) {
+    if (data.mnemonic && data.mnemonic.trim().length > 0) {
       console.log("Using seed for wallet creation");
       try {
         wallet = xrpl.Wallet.fromSeed(data.mnemonic.trim());
