@@ -66,7 +66,9 @@ const Affiliates = () => {
         setAffiliateCode(result.affiliateCodes[0]);
 
         console.log("code", result.affiliateCodes[0]);
-        setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        setReferralLink(
+          `${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`,
+        );
         toast.success("success");
       } else {
         toast.warn("Operation failed");
@@ -437,7 +439,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{totalEarning}</span>
+                      <span>{totalEarning.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
@@ -527,7 +529,9 @@ const Affiliates = () => {
                 > */}
                 {!info?.referralInfos && <span>No Referrals</span>}
                 {/* <span>{info?.referralInfos}</span> */}
-                <AffiliateTable data={info?.referralInfos ?? null}></AffiliateTable>
+                <AffiliateTable
+                  data={info?.referralInfos ?? null}
+                ></AffiliateTable>
                 {/* </div> */}
               </div>
             </div>
