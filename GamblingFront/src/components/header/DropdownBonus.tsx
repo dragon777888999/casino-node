@@ -29,8 +29,8 @@ const DropdownBonus = () => {
                 <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-meta-1 opacity-75"></span>
               </span>
 
-              <i className="fa-sharp fa-regular fa-gift"></i>
-              {/* <svg
+              {/* <i className="fa-sharp fa-regular fa-gift"></i> */}
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="25"
@@ -104,7 +104,7 @@ const DropdownBonus = () => {
                     <stop offset="1" stop-color="#6FFA8E"></stop>
                   </linearGradient>
                 </defs>
-              </svg> */}
+              </svg>
             </Link>
           </div>
           <span className="Header_counter">1</span>

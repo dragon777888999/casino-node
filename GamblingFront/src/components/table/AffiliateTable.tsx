@@ -127,7 +127,9 @@ const AffiliateTable: React.FC<AffiliateTableProps> = ({ data }) => {
             </div>
           ))
         ) : (
-          <p>No data available</p>
+          <div className="flex justify-center">
+            <p>No Referrals</p>
+          </div>
         )}
       </div>
     </>
