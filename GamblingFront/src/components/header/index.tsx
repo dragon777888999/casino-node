@@ -39,24 +39,12 @@ const Header = (props: {
       console.error("Failed to parse JSON:", error);
     }
   }, [socketData]);
-  const [isSelected, setIsSelected] = useState(true);
   let logoImgSrc = "/default/images/logo.png";
   let logoWidth = 45;
   let logoHeight = 45;
-  let imageSolanaSrc = "/default/images/chain/Solana.png";
-  let imageXrplSrc = "/default/images/chain/Xrpl.png";
   if (siteInfo.themeMap?.logo) {
     logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
-
-  // const onSetChain = () => {
-  //   if (isSelected) setChain("Solana");
-  //   else setChain("Xrpl");
-  //   window.location.reload();
-  // };
-  useEffect(() => {
-    if (chain === "Solana") setIsSelected(false);
-  }, []);
 
   return (
     <>

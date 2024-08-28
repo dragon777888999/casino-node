@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import WalletModal from "../modal/WalletModal";
 
-import { useWallet } from "@solana/wallet-adapter-react";
-
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
@@ -17,10 +15,9 @@ import DropdownBonus from "./DropdownBonus";
 const MenuBar = () => {
   const domain = window.location.host;
 
-  const { userInfo, loginStep, accessToken } = useAppContext();
+  const { siteInfo, userInfo, loginStep, accessToken } = useAppContext();
 
   const [showWalletModal, setShowWalletModal] = useState(false);
-  const wallet = useWallet();
 
   const [selectedKey, setSelectedKey] = useState<string>(
     userInfo?.selectedCoinType ?? "",
@@ -97,14 +94,18 @@ const MenuBar = () => {
         <ToogleButton />
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
-            <li>
-              <DropdownNotification />
-            </li>
+            {siteInfo.featureMap && siteInfo.featureMap.notification && (
+              <li>
+                <DropdownNotification />
+              </li>)
+            }
+            {siteInfo.featureMap && siteInfo.featureMap.bonus && (
+              <li>
+                <DropdownBonus />
+              </li>)
+            }
             <li>
               <DropdownUser />
-            </li>
-            <li>
-              <DropdownBonus />
             </li>
           </ul>
           {/* <!-- User Area --> */}
