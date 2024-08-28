@@ -7,42 +7,36 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { backendUrl } from "@/anchor/global";
 import VaultModal from "../modal/VaultModal";
 
+import disconnectOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const {
-    userInfo,
-    setUserInfo,
-    loginStep,
-    setLoginStep,
-    siteInfo,
-    setWalletAddress,
-  } = useAppContext();
+  const { userInfo, setUserInfo, loginStep, setLoginStep, siteInfo, setWalletAddress, accessToken , setAccessToken} = useAppContext();
   const wallet = useWallet();
   const [showVaultModal, setShowVaultModal] = useState(false);
   const handleDisconnect = async () => {
     try {
       if (siteInfo?.chain == "Solana") {
-        wallet.disconnect();
-        // alert("1");
+        disconnectOnSolana();
       }
+      //else if (siteInfo?.chain == "Tron")
 
-      const token = wallet.publicKey ? wallet.publicKey.toString() : "";
-      const headers: HeadersInit = wallet.publicKey
-        ? { "X-Access-Token": wallet.publicKey.toString() }
-        : {};
       const response = await fetch(`${backendUrl}/Account/Logout`, {
         method: "GET",
-        headers: headers,
+        headers: {
+          "Content-Type": "application/json",
+          "X-Access-Token": accessToken,
+        },
       });
 
       document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
       setLoginStep(1);
       setWalletAddress("");
-      window.location.reload();
-      console.log("Wallet disconnected and information cleared");
+      setAccessToken("");
     } catch (error) {
-      console.error("Error disconnecting from Crossmark wallet:", error);
+      console.error("Error disconnecting from wallet:", error);
     }
     window.location.reload();
   };

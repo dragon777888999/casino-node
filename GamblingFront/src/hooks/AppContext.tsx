@@ -12,7 +12,9 @@ export enum WalletType {
   Phantom = 1,
   Crossmark,
   Gem,
-  Xumm
+  Xumm,
+
+  TronLink
 }
 
 export interface SiteInfo {
