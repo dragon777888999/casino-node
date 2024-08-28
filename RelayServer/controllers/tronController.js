@@ -51,41 +51,36 @@ getBlockFunc_tron = async (req, res) => {
     return;
   }
 
-  console.log("transactions", block.transactions);
-
-  for (let index = 0; index < block.block.data.txs.length; index++) {
+  for (let index = 0; index < block.transactions.length; index++) {
+    const transaction = block.transactions[index];
     for (const tokenAddress in tokenAddress2CoinType) {
       const coinType = tokenAddress2CoinType[tokenAddress];
-      if (tokenAddress == "") {
-        const txBase64 = block.block.data.txs[index];
-        const buffer = Buffer.from(txBase64, "base64");
-        const hash = createHash("sha256");
-        const txHash = hash.update(buffer).digest("hex");
-        const tx = await cosmos.get(`/cosmos/tx/v1beta1/txs/${txHash}`);
-        if (!tx || !tx.tx_response || !tx.tx_response.logs) continue;
+      const contract = transaction.raw_data.contract[0];
+      if (tokenAddress == "" && contract === "TransferContract") {
+        const parameter = contract.parameter.value;
+        const toAddress = tronWeb.address.fromHex(parameter.to_address);
+        const amount = tronWeb.fromSun(parameter.amount);
 
-        for (let i = 0; i < tx.tx_response.logs.length; i++) {
-          const msg = tx.tx_response.logs[i];
-          if (!msg || !msg.events) continue;
-          for (let j = 0; j < msg.events.length; j++) {
-            const event = msg.events[j];
-            if (event.type == "coin_received") {
-              const address = event.attributes[0].value;
-              const amountStr = event.attributes[1].value.replace("orai", "");
-              const amount =
-                Number.parseInt(amountStr) /
-                10 ** config.digits[`${chain}_${coinType}`];
-              if (walletAddressList.indexOf(address) !== -1)
-                results.push({
-                  walletAddress: address,
-                  tokenAddress: tokenAddress,
-                  amount,
-                });
-            }
+        if (walletAddressList.includes(toAddress)) {
+          results.push({ walletAddress: toAddress, tokenAddress, amount });
+        }
+      } else if (contract == "TriggerSmartContract") {
+        const contractAddress = tronWeb.address.fromHex(contract.parameter.value.contract_address);
+
+        if (tokenAddress.includes(contractAddress)) {
+          // Decode the data from the transaction
+          const data = transaction.raw_data.contract[0].parameter.value.data;
+          const method = data.substring(0, 8); // First 4 bytes
+          const toAddressHex = '41' + data.substring(8, 48); // TRON addresses are 42 bytes long in hex (including '41' prefix)
+          const toAddress = tronWeb.address.fromHex(toAddressHex);
+          const amountHex = data.substring(48); // Remaining bytes are the amount in hex
+          const amount = tronWeb.toDecimal('0x' + amountHex); // Convert from Sun to USDT
+
+          // Check if the method is 'transfer' and the address matches
+          if (method === 'a9059cbb' && walletAddressList.includes(toAddress)) {
+            results.push({ walletAddress: toAddress, tokenAddress, amount });
           }
         }
-      } else {
-        //Need to be implemented
       }
     }
   }
@@ -103,40 +98,24 @@ createAddressFunc_tron = async (req, res) => {
 sendCoinFunc_tron = async (req, res) => {
   const data = req.body;
   const fees = config.fee[data.chain];
+  const privateKey = data.mnemonic;
+  const tokenAddress = data.tokenAddress;
+  const coinType = data.coinType;
+  const amount = data.amount;
+  const toAddress = data.toAddress;
 
-  const childKey = cosmos.getChildKey(data.mnemonic);
-  const msgSend = new message.cosmos.bank.v1beta1.MsgSend({
-    from_address: cosmos.getAddress(childKey),
-    to_address: data.toAddress,
-    amount: [
-      {
-        denom: cosmos.bech32MainPrefix,
-        amount: String(
-          Math.floor(
-            data.amount *
-            10 ** config.digits[`${data.chain}_${data.coinType}`] -
-            fees
-          )
-        ),
-      },
-    ],
-  });
+  tronWeb.setPrivateKey(privateKey);
+  tronWeb.defaultAddress = {
+    hex: tronWeb.address.toHex(tronWeb.address.fromPrivateKey(privateKey)),
+    base58: tronWeb.address.fromPrivateKey(privateKey),
+  };
 
-  const msgSendAny = new message.google.protobuf.Any({
-    type_url: "/cosmos.bank.v1beta1.MsgSend",
-    value: message.cosmos.bank.v1beta1.MsgSend.encode(msgSend).finish(),
-  });
+  if (tokenAddress = "") {
+    const transaction = await tronWeb.trx.sendTransaction(toAddress, amount);
+  } else {
+    const contract = await tronWeb.contract().at(tokenAddress);
+    const result = await contract.transfer(toAddress, amount).send();
+  }
 
-  const txBody = new message.cosmos.tx.v1beta1.TxBody({
-    messages: [msgSendAny],
-    memo: "",
-  });
-
-  const response = await cosmos.submit(
-    childKey,
-    txBody,
-    "BROADCAST_MODE_BLOCK",
-    [{ denom: cosmos.bech32MainPrefix, amount: String(fees) }]
-  );
   res.send({ status: 0 });
 };
