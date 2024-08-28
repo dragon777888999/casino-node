@@ -8,11 +8,7 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-        try {
           await getBlockFunc_xrpl(req, res);
-        } catch (getBlockErr) {
-
-        }
         break;
       case "CreateAddress":
         await createAddressFunc_xrpl(req, res);
@@ -25,11 +21,11 @@ exports.entry = async (req, res) => {
         res.send({ status: 1, msg: "Invalid method" });
     }
   } catch (err) {
-    // console.log("----------------Input--------------------------------");
-    // console.log(JSON.stringify(data));
-    // console.log("----------------Error--------------------------------");
-    // console.log(err);
-    // console.log("-----------------------------------------------------");
+    console.log("----------------Input--------------------------------");
+    console.log(JSON.stringify(data));
+    console.log("----------------Error--------------------------------");
+    console.log(err);
+    console.log("-----------------------------------------------------");
     res.send({ status: 1, err });
   }
 };
@@ -105,7 +101,7 @@ const getBlockFunc_xrpl = async (req, res) => {
 
     res.send({ status: 0, data: results });
   } catch (error) {
-    console.error("Error fetching ledger data:", error);
+    //console.error("Error fetching ledger data:", error);
     res.send({ status: 1 });
   } finally {
     await client.disconnect();
