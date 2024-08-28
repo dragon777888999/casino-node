@@ -1,10 +1,10 @@
-//const TronWeb = require('tronweb');
+const TronWeb = require('tronweb');
 
-// // Set up TronWeb instance
-// const tronWeb = new TronWeb({
-//     fullHost: 'https://api.trongrid.io', // TronGrid is the default full node provider
-//     headers: { "TRON-PRO-API-KEY": "your-api-key-here" }, // Use your API key if needed
-// });
+// Set up TronWeb instance
+const tronWeb = new TronWeb({
+  fullHost: 'https://api.trongrid.io', // TronGrid is the default full node provider
+  // headers: { "TRON-PRO-API-KEY": "your-api-key-here" }, // Use your API key if needed
+});
 
 const config = require("../config/config");
 
@@ -44,7 +44,7 @@ getBlockFunc_tron = async (req, res) => {
   const chain = data.chain;
 
   const block = await tronWeb.trx.getBlock(blockNumber);
-  
+
   const results = [];
   if (!block || !block.transactions) {
     res.send({ status: 1 });
@@ -93,9 +93,12 @@ getBlockFunc_tron = async (req, res) => {
   res.send({ status: 0, data: results });
 };
 createAddressFunc_tron = async (req, res) => {
-  const mnemonic = cosmos.generateMnemonic(128);
-  const address = cosmos.getAddress(mnemonic);
-  res.send({ status: 0, mnemonic, address });
+  const account = await tronWeb.createAccount();
+  res.send({
+    status: 0,
+    mnemonic: account.privateKey,
+    address: account.address.base58,
+  });
 };
 sendCoinFunc_tron = async (req, res) => {
   const data = req.body;
@@ -111,8 +114,8 @@ sendCoinFunc_tron = async (req, res) => {
         amount: String(
           Math.floor(
             data.amount *
-              10 ** config.digits[`${data.chain}_${data.coinType}`] -
-              fees
+            10 ** config.digits[`${data.chain}_${data.coinType}`] -
+            fees
           )
         ),
       },
