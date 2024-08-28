@@ -14,7 +14,11 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-        await getBlockFunc_tron(req, res);
+        try {
+          await getBlockFunc_tron(req, res);
+        }
+        catch (getBlockErr) {
+        }
         break;
       case "CreateAddress":
         await createAddressFunc_tron(req, res);
@@ -56,7 +60,7 @@ getBlockFunc_tron = async (req, res) => {
     for (const tokenAddress in tokenAddress2CoinType) {
       const coinType = tokenAddress2CoinType[tokenAddress];
       const contract = transaction.raw_data.contract[0];
-      if (tokenAddress == "" && contract === "TransferContract") {
+      if (tokenAddress == "" && contract.type === "TransferContract") {
         const parameter = contract.parameter.value;
         const toAddress = tronWeb.address.fromHex(parameter.to_address);
         const amount = tronWeb.fromSun(parameter.amount);
@@ -64,7 +68,7 @@ getBlockFunc_tron = async (req, res) => {
         if (walletAddressList.includes(toAddress)) {
           results.push({ walletAddress: toAddress, tokenAddress, amount });
         }
-      } else if (contract == "TriggerSmartContract") {
+      } else if (contract.type == "TriggerSmartContract") {
         const contractAddress = tronWeb.address.fromHex(contract.parameter.value.contract_address);
 
         if (tokenAddress.includes(contractAddress)) {
