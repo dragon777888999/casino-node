@@ -20,6 +20,8 @@ const Header = (props: {
   const [chain, setChain] = useLocalStorage("chain", "");
   useEffect(() => {
     try {
+      if (socketData == "")
+        return;
       const cmd = JSON.parse(socketData);
       if (cmd.type === "balance") {
         if (userInfo) {

@@ -121,7 +121,6 @@ const useDepositOnSolana = () => {
     console.log("status", status);
   };
   const disconnectOnSolana = () => {
-    const wallet = useWallet();
     wallet.disconnect();
   };
   
