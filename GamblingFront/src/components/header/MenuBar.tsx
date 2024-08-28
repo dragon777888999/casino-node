@@ -10,6 +10,9 @@ import { backendUrl } from "@/anchor/global";
 import DropdownUser from "./DropdownUser";
 import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
 import ToogleButton from "./ToogleButton";
+import DropdownNotification from "./DropdownNotification";
+import DropdownBonus from "./DropdownBonus";
+
 // Modal.setAppElement("#root");
 const MenuBar = () => {
   const domain = window.location.host;
@@ -81,12 +84,31 @@ const MenuBar = () => {
           )}
         </div>
       </div>
+      {/* <div className="flex">
+        <ul>
+          <li>
+            {" "}
+            <DropdownNotification />
+          </li>
+        </ul>
+      </div> */}
 
       <div className="flex items-center justify-end gap-3">
         <ToogleButton />
         <div className="flex items-center gap-3 2xsm:gap-7">
+          <ul className="flex items-center gap-2 2xsm:gap-4">
+            <li>
+              <DropdownNotification />
+            </li>
+            <li>
+              <DropdownUser />
+            </li>
+            <li>
+              <DropdownBonus />
+            </li>
+          </ul>
           {/* <!-- User Area --> */}
-          <DropdownUser />
+
           {/* <!-- User Area --> */}
         </div>
         {/* <button className="menu-button-connect " onClick={handleDisconnect}>

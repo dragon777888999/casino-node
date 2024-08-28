@@ -66,7 +66,7 @@ const DropdownUser = () => {
 
             <svg
               className="hidden fill-current sm:block"
-              width="12"
+              width="10"
               height="8"
               viewBox="0 0 12 8"
               fill="none"
@@ -175,7 +175,8 @@ const DropdownUser = () => {
                     <p style={{ fontSize: "12px" }}>Affiliates</p>
                   </Link>
                 </li>
-              )}{siteInfo.featureMap && siteInfo.featureMap.vault && (
+              )}
+              {siteInfo.featureMap && siteInfo.featureMap.vault && (
                 <li>
                   <button
                     onClick={openVaultModal}
