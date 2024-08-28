@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 const useFetchUserInfo = () => {
   const domain = window.location.host;
   const searchParams = useSearchParams();
-  const affiliaterCode = searchParams?.get("affiliaterCode");
+  const affiliaterCode = searchParams?.get("r");
 
   const { siteInfo, loginStep, setLoginStep, walletAddress, setAccessToken, setUserInfo, socket } = useAppContext();
   useEffect(() => {
