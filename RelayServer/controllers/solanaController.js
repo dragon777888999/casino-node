@@ -2,7 +2,7 @@ const { ComputeBudgetProgram, Connection, Keypair, PublicKey, SystemInstruction,
 const base58 = require("bs58").default;
 const { createAssociatedTokenAccountIdempotentInstruction, createCloseAccountInstruction, createTransferInstruction, getAssociatedTokenAddressSync } = require("@solana/spl-token");
 const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
-const connectionForSend = new Connection("https://mainnet.helius-rpc.com/?api-key=c9a8b601-657e-4de5-a8a7-a347a24e6fb1");
+//const connectionForSend = new Connection("https://mainnet.helius-rpc.com/?api-key=c9a8b601-657e-4de5-a8a7-a347a24e6fb1");
 const config = require('../config/config');
 
 exports.entry = async (req, res) => {
@@ -167,12 +167,12 @@ sendNativeTokenFunc_solana = async (data, res) => {
                 lamports: Math.floor((10 ** config.digits[`${data.chain}_${data.coinType}`]) * amount),
             })
         );
-    const latestBlockhash = await connectionForSend.getLatestBlockhashAndContext();
+    const latestBlockhash = await connection.getLatestBlockhashAndContext();
     transaction.recentBlockhash = latestBlockhash.value.blockhash;
     transaction.lastValidBlockHeight = latestBlockhash.context.slot + 150
 
     const signature = await sendAndConfirmTransaction(
-        connectionForSend,
+        connection,
         transaction,
         [wallet],
         {
@@ -212,9 +212,9 @@ sendUnnativeTokenFunc_solana = async (data, res) => {
         ),
     );
 
-    const latestBlockhash = await connectionForSend.getLatestBlockhashAndContext();
+    const latestBlockhash = await connection.getLatestBlockhashAndContext();
     transaction.recentBlockhash = latestBlockhash.value.blockhash;
     transaction.lastValidBlockHeight = latestBlockhash.context.slot + 150
-    const txnId = await sendAndConfirmTransaction(connectionForSend, transaction, [wallet], { skipPreflight: true, maxRetries: config.maxRetries[data.chain], commitment: "confirmed" });
+    const txnId = await sendAndConfirmTransaction(connection, transaction, [wallet], { skipPreflight: true, maxRetries: config.maxRetries[data.chain], commitment: "confirmed" });
     res.send({ status: 0, txnId });
 };
