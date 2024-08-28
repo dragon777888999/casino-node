@@ -7,21 +7,32 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { backendUrl } from "@/anchor/global";
 import VaultModal from "../modal/VaultModal";
 
-import disconnectOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { userInfo, setUserInfo, loginStep, setLoginStep, siteInfo, setWalletAddress, accessToken , setAccessToken} = useAppContext();
+  const { userInfo, setUserInfo, loginStep, setLoginStep, siteInfo, setWalletAddress, accessToken, setAccessToken } = useAppContext();
   const wallet = useWallet();
   const [showVaultModal, setShowVaultModal] = useState(false);
+
+  const { disconnectOnSolana } = useDepositOnSolana();
+  const { disconnectOnXrpl } = useDepositOnXrpl();
+  const { disconnectOnTron } = useDepositOnTron();
+
   const handleDisconnect = async () => {
     try {
       if (siteInfo?.chain == "Solana") {
         disconnectOnSolana();
       }
-      //else if (siteInfo?.chain == "Tron")
+      else if (siteInfo?.chain == "Xrpl") {
+        disconnectOnXrpl();
+      }
+      else if (siteInfo?.chain == "Tron") {
+        disconnectOnTron();
+      }
 
       const response = await fetch(`${backendUrl}/Account/Logout`, {
         method: "GET",

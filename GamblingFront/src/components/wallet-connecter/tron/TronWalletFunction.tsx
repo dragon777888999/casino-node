@@ -12,14 +12,14 @@ import {
 } from "@solana/wallet-adapter-react";
 import { useAppContext } from "../../../hooks/AppContext";
 
-const useDepositOnSolana = () => {
+const useDepositOnTron = () => {
   //const { connection } = useConnection();
   const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
   const wallet = useWallet();
   const [error, setError] = useState<string | null>(null);
   const { siteInfo, userInfo, walletType } = useAppContext();
 
-  const depositOnSolana = async (
+  const depositOnTron = async (
     depositAddress: string,
     depositAmount: number,
     resultCallback: (status: number) => void,
@@ -120,11 +120,11 @@ const useDepositOnSolana = () => {
     resultCallback(1);
     console.log("status", status);
   };
-  const disconnectOnSolana = () => {
+  const disconnectOnTron = () => {
     const wallet = useWallet();
     wallet.disconnect();
   };
   
-  return { depositOnSolana, disconnectOnSolana ,error };
+  return { depositOnTron, disconnectOnTron ,error };
 };
-export default useDepositOnSolana;
+export default useDepositOnTron;

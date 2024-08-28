@@ -10,20 +10,6 @@ import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// ---------solana wallet------------
-import { ComputeBudgetProgram, PublicKey, Transaction } from "@solana/web3.js";
-import {
-  createAssociatedTokenAccountIdempotentInstruction,
-  createTransferInstruction,
-  getAssociatedTokenAddressSync,
-} from "@solana/spl-token";
-import {
-  useAnchorWallet,
-  useConnection,
-  useWallet,
-} from "@solana/wallet-adapter-react";
-import useDepositPhantom from "@/hooks/useDepositPhantom";
-
 import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
 
@@ -52,8 +38,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [isHidden, setIsHidden] = useState(false);
   const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
     useAppContext();
-  const wallet = useWallet();
-  const { connection } = useConnection();
 
   const { depositOnSolana } = useDepositOnSolana();
   const { depositOnXrpl } = useDepositOnXrpl();

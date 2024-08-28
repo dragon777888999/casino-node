@@ -76,8 +76,10 @@ const useDepositOnXrpl = () => {
       resultCallback(1);
     }
   };
+  const disconnectOnXrpl = () => {
+  };
 
-  return { depositOnXrpl, status, error};
+  return { depositOnXrpl, disconnectOnXrpl, status, error};
 };
 
 export default useDepositOnXrpl;
