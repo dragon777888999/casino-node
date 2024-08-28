@@ -24,7 +24,6 @@ const Affiliates = () => {
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
   const [info, setInfo] = useState<AffiliaterInfo | null>(null);
-  const isButtonDisabled = Boolean(affiliateCode);
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -63,10 +62,11 @@ const Affiliates = () => {
 
       if (result.status === 0) {
         setInfo(result);
-        setAffiliateCode(result.affiliateCodes[0]);
-
-        console.log("code", result.affiliateCodes[0]);
-        setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        let isButtonDisabled = result.affiliateCodes.length > 0;
+        if (isButtonDisabled) {
+          setAffiliateCode(result.affiliateCodes[0]);
+          setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        }
         toast.success("success");
       } else {
         toast.warn("Operation failed");
@@ -170,7 +170,7 @@ const Affiliates = () => {
                     <button
                       className="input-btn"
                       onClick={setCode}
-                      disabled={isButtonDisabled}
+                      disabled={affiliateCode != ""}
                     >
                       <div className="Button_inner-content">
                         <span style={{ fontSize: "13px" }}>Set Code</span>
