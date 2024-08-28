@@ -24,6 +24,7 @@
     "@tronweb3/tronwallet-adapter-react-hooks": "^1.1.7",
     "@tronweb3/tronwallet-adapter-react-ui": "^1.1.8",
     "@tronweb3/tronwallet-adapters": "^1.2.2",
+    "@tronwidgets/transaction": "^1.0.0",
     "apexcharts": "^3.45.2",
     "flatpickr": "^4.6.13",
     "framer-motion": "^11.3.28",

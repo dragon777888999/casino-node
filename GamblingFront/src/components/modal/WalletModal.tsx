@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
 
 Modal.setAppElement("#root");
 // Define the WalletModal component
@@ -41,6 +42,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
 
   const { depositOnSolana } = useDepositOnSolana();
   const { depositOnXrpl } = useDepositOnXrpl();
+  const { depositOnTron } = useDepositOnTron();
 
   const onSelectCoinType = async (key: string) => {
     const response = await fetch(
@@ -104,8 +106,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setQrcode,
         setJumpLink,
       );
-    } else {
+    } else if (siteInfo?.chain == "Solana") {
       depositOnSolana(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
+    }
+    else if (siteInfo?.chain == "Tron"){
+      depositOnTron(
         depositAddress,
         depositAmount,
         depositResultCallback,
