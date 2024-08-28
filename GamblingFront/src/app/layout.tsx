@@ -12,6 +12,7 @@ import Loader from "@/components/common/Loader";
 import { AppProvider, useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "../anchor/global";
 import SolanaWalletProvider from "../components/wallet-connecter/solana/SolanaWalletProvider";
+import TronWalletProvider from "../components/wallet-connecter/tron/TronWalletProvider";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 import useLocalStorage from "../hooks/useLocalStorage";
 
@@ -23,18 +24,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AppProvider>
-        <SolanaWalletProvider>
-          <body suppressHydrationWarning={true}>
-            <div
-              className=" dark dark:bg-boxdark-2 dark:text-bodydark"
-              id="root"
-            >
-              <FetchSiteInfo>
-                <DefaultLayout>{children}</DefaultLayout>
-              </FetchSiteInfo>
-            </div>
-          </body>
-        </SolanaWalletProvider>
+        <TronWalletProvider>
+          <SolanaWalletProvider>
+            <body suppressHydrationWarning={true}>
+              <div
+                className=" dark dark:bg-boxdark-2 dark:text-bodydark"
+                id="root"
+              >
+                <FetchSiteInfo>
+                  <DefaultLayout>{children}</DefaultLayout>
+                </FetchSiteInfo>
+              </div>
+            </body>
+          </SolanaWalletProvider>
+        </TronWalletProvider>
       </AppProvider>
     </html>
   );
