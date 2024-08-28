@@ -23,8 +23,8 @@ const Affiliates = () => {
   const { accessToken, userInfo } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
+  const [requestCode, setRequestCode] = useState("");
   const [info, setInfo] = useState<AffiliaterInfo | null>(null);
-  const isButtonDisabled = Boolean(affiliateCode);
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
       () => {
@@ -63,10 +63,11 @@ const Affiliates = () => {
 
       if (result.status === 0) {
         setInfo(result);
-        setAffiliateCode(result.affiliateCodes[0]);
-
-        console.log("code", result.affiliateCodes[0]);
-        setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        let isButtonDisabled = result.affiliateCodes.length > 0;
+        if (isButtonDisabled) {
+          setAffiliateCode(result.affiliateCodes[0]);
+          setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
+        }
         toast.success("success");
       } else {
         toast.warn("Operation failed");
@@ -84,7 +85,7 @@ const Affiliates = () => {
   }, []);
   const setCode = async () => {
     try {
-      if (affiliateCode == "")
+      if (requestCode == "")
         toast.error("Invalid value: Please enter the code");
 
       if (accessToken == "") return;
@@ -97,7 +98,7 @@ const Affiliates = () => {
         },
         body: JSON.stringify({
           method: "CreateAffiliater",
-          affiliaterCode: affiliateCode,
+          affiliaterCode: requestCode,
         }),
       });
       console.log("setcode", response);
@@ -162,15 +163,16 @@ const Affiliates = () => {
                     placeholder=""
                     defaultValue=""
                     value={affiliateCode}
+                    disabled={affiliateCode != ""}
                     onChange={(e) => {
-                      setAffiliateCode(e.target.value);
+                      setRequestCode(e.target.value);
                     }}
                   />
                   <div className="Input_btn-container">
                     <button
                       className="input-btn"
                       onClick={setCode}
-                      disabled={isButtonDisabled}
+                      disabled={affiliateCode != ""}
                     >
                       <div className="Button_inner-content">
                         <span style={{ fontSize: "13px" }}>Set Code</span>
@@ -372,7 +374,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalBetCount.toString()}</span>
+                      <span>{info?.totalBetCount?.toString()}</span>
                     </div>
                   </div>
                 </div>
@@ -500,7 +502,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalIncome.toFixed(4)}</span>
+                      <span>{info?.totalIncome?.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
