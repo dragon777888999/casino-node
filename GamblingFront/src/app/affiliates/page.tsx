@@ -23,6 +23,7 @@ const Affiliates = () => {
   const { accessToken, userInfo } = useAppContext();
   const [referralLink, setReferralLink] = useState("");
   const [affiliateCode, setAffiliateCode] = useState("");
+  const [requestCode, setRequestCode] = useState("");
   const [info, setInfo] = useState<AffiliaterInfo | null>(null);
   const handleCopy = () => {
     navigator.clipboard.writeText(referralLink).then(
@@ -84,7 +85,7 @@ const Affiliates = () => {
   }, []);
   const setCode = async () => {
     try {
-      if (affiliateCode == "")
+      if (requestCode == "")
         toast.error("Invalid value: Please enter the code");
 
       if (accessToken == "") return;
@@ -97,7 +98,7 @@ const Affiliates = () => {
         },
         body: JSON.stringify({
           method: "CreateAffiliater",
-          affiliaterCode: affiliateCode,
+          affiliaterCode: requestCode,
         }),
       });
       console.log("setcode", response);
@@ -162,8 +163,9 @@ const Affiliates = () => {
                     placeholder=""
                     defaultValue=""
                     value={affiliateCode}
+                    disabled={affiliateCode != ""}
                     onChange={(e) => {
-                      setAffiliateCode(e.target.value);
+                      setRequestCode(e.target.value);
                     }}
                   />
                   <div className="Input_btn-container">
