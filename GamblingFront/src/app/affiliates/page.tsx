@@ -372,7 +372,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalBetCount.toString()}</span>
+                      <span>{info?.totalBetCount?.toString()}</span>
                     </div>
                   </div>
                 </div>
@@ -500,7 +500,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalIncome.toFixed(4)}</span>
+                      <span>{info?.totalIncome?.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
