@@ -65,6 +65,7 @@ const Affiliates = () => {
         setInfo(result);
         let isButtonDisabled = result.affiliateCodes.length > 0;
         if (isButtonDisabled) {
+          setRequestCode(result.affiliateCodes[0]);
           setAffiliateCode(result.affiliateCodes[0]);
           setReferralLink(`${window.location.origin}?affiliaterCode=${result.affiliateCodes[0]}`);
         }
@@ -162,7 +163,7 @@ const Affiliates = () => {
                     id="affiliateCode"
                     placeholder=""
                     defaultValue=""
-                    value={affiliateCode}
+                    value={requestCode}
                     disabled={affiliateCode != ""}
                     onChange={(e) => {
                       setRequestCode(e.target.value);
