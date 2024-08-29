@@ -1359,3 +1359,6 @@ input[type="number"] {
     0 0 6px 0 rgba(0, 0, 0, 0.3);
   z-index: 999 !important;
 }
+.switch span {
+  margin: 0;
+}

@@ -9,16 +9,15 @@ const DropdownBonus = () => {
 
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
-      <li className="relative">
+      <div className="relative">
         <div className="relative flex items-center">
-          {" "}
           <div>
             <Link
               onClick={() => {
                 setNotifying(false);
                 setDropdownOpen(!dropdownOpen);
               }}
-              className="relative flex h-8.5 w-8.5 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
+              className="relative flex  items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
               href="#"
             >
               <span
@@ -30,84 +29,88 @@ const DropdownBonus = () => {
               </span>
 
               {/* <i className="fa-sharp fa-regular fa-gift"></i> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="25"
-                height="25"
-                fill="none"
-              >
-                <path
-                  fill="url(#:R1dakcr6:)"
-                  fill-opacity="0.05"
-                  d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671"
-                ></path>
-                <path
-                  fill="url(#:R1dakcr6H1:)"
-                  fill-opacity="0.05"
-                  d="M16.822 15.84a.438.438 0 0 0 .603-.404v-2.648c0-.242.196-.438.438-.438h5.95c.242 0 .438.196.438.438v12.925a.438.438 0 0 1-.438.438H4.19a.438.438 0 0 1-.437-.438V12.788c0-.242.196-.438.437-.438h5.951c.242 0 .438.196.438.438v2.647"
-                ></path>
-                <path
-                  stroke="url(#:R1dakcr6H2:)"
-                  stroke-miterlimit="10"
-                  stroke-width="1.75"
-                  d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671m-1.378 3.219V26.15h-4.096V15.567m5.474-2.779v2.648c0 .31-.315.522-.603.405l-2.656-1.086a.438.438 0 0 0-.331 0L11.18 15.84a.438.438 0 0 1-.603-.405v-2.647a.438.438 0 0 0-.438-.438H4.19a.438.438 0 0 0-.438.438v12.925c0 .242.196.438.437.438h19.624a.438.438 0 0 0 .438-.438V12.788a.438.438 0 0 0-.438-.438h-5.95a.437.437 0 0 0-.438.438Z"
-                ></path>
-                <path
-                  stroke="url(#:R1dakcr6H3:)"
-                  stroke-miterlimit="10"
-                  stroke-width="1.5"
-                  d="M14.001 6.634h-3.853a1.83 1.83 0 0 1 0-3.66h.193a3.66 3.66 0 0 1 3.66 3.66Zm0 0h3.853a1.83 1.83 0 1 0 0-3.66h-.193A3.66 3.66 0 0 0 14 6.635Zm3.423 9.508L14 14.707l-3.424 1.435V6.634h6.848v9.508Z"
-                ></path>
-                <defs>
-                  <linearGradient
-                    id=":R1dakcr6:"
-                    x1="14.001"
-                    x2="14.001"
-                    y1="6.633"
-                    y2="26.15"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
-                    <stop offset="1" stop-color="#E8E5FF"></stop>
-                  </linearGradient>
-                  <linearGradient
-                    id=":R1dakcr6H1:"
-                    x1="14.001"
-                    x2="14.001"
-                    y1="6.633"
-                    y2="26.15"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
-                    <stop offset="1" stop-color="#E8E5FF"></stop>
-                  </linearGradient>
-                  <linearGradient
-                    id=":R1dakcr6H2:"
-                    x1="14.001"
-                    x2="14.001"
-                    y1="6.633"
-                    y2="26.151"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#fff"></stop>
-                    <stop offset="1" stop-color="#E8E5FF"></stop>
-                  </linearGradient>
-                  <linearGradient
-                    id=":R1dakcr6H3:"
-                    x1="14.001"
-                    x2="14.001"
-                    y1="16.142"
-                    y2="2.975"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#33A9FF"></stop>
-                    <stop offset="1" stop-color="#6FFA8E"></stop>
-                  </linearGradient>
-                </defs>
-              </svg>
+              <div className="itmes-center flex">
+                {" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="-6 -5 40 40"
+                  fill="none"
+                >
+                  <path
+                    fill="url(#:R1dakcr6:)"
+                    fill-opacity="0.05"
+                    d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671"
+                  ></path>
+                  <path
+                    fill="url(#:R1dakcr6H1:)"
+                    fill-opacity="0.05"
+                    d="M16.822 15.84a.438.438 0 0 0 .603-.404v-2.648c0-.242.196-.438.438-.438h5.95c.242 0 .438.196.438.438v12.925a.438.438 0 0 1-.438.438H4.19a.438.438 0 0 1-.437-.438V12.788c0-.242.196-.438.437-.438h5.951c.242 0 .438.196.438.438v2.647"
+                  ></path>
+                  <path
+                    stroke="url(#:R1dakcr6H2:)"
+                    stroke-miterlimit="10"
+                    stroke-width="1.75"
+                    d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671m-1.378 3.219V26.15h-4.096V15.567m5.474-2.779v2.648c0 .31-.315.522-.603.405l-2.656-1.086a.438.438 0 0 0-.331 0L11.18 15.84a.438.438 0 0 1-.603-.405v-2.647a.438.438 0 0 0-.438-.438H4.19a.438.438 0 0 0-.438.438v12.925c0 .242.196.438.437.438h19.624a.438.438 0 0 0 .438-.438V12.788a.438.438 0 0 0-.438-.438h-5.95a.437.437 0 0 0-.438.438Z"
+                  ></path>
+                  <path
+                    stroke="url(#:R1dakcr6H3:)"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                    d="M14.001 6.634h-3.853a1.83 1.83 0 0 1 0-3.66h.193a3.66 3.66 0 0 1 3.66 3.66Zm0 0h3.853a1.83 1.83 0 1 0 0-3.66h-.193A3.66 3.66 0 0 0 14 6.635Zm3.423 9.508L14 14.707l-3.424 1.435V6.634h6.848v9.508Z"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id=":R1dakcr6:"
+                      x1="14.001"
+                      x2="14.001"
+                      y1="6.633"
+                      y2="26.15"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
+                      <stop offset="1" stop-color="#E8E5FF"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      id=":R1dakcr6H1:"
+                      x1="14.001"
+                      x2="14.001"
+                      y1="6.633"
+                      y2="26.15"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
+                      <stop offset="1" stop-color="#E8E5FF"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      id=":R1dakcr6H2:"
+                      x1="14.001"
+                      x2="14.001"
+                      y1="6.633"
+                      y2="26.151"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#fff"></stop>
+                      <stop offset="1" stop-color="#E8E5FF"></stop>
+                    </linearGradient>
+                    <linearGradient
+                      id=":R1dakcr6H3:"
+                      x1="14.001"
+                      x2="14.001"
+                      y1="16.142"
+                      y2="2.975"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#33A9FF"></stop>
+                      <stop offset="1" stop-color="#6FFA8E"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
             </Link>
           </div>
-          <span className="Header_counter">1</span>
+          {/* <span className="Header_counter">1</span> */}
         </div>
 
         {/* <!-- Dropdown Start --> */}
@@ -613,115 +616,6 @@ const DropdownBonus = () => {
                   </div>
                 </button>
               </li>
-
-              {/* <li>
-                <Link
-                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="/messages"
-                >
-                  <div className="h-12.5 w-12.5 rounded-full">
-                    <Image
-                      width={112}
-                      height={112}
-                      src={"/images/user/user-01.png"}
-                      alt="User"
-                      style={{
-                        width: "auto",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h6 className="text-sm font-medium text-black dark:text-white">
-                      Robert Jhon
-                    </h6>
-                    <p className="text-sm">Can you share your offer?</p>
-                    <p className="text-xs">10min ago</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="/messages"
-                >
-                  <div className="h-12.5 w-12.5 rounded-full">
-                    <Image
-                      width={112}
-                      height={112}
-                      src={"/images/user/user-03.png"}
-                      alt="User"
-                      style={{
-                        width: "auto",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h6 className="text-sm font-medium text-black dark:text-white">
-                      Henry Dholi
-                    </h6>
-                    <p className="text-sm">I cam across your profile and...</p>
-                    <p className="text-xs">1day ago</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="/messages"
-                >
-                  <div className="h-12.5 w-12.5 rounded-full">
-                    <Image
-                      width={112}
-                      height={112}
-                      src={"/images/user/user-04.png"}
-                      alt="User"
-                      style={{
-                        width: "auto",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h6 className="text-sm font-medium text-black dark:text-white">
-                      Cody Fisher
-                    </h6>
-                    <p className="text-sm">I’m waiting for you response!</p>
-                    <p className="text-xs">5days ago</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="/messages"
-                >
-                  <div className="h-12.5 w-12.5 rounded-full">
-                    <Image
-                      width={112}
-                      height={112}
-                      src={"/images/user/user-02.png"}
-                      alt="User"
-                      style={{
-                        width: "auto",
-                        height: "auto",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <h6 className="text-sm font-medium text-black dark:text-white">
-                      Mariya Desoja
-                    </h6>
-                    <p className="text-sm">I like your confidence 💪</p>
-                    <p className="text-xs">2min ago</p>
-                  </div>
-                </Link>
-              </li> */}
             </ul>
             <div className="RewardsDropDown_simple-line"></div>
             <div>
@@ -737,7 +631,7 @@ const DropdownBonus = () => {
           </div>
         )}
         {/* <!-- Dropdown End --> */}
-      </li>
+      </div>
     </ClickOutside>
   );
 };

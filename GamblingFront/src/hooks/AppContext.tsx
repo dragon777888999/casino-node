@@ -14,7 +14,7 @@ export enum WalletType {
   Gem,
   Xumm,
 
-  TronLink
+  TronLink,
 }
 
 export interface SiteInfo {
@@ -51,6 +51,9 @@ interface AppState {
 
   siteInfoList: { [key: string]: SiteInfo };
   setSiteInfoList: (siteInfoList: { [key: string]: SiteInfo }) => void;
+
+  chatbarOpen: boolean;
+  setChatbarOpen: (chatbarOpen: boolean) => void;
 
   siteInfo: SiteInfo;
   setSiteInfo: (siteInfo: SiteInfo) => void;
@@ -91,7 +94,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     userCode: "",
     nickName: "",
   });
-  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>({});
+  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>(
+    {},
+  );
   const [siteInfo, setSiteInfo] = useState<SiteInfo>({
     isLoginMode: false, // default to false (not in login mode)
     enableSideBar: false,
@@ -109,9 +114,10 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     title: "",
     description: "",
     showProvider: true,
-    featureMap: {}
+    featureMap: {},
   });
   const [loginStep, setLoginStep] = useState<number>(0);
+  const [chatbarOpen, setChatbarOpen] = useState<boolean>(false);
   const [accessToken, setAccessToken] = useState<string>("");
   const [walletType, setWalletType] = useState<number>(0);
   const [walletAddress, setWalletAddress] = useState<string>("");
@@ -126,6 +132,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSiteInfo,
     loginStep,
     setLoginStep,
+    chatbarOpen,
+    setChatbarOpen,
     accessToken,
     setAccessToken,
     walletAddress,
@@ -182,7 +190,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     };
 
     setSocket(ws);
-
   };
   const handleReconnect = () => {
     // Clear any existing timeouts
@@ -192,11 +199,16 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     // Attempt to reconnect after a delay
     timeout.current = setTimeout(() => {
-      console.log(`Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`);
+      console.log(
+        `Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`,
+      );
       connectWebSocket();
 
       // Increase the reconnect interval, but don't exceed the maximum
-      reconnectInterval.current = Math.min(reconnectInterval.current * 2, maxReconnectInterval.current);
+      reconnectInterval.current = Math.min(
+        reconnectInterval.current * 2,
+        maxReconnectInterval.current,
+      );
     }, reconnectInterval.current);
   };
 

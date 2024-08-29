@@ -10,18 +10,24 @@ import { useAppContext } from "../../hooks/AppContext";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import { Switch } from "@nextui-org/react";
 import ToogleButton from "./ToogleButton";
+import DropdownLanguage from "./DropdownLanguage";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =
-    useAppContext();
+  const {
+    loginStep,
+    siteInfo,
+    userInfo,
+    setUserInfo,
+    socketData,
+    setChatbarOpen,
+  } = useAppContext();
   const [chain, setChain] = useLocalStorage("chain", "");
   useEffect(() => {
     try {
-      if (socketData == "")
-        return;
+      if (socketData == "") return;
       const cmd = JSON.parse(socketData);
       if (cmd.type === "balance") {
         if (userInfo) {
@@ -130,6 +136,14 @@ const Header = (props: {
           ) : (
             <div className="flex items-center gap-3 2xsm:gap-7">
               <ToogleButton />
+              {/* <button
+                onClick={() => {
+                  setChatbarOpen((oldVal) => !oldVal);
+                }}
+              >
+                <h1>HE</h1>
+              </button> */}
+              <DropdownLanguage />
               {siteInfo?.isLoginMode && <LoginButton />}
               {!siteInfo?.isLoginMode && <ConnectButton />}
             </div>

@@ -10,32 +10,37 @@ import "react-toastify/dist/ReactToastify.css";
 
 import useFetchUserInfo from "../../hooks/useFetchUserInfo";
 import { useAppContext } from "../../hooks/AppContext";
+import Chatbar from "../chatbar";
 
 export default function DefaultLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { siteInfo} =    useAppContext();
+  const { siteInfo, chatbarOpen, setChatbarOpen } = useAppContext();
   useEffect(() => {
-   
     document.title = siteInfo.title;
     const metaDescription = document.querySelector("meta[name='description']");
     if (metaDescription) {
       metaDescription.setAttribute("content", siteInfo.description);
     }
-    
-    let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
-  
+
+    let link = document.querySelector(
+      "link[rel*='icon']",
+    ) as HTMLLinkElement | null;
+
     if (!link) {
-      link = document.createElement('link');
-      link.rel = 'icon';
-      document.getElementsByTagName('head')[0].appendChild(link);
+      link = document.createElement("link");
+      link.rel = "icon";
+      document.getElementsByTagName("head")[0].appendChild(link);
     }
-    
+
     link.href = `/${siteInfo.themeCode}/images/favicon.ico`;
   });
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const appendClass = chatbarOpen
+    ? " mr-screen w-screen md:mr-[360px]"
+    : " mr-0 md:mr-0";
   useFetchUserInfo();
   return (
     <NextUIProvider>
@@ -48,14 +53,24 @@ export default function DefaultLayout({
           }`}
         >
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+          <div className="flex">
+            <div
+              className={`${appendClass} max-w-screen flex min-h-screen flex-grow flex-col transition-[margin-right] duration-500 ease-in-out md:w-full`}
+              // className={`${appendClass} flex min-h-screen w-screen flex-grow flex-col md:w-full`}
+            >
+              <main>
+                <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+                  {children}
+                </div>
+              </main>
 
-          <main>
-            <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-              {children}
+              <Footer
+                sidebarOpen={sidebarOpen}
+                setSidebarOpen={setSidebarOpen}
+              />
             </div>
-          </main>
-
-          <Footer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+            <Chatbar />
+          </div>
         </div>
       </div>
       <ToastContainer
