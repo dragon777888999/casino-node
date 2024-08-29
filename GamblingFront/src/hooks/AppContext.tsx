@@ -12,7 +12,9 @@ export enum WalletType {
   Phantom = 1,
   Crossmark,
   Gem,
-  Xumm
+  Xumm,
+
+  TronLink
 }
 
 export interface SiteInfo {
@@ -22,7 +24,7 @@ export interface SiteInfo {
   agentCode: string;
   chain: string;
   availableCoinTypes: Array<string>;
-  virtualCoinType:string;
+  virtualCoinType: string;
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   themeMap: { [key: string]: string };
@@ -46,7 +48,7 @@ export interface UserInfo {
 interface AppState {
   loginStep: number;
   setLoginStep: (loginStep: number) => void;
-  
+
   siteInfoList: { [key: string]: SiteInfo };
   setSiteInfoList: (siteInfoList: { [key: string]: SiteInfo }) => void;
 
@@ -97,7 +99,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     agentCode: "", // empty string for agent code
     chain: "", // empty string for blockchain type
     availableCoinTypes: [], // empty array for available coin types
-    virtualCoinType:"",
+    virtualCoinType: "",
     digitsMap: {}, // empty object for digits mapping
     tokenAddressMap: {}, // empty object for token addresses
     themeMap: {}, // empty object for token addresses
@@ -107,7 +109,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     title: "",
     description: "",
     showProvider: true,
-    featureMap:{}
+    featureMap: {}
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
@@ -154,10 +156,18 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     ws.onopen = () => {
       console.log("WebSocket connection opened");
+      if (loginStep == 3) {
+        const authMessage = {
+          type: "auth",
+          agentCode: siteInfo?.agentCode,
+          userCode: userInfo.userCode,
+        };
+        socket?.send(JSON.stringify(authMessage));
+      }
     };
 
     ws.onmessage = (event) => {
-      console.log("Received:", event.data);
+      //console.log("Received:", event.data);
       setSocketData(event.data); // Update the state with received data
     };
 
@@ -175,8 +185,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
   };
   const handleReconnect = () => {
-     // Clear any existing timeouts
-     if (timeout.current !== null) {
+    // Clear any existing timeouts
+    if (timeout.current !== null) {
       clearTimeout(timeout.current);
     }
 

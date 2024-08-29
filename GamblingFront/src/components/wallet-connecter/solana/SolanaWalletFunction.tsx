@@ -120,8 +120,10 @@ const useDepositOnSolana = () => {
     resultCallback(1);
     console.log("status", status);
   };
-
-  return { depositOnSolana, status, error };
+  const disconnectOnSolana = () => {
+    wallet.disconnect();
+  };
+  
+  return { depositOnSolana, disconnectOnSolana ,error };
 };
-
 export default useDepositOnSolana;

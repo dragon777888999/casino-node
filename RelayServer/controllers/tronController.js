@@ -114,8 +114,8 @@ sendCoinFunc_tron = async (req, res) => {
     base58: tronWeb.address.fromPrivateKey(privateKey),
   };
 
-  if (tokenAddress = "") {
-    const transaction = await tronWeb.trx.sendTransaction(toAddress, amount);
+  if (tokenAddress == "") {
+    const transaction = await tronWeb.trx.sendTransaction(toAddress, tronWeb.toSun(amount));
   } else {
     const contract = await tronWeb.contract().at(tokenAddress);
     const result = await contract.transfer(toAddress, amount).send();
