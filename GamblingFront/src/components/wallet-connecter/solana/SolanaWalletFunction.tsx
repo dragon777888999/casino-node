@@ -112,13 +112,13 @@ const useDepositOnSolana = () => {
       }
       console.log("Transaction confirmed");
       resultCallback(0);
+      return;
     } catch (error) {
       console.error("Transaction error:", error);
       const errorMessage = (error as Error).message || "An unknown error occurred";
       setError(errorMessage);
     }
     resultCallback(1);
-    console.log("status", status);
   };
   const disconnectOnSolana = () => {
     wallet.disconnect();

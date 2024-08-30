@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
 import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import { stat } from "fs";
 
 Modal.setAppElement("#root");
 // Define the WalletModal component
@@ -90,8 +91,31 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [loginStep]);
 
-  const depositResultCallback = (status: number) => {
-    console.log(status);
+  const depositResultCallback = async (status: number) => {
+    console.log("depositCallback", status);
+    if (status != 0) {
+      toast.error("Deposit fail");
+      return;
+    }
+    if (siteInfo.checkBalance) {
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Access-Token": accessToken,
+        },
+        body: JSON.stringify({
+          method: "CheckBalance",
+          chain: siteInfo?.chain,
+          coinType: userInfo?.selectedCoinType,
+        }),
+      });
+      const result = await response.json();
+      if (result.status != 0) {
+        toast.error(result.msg);
+      }
+    }
+    toast.error("Deposit success");
   };
   const onDeposit = () => {
     if (depositAmount == null) {
@@ -115,7 +139,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink,
       );
     }
-    else if (siteInfo?.chain == "Tron"){
+    else if (siteInfo?.chain == "Tron") {
       depositOnTron(
         depositAddress,
         depositAmount,

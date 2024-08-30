@@ -30,6 +30,7 @@ export interface SiteInfo {
   themeMap: { [key: string]: string };
   featureMap: { [key: string]: boolean };
   mark: string;
+  checkBalance:boolean;
   walletModalMessage: string;
   themeCode: string;
   title: string;
@@ -109,6 +110,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     title: "",
     description: "",
     showProvider: true,
+    checkBalance:false,
     featureMap: {}
   });
   const [loginStep, setLoginStep] = useState<number>(0);
