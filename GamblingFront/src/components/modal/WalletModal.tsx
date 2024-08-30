@@ -115,7 +115,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         toast.error(result.msg);
         return;
       }
-      toast.error(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
+      toast.success(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
     }
   };
   const onCheckBalance = async () => {
@@ -136,7 +136,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       toast.error(result.msg);
       return;
     }
-    toast.error(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
+    toast.success(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
   };
   const onDeposit = () => {
     if (depositAmount == null) {
