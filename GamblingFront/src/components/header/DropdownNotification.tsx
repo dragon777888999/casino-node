@@ -54,8 +54,10 @@ const DropdownNotification = () => {
       const result = await response.json();
 
       if (result.status === 0) {
-        setNotifying(true);
-        setNofityData(result.data);
+        if (result.length > 0) {
+          setNotifying(true);
+          setNofityData(result.data);
+        }
         console.log("notify", result);
         toast.success("success");
       } else {

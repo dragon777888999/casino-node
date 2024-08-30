@@ -33,7 +33,8 @@
 
 @font-face {
   font-family: "Century";
-  src: url("/RebelGames/fonts/Century Handtooled ITC Std Regular.otf") format("truetype");
+  src: url("/RebelGames/fonts/Century Handtooled ITC Std Regular.otf")
+    format("truetype");
   font-weight: bold;
 }
 
@@ -209,8 +210,12 @@ body {
     transform 0.3s ease,
     box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
-
+.image-container:hover {
+  outline: 5px solid #4caf50; /* Change to your desired outline color */
+}
 .game-block-out-content-img:hover {
   cursor: pointer; /* Changes the cursor to a pointer */
-  transform: scale(1.5);
+  transform: scale(1.03);
+
+  /* filter: drop-shadow(4px 4px 2px white); */
 }

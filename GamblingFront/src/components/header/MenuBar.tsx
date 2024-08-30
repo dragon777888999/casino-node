@@ -10,6 +10,7 @@ import ToogleButton from "./ToogleButton";
 import DropdownNotification from "./DropdownNotification";
 import DropdownBonus from "./DropdownBonus";
 import DropdownLanguage from "./DropdownLanguage";
+import ChatButton from "./ChatButton";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -107,6 +108,9 @@ const MenuBar = () => {
 
             <li>
               <DropdownLanguage />
+            </li>
+            <li>
+              <ChatButton />
             </li>
             <li>
               <DropdownUser />

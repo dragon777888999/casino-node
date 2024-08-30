@@ -178,13 +178,13 @@ export default function GamePanel({
 
                         <div className="image-container">
                           <Image
-                            className="game-block-item-content-img"
+                            className="game-block-out-content-img"
                             src={imageSrc}
                             alt={gameName.en || "Game Thumbnail"} // Provide fallback alt text
                             layout="responsive"
                             width={1200}
                             height={800}
-                          // style={{ width: "100%", borderRadius: "6px" }}
+                            // style={{ width: "100%", borderRadius: "6px" }}
                           />
                           {/* <div className="image-outline">
                             <Image
