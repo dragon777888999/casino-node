@@ -17,7 +17,8 @@ export default function DefaultLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { siteInfo, chatbarOpen, setChatbarOpen } = useAppContext();
+  const { siteInfo, userInfo, loginStep, socket, setChatbarOpen } =
+    useAppContext();
   useEffect(() => {
     document.title = siteInfo.title;
     const metaDescription = document.querySelector("meta[name='description']");
@@ -37,6 +38,31 @@ export default function DefaultLayout({
 
     link.href = `/${siteInfo.themeCode}/images/favicon.ico`;
   });
+
+  const sendMessage = (message: string, retryDelay = 500) => {
+    if (socket?.readyState === WebSocket.OPEN) {
+      socket.send(message);
+    } else {
+      // Retry sending the message after a delay
+      const retryTimeout = setTimeout(() => {
+        sendMessage(message, retryDelay);
+      }, retryDelay);
+
+      // Cleanup timeout if the component unmounts before the timeout is reached
+      return () => clearTimeout(retryTimeout);
+    }
+  };
+  useEffect(() => {
+    if (loginStep == 3) {
+      const authMessage = {
+        type: "auth",
+        agentCode: siteInfo?.agentCode,
+        userCode: userInfo.userCode,
+      };
+      sendMessage(JSON.stringify(authMessage));
+    }
+  }, [socket]);
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const appendClass = chatbarOpen
     ? " mr-screen w-screen md:mr-[360px]"

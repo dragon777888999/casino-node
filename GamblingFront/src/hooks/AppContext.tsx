@@ -30,6 +30,7 @@ export interface SiteInfo {
   themeMap: { [key: string]: string };
   featureMap: { [key: string]: boolean };
   mark: string;
+  checkBalance: boolean;
   walletModalMessage: string;
   themeCode: string;
   title: string;
@@ -114,6 +115,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     title: "",
     description: "",
     showProvider: true,
+    checkBalance: false,
     featureMap: {},
   });
   const [loginStep, setLoginStep] = useState<number>(0);
@@ -164,14 +166,6 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     ws.onopen = () => {
       console.log("WebSocket connection opened");
-      if (loginStep == 3) {
-        const authMessage = {
-          type: "auth",
-          agentCode: siteInfo?.agentCode,
-          userCode: userInfo.userCode,
-        };
-        socket?.send(JSON.stringify(authMessage));
-      }
     };
 
     ws.onmessage = (event) => {
@@ -188,6 +182,12 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       console.error("WebSocket error:", error);
       ws.close();
     };
+
+    setInterval(() => {
+      if (ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ type: "ping" }));
+      }
+    }, 60000); // Send a ping every 60 seconds
 
     setSocket(ws);
   };
