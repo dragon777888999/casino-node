@@ -113,9 +113,30 @@ const WalletModal: React.FC<WalletModalProps> = ({
       const result = await response.json();
       if (result.status != 0) {
         toast.error(result.msg);
+        return;
       }
+      toast.error(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
     }
-    toast.error("Deposit success");
+  };
+  const onCheckBalance = async () => {
+    const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Access-Token": accessToken,
+      },
+      body: JSON.stringify({
+        method: "CheckBalance",
+        chain: siteInfo?.chain,
+        coinType: userInfo?.selectedCoinType,
+      }),
+    });
+    const result = await response.json();
+    if (result.status != 0) {
+      toast.error(result.msg);
+      return;
+    }
+    toast.error(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
   };
   const onDeposit = () => {
     if (depositAmount == null) {
@@ -373,6 +394,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     >
                       Deposit
                     </button>
+                    {siteInfo.checkBalance && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          onCheckBalance();
+                        }}
+                        className="wallet-manage-modal-button  m-auto  "
+                      >
+                        Check Balance
+                      </button>)
+                    }
                   </div>
                 </div>
               </div>
