@@ -67,7 +67,7 @@ const Affiliates = () => {
         if (isButtonDisabled) {
           setRequestCode(result.affiliateCodes[0]);
           setAffiliateCode(result.affiliateCodes[0]);
-          setReferralLink(`${window.location.origin}?r=${result.affiliateCodes[0]}`);
+          setReferralLink(`${window.location.origin}/r/${result.affiliateCodes[0]}`);
         }
         toast.success("success");
       } else {

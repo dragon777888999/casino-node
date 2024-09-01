@@ -69,6 +69,9 @@ interface AppState {
   setSocket: (socket: WebSocket | null) => void;
   socketData: string;
   setSocketData: (data: string) => void;
+
+  affiliaterCode : string;
+  setAffiliaterCode : (affiliaterCode : string) => void;
 }
 
 // Create the context with a default value
@@ -119,6 +122,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [walletAddress, setWalletAddress] = useState<string>("");
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [socketData, setSocketData] = useState<string>("");
+  const [affiliaterCode, setAffiliaterCode] = useState<string>("");
+
   const value = {
     userInfo,
     setUserInfo,
@@ -138,6 +143,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSocket,
     socketData,
     setSocketData,
+    
+    affiliaterCode,
+    setAffiliaterCode
   };
 
   const reconnectInterval = useRef(1000); // Initial reconnect interval (1 second)
