@@ -493,7 +493,7 @@ const Affiliates = () => {
                     </svg>
                   </div>
                   <div className="affiliates-text">
-                    <h3>income</h3>
+                    <h3>Income</h3>
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
