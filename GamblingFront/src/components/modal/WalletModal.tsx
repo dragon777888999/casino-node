@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
 import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import useDepositOnCosmos from "../wallet-connecter/cosmos/CosmosWalletFunction";
 import { stat } from "fs";
 
 Modal.setAppElement("#root");
@@ -43,6 +44,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const { depositOnSolana } = useDepositOnSolana();
   const { depositOnXrpl } = useDepositOnXrpl();
   const { depositOnTron } = useDepositOnTron();
+  const { depositOnCosmos } = useDepositOnCosmos();
 
   const onSelectCoinType = async (key: string) => {
     const response = await fetch(
@@ -168,6 +170,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink,
       );
     }
+    else if (siteInfo?.chain == "Oraichain") {
+      depositOnCosmos(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
+    }
+
   };
 
   const onWithdraw = async () => {

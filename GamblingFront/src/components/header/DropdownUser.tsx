@@ -10,6 +10,7 @@ import VaultModal from "../modal/VaultModal";
 import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
 import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
 import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import useDepositOnCosmos from "../wallet-connecter/cosmos/CosmosWalletFunction";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,6 +22,7 @@ const DropdownUser = () => {
   const { disconnectOnSolana } = useDepositOnSolana();
   const { disconnectOnXrpl } = useDepositOnXrpl();
   const { disconnectOnTron } = useDepositOnTron();
+  const { disconnectOnCosmos } = useDepositOnCosmos();
 
   const handleDisconnect = async () => {
     try {
@@ -32,6 +34,9 @@ const DropdownUser = () => {
       }
       else if (siteInfo?.chain == "Tron") {
         disconnectOnTron();
+      }
+      else if (siteInfo?.chain == "Oraichain"){
+        disconnectOnCosmos();
       }
 
       const response = await fetch(`${backendUrl}/Account/Logout`, {
