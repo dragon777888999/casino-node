@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
 import { useAppContext, WalletType } from "../../../hooks/AppContext";
@@ -6,11 +6,17 @@ import { useAppContext, WalletType } from "../../../hooks/AppContext";
 const useDepositOnXrpl = () => {
   const [status, setStatus] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { siteInfo, userInfo, walletType } =    useAppContext();
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const { siteInfo, userInfo, walletType } = useAppContext();
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
   const depositOnXrpl = async (
     depositAddress: string,
     depositAmount: number,
-    resultCallback: (status: number) => void, 
+    resultCallback: (status: number) => void,
     setQrcode: (qr_png: any) => void,
     setJumpLink: (link: any) => void
   ) => {
@@ -54,7 +60,10 @@ const useDepositOnXrpl = () => {
 
         setQrcode(data.payload.refs.qr_png);
         setJumpLink(data.payload.next.always);
-
+        if (isMobile) {
+          //open in new tab
+          window.open(data.payload.next.always, "_blank");
+        }
         const ws = new WebSocket(data.payload.refs.websocket_status);
         ws.onmessage = async (e) => {
           let responseObj = JSON.parse(e.data);
@@ -66,6 +75,7 @@ const useDepositOnXrpl = () => {
               setStatus(1);
               resultCallback(1);
             }
+            setQrcode(null);
           }
         };
       }
@@ -79,7 +89,7 @@ const useDepositOnXrpl = () => {
   const disconnectOnXrpl = () => {
   };
 
-  return { depositOnXrpl, disconnectOnXrpl, status, error};
+  return { depositOnXrpl, disconnectOnXrpl, status, error };
 };
 
 export default useDepositOnXrpl;
