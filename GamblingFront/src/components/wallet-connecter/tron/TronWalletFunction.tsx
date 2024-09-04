@@ -3,7 +3,7 @@ import { useAppContext } from "../../../hooks/AppContext";
 import { useWallet, WalletProvider } from '@tronweb3/tronwallet-adapter-react-hooks';
 import { ContractInteract } from "@tronwidgets/transaction";
 
-const useDepositOnTron = () => {
+const useTronFunction = () => {
   //const { connection } = useConnection();
   //  const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
   const wallet = useWallet();
@@ -50,4 +50,4 @@ const useDepositOnTron = () => {
 
   return { depositOnTron, disconnectOnTron, error };
 };
-export default useDepositOnTron;
+export default useTronFunction;
