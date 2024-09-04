@@ -20,7 +20,6 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
   gameData,
   onRequestClose,
 }) => {
-  if (!showModal) return null;
   const { loginStep } = useAppContext();
 
   const timestampMillis = gameData.time;
@@ -34,8 +33,8 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
 
   // Format the date as DD/MM/YYYY
   const formattedDate = `${day}/${month}/${year}`;
-
   console.log(formattedDate); // Example output: 27/08/2024
+  if (!showModal) return null;
   return (
     <Modal
       id="modal"
