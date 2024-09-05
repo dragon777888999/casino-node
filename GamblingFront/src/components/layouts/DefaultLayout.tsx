@@ -10,15 +10,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 import useFetchUserInfo from "../../hooks/useFetchUserInfo";
 import { useAppContext } from "../../hooks/AppContext";
-import Chatbar from "../chatbar";
 
 export default function DefaultLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { siteInfo, userInfo, loginStep, socket, setChatbarOpen } =
-    useAppContext();
+  const { siteInfo, userInfo, loginStep, socket } = useAppContext();
   useEffect(() => {
     document.title = siteInfo.title;
     const metaDescription = document.querySelector("meta[name='description']");
@@ -26,14 +24,12 @@ export default function DefaultLayout({
       metaDescription.setAttribute("content", siteInfo.description);
     }
 
-    let link = document.querySelector(
-      "link[rel*='icon']",
-    ) as HTMLLinkElement | null;
+    let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
 
     if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.getElementsByTagName("head")[0].appendChild(link);
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
     }
 
     link.href = `/${siteInfo.themeCode}/images/favicon.ico`;
@@ -42,7 +38,8 @@ export default function DefaultLayout({
   const sendMessage = (message: string, retryDelay = 500) => {
     if (socket?.readyState === WebSocket.OPEN) {
       socket.send(message);
-    } else {
+    }
+    else {
       // Retry sending the message after a delay
       const retryTimeout = setTimeout(() => {
         sendMessage(message, retryDelay);
@@ -64,9 +61,6 @@ export default function DefaultLayout({
   }, [socket]);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const appendClass = chatbarOpen
-    ? " mr-screen w-screen md:mr-[360px]"
-    : " mr-0 md:mr-0";
   useFetchUserInfo();
   return (
     <NextUIProvider>
@@ -74,29 +68,18 @@ export default function DefaultLayout({
         <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
         <div
-          className={`relative flex flex-1 flex-col bg-black ${
-            sidebarOpen ? "ml-72.5$" : "ml-auto"
-          }`}
+          className={`relative flex flex-1 flex-col bg-black ${sidebarOpen ? "ml-72.5$" : "ml-auto"
+            }`}
         >
           <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-          <div className="flex">
-            <div
-              className={`${appendClass} max-w-screen flex min-h-screen flex-grow flex-col transition-[margin-right] duration-500 ease-in-out md:w-full`}
-              // className={`${appendClass} flex min-h-screen w-screen flex-grow flex-col md:w-full`}
-            >
-              <main>
-                <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
-                  {children}
-                </div>
-              </main>
 
-              <Footer
-                sidebarOpen={sidebarOpen}
-                setSidebarOpen={setSidebarOpen}
-              />
+          <main>
+            <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+              {children}
             </div>
-            <Chatbar />
-          </div>
+          </main>
+
+          <Footer sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         </div>
       </div>
       <ToastContainer

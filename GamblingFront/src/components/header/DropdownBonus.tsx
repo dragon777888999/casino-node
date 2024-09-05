@@ -9,15 +9,16 @@ const DropdownBonus = () => {
 
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
-      <div className="relative">
+      <li className="relative">
         <div className="relative flex items-center">
+          {" "}
           <div>
             <Link
               onClick={() => {
                 setNotifying(false);
                 setDropdownOpen(!dropdownOpen);
               }}
-              className="relative flex  items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
+              className="relative flex h-8.5 w-8.5 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
               href="#"
             >
               <span
@@ -28,89 +29,85 @@ const DropdownBonus = () => {
                 <span className="absolute -z-1 inline-flex h-full w-full animate-ping rounded-full bg-meta-1 opacity-75"></span>
               </span>
 
-              {/* <i className="fa-sharp fa-regular fa-gift"></i> */}
-              <div className="itmes-center flex">
-                {" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="-6 -5 40 40"
-                  fill="none"
-                >
-                  <path
-                    fill="url(#:R1dakcr6:)"
-                    fillOpacity="0.05"
-                    d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671"
-                  ></path>
-                  <path
-                    fill="url(#:R1dakcr6H1:)"
-                    fillOpacity="0.05"
-                    d="M16.822 15.84a.438.438 0 0 0 .603-.404v-2.648c0-.242.196-.438.438-.438h5.95c.242 0 .438.196.438.438v12.925a.438.438 0 0 1-.438.438H4.19a.438.438 0 0 1-.437-.438V12.788c0-.242.196-.438.437-.438h5.951c.242 0 .438.196.438.438v2.647"
-                  ></path>
-                  <path
-                    stroke="url(#:R1dakcr6H2:)"
-                    strokeMiterlimit="10"
-                    strokeWidth="1.75"
-                    d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671m-1.378 3.219V26.15h-4.096V15.567m5.474-2.779v2.648c0 .31-.315.522-.603.405l-2.656-1.086a.438.438 0 0 0-.331 0L11.18 15.84a.438.438 0 0 1-.603-.405v-2.647a.438.438 0 0 0-.438-.438H4.19a.438.438 0 0 0-.438.438v12.925c0 .242.196.438.437.438h19.624a.438.438 0 0 0 .438-.438V12.788a.438.438 0 0 0-.438-.438h-5.95a.437.437 0 0 0-.438.438Z"
-                  ></path>
-                  <path
-                    stroke="url(#:R1dakcr6H3:)"
-                    strokeMiterlimit="10"
-                    strokeWidth="1.5"
-                    d="M14.001 6.634h-3.853a1.83 1.83 0 0 1 0-3.66h.193a3.66 3.66 0 0 1 3.66 3.66Zm0 0h3.853a1.83 1.83 0 1 0 0-3.66h-.193A3.66 3.66 0 0 0 14 6.635Zm3.423 9.508L14 14.707l-3.424 1.435V6.634h6.848v9.508Z"
-                  ></path>
-                  <defs>
-                    <linearGradient
-                      id=":R1dakcr6:"
-                      x1="14.001"
-                      x2="14.001"
-                      y1="6.633"
-                      y2="26.15"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#E8E5FF" stopOpacity="0"></stop>
-                      <stop offset="1" stopColor="#E8E5FF"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id=":R1dakcr6H1:"
-                      x1="14.001"
-                      x2="14.001"
-                      y1="6.633"
-                      y2="26.15"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#E8E5FF" stopOpacity="0"></stop>
-                      <stop offset="1" stopColor="#E8E5FF"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id=":R1dakcr6H2:"
-                      x1="14.001"
-                      x2="14.001"
-                      y1="6.633"
-                      y2="26.151"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#fff"></stop>
-                      <stop offset="1" stopColor="#E8E5FF"></stop>
-                    </linearGradient>
-                    <linearGradient
-                      id=":R1dakcr6H3:"
-                      x1="14.001"
-                      x2="14.001"
-                      y1="16.142"
-                      y2="2.975"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stopColor="#33A9FF"></stop>
-                      <stop offset="1" stopColor="#6FFA8E"></stop>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
+              <i className="fa-sharp fa-regular fa-gift"></i>
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="none"
+              >
+                <path
+                  fill="url(#:R1dakcr6:)"
+                  fill-opacity="0.05"
+                  d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671"
+                ></path>
+                <path
+                  fill="url(#:R1dakcr6H1:)"
+                  fill-opacity="0.05"
+                  d="M16.822 15.84a.438.438 0 0 0 .603-.404v-2.648c0-.242.196-.438.438-.438h5.95c.242 0 .438.196.438.438v12.925a.438.438 0 0 1-.438.438H4.19a.438.438 0 0 1-.437-.438V12.788c0-.242.196-.438.437-.438h5.951c.242 0 .438.196.438.438v2.647"
+                ></path>
+                <path
+                  stroke="url(#:R1dakcr6H2:)"
+                  stroke-miterlimit="10"
+                  stroke-width="1.75"
+                  d="M10.577 12.348h-7.67a.438.438 0 0 1-.438-.438V7.07c0-.241.196-.437.437-.437h22.19c.241 0 .437.196.437.437v4.84a.438.438 0 0 1-.437.438h-7.671m-1.378 3.219V26.15h-4.096V15.567m5.474-2.779v2.648c0 .31-.315.522-.603.405l-2.656-1.086a.438.438 0 0 0-.331 0L11.18 15.84a.438.438 0 0 1-.603-.405v-2.647a.438.438 0 0 0-.438-.438H4.19a.438.438 0 0 0-.438.438v12.925c0 .242.196.438.437.438h19.624a.438.438 0 0 0 .438-.438V12.788a.438.438 0 0 0-.438-.438h-5.95a.437.437 0 0 0-.438.438Z"
+                ></path>
+                <path
+                  stroke="url(#:R1dakcr6H3:)"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  d="M14.001 6.634h-3.853a1.83 1.83 0 0 1 0-3.66h.193a3.66 3.66 0 0 1 3.66 3.66Zm0 0h3.853a1.83 1.83 0 1 0 0-3.66h-.193A3.66 3.66 0 0 0 14 6.635Zm3.423 9.508L14 14.707l-3.424 1.435V6.634h6.848v9.508Z"
+                ></path>
+                <defs>
+                  <linearGradient
+                    id=":R1dakcr6:"
+                    x1="14.001"
+                    x2="14.001"
+                    y1="6.633"
+                    y2="26.15"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
+                    <stop offset="1" stop-color="#E8E5FF"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id=":R1dakcr6H1:"
+                    x1="14.001"
+                    x2="14.001"
+                    y1="6.633"
+                    y2="26.15"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#E8E5FF" stop-opacity="0"></stop>
+                    <stop offset="1" stop-color="#E8E5FF"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id=":R1dakcr6H2:"
+                    x1="14.001"
+                    x2="14.001"
+                    y1="6.633"
+                    y2="26.151"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#E8E5FF"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id=":R1dakcr6H3:"
+                    x1="14.001"
+                    x2="14.001"
+                    y1="16.142"
+                    y2="2.975"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#33A9FF"></stop>
+                    <stop offset="1" stop-color="#6FFA8E"></stop>
+                  </linearGradient>
+                </defs>
+              </svg> */}
             </Link>
           </div>
-          {/* <span className="Header_counter">1</span> */}
+          <span className="Header_counter">1</span>
         </div>
 
         {/* <!-- Dropdown Start --> */}
@@ -143,8 +140,8 @@ const DropdownBonus = () => {
                           y2="0"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#6FFA8E"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#6FFA8E"></stop>
                         </linearGradient>
                       </defs>
                     </svg>
@@ -203,8 +200,8 @@ const DropdownBonus = () => {
                           y2="0.867"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#6FFA8E"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#6FFA8E"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_12853_100502"
@@ -214,8 +211,8 @@ const DropdownBonus = () => {
                           y2="0.867"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#6FFA8E"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#6FFA8E"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint2_linear_12853_100502"
@@ -225,8 +222,8 @@ const DropdownBonus = () => {
                           y2="0.867"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#6FFA8E"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#6FFA8E"></stop>
                         </linearGradient>
                       </defs>
                     </svg>
@@ -301,8 +298,8 @@ const DropdownBonus = () => {
                           y2="0.951"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#6FFA8E"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#6FFA8E"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint1_linear_11873_61937"
@@ -312,8 +309,8 @@ const DropdownBonus = () => {
                           y2="16.799"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#42A9FF"></stop>
-                          <stop offset="1" stopColor="#83D1FC"></stop>
+                          <stop stop-color="#42A9FF"></stop>
+                          <stop offset="1" stop-color="#83D1FC"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint2_linear_11873_61937"
@@ -323,8 +320,8 @@ const DropdownBonus = () => {
                           y2="16.799"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#A9FBCA"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#A9FBCA"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint3_linear_11873_61937"
@@ -334,8 +331,8 @@ const DropdownBonus = () => {
                           y2="16.799"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#42A9FF"></stop>
-                          <stop offset="1" stopColor="#83D1FC"></stop>
+                          <stop stop-color="#42A9FF"></stop>
+                          <stop offset="1" stop-color="#83D1FC"></stop>
                         </linearGradient>
                         <linearGradient
                           id="paint4_linear_11873_61937"
@@ -345,8 +342,8 @@ const DropdownBonus = () => {
                           y2="16.799"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stopColor="#33A9FF"></stop>
-                          <stop offset="1" stopColor="#A9FBCA"></stop>
+                          <stop stop-color="#33A9FF"></stop>
+                          <stop offset="1" stop-color="#A9FBCA"></stop>
                         </linearGradient>
                       </defs>
                     </svg>
@@ -393,8 +390,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#33a9ff"></stop>
-                          <stop offset="1" stopColor="#6ffa8e"></stop>
+                          <stop offset="0" stop-color="#33a9ff"></stop>
+                          <stop offset="1" stop-color="#6ffa8e"></stop>
                         </linearGradient>
                         <linearGradient
                           id="linear-gradient-2"
@@ -405,8 +402,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#42a9ff"></stop>
-                          <stop offset="1" stopColor="#83d1fc"></stop>
+                          <stop offset="0" stop-color="#42a9ff"></stop>
+                          <stop offset="1" stop-color="#83d1fc"></stop>
                         </linearGradient>
                         <linearGradient
                           id="linear-gradient-3"
@@ -417,8 +414,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#33a9ff"></stop>
-                          <stop offset="1" stopColor="#a9fbca"></stop>
+                          <stop offset="0" stop-color="#33a9ff"></stop>
+                          <stop offset="1" stop-color="#a9fbca"></stop>
                         </linearGradient>
                         <mask
                           id="mask"
@@ -428,7 +425,7 @@ const DropdownBonus = () => {
                           y="17.73"
                           maskUnits="userSpaceOnUse"
                         >
-                          <g strokeWidth="0">
+                          <g stroke-width="0">
                             <path
                               fill="#fff"
                               d="M13.32 17.73H24.32V31.73H13.32z"
@@ -444,28 +441,28 @@ const DropdownBonus = () => {
                       </defs>
                       <path
                         fill="url(#linear-gradient)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M34.56 2.46h-2.11V1.15a1.16 1.16 0 00-2.32 0v1.31h-2.27V1.15a1.16 1.16 0 00-2.32 0v1.31H12.76V1.15a1.16 1.16 0 00-2.32 0v1.31H8.17V1.15a1.16 1.16 0 00-2.32 0v1.31H3.74C1.68 2.46 0 4.14 0 6.2v29.25c0 2.06 1.68 3.74 3.74 3.74h30.81c2.06 0 3.74-1.68 3.74-3.74V6.21c0-2.06-1.68-3.74-3.74-3.74zm1.42 33c0 .79-.64 1.43-1.43 1.43H3.74c-.79 0-1.43-.64-1.43-1.43V12.09h33.67v23.37zM2.31 6.21c0-.79.64-1.43 1.43-1.43h2.11v1.31a1.16 1.16 0 002.32 0V4.78h2.27v1.31a1.16 1.16 0 002.32 0V4.78h12.78v1.31a1.16 1.16 0 002.32 0V4.78h2.27v1.31a1.16 1.16 0 002.32 0V4.78h2.11c.79 0 1.43.64 1.43 1.43v3.57H2.31V6.21z"
                       ></path>
                       <path
                         fill="#fff"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M16.39 30.73l4.92-11.03.58.99h-6.76l1.06-1.07v3.1h-2.06v-3.9h9.26v1.48l-4.63 10.43h-2.37z"
                       ></path>
                       <path
                         fill="url(#linear-gradient-2)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M16.39 30.73l4.92-11.03.58.99h-6.76l1.06-1.07v3.1h-2.06v-3.9h9.26v1.48l-4.63 10.43h-2.37z"
                       ></path>
                       <path
                         fill="url(#linear-gradient-3)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M16.39 30.73l4.92-11.03.58.99h-6.76l1.06-1.07v3.1h-2.06v-3.9h9.26v1.48l-4.63 10.43h-2.37z"
                       ></path>
                       <g mask="url(#mask)">
                         <path
                           fill="url(#linear-gradient-4)"
-                          strokeWidth="0"
+                          stroke-width="0"
                           d="M16.39 30.73l-.23-.1-.16.36h.39v-.26zm4.92-11.03l.22-.13-.25-.43-.2.45.23.1zm.57.99v.26h.45l-.23-.38-.22.13zm-6.75 0l-.18-.18-.43.43h.61v-.26zm1.05-1.07h.26V19l-.44.44.18.18zm0 3.09v.26h.26v-.26h-.26zm-2.06 0h-.26v.26h.26v-.26zm0-3.89v-.26h-.26v.26h.26zm9.26 0h.26v-.26h-.26v.26zm0 1.48l.23.1.02-.05v-.05h-.26zm-4.63 10.43v.26h.17l.07-.15-.23-.1zm-2.13.11l4.92-11.03-.47-.21-4.92 11.03.47.21zm4.47-11.01l.58.99.44-.26-.58-.99-.44.26zm.79.6h-6.76v.51h6.76v-.51zm-6.57.44l1.06-1.07-.36-.36-1.06 1.07.36.36zm.62-1.25v3.1h.51v-3.1h-.51zm.25 2.84h-2.06v.51h2.06v-.51zm-1.8.25v-3.9h-.51v3.9h.51zm-.26-3.64h9.26v-.51h-9.26v.51zm9.01-.25v1.48h.51v-1.48h-.51zm.02 1.37l-4.63 10.43.47.21 4.63-10.43-.47-.21zm-4.4 10.29h-2.37v.51h2.37v-.51z"
                         ></path>
                       </g>
@@ -514,8 +511,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#33a9ff"></stop>
-                          <stop offset="1" stopColor="#6ffa8e"></stop>
+                          <stop offset="0" stop-color="#33a9ff"></stop>
+                          <stop offset="1" stop-color="#6ffa8e"></stop>
                         </linearGradient>
                         <linearGradient
                           id="linear-gradient-2"
@@ -526,8 +523,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#42a9ff"></stop>
-                          <stop offset="1" stopColor="#83d1fc"></stop>
+                          <stop offset="0" stop-color="#42a9ff"></stop>
+                          <stop offset="1" stop-color="#83d1fc"></stop>
                         </linearGradient>
                         <linearGradient
                           id="linear-gradient-3"
@@ -538,8 +535,8 @@ const DropdownBonus = () => {
                           gradientTransform="matrix(1 0 0 -1 0 40.09)"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop offset="0" stopColor="#33a9ff"></stop>
-                          <stop offset="1" stopColor="#a9fbca"></stop>
+                          <stop offset="0" stop-color="#33a9ff"></stop>
+                          <stop offset="1" stop-color="#a9fbca"></stop>
                         </linearGradient>
                         <mask
                           id="mask"
@@ -549,7 +546,7 @@ const DropdownBonus = () => {
                           y="17.7"
                           maskUnits="userSpaceOnUse"
                         >
-                          <g strokeWidth="0">
+                          <g stroke-width="0">
                             <path
                               fill="#fff"
                               d="M8.55 17.7H30.55V31.7H8.55z"
@@ -566,28 +563,28 @@ const DropdownBonus = () => {
                       </defs>
                       <path
                         fill="url(#linear-gradient)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M34.56 2.46h-2.11V1.15a1.16 1.16 0 00-2.32 0v1.31h-2.27V1.15a1.16 1.16 0 00-2.32 0v1.31H12.76V1.15a1.16 1.16 0 00-2.32 0v1.31H8.17V1.15a1.16 1.16 0 00-2.32 0v1.31H3.74C1.68 2.46 0 4.14 0 6.2v29.25c0 2.06 1.68 3.74 3.74 3.74h30.81c2.06 0 3.74-1.68 3.74-3.74V6.21c0-2.06-1.68-3.74-3.74-3.74zm1.42 33c0 .79-.64 1.43-1.43 1.43H3.74c-.79 0-1.43-.64-1.43-1.43V12.09h33.67v23.37zM2.31 6.21c0-.79.64-1.43 1.43-1.43h2.11v1.31a1.16 1.16 0 002.32 0V4.78h2.27v1.31a1.16 1.16 0 002.32 0V4.78h12.78v1.31a1.16 1.16 0 002.32 0V4.78h2.27v1.31a1.16 1.16 0 002.32 0V4.78h2.11c.79 0 1.43.64 1.43 1.43v3.57H2.31V6.21z"
                       ></path>
                       <path
                         fill="#fff"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M13.36 30.87c-.84 0-1.66-.12-2.47-.36-.79-.25-1.46-.59-2.01-1.02l.95-1.72c.43.35.95.64 1.57.85.61.22 1.25.32 1.92.32.79 0 1.41-.16 1.86-.48.44-.33.66-.77.66-1.33s-.2-.98-.61-1.29c-.41-.32-1.07-.48-1.97-.48h-1.09v-1.51l3.4-4.05.29.83h-6.4v-1.86h8.12v1.48l-3.4 4.05-1.16-.68h.66c1.46 0 2.56.33 3.29.99.74.65 1.11 1.48 1.11 2.5 0 .67-.17 1.29-.51 1.86S16.71 30 16 30.35c-.69.34-1.57.51-2.64.51zm11.14 0c-.94 0-1.79-.24-2.55-.71-.75-.48-1.34-1.17-1.77-2.08-.43-.92-.65-2.03-.65-3.34s.22-2.41.65-3.32c.43-.92 1.02-1.62 1.77-2.09.76-.48 1.61-.71 2.55-.71s1.8.24 2.55.71c.75.48 1.34 1.17 1.77 2.09.44.91.66 2.01.66 3.32s-.22 2.42-.66 3.34c-.43.91-1.02 1.6-1.77 2.08s-1.6.71-2.55.71zm0-1.93c.56 0 1.04-.15 1.45-.44.41-.31.73-.77.95-1.4.24-.62.36-1.41.36-2.37s-.12-1.75-.36-2.37c-.23-.62-.54-1.08-.95-1.38-.41-.31-.89-.46-1.45-.46s-1.01.15-1.43.46c-.41.3-.73.75-.97 1.38-.23.61-.34 1.4-.34 2.37s.11 1.74.34 2.37c.24.62.56 1.09.97 1.4.42.3.9.44 1.43.44z"
                       ></path>
                       <path
                         fill="url(#linear-gradient-2)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M13.36 30.87c-.84 0-1.66-.12-2.47-.36-.79-.25-1.46-.59-2.01-1.02l.95-1.72c.43.35.95.64 1.57.85.61.22 1.25.32 1.92.32.79 0 1.41-.16 1.86-.48.44-.33.66-.77.66-1.33s-.2-.98-.61-1.29c-.41-.32-1.07-.48-1.97-.48h-1.09v-1.51l3.4-4.05.29.83h-6.4v-1.86h8.12v1.48l-3.4 4.05-1.16-.68h.66c1.46 0 2.56.33 3.29.99.74.65 1.11 1.48 1.11 2.5 0 .67-.17 1.29-.51 1.86S16.71 30 16 30.35c-.69.34-1.57.51-2.64.51zm11.14 0c-.94 0-1.79-.24-2.55-.71-.75-.48-1.34-1.17-1.77-2.08-.43-.92-.65-2.03-.65-3.34s.22-2.41.65-3.32c.43-.92 1.02-1.62 1.77-2.09.76-.48 1.61-.71 2.55-.71s1.8.24 2.55.71c.75.48 1.34 1.17 1.77 2.09.44.91.66 2.01.66 3.32s-.22 2.42-.66 3.34c-.43.91-1.02 1.6-1.77 2.08s-1.6.71-2.55.71zm0-1.93c.56 0 1.04-.15 1.45-.44.41-.31.73-.77.95-1.4.24-.62.36-1.41.36-2.37s-.12-1.75-.36-2.37c-.23-.62-.54-1.08-.95-1.38-.41-.31-.89-.46-1.45-.46s-1.01.15-1.43.46c-.41.3-.73.75-.97 1.38-.23.61-.34 1.4-.34 2.37s.11 1.74.34 2.37c.24.62.56 1.09.97 1.4.42.3.9.44 1.43.44z"
                       ></path>
                       <path
                         fill="url(#linear-gradient-3)"
-                        strokeWidth="0"
+                        stroke-width="0"
                         d="M13.36 30.87c-.84 0-1.66-.12-2.47-.36-.79-.25-1.46-.59-2.01-1.02l.95-1.72c.43.35.95.64 1.57.85.61.22 1.25.32 1.92.32.79 0 1.41-.16 1.86-.48.44-.33.66-.77.66-1.33s-.2-.98-.61-1.29c-.41-.32-1.07-.48-1.97-.48h-1.09v-1.51l3.4-4.05.29.83h-6.4v-1.86h8.12v1.48l-3.4 4.05-1.16-.68h.66c1.46 0 2.56.33 3.29.99.74.65 1.11 1.48 1.11 2.5 0 .67-.17 1.29-.51 1.86S16.71 30 16 30.35c-.69.34-1.57.51-2.64.51zm11.14 0c-.94 0-1.79-.24-2.55-.71-.75-.48-1.34-1.17-1.77-2.08-.43-.92-.65-2.03-.65-3.34s.22-2.41.65-3.32c.43-.92 1.02-1.62 1.77-2.09.76-.48 1.61-.71 2.55-.71s1.8.24 2.55.71c.75.48 1.34 1.17 1.77 2.09.44.91.66 2.01.66 3.32s-.22 2.42-.66 3.34c-.43.91-1.02 1.6-1.77 2.08s-1.6.71-2.55.71zm0-1.93c.56 0 1.04-.15 1.45-.44.41-.31.73-.77.95-1.4.24-.62.36-1.41.36-2.37s-.12-1.75-.36-2.37c-.23-.62-.54-1.08-.95-1.38-.41-.31-.89-.46-1.45-.46s-1.01.15-1.43.46c-.41.3-.73.75-.97 1.38-.23.61-.34 1.4-.34 2.37s.11 1.74.34 2.37c.24.62.56 1.09.97 1.4.42.3.9.44 1.43.44z"
                       ></path>
                       <g mask="url(#mask)">
                         <path
                           fill="url(#linear-gradient-4)"
-                          strokeWidth="0"
+                          stroke-width="0"
                           d="M10.9 30.51l-.08.24.07-.24zm-2.01-1.02l-.22-.12-.11.19.17.13.16-.2zm.95-1.72l.16-.2-.24-.19-.15.27.22.12zm1.57.85l.08-.24-.08.24zm3.77-.15l.15.21-.15-.21zm.06-2.62l.16-.2-.16.2zm-3.07-.48h-.26v.26h.26v-.26zm0-1.52l-.2-.16-.06.07v.09h.26zm3.41-4.05l.24-.08-.15-.42-.29.34.2.16zm.29.84v.26h.36l-.12-.34-.24.08zm-6.4 0h-.26v.26h.26v-.26zm0-1.86v-.26h-.26v.26h.26zm8.11 0h.26v-.26h-.26v.26zm0 1.48l.2.16.06-.07v-.09h-.26zm-3.4 4.05l-.13.22.19.11.14-.17-.2-.16zm-1.16-.68v-.26h-.94l.81.48.13-.22zm3.95.99l-.17.19.17-.19zm.6 4.36l.22.13-.22-.13zM16 30.36l.11.23-.11-.23zm-2.64.25c-.82 0-1.61-.12-2.4-.35l-.14.49c.83.25 1.68.37 2.54.37v-.51zm-2.39-.34c-.77-.24-1.41-.57-1.93-.98l-.32.4c.57.45 1.27.81 2.09 1.06l.15-.49zm-1.86-.66l.95-1.72-.45-.25-.95 1.72.45.25zm.57-1.64c.46.37 1.01.67 1.64.89l.17-.48c-.59-.21-1.08-.48-1.49-.81l-.32.4zm1.64.89c.64.23 1.31.34 2.01.34v-.51c-.64 0-1.25-.1-1.84-.31l-.17.48zm2.01.34c.82 0 1.5-.16 2-.52l-.3-.41c-.38.28-.94.43-1.71.43v.51zm2.01-.53c.51-.38.77-.9.77-1.53h-.51c0 .48-.18.84-.56 1.12l.3.41zm.76-1.53c0-.62-.24-1.13-.71-1.5l-.31.4c.34.27.51.62.51 1.09h.51zm-.71-1.5c-.48-.37-1.2-.53-2.13-.53v.51c.89 0 1.48.16 1.82.42l.31-.4zm-2.13-.53h-1.09v.51h1.09v-.51zm-.83.26v-1.51h-.51v1.51h.51zm-.06-1.35l3.4-4.05-.39-.33-3.4 4.05.39.33zm2.96-4.13l.29.83.48-.17-.29-.83-.48.17zm.54.49h-6.4v.51h6.4v-.51zm-6.15.26v-1.86h-.51v1.86h.51zm-.25-1.6h8.12v-.51H9.47v.51zm7.86-.26v1.48h.51v-1.48h-.51zm.06 1.32l-3.4 4.05.39.33 3.4-4.05-.39-.33zm-3.08 3.99l-1.16-.68-.26.44 1.16.68.26-.44zm-1.29-.2h.66v-.51h-.66v.51zm.67 0c1.43 0 2.45.32 3.11.92l.34-.38c-.79-.72-1.96-1.05-3.46-1.05v.51zm3.11.92c.68.6 1.02 1.36 1.02 2.31h.51c0-1.09-.4-2-1.19-2.69l-.34.38zm1.02 2.31c0 .62-.16 1.2-.47 1.72l.44.26c.36-.61.55-1.27.55-1.99h-.51zm-.47 1.73c-.31.52-.79.95-1.46 1.28l.23.46c.74-.37 1.3-.86 1.67-1.48l-.44-.26zm-1.46 1.28c-.65.32-1.48.48-2.53.48v.51c1.09 0 2.01-.17 2.75-.54l-.23-.46zm6.05.02l-.14.22.14-.22zm-1.77-2.07l-.23.11.23-.11zm0-6.66l.23.11-.23-.11zm1.77-2.09l-.14-.22.14.22zm5.11 0l.14-.22-.14.22zm1.77 2.09l-.23.11.23-.11zm0 6.66l-.23-.11.23.11zm-1.77 2.07l-.14-.22.14.22zm-1.11-1.65l.15.21-.15-.21zm.96-1.4l-.24-.09.24.09zm0-4.73l-.24.09.24-.09zm-.96-1.38l-.15.2.15-.2zm-2.87 0l.15.21-.15-.21zm-.97 1.38l-.24-.09.24.09zm0 4.73l-.24.09.24-.09zm.97 1.4l-.15.2.15-.2zm1.43 2.11c-.9 0-1.7-.23-2.42-.68l-.27.43c.8.5 1.7.75 2.69.75v-.51zm-2.42-.67c-.7-.45-1.26-1.1-1.68-1.97l-.46.22c.45.95 1.07 1.68 1.86 2.18l.27-.43zm-1.68-1.97c-.41-.88-.62-1.95-.62-3.23h-.51c0 1.33.22 2.48.67 3.44l.46-.22zm-.62-3.23c0-1.28.21-2.34.62-3.21l-.46-.22c-.45.95-.67 2.1-.67 3.43h.51zm.62-3.21c.41-.88.97-1.54 1.68-1.99l-.27-.43c-.8.51-1.42 1.24-1.86 2.2l.46.22zm1.68-1.99a4.46 4.46 0 012.42-.68v-.51c-.99 0-1.89.25-2.69.75l.27.43zm2.42-.67c.91 0 1.71.23 2.42.67l.27-.43c-.79-.5-1.69-.75-2.69-.75v.51zm2.41.67c.7.45 1.26 1.1 1.68 1.99l.46-.22c-.45-.96-1.07-1.69-1.86-2.2l-.27.43zm1.68 1.99c.42.86.64 1.93.64 3.21h.51c0-1.33-.23-2.48-.69-3.43l-.46.22zm.64 3.21c0 1.28-.22 2.35-.64 3.23l.46.22c.46-.96.69-2.11.69-3.45h-.51zm-.64 3.23c-.41.87-.97 1.52-1.68 1.97l.27.43c.79-.51 1.41-1.24 1.86-2.18l-.46-.22zm-1.68 1.97c-.7.45-1.51.68-2.42.68v.51c1 0 1.9-.25 2.69-.75l-.27-.43zm-2.41-.74c.6 0 1.14-.16 1.6-.49l-.3-.41c-.36.26-.79.39-1.3.39v.51zm1.6-.5c.46-.34.8-.86 1.04-1.51l-.48-.17c-.22.59-.51 1.01-.87 1.28l.31.41zm1.03-1.5c.25-.66.37-1.48.37-2.46h-.51c0 .93-.12 1.69-.34 2.27l.48.18zm.38-2.46c0-.98-.12-1.81-.37-2.46l-.48.19c.22.57.34 1.33.34 2.27h.51zm-.37-2.45c-.24-.66-.58-1.17-1.04-1.5l-.3.41c.36.26.65.67.86 1.26l.48-.17zm-1.04-1.5c-.46-.34-.99-.51-1.6-.51v.51c.51 0 .93.14 1.29.41l.31-.41zm-1.6-.51c-.59 0-1.12.17-1.58.51l.3.41c.37-.27.8-.41 1.28-.41v-.51zm-1.58.51c-.46.33-.81.84-1.06 1.49l.48.18c.23-.59.52-1.01.88-1.26l-.3-.41zm-1.06 1.49c-.24.65-.36 1.47-.36 2.45h.51c0-.95.11-1.7.32-2.28l-.48-.18zm-.36 2.46c0 .97.12 1.79.36 2.45l.48-.17c-.21-.59-.33-1.34-.33-2.28h-.51zm.36 2.46c.25.66.6 1.17 1.06 1.51l.31-.41c-.36-.27-.66-.69-.88-1.28l-.48.18zm1.06 1.51c.46.33.99.49 1.58.49v-.51c-.48 0-.91-.13-1.28-.4l-.29.42z"
                         ></path>
                       </g>
@@ -616,6 +613,115 @@ const DropdownBonus = () => {
                   </div>
                 </button>
               </li>
+
+              {/* <li>
+                <Link
+                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  href="/messages"
+                >
+                  <div className="h-12.5 w-12.5 rounded-full">
+                    <Image
+                      width={112}
+                      height={112}
+                      src={"/images/user/user-01.png"}
+                      alt="User"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <h6 className="text-sm font-medium text-black dark:text-white">
+                      Robert Jhon
+                    </h6>
+                    <p className="text-sm">Can you share your offer?</p>
+                    <p className="text-xs">10min ago</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  href="/messages"
+                >
+                  <div className="h-12.5 w-12.5 rounded-full">
+                    <Image
+                      width={112}
+                      height={112}
+                      src={"/images/user/user-03.png"}
+                      alt="User"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <h6 className="text-sm font-medium text-black dark:text-white">
+                      Henry Dholi
+                    </h6>
+                    <p className="text-sm">I cam across your profile and...</p>
+                    <p className="text-xs">1day ago</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  href="/messages"
+                >
+                  <div className="h-12.5 w-12.5 rounded-full">
+                    <Image
+                      width={112}
+                      height={112}
+                      src={"/images/user/user-04.png"}
+                      alt="User"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <h6 className="text-sm font-medium text-black dark:text-white">
+                      Cody Fisher
+                    </h6>
+                    <p className="text-sm">I’m waiting for you response!</p>
+                    <p className="text-xs">5days ago</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  href="/messages"
+                >
+                  <div className="h-12.5 w-12.5 rounded-full">
+                    <Image
+                      width={112}
+                      height={112}
+                      src={"/images/user/user-02.png"}
+                      alt="User"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <h6 className="text-sm font-medium text-black dark:text-white">
+                      Mariya Desoja
+                    </h6>
+                    <p className="text-sm">I like your confidence 💪</p>
+                    <p className="text-xs">2min ago</p>
+                  </div>
+                </Link>
+              </li> */}
             </ul>
             <div className="RewardsDropDown_simple-line"></div>
             <div>
@@ -631,7 +737,7 @@ const DropdownBonus = () => {
           </div>
         )}
         {/* <!-- Dropdown End --> */}
-      </div>
+      </li>
     </ClickOutside>
   );
 };

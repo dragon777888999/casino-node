@@ -9,11 +9,14 @@ import Image from "next/image";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BalanceModalInfo } from "@/types/walletModal";
+import { VirtualBalanceModalInfo } from "@/types/walletModal";
+import SelectConvertTypeMenu from "./SelectConvertTypeMenu";
 
-import useSolanaFunction from "../wallet-connecter/solana/SolanaWalletFunction";
-import useXrplFunction from "../wallet-connecter/xrpl/XrplWalletFunction";
-import useTronFunction from "../wallet-connecter/tron/TronWalletFunction";
-import useCosmosFunction from "../wallet-connecter/cosmos/CosmosWalletFunction";
+import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import useDepositOnCosmos from "../wallet-connecter/cosmos/CosmosWalletFunction";
 import { stat } from "fs";
 
 Modal.setAppElement("#root");
@@ -38,13 +41,18 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+  const [withDrawconvert, setWithDrawconvert] = useState("");
+  const [depositconvert, setDepositconvert] = useState("");
   const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
     useAppContext();
+  const [balanceModalInfo, setBalanceModalInfo] = useState<BalanceModalInfo>();
+  const [virtualBalanceModalInfo, setVirtualBalanceModalInfo] =
+    useState<VirtualBalanceModalInfo>();
 
-  const { depositOnSolana } = useSolanaFunction();
-  const { depositOnXrpl } = useXrplFunction();
-  const { depositOnTron } = useTronFunction();
-  const { depositOnCosmos } = useCosmosFunction();
+  const { depositOnSolana } = useDepositOnSolana();
+  const { depositOnXrpl } = useDepositOnXrpl();
+  const { depositOnTron } = useDepositOnTron();
+  const { depositOnCosmos } = useDepositOnCosmos();
 
   const onSelectCoinType = async (key: string) => {
     const response = await fetch(
@@ -60,6 +68,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
       ...userInfo,
       selectedCoinType: key,
     });
+  };
+  const onWithDrawConvertType = async (key: string) => {
+    setWithDrawconvert(key);
+  };
+  const onDepositConvertType = async (key: string) => {
+    setDepositconvert(key);
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -92,6 +106,71 @@ const WalletModal: React.FC<WalletModalProps> = ({
     fetchData();
   }, [loginStep]);
 
+  useEffect(() => {
+    const GetBalanceModalInfo = async () => {
+      if (userInfo.selectedCoinType == "$USO") return;
+      try {
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Access-Token": accessToken,
+          },
+          body: JSON.stringify({
+            method: "GetBalanceModalInfo",
+            coinType: userInfo?.selectedCoinType,
+          }),
+        });
+
+        const result = await response.json();
+        console.log("GetBalanceModalInfo", result);
+        if (result.status == 0) {
+          // setDepositAddress(result.depositAddress);
+          // setUserInfo({
+          //   ...userInfo,
+          //   balances: result.balance,
+          // });
+          setBalanceModalInfo(result);
+          alert("1");
+        }
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+
+    const GetVritualBalanceModalInfo = async () => {
+      alert("3");
+      try {
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Access-Token": accessToken,
+          },
+          body: JSON.stringify({
+            method: "GetVritualBalanceModalInfo",
+            coinType: "$USO",
+          }),
+        });
+
+        const result = await response.json();
+        console.log("GetBalanceModalInfo", result);
+        if (result.status == 0) {
+          // setDepositAddress(result.depositAddress);
+          // setUserInfo({
+          //   ...userInfo,
+          //   balances: result.balance,
+          // });
+          setVirtualBalanceModalInfo(result);
+          alert("2");
+        }
+      } catch (error) {
+        console.error("Fetch error:", error);
+      }
+    };
+    if (userInfo.selectedCoinType == "$USO") GetVritualBalanceModalInfo();
+    else GetBalanceModalInfo();
+  }, [userInfo.selectedCoinType]);
   const depositResultCallback = async (status: number) => {
     console.log("depositCallback", status);
     if (status != 0) {
@@ -116,7 +195,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
         toast.error(result.msg);
         return;
       }
-      toast.success(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
+      toast.success(
+        `${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`,
+      );
     }
   };
   const onCheckBalance = async () => {
@@ -137,7 +218,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
       toast.error(result.msg);
       return;
     }
-    toast.success(`${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`);
+    toast.success(
+      `${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`,
+    );
   };
   const onDeposit = () => {
     if (depositAmount == null) {
@@ -160,8 +243,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setQrcode,
         setJumpLink,
       );
-    }
-    else if (siteInfo?.chain == "Tron") {
+    } else if (siteInfo?.chain == "Tron") {
       depositOnTron(
         depositAddress,
         depositAmount,
@@ -169,8 +251,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setQrcode,
         setJumpLink,
       );
-    }
-    else if (siteInfo?.chain == "Oraichain") {
+    } else if (siteInfo?.chain == "Oraichain") {
       depositOnCosmos(
         depositAddress,
         depositAmount,
@@ -179,7 +260,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink,
       );
     }
-
   };
 
   const onWithdraw = async () => {
@@ -239,7 +319,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
           >
             <div className="w-full">
               <div
-                className="border-blueGray-200 flex items-center justify-between rounded-t pb-2 pt-4"
+                className="border-blueGray-200 block items-center justify-between rounded-t pb-2 pt-4 md:flex"
                 style={{ marginBottom: "10px", width: "100%" }}
               >
                 <div className="justify-start">
@@ -249,7 +329,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     onSelect={onSelectCoinType}
                   />
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center pt-2">
                   <h3
                     style={{
                       fontSize: "25px",
@@ -279,7 +359,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
               </div>
               <div className="wallet-modal-message my-3  max-w-xs p-3">
                 <div className="block w-full  break-words">
-                  <span>{siteInfo.walletModalMessage}</span>
+                  <span>{balanceModalInfo?.modalMessage}</span>
                 </div>
               </div>
               <div className="block gap-5 pb-4 md:flex md:gap-5">
@@ -291,17 +371,26 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     <label>Balance :</label>
 
                     <p
+                      id="balance"
                       style={{
-                        fontSize: `26px`,
-
                         gap: "5px",
                         color: "white",
                       }}
                     >
-                      <span>
-                        {userInfo?.balances[userInfo?.selectedCoinType]}
-                      </span>
+                      <span>{String(balanceModalInfo?.balance ?? "")}</span>
+
                       <span> {userInfo?.selectedCoinType}</span>
+                    </p>
+                  </div>
+                  <div className="balance-label flex items-center gap-2">
+                    <label>MaxLimit :</label>
+                    <p
+                      style={{
+                        marginLeft: "15%",
+                        color: "white",
+                      }}
+                    >
+                      {String(balanceModalInfo?.withdrawalMaxLimit ?? "")}
                     </p>
                   </div>
                   <div className="mb-5 flex items-center gap-2">
@@ -336,14 +425,14 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   className="custom-wallet-modal-card"
                   style={{ backgroundColor: "rgb(20 28 39)" }}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 pb-1 pt-1">
                     <label>Address :</label>
                     <input
                       type="text"
                       className="my-2 ml-1 h-8 pl-2 text-black"
                       placeholder="Deposit address"
                       aria-label="Deposit address"
-                      defaultValue={depositAddress}
+                      defaultValue={balanceModalInfo?.depositAddress}
                       style={{ textOverflow: "ellipsis" }}
                       onChange={(e) => {
                         setDepositAddress(e.target.value);
@@ -361,6 +450,17 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     </div>
                   </div>
                   <div className=" flex items-center gap-2">
+                    <label>MinLimit :</label>
+                    <p
+                      id="minlimit"
+                      style={{
+                        color: "white",
+                      }}
+                    >
+                      {String(balanceModalInfo?.depositMinLimit ?? "")}
+                    </p>
+                  </div>
+                  <div className=" flex items-center gap-2">
                     <label>Amount :</label>
                     <input
                       type="number"
@@ -376,20 +476,20 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     />
                   </div>
 
-                    {qrcode && (
-                      <div className="m-2 flex justify-center">
-                        <div className="qrcode" style={{ width: "80%" }}>
-                          <Image
-                            src={qrcode} // URL of the image
-                            alt="QR code" // Accessibility text
-                            width={300} // Width of the image
-                            height={200} // Height of the image
-                            style={{ width: "50%" }} // Inline styles, if needed
-                            layout="responsive" // Optional: adjust layout as needed
-                          />
-                        </div>
+                  {qrcode && (
+                    <div className="m-2 flex justify-center">
+                      <div className="qrcode" style={{ width: "80%" }}>
+                        <Image
+                          src={qrcode} // URL of the image
+                          alt="QR code" // Accessibility text
+                          width={300} // Width of the image
+                          height={200} // Height of the image
+                          style={{ width: "50%" }} // Inline styles, if needed
+                          layout="responsive" // Optional: adjust layout as needed
+                        />
                       </div>
-                    )}
+                    </div>
+                  )}
 
                   <div className="mt-3 flex justify-end">
                     <button
@@ -411,11 +511,153 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         className="wallet-manage-modal-button  m-auto  "
                       >
                         Check Balance
-                      </button>)
-                    }
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
+              {userInfo?.selectedCoinType == "$USO" && (
+                <div className="gpa-5 block pb-4 md:flex md:gap-5">
+                  <div
+                    className="custom-wallet-modal-card"
+                    style={{ backgroundColor: "rgb(20 28 39)" }}
+                  >
+                    <div className="balance-label flex items-center gap-2 py-4">
+                      <label>Balance :</label>
+
+                      <p
+                        id="balance"
+                        style={{
+                          gap: "5px",
+                          color: "white",
+                        }}
+                      >
+                        <span>
+                          {String(virtualBalanceModalInfo?.balance ?? "")}
+                        </span>
+
+                        <span> {userInfo?.selectedCoinType}</span>
+                      </p>
+                    </div>
+                    <div className="mb-3 flex">
+                      <SelectConvertTypeMenu
+                        convertType={
+                          virtualBalanceModalInfo?.withdrawConvertRatio ?? ""
+                        }
+                        selectedKey={withDrawconvert}
+                        onSelect={onWithDrawConvertType}
+                      />
+                    </div>
+                    <div className="mb-5 flex items-center gap-2">
+                      <label>Amount :</label>
+                      <input
+                        type="number"
+                        className=" ml-1 mt-2 h-8 pl-2 text-black"
+                        aria-label="Withdraw amount"
+                        value={withdrawAmount ?? ""}
+                        // style={{ color: "white" }}
+                        onChange={(e) => {
+                          setWithdrawAmount(Number.parseFloat(e.target.value));
+                          const value = Number.parseFloat(e.target.value);
+                        }}
+                      />
+                    </div>
+
+                    <div className=" mt-2 flex justify-center">
+                      <button
+                        type="button"
+                        disabled={!withdrawAmount}
+                        onClick={() => {
+                          onWithdraw();
+                        }}
+                        className="wallet-manage-modal-button"
+                      >
+                        Withdraw
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="custom-wallet-modal-card"
+                    style={{ backgroundColor: "rgb(20 28 39)" }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <label>Address :</label>
+                      <input
+                        type="text"
+                        className="my-2 ml-1 h-8 pl-2 text-black"
+                        placeholder="Deposit address"
+                        aria-label="Deposit address"
+                        defaultValue={depositAddress}
+                        style={{ textOverflow: "ellipsis" }}
+                        onChange={(e) => {
+                          setDepositAddress(e.target.value);
+                          const value = Number.parseFloat(e.target.value);
+                        }}
+                      />
+                      <div className="tooltipContainer ">
+                        <button
+                          onClick={onCopy}
+                          className="ml-2 h-9 items-center bg-black px-3 text-white"
+                        >
+                          <i className="fa-regular fa-copy" />
+                        </button>
+                        <div className="tooltip">Copy your address</div>
+                      </div>
+                    </div>
+                    <div className="my-3 flex">
+                      <SelectConvertTypeMenu
+                        convertType={
+                          virtualBalanceModalInfo?.depositConvertRatio ?? ""
+                        }
+                        selectedKey={depositconvert}
+                        onSelect={onDepositConvertType}
+                      />
+                      {/* <div className="type-rate flex items-center justify-center">
+                      <p>10px</p>
+                    </div> */}
+                    </div>
+                    <div className=" flex items-center gap-2">
+                      <label>Amount :</label>
+                      <input
+                        type="number"
+                        className="mb-2 ml-1 mt-2 h-8 pl-2 text-black"
+                        aria-label="Deposit Amount"
+                        defaultValue=""
+                        value={depositAmount ?? ""}
+                        // style={{ color: "white" }}
+                        onChange={(e) => {
+                          setDepositAmount(Number.parseFloat(e.target.value));
+                          const value = Number.parseFloat(e.target.value);
+                        }}
+                      />
+                    </div>
+
+                    <div className="mt-3 flex justify-end">
+                      <button
+                        type="button"
+                        disabled={!depositAmount}
+                        onClick={() => {
+                          onDeposit();
+                        }}
+                        className="wallet-manage-modal-button  m-auto  "
+                      >
+                        Deposit
+                      </button>
+                      {siteInfo.checkBalance && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            onCheckBalance();
+                          }}
+                          className="wallet-manage-modal-button  m-auto  "
+                        >
+                          Check Balance
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

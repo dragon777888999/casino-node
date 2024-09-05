@@ -67,9 +67,7 @@ const Affiliates = () => {
         if (isButtonDisabled) {
           setRequestCode(result.affiliateCodes[0]);
           setAffiliateCode(result.affiliateCodes[0]);
-          setReferralLink(
-            `${window.location.origin}?r=${result.affiliateCodes[0]}`,
-          );
+          setReferralLink(`${window.location.origin}/r/${result.affiliateCodes[0]}`);
         }
         toast.success("success");
       } else {
@@ -123,50 +121,13 @@ const Affiliates = () => {
       console.log(Response);
     }
   };
-
-  const getIncome = async () => {
-    try {
-      if (info?.totalIncome == 0) {
-        toast.error("Invalid request: No income");
-        return;
-      }
-
-      if (accessToken == "") return;
-      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-        method: "POST",
-
-        headers: {
-          "X-Access-Token": accessToken,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          method: "ClaimRefferalBonus",
-          currencyCode: userInfo.selectedCoinType,
-        }),
-      });
-      console.log("createAffiliater", response);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const result = await response.json();
-      if (result.status === 0) {
-        toast.success(`Success! You get ${result.bonus} bonus`);
-        await GetAffiliaterInfo();
-      } else {
-        toast.warn("Operation failed");
-        throw new Error("Unexpected status code");
-      }
-    } catch (error) {
-      console.error("Error fetching game data:", error);
-    } finally {
-      console.log(Response);
-    }
-  };
   console.log("parse", info);
   const totalBetAmount: number = info?.totalBetAmount ?? 0; // Default to 0 if undefined
   const totalPayoutAmount: number = info?.totalPayoutAmount ?? 0;
   const totalEarning: number = totalBetAmount - totalPayoutAmount;
+  // setReferralLink(info?.affiliateCodes[0]);
+  // if (info?.referralInfos.length > 0)
+  //   setAffiliateCode(info?.referralInfos[0]);
 
   return (
     <div className="mx-auto max-w-270">
@@ -546,7 +507,7 @@ const Affiliates = () => {
                     </div>
                   </div>
                 </div>
-                <button className="affiliates-small-button" onClick={getIncome}>
+                <button className="affiliates-small-button">
                   <div className="Button_inner-content">
                     <span>Take</span>
                   </div>
@@ -567,7 +528,7 @@ const Affiliates = () => {
                   className="flex flex w-full items-center justify-center rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                   style={{ height: "200px" }}
                 > */}
-                {/* {!info?.referralInfos && <span>No Referrals</span>} */}
+                {!info?.referralInfos && <span>No Referrals</span>}
                 {/* <span>{info?.referralInfos}</span> */}
                 <AffiliateTable
                   data={info?.referralInfos ?? null}

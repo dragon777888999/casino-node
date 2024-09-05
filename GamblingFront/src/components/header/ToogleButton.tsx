@@ -27,18 +27,15 @@ export default function ToogleButton() {
   return (
     <>
       {Length == 2 && (
-        <div className="toggle-btn ml-1">
-          <div className="flex  items-center gap-2">
-            <div
-              className="flex h-8.5 w-8.5 items-center rounded-full border-[0.5px] border-stroke bg-gray p-2 hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
-              // style={{ width: "35px", height: "35px", padding: "8px" }}
-            >
+        <div className="toggle-btn">
+          <div className="flex  gap-2">
+            <div style={{ width: "30px", padding: "5px" }} className="">
               <Image
                 src={imageSolanaSrc}
                 alt={"chain"} // Provide fallback alt text
                 layout="responsive"
-                width={18}
-                height={18}
+                width={30}
+                height={30}
                 onClick={() => {
                   setIsSelected(true);
                   onSetChain();
@@ -47,28 +44,22 @@ export default function ToogleButton() {
             </div>
 
             <Switch
-              className="switch"
               isSelected={isSelected}
               onValueChange={() => {
                 setIsSelected;
                 onSetChain();
               }}
             ></Switch>
-            {/* <div
+            <div
               className="active-chain"
               style={{ width: "30px", padding: "5px" }}
-            > */}
-
-            <div
-              className="flex w-8.5 items-center rounded-full border-[0.5px] border-stroke bg-gray p-2 hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
-              // style={{ width: "35px", height: "35px", padding: "8px" }}
             >
               <Image
                 src={imageXrplSrc}
                 alt={"chain"} // Provide fallback alt text
                 layout="responsive"
-                width={15}
-                height={15}
+                width={30}
+                height={30}
                 onClick={() => {
                   setIsSelected(false);
                   onSetChain();
@@ -86,7 +77,7 @@ export default function ToogleButton() {
               <p>{value.title}</p> {/* Example rendering */}
               <div
                 className="active-chain"
-                style={{ width: "25px", height: "25px", padding: "5px" }}
+                style={{ width: "30px", padding: "5px" }}
               >
                 <Image
                   src={`/default/images/${value.title}.png`}

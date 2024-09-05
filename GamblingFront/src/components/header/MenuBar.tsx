@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
 import WalletModal from "../modal/WalletModal";
 
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
 import DropdownUser from "./DropdownUser";
-
+import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
 import ToogleButton from "./ToogleButton";
 import DropdownNotification from "./DropdownNotification";
 import DropdownBonus from "./DropdownBonus";
-import DropdownLanguage from "./DropdownLanguage";
-import ChatButton from "./ChatButton";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -98,20 +97,13 @@ const MenuBar = () => {
             {siteInfo.featureMap && siteInfo.featureMap.notification && (
               <li>
                 <DropdownNotification />
-              </li>
-            )}
+              </li>)
+            }
             {siteInfo.featureMap && siteInfo.featureMap.bonus && (
               <li>
                 <DropdownBonus />
-              </li>
-            )}
-
-            <li>
-              <DropdownLanguage />
-            </li>
-            <li>
-              <ChatButton />
-            </li>
+              </li>)
+            }
             <li>
               <DropdownUser />
             </li>
@@ -120,6 +112,9 @@ const MenuBar = () => {
 
           {/* <!-- User Area --> */}
         </div>
+        {/* <button className="menu-button-connect " onClick={handleDisconnect}>
+          <p> Disconnect </p>
+        </button> */}
       </div>
       <WalletModal
         showWalletModal={showWalletModal}

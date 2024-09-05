@@ -6,5 +6,7 @@ import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMeta
 export const metadata = MainPageMetadata;
 
 export default function Home() {
-  return <Main />;
+  return (
+    <Main />
+  );
 }
