@@ -10,9 +10,10 @@ import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
-import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
-import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import useSolanaFunction from "../wallet-connecter/solana/SolanaWalletFunction";
+import useXrplFunction from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useTronFunction from "../wallet-connecter/tron/TronWalletFunction";
+import useCosmosFunction from "../wallet-connecter/cosmos/CosmosWalletFunction";
 import { stat } from "fs";
 
 Modal.setAppElement("#root");
@@ -37,13 +38,13 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
   const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
     useAppContext();
 
-  const { depositOnSolana } = useDepositOnSolana();
-  const { depositOnXrpl } = useDepositOnXrpl();
-  const { depositOnTron } = useDepositOnTron();
+  const { depositOnSolana } = useSolanaFunction();
+  const { depositOnXrpl } = useXrplFunction();
+  const { depositOnTron } = useTronFunction();
+  const { depositOnCosmos } = useCosmosFunction();
 
   const onSelectCoinType = async (key: string) => {
     const response = await fetch(
@@ -169,6 +170,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
         setJumpLink,
       );
     }
+    else if (siteInfo?.chain == "Oraichain") {
+      depositOnCosmos(
+        depositAddress,
+        depositAmount,
+        depositResultCallback,
+        setQrcode,
+        setJumpLink,
+      );
+    }
+
   };
 
   const onWithdraw = async () => {
@@ -365,23 +376,20 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     />
                   </div>
 
-                  <div
-                    className="qrcode"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {isHidden && (
-                      <Image
-                        src={qrcode}
-                        alt="QR code"
-                        width={600}
-                        height={400} // Adjust these values based on your image size
-                        style={{ width: "60%" }} // Apply additional styling if needed
-                      />
+                    {qrcode && (
+                      <div className="m-2 flex justify-center">
+                        <div className="qrcode" style={{ width: "80%" }}>
+                          <Image
+                            src={qrcode} // URL of the image
+                            alt="QR code" // Accessibility text
+                            width={300} // Width of the image
+                            height={200} // Height of the image
+                            style={{ width: "50%" }} // Inline styles, if needed
+                            layout="responsive" // Optional: adjust layout as needed
+                          />
+                        </div>
+                      </div>
                     )}
-                  </div>
 
                   <div className="mt-3 flex justify-end">
                     <button

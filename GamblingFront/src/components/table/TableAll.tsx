@@ -7,13 +7,12 @@ import { WagerInfo } from "@/types/gameListInfo";
 
 const displayLength = 10;
 interface TableAllProps {
-  isAll: boolean;
+  tableData: WagerInfo[];
 }
 
 // other language properties..
-const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
+const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
   const { socketData, userInfo, siteInfo } = useAppContext();
-  const [tableData, setTableData] = useState<WagerInfo[]>([]);
   const [selectedRow, setSelectedRow] = useState<WagerInfo | null>(null);
 
   const [showModal, setShowModal] = useState(false);
@@ -25,37 +24,7 @@ const TableAll: React.FC<TableAllProps> = ({ isAll }) => {
   const closeModal = () => {
     setShowModal(false);
   };
-
-  useEffect(() => {
-    if (socketData) {
-      try {
-        const cmd = JSON.parse(socketData);
-        if (cmd.type != "wager")
-          return;
-        const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
-
-        // Create a new array based on the existing tableData
-        let updatedTableData = [...tableData];
-
-        if (!isAll) {
-          // isAll true: get all data; false: get only user data
-          if (newData.userCode === userInfo?.userCode) {
-            updatedTableData = [newData, ...updatedTableData];
-          }
-        } else {
-          updatedTableData = [newData, ...updatedTableData];
-        }
-
-        if (updatedTableData.length > displayLength) {
-          updatedTableData.pop();
-        }
-
-        setTableData(updatedTableData); // Set the new array to state
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    }
-  }, [socketData]);
+  
   const handleRowClick = (info: WagerInfo) => {
     setSelectedRow(info);
     openModal();

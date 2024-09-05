@@ -1,14 +1,11 @@
 import { useEffect } from "react";
 import { useAppContext } from "@/hooks/AppContext";
 import { backendUrl } from "@/anchor/global";
-import { useSearchParams } from "next/navigation";
 
 const useFetchUserInfo = () => {
   const domain = window.location.host;
-  const searchParams = useSearchParams();
-  const affiliaterCode = searchParams?.get("r");
 
-  const { siteInfo, loginStep, setLoginStep, walletAddress, setAccessToken, setUserInfo, socket } = useAppContext();
+  const { siteInfo, loginStep, setLoginStep, walletAddress, setAccessToken, setUserInfo, socket,affiliaterCode } = useAppContext();
   useEffect(() => {
     const fetchData = async () => {
       if (loginStep != 2)
