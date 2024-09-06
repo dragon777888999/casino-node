@@ -249,6 +249,7 @@
     min-height: cal(100vh-40%);
   }
 }
+
 .games {
   width: 100%;
   text-align: center;
@@ -1145,8 +1146,12 @@ input[type="number"] {
   justify-content: center;
   min-width: 80px;
 }
-.balance-label p {
+.balance-label #balance {
+  font-size: 26px;
   margin-left: 30px;
+}
+#minlimit {
+  margin-left: 25%;
 }
 
 @media (max-width: 780px) {
@@ -1159,9 +1164,30 @@ input[type="number"] {
   .tooltipContainer {
     width: 10%;
   }
-  .balance-label p {
+  .balance-label #balance {
     margin-left: 20%;
   }
+}
+@media (max-width: 500px) {
+  .custom-wallet-modal-card input {
+    width: 40%;
+  }
+  .custom-wallet-modal-card label {
+    width: 40%;
+  }
+  .tooltipContainer {
+    width: 10%;
+  }
+  .balance-label #balance {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  #minlimit {
+    margin-left: 15%;
+  }
+}
+.type-rate {
+  margin-left: 10%;
 }
 .info-content {
   display: flex;

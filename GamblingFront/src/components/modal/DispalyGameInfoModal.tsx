@@ -20,9 +20,9 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
   gameData,
   onRequestClose,
 }) => {
-  const { loginStep } = useAppContext();
-
+  if (!showModal) return null;
   const timestampMillis = gameData.time;
+
   // Create a Date object
   const date = new Date(timestampMillis);
 
@@ -33,8 +33,8 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
 
   // Format the date as DD/MM/YYYY
   const formattedDate = `${day}/${month}/${year}`;
+
   console.log(formattedDate); // Example output: 27/08/2024
-  if (!showModal) return null;
   return (
     <Modal
       id="modal"
@@ -158,11 +158,11 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   <div className="BetResult-detail-item">
                     <span>Multipier</span>
                     <div className="custom-modal-small-card">
-                      {gameData?.betAmount !== 0
+                      {gameData?.payoutAmount !== 0
                         ? (
-                          (gameData?.payoutAmount ?? 0) /
-                          (gameData?.betAmount ?? 0)
-                        ).toFixed(2)
+                            (gameData?.betAmount ?? 0) /
+                            (gameData?.payoutAmount ?? 0)
+                          ).toFixed(2)
                         : "0.00"}{" "}
                       x
                     </div>
@@ -182,25 +182,17 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 </div>
               </div>
             </div>
-            {/* <div className="WarningNotice">
+            <div className="WarningNotice">
               <p>
                 This bet was originally placed as 0.40 (USD) but is showing the
                 approximate value in your display currency.
               </p>
-            </div> */}
-            {loginStep > 2 && (
-              <div className=" mt-2 flex justify-center">
-                <button type="button" className="custom-modal-button"
-                  onClick={() => {
-                    if (loginStep > 2) {
-                      const url = `/casino?vendorcode=${encodeURIComponent(gameData?.vendorCode)}&gameCode=${gameData?.gameCode}`;
-                      window.location.href = url;
-                    }
-                  }}>
-                  Play {JSON.parse(gameData?.gameName).en}
-                </button>
-              </div>)
-            }
+            </div>
+            <div className=" mt-2 flex justify-center">
+              <button type="button" className="custom-modal-button">
+                Play Toshi Video Club
+              </button>
+            </div>
           </div>
         </div>
         <div className="fixed inset-0 z-40 opacity-25"></div>

@@ -1,50 +1,15 @@
 "use client";
 import Image from "next/image";
 import TableAll from "../table/TableAll";
-import { useState, useEffect } from "react";
 
 import { Tabs, Tab } from "@nextui-org/react";
 import { useAppContext } from "@/hooks/AppContext";
-import { WagerInfo } from "@/types/gameListInfo";
-
-const displayLength = 10;
 
 const Footer = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { userInfo, siteInfo, socketData } = useAppContext();
-  const [totalTableData, setTotalTableData] = useState<WagerInfo[]>([]);
-  const [myTableData, setMyTableData] = useState<WagerInfo[]>([]);
-
-  useEffect(() => {
-    if (socketData) {
-      try {
-        const cmd = JSON.parse(socketData);
-        if (cmd.type != "wager")
-          return;
-        const newData: WagerInfo = JSON.parse(socketData); // Parse the incoming JSON data
-        if (newData.userCode === userInfo?.userCode) {
-          let updatedMyTableData = [...myTableData];
-          updatedMyTableData = [newData, ...updatedMyTableData];
-          if (updatedMyTableData.length > displayLength)
-            updatedMyTableData.pop();
-          setMyTableData(updatedMyTableData);
-        }
-
-        // Create a new array based on the existing tableData
-        let updatedTableData = [...totalTableData];
-        updatedTableData = [newData, ...updatedTableData];
-
-        if (updatedTableData.length > displayLength) {
-          updatedTableData.pop();
-        }
-        setTotalTableData(updatedTableData); // Set the new array to state
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    }
-  }, [socketData]);
+  const { userInfo, siteInfo } = useAppContext();
 
   let communityEntries: [string, string][] = [];
   if (siteInfo.communityMap) {
@@ -75,7 +40,7 @@ const Footer = (props: {
 
                 }}
               >
-                <TableAll key="AllBets" tableData={totalTableData}></TableAll>
+                <TableAll isAll={true}></TableAll>
               </Tab>
               <Tab
                 key="MyBets"
@@ -85,7 +50,7 @@ const Footer = (props: {
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
                 }}
               >
-                <TableAll key="MyBets" tableData={myTableData}></TableAll>
+                <TableAll isAll={false}></TableAll>
               </Tab>
             </Tabs>
           </div>

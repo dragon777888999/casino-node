@@ -7,10 +7,10 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { backendUrl } from "@/anchor/global";
 import VaultModal from "../modal/VaultModal";
 
-import useSolanaFunction from "../wallet-connecter/solana/SolanaWalletFunction";
-import useXrplFunction from "../wallet-connecter/xrpl/XrplWalletFunction";
-import useTronFunction from "../wallet-connecter/tron/TronWalletFunction";
-import useCosmosFunction from "../wallet-connecter/cosmos/CosmosWalletFunction";
+import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
+import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
+import useDepositOnCosmos from "../wallet-connecter/cosmos/CosmosWalletFunction";
 
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,10 +19,10 @@ const DropdownUser = () => {
   const wallet = useWallet();
   const [showVaultModal, setShowVaultModal] = useState(false);
 
-  const { disconnectOnSolana } = useSolanaFunction();
-  const { disconnectOnXrpl } = useXrplFunction();
-  const { disconnectOnTron } = useTronFunction();
-  const { disconnectOnCosmos } = useCosmosFunction();
+  const { disconnectOnSolana } = useDepositOnSolana();
+  const { disconnectOnXrpl } = useDepositOnXrpl();
+  const { disconnectOnTron } = useDepositOnTron();
+  const { disconnectOnCosmos } = useDepositOnCosmos();
 
   const handleDisconnect = async () => {
     try {

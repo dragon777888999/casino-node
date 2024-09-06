@@ -12,7 +12,7 @@ import {
 } from "@solana/wallet-adapter-react";
 import { useAppContext } from "../../../hooks/AppContext";
 
-const useSolanaFunction = () => {
+const useDepositOnSolana = () => {
   //const { connection } = useConnection();
   const connection = new Connection("https://elianore-hzhid1-fast-mainnet.helius-rpc.com");
   const wallet = useWallet();
@@ -126,4 +126,4 @@ const useSolanaFunction = () => {
   
   return { depositOnSolana, disconnectOnSolana ,error };
 };
-export default useSolanaFunction;
+export default useDepositOnSolana;
