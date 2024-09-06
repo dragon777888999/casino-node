@@ -122,6 +122,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetBalanceModalInfo",
+            chain:siteInfo.chain,
             coinType: userInfo?.selectedCoinType,
           }),
         });
@@ -152,7 +153,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetVirtualBalanceModalInfo",
-            coinType: "$USO",
+            chain:siteInfo.chain,
+            coinType: siteInfo.virtualCoinType,
           }),
         });
 
@@ -170,9 +172,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
         console.error("Fetch error:", error);
       }
     };
-    if (userInfo.selectedCoinType == "$USO") GetVritualBalanceModalInfo();
-    else GetBalanceModalInfo();
-  }, [userInfo.selectedCoinType]);
+    if (loginStep != 3) return;
+    if (userInfo.selectedCoinType == siteInfo.virtualCoinType)
+      GetVritualBalanceModalInfo();
+    else
+      GetBalanceModalInfo();
+  }, [loginStep,userInfo.selectedCoinType]);
   const depositResultCallback = async (status: number) => {
     console.log("depositCallback", status);
     if (status != 0) {
@@ -377,12 +382,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </button>
                 </div>
               </div>
-              <div className="wallet-modal-message my-3  max-w-xs p-3">
+              {siteInfo.walletModalMessageMap && siteInfo.walletModalMessageMap[userInfo.selectedCoinType] && <div className="wallet-modal-message my-3  max-w-xs p-3">
                 <div className="block w-full  break-words">
-                  <span>{balanceModalInfo?.modalMessage}</span>
+                  <span>{siteInfo.walletModalMessageMap[userInfo.selectedCoinType]}</span>
                 </div>
-              </div>
-              {userInfo?.selectedCoinType != "$USO" && (
+              </div>}
+              {userInfo?.selectedCoinType != siteInfo.virtualCoinType && (
                 <div className="block gap-5 pb-4 md:flex md:gap-5">
                   <div
                     className="custom-wallet-modal-card"
@@ -403,7 +408,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         <span> {userInfo?.selectedCoinType}</span>
                       </p>
                     </div>
-                    <div className="balance-label flex items-center gap-2">
+                    {balanceModalInfo?.withdrawalMaxLimit && (<div className="balance-label flex items-center gap-2">
                       <label>MaxLimit :</label>
                       <p
                         style={{
@@ -413,7 +418,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       >
                         {String(balanceModalInfo?.withdrawalMaxLimit ?? "")}
                       </p>
-                    </div>
+                    </div>)}
                     <div className="mb-5 flex items-center gap-2">
                       <label>Amount :</label>
                       <input
@@ -470,7 +475,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         <div className="tooltip">Copy your address</div>
                       </div>
                     </div>
-                    <div className=" flex items-center gap-2">
+                    {balanceModalInfo?.depositMinLimit && (<div className=" flex items-center gap-2">
                       <label>MinLimit :</label>
                       <p
                         id="minlimit"
@@ -480,7 +485,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       >
                         {String(balanceModalInfo?.depositMinLimit ?? "")}
                       </p>
-                    </div>
+                    </div>)}
                     <div className=" flex items-center gap-2">
                       <label>Amount :</label>
                       <input
@@ -538,7 +543,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                   </div>
                 </div>
               )}
-              {userInfo?.selectedCoinType == "$USO" && (
+              {userInfo?.selectedCoinType == siteInfo.virtualCoinType && (
                 <div className="gpa-5 block pb-4 md:flex md:gap-5">
                   <div
                     className="custom-wallet-modal-card"

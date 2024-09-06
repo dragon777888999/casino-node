@@ -31,7 +31,7 @@ export interface SiteInfo {
   featureMap: { [key: string]: boolean };
   mark: string;
   checkBalance: boolean;
-  walletModalMessage: string;
+  walletModalMessageMap: { [key: string]: string };
   themeCode: string;
   title: string;
   description: string;
@@ -113,7 +113,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     tokenAddressMap: {}, // empty object for token addresses
     themeMap: {}, // empty object for token addresses
     mark: "", // empty string for mark
-    walletModalMessage: "", // empty string for wallet modal message
+    walletModalMessageMap: {}, // empty string for wallet modal message
     themeCode: "", // empty string for theme code
     title: "",
     description: "",
