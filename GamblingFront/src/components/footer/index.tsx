@@ -4,6 +4,7 @@ import TableAll from "../table/TableAll";
 
 import { Tabs, Tab } from "@nextui-org/react";
 import { useAppContext } from "@/hooks/AppContext";
+import FAQ from "../faq";
 
 const Footer = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -54,6 +55,7 @@ const Footer = (props: {
               </Tab>
             </Tabs>
           </div>
+          <FAQ />
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
               <p className="" style={{ fontSize: "20px" }}>
