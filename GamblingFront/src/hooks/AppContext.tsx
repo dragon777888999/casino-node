@@ -14,7 +14,7 @@ export enum WalletType {
   Gem,
   Xumm,
 
-  TronLink
+  TronLink,
 }
 
 export interface SiteInfo {
@@ -58,6 +58,9 @@ interface AppState {
   userInfo: UserInfo;
   setUserInfo: (userInfo: UserInfo) => void;
 
+  chatbarOpen: boolean;
+  setChatbarOpen: (chatbarOpen: boolean) => void;
+
   accessToken: string;
   setAccessToken: (accessToken: string) => void;
   walletAddress: string;
@@ -70,8 +73,8 @@ interface AppState {
   socketData: string;
   setSocketData: (data: string) => void;
 
-  affiliaterCode : string;
-  setAffiliaterCode : (affiliaterCode : string) => void;
+  affiliaterCode: string;
+  setAffiliaterCode: (affiliaterCode: string) => void;
 }
 
 // Create the context with a default value
@@ -95,7 +98,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     userCode: "",
     nickName: "",
   });
-  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>({});
+  const [siteInfoList, setSiteInfoList] = useState<{ [key: string]: SiteInfo }>(
+    {},
+  );
   const [siteInfo, setSiteInfo] = useState<SiteInfo>({
     isLoginMode: false, // default to false (not in login mode)
     enableSideBar: false,
@@ -114,7 +119,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     description: "",
     showProvider: true,
     checkBalance: false,
-    featureMap: {}
+    featureMap: {},
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");
@@ -123,6 +128,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [socketData, setSocketData] = useState<string>("");
   const [affiliaterCode, setAffiliaterCode] = useState<string>("");
+  const [chatbarOpen, setChatbarOpen] = useState<boolean>(false);
 
   const value = {
     userInfo,
@@ -133,6 +139,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSiteInfo,
     loginStep,
     setLoginStep,
+    chatbarOpen,
+    setChatbarOpen,
     accessToken,
     setAccessToken,
     walletAddress,
@@ -143,9 +151,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setSocket,
     socketData,
     setSocketData,
-    
+
     affiliaterCode,
-    setAffiliaterCode
+    setAffiliaterCode,
   };
 
   const reconnectInterval = useRef(1000); // Initial reconnect interval (1 second)
@@ -182,15 +190,14 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
       console.error("WebSocket error:", error);
       ws.close();
     };
-    
+
     setInterval(() => {
       if (ws.readyState === WebSocket.OPEN) {
-        ws.send(JSON.stringify({ type: 'ping' }));
+        ws.send(JSON.stringify({ type: "ping" }));
       }
     }, 60000); // Send a ping every 60 seconds
 
     setSocket(ws);
-
   };
   const handleReconnect = () => {
     // Clear any existing timeouts
@@ -200,11 +207,16 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
     // Attempt to reconnect after a delay
     timeout.current = setTimeout(() => {
-      console.log(`Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`);
+      console.log(
+        `Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`,
+      );
       connectWebSocket();
 
       // Increase the reconnect interval, but don't exceed the maximum
-      reconnectInterval.current = Math.min(reconnectInterval.current * 2, maxReconnectInterval.current);
+      reconnectInterval.current = Math.min(
+        reconnectInterval.current * 2,
+        maxReconnectInterval.current,
+      );
     }, reconnectInterval.current);
   };
 

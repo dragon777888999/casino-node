@@ -3,12 +3,14 @@ import React, { useRef, useEffect } from "react";
 interface DropdownProps {
   convertType: string;
   selectedKey: string;
-  onSelect: (key: string) => void;
+  selectedRate: string;
+  onSelect: (key: string, rate: string) => void;
 }
 
 const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
   convertType,
   selectedKey,
+  selectedRate,
   onSelect,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -34,9 +36,10 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     key: string,
+    rate: string,
   ) => {
     event.preventDefault();
-    onSelect(key);
+    onSelect(key, rate);
     setIsOpen(false);
   };
 
@@ -46,6 +49,7 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  console.log("converttype", convertType);
 
   return (
     <>
@@ -57,7 +61,7 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
           {/* <div className="ml-10 flex items-center justify-center">
             <span>Ratio</span>
           </div> */}
-          <span>{selectedKey}</span>
+          <span style={{ lineHeight: "normal" }}>{selectedKey}</span>
 
           <svg
             className="hidden fill-current sm:block"
@@ -82,23 +86,24 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
                 <div key={type} className="flex items-center">
                   <a
                     href="#"
-                    onClick={(event) => handleMenuItemClick(event, type)}
+                    onClick={(event) => handleMenuItemClick(event, type, rate)}
                     className={selectedKey === type ? "selected" : ""}
                   >
                     {" "}
-                    {type} {rate}
+                    {type}
+                    {/* {rate} */}
                   </a>
                 </div>
               ))}
           </div>
         )}
       </div>
-      <div
+      {/* <div
         className="flex items-center justify-center"
         style={{ marginLeft: "20%" }}
       >
-        <span>{selectConvertType}</span>
-      </div>
+        <span>{selectedKey}</span>
+      </div> */}
     </>
   );
 };

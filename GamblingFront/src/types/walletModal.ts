@@ -11,7 +11,7 @@ export type VirtualBalanceModalInfo = {
   modalMessage: string;
   depositConvertRatio: string;
   withdrawalMaxLimit: string;
-  depositMinLimit: string;
+  depositConvertMinLimit: string;
   withdrawConvertRatio: string;
   withdrawConvertMaxLimit: string;
 };
