@@ -99,7 +99,7 @@ const Main: React.FC = () => {
       </div>
       {/* <GamePanel title={"Original"} gameType={9} /> */}
       <GamePanel title={"Featured Games"} gameType={9} />
-      <GamePanel title={"Candy Games"} gameType={1} />
+      <GamePanel title={"Featured Slots"} gameType={1} />
       {siteInfo.showProvider ? <ProviderPanel /> : <></>}
 
       <div className="splite-line">
