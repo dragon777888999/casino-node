@@ -55,7 +55,7 @@ const Footer = (props: {
               </Tab>
             </Tabs>
           </div>
-          <FAQ />
+          {siteInfo.faqList && <FAQ />}
           <div className="mt-10 block ">
             <div className="mt-10 flex justify-center">
               <p className="" style={{ fontSize: "20px" }}>

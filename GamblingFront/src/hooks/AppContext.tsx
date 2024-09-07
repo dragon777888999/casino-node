@@ -17,6 +17,11 @@ export enum WalletType {
   TronLink,
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface SiteInfo {
   isLoginMode: boolean;
   enableSideBar: boolean;
@@ -25,6 +30,7 @@ export interface SiteInfo {
   chain: string;
   availableCoinTypes: Array<string>;
   virtualCoinType: string;
+  faqList:Array<FAQItem>,
   digitsMap: { [key: string]: number };
   tokenAddressMap: { [key: string]: string };
   themeMap: { [key: string]: string };
@@ -108,6 +114,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     agentCode: "", // empty string for agent code
     chain: "", // empty string for blockchain type
     availableCoinTypes: [], // empty array for available coin types
+    faqList:[],
     virtualCoinType: "",
     digitsMap: {}, // empty object for digits mapping
     tokenAddressMap: {}, // empty object for token addresses
