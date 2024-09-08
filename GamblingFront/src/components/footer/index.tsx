@@ -77,7 +77,7 @@ const Footer = (props: {
 
                 }}
               >
-                <TableAll isAll={true}></TableAll>
+                <TableAll tableData={totalTableData}></TableAll>
               </Tab>
               <Tab
                 key="MyBets"
@@ -87,7 +87,7 @@ const Footer = (props: {
                   backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
                 }}
               >
-                <TableAll isAll={false}></TableAll>
+                <TableAll tableData={myTableData}></TableAll>
               </Tab>
             </Tabs>
           </div>
