@@ -4,41 +4,41 @@ import Image from "next/image";
 import { useAppContext } from "../../hooks/AppContext";
 
 interface FAQItem {
-    question: string;
-    answer: string;
+  question: string;
+  answer: string;
 }
 
-const FAQ=()=>{
- const[activeIndex,setActiveIndex] = useState<number | null>(null);
- const { siteInfo } = useAppContext();
+const FAQ = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const { siteInfo } = useAppContext();
 
-    const toggleAnswer = (index: number) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
+  const toggleAnswer = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
-    return (
-        <div className="faq-container">
-            <h3 className="SlotsList_heading-item sub-title mb-3 flex items-center gap-3 text-white">
-                <Image src={`/default/images/faq.png`} alt="Project Thumbnail" width={28} height={18} />
-                FAQ
-            </h3>
-            {siteInfo.faqList.map((item, index) => (
-                <div key={index} className="faq-item">
-                    <div className="faq-question" onClick={() => toggleAnswer(index)}>
-                        <h3>{item.question}</h3>
-                        <span className="arrow-icon">
-                            {activeIndex === index ? '▲' : '▼'}
-                        </span>
-                    </div>
-                    <div
-                        className={`faq-answer ${activeIndex === index ? 'open' : ''}`}
-                        style={{ maxHeight: activeIndex === index ? '200px' : '0px' }}
-                    >
-                        <p>{item.answer}</p>
-                    </div>
-                </div>
-            ))}
-            <style jsx>{`
+  return (
+    <div className="faq-container">
+      <h3 className="SlotsList_heading-item sub-title mb-3 flex items-center gap-3 text-white">
+        <Image src={`/default/images/faq.png`} alt="Project Thumbnail" width={28} height={18} />
+        FAQ
+      </h3>
+      {siteInfo.faqList.map((item, index) => (
+        <div key={index} className="faq-item">
+          <div className="faq-question" onClick={() => toggleAnswer(index)}>
+            <h3>{item.question}</h3>
+            <span className="arrow-icon">
+              {activeIndex === index ? '▲' : '▼'}
+            </span>
+          </div>
+          <div
+            className={`faq-answer ${activeIndex === index ? 'open' : ''}`}
+            style={{ maxHeight: activeIndex === index ? '200px' : '0px' }}
+          >
+            <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+          </div>
+        </div>
+      ))}
+      <style jsx>{`
                 .faq-container {
                     // max-width: 600px;
                     margin: 0 auto;
@@ -67,8 +67,8 @@ const FAQ=()=>{
                     font-size: 16px;
                 }
             `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default FAQ;
