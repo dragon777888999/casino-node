@@ -3,7 +3,7 @@ import sdk from "@crossmarkio/sdk";
 import { sendPayment } from "@gemwallet/api";
 import { useAppContext, WalletType } from "../../../hooks/AppContext";
 
-const useDepositOnXrpl = () => {
+const useXrplFunction = () => {
   const [status, setStatus] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -92,4 +92,4 @@ const useDepositOnXrpl = () => {
   return { depositOnXrpl, disconnectOnXrpl, status, error };
 };
 
-export default useDepositOnXrpl;
+export default useXrplFunction;

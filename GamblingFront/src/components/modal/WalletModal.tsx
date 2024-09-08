@@ -13,10 +13,10 @@ import { BalanceModalInfo } from "@/types/walletModal";
 import { VirtualBalanceModalInfo } from "@/types/walletModal";
 import SelectConvertTypeMenu from "./SelectConvertTypeMenu";
 
-import useDepositOnSolana from "../wallet-connecter/solana/SolanaWalletFunction";
-import useDepositOnXrpl from "../wallet-connecter/xrpl/XrplWalletFunction";
-import useDepositOnTron from "../wallet-connecter/tron/TronWalletFunction";
-import useDepositOnCosmos from "../wallet-connecter/cosmos/CosmosWalletFunction";
+import useSolanaFunction from "../wallet-connecter/solana/SolanaWalletFunction";
+import useXrplFunction from "../wallet-connecter/xrpl/XrplWalletFunction";
+import useTronFunction from "../wallet-connecter/tron/TronWalletFunction";
+import useCosmosFunction from "../wallet-connecter/cosmos/CosmosWalletFunction";
 import { stat } from "fs";
 
 Modal.setAppElement("#root");
@@ -51,10 +51,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [virtualBalanceModalInfo, setVirtualBalanceModalInfo] =
     useState<VirtualBalanceModalInfo>();
 
-  const { depositOnSolana } = useDepositOnSolana();
-  const { depositOnXrpl } = useDepositOnXrpl();
-  const { depositOnTron } = useDepositOnTron();
-  const { depositOnCosmos } = useDepositOnCosmos();
+  const { depositOnSolana } = useSolanaFunction();
+  const { depositOnXrpl } = useXrplFunction();
+  const { depositOnTron } = useTronFunction();
+  const { depositOnCosmos } = useCosmosFunction();
 
   const onSelectCoinType = async (key: string) => {
     const response = await fetch(
@@ -143,7 +143,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       }
     };
 
-    const GetVritualBalanceModalInfo = async () => {
+    const GetVirtualBalanceModalInfo = async () => {
       try {
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -174,7 +174,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
     };
     if (loginStep != 3) return;
     if (userInfo.selectedCoinType == siteInfo.virtualCoinType)
-      GetVritualBalanceModalInfo();
+      GetVirtualBalanceModalInfo();
     else
       GetBalanceModalInfo();
   }, [loginStep,userInfo.selectedCoinType]);

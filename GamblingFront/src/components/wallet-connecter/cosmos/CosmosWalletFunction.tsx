@@ -9,7 +9,7 @@ import { useAppContext, WalletType } from "@/hooks/AppContext";
 import { StdFee } from '@cosmjs/stargate';
 
 const chainNames_1 = ["oraichain", "cosmoshub"];
-const useDepositOnCosmos = () => {
+const useCosmosFunction = () => {
   const { username, address, connect, disconnect, wallet, openView,signAndBroadcast } = useChain(
     chainNames_1[0]
   );
@@ -73,4 +73,4 @@ const useDepositOnCosmos = () => {
 
   return { depositOnCosmos, disconnectOnCosmos, error };
 };
-export default useDepositOnCosmos;
+export default useCosmosFunction;
