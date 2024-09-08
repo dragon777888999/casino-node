@@ -2,7 +2,7 @@ module.exports = {
   nativeToken: {
     Solana: "sol",
     Oraichain: "orai",
-    Xrpl: "xrpl",
+    Xrpl: "xrp",
     Tron: "tron",
   },
   fee: {
@@ -22,7 +22,7 @@ module.exports = {
     Solana_ROOG: 9,
     Solana_USDC: 6,
     Oraichain_orai: 6,
-    Xrpl_xrpl: 6,
+    Xrpl_xrp: 6,
     Tron_tron: 6,
     Tron_usdc: 6,
   },
