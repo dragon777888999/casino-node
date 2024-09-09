@@ -35,7 +35,7 @@ const DropdownUser = () => {
       else if (siteInfo?.chain == "Tron") {
         disconnectOnTron();
       }
-      else if (siteInfo?.chain == "Oraichain"){
+      else if (siteInfo?.chain == "Oraichain") {
         disconnectOnCosmos();
       }
 
@@ -208,6 +208,56 @@ const DropdownUser = () => {
                   </button>
                 </li>
               )}
+              {siteInfo.featureMap && siteInfo.featureMap.rewards && (
+                <li>
+                  <button
+                    onClick={openVaultModal}
+                    className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_2150_132841)">
+                        <path
+                          d="M1 7.25004H5.625V12H1.875C1.395 12 1 11.605 1 11.125V7.25004Z"
+                          fill="#E8E5FF"
+                        ></path>
+                        <path
+                          d="M11 7.25004V11.125C11 11.605 10.605 12 10.125 12H6.375V7.25004H11Z"
+                          fill="#E8E5FF"
+                        ></path>
+                        <path
+                          d="M0 4.37504V5.62504C0 6.10504 0.395 6.50004 0.875 6.50004H5.625V3.50004H0.875C0.395 3.50004 0 3.89504 0 4.37504Z"
+                          fill="#E8E5FF"
+                        ></path>
+                        <path
+                          d="M11.125 3.50004H6.375V6.50004H11.125C11.605 6.50004 12 6.10504 12 5.62504V4.37504C12 3.89504 11.605 3.50004 11.125 3.50004Z"
+                          fill="#E8E5FF"
+                        ></path>
+                        <path
+                          d="M6 4.02204C5.891 4.02204 5.787 3.97454 5.7165 3.89204C5.645 3.80954 5.6135 3.70004 5.629 3.59204C5.814 2.34204 6.7905 -0.0224609 9.1645 -0.0224609C10.5195 -0.0219609 11 0.710039 11 1.33704C11 2.45154 9.4485 4.02204 6 4.02204ZM9.1645 0.728039C7.3735 0.728039 6.6935 2.43054 6.468 3.26104C7.881 3.19504 8.772 2.83754 9.285 2.53304C9.9965 2.11054 10.25 1.63804 10.25 1.33654C10.25 0.887539 9.6895 0.728039 9.1645 0.728039Z"
+                          fill="#E8E5FF"
+                        ></path>
+                        <path
+                          d="M6.0005 4.02204C2.552 4.02204 1.0005 2.45154 1.0005 1.33704C1.0005 0.710039 1.4815 -0.0219609 2.8365 -0.0219609C5.21 -0.0219609 6.1865 2.34254 6.3715 3.59254C6.387 3.70054 6.3555 3.81004 6.284 3.89254C6.2135 3.97454 6.1095 4.02204 6.0005 4.02204ZM2.8365 0.728039C2.3115 0.728039 1.7505 0.888039 1.7505 1.33704C1.7505 1.97554 2.867 3.13904 5.532 3.26154C5.307 2.43054 4.627 0.728039 2.8365 0.728039Z"
+                          fill="#E8E5FF"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2150_132841">
+                          <rect width="12" height="12" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <p style={{ fontSize: "12px" }}>Rewards</p>
+                  </button>
+                </li>
+              )}
+
               <li>
                 <Link
                   onClick={handleDisconnect}

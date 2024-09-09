@@ -10,6 +10,9 @@ import SelectCoinTypeMenu from "../modal/SelectCoinTypeMenu";
 import ToogleButton from "./ToogleButton";
 import DropdownNotification from "./DropdownNotification";
 import DropdownBonus from "./DropdownBonus";
+import DropdownLanguage from "./DropdownLanguage";
+import ChatButton from "./ChatButton";
+
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
@@ -104,6 +107,12 @@ const MenuBar = () => {
                 <DropdownBonus />
               </li>)
             }
+             {siteInfo.featureMap && siteInfo.featureMap.language && <li>
+              <DropdownLanguage />
+            </li>}
+            {siteInfo.featureMap && siteInfo.featureMap.chat && <li>
+              <ChatButton />
+            </li>}
             <li>
               <DropdownUser />
             </li>

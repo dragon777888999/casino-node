@@ -6,6 +6,7 @@ import { Tabs, Tab } from "@nextui-org/react";
 import { useAppContext } from "@/hooks/AppContext";
 import FAQ from "../faq";
 import { useState, useEffect } from "react";
+import { backendUrl } from "@/anchor/global";
 
 import { WagerInfo } from "@/types/gameListInfo";
 
@@ -15,7 +16,7 @@ const Footer = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { userInfo, siteInfo, socketData } = useAppContext();
+  const { userInfo, siteInfo, socketData, loginStep, socket } = useAppContext();
   const [totalTableData, setTotalTableData] = useState<WagerInfo[]>([]);
   const [myTableData, setMyTableData] = useState<WagerInfo[]>([]);
 
@@ -47,6 +48,46 @@ const Footer = (props: {
       }
     }
   }, [socketData]);
+  useEffect(() => {
+    const fetchGameData = async () => {
+      if (!socket || loginStep == 0)
+        return;
+      const userCode = loginStep == 3 ? userInfo.userCode : "";
+      try {
+        const response = await fetch(`${backendUrl}/backend/unauthorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            method: "GetWagerList",
+            agentCode: siteInfo?.agentCode,
+            userCode: userCode,
+            offset: 0,
+            length: 10
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+        if (result.status === 0) {
+          if (loginStep == 3)
+            setMyTableData(result.wagers);
+          else
+            setTotalTableData(result.wagers);
+        }
+        else {
+          throw new Error("Unexpected status code");
+        }
+      } catch (error) {
+        console.error("Error fetching game data:", error);
+      }
+    };
+    fetchGameData(); // Fetch for original games
+  }, [loginStep, socket]);
 
   let communityEntries: [string, string][] = [];
   if (siteInfo.communityMap) {
@@ -79,7 +120,7 @@ const Footer = (props: {
               >
                 <TableAll tableData={totalTableData}></TableAll>
               </Tab>
-              <Tab
+              {loginStep == 3 && <Tab
                 key="MyBets"
                 title="My Bets"
                 style={{
@@ -88,7 +129,7 @@ const Footer = (props: {
                 }}
               >
                 <TableAll tableData={myTableData}></TableAll>
-              </Tab>
+              </Tab>}
             </Tabs>
           </div>
           {siteInfo.faqList && <FAQ />}

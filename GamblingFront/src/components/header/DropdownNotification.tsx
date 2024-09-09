@@ -1,11 +1,117 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import ClickOutside from "@/components/ClickOutside";
+import { useAppContext } from "@/hooks/AppContext";
+import { backendUrl } from "@/anchor/global";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { NotifyInfo } from "@/types/notifyInfo";
+import Modal from "react-modal";
+import { info } from "console";
+import { NotifyInfoContent } from "@/types/notifyInfo";
+interface Props {
+  info: NotifyInfo[] | null;
+}
 
 const DropdownNotification = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [notifying, setNotifying] = useState(true);
+  const [notifying, setNotifying] = useState(false);
+  const { accessToken, userInfo } = useAppContext();
+  const [notifyData, setNofityData] = useState<NotifyInfo[]>([]);
+  const [seletedData, setSeletedData] = useState<NotifyInfoContent>();
+  const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
 
+  const openModal = (id: number) => {
+    GetNotifyContent(id);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+  const GetNotify = async () => {
+    try {
+      if (accessToken == "") return;
+      // alert(accessToken);
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+
+        headers: {
+          "X-Access-Token": accessToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "GetUnreadNoticeList",
+        }),
+      });
+
+      console.log("userinfo", userInfo.status);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+
+      if (result.status === 0) {
+        if (result.length > 0) {
+          setNotifying(true);
+          setNofityData(result.data);
+        }
+        console.log("notify", result);
+        toast.success("success");
+      } else {
+        toast.warn("Operation failed");
+        throw new Error("Unexpected status code");
+      }
+    } catch (error) {
+      console.error("Error fetching game data:", error);
+    } finally {
+      console.log(Response);
+    }
+  };
+  const GetNotifyContent = async (id: number) => {
+    try {
+      if (accessToken == "") return;
+      // alert(accessToken);
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+
+        headers: {
+          "X-Access-Token": accessToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "ReadNotice",
+          id: id,
+        }),
+      });
+
+      console.log("userinfocontent", userInfo.status);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+
+      if (result.status === 0) {
+        setSeletedData(result.data);
+        console.log("notifycontentt", result.data);
+        toast.success("success:fetch data");
+      } else {
+        toast.warn("Operation failed");
+        throw new Error("Unexpected status code");
+      }
+    } catch (error) {
+      console.error("Error fetching game data:", error);
+    } finally {
+      console.log(Response);
+    }
+  };
+  useEffect(() => {
+    GetNotify();
+  }, [accessToken]);
+  console.log("notify", notifyData);
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <li>
@@ -51,73 +157,89 @@ const DropdownNotification = () => {
             </div>
 
             <ul className="flex h-auto flex-col overflow-y-auto">
-              <li>
-                <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="#"
-                >
-                  <p className="text-sm">
-                    <span className="text-black dark:text-white">
-                      Edit your information in a swipe
-                    </span>{" "}
-                    Sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim.
-                  </p>
+              {Array.isArray(notifyData) ? (
+                notifyData.map((info, index) => (
+                  <li key={index}>
+                    <Link
+                      onClick={() => {
+                        openModal(info.id);
+                      }}
+                      className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                      href="#"
+                    >
+                      <p className="text-sm">
+                        <span className="text-black dark:text-white">
+                          {info?.title}
+                        </span>{" "}
+                      </p>
 
-                  <p className="text-xs">12 May, 2025</p>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="#"
-                >
-                  <p className="text-sm">
-                    <span className="text-black dark:text-white">
-                      It is a long established fact
-                    </span>{" "}
-                    that a reader will be distracted by the readable.
-                  </p>
-
-                  <p className="text-xs">24 Feb, 2025</p>
-                </Link>
-              </li>
-              {/* <li>
-                <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="#"
-                >
-                  <p className="text-sm">
-                    <span className="text-black dark:text-white">
-                      There are many variations
-                    </span>{" "}
-                    of passages of Lorem Ipsum available, but the majority have
-                    suffered
-                  </p>
-
-                  <p className="text-xs">04 Jan, 2025</p>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  href="#"
-                >
-                  <p className="text-sm">
-                    <span className="text-black dark:text-white">
-                      There are many variations
-                    </span>{" "}
-                    of passages of Lorem Ipsum available, but the majority have
-                    suffered
-                  </p>
-
-                  <p className="text-xs">01 Dec, 2024</p>
-                </Link>
-              </li> */}
+                      <p className="flex justify-end text-xs">
+                        {info.createdAt}
+                      </p>
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <p className="flex justify-center">
+                  No notifications available
+                </p>
+              )}
             </ul>
           </div>
         )}
       </li>
+      <Modal
+        id="modal"
+        className="modal"
+        isOpen={showModal}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        ariaHideApp={false}
+      >
+        {" "}
+        <div className="wallet-adapter-modal wallet-adapter-modal-fade-in">
+          <div className=" wallet-adapter-modal-container">
+            {/*content*/}
+            <div
+              className="wallet-adapter-modal-wrapper"
+              style={{ maxWidth: "fit-content" }}
+            >
+              {/*header*/}{" "}
+              <div className="border-blueGray-200 items-start justify-between rounded-t ">
+                <div className="row">
+                  <button
+                    className="wallet-adapter-modal-button-close"
+                    style={{ right: "10px", top: "11px" }}
+                    onClick={() => {
+                      closeModal();
+                    }}
+                  >
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                className="jusfity-start flex pb-3"
+                style={{ minWidth: "350px" }}
+              >
+                <h1
+                  style={{ color: "#fff", fontWeight: "700", fontSize: "20px" }}
+                >
+                  {seletedData?.title}
+                </h1>
+              </div>
+              <div className="flex w-full break-words">
+                <p style={{ maxWidth: "350px" }}>{seletedData?.content}</p>
+              </div>
+              <div className="flex w-full justify-end">
+                <p>{seletedData?.createdAt}</p>
+              </div>
+            </div>
+          </div>{" "}
+        </div>{" "}
+      </Modal>
     </ClickOutside>
   );
 };

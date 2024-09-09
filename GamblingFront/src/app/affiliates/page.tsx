@@ -121,10 +121,50 @@ const Affiliates = () => {
       console.log(Response);
     }
   };
+  const getIncome = async () => {
+    try {
+      if (info?.totalIncome == 0) {
+        toast.error("Invalid request: No income");
+        return;
+      }
+
+      if (accessToken == "") return;
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+
+        headers: {
+          "X-Access-Token": accessToken,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "ClaimRefferalBonus",
+          currencyCode: userInfo.selectedCoinType,
+        }),
+      });
+      console.log("createAffiliater", response);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      if (result.status === 0) {
+        toast.success(`Success! You get ${result.bonus} bonus`);
+        await GetAffiliaterInfo();
+      } else {
+        toast.warn("Operation failed");
+        throw new Error("Unexpected status code");
+      }
+    } catch (error) {
+      console.error("Error fetching game data:", error);
+    } finally {
+      console.log(Response);
+    }
+  };
+
   console.log("parse", info);
   const totalBetAmount: number = info?.totalBetAmount ?? 0; // Default to 0 if undefined
   const totalPayoutAmount: number = info?.totalPayoutAmount ?? 0;
-  const totalEarning: number = totalBetAmount - totalPayoutAmount;
+  //const totalEarning: number = totalBetAmount - totalPayoutAmount;
   // setReferralLink(info?.affiliateCodes[0]);
   // if (info?.referralInfos.length > 0)
   //   setAffiliateCode(info?.referralInfos[0]);
@@ -440,7 +480,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{totalEarning.toFixed(4)}</span>
+                      <span>{info?.totalPayoutAmount.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
@@ -507,7 +547,7 @@ const Affiliates = () => {
                     </div>
                   </div>
                 </div>
-                <button className="affiliates-small-button">
+                <button className="affiliates-small-button" onClick={getIncome}>
                   <div className="Button_inner-content">
                     <span>Take</span>
                   </div>

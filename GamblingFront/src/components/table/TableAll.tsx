@@ -71,6 +71,11 @@ const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
           </div>
         )} */}
         {tableData.map((info, index) => {
+          if (!info.vendorName)
+            info.vendorName=`{"en":"unknown"}`;
+          if (!info.gameName)
+            info.gameName=`{"en":"unknown"}`;
+
           return (
             <div
               className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`}
