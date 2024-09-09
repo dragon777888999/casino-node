@@ -23,7 +23,7 @@ const Main: React.FC = () => {
 
   let width = 40;
   let height = 40;
-  if (siteInfo.mark) {
+  if (siteInfo.themeMap) {
     if (siteInfo.themeMap?.banner) {
       bannerImgSrc = `/${siteInfo.themeMap.banner}/images/banner.png`;
       smallBannerImgSrc = `/${siteInfo.themeMap.banner}/images/smallBanner.png`;
