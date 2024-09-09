@@ -72,9 +72,9 @@ const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
         )} */}
         {tableData.map((info, index) => {
           if (!info.vendorName)
-            info.vendorName=`{"en":"unknown"}`;
+            info.vendorName = `{"en":"unknown"}`;
           if (!info.gameName)
-            info.gameName=`{"en":"unknown"}`;
+            info.gameName = `{"en":"unknown"}`;
 
           return (
             <div
@@ -142,9 +142,7 @@ const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
                   </div>
                   <div>
                     <p
-                      style={{
-                        color: "#7DD934",
-                      }}
+                      style={info.payoutAmount >= info.betAmount ? { color: "#7DD934" }:{ color: "gray" }}
                     >
                       {info.payoutAmount.toFixed(2)}
                     </p>
