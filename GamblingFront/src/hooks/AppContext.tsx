@@ -2,9 +2,8 @@ import { backendUrl } from "@/anchor/global";
 import React, {
   createContext,
   useContext,
-  useEffect,
   useState,
-  useRef,
+
   ReactNode,
 } from "react";
 
@@ -164,83 +163,5 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     affiliaterCode,
     setAffiliaterCode,
   };
-
-  const reconnectInterval = useRef(1000); // Initial reconnect interval (1 second)
-  const maxReconnectInterval = useRef(30000); // Maximum reconnect interval (30 seconds)
-  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const connectWebSocket = () => {
-    // Create a new URL object from the string
-    let parsedUrl = new URL(backendUrl);
-
-    // Determine the WebSocket protocol (ws or wss)
-    let wsProtocol = parsedUrl.protocol === "https:" ? "wss:" : "ws:";
-
-    // Construct the WebSocket URL
-    let wsUrl = `${wsProtocol}//${parsedUrl.host}/websocket`;
-
-    const ws = new WebSocket(wsUrl);
-
-    ws.onopen = () => {
-      console.log("WebSocket connection opened");
-    };
-
-    ws.onmessage = (event) => {
-      //console.log("Received:", event.data);
-      setSocketData(event.data); // Update the state with received data
-    };
-
-    ws.onclose = () => {
-      console.log("WebSocket connection closed");
-      handleReconnect();
-    };
-
-    ws.onerror = (error) => {
-      console.error("WebSocket error:", error);
-      ws.close();
-    };
-
-    setInterval(() => {
-      if (ws.readyState === WebSocket.OPEN) {
-        ws.send(JSON.stringify({ type: "ping" }));
-      }
-    }, 60000); // Send a ping every 60 seconds
-
-    setSocket(ws);
-  };
-  const handleReconnect = () => {
-    // Clear any existing timeouts
-    if (timeout.current !== null) {
-      clearTimeout(timeout.current);
-    }
-
-    // Attempt to reconnect after a delay
-    timeout.current = setTimeout(() => {
-      console.log(
-        `Attempting to reconnect in ${reconnectInterval.current / 1000} seconds...`,
-      );
-      connectWebSocket();
-
-      // Increase the reconnect interval, but don't exceed the maximum
-      reconnectInterval.current = Math.min(
-        reconnectInterval.current * 2,
-        maxReconnectInterval.current,
-      );
-    }, reconnectInterval.current);
-  };
-
-  useEffect(() => {
-    connectWebSocket();
-
-    return () => {
-      if (socket) {
-        socket.close();
-      }
-      if (timeout.current) {
-        clearTimeout(timeout.current);
-      }
-    };
-  }, []);
-
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
