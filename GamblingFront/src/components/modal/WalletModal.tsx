@@ -47,9 +47,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [depositRate, setDepositRate] = useState("");
   const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
     useAppContext();
-  const [balanceModalInfo, setBalanceModalInfo] = useState<BalanceModalInfo>();
-  const [virtualBalanceModalInfo, setVirtualBalanceModalInfo] =
-    useState<VirtualBalanceModalInfo>();
+  const [balanceModalInfo, setBalanceModalInfo] = useState<BalanceModalInfo | null>(null);
+  const [virtualBalanceModalInfo, setVirtualBalanceModalInfo] = useState<VirtualBalanceModalInfo | null>(null);
 
   const { depositOnSolana } = useSolanaFunction();
   const { depositOnXrpl } = useXrplFunction();
@@ -79,40 +78,10 @@ const WalletModal: React.FC<WalletModalProps> = ({
     setDepositConvert(key);
     setDepositRate(rate);
   };
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       if (loginStep != 3) return;
-
-  //       const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //           "X-Access-Token": accessToken,
-  //         },
-  //         body: JSON.stringify({
-  //           method: "GetDepositAddress",
-  //           chain: siteInfo?.chain,
-  //           coinType: userInfo?.selectedCoinType,
-  //         }),
-  //       });
-
-  //       const result = await response.json();
-  //       console.log("address", result.depositAddress);
-  //       if (result.status == 0) {
-  //         setDepositAddress(result.depositAddress);
-  //       }
-  //     } catch (error) {
-  //       console.error("Fetch error:", error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [loginStep]);
 
   useEffect(() => {
     const GetBalanceModalInfo = async () => {
-      if (userInfo.selectedCoinType == "$USO") return;
+      if (userInfo.selectedCoinType == siteInfo.virtualCoinType) return;
       try {
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -325,7 +294,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
     );
   };
   if (!showWalletModal) return null;
-  // alert(virtualBalanceModalInfo?.withdrawConvertMaxLimit);
+  if (userInfo.selectedCoinType == siteInfo.virtualCoinType && virtualBalanceModalInfo == null)
+    return null;
+  if (userInfo.selectedCoinType != siteInfo.virtualCoinType && balanceModalInfo == null)
+    return null;
+
 
   return (
     <Modal
@@ -643,30 +616,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     className="custom-wallet-modal-card"
                     style={{ backgroundColor: "rgb(20 28 39)" }}
                   >
-                    <div className="flex items-center gap-2">
-                      <label>Address :</label>
-                      <input
-                        type="text"
-                        className="my-2 ml-1 h-8 pl-2 text-black"
-                        placeholder="Deposit address"
-                        aria-label="Deposit address"
-                        defaultValue={depositAddress}
-                        style={{ textOverflow: "ellipsis" }}
-                        onChange={(e) => {
-                          setDepositAddress(e.target.value);
-                          const value = Number.parseFloat(e.target.value);
-                        }}
-                      />
-                      <div className="tooltipContainer ">
-                        <button
-                          onClick={onCopy}
-                          className="ml-2 h-9 items-center bg-black px-3 text-white"
-                        >
-                          <i className="fa-regular fa-copy" />
-                        </button>
-                        <div className="tooltip">Copy your address</div>
-                      </div>
-                    </div>
                     <div className="my-3 block items-baseline  justify-between md:flex">
                       <div className="mb-4 mr-3 flex  items-baseline justify-between md:mb-0">
                         <p className="mr-2">Rate:</p>

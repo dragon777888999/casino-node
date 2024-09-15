@@ -60,5 +60,5 @@ export default function ConnectCosmosButton() {
     );
   }
 
-  return <Button onClick={() => connect()}>Connect Wallet</Button>;
+  return <Button onClick={() => connect()}>Connect</Button>;
 }
