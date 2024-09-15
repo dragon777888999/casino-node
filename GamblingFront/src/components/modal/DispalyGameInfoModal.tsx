@@ -22,9 +22,8 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
 }) => {
   const {siteInfo, loginStep } = useAppContext();
 
-  const timestampMillis = gameData.time;
   // Create a Date object
-  const date = new Date(timestampMillis);
+  const date = new Date(gameData.createdAt);
 
   // Extract and format date components
   const day = String(date.getDate()).padStart(2, "0");
@@ -117,7 +116,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                   className="BetResult-gam-detail-content"
                   style={{ fontSize: "14px" }}
                 >
-                  <p>Bet ID: {(gameData?.time).toString().slice(-8)}</p>
+                  <p>Bet ID: {(gameData?.wagerId)}</p>
                   <p>
                     Placed by{" "}
                     {gameData?.userCode.length > 5

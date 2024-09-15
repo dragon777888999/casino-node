@@ -9,5 +9,6 @@ export interface WagerInfo {
   gameName: string; // This will be a JSON string that needs to be parsed
   vendorCode: string;
   gameCode: string;
-  time: number;
+  createdAt: Date;
+  wagerId:number;
 }
