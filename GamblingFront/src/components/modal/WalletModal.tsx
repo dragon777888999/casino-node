@@ -9,6 +9,7 @@ import Image from "next/image";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import { BalanceModalInfo } from "@/types/walletModal";
 import { VirtualBalanceModalInfo } from "@/types/walletModal";
 import SelectConvertTypeMenu from "./SelectConvertTypeMenu";

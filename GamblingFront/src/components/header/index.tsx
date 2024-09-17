@@ -7,8 +7,6 @@ import MenuBar from "./MenuBar";
 import ConnectButton from "./ConnectButton";
 import LoginButton from "./LoginButton";
 import { useAppContext } from "../../hooks/AppContext";
-import useLocalStorage from "@/hooks/useLocalStorage";
-import { Switch } from "@nextui-org/react";
 import ToogleButton from "./ToogleButton";
 
 const Header = (props: {
