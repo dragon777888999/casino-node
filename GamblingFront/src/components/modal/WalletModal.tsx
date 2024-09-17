@@ -42,14 +42,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
 
-  const [chain, setChain] = useLocalStorage("chain", "");
-
-  const [withDrawConvert, setWithDrawConvert] = useState("");
-  const [depositConvert, setDepositConvert] = useState("");
-  const [withDrawRate, setWithDrawRate] = useState("");
-  const [depositRate, setDepositRate] = useState("");
-  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } =
-    useAppContext();
+  const [coinForVirtualWithdraw, setCoinForVirtualWithdraw] = useLocalStorage("coinForVirtualWithdraw", "");
+  const [coinForVirtualDeposit, setCoinForVirtualDeposit] = useLocalStorage("coinForVirtualDeposit", "");
+  const { userInfo, setUserInfo, siteInfo, accessToken, loginStep } = useAppContext();
   const [balanceModalInfo, setBalanceModalInfo] = useState<BalanceModalInfo | null>(null);
   const [virtualBalanceModalInfo, setVirtualBalanceModalInfo] = useState<VirtualBalanceModalInfo | null>(null);
 
@@ -73,13 +68,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
       selectedCoinType: key,
     });
   };
-  const onWithDrawConvertType = async (key: string, rate: string) => {
-    setWithDrawConvert(key);
-    setWithDrawRate(rate);
+  const onWithdrawConvertType = async (key: string, rate: number) => {
+    setCoinForVirtualWithdraw(key);
   };
-  const onDepositConvertType = async (key: string, rate: string) => {
-    setDepositConvert(key);
-    setDepositRate(rate);
+  const onDepositConvertType = async (key: string, rate: number) => {
+    setCoinForVirtualDeposit(key);
   };
 
   useEffect(() => {
@@ -94,7 +87,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetBalanceModalInfo",
-            chain:siteInfo.chain,
+            chain: siteInfo.chain,
             coinType: userInfo?.selectedCoinType,
           }),
         });
@@ -119,14 +112,28 @@ const WalletModal: React.FC<WalletModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetVirtualBalanceModalInfo",
-            chain:siteInfo.chain,
-            coinType: siteInfo.virtualCoinType,
+            chain: siteInfo.chain,
+            virtualCoinType: siteInfo.virtualCoinType,
+            availableCoinTypes: siteInfo.availableCoinTypes
           }),
         });
 
         const result = await response.json();
         if (result.status == 0) {
           setVirtualBalanceModalInfo(result);
+
+          const withdrawConverts = Object.keys(result.withdrawConvertRatio);
+          var curWithdrawConvert = coinForVirtualWithdraw;
+          if (curWithdrawConvert == "" || !withdrawConverts.includes(curWithdrawConvert)) {
+            curWithdrawConvert = withdrawConverts[0];
+            setCoinForVirtualWithdraw(curWithdrawConvert);
+          }
+          const depositConverts = Object.keys(result.depositConvertRatio);
+          var curDepositConvert = coinForVirtualDeposit;
+          if (curDepositConvert == "" || !depositConverts.includes(curDepositConvert)) {
+            curDepositConvert = depositConverts[0];
+            setCoinForVirtualDeposit(curDepositConvert);
+          }
         }
       } catch (error) {
         console.error("Fetch error:", error);
@@ -138,7 +145,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       GetVirtualBalanceModalInfo();
     else
       GetBalanceModalInfo();
-  }, [loginStep,userInfo.selectedCoinType]);
+  }, [loginStep, userInfo.selectedCoinType]);
   const depositResultCallback = async (status: number) => {
     console.log("depositCallback", status);
     if (status != 0) {
@@ -237,14 +244,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
       );
     }
   };
-
   const onWithdraw = async () => {
     try {
-      if (accessToken == "") return;
-      if (
-        withdrawAmount !== null &&
-        withdrawAmount > Number(balanceModalInfo?.withdrawalMaxLimit)
-      ) {
+      if (accessToken == "")
+        return;
+      if (withdrawAmount !== null &&
+        withdrawAmount > Number(balanceModalInfo?.withdrawalMaxLimit)) {
         toast.warn(
           "You must set an amount lower than the maximum withdrawal amount.",
         );
@@ -275,6 +280,75 @@ const WalletModal: React.FC<WalletModalProps> = ({
       console.log(error);
     }
   };
+  const onVirtualCoinDeposit = async () => {
+    try {
+      if (accessToken == "")
+        return;
+      if (depositAmount !== null && depositAmount < Number(virtualBalanceModalInfo?.depositMinLimit)) {
+        toast.warn("You must set an amount bigger than the minimun deposit amount.",);
+        return;
+      }
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Access-Token": accessToken,
+        },
+        body: JSON.stringify({
+          method: "DepositVirtualCoin",
+          chain: siteInfo?.chain,
+          virtualCoinType: siteInfo.virtualCoinType,
+          coinType: coinForVirtualDeposit,
+          amount: depositAmount,
+        }),
+      });
+      const result = await response.json();
+      if (result.status == 0) {
+        toast.error("Deposit success");
+        setDepositAmount(null);
+      } else {
+        toast.error(result.msg);
+      }
+    } catch (error) {
+      toast.error("failed");
+      console.log(error);
+    }
+  };
+  const onVirtualCoinWithdraw = async () => {
+    try {
+      if (accessToken == "")
+        return;
+      if (withdrawAmount !== null && withdrawAmount > Number(virtualBalanceModalInfo?.withdrawMaxLimit)) {
+        toast.warn("You must set an amount lower than the maximum withdrawal amount.",);
+        return;
+      }
+      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Access-Token": accessToken,
+        },
+        body: JSON.stringify({
+          method: "WithdrawVirtualCoin",
+          chain: siteInfo?.chain,
+          virtualCoinType: siteInfo.virtualCoinType,
+          coinType: coinForVirtualWithdraw,
+          amount: withdrawAmount,
+        }),
+      });
+      const result = await response.json();
+      if (result.status == 0) {
+        toast.error("Withdraw success");
+        setWithdrawAmount(null);
+      } else {
+        toast.error(result.msg);
+      }
+    } catch (error) {
+      toast.error("failed");
+      console.log(error);
+    }
+  };
+
   const onCopy = () => {
     navigator.clipboard.writeText(depositAddress).then(
       () => {
@@ -525,7 +599,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         }}
                       >
                         <span>
-                          {String(virtualBalanceModalInfo?.balance ?? "")}
+                          {String(virtualBalanceModalInfo?.virtualBalance ?? "")}
                         </span>
 
                         <span> {userInfo?.selectedCoinType}</span>
@@ -536,19 +610,18 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         <p className="mr-2">Rate:</p>
                         <SelectConvertTypeMenu
                           convertType={
-                            virtualBalanceModalInfo?.withdrawConvertRatio ?? ""
+                            virtualBalanceModalInfo?.withdrawConvertRatio ?? {}
                           }
                           selectedKey={
-                            withDrawConvert ? withDrawConvert : "Type"
+                            coinForVirtualWithdraw ? coinForVirtualWithdraw : "Type"
                           }
-                          selectedRate={withDrawRate}
-                          onSelect={onWithDrawConvertType}
+                          onSelect={onWithdrawConvertType}
                         />
                         <div
                           className="type-rate flex items-baseline justify-center"
                           style={{ fontSize: "20px", color: "white" }}
                         >
-                          <p>{withDrawRate}</p>
+                          <p>{virtualBalanceModalInfo?.withdrawConvertRatio[coinForVirtualWithdraw]}</p>
                         </div>
                       </div>
 
@@ -558,11 +631,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                           className="pl-2"
                           style={{ fontSize: "20px", color: "white" }}
                         >
-                          {
-                            (
-                              virtualBalanceModalInfo?.withdrawConvertMaxLimit as any
-                            )[withDrawConvert as string | number]
-                          }
+                          {virtualBalanceModalInfo?.withdrawMaxLimit}
                         </p>
                       </div>
                     </div>
@@ -572,8 +641,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
                           virtualBalanceModalInfo?.withdrawConvertRatio ?? ""
                         }
                         selectedKey={withDrawconvert ? withDrawconvert : "Type"}
-                        selectedRate={withDrawRate}
-                        onSelect={onWithDrawConvertType}
+                        selectedRate={withdrawRate}
+                        onSelect={onWithdrawConvertType}
                       />
                     </div> */}
                     <div className="mb-5 flex items-center gap-2">
@@ -584,10 +653,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         aria-label="Withdraw amount"
                         value={withdrawAmount ?? ""}
                         // style={{ color: "white" }}
-                        onChange={(e) => {
-                          setWithdrawAmount(Number.parseFloat(e.target.value));
-                          const value = Number.parseFloat(e.target.value);
-                        }}
+                        onChange={(e) => { setWithdrawAmount(Number.parseFloat(e.target.value)); }}
                       />
                     </div>
 
@@ -595,9 +661,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                       <button
                         type="button"
                         disabled={!withdrawAmount}
-                        onClick={() => {
-                          onWithdraw();
-                        }}
+                        onClick={() => { onVirtualCoinWithdraw(); }}
                         className="wallet-manage-modal-button"
                       >
                         Withdraw
@@ -613,17 +677,16 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         <p className="mr-2">Rate:</p>
                         <SelectConvertTypeMenu
                           convertType={
-                            virtualBalanceModalInfo?.depositConvertRatio ?? ""
+                            virtualBalanceModalInfo?.depositConvertRatio ?? {}
                           }
-                          selectedKey={depositConvert ? depositConvert : "Type"}
-                          selectedRate={depositRate}
+                          selectedKey={coinForVirtualDeposit ? coinForVirtualDeposit : "Type"}
                           onSelect={onDepositConvertType}
                         />
                         <div
                           className="type-rate flex items-center justify-center"
                           style={{ fontSize: "20px", color: "white" }}
                         >
-                          <p>{depositRate}</p>
+                          <p>{<p>{virtualBalanceModalInfo?.depositConvertRatio[coinForVirtualDeposit]}</p>}</p>
                         </div>
                       </div>
 
@@ -633,11 +696,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
                           className="pl-4"
                           style={{ fontSize: "20px", color: "white" }}
                         >
-                          {
-                            (
-                              virtualBalanceModalInfo?.depositConvertMinLimit as any
-                            )[depositConvert as string | number]
-                          }
+                          {virtualBalanceModalInfo?.depositMinLimit}
                         </p>
                       </div>
                     </div>
@@ -662,23 +721,12 @@ const WalletModal: React.FC<WalletModalProps> = ({
                         type="button"
                         disabled={!depositAmount}
                         onClick={() => {
-                          onDeposit();
+                          onVirtualCoinDeposit();
                         }}
-                        className="wallet-manage-modal-button  m-auto  "
+                        className="wallet-manage-modal-button  m-auto "
                       >
                         Deposit
                       </button>
-                      {siteInfo.checkBalance && (
-                        <button
-                          type="button"
-                          onClick={() => {
-                            onCheckBalance();
-                          }}
-                          className="wallet-manage-modal-button  m-auto  "
-                        >
-                          Check Balance
-                        </button>
-                      )}
                     </div>
                   </div>
                 </div>
@@ -688,18 +736,6 @@ const WalletModal: React.FC<WalletModalProps> = ({
         </div>
         <div className="fixed inset-0 z-40 bg-black opacity-25"></div>
       </div>
-      {/* <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      /> */}
     </Modal>
   );
 };

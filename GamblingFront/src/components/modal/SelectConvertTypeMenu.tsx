@@ -1,16 +1,14 @@
 import React, { useRef, useEffect } from "react";
 
 interface DropdownProps {
-  convertType: string;
+  convertType:  { [key: string]: number };
   selectedKey: string;
-  selectedRate: string;
-  onSelect: (key: string, rate: string) => void;
+  onSelect: (key: string, rate: number) => void;
 }
 
 const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
   convertType,
   selectedKey,
-  selectedRate,
   onSelect,
 }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -19,11 +17,6 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
     setIsOpen(!isOpen);
     //setIsOpen(false);
   };
-  let selectConvertType: [string, string][] = [];
-  if (convertType) {
-    console.log(convertType);
-    selectConvertType = Object.entries(convertType);
-  }
   const handleClickOutside = (event: MouseEvent) => {
     if (
       dropdownRef.current &&
@@ -36,7 +29,7 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     key: string,
-    rate: string,
+    rate: number,
   ) => {
     event.preventDefault();
     onSelect(key, rate);
@@ -81,8 +74,8 @@ const SelectConvertTypeMenu: React.FC<DropdownProps> = ({
         </div>
         {isOpen && (
           <div className="dropdown-menu">
-            {selectConvertType.length > 0 &&
-              selectConvertType.map(([type, rate]) => (
+            {convertType.length > 0 &&
+              Object.entries(convertType).map(([type, rate]) => (
                 <div key={type} className="flex items-center">
                   <a
                     href="#"

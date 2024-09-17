@@ -1,15 +1,15 @@
 export type BalanceModalInfo = {
-  balance: Number;
+  balance: number;
   depositAddress: string;
-  withdrawalMaxLimit: Number;
-  depositMinLimit: Number;
+  withdrawalMaxLimit: number;
+  depositMinLimit: number;
 };
 
 export type VirtualBalanceModalInfo = {
-  balance: Number;
-  depositConvertRatio: string;
-  withdrawalMaxLimit: string;
-  depositConvertMinLimit: string;
-  withdrawConvertRatio: string;
-  withdrawConvertMaxLimit: string;
+  virtualBalance: number;
+  balances: { [key: string]: number };
+  depositConvertRatio: { [key: string]: number };
+  depositMinLimit: number;
+  withdrawConvertRatio: { [key: string]: number };
+  withdrawMaxLimit: number;
 };
