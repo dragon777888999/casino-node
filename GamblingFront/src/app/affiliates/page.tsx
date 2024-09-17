@@ -123,7 +123,7 @@ const Affiliates = () => {
   };
   const getIncome = async () => {
     try {
-      if (info?.totalIncome == 0) {
+      if (!info?.totalIncome) {
         toast.error("Invalid request: No income");
         return;
       }
@@ -480,7 +480,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalPayoutAmount.toFixed(4)}</span>
+                      <span>{info?.totalPayoutAmount?.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
