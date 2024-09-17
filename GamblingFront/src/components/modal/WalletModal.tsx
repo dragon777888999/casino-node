@@ -7,7 +7,7 @@ import { backendUrl } from "@/anchor/global";
 import { useAppContext } from "../../hooks/AppContext";
 import Image from "next/image";
 import SelectCoinTypeMenu from "./SelectCoinTypeMenu";
-import { ToastContainer, toast } from "react-toastify";
+import useLocalStorage from "@/hooks/useLocalStorage";
 import "react-toastify/dist/ReactToastify.css";
 import { BalanceModalInfo } from "@/types/walletModal";
 import { VirtualBalanceModalInfo } from "@/types/walletModal";
@@ -17,7 +17,6 @@ import useSolanaFunction from "../wallet-connecter/solana/SolanaWalletFunction";
 import useXrplFunction from "../wallet-connecter/xrpl/XrplWalletFunction";
 import useTronFunction from "../wallet-connecter/tron/TronWalletFunction";
 import useCosmosFunction from "../wallet-connecter/cosmos/CosmosWalletFunction";
-import { stat } from "fs";
 
 Modal.setAppElement("#root");
 // Define the WalletModal component
@@ -41,6 +40,9 @@ const WalletModal: React.FC<WalletModalProps> = ({
   const [qrcode, setQrcode] = useState("");
   const [jumpLink, setJumpLink] = useState("");
   const [isMobile, setIsMobile] = useState(false);
+
+  const [chain, setChain] = useLocalStorage("chain", "");
+
   const [withDrawConvert, setWithDrawConvert] = useState("");
   const [depositConvert, setDepositConvert] = useState("");
   const [withDrawRate, setWithDrawRate] = useState("");
@@ -97,14 +99,8 @@ const WalletModal: React.FC<WalletModalProps> = ({
         });
 
         const result = await response.json();
-        console.log("GetBalanceModalInfo", result);
         if (result.status == 0) {
           setDepositAddress(result.depositAddress);
-          // setUserInfo({
-          //   ...userInfo,
-          //   balances: result.balance,
-          // });
-          console.log("deposit address", result.depositAddress);
           setBalanceModalInfo(result);
         }
       } catch (error) {
@@ -128,20 +124,15 @@ const WalletModal: React.FC<WalletModalProps> = ({
         });
 
         const result = await response.json();
-        console.log("GetBalanceModalInfo", result);
         if (result.status == 0) {
-          // setDepositAddress(result.depositAddress);
-          // setUserInfo({
-          //   ...userInfo,
-          //   balances: result.balance,
-          // });
           setVirtualBalanceModalInfo(result);
         }
       } catch (error) {
         console.error("Fetch error:", error);
       }
     };
-    if (loginStep != 3) return;
+    if (loginStep != 3)
+      return;
     if (userInfo.selectedCoinType == siteInfo.virtualCoinType)
       GetVirtualBalanceModalInfo();
     else

@@ -79,8 +79,6 @@ const FetchSiteInfo = ({ children }: { children: React.ReactNode }) => {
         );
 
         const result = await response.json();
-        console.log("----------site info------------");
-        console.log("result", result);
 
         setSiteInfoList(result);
         const chains = Object.keys(result);

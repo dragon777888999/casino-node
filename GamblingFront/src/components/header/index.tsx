@@ -15,9 +15,7 @@ const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =
-    useAppContext();
-  const [chain, setChain] = useLocalStorage("chain", "");
+  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =    useAppContext();
   useEffect(() => {
     try {
       if (socketData == "")
