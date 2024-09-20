@@ -82,7 +82,6 @@ const Affiliates = () => {
   };
   useEffect(() => {
     GetAffiliaterInfo();
-    console.log("affiliaterinfo", info);
   }, []);
   const setCode = async () => {
     try {
