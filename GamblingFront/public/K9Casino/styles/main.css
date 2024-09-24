@@ -1,3 +1,149 @@
 .game-item-title {
   display: none;
 }
+body {
+  background-color: rgb(26 34 44);
+  /* background: "rgb(26 34 44)"; */
+  font-family: sans-serif;
+}
+.games-block-item {
+  padding: 5px;
+  width: 16.6666666666%;
+}
+@media (max-width: 920px) {
+  .games-block-item {
+    padding: 5px;
+    width: 25%;
+  }
+}
+@media (max-width: 480px) {
+  .games-block-item {
+    padding: 5px;
+    width: 50%;
+  }
+}
+.game-block-item-content {
+  background-color: #232c35;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.Quick_Link {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #151a33;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.Quick_Link:hover .SlotsList_slot-image {
+  opacity: 1;
+  z-index: 3;
+
+  transform: translateY(-3px);
+}
+.menu-button-connect {
+  align-items: center;
+  background: linear-gradient(90deg, #5fa5ea, #2f71de);
+
+  border-radius: 4px;
+  border-right: none;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  font-weight: 200;
+  height: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 100px;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.Quick_Link :hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    149deg,
+    rgba(13, 34, 52, 0.85) -1.28%,
+    rgba(4, 13, 21, 0.85)
+  );
+}
+/* .Quick_Link:hover .SlotsList_slot-image {
+  opacity: 1;
+  z-index: 3;
+
+  transform: translateY(-3px);
+} */
+.style-card-header img {
+  display: none;
+}
+.style-card-footer img {
+  display: none;
+}
+
+.style-table-row {
+  margin: 0 5px;
+  transition:
+    max-height 0.3s,
+    padding 0.3s;
+}
+.style-table-row > div:nth-child(even) {
+  background-color: #1c2434;
+  transition:
+    max-height 0.3s,
+    padding 0.3s;
+}
+.style-table-row > div:nth-child(odd) {
+  background-color: #151c27;
+  transition:
+    max-height 0.3s,
+    padding 0.3s;
+}
+.style-card {
+  display: none;
+}
+.game-block-item-content {
+  background-color: #232c35;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.SlotsList_slot-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 6px;
+  opacity: 0;
+  z-index: 5;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    149deg,
+    rgba(73, 131, 181, 0.65) -1.28%,
+    rgba(5, 42, 72, 0.65)
+  );
+}
+.game-block-item-content-img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+.image-outline {
+  display: none;
+}
