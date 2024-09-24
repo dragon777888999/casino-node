@@ -1,6 +1,0 @@
-webpack.config.js
-babel-polyfill.js
-jest.config.js
-coverage/
-dist/
-example/
