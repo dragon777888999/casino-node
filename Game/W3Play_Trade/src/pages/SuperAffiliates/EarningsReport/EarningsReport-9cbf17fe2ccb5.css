@@ -1,0 +1,160 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.page.sap-earnings-report .page_header::before {
+    bottom: -6em;
+}
+
+.sap-earnings-report .generate-link-button {
+    position: absolute;
+    top: 0.5em;
+    left: 3.5em;
+    z-index: 5;
+    font-family: 'SF UI Display' sans-serif;
+    color: #000;
+    font-size: 1.5em;
+    line-height: 1.7em;
+    height: 1.7em;
+    padding: 0 0.8em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    border: solid 0.08em #f4d56f;
+    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.sap-earnings-report .generate-link-button:hover {
+    transform: scale(1.05);
+    border-color: #f7e9bd;
+}
+
+.sap-earnings-report .table_header {
+    top: 10.5em;
+    height: 2.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.8;
+    border-radius: 2em 2em 0 0;
+    background-color: #0c0d13;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sap-earnings-report.table_page .table_body {
+    overflow-y: auto;
+    width: 100%;
+    height: calc(100% - 10.6em);
+    margin-top: 3.1em;
+    position: relative;
+    z-index: 1;
+    background-color: #0c0d13;
+}
+
+.sap-earnings-report .earning-row {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 400;
+    color: #f4d56f;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3.8em;
+    background: #212936;
+}
+
+.sap-earnings-report .earning-row .td span {
+    font-size: 1.25em;
+}
+
+.sap-earnings-report .earning-row .td {
+    text-align: center;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+}
+
+.sap-earnings-report .table_header .th.date,
+.sap-earnings-report .table_body .td.date {
+    width: 20%;
+}
+
+.sap-earnings-report .table_header .th.commision,
+.sap-earnings-report .table_body .td.commision {
+    width: 20%;
+}
+.sap-earnings-report .table_body .td.commision svg{
+    width: .7em; height: .7em;
+    margin-top: .4em;
+}
+
+.sap-earnings-report .table_header .th.total-amount,
+.sap-earnings-report .table_body .td.total-amount {
+    width: 20%;
+}
+.sap-earnings-report .table_body .td.total-amount svg {
+    width: .7em; height: .7em;
+    margin-top: .4em;
+}
+
+.sap-earnings-report .table_header .th.status,
+.sap-earnings-report .table_body .td.status {
+    width: 20%;
+}
+
+.sap-earnings-report .table_body .td.status.paid {
+    color: #87d009;
+}
+
+.sap-earnings-report .table_header .th.tx-hash,
+.sap-earnings-report .table_body .td.tx-hash {
+    width: 20%;
+}
+
+.sap-earnings-report .table_body .td.commision,
+.sap-earnings-report .table_body .td.total-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sap-earnings-report .table_body .btn_wrap {
+    padding: 0 0.6em;
+    height: 2.4em;
+    cursor: pointer;
+    border-radius: 0.2em;
+    border: solid 0.1em #0aedff;
+    background-color: #000;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: table;
+}
+
+.sap-earnings-report .table_body .btn_wrap a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+.sap-earnings-report .table_body .btn_wrap a p {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 480px){
+    .sap-earnings-report .table_body .td.commision .icon-matic,
+    .sap-earnings-report .table_body .td.total-amount .icon-matic{
+        margin: .2em .2em 0 0;
+    }
+}`, "",{"version":3,"sources":["webpack://./src/pages/SuperAffiliates/EarningsReport/EarningsReport.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,UAAU;IACV,uCAAuC;IACvC,WAAW;IACX,gBAAgB;IAChB,kBAAkB;IAClB,aAAa;IACb,gBAAgB;IAChB,oBAAoB;IACpB,iBAAiB;IACjB,4BAA4B;IAC5B,2PAA2P;IAC3P,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,sBAAsB;IACtB,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,2BAA2B;IAC3B,YAAY;IACZ,0BAA0B;IAC1B,yBAAyB;IACzB,kBAAkB;IAClB,WAAW;IACX,OAAO;IACP,QAAQ;IACR,gBAAgB;IAChB,UAAU;AACd;;AAEA;IACI,gBAAgB;IAChB,WAAW;IACX,2BAA2B;IAC3B,iBAAiB;IACjB,kBAAkB;IAClB,UAAU;IACV,yBAAyB;AAC7B;;AAEA;IACI,gDAAgD;IAChD,gBAAgB;IAChB,cAAc;IACd,aAAa;IACb,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;IACnB,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,kBAAkB;IAClB,gBAAgB;IAChB,sBAAsB;AAC1B;;AAEA;;IAEI,UAAU;AACd;;AAEA;;IAEI,UAAU;AACd;AACA;IACI,WAAW,EAAE,YAAY;IACzB,gBAAgB;AACpB;;AAEA;;IAEI,UAAU;AACd;AACA;IACI,WAAW,EAAE,YAAY;IACzB,gBAAgB;AACpB;;AAEA;;IAEI,UAAU;AACd;;AAEA;IACI,cAAc;AAClB;;AAEA;;IAEI,UAAU;AACd;;AAEA;;IAEI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;IAChB,aAAa;IACb,eAAe;IACf,oBAAoB;IACpB,2BAA2B;IAC3B,sBAAsB;IACtB,cAAc;IACd,sBAAsB;IACtB,cAAc;AAClB;;AAEA;IACI,mBAAmB;IACnB,sBAAsB;IACtB,kBAAkB;IAClB,YAAY;AAChB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;;AAGA;IACI;;QAEI,qBAAqB;IACzB;AACJ","sourcesContent":[".page.sap-earnings-report .page_header::before {\n    bottom: -6em;\n}\n\n.sap-earnings-report .generate-link-button {\n    position: absolute;\n    top: 0.5em;\n    left: 3.5em;\n    z-index: 5;\n    font-family: 'SF UI Display' sans-serif;\n    color: #000;\n    font-size: 1.5em;\n    line-height: 1.7em;\n    height: 1.7em;\n    padding: 0 0.8em;\n    border-radius: 0.3em;\n    font-weight: bold;\n    border: solid 0.08em #f4d56f;\n    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n    transition: all .2s;\n    cursor: pointer;\n}\n\n.sap-earnings-report .generate-link-button:hover {\n    transform: scale(1.05);\n    border-color: #f7e9bd;\n}\n\n.sap-earnings-report .table_header {\n    top: 10.5em;\n    height: 2.6em;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: flex-start;\n    opacity: 0.8;\n    border-radius: 2em 2em 0 0;\n    background-color: #0c0d13;\n    position: absolute;\n    width: 100%;\n    left: 0;\n    right: 0;\n    overflow: hidden;\n    z-index: 2;\n}\n\n.sap-earnings-report.table_page .table_body {\n    overflow-y: auto;\n    width: 100%;\n    height: calc(100% - 10.6em);\n    margin-top: 3.1em;\n    position: relative;\n    z-index: 1;\n    background-color: #0c0d13;\n}\n\n.sap-earnings-report .earning-row {\n    font-family: 'Barlow Semi Condensed', sans-serif;\n    font-weight: 400;\n    color: #f4d56f;\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    height: 3.8em;\n    background: #212936;\n}\n\n.sap-earnings-report .earning-row .td span {\n    font-size: 1.25em;\n}\n\n.sap-earnings-report .earning-row .td {\n    text-align: center;\n    padding: 0 0.5em;\n    box-sizing: border-box;\n}\n\n.sap-earnings-report .table_header .th.date,\n.sap-earnings-report .table_body .td.date {\n    width: 20%;\n}\n\n.sap-earnings-report .table_header .th.commision,\n.sap-earnings-report .table_body .td.commision {\n    width: 20%;\n}\n.sap-earnings-report .table_body .td.commision svg{\n    width: .7em; height: .7em;\n    margin-top: .4em;\n}\n\n.sap-earnings-report .table_header .th.total-amount,\n.sap-earnings-report .table_body .td.total-amount {\n    width: 20%;\n}\n.sap-earnings-report .table_body .td.total-amount svg {\n    width: .7em; height: .7em;\n    margin-top: .4em;\n}\n\n.sap-earnings-report .table_header .th.status,\n.sap-earnings-report .table_body .td.status {\n    width: 20%;\n}\n\n.sap-earnings-report .table_body .td.status.paid {\n    color: #87d009;\n}\n\n.sap-earnings-report .table_header .th.tx-hash,\n.sap-earnings-report .table_body .td.tx-hash {\n    width: 20%;\n}\n\n.sap-earnings-report .table_body .td.commision,\n.sap-earnings-report .table_body .td.total-amount {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.sap-earnings-report .table_body .btn_wrap {\n    padding: 0 0.6em;\n    height: 2.4em;\n    cursor: pointer;\n    border-radius: 0.2em;\n    border: solid 0.1em #0aedff;\n    background-color: #000;\n    margin: 0 auto;\n    box-sizing: border-box;\n    display: table;\n}\n\n.sap-earnings-report .table_body .btn_wrap a {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center;\n    color: white;\n}\n\n.sap-earnings-report .table_body .btn_wrap a p {\n    font-size: 1em;\n    font-weight: 400;\n}\n\n\n@media screen and (max-width: 480px){\n    .sap-earnings-report .table_body .td.commision .icon-matic,\n    .sap-earnings-report .table_body .td.total-amount .icon-matic{\n        margin: .2em .2em 0 0;\n    }\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

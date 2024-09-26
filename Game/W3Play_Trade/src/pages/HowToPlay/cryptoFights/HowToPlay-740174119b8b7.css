@@ -1,0 +1,2387 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/how-to-trade/crypto-fights/grainy-grey.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/loaders/loader.gif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/how-to-trade/crypto-fights/real-web3-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/how-to-trade/crypto-fights/green-lights.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/how-to-trade/crypto-fights/red-lights.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/how-to-trade/crypto-fights/cryptofights-logo.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/how-to-trade/crypto-fights/real-web3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/how-to-trade/crypto-fights/take-a-look-video-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/how-to-trade/crypto-fights/nav-up-arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/how-to-trade/crypto-fights/nav-down-arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_live-rate.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_join-up-pool.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_join-down-pool.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_investment-bar.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_up-pool-profit.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_down-pool-profit.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_pool-round.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_start-rate.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_up-pool-wins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_down-pool-wins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL("/public/media/images/how-to-trade/crypto-fights/connect-wallet_profits.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL("/public/media/images/how-to-trade/crypto-fights/weekly-jackpot-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_23___ = new URL("/public/media/images/how-to-trade/crypto-fights/monthly-jackpot-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_24___ = new URL("/public/media/images/how-to-trade/crypto-fights/polygon-matic-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_25___ = new URL("/public/media/images/how-to-trade/crypto-fights/get-matic-token.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_26___ = new URL("/public/media/images/how-to-trade/crypto-fights/get-matic-arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_27___ = new URL("/public/media/images/how-to-trade/crypto-fights/send-sell-token-coins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_28___ = new URL("/public/media/images/how-to-trade/crypto-fights/sell-send-arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_29___ = new URL("/public/media/images/how-to-trade/crypto-fights/x-twitter.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_30___ = new URL("/public/media/images/how-to-trade/crypto-fights/instagram.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_31___ = new URL("/public/media/images/how-to-trade/crypto-fights/telegram.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_32___ = new URL("/public/media/images/how-to-trade/crypto-fights/discord.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_33___ = new URL("/public/media/images/how-to-trade/crypto-fights/up-arrow-white.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_34___ = new URL("/public/media/images/how-to-trade/crypto-fights/rezart-logo.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_35___ = new URL("/public/media/images/how-to-trade/crypto-fights/real-web3-bg_mobile.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;500;600;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_22___);
+var ___CSS_LOADER_URL_REPLACEMENT_23___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_23___);
+var ___CSS_LOADER_URL_REPLACEMENT_24___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_24___);
+var ___CSS_LOADER_URL_REPLACEMENT_25___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_25___);
+var ___CSS_LOADER_URL_REPLACEMENT_26___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_26___);
+var ___CSS_LOADER_URL_REPLACEMENT_27___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_27___);
+var ___CSS_LOADER_URL_REPLACEMENT_28___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_28___);
+var ___CSS_LOADER_URL_REPLACEMENT_29___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_29___);
+var ___CSS_LOADER_URL_REPLACEMENT_30___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_30___);
+var ___CSS_LOADER_URL_REPLACEMENT_31___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_31___);
+var ___CSS_LOADER_URL_REPLACEMENT_32___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_32___);
+var ___CSS_LOADER_URL_REPLACEMENT_33___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_33___);
+var ___CSS_LOADER_URL_REPLACEMENT_34___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_34___);
+var ___CSS_LOADER_URL_REPLACEMENT_35___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_35___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.cryptofights-how-to-play {
+    font-family: 'Open Sans';
+    background-color: transparent;
+    display: block;
+    position: static;
+    font-size: 10px;
+    overflow: auto;
+    z-index: initial;
+}
+
+.cryptofights-how-to-play .entry-main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+}
+
+.cryptofights-how-to-play .entry-main-flex .sections {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-repeat: repeat;
+    background-position: top center;
+}
+
+/* ############################################ */
+/* ############## TOP MENU (WEB) ############## */
+/* ############################################ */
+
+.cryptofights-how-to-play .menu-icon {
+    display: none;
+}
+
+.cryptofights-how-to-play .top-menu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.cryptofights-how-to-play .top-menu .item {
+    color: #B0B0B0;
+    text-transform: uppercase;
+}
+
+.cryptofights-how-to-play .top-menu .item:nth-child(1) {
+
+}
+
+.cryptofights-how-to-play .top-menu .item:nth-child(2) {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.cryptofights-how-to-play .top-menu .item:nth-child(3) {
+    color: #5FC300;
+    text-decoration: underline;
+}
+
+/* .cryptofights-how-to-play .top-menu .item.active {
+    color: #ffffff;
+} */
+
+.cryptofights-how-to-play .top-menu .item span {
+    font-size: 1.6em;
+}
+
+/* ############################################ */
+/* ############## SIDE MENU (WEB) ############# */
+/* ############################################ */
+
+.cryptofights-how-to-play .side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    top: 0;
+    bottom: 0;
+    /* right: 0; */
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    z-index: 2;
+    transform: translateX(60em);
+    transition: transform .3s ease;
+    box-sizing: border-box;
+    display: none;
+}
+
+.cryptofights-how-to-play .side-menu.open {
+transform: translateX(0);
+}
+
+.cryptofights-how-to-play .side-menu .item {
+    color: #ffffff;
+}
+
+.cryptofights-how-to-play .side-menu .item.active {
+    color: #f4d56f;
+}
+
+.cryptofights-how-to-play .side-menu .item span {
+    font-size: 2.5em;
+}
+
+/* ############################################ */
+/* ############# WEB/MOBILE ONLY ############## */
+/* ############################################ */
+
+.cryptofights-how-to-play .mobile-only.flex {
+    display: none !important;
+}
+
+.cryptofights-how-to-play .mobile-only.block {
+    display: none !important;
+}
+
+.cryptofights-how-to-play .web-only.flex {
+    display: flex !important;
+}
+
+.cryptofights-how-to-play .web-only.block {
+    display: block !important;
+}
+
+/* ############################################ */
+/* ############## SECTION LOADER ############## */
+/* ############################################ */
+
+.cryptofights-how-to-play .section-loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #0000009e;
+    z-index: 100;
+}
+
+.cryptofights-how-to-play .section-loader-wrap {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+/* ############################################ */
+/* ##### SECTION "PLAY NOW" BUTTON (WEB) ###### */
+/* ############################################ */
+
+.cryptofights-how-to-play section .play-now-box {
+    display: flex;
+}
+
+.cryptofights-how-to-play section .styled-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4em;
+    font-weight: 600;
+    background-color: #5FC300;
+    cursor: pointer;
+    min-width: 22em;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cryptofights-how-to-play section .styled-button a {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 3em 5em;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.cryptofights-how-to-play section .styled-button span {
+    font-size: 1.6em;
+}
+
+.cryptofights-how-to-play section .styled-button.play-now:hover {
+    background-color: #FF1A2D;
+}
+
+/* ############################################ */
+/* ############## MENU ICON (WEB) ############# */
+/* ############################################ */
+
+.cryptofights-how-to-play .menu-icon {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+}
+
+.cryptofights-how-to-play .menu-icon {
+    display: none;
+}
+
+.cryptofights-how-to-play .menu-icon div {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    height: 0.4em;
+    position: absolute;
+    right: 1em;
+    transition: width .2s,transform .2s;
+    width: 6em;
+}
+
+.cryptofights-how-to-play .menu-icon div.top {
+    top: 2.5em;
+}
+
+/* .cryptofights-how-to-play .menu-icon div.middle {
+    top: 2.2em;
+    width: 2em;
+} */
+
+.cryptofights-how-to-play .menu-icon div.bottom {
+    top: 4.8em;
+}
+
+.cryptofights-how-to-play .menu-icon.open div.top {
+    transform: translate(0.1em, 1.2em) rotate(-45deg);
+    width: 6.4em;
+}
+
+/* .cryptofights-how-to-play .menu-icon.open div.middle {
+    transform: translate(-4.5em);
+} */
+
+.cryptofights-how-to-play .menu-icon.open div.bottom {
+    transform: translate(0.1em, -1em) rotate(45deg);
+    width: 6.4em;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* #### SECTION "HOW TO PLAY" BUTTON (WEB) #### */
+/* ############################################ */
+
+.cryptofights-how-to-play section .styled-button.how-to-play {
+    background-color: transparent;
+    box-shadow: inset 0em 0em 0em 0.2em #5EBF01;
+    font-weight: 500;
+}
+
+.cryptofights-how-to-play section .styled-button.how-to-play a {
+    color: #5EBF01;
+}
+
+/* ############################################ */
+/* ###### "BE AN AFFILIATE" BUTTON (WEB) ###### */
+/* ############################################ */
+
+.cryptofights-how-to-play section .styled-button.be-an-affiliate {
+    background-color: #181818;
+    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;
+    font-weight: 500;
+}
+
+.cryptofights-how-to-play section .styled-button.be-an-affiliate a {
+    color: #f4d56f;
+}
+
+/* ############################################ */
+/* ############## SECTIONS (WEB) ############## */
+/* ############################################ */
+
+.cryptofights-how-to-play section {
+    position: relative;
+    flex-shrink: 0;
+    padding: 7em 0em;
+}
+
+.cryptofights-how-to-play section.white {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 6em;
+}
+
+.cryptofights-how-to-play section .play-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.cryptofights-how-to-play section .main-flex {
+    display: flex;
+    max-width: 158em;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* ############################################ */
+/* ########## SECTION CAPTION (WEB) ########### */
+/* ############################################ */
+
+.cryptofights-how-to-play section .caption {
+    font-weight: 400;
+    line-height: 8em;
+    width: 100%;
+    font-family: 'Anton';
+    line-height: 12.1em;
+}
+
+.cryptofights-how-to-play section .caption span {
+    font-size: 12em;
+}
+
+/* ############################################ */
+/* ######### SECTION: REAL WEB3 (WEB) ######### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.real-web3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: transparent;
+    padding: 0em 0em 7em 0em;
+
+    background-size: 201em;
+    background-repeat: no-repeat;
+    background-position: center 32em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
+.cryptofights-how-to-play section.real-web3 .green-lights,
+.cryptofights-how-to-play section.real-web3 .red-lights {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.cryptofights-how-to-play section.real-web3 .green-lights {
+    top: 11em;
+    left: 50%;
+    width: 51.2em;
+    height: 54.5em;
+    transform: translateX(-15%);
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.cryptofights-how-to-play section.real-web3 .red-lights {
+    top: 11em;
+    left: 50%;
+    width: 48.2em;
+    height: 51.3em;
+    transform: translateX(94%);
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+.cryptofights-how-to-play section.real-web3 .caption-area {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.cryptofights-how-to-play section.real-web3 .caption {
+    line-height: 18em;
+}
+
+.cryptofights-how-to-play section.real-web3 .caption span {
+    font-size: 18em;
+}
+
+.cryptofights-how-to-play section.real-web3 .small-caption {
+    color: #B0B0B0;
+    position: absolute;
+    bottom: 3em;
+    right: 0em;
+    width: 43em;
+    line-height: 5em;
+}
+
+.cryptofights-how-to-play section.real-web3 .small-caption span {
+    font-size: 4em;
+}
+
+.cryptofights-how-to-play section.real-web3 .main-flex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 158em;
+    padding: 0;
+}
+
+.cryptofights-how-to-play section.real-web3 .top-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0em 11em 0em;
+}
+
+.cryptofights-how-to-play section.real-web3 .top-content .logo {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    height: 4em;
+    width: 29em;
+}
+
+.cryptofights-how-to-play section.real-web3 .middle-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cryptofights-how-to-play section.real-web3 .bottom-content {
+    margin: 8em 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.cryptofights-how-to-play section.real-web3 .align-center-wrap span {
+    font-size: 9em;
+}
+
+.cryptofights-how-to-play section.real-web3 .middle-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 86em;
+    padding-top: 4em;
+    flex-shrink: 0;
+}
+
+.cryptofights-how-to-play section.real-web3 .middle-right {
+    width: 74em;
+    height: 89.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+    flex-shrink: 0;
+    margin: -4em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.real-web3 .play-btns {
+    margin: 6em 0 0 0;
+    align-self: flex-start;
+}
+
+.cryptofights-how-to-play section.real-web3 .styled-button {
+    min-width: 24em;
+}
+
+/* ############################################ */
+/* ###### SECTION: CONNECT WALLET (WEB) ####### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.connect-wallet {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 9em 0em 9em 0em;
+    margin: 0em 0em 6em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 203em;
+    background-repeat: no-repeat;
+    background-position: center 37em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .views-wrapper {
+    width: 100%;
+}
+
+.cryptofights-how-to-play section.connect-wallet .main-flex {
+    height: 89em;
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15em;
+}
+
+/* VIEWS */
+
+.cryptofights-how-to-play section.connect-wallet.your-wallet_view .main-flex.your-wallet,
+.cryptofights-how-to-play section.connect-wallet.live-rate_view .main-flex.live-rate,
+.cryptofights-how-to-play section.connect-wallet.join-up-pool_view .main-flex.join-up-pool,
+.cryptofights-how-to-play section.connect-wallet.join-down-pool_view .main-flex.join-down-pool,
+.cryptofights-how-to-play section.connect-wallet.investment-bar_view .main-flex.investment-bar,
+.cryptofights-how-to-play section.connect-wallet.up-pool-profit_view .main-flex.up-pool-profit,
+.cryptofights-how-to-play section.connect-wallet.down-pool-profit_view .main-flex.down-pool-profit,
+.cryptofights-how-to-play section.connect-wallet.pool-round_view .main-flex.pool-round,
+.cryptofights-how-to-play section.connect-wallet.start-rate_view .main-flex.start-rate,
+.cryptofights-how-to-play section.connect-wallet.up-pool-wins_view .main-flex.up-pool-wins,
+.cryptofights-how-to-play section.connect-wallet.down-pool-wins_view .main-flex.down-pool-wins,
+.cryptofights-how-to-play section.connect-wallet.profits_view .main-flex.profits {
+    display: flex;
+}
+
+.cryptofights-how-to-play section.connect-wallet .nav-arrow {
+    position: absolute;
+    width: 2.4em;
+    height: 2.4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.cryptofights-how-to-play section.connect-wallet .nav-arrow.disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.cryptofights-how-to-play section.connect-wallet .nav-up-arrow {
+    top: 9em;
+    right: 36em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .nav-down-arrow {
+    bottom: 9em;
+    right: 36em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+}
+
+
+
+
+
+
+
+.cryptofights-how-to-play section.connect-wallet .wallet-view .caption {
+    max-width: 81em;
+    text-align: right;
+    line-height: 10em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .wallet-view .caption span {
+    font-size: 9em;
+}
+
+
+
+
+
+
+.cryptofights-how-to-play section.connect-wallet .box.right {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.cryptofights-how-to-play section.connect-wallet .image-wrap div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cryptofights-how-to-play section.connect-wallet .green {
+    color: #5EC002;
+}
+
+.cryptofights-how-to-play section.connect-wallet .red {
+    color: #DE1526;
+}
+
+.cryptofights-how-to-play section.connect-wallet p.big {
+    color: #5EC002;
+    line-height: 3.4em;
+    font-weight: 400;
+    margin: 0em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.connect-wallet p.big span {
+    font-size: 3em;
+}
+
+/* STARTING SLIDE (MAIN) */
+.cryptofights-how-to-play section.connect-wallet .your-wallet .image-wrap div {
+    width: 46em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .your-wallet .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .your-wallet .caption span {
+    font-size: 9em;
+} */
+
+/* LIVE BITCOIN RATE */
+
+.cryptofights-how-to-play section.connect-wallet .live-rate .image-wrap div {
+    width: 57em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .live-rate .box.right {
+    width: 42em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .live-rate .styled-button {
+    margin: 7em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .live-rate .caption {
+    text-align: left;
+    width: auto;
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .live-rate .caption span {
+    font-size: 9em;
+} */
+
+/* JOIN UP POOL */
+
+.cryptofights-how-to-play section.connect-wallet .join-up-pool .image-wrap div {
+    width: 86.4em;
+    height: 57em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .join-up-pool .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .join-up-pool .caption span {
+    font-size: 9em;
+} */
+
+/* JOIN DOWN POOL */
+
+.cryptofights-how-to-play section.connect-wallet .join-down-pool {
+    gap: 0;
+}
+
+.cryptofights-how-to-play section.connect-wallet .join-down-pool .image-wrap div {
+    width: 86.4em;
+    height: 57em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .join-down-pool .caption {
+    max-width: 56em;
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .join-down-pool .caption span {
+    font-size: 9em;
+} */
+
+/* INVESTMENT BAR */
+
+.cryptofights-how-to-play section.connect-wallet .investment-bar .image-wrap div {
+    width: 80.4em;
+    height: 89em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .investment-bar .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .investment-bar .caption span {
+    font-size: 9em;
+} */
+
+/* UP POOL PROFIT */
+
+.cryptofights-how-to-play section.connect-wallet .up-pool-profit .image-wrap div {
+    width: 45.4em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .up-pool-profit .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .up-pool-profit .caption span {
+    font-size: 9em;
+} */
+
+/* DOWN POOL PROFIT */
+
+.cryptofights-how-to-play section.connect-wallet .down-pool-profit .image-wrap div {
+    width: 45.4em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .down-pool-profit .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .down-pool-profit .caption span {
+    font-size: 9em;
+} */
+
+/* POOL ROUND */
+
+.cryptofights-how-to-play section.connect-wallet .pool-round {
+    gap: 0;
+}
+
+.cryptofights-how-to-play section.connect-wallet .pool-round .image-wrap div {
+    width: 86em;
+    height: 64em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_17___});
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .pool-round .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .pool-round .caption span {
+    font-size: 9em;
+} */
+
+/* START RATE */
+
+.cryptofights-how-to-play section.connect-wallet .start-rate .image-wrap div {
+    width: 62em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .start-rate .styled-button {
+    margin: 4em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .start-rate .caption {
+    line-height: 12.1em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .start-rate .caption span {
+    font-size: 12em;
+}
+
+/* UP POOL WINS */
+
+.cryptofights-how-to-play section.connect-wallet .up-pool-wins .image-wrap div {
+    width: 52.9em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .up-pool-wins p.big {
+    color: #ffffff;
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .up-pool-wins .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .up-pool-wins .caption span {
+    font-size: 9em;
+} */
+
+/* DOWN POOL WINS */
+
+.cryptofights-how-to-play section.connect-wallet .down-pool-wins .image-wrap div {
+    width: 52.7em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .down-pool-wins p.big {
+    color: #ffffff;
+}
+
+/* .cryptofights-how-to-play section.connect-wallet .down-pool-wins .caption {
+
+}
+
+.cryptofights-how-to-play section.connect-wallet .down-pool-wins .caption span {
+    
+} */
+
+/* PROFITS */
+
+.cryptofights-how-to-play section.connect-wallet .profits .box.right {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits .image-wrap div {
+    width: 52.6em;
+    height: 88em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits .styled-button {
+    margin: 3em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits p.small {
+    color: #9B9B9B;
+    line-height: 2.4em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits p.small span {
+    font-size: 2em;
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits .caption {
+    text-align: left;
+}
+
+.cryptofights-how-to-play section.connect-wallet .profits .caption span {
+    font-size: 12em;
+}
+
+/* ############################################ */
+/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.weekly-jackpot {
+    text-align: left;
+    padding: 14em 0em 18em 0em;
+    /* background-size: 201em;
+    background-repeat: no-repeat;
+    background-position: center 17em;
+    background-image: url('/public/media/images/how-to-trade/crypto-fights/weekly-jackpot-bg.png'); */
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .caption {
+    text-align: left;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .caption span {
+    font-size: 12em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(2) {
+    margin-left: 1.2em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .box.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 42em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .box.right {
+    
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .play-now {
+    margin: 0em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot .box.right .image-wrap div {
+    width: 84em;
+    height: 77em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+}
+
+.cryptofights-how-to-play section.weekly-jackpot p {
+    line-height: 2.5em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot p.big {
+    margin: 2.6em 0em 0em 0em;
+    font-weight: 400;
+    line-height: 3.4em;
+    color: #5EC002;
+    width: 45em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot p.big span {
+    font-size: 3em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot p.small {
+    line-height: 2.4em;
+    color: #292929;
+    width: 34em;
+    margin: 2em 0em 4em 0em;
+}
+
+.cryptofights-how-to-play section.weekly-jackpot p.small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* ###### SECTION: MONTHLY JACKPOT (WEB) ###### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.monthly-jackpot {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: left;
+    padding: 12em 0em 12em 0em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 11em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .caption {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .caption span {
+    font-size: 12em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(2) {
+    margin-left: 1.1em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .box.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 42em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .box.left {
+    
+}
+
+.cryptofights-how-to-play section.monthly-jackpot .box.left .image-wrap div {
+    width: 87em;
+    height: 84em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_23___});
+}
+
+.cryptofights-how-to-play section.monthly-jackpot p {
+    line-height: 2.5em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot p.big {
+    margin: 2.6em 0em 0em 0em;
+    font-weight: 400;
+    line-height: 3.4em;
+    color: #5EC002;
+    width: 45em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot p.big span {
+    font-size: 3em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot p.small {
+    line-height: 2.4em;
+    color: #9B9B9B;
+    margin: 2em 0em 4em 0em;
+    width: 34em;
+}
+
+.cryptofights-how-to-play section.monthly-jackpot p.small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* #### SECTION: POLYGON BLOCKCHAIN (WEB) ##### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.polygon-matic {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 14em 0em 26em 0em;
+    background-size: 158em;
+    background-repeat: no-repeat;
+    background-position: center -2em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_24___});
+}
+
+.cryptofights-how-to-play section.polygon-matic .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 15em;
+}
+
+.cryptofights-how-to-play section.polygon-matic .right {
+    font-family: 'Open Sans';
+    text-align: left;
+    /* max-width: 37em; */
+}
+
+.cryptofights-how-to-play section.polygon-matic .caption {
+    font-weight: 400;
+    margin: 0em 0em 0em 0em;
+    text-align: left;
+}
+
+.cryptofights-how-to-play section.polygon-matic .caption::before {
+    display: none;
+}
+
+.cryptofights-how-to-play section.polygon-matic p {
+    margin: 0;
+}
+
+.cryptofights-how-to-play section.polygon-matic p span {
+    font-size: 3em;
+}
+
+.cryptofights-how-to-play section.polygon-matic p.the-game {
+    margin: 0em 0em 2em 0em;
+    color: #5EC002;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 3.6em;
+    max-width: 32em;
+}
+
+.cryptofights-how-to-play section.polygon-matic .rows-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0em 0em 0em 0em;
+    font-family: 'Open Sans';
+}
+
+.cryptofights-how-to-play section.polygon-matic .row {
+    margin: 0em 0em 0em 0em;
+    padding: 1.5em 3em 0.7em 0em;
+    text-align: left;
+    position: relative;
+    font-weight: 400;
+    line-height: 3.4em;
+    width: 100%;
+    border-bottom: 0.1em solid #6f6f6f;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.cryptofights-how-to-play section.polygon-matic .row .num {
+    color: #6A6A6A;
+    margin: 0em 2.5em 0em 0em;
+}
+
+.cryptofights-how-to-play section.polygon-matic .row .num span {
+    font-size: 4em;
+}
+
+.cryptofights-how-to-play section.polygon-matic .row .text span {
+    font-size: 2em;
+    color: #9B9B9B;
+}
+
+.cryptofights-how-to-play section.polygon-matic .row .text span.big {
+    font-size: 4em;
+    text-transform: uppercase;
+    color:#FFFFFF;
+}
+
+.cryptofights-how-to-play section.polygon-matic .styled-button {
+    margin: 4em 0em 0em 0em;
+}
+
+/* ############################################ */
+/* ###### SECTION: GET MATIC TOKEN (WEB) ###### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.get-matic-token {
+    text-align: left;
+    padding: 2em 0em 2em 0em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .caption {
+    text-align: left;
+    margin: 0em 0em 5em 0em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .caption span {
+    font-size: 12em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .box.left {
+
+}
+
+.cryptofights-how-to-play section.get-matic-token .box.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 65em;
+    padding: 16em 0em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .play-now {
+    margin: 6em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.get-matic-token .box.left .image-wrap div {
+    width: 63em;
+    height: 91em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_25___});
+}
+
+.cryptofights-how-to-play section.get-matic-token p {
+    line-height: 2.5em;
+}
+
+.cryptofights-how-to-play section.get-matic-token p.big {
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 3em;
+    font-weight: 600;
+    line-height: 3.4em;
+    color: #5EC002;
+    /* width: 45em; */
+
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 0em 1.1em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_26___});
+}
+
+.cryptofights-how-to-play section.get-matic-token p.big span {
+    font-size: 3em;
+}
+
+.cryptofights-how-to-play section.get-matic-token p.small {
+    line-height: 2.4em;
+    color: #292929;
+    width: 34em;
+    margin: 1.4em 0em 0em 0em;
+    padding: 0em 0em 0em 3em;
+}
+
+.cryptofights-how-to-play section.get-matic-token p.small span {
+    font-size: 2em;
+}
+
+.cryptofights-how-to-play section.get-matic-token div.or {
+    color: #292929;
+    font-weight: 600;
+    margin: 2em 0em 2em 0em;
+    padding: 0em 0em 0em 3em;
+}
+
+.cryptofights-how-to-play section.get-matic-token div.or span {
+    font-size: 1.4em;
+}
+
+/* ############################################ */
+/* ##### SECTION: SEND SELL TOKEN (WEB) ####### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.sell-send-token {
+    text-align: left;
+    padding: 14em 0em 11em 0em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .caption {
+    text-align: left;
+    line-height: 10em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .caption span {
+    font-size: 9em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .box.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 49em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .box.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 37em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .box.right {
+    
+}
+
+.cryptofights-how-to-play section.sell-send-token .play-now {
+    margin: 4em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.sell-send-token .box.right .image-wrap div {
+    width: 37em;
+    height: 69em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_27___});
+}
+
+.cryptofights-how-to-play section.sell-send-token p {
+    line-height: 2.5em;
+}
+
+.cryptofights-how-to-play section.sell-send-token p.big {
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 3em;
+    font-weight: 400;
+    line-height: 3.4em;
+    color: #5EC002;
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 0em 1.1em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_28___});
+}
+
+.cryptofights-how-to-play section.sell-send-token p.big span {
+    font-size: 3em;
+}
+
+.cryptofights-how-to-play section.sell-send-token p.small {
+    line-height: 2.4em;
+    color: #9B9B9B;
+    width: 34em;
+    margin: 1.4em 0em 0em 0em;
+    padding: 0em 0em 0em 3em;
+}
+
+.cryptofights-how-to-play section.sell-send-token div.or {
+    color: #6A6A6A;
+    margin: 2em 0em 2em 0em;
+    padding: 0em 0em 0em 3em;
+}
+
+.cryptofights-how-to-play section.sell-send-token div.or span {
+    font-size: 1.4em;
+}
+
+.cryptofights-how-to-play section.sell-send-token p.small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* ########## SECTION: FOOTER (WEB) ########### */
+/* ############################################ */
+
+.cryptofights-how-to-play section.footer {
+    background-color: transparent;
+    color: #5a5a5a;
+    padding: 14em 0em 14em 0em;
+}
+
+.cryptofights-how-to-play section.footer .main-flex {
+    justify-content: space-between;
+    width: 148.4em;
+    max-width: unset;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .area {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+ /* LOGO AREA */
+
+.cryptofights-how-to-play section.footer .main-flex .logo-area {
+    align-items: flex-start;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo {
+    margin: -2.4em 0em 0em 0em;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo div {
+    width: 66.2em;
+    height: 8.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+.cryptofights-how-to-play section.footer .main-flex .logo-area .grey-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .logo-area .grey-text span {
+    font-size: 1.6em;
+}
+
+/* LINKS AREA */
+
+.cryptofights-how-to-play section.footer .main-flex .links-area {
+    align-items: flex-start;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    color: #5a5a5a;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text span {
+    font-size: 1.6em;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text a {
+    color: #5a5a5a;
+}
+
+/* SOCIALS AREA */
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area {
+    gap: 2em;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area a {
+    width: 3.5em;
+    height: 3.5em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area a.x-twitter {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_29___});
+}
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area a.instagram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_30___});
+}
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area a.telegram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_31___});
+}
+
+.cryptofights-how-to-play section.footer .main-flex .socials-area a.discord {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_32___});
+}
+
+/* ARROW AREA */
+
+.cryptofights-how-to-play section.footer .main-flex .arrow-area {
+    position: relative;
+    justify-content: space-between;
+}
+
+.cryptofights-how-to-play section.footer .main-flex .arrow-area .white-arrow {
+    width: 7.6em;
+    height: 7.6em;
+    margin: -3em 0em 0em 0em;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_33___});
+}
+
+.cryptofights-how-to-play section.footer .main-flex .rezart-logo {
+
+}
+
+.cryptofights-how-to-play section.footer .main-flex .rezart-logo div {
+    width: 3.6em;
+    height: 2.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_34___});
+}
+
+/*  FOOTER BOTTOM MENU (WEB) */
+
+.cryptofights-how-to-play section.footer .bottom-menu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2em;
+}
+
+.cryptofights-how-to-play section.footer .bottom-menu .item {
+    color: #EEEEEE;
+    text-transform: uppercase;
+}
+
+.cryptofights-how-to-play section.footer .bottom-menu .item:nth-child(1) {
+    color: #5FC300;
+}
+
+/* .cryptofights-how-to-play section.footer .bottom-menu .item.active {
+    color: #5FC300;
+} */
+
+.cryptofights-how-to-play section.footer .bottom-menu .item span {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 1680px) {
+
+    .cryptofights-how-to-play {
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (max-width: 1560px) {
+
+    .cryptofights-how-to-play {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .cryptofights-how-to-play {
+        font-size: 7.5px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .cryptofights-how-to-play {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 1190px) {
+
+    .cryptofights-how-to-play {
+        font-size: 6.5px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .cryptofights-how-to-play {
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 1010px) {
+
+    .cryptofights-how-to-play {
+        font-size: 5.5px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    .cryptofights-how-to-play {
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .cryptofights-how-to-play {
+        
+    }
+
+    .cryptofights-how-to-play section .caption {
+        
+    }
+    
+    .cryptofights-how-to-play section .caption span {
+        
+    }
+
+    /* ############################################ */
+    /* ####### "HOW TO PLAY" BUTTON (MOBILE) ###### */
+    /* ############################################ */
+
+    /* ############################################ */
+    /* ######## "PLAY NOW" BUTTON (MOBILE) ######## */
+    /* ############################################ */
+
+    .cryptofights-how-to-play section .styled-button {
+        min-width: 35em;
+        border-radius: 10em;
+    }
+
+    .cryptofights-how-to-play section .styled-button a {
+        padding: 4em 5em;
+    }
+
+    .cryptofights-how-to-play section .styled-button span {
+        font-size: 2.8em;
+    }
+    
+    /* ############################################ */
+    /* #### "BE AN AFFILIATE" BUTTON (MOBILE) ##### */
+    /* ############################################ */
+
+    /* ############################################ */
+    /* ############ MENU ICON (MOBILE) ############ */
+    /* ############################################ */
+
+    .cryptofights-how-to-play .menu-icon {
+        right: 3em;
+        top: 2em;
+        display: flex;
+    }
+
+    /* ############################################ */
+    /* ############ TOP MENU (MOBILE) ############# */
+    /* ############################################ */
+
+    .cryptofights-how-to-play .top-menu {
+        display: none;
+    }
+
+    /* ############################################ */
+    /* ############ SIDE MENU (MOBILE) ############ */
+    /* ############################################ */
+
+    .cryptofights-how-to-play .side-menu {
+        display: flex;
+        transform: translateX(100em);
+        padding: 0em 3.5em;
+    }
+
+    .cryptofights-how-to-play .side-menu .item {
+        text-transform: uppercase;
+    }
+
+    .cryptofights-how-to-play .side-menu .item:nth-child(1) {
+        color: #ffffff;
+    }
+
+    .cryptofights-how-to-play .side-menu .item:nth-child(2) {
+        color: #B0B0B0;
+    }
+
+    .cryptofights-how-to-play .side-menu .item:nth-child(3) {
+        color: #5FC300;
+        text-decoration: underline;
+    }
+
+    .cryptofights-how-to-play .side-menu .menu-caption::before {
+        
+    }
+
+    .cryptofights-how-to-play .side-menu .menu-caption span {
+        
+    }
+
+    .cryptofights-how-to-play .side-menu .item span {
+        font-size: 5em;
+    }
+
+    .cryptofights-how-to-play .side-menu.open {
+        
+    }
+
+    .cryptofights-how-to-play .side-menu .play-now {
+        
+    }
+
+    .cryptofights-how-to-play .side-menu .play-now span {
+        
+    }
+
+    /* ############################################ */
+    /* ############# WEB/MOBILE ONLY ############## */
+    /* ############################################ */
+
+    .cryptofights-how-to-play .web-only.flex {
+        display: none !important;
+    }
+
+    .cryptofights-how-to-play .web-only.block {
+        display: none !important;
+    }
+ 
+    .cryptofights-how-to-play .mobile-only.flex {
+        display: flex !important;
+    }
+
+    .cryptofights-how-to-play .mobile-only.block {
+        display: block !important;
+    }
+
+    /* ################################################# */
+    /* ########## SECTION: REAL WEB3 (MOBILE) ########## */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.real-web3 {
+        padding: 0em 3.5em 77em 3.5em;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center 34em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_35___});
+    }
+
+    .cryptofights-how-to-play section.real-web3 .caption-area {
+        flex-direction: column;
+    }
+
+    /* .cryptofights-how-to-play section.real-web3 .small-caption {
+        position: static;
+    } */
+
+    .cryptofights-how-to-play section.real-web3 .caption {
+        line-height: 14.1em;
+        width: 71em;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .caption span {
+        font-size: 13em;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .styled-button {
+        min-width: 35em;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .middle-content {
+        flex-direction: column;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .middle-left {
+        width: 100%;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .middle-right {
+        display: none;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .green-lights,
+    .cryptofights-how-to-play section.real-web3 .red-lights {
+        display: none;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .small-caption {
+        bottom: auto;
+        top: 30em;
+        right: 1em;
+        width: 37em;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .top-content {
+        margin: 3.6em 0em 5em 0em;
+    }
+
+    .cryptofights-how-to-play section.real-web3 .top-content .logo {
+        height: 5em;
+        width: 45em;
+    }
+
+    /* ################################################# */
+    /* ####### SECTION: CONNECT WALLET (MOBILE) ######## */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.connect-wallet {
+        padding: 11em 3.5em 9em 3.5em;
+        margin: 0em 0em 0em 0em;
+        background-size: 200em;
+        background-position: -29em 74em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet p.big {
+        line-height: 4.4em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet p.big span {
+        font-size: 3.6em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .views-wrapper {
+        height: 157em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15em;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .nav-arrow {
+        display: none;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .main-flex {
+        display: flex;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .wallet-view {
+        width: 100%;
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        flex-shrink: 0;
+        gap: 0;
+        scroll-snap-align: center;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .wallet-view .box.right {
+        width: 100%;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .pool-round .image-wrap div {
+        width: 73em;
+        height: 54em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .investment-bar .image-wrap div {
+        width: 72.4em;
+        height: 80em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .join-down-pool .image-wrap div {
+        width: 74.4em;
+        height: 49em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .join-up-pool .image-wrap div {
+        width: 74.4em;
+        height: 50em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits .caption span {
+        font-size: 9em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits .box.right {
+        width: 100%;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits .box.right p.big {
+        align-self: flex-end;
+        width: 50em;
+        text-align: right;
+        margin: 0em 0em 6em 0em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits p.small {
+        line-height: 3.8em;
+        width: 67em;
+        margin: 3em 0em 3em 0em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits p.small span {
+        font-size: 3em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .profits .styled-button {
+        margin: 6em 0em 0em 0em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .down-pool-wins .box.right,
+    /* .cryptofights-how-to-play section.connect-wallet .start-rate .box.right, */
+    .cryptofights-how-to-play section.connect-wallet .join-up-pool .box.right,
+    .cryptofights-how-to-play section.connect-wallet .join-down-pool .box.right,
+    .cryptofights-how-to-play section.connect-wallet .investment-bar .box.right,
+    .cryptofights-how-to-play section.connect-wallet .up-pool-profit .box.right,
+    .cryptofights-how-to-play section.connect-wallet .down-pool-profit .box.right {
+        margin: 0em 0em 6em 0em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .live-rate .box.right {
+        margin: 0em 0em -7em 0em;
+    }
+
+    /* .cryptofights-how-to-play section.connect-wallet .pool-round .box.right,
+    .cryptofights-how-to-play section.connect-wallet .up-pool-profit .box.right,
+    .cryptofights-how-to-play section.connect-wallet .down-pool-profit .box.right {
+        width: 100%;
+    } */
+
+    .cryptofights-how-to-play section.connect-wallet .start-rate .caption {
+        line-height: 10em;
+    }
+
+    .cryptofights-how-to-play section.connect-wallet .start-rate .caption span {
+        font-size: 9em;
+    }
+
+    /* .cryptofights-how-to-play section.connect-wallet .up-pool-wins .box.right {
+        width: 100%;
+        margin: 0em 0em 6em 0em;
+    } */
+
+    /* ################################################# */
+    /* ####### SECTION: WEEKLY JACKPOT (MOBILE) ######## */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.weekly-jackpot {
+        padding: 14em 3.5em 14em 3.5em;
+        /* background-size: 83em;
+        background-repeat: no-repeat;
+        background-position: center 113em;
+        background-image: url('/public/media/images/new-entry-screen/crypto-fights/weekly-jackpot-bg_mobile.png'); */
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .box.left {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .caption {
+        text-align: left;
+        line-height: 13.4em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .caption span {
+        font-size: 13em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(1) {
+        margin-right: 2.2em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(2) {
+        margin-left: 1.8em;
+    }
+    
+    .cryptofights-how-to-play section.weekly-jackpot .main-flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot p.big {
+        margin: 6.6em 8.8em 2em auto;
+        font-weight: 300;
+        line-height: 4.6em;
+        color: #5EC002;
+        width: 45em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot p.big span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot p.small {
+        line-height: 4.8em;
+        color: #9B9B9B;
+        width: 67em;
+        margin: 2em 0em 7em 0;
+        font-weight: 300;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot p.small span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .box.right .image-wrap div {
+        width: 73em;
+        height: 62em;
+    }
+
+    .cryptofights-how-to-play section.weekly-jackpot .play-now {
+        margin: 6em 0em 0em 0em;
+    }
+
+    /* ################################################# */
+    /* ####### SECTION: MONTHLY JACKPOT (MOBILE) ####### */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.monthly-jackpot {
+        padding: 14em 3.5em 14em 3.5em;
+        overflow: hidden;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .caption {
+        line-height: 13.4em;
+        word-wrap: break-word;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .caption span {
+        font-size: 13em;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(1) {
+        /* margin-right: 0;
+        margin-left: 0.3em; */
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(2) {
+        margin-left: 1.9em;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .box.right {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot p.big {
+        margin: 6.6em 8.4em 2em auto;
+        font-weight: 300;
+        line-height: 4.6em;
+        color: #5EC002;
+        width: 45em;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot p.big span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot p.small {
+        line-height: 4.8em;
+        color: #9B9B9B;
+        width: 67em;
+        margin: 2em 0 -2em 0;
+        font-weight: 300;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot p.small span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .main-flex {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .box.left .image-wrap div {
+        background-position: 7.5em center;
+    }
+
+    .cryptofights-how-to-play section.monthly-jackpot .play-now {
+        margin: 9em 0em 0em 0em;
+    }
+
+    /* ################################################# */
+    /* ##### SECTION: POLYGON BLOCKCHAIN (MOBILE) ###### */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.polygon-matic {
+        padding: 14em 3.5em 14em 3.5em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .main-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .caption {
+        text-align: center;
+        line-height: 13.4em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .caption span {
+        font-size: 13em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic p.the-game {
+        margin: 10em auto 3em 0;
+        font-weight: 300;
+        line-height: 4.6em;
+        width: 51em;
+        max-width: unset;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic p.the-game span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .styled-button {
+        margin: 9em 0em 0em 0em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .play-now-box {
+        justify-content: center;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .rows-box {
+        width: 100%;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .row .text span {
+        font-size: 3em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .row {
+        padding: 2em 0em 2em 0em;
+        line-height: 4.8em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .row .text span.big {
+        font-size: 4.6em;
+        font-weight: 300;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .row .num span {
+        font-size: 4.6em;
+    }
+
+    .cryptofights-how-to-play section.polygon-matic .top-content .logo {
+        height: 5em;
+        width: 45em;
+    }
+
+    /* ################################################# */
+    /* ####### SECTION: GET MATIC TOKEN (MOBILE) ####### */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.get-matic-token {
+        padding: 14em 3.5em 14em 3.5em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token .main-flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token .box.right {
+        max-width: unset;
+        padding: 8em 0em 0em 0em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token .caption {
+        text-align: center;
+        line-height: 13.4em;
+        margin: 0em 0em 7em 0em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token .caption span {
+        font-size: 13em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token p.big {
+        font-weight: 400;
+        line-height: 4.6em;
+        width: 100%;
+        max-width: unset;
+        padding: 0em 0em 0em 4em;
+        background-size: 2.2em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token p.big span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token p.small {
+        line-height: 3.6em;
+        padding: 0em 0em 0em 4em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token p.small span {
+        font-size: 3em;
+    }
+    
+    .cryptofights-how-to-play section.get-matic-token div.or {
+        padding: 0em 0em 0em 4em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token div.or span {
+        font-size: 2.4em;
+    }
+
+    .cryptofights-how-to-play section.get-matic-token .play-now {
+        margin: 9em 0em 0em 0em;
+        align-self: center;
+    }
+
+    /* ################################################# */
+    /* ####### SECTION: SEND SELL TOKEN (MOBILE) ####### */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.sell-send-token {
+        padding: 14em 3.5em 11em 3.5em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .caption {
+        text-align: center;
+        line-height: 13.4em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .caption span {
+        font-size: 13em;
+        font-size: 12.5em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .main-flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .box.left {
+        max-width: unset;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .box.middle {
+        max-width: unset;
+        margin: 9em 0em 0em 0em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .box.right {
+        display: none;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token p.big {
+        font-weight: 400;
+        line-height: 4.6em;
+        /* width: 100%; */
+        max-width: unset;
+        padding: 0em 0em 0em 4em;
+        background-size: 2.2em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token p.big span {
+        font-size: 3.8em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token p.small {
+        line-height: 3.6em;
+        padding: 0em 0em 0em 4em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token p.small span {
+        font-size: 3em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .play-now {
+        margin: 11em 0em 0em 0em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token div.or {
+        padding: 0em 0em 0em 4em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token div.or span {
+        font-size: 2.4em;
+    }
+
+    .cryptofights-how-to-play section.sell-send-token .play-now-box {
+        align-self: center;
+    }
+
+    /* ################################################# */
+    /* ########### SECTION: FOOTER (MOBILE) ############ */
+    /* ################################################# */
+
+    .cryptofights-how-to-play section.footer {
+        padding: 13em 3.5em 11em 3.5em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex {
+        flex-direction: column;
+        width: unset;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .grey-text-area {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2em;
+        margin: 10em 0em 10em 0em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .grey-text,
+    .cryptofights-how-to-play section.footer .main-flex .grey-text a {
+        color: #5a5a5a;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .socials-area {
+        flex-direction: row;
+        gap: 4em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .arrow-area {
+        flex-direction: row-reverse;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo div {
+        width: 50.2em;
+        height: 6.2em;
+    }
+
+    .cryptofights-how-to-play section.footer .bottom-menu .item span {
+        font-size: 5.6em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .links-area {
+        margin: 9em 0em 9em 0em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .socials-area a {
+        width: 6.5em;
+        height: 6.5em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .rezart-logo div {
+        width: 7em;
+        height: 4.6em;
+    }
+
+    .cryptofights-how-to-play section.footer .main-flex .arrow-area .white-arrow {
+        width: 5.6em;
+        height: 5.6em;
+        margin: -1em 0em 0em 0em;
+    }
+    
+    .cryptofights-how-to-play section.footer .main-flex .grey-text span {
+        font-size: 3em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/HowToPlay/cryptoFights/HowToPlay.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;500;600;700&display=swap');\n\n.cryptofights-how-to-play {\n    font-family: 'Open Sans';\n    background-color: transparent;\n    display: block;\n    position: static;\n    font-size: 10px;\n    overflow: auto;\n    z-index: initial;\n}\n\n.cryptofights-how-to-play .entry-main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n}\n\n.cryptofights-how-to-play .entry-main-flex .sections {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/grainy-grey.png');\n    background-repeat: repeat;\n    background-position: top center;\n}\n\n/* ############################################ */\n/* ############## TOP MENU (WEB) ############## */\n/* ############################################ */\n\n.cryptofights-how-to-play .menu-icon {\n    display: none;\n}\n\n.cryptofights-how-to-play .top-menu {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 5em;\n}\n\n.cryptofights-how-to-play .top-menu .item {\n    color: #B0B0B0;\n    text-transform: uppercase;\n}\n\n.cryptofights-how-to-play .top-menu .item:nth-child(1) {\n\n}\n\n.cryptofights-how-to-play .top-menu .item:nth-child(2) {\n    color: #ffffff;\n    font-weight: 500;\n}\n\n.cryptofights-how-to-play .top-menu .item:nth-child(3) {\n    color: #5FC300;\n    text-decoration: underline;\n}\n\n/* .cryptofights-how-to-play .top-menu .item.active {\n    color: #ffffff;\n} */\n\n.cryptofights-how-to-play .top-menu .item span {\n    font-size: 1.6em;\n}\n\n/* ############################################ */\n/* ############## SIDE MENU (WEB) ############# */\n/* ############################################ */\n\n.cryptofights-how-to-play .side-menu {\n    position: fixed;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 2em;\n    top: 0;\n    bottom: 0;\n    /* right: 0; */\n    background-color: rgba(0, 0, 0, 0.85);\n    width: 100%;\n    z-index: 2;\n    transform: translateX(60em);\n    transition: transform .3s ease;\n    box-sizing: border-box;\n    display: none;\n}\n\n.cryptofights-how-to-play .side-menu.open {\ntransform: translateX(0);\n}\n\n.cryptofights-how-to-play .side-menu .item {\n    color: #ffffff;\n}\n\n.cryptofights-how-to-play .side-menu .item.active {\n    color: #f4d56f;\n}\n\n.cryptofights-how-to-play .side-menu .item span {\n    font-size: 2.5em;\n}\n\n/* ############################################ */\n/* ############# WEB/MOBILE ONLY ############## */\n/* ############################################ */\n\n.cryptofights-how-to-play .mobile-only.flex {\n    display: none !important;\n}\n\n.cryptofights-how-to-play .mobile-only.block {\n    display: none !important;\n}\n\n.cryptofights-how-to-play .web-only.flex {\n    display: flex !important;\n}\n\n.cryptofights-how-to-play .web-only.block {\n    display: block !important;\n}\n\n/* ############################################ */\n/* ############## SECTION LOADER ############## */\n/* ############################################ */\n\n.cryptofights-how-to-play .section-loader-overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    background: #0000009e;\n    z-index: 100;\n}\n\n.cryptofights-how-to-play .section-loader-wrap {\n    position: absolute;\n    width: 15em;\n    height: 15em;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/loaders/loader.gif');\n}\n\n/* ############################################ */\n/* ##### SECTION \"PLAY NOW\" BUTTON (WEB) ###### */\n/* ############################################ */\n\n.cryptofights-how-to-play section .play-now-box {\n    display: flex;\n}\n\n.cryptofights-how-to-play section .styled-button {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    border-radius: 4em;\n    font-weight: 600;\n    background-color: #5FC300;\n    cursor: pointer;\n    min-width: 22em;\n    box-sizing: border-box;\n    text-align: center;\n    overflow: hidden;\n}\n\n.cryptofights-how-to-play section .styled-button a {\n    color: #ffffff;\n    width: 100%;\n    height: 100%;\n    padding: 3em 5em;\n    box-sizing: border-box;\n    text-transform: uppercase;\n}\n\n.cryptofights-how-to-play section .styled-button span {\n    font-size: 1.6em;\n}\n\n.cryptofights-how-to-play section .styled-button.play-now:hover {\n    background-color: #FF1A2D;\n}\n\n/* ############################################ */\n/* ############## MENU ICON (WEB) ############# */\n/* ############################################ */\n\n.cryptofights-how-to-play .menu-icon {\n    position: absolute;\n    right: 2em;\n    top: 2em;\n    z-index: 3;\n    cursor: pointer;\n    display: inline-block;\n    width: 8em;\n    height: 8em;\n    overflow: hidden;\n}\n\n.cryptofights-how-to-play .menu-icon {\n    display: none;\n}\n\n.cryptofights-how-to-play .menu-icon div {\n    background-color: #FFFFFF;\n    border-radius: 0;\n    height: 0.4em;\n    position: absolute;\n    right: 1em;\n    transition: width .2s,transform .2s;\n    width: 6em;\n}\n\n.cryptofights-how-to-play .menu-icon div.top {\n    top: 2.5em;\n}\n\n/* .cryptofights-how-to-play .menu-icon div.middle {\n    top: 2.2em;\n    width: 2em;\n} */\n\n.cryptofights-how-to-play .menu-icon div.bottom {\n    top: 4.8em;\n}\n\n.cryptofights-how-to-play .menu-icon.open div.top {\n    transform: translate(0.1em, 1.2em) rotate(-45deg);\n    width: 6.4em;\n}\n\n/* .cryptofights-how-to-play .menu-icon.open div.middle {\n    transform: translate(-4.5em);\n} */\n\n.cryptofights-how-to-play .menu-icon.open div.bottom {\n    transform: translate(0.1em, -1em) rotate(45deg);\n    width: 6.4em;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* #### SECTION \"HOW TO PLAY\" BUTTON (WEB) #### */\n/* ############################################ */\n\n.cryptofights-how-to-play section .styled-button.how-to-play {\n    background-color: transparent;\n    box-shadow: inset 0em 0em 0em 0.2em #5EBF01;\n    font-weight: 500;\n}\n\n.cryptofights-how-to-play section .styled-button.how-to-play a {\n    color: #5EBF01;\n}\n\n/* ############################################ */\n/* ###### \"BE AN AFFILIATE\" BUTTON (WEB) ###### */\n/* ############################################ */\n\n.cryptofights-how-to-play section .styled-button.be-an-affiliate {\n    background-color: #181818;\n    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;\n    font-weight: 500;\n}\n\n.cryptofights-how-to-play section .styled-button.be-an-affiliate a {\n    color: #f4d56f;\n}\n\n/* ############################################ */\n/* ############## SECTIONS (WEB) ############## */\n/* ############################################ */\n\n.cryptofights-how-to-play section {\n    position: relative;\n    flex-shrink: 0;\n    padding: 7em 0em;\n}\n\n.cryptofights-how-to-play section.white {\n    background-color: #ffffff;\n    color: black;\n    border-radius: 6em;\n}\n\n.cryptofights-how-to-play section .play-btns {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n.cryptofights-how-to-play section .main-flex {\n    display: flex;\n    max-width: 158em;\n    width: 100%;\n    box-sizing: border-box;\n    margin: 0 auto;\n}\n\n/* ############################################ */\n/* ########## SECTION CAPTION (WEB) ########### */\n/* ############################################ */\n\n.cryptofights-how-to-play section .caption {\n    font-weight: 400;\n    line-height: 8em;\n    width: 100%;\n    font-family: 'Anton';\n    line-height: 12.1em;\n}\n\n.cryptofights-how-to-play section .caption span {\n    font-size: 12em;\n}\n\n/* ############################################ */\n/* ######### SECTION: REAL WEB3 (WEB) ######### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.real-web3 {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    position: relative;\n    background-color: transparent;\n    padding: 0em 0em 7em 0em;\n\n    background-size: 201em;\n    background-repeat: no-repeat;\n    background-position: center 32em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/real-web3-bg.png');\n}\n\n.cryptofights-how-to-play section.real-web3 .green-lights,\n.cryptofights-how-to-play section.real-web3 .red-lights {\n    position: absolute;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: contain;\n}\n\n.cryptofights-how-to-play section.real-web3 .green-lights {\n    top: 11em;\n    left: 50%;\n    width: 51.2em;\n    height: 54.5em;\n    transform: translateX(-15%);\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/green-lights.png');\n}\n\n.cryptofights-how-to-play section.real-web3 .red-lights {\n    top: 11em;\n    left: 50%;\n    width: 48.2em;\n    height: 51.3em;\n    transform: translateX(94%);\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/red-lights.png');\n}\n\n.cryptofights-how-to-play section.real-web3 .caption-area {\n    position: relative;\n    display: flex;\n    justify-content: flex-start;\n    text-align: left;\n}\n\n.cryptofights-how-to-play section.real-web3 .caption {\n    line-height: 18em;\n}\n\n.cryptofights-how-to-play section.real-web3 .caption span {\n    font-size: 18em;\n}\n\n.cryptofights-how-to-play section.real-web3 .small-caption {\n    color: #B0B0B0;\n    position: absolute;\n    bottom: 3em;\n    right: 0em;\n    width: 43em;\n    line-height: 5em;\n}\n\n.cryptofights-how-to-play section.real-web3 .small-caption span {\n    font-size: 4em;\n}\n\n.cryptofights-how-to-play section.real-web3 .main-flex {\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    z-index: 1;\n    width: 100%;\n    max-width: 158em;\n    padding: 0;\n}\n\n.cryptofights-how-to-play section.real-web3 .top-content {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n    margin: 2em 0em 11em 0em;\n}\n\n.cryptofights-how-to-play section.real-web3 .top-content .logo {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/cryptofights-logo.svg');\n    background-repeat: no-repeat;\n    background-position: left bottom;\n    background-size: contain;\n    height: 4em;\n    width: 29em;\n}\n\n.cryptofights-how-to-play section.real-web3 .middle-content {\n    display: flex;\n    width: 100%;\n    justify-content: center;\n}\n\n.cryptofights-how-to-play section.real-web3 .bottom-content {\n    margin: 8em 0 0 0;\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n\n    justify-content: space-between;\n    overflow: hidden;\n}\n\n.cryptofights-how-to-play section.real-web3 .align-center-wrap span {\n    font-size: 9em;\n}\n\n.cryptofights-how-to-play section.real-web3 .middle-left {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: flex-start;\n    width: 86em;\n    padding-top: 4em;\n    flex-shrink: 0;\n}\n\n.cryptofights-how-to-play section.real-web3 .middle-right {\n    width: 74em;\n    height: 89.5em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/real-web3.png');\n    flex-shrink: 0;\n    margin: -4em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.real-web3 .play-btns {\n    margin: 6em 0 0 0;\n    align-self: flex-start;\n}\n\n.cryptofights-how-to-play section.real-web3 .styled-button {\n    min-width: 24em;\n}\n\n/* ############################################ */\n/* ###### SECTION: CONNECT WALLET (WEB) ####### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.connect-wallet {\n    background-color: transparent;\n    color: #ffffff;\n    padding: 9em 0em 9em 0em;\n    margin: 0em 0em 6em 0em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-size: 203em;\n    background-repeat: no-repeat;\n    background-position: center 37em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/take-a-look-video-bg.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .views-wrapper {\n    width: 100%;\n}\n\n.cryptofights-how-to-play section.connect-wallet .main-flex {\n    height: 89em;\n    /* display: flex; */\n    display: none;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    gap: 15em;\n}\n\n/* VIEWS */\n\n.cryptofights-how-to-play section.connect-wallet.your-wallet_view .main-flex.your-wallet,\n.cryptofights-how-to-play section.connect-wallet.live-rate_view .main-flex.live-rate,\n.cryptofights-how-to-play section.connect-wallet.join-up-pool_view .main-flex.join-up-pool,\n.cryptofights-how-to-play section.connect-wallet.join-down-pool_view .main-flex.join-down-pool,\n.cryptofights-how-to-play section.connect-wallet.investment-bar_view .main-flex.investment-bar,\n.cryptofights-how-to-play section.connect-wallet.up-pool-profit_view .main-flex.up-pool-profit,\n.cryptofights-how-to-play section.connect-wallet.down-pool-profit_view .main-flex.down-pool-profit,\n.cryptofights-how-to-play section.connect-wallet.pool-round_view .main-flex.pool-round,\n.cryptofights-how-to-play section.connect-wallet.start-rate_view .main-flex.start-rate,\n.cryptofights-how-to-play section.connect-wallet.up-pool-wins_view .main-flex.up-pool-wins,\n.cryptofights-how-to-play section.connect-wallet.down-pool-wins_view .main-flex.down-pool-wins,\n.cryptofights-how-to-play section.connect-wallet.profits_view .main-flex.profits {\n    display: flex;\n}\n\n.cryptofights-how-to-play section.connect-wallet .nav-arrow {\n    position: absolute;\n    width: 2.4em;\n    height: 2.4em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    cursor: pointer;\n}\n\n.cryptofights-how-to-play section.connect-wallet .nav-arrow.disabled {\n    opacity: 0.2;\n    pointer-events: none;\n}\n\n.cryptofights-how-to-play section.connect-wallet .nav-up-arrow {\n    top: 9em;\n    right: 36em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/nav-up-arrow.svg');\n}\n\n.cryptofights-how-to-play section.connect-wallet .nav-down-arrow {\n    bottom: 9em;\n    right: 36em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/nav-down-arrow.svg');\n}\n\n\n\n\n\n\n\n.cryptofights-how-to-play section.connect-wallet .wallet-view .caption {\n    max-width: 81em;\n    text-align: right;\n    line-height: 10em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .wallet-view .caption span {\n    font-size: 9em;\n}\n\n\n\n\n\n\n.cryptofights-how-to-play section.connect-wallet .box.right {\n    display: flex;\n    flex-direction: column;\n    gap: 2em;\n    justify-content: flex-start;\n    align-items: flex-end;\n    text-align: right;\n}\n\n.cryptofights-how-to-play section.connect-wallet .image-wrap div {\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n.cryptofights-how-to-play section.connect-wallet .green {\n    color: #5EC002;\n}\n\n.cryptofights-how-to-play section.connect-wallet .red {\n    color: #DE1526;\n}\n\n.cryptofights-how-to-play section.connect-wallet p.big {\n    color: #5EC002;\n    line-height: 3.4em;\n    font-weight: 400;\n    margin: 0em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.connect-wallet p.big span {\n    font-size: 3em;\n}\n\n/* STARTING SLIDE (MAIN) */\n.cryptofights-how-to-play section.connect-wallet .your-wallet .image-wrap div {\n    width: 46em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet-image.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .your-wallet .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .your-wallet .caption span {\n    font-size: 9em;\n} */\n\n/* LIVE BITCOIN RATE */\n\n.cryptofights-how-to-play section.connect-wallet .live-rate .image-wrap div {\n    width: 57em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_live-rate.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .live-rate .box.right {\n    width: 42em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .live-rate .styled-button {\n    margin: 7em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .live-rate .caption {\n    text-align: left;\n    width: auto;\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .live-rate .caption span {\n    font-size: 9em;\n} */\n\n/* JOIN UP POOL */\n\n.cryptofights-how-to-play section.connect-wallet .join-up-pool .image-wrap div {\n    width: 86.4em;\n    height: 57em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_join-up-pool.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .join-up-pool .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .join-up-pool .caption span {\n    font-size: 9em;\n} */\n\n/* JOIN DOWN POOL */\n\n.cryptofights-how-to-play section.connect-wallet .join-down-pool {\n    gap: 0;\n}\n\n.cryptofights-how-to-play section.connect-wallet .join-down-pool .image-wrap div {\n    width: 86.4em;\n    height: 57em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_join-down-pool.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .join-down-pool .caption {\n    max-width: 56em;\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .join-down-pool .caption span {\n    font-size: 9em;\n} */\n\n/* INVESTMENT BAR */\n\n.cryptofights-how-to-play section.connect-wallet .investment-bar .image-wrap div {\n    width: 80.4em;\n    height: 89em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_investment-bar.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .investment-bar .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .investment-bar .caption span {\n    font-size: 9em;\n} */\n\n/* UP POOL PROFIT */\n\n.cryptofights-how-to-play section.connect-wallet .up-pool-profit .image-wrap div {\n    width: 45.4em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_up-pool-profit.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .up-pool-profit .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .up-pool-profit .caption span {\n    font-size: 9em;\n} */\n\n/* DOWN POOL PROFIT */\n\n.cryptofights-how-to-play section.connect-wallet .down-pool-profit .image-wrap div {\n    width: 45.4em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_down-pool-profit.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .down-pool-profit .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .down-pool-profit .caption span {\n    font-size: 9em;\n} */\n\n/* POOL ROUND */\n\n.cryptofights-how-to-play section.connect-wallet .pool-round {\n    gap: 0;\n}\n\n.cryptofights-how-to-play section.connect-wallet .pool-round .image-wrap div {\n    width: 86em;\n    height: 64em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_pool-round.png');\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .pool-round .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .pool-round .caption span {\n    font-size: 9em;\n} */\n\n/* START RATE */\n\n.cryptofights-how-to-play section.connect-wallet .start-rate .image-wrap div {\n    width: 62em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_start-rate.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .start-rate .styled-button {\n    margin: 4em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .start-rate .caption {\n    line-height: 12.1em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .start-rate .caption span {\n    font-size: 12em;\n}\n\n/* UP POOL WINS */\n\n.cryptofights-how-to-play section.connect-wallet .up-pool-wins .image-wrap div {\n    width: 52.9em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_up-pool-wins.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .up-pool-wins p.big {\n    color: #ffffff;\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .up-pool-wins .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .up-pool-wins .caption span {\n    font-size: 9em;\n} */\n\n/* DOWN POOL WINS */\n\n.cryptofights-how-to-play section.connect-wallet .down-pool-wins .image-wrap div {\n    width: 52.7em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_down-pool-wins.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .down-pool-wins p.big {\n    color: #ffffff;\n}\n\n/* .cryptofights-how-to-play section.connect-wallet .down-pool-wins .caption {\n\n}\n\n.cryptofights-how-to-play section.connect-wallet .down-pool-wins .caption span {\n    \n} */\n\n/* PROFITS */\n\n.cryptofights-how-to-play section.connect-wallet .profits .box.right {\n    align-items: flex-start;\n    text-align: left;\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits .image-wrap div {\n    width: 52.6em;\n    height: 88em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/connect-wallet_profits.png');\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits .styled-button {\n    margin: 3em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits p.small {\n    color: #9B9B9B;\n    line-height: 2.4em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits p.small span {\n    font-size: 2em;\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits .caption {\n    text-align: left;\n}\n\n.cryptofights-how-to-play section.connect-wallet .profits .caption span {\n    font-size: 12em;\n}\n\n/* ############################################ */\n/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.weekly-jackpot {\n    text-align: left;\n    padding: 14em 0em 18em 0em;\n    /* background-size: 201em;\n    background-repeat: no-repeat;\n    background-position: center 17em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/weekly-jackpot-bg.png'); */\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 11em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .caption {\n    text-align: left;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .caption span {\n    font-size: 12em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(2) {\n    margin-left: 1.2em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .box.left {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 42em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .box.right {\n    \n}\n\n.cryptofights-how-to-play section.weekly-jackpot .play-now {\n    margin: 0em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot .box.right .image-wrap div {\n    width: 84em;\n    height: 77em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/weekly-jackpot-image.png');\n}\n\n.cryptofights-how-to-play section.weekly-jackpot p {\n    line-height: 2.5em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot p.big {\n    margin: 2.6em 0em 0em 0em;\n    font-weight: 400;\n    line-height: 3.4em;\n    color: #5EC002;\n    width: 45em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot p.big span {\n    font-size: 3em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot p.small {\n    line-height: 2.4em;\n    color: #292929;\n    width: 34em;\n    margin: 2em 0em 4em 0em;\n}\n\n.cryptofights-how-to-play section.weekly-jackpot p.small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* ###### SECTION: MONTHLY JACKPOT (WEB) ###### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.monthly-jackpot {\n    background-color: transparent;\n    color: #ffffff;\n    text-align: left;\n    padding: 12em 0em 12em 0em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 11em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .caption {\n    text-align: left;\n    display: flex;\n    flex-direction: column;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .caption span {\n    font-size: 12em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(2) {\n    margin-left: 1.1em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .box.right {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 42em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot .box.left {\n    \n}\n\n.cryptofights-how-to-play section.monthly-jackpot .box.left .image-wrap div {\n    width: 87em;\n    height: 84em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/monthly-jackpot-bg.png');\n}\n\n.cryptofights-how-to-play section.monthly-jackpot p {\n    line-height: 2.5em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot p.big {\n    margin: 2.6em 0em 0em 0em;\n    font-weight: 400;\n    line-height: 3.4em;\n    color: #5EC002;\n    width: 45em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot p.big span {\n    font-size: 3em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot p.small {\n    line-height: 2.4em;\n    color: #9B9B9B;\n    margin: 2em 0em 4em 0em;\n    width: 34em;\n}\n\n.cryptofights-how-to-play section.monthly-jackpot p.small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* #### SECTION: POLYGON BLOCKCHAIN (WEB) ##### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.polygon-matic {\n    background-color: transparent;\n    color: #ffffff;\n    padding: 14em 0em 26em 0em;\n    background-size: 158em;\n    background-repeat: no-repeat;\n    background-position: center -2em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/polygon-matic-bg.png');\n}\n\n.cryptofights-how-to-play section.polygon-matic .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: flex-start;\n    margin: 0 auto;\n    gap: 15em;\n}\n\n.cryptofights-how-to-play section.polygon-matic .right {\n    font-family: 'Open Sans';\n    text-align: left;\n    /* max-width: 37em; */\n}\n\n.cryptofights-how-to-play section.polygon-matic .caption {\n    font-weight: 400;\n    margin: 0em 0em 0em 0em;\n    text-align: left;\n}\n\n.cryptofights-how-to-play section.polygon-matic .caption::before {\n    display: none;\n}\n\n.cryptofights-how-to-play section.polygon-matic p {\n    margin: 0;\n}\n\n.cryptofights-how-to-play section.polygon-matic p span {\n    font-size: 3em;\n}\n\n.cryptofights-how-to-play section.polygon-matic p.the-game {\n    margin: 0em 0em 2em 0em;\n    color: #5EC002;\n    font-weight: 600;\n    text-transform: uppercase;\n    line-height: 3.6em;\n    max-width: 32em;\n}\n\n.cryptofights-how-to-play section.polygon-matic .rows-box {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    margin: 0em 0em 0em 0em;\n    font-family: 'Open Sans';\n}\n\n.cryptofights-how-to-play section.polygon-matic .row {\n    margin: 0em 0em 0em 0em;\n    padding: 1.5em 3em 0.7em 0em;\n    text-align: left;\n    position: relative;\n    font-weight: 400;\n    line-height: 3.4em;\n    width: 100%;\n    border-bottom: 0.1em solid #6f6f6f;\n    box-sizing: border-box;\n    display: flex;\n}\n\n.cryptofights-how-to-play section.polygon-matic .row .num {\n    color: #6A6A6A;\n    margin: 0em 2.5em 0em 0em;\n}\n\n.cryptofights-how-to-play section.polygon-matic .row .num span {\n    font-size: 4em;\n}\n\n.cryptofights-how-to-play section.polygon-matic .row .text span {\n    font-size: 2em;\n    color: #9B9B9B;\n}\n\n.cryptofights-how-to-play section.polygon-matic .row .text span.big {\n    font-size: 4em;\n    text-transform: uppercase;\n    color:#FFFFFF;\n}\n\n.cryptofights-how-to-play section.polygon-matic .styled-button {\n    margin: 4em 0em 0em 0em;\n}\n\n/* ############################################ */\n/* ###### SECTION: GET MATIC TOKEN (WEB) ###### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.get-matic-token {\n    text-align: left;\n    padding: 2em 0em 2em 0em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 20em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .caption {\n    text-align: left;\n    margin: 0em 0em 5em 0em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .caption span {\n    font-size: 12em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .box.left {\n\n}\n\n.cryptofights-how-to-play section.get-matic-token .box.right {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 65em;\n    padding: 16em 0em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .play-now {\n    margin: 6em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.get-matic-token .box.left .image-wrap div {\n    width: 63em;\n    height: 91em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/get-matic-token.png');\n}\n\n.cryptofights-how-to-play section.get-matic-token p {\n    line-height: 2.5em;\n}\n\n.cryptofights-how-to-play section.get-matic-token p.big {\n    margin: 0em 0em 0em 0em;\n    padding: 0em 0em 0em 3em;\n    font-weight: 600;\n    line-height: 3.4em;\n    color: #5EC002;\n    /* width: 45em; */\n\n    background-size: 1.2em;\n    background-repeat: no-repeat;\n    background-position: 0em 1.1em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/get-matic-arrow.svg');\n}\n\n.cryptofights-how-to-play section.get-matic-token p.big span {\n    font-size: 3em;\n}\n\n.cryptofights-how-to-play section.get-matic-token p.small {\n    line-height: 2.4em;\n    color: #292929;\n    width: 34em;\n    margin: 1.4em 0em 0em 0em;\n    padding: 0em 0em 0em 3em;\n}\n\n.cryptofights-how-to-play section.get-matic-token p.small span {\n    font-size: 2em;\n}\n\n.cryptofights-how-to-play section.get-matic-token div.or {\n    color: #292929;\n    font-weight: 600;\n    margin: 2em 0em 2em 0em;\n    padding: 0em 0em 0em 3em;\n}\n\n.cryptofights-how-to-play section.get-matic-token div.or span {\n    font-size: 1.4em;\n}\n\n/* ############################################ */\n/* ##### SECTION: SEND SELL TOKEN (WEB) ####### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.sell-send-token {\n    text-align: left;\n    padding: 14em 0em 11em 0em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 6em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .caption {\n    text-align: left;\n    line-height: 10em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .caption span {\n    font-size: 9em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .box.left {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 49em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .box.middle {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 37em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .box.right {\n    \n}\n\n.cryptofights-how-to-play section.sell-send-token .play-now {\n    margin: 4em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.sell-send-token .box.right .image-wrap div {\n    width: 37em;\n    height: 69em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/send-sell-token-coins.png');\n}\n\n.cryptofights-how-to-play section.sell-send-token p {\n    line-height: 2.5em;\n}\n\n.cryptofights-how-to-play section.sell-send-token p.big {\n    margin: 0em 0em 0em 0em;\n    padding: 0em 0em 0em 3em;\n    font-weight: 400;\n    line-height: 3.4em;\n    color: #5EC002;\n    background-size: 1.2em;\n    background-repeat: no-repeat;\n    background-position: 0em 1.1em;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/sell-send-arrow.svg');\n}\n\n.cryptofights-how-to-play section.sell-send-token p.big span {\n    font-size: 3em;\n}\n\n.cryptofights-how-to-play section.sell-send-token p.small {\n    line-height: 2.4em;\n    color: #9B9B9B;\n    width: 34em;\n    margin: 1.4em 0em 0em 0em;\n    padding: 0em 0em 0em 3em;\n}\n\n.cryptofights-how-to-play section.sell-send-token div.or {\n    color: #6A6A6A;\n    margin: 2em 0em 2em 0em;\n    padding: 0em 0em 0em 3em;\n}\n\n.cryptofights-how-to-play section.sell-send-token div.or span {\n    font-size: 1.4em;\n}\n\n.cryptofights-how-to-play section.sell-send-token p.small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* ########## SECTION: FOOTER (WEB) ########### */\n/* ############################################ */\n\n.cryptofights-how-to-play section.footer {\n    background-color: transparent;\n    color: #5a5a5a;\n    padding: 14em 0em 14em 0em;\n}\n\n.cryptofights-how-to-play section.footer .main-flex {\n    justify-content: space-between;\n    width: 148.4em;\n    max-width: unset;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .area {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n    align-items: center;\n}\n\n /* LOGO AREA */\n\n.cryptofights-how-to-play section.footer .main-flex .logo-area {\n    align-items: flex-start;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo {\n    margin: -2.4em 0em 0em 0em;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo div {\n    width: 66.2em;\n    height: 8.2em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/cryptofights-logo.svg');\n}\n\n.cryptofights-how-to-play section.footer .main-flex .logo-area .grey-text {\n    flex-grow: 1;\n    display: flex;\n    align-items: flex-end;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .logo-area .grey-text span {\n    font-size: 1.6em;\n}\n\n/* LINKS AREA */\n\n.cryptofights-how-to-play section.footer .main-flex .links-area {\n    align-items: flex-start;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text {\n    flex-grow: 1;\n    display: flex;\n    align-items: flex-end;\n    color: #5a5a5a;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text span {\n    font-size: 1.6em;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .links-area .grey-text a {\n    color: #5a5a5a;\n}\n\n/* SOCIALS AREA */\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area {\n    gap: 2em;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area a {\n    width: 3.5em;\n    height: 3.5em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area a.x-twitter {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/x-twitter.svg');\n}\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area a.instagram {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/instagram.svg');\n}\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area a.telegram {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/telegram.svg');\n}\n\n.cryptofights-how-to-play section.footer .main-flex .socials-area a.discord {\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/discord.svg');\n}\n\n/* ARROW AREA */\n\n.cryptofights-how-to-play section.footer .main-flex .arrow-area {\n    position: relative;\n    justify-content: space-between;\n}\n\n.cryptofights-how-to-play section.footer .main-flex .arrow-area .white-arrow {\n    width: 7.6em;\n    height: 7.6em;\n    margin: -3em 0em 0em 0em;\n    cursor: pointer;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/up-arrow-white.png');\n}\n\n.cryptofights-how-to-play section.footer .main-flex .rezart-logo {\n\n}\n\n.cryptofights-how-to-play section.footer .main-flex .rezart-logo div {\n    width: 3.6em;\n    height: 2.2em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-trade/crypto-fights/rezart-logo.png');\n}\n\n/*  FOOTER BOTTOM MENU (WEB) */\n\n.cryptofights-how-to-play section.footer .bottom-menu {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 0.2em;\n}\n\n.cryptofights-how-to-play section.footer .bottom-menu .item {\n    color: #EEEEEE;\n    text-transform: uppercase;\n}\n\n.cryptofights-how-to-play section.footer .bottom-menu .item:nth-child(1) {\n    color: #5FC300;\n}\n\n/* .cryptofights-how-to-play section.footer .bottom-menu .item.active {\n    color: #5FC300;\n} */\n\n.cryptofights-how-to-play section.footer .bottom-menu .item span {\n    font-size: 3em;\n}\n\n@media screen and (max-width: 1680px) {\n\n    .cryptofights-how-to-play {\n        font-size: 9px;\n    }\n\n}\n\n@media screen and (max-width: 1560px) {\n\n    .cryptofights-how-to-play {\n        font-size: 8px;\n    }\n\n}\n\n@media screen and (max-width: 1400px) {\n\n    .cryptofights-how-to-play {\n        font-size: 7.5px;\n    }\n\n}\n\n@media screen and (max-width: 1280px) {\n\n    .cryptofights-how-to-play {\n        font-size: 7px;\n    }\n\n}\n\n@media screen and (max-width: 1190px) {\n\n    .cryptofights-how-to-play {\n        font-size: 6.5px;\n    }\n\n}\n\n@media screen and (max-width: 1100px) {\n\n    .cryptofights-how-to-play {\n        font-size: 6px;\n    }\n\n}\n\n@media screen and (max-width: 1010px) {\n\n    .cryptofights-how-to-play {\n        font-size: 5.5px;\n    }\n\n}\n\n@media screen and (max-width: 920px) {\n\n    .cryptofights-how-to-play {\n        font-size: 5px;\n    }\n\n}\n\n@media screen and (max-width: 480px) {\n\n    .cryptofights-how-to-play {\n        \n    }\n\n    .cryptofights-how-to-play section .caption {\n        \n    }\n    \n    .cryptofights-how-to-play section .caption span {\n        \n    }\n\n    /* ############################################ */\n    /* ####### \"HOW TO PLAY\" BUTTON (MOBILE) ###### */\n    /* ############################################ */\n\n    /* ############################################ */\n    /* ######## \"PLAY NOW\" BUTTON (MOBILE) ######## */\n    /* ############################################ */\n\n    .cryptofights-how-to-play section .styled-button {\n        min-width: 35em;\n        border-radius: 10em;\n    }\n\n    .cryptofights-how-to-play section .styled-button a {\n        padding: 4em 5em;\n    }\n\n    .cryptofights-how-to-play section .styled-button span {\n        font-size: 2.8em;\n    }\n    \n    /* ############################################ */\n    /* #### \"BE AN AFFILIATE\" BUTTON (MOBILE) ##### */\n    /* ############################################ */\n\n    /* ############################################ */\n    /* ############ MENU ICON (MOBILE) ############ */\n    /* ############################################ */\n\n    .cryptofights-how-to-play .menu-icon {\n        right: 3em;\n        top: 2em;\n        display: flex;\n    }\n\n    /* ############################################ */\n    /* ############ TOP MENU (MOBILE) ############# */\n    /* ############################################ */\n\n    .cryptofights-how-to-play .top-menu {\n        display: none;\n    }\n\n    /* ############################################ */\n    /* ############ SIDE MENU (MOBILE) ############ */\n    /* ############################################ */\n\n    .cryptofights-how-to-play .side-menu {\n        display: flex;\n        transform: translateX(100em);\n        padding: 0em 3.5em;\n    }\n\n    .cryptofights-how-to-play .side-menu .item {\n        text-transform: uppercase;\n    }\n\n    .cryptofights-how-to-play .side-menu .item:nth-child(1) {\n        color: #ffffff;\n    }\n\n    .cryptofights-how-to-play .side-menu .item:nth-child(2) {\n        color: #B0B0B0;\n    }\n\n    .cryptofights-how-to-play .side-menu .item:nth-child(3) {\n        color: #5FC300;\n        text-decoration: underline;\n    }\n\n    .cryptofights-how-to-play .side-menu .menu-caption::before {\n        \n    }\n\n    .cryptofights-how-to-play .side-menu .menu-caption span {\n        \n    }\n\n    .cryptofights-how-to-play .side-menu .item span {\n        font-size: 5em;\n    }\n\n    .cryptofights-how-to-play .side-menu.open {\n        \n    }\n\n    .cryptofights-how-to-play .side-menu .play-now {\n        \n    }\n\n    .cryptofights-how-to-play .side-menu .play-now span {\n        \n    }\n\n    /* ############################################ */\n    /* ############# WEB/MOBILE ONLY ############## */\n    /* ############################################ */\n\n    .cryptofights-how-to-play .web-only.flex {\n        display: none !important;\n    }\n\n    .cryptofights-how-to-play .web-only.block {\n        display: none !important;\n    }\n \n    .cryptofights-how-to-play .mobile-only.flex {\n        display: flex !important;\n    }\n\n    .cryptofights-how-to-play .mobile-only.block {\n        display: block !important;\n    }\n\n    /* ################################################# */\n    /* ########## SECTION: REAL WEB3 (MOBILE) ########## */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.real-web3 {\n        padding: 0em 3.5em 77em 3.5em;\n        background-size: 100%;\n        background-repeat: no-repeat;\n        background-position: center 34em;\n        background-image: url('/public/media/images/how-to-trade/crypto-fights/real-web3-bg_mobile.png');\n    }\n\n    .cryptofights-how-to-play section.real-web3 .caption-area {\n        flex-direction: column;\n    }\n\n    /* .cryptofights-how-to-play section.real-web3 .small-caption {\n        position: static;\n    } */\n\n    .cryptofights-how-to-play section.real-web3 .caption {\n        line-height: 14.1em;\n        width: 71em;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .caption span {\n        font-size: 13em;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .styled-button {\n        min-width: 35em;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .middle-content {\n        flex-direction: column;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .middle-left {\n        width: 100%;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .middle-right {\n        display: none;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .green-lights,\n    .cryptofights-how-to-play section.real-web3 .red-lights {\n        display: none;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .small-caption {\n        bottom: auto;\n        top: 30em;\n        right: 1em;\n        width: 37em;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .top-content {\n        margin: 3.6em 0em 5em 0em;\n    }\n\n    .cryptofights-how-to-play section.real-web3 .top-content .logo {\n        height: 5em;\n        width: 45em;\n    }\n\n    /* ################################################# */\n    /* ####### SECTION: CONNECT WALLET (MOBILE) ######## */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.connect-wallet {\n        padding: 11em 3.5em 9em 3.5em;\n        margin: 0em 0em 0em 0em;\n        background-size: 200em;\n        background-position: -29em 74em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet p.big {\n        line-height: 4.4em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet p.big span {\n        font-size: 3.6em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .views-wrapper {\n        height: 157em;\n        display: flex;\n        flex-direction: row;\n        justify-content: flex-start;\n        align-items: center;\n        gap: 15em;\n        overflow-y: hidden;\n        overflow-x: auto;\n        scroll-snap-type: x mandatory;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .nav-arrow {\n        display: none;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .main-flex {\n        display: flex;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .wallet-view {\n        width: 100%;\n        height: 100%;\n        flex-direction: column-reverse;\n        justify-content: center;\n        flex-shrink: 0;\n        gap: 0;\n        scroll-snap-align: center;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .wallet-view .box.right {\n        width: 100%;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .pool-round .image-wrap div {\n        width: 73em;\n        height: 54em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .investment-bar .image-wrap div {\n        width: 72.4em;\n        height: 80em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .join-down-pool .image-wrap div {\n        width: 74.4em;\n        height: 49em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .join-up-pool .image-wrap div {\n        width: 74.4em;\n        height: 50em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits .caption span {\n        font-size: 9em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits .box.right {\n        width: 100%;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits .box.right p.big {\n        align-self: flex-end;\n        width: 50em;\n        text-align: right;\n        margin: 0em 0em 6em 0em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits p.small {\n        line-height: 3.8em;\n        width: 67em;\n        margin: 3em 0em 3em 0em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits p.small span {\n        font-size: 3em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .profits .styled-button {\n        margin: 6em 0em 0em 0em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .down-pool-wins .box.right,\n    /* .cryptofights-how-to-play section.connect-wallet .start-rate .box.right, */\n    .cryptofights-how-to-play section.connect-wallet .join-up-pool .box.right,\n    .cryptofights-how-to-play section.connect-wallet .join-down-pool .box.right,\n    .cryptofights-how-to-play section.connect-wallet .investment-bar .box.right,\n    .cryptofights-how-to-play section.connect-wallet .up-pool-profit .box.right,\n    .cryptofights-how-to-play section.connect-wallet .down-pool-profit .box.right {\n        margin: 0em 0em 6em 0em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .live-rate .box.right {\n        margin: 0em 0em -7em 0em;\n    }\n\n    /* .cryptofights-how-to-play section.connect-wallet .pool-round .box.right,\n    .cryptofights-how-to-play section.connect-wallet .up-pool-profit .box.right,\n    .cryptofights-how-to-play section.connect-wallet .down-pool-profit .box.right {\n        width: 100%;\n    } */\n\n    .cryptofights-how-to-play section.connect-wallet .start-rate .caption {\n        line-height: 10em;\n    }\n\n    .cryptofights-how-to-play section.connect-wallet .start-rate .caption span {\n        font-size: 9em;\n    }\n\n    /* .cryptofights-how-to-play section.connect-wallet .up-pool-wins .box.right {\n        width: 100%;\n        margin: 0em 0em 6em 0em;\n    } */\n\n    /* ################################################# */\n    /* ####### SECTION: WEEKLY JACKPOT (MOBILE) ######## */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.weekly-jackpot {\n        padding: 14em 3.5em 14em 3.5em;\n        /* background-size: 83em;\n        background-repeat: no-repeat;\n        background-position: center 113em;\n        background-image: url('/public/media/images/new-entry-screen/crypto-fights/weekly-jackpot-bg_mobile.png'); */\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .box.left {\n        width: 100%;\n        max-width: unset;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .caption {\n        text-align: left;\n        line-height: 13.4em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .caption span {\n        font-size: 13em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(1) {\n        margin-right: 2.2em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .caption span:nth-child(2) {\n        margin-left: 1.8em;\n    }\n    \n    .cryptofights-how-to-play section.weekly-jackpot .main-flex {\n        flex-direction: column;\n        gap: 0;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot p.big {\n        margin: 6.6em 8.8em 2em auto;\n        font-weight: 300;\n        line-height: 4.6em;\n        color: #5EC002;\n        width: 45em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot p.big span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot p.small {\n        line-height: 4.8em;\n        color: #9B9B9B;\n        width: 67em;\n        margin: 2em 0em 7em 0;\n        font-weight: 300;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot p.small span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .box.right .image-wrap div {\n        width: 73em;\n        height: 62em;\n    }\n\n    .cryptofights-how-to-play section.weekly-jackpot .play-now {\n        margin: 6em 0em 0em 0em;\n    }\n\n    /* ################################################# */\n    /* ####### SECTION: MONTHLY JACKPOT (MOBILE) ####### */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.monthly-jackpot {\n        padding: 14em 3.5em 14em 3.5em;\n        overflow: hidden;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .caption {\n        line-height: 13.4em;\n        word-wrap: break-word;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .caption span {\n        font-size: 13em;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(1) {\n        /* margin-right: 0;\n        margin-left: 0.3em; */\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .caption span:nth-child(2) {\n        margin-left: 1.9em;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .box.right {\n        width: 100%;\n        max-width: unset;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot p.big {\n        margin: 6.6em 8.4em 2em auto;\n        font-weight: 300;\n        line-height: 4.6em;\n        color: #5EC002;\n        width: 45em;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot p.big span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot p.small {\n        line-height: 4.8em;\n        color: #9B9B9B;\n        width: 67em;\n        margin: 2em 0 -2em 0;\n        font-weight: 300;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot p.small span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .main-flex {\n        flex-direction: column-reverse;\n        gap: 0;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .box.left .image-wrap div {\n        background-position: 7.5em center;\n    }\n\n    .cryptofights-how-to-play section.monthly-jackpot .play-now {\n        margin: 9em 0em 0em 0em;\n    }\n\n    /* ################################################# */\n    /* ##### SECTION: POLYGON BLOCKCHAIN (MOBILE) ###### */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.polygon-matic {\n        padding: 14em 3.5em 14em 3.5em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .main-flex {\n        flex-direction: column;\n        align-items: center;\n        gap: 0;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .caption {\n        text-align: center;\n        line-height: 13.4em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .caption span {\n        font-size: 13em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic p.the-game {\n        margin: 10em auto 3em 0;\n        font-weight: 300;\n        line-height: 4.6em;\n        width: 51em;\n        max-width: unset;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic p.the-game span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .styled-button {\n        margin: 9em 0em 0em 0em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .play-now-box {\n        justify-content: center;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .rows-box {\n        width: 100%;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .row .text span {\n        font-size: 3em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .row {\n        padding: 2em 0em 2em 0em;\n        line-height: 4.8em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .row .text span.big {\n        font-size: 4.6em;\n        font-weight: 300;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .row .num span {\n        font-size: 4.6em;\n    }\n\n    .cryptofights-how-to-play section.polygon-matic .top-content .logo {\n        height: 5em;\n        width: 45em;\n    }\n\n    /* ################################################# */\n    /* ####### SECTION: GET MATIC TOKEN (MOBILE) ####### */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.get-matic-token {\n        padding: 14em 3.5em 14em 3.5em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token .main-flex {\n        flex-direction: column;\n        gap: 0;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token .box.right {\n        max-width: unset;\n        padding: 8em 0em 0em 0em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token .caption {\n        text-align: center;\n        line-height: 13.4em;\n        margin: 0em 0em 7em 0em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token .caption span {\n        font-size: 13em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token p.big {\n        font-weight: 400;\n        line-height: 4.6em;\n        width: 100%;\n        max-width: unset;\n        padding: 0em 0em 0em 4em;\n        background-size: 2.2em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token p.big span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token p.small {\n        line-height: 3.6em;\n        padding: 0em 0em 0em 4em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token p.small span {\n        font-size: 3em;\n    }\n    \n    .cryptofights-how-to-play section.get-matic-token div.or {\n        padding: 0em 0em 0em 4em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token div.or span {\n        font-size: 2.4em;\n    }\n\n    .cryptofights-how-to-play section.get-matic-token .play-now {\n        margin: 9em 0em 0em 0em;\n        align-self: center;\n    }\n\n    /* ################################################# */\n    /* ####### SECTION: SEND SELL TOKEN (MOBILE) ####### */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.sell-send-token {\n        padding: 14em 3.5em 11em 3.5em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .caption {\n        text-align: center;\n        line-height: 13.4em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .caption span {\n        font-size: 13em;\n        font-size: 12.5em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .main-flex {\n        flex-direction: column;\n        gap: 0;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .box.left {\n        max-width: unset;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .box.middle {\n        max-width: unset;\n        margin: 9em 0em 0em 0em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .box.right {\n        display: none;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token p.big {\n        font-weight: 400;\n        line-height: 4.6em;\n        /* width: 100%; */\n        max-width: unset;\n        padding: 0em 0em 0em 4em;\n        background-size: 2.2em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token p.big span {\n        font-size: 3.8em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token p.small {\n        line-height: 3.6em;\n        padding: 0em 0em 0em 4em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token p.small span {\n        font-size: 3em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .play-now {\n        margin: 11em 0em 0em 0em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token div.or {\n        padding: 0em 0em 0em 4em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token div.or span {\n        font-size: 2.4em;\n    }\n\n    .cryptofights-how-to-play section.sell-send-token .play-now-box {\n        align-self: center;\n    }\n\n    /* ################################################# */\n    /* ########### SECTION: FOOTER (MOBILE) ############ */\n    /* ################################################# */\n\n    .cryptofights-how-to-play section.footer {\n        padding: 13em 3.5em 11em 3.5em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex {\n        flex-direction: column;\n        width: unset;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .grey-text-area {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 1.2em;\n        margin: 10em 0em 10em 0em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .grey-text,\n    .cryptofights-how-to-play section.footer .main-flex .grey-text a {\n        color: #5a5a5a;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .socials-area {\n        flex-direction: row;\n        gap: 4em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .arrow-area {\n        flex-direction: row-reverse;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .logo-area .bottom-logo div {\n        width: 50.2em;\n        height: 6.2em;\n    }\n\n    .cryptofights-how-to-play section.footer .bottom-menu .item span {\n        font-size: 5.6em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .links-area {\n        margin: 9em 0em 9em 0em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .socials-area a {\n        width: 6.5em;\n        height: 6.5em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .rezart-logo div {\n        width: 7em;\n        height: 4.6em;\n    }\n\n    .cryptofights-how-to-play section.footer .main-flex .arrow-area .white-arrow {\n        width: 5.6em;\n        height: 5.6em;\n        margin: -1em 0em 0em 0em;\n    }\n    \n    .cryptofights-how-to-play section.footer .main-flex .grey-text span {\n        font-size: 3em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

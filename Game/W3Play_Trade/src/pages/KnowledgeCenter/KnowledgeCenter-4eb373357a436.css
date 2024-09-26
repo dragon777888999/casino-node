@@ -1,0 +1,176 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.page.knowledge-page {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    --header-height: 11em;
+    --boxes-in-row: 4;
+    --horizontal-gap: 3em;
+    --vertical-gap: 1.4em;
+    --box-init-percent: calc(100% / var(--boxes-in-row));
+    --box-width: calc(var(--box-init-percent) - (( var(--vertical-gap) * (var(--boxes-in-row) - 1)) / var(--boxes-in-row)));
+}
+
+.page.knowledge-page .page_header {
+    height: var(--header-height);
+}
+
+.page.knowledge-page .top-caption {
+    position: absolute;
+    top: 8.1em;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    z-index: 1;
+    font-family: 'Barlow';
+    font-weight: 600;
+}
+
+.page.knowledge-page .top-caption span {
+    font-size: 1.3em;
+}
+
+.page.knowledge-page .page_header::before {
+    bottom: -6em;
+}
+
+.page.knowledge-page .knowledge-content {
+    background: #0C0D12;
+    position: relative;
+    border-radius: 1.5em 1.5em 0em 0em;
+    padding: 3em 3em 3em 3em;
+    overflow-y: scroll;
+    height: calc(100% - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+    box-sizing: border-box;
+}
+
+.page.knowledge-page .videos-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--horizontal-gap) var(--vertical-gap);
+}
+
+.page.knowledge-page .box {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: var(--box-width);
+}
+
+.page.knowledge-page .box .vid-image {
+    background-color: #141414;
+    border: solid 0.2em #484848;
+    border-radius: 0.6em;
+    width: 100%;
+    aspect-ratio: 25 / 14;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.page.knowledge-page .box .vid-image:hover {
+    border-color: #f4d56f;
+}
+
+.page.knowledge-page .box .vid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.page.knowledge-page .box .vid-text {
+    margin: 1em 0em 0em 0em;
+    padding: 0em 0.6em;
+    font-family: 'Helvetica';
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+.page.knowledge-page .box .vid-text span {
+    font-size: 1.2em;
+}
+
+.page.knowledge-page .video-player-wrap-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: #00000078;
+}
+
+.page.knowledge-page .video-player-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30em;
+    aspect-ratio: 25 / 14;
+    background-color: #141414;
+    overflow: hidden;
+}
+
+.page.knowledge-page .video-player-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.page.knowledge-page .video-player-wrap .close-vid {
+    position: absolute;
+    background: #000000bf;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    font-family: 'Helvetica';
+    padding: 0.3em 0.4em;
+    border-radius: 0.2em;
+    box-shadow: 0em 0em 0em 0.1em #323232;
+}
+
+.page.knowledge-page .video-player-wrap .close-vid span {
+    font-size: 1em;
+}
+
+@media screen and (max-width: 480px) {
+
+    .page.knowledge-page {
+        --header-height: 12.6em;
+        --boxes-in-row: 2;
+        --horizontal-gap: 2em;
+        --vertical-gap: 1.4em;
+    }
+
+    .page.knowledge-page .top-caption {
+        max-width: 24em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .page.knowledge-page .knowledge-content {
+        padding: 2.4em 2em 2.4em 2em;
+    }
+
+    .page.knowledge-page .video-player-wrap {
+        width: 90%;
+    }
+
+    .page.knowledge-page .video-player-wrap .close-vid span {
+        font-size: 1.4em;
+    }
+
+}
+`, "",{"version":3,"sources":["webpack://./src/pages/KnowledgeCenter/KnowledgeCenter.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;IACzB,wBAAwB;IACxB,sBAAsB;IACtB,qBAAqB;IACrB,oBAAoB;IACpB,iBAAiB;IACjB,qBAAqB;IACrB,iBAAiB;IACjB,qBAAqB;IACrB,qBAAqB;IACrB,oDAAoD;IACpD,uHAAuH;AAC3H;;AAEA;IACI,4BAA4B;AAChC;;AAEA;IACI,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,kBAAkB;IAClB,cAAc;IACd,UAAU;IACV,qBAAqB;IACrB,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,mBAAmB;IACnB,kBAAkB;IAClB,kCAAkC;IAClC,wBAAwB;IACxB,kBAAkB;IAClB,yCAAyC;IACzC,2CAA2C;IAC3C,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,eAAe;IACf,8CAA8C;AAClD;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,uBAAuB;AAC3B;;AAEA;IACI,yBAAyB;IACzB,2BAA2B;IAC3B,oBAAoB;IACpB,WAAW;IACX,qBAAqB;IACrB,sBAAsB;IACtB,gBAAgB;IAChB,eAAe;AACnB;;AAEA;IACI,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,iBAAiB;IACjB,oBAAoB;AACxB;;AAEA;IACI,uBAAuB;IACvB,kBAAkB;IAClB,wBAAwB;IACxB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,MAAM;IACN,OAAO;IACP,QAAQ;IACR,SAAS;IACT,UAAU;IACV,2BAA2B;AAC/B;;AAEA;IACI,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,WAAW;IACX,qBAAqB;IACrB,yBAAyB;IACzB,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,qBAAqB;IACrB,QAAQ;IACR,UAAU;IACV,eAAe;IACf,wBAAwB;IACxB,oBAAoB;IACpB,oBAAoB;IACpB,qCAAqC;AACzC;;AAEA;IACI,cAAc;AAClB;;AAEA;;IAEI;QACI,uBAAuB;QACvB,iBAAiB;QACjB,qBAAqB;QACrB,qBAAqB;IACzB;;IAEA;QACI,eAAe;QACf,SAAS;QACT,2BAA2B;IAC/B;;IAEA;QACI,4BAA4B;IAChC;;IAEA;QACI,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;AAEJ","sourcesContent":[".page.knowledge-page {\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    --header-height: 11em;\n    --boxes-in-row: 4;\n    --horizontal-gap: 3em;\n    --vertical-gap: 1.4em;\n    --box-init-percent: calc(100% / var(--boxes-in-row));\n    --box-width: calc(var(--box-init-percent) - (( var(--vertical-gap) * (var(--boxes-in-row) - 1)) / var(--boxes-in-row)));\n}\n\n.page.knowledge-page .page_header {\n    height: var(--header-height);\n}\n\n.page.knowledge-page .top-caption {\n    position: absolute;\n    top: 8.1em;\n    width: 100%;\n    text-align: center;\n    color: #000000;\n    z-index: 1;\n    font-family: 'Barlow';\n    font-weight: 600;\n}\n\n.page.knowledge-page .top-caption span {\n    font-size: 1.3em;\n}\n\n.page.knowledge-page .page_header::before {\n    bottom: -6em;\n}\n\n.page.knowledge-page .knowledge-content {\n    background: #0C0D12;\n    position: relative;\n    border-radius: 1.5em 1.5em 0em 0em;\n    padding: 3em 3em 3em 3em;\n    overflow-y: scroll;\n    height: calc(100% - var(--header-height));\n    height: calc(100dvh - var(--header-height));\n    box-sizing: border-box;\n}\n\n.page.knowledge-page .videos-wrap {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    gap: var(--horizontal-gap) var(--vertical-gap);\n}\n\n.page.knowledge-page .box {\n    height: auto;\n    display: flex;\n    flex-direction: column;\n    width: var(--box-width);\n}\n\n.page.knowledge-page .box .vid-image {\n    background-color: #141414;\n    border: solid 0.2em #484848;\n    border-radius: 0.6em;\n    width: 100%;\n    aspect-ratio: 25 / 14;\n    box-sizing: border-box;\n    overflow: hidden;\n    cursor: pointer;\n}\n\n.page.knowledge-page .box .vid-image:hover {\n    border-color: #f4d56f;\n}\n\n.page.knowledge-page .box .vid-image img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    pointer-events: none;\n}\n\n.page.knowledge-page .box .vid-text {\n    margin: 1em 0em 0em 0em;\n    padding: 0em 0.6em;\n    font-family: 'Helvetica';\n    font-weight: 300;\n    line-height: 1.6em;\n}\n\n.page.knowledge-page .box .vid-text span {\n    font-size: 1.2em;\n}\n\n.page.knowledge-page .video-player-wrap-overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    z-index: 2;\n    background-color: #00000078;\n}\n\n.page.knowledge-page .video-player-wrap {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 30em;\n    aspect-ratio: 25 / 14;\n    background-color: #141414;\n    overflow: hidden;\n}\n\n.page.knowledge-page .video-player-wrap video {\n    width: 100%;\n    height: 100%;\n    object-fit: fill;\n}\n\n.page.knowledge-page .video-player-wrap .close-vid {\n    position: absolute;\n    background: #000000bf;\n    top: 1em;\n    right: 1em;\n    cursor: pointer;\n    font-family: 'Helvetica';\n    padding: 0.3em 0.4em;\n    border-radius: 0.2em;\n    box-shadow: 0em 0em 0em 0.1em #323232;\n}\n\n.page.knowledge-page .video-player-wrap .close-vid span {\n    font-size: 1em;\n}\n\n@media screen and (max-width: 480px) {\n\n    .page.knowledge-page {\n        --header-height: 12.6em;\n        --boxes-in-row: 2;\n        --horizontal-gap: 2em;\n        --vertical-gap: 1.4em;\n    }\n\n    .page.knowledge-page .top-caption {\n        max-width: 24em;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    .page.knowledge-page .knowledge-content {\n        padding: 2.4em 2em 2.4em 2em;\n    }\n\n    .page.knowledge-page .video-player-wrap {\n        width: 90%;\n    }\n\n    .page.knowledge-page .video-player-wrap .close-vid span {\n        font-size: 1.4em;\n    }\n\n}\n"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

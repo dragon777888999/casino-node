@@ -1,0 +1,1130 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/copy_icon.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/chevron.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/sort_arrows_empty.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/sort_arrows.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/mini_nav_mobile/tab-faq.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/mini_nav_mobile/tab-manager.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/mini_nav_mobile/tab-earnings.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/mini_nav_mobile/tab-dashboard.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/mini_nav_mobile/tab-faq-active.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/mini_nav_mobile/tab-manager-active.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/mini_nav_mobile/tab-earnings-active.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/mini_nav_mobile/tab-dashboard-active.svg", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.page.sap-links-page {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.page.sap-links-page .page_header::before {
+    bottom: -6em;
+}
+
+
+
+
+
+
+
+
+
+.sap-links-page .generate-link-button {
+    position: absolute;
+    top: 0.5em;
+    left: 3.5em;
+    z-index: 5;
+    font-family: 'SF UI Display' sans-serif;
+    color: #000;
+    font-size: 1.5em;
+    line-height: 1.7em;
+    height: 1.7em;
+    padding: 0 0.8em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    border: solid 0.08em #f4d56f;
+    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+    transition: all .2s;
+    cursor: pointer;
+}
+.sap-links-page .dropbox-button{
+    position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    top: 7em; 
+    right: 2em;
+    width: 12.7em;
+    height: 2.8em;
+    border-radius: .4em;
+    border: solid .1em rgba(244, 213, 111, 0.7);
+    background-color: #0c0d13cc;
+    cursor: pointer;
+    z-index: 5;
+}
+.sap-links-page .dropbox-button p{
+    font-size: 1em; 
+    font-weight: bold; 
+    color: #f4d56f;
+    text-transform: capitalize;
+    text-align: left;
+    width: 90%;
+}
+.fa{
+    font-size: 1.2em; 
+    font-weight: bold; 
+    color: #f4d56f;
+    position: absolute; 
+    right: .5em;
+}
+.sap-links-page .remove-bottom-border{
+    border-bottom: hidden;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.sap-links-page .dropbox-button .dropbox-list-box{
+    position: absolute; 
+    top: 2.8em;
+    width: 100%; 
+    height: 10em;
+    border-radius: .4em;
+    border: solid .1em rgba(244, 213, 111, 0.7);
+    background-color: #0c0d13cc;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+.sap-links-page .remove-top-border{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.sap-links-page .dropbox-button .dropbox-list-box p{
+    display: flex; align-items: center;
+    font-size: 1em; 
+    font-weight: bold; 
+    color: #f4d56f;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0 0 0 .6em;
+    width: 100%;
+    height: 2em;
+}
+.sap-links-page .dropbox-button .dropbox-list-box p:hover{
+    background-color: #fffff033;
+}
+
+.sap-links-page .generate-link-button:hover {
+    transform: scale(1.05);
+    border-color: #f7e9bd;
+}
+
+
+
+
+
+
+.sap-links-page .counter_row {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    left: 1em;
+    top: 7.5em;
+    z-index: 2;
+}
+
+.sap-links-page .counter_row .links_count {
+    margin-left: 0.8em;
+    font-size: 1.9em;
+    font-weight: 500;
+    line-height: 1em;
+    color: #f4d56f;
+}
+
+
+
+
+
+
+.sap-links-page .table_header {
+    top: 10.5em;
+    height: 4.4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.8;
+    border-radius: 2em 2em 0 0;
+    background-color: #0c0d13;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sap-links-page .expansion_table_header {
+    height: 2.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.8;
+    width: 100%;
+    overflow: hidden;
+    position: static;
+    background-color: #212227;
+    border-radius: 0;
+    font-family: 'Source Sans Pro';
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.sap-links-page .table_header .th {
+    line-height: 1.2em;
+    height: 4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: #f4d56f;
+    transition: all .2s;
+    box-sizing: border-box;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.sap-links-page .table_header .th span {
+    font-size: 1.1em;
+}
+
+.row .td {
+    text-align: center;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+}
+
+.row .td span {
+    font-size: 1.25em;
+}
+
+.sap-links-page .table_header .th.date,
+.row .td.date {
+    width: 12%;
+}
+
+.sap-links-page .table_header .th.link,
+.row .td.link {
+    width: 28%;
+}
+
+.sap-links-page .table_header .th.link {
+    justify-content: flex-start;
+}
+
+.row .td.link {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+
+
+
+.row .td.link .link-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.row .td.link .link-content .link-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.row .td.link .link-content .link-address {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.row .td.link .copy_icon {
+    width: 3em;
+    flex-shrink: 0;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 79%;
+    cursor: pointer;
+}
+
+
+
+
+
+.row .td.link span {
+    font-size: 0.9em;
+}
+
+.sap-links-page .table_header .th.clicks,
+.row .td.clicks {
+    width: 12%;
+}
+
+.sap-links-page .table_header .th.wallet,
+.row .td.wallet {
+    width: 12%;
+}
+
+.sap-links-page .table_header .th.players,
+.row .td.players {
+    width: 12%;
+}
+
+.sap-links-page .table_header .th.conversion,
+.row .td.conversion {
+    width: 12%;
+}
+
+.sap-links-page .table_header .th.revenue,
+.row .td.revenue {
+    width: 12%;
+}
+
+.row .td.revenue {
+    display: flex;
+    justify-content: center;
+    color: #87d009;
+}
+.row .td.revenue svg{
+    width: 0.7em;
+    height: 0.7em;
+    margin-top: 0.57em;
+}
+.row .td.revenue svg path{
+    fill: #87d009;
+}
+
+.sap-links-page .table_header .th.action,
+.row .td.action {
+    width: 7%;
+}
+
+.row .td.action {
+    cursor: pointer;
+}
+
+.sap-links-page .records {
+    height: calc(100% - 15.6em);
+    margin-top: 2.9em;
+    overflow-y: scroll;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sap-links-page .records .linkmanager_expansion_content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.sap-links-page .expansion-table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 2em;
+    flex-shrink: 0;
+    background: #0c0d13;
+}
+
+.sap-links-page .expansion-table-row:not(:last-child) {
+    border-bottom: 0.12em solid #35363A;
+}
+
+.sap-links-page .record-wrap {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sap-links-page .record-wrap:not(:last-child) {
+    margin-bottom: 0.25em;
+}
+
+.sap-links-page .row {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 400;
+    color: #f4d56f;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3.8em;
+    background: #212936;
+}
+
+@keyframes sap_expansion_slide_open {
+    0% {height: 0}
+    100% {height: 10em}
+}
+
+.sap-links-page .record-wrap .expansion {
+    transition: all .3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 0em;
+    transition: all .3s ease-out;
+    /* overflow-y: scroll; */
+}
+
+.sap-links-page .record-wrap .expand {
+    min-width: 0.5em;
+    min-height: 1em;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(90deg);
+    /* margin-left: 1em; */
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.sap-links-page .row .expand_up {
+    transform: rotate(-90deg);
+}
+
+.sap-links-page .row .icon-matic {
+    position: relative;
+    margin-right: 0.1em;
+}
+
+.sap-links-page .row .icon-matic::before {
+    position: relative;
+    bottom: -0.66em;
+    font-size: 0.8em;
+}
+
+.sap-links-page .expansion_table_header .expansion-th,
+.sap-links-page .expansion-table-row .expansion-td {
+    text-align: center;
+    padding: 0 0.5em;
+    font-family: 'Source Sans Pro';
+}
+
+.sap-links-page .expansion_table_header .expansion-th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sap-links-page .expansion_table_header .expansion-th span {
+    font-size: 0.7em;
+}
+
+.sap-links-page .expansion-table-row .expansion-td {
+    color: #e7e7e7;
+}
+
+.sap-links-page .expansion-table-row .expansion-td span {
+
+}
+
+.sap-links-page .expansion_table_header .expansion-th.country,
+.sap-links-page .expansion-table-row .expansion-td.country {
+    width: 12%;
+}
+
+.sap-links-page .expansion-table-row .expansion-td.country {
+    color: #f4d56f;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.clicks,
+.sap-links-page .expansion-table-row .expansion-td.clicks {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.wallet,
+.sap-links-page .expansion-table-row .expansion-td.wallet {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.players,
+.sap-links-page .expansion-table-row .expansion-td.players {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.conversion,
+.sap-links-page .expansion-table-row .expansion-td.conversion {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.trades,
+.sap-links-page .expansion-table-row .expansion-td.trades {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.trades-per-user,
+.sap-links-page .expansion-table-row .expansion-td.trades-per-user {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.revenue-per-user,
+.sap-links-page .expansion-table-row .expansion-td.revenue-per-user {
+    width: 12%;
+}
+
+.sap-links-page .expansion_table_header .expansion-th.revenue,
+.sap-links-page .expansion-table-row .expansion-td.revenue {
+    width: 12%;
+}
+
+/* TOP RIGHT NAVIGATION PANEL */
+
+.sap-page .top_link.right {
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    top: 0.6em;
+    width: 8.6em;
+    height: 4em;
+    font-weight: bold;
+    font-family: 'Source Sans Pro';
+    text-align: center;
+    line-height: 2em;
+    transition: all .2s;
+    z-index: 1;
+    right: 5em;
+    display: flex;
+    width: 16em;
+}
+
+.sap-page .top_link.right .link_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sap-page .top_link.right .link_btn_img_box {
+    width: 3.5em;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4em;
+    border: solid 0.1em rgba(244, 213, 111, 0.7);
+    background-color: rgba(37, 31, 20, 0.5);
+}
+
+.sap-page .top_link.right .link_btn_img_box:hover {
+    scale: 1.02;
+}
+
+.sap-page .top_link.right .link_btn_img_box_active {
+    width: 3.4em;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4em;
+    border: solid 0.1em rgba(255, 255, 255, 0.7);
+    background-color: #251f14;
+}
+
+.sap-page .top_link.right .link_btn_img_box img {
+    height: 100%;
+}
+
+.sap-page .top_link.right .link_btn_img_box_active img {
+    height: 100%;
+}
+
+.sap-page .top_link.right .link_btn_content {
+    font-family: 'SF UI Display', sans-serif;
+    color: #ffffffb3;
+    font-size: .7em;
+    font-weight: 600;
+    line-break: auto;
+    line-height: 1em;
+    margin: 0.5em 0em 0em 0em;
+}
+
+.sap-page .link_btn_content_active {
+    font-family: 'SF UI Display', sans-serif;
+    color: #ffffff;
+    font-size: .7em;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 0.5em 0em 0em 0em;
+}
+
+.sap-links-page.table_page .table_header .th.sortable,
+.sap-links-page.table_page .expansion_table_header .expansion-th.sortable {
+    cursor: pointer;
+}
+
+.sap-links-page.table_page .table_header .th.sortable::after {
+    display: inline-block;
+    content: ' ';
+    width: .45em;
+    height: .9em;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center no-repeat;
+    background-size: auto 100%;
+    vertical-align: middle;
+    margin-left: .3em;
+}
+
+.sap-links-page.table_page .table_header .th.sorter::after {
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_3___}) center no-repeat;
+    background-size: auto 100%;
+}
+
+.sap-links-page.table_page .table_header .th.desc::after {
+    transform: scale(1, -1);
+}
+
+.sap-links-page.table_page .expansion_table_header .expansion-th.sortable::after {
+    display: inline-block;
+    content: ' ';
+    width: .45em;
+    height: .9em;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center no-repeat;
+    background-size: auto 100%;
+    vertical-align: middle;
+    margin-left: .3em;
+}
+
+.sap-links-page.table_page .expansion_table_header .expansion-th.sorter::after {
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_3___}) center no-repeat;
+    background-size: auto 100%;
+}
+
+.sap-links-page.table_page .expansion_table_header .expansion-th.desc::after {
+    transform: scale(1, -1);
+}
+
+@media screen and (max-width: 480px) {
+
+    .sap-page .link_btn_content_active {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        margin: 0;
+        font-family: 'SF UI Display', 'sans-serif';
+        color: #f4d56f;
+        font-weight: 400;
+    }
+
+    .page.sap-links-page {
+        height: calc(100% - 6em);
+    }
+
+    .page.sap-links-page .page_header {
+        height: 13em;
+    }
+
+    .page.sap-links-page .golden-title {
+        line-height: 2.8em;
+        margin: 0.5em 0 0 0;
+    }
+
+    .sap-links-page .counter_row {
+        display: none;
+    }
+
+    body .sap-links-page.table_page .table_header {
+        position: static;
+    }
+
+    .sap-links-page .records {
+        height: calc(100% - 16.2em);
+        margin-top: 0;
+        background: black;
+    }
+
+    .sap-links-page .row {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 400;
+        color: #f4d56f;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background: #212936;
+    }
+
+    .sap-links-page .row .sub-row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 4em;
+        box-sizing: border-box;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-top {
+        height: 5em;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-middle {
+        position: relative;
+        height: 5em;
+        padding-left: 1em;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-middle::before,
+    .sap-links-page .row .sub-row.sub-row-middle::after {
+        content: '';
+        position: absolute;
+        background-color: #383F49;
+        width: 87%;
+        left: 1em;
+        height: 0.1em;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-middle::before {
+        top: 0;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-middle::after {
+        bottom: 0;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-bottom {
+        height: 5em;
+        padding-left: 1em;
+    }
+
+
+    .sap-links-page .row .sub-row.sub-row-middle .td:first-child {
+        padding-left: 0;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-bottom .td:first-child {
+        padding-left: 0;
+    }
+
+
+    .sap-links-page .row .sub-row.sub-row-middle .td:last-child {
+        padding-right: 0;
+    }
+
+    .sap-links-page .row .sub-row.sub-row-bottom .td:last-child {
+        padding-right: 0;
+    }
+
+    .sub-row.sub-row-bottom .td {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+        text-align: left;
+    }
+
+    .sub-row.sub-row-bottom .td .title {
+        color: white;
+        font-size: 1em;
+    }
+
+    .sap-links-page .row .sub-row-bottom .td.clicks,
+    .sap-links-page .row .sub-row-bottom .td.wallet,
+    .sap-links-page .row .sub-row-bottom .td.players,
+    .sap-links-page .row .sub-row-bottom .td.conversion {
+        width: 22%;
+    }
+
+    .sap-links-page .row .sub-row-bottom .td span.value {
+        font-size: 1.5em;
+    }
+
+    .sap-links-page .row .sub-row-bottom .td.action {
+        width: 12%;
+    }
+
+    .sap-links-page .row .sub-row-bottom .td.action .expand {
+        height: 1.5em;
+        min-height: unset;
+    }
+
+    .sap-links-page .row .sub-row-middle .td.link {
+        width: 88%;
+        height: 100%;
+        text-align: center;
+        /* font-size: inherit; */
+    }
+
+    .sap-links-page .row .sub-row-middle .td.link {
+        /* font-size: 1.3em; */
+    }
+
+    .sap-links-page .row .sub-row-middle .td.link .link-content {
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.2em;
+    }
+
+    .sap-links-page .row .sub-row-middle .td.link .link-content span.link-name {
+        color: white;
+        font-size: 1em;
+    }
+
+    .sap-links-page .row .sub-row-middle .td.link .copy_icon {
+        width: 2.5em;
+        background-size: auto 39%;
+    }
+
+    .sap-links-page .row .sub-row-middle .td.action {
+        width: 12%;
+    }
+
+    .sap-links-page .table_header .th.date,
+    .sap-links-page .table_header .th.link,
+    .sap-links-page .table_header .th.revenue {
+        width: 29.333333333333332%;
+    }
+
+    .sap-links-page .table_header .th.action {
+        width: 12%;
+    }
+
+    .sap-links-page .table_header .th.link {
+        justify-content: center;
+    }
+
+    .sap-links-page .row .sub-row-top .td.date,
+    .sap-links-page .row .sub-row-top .td.link-name,
+    .sap-links-page .row .sub-row-top .td.revenue {
+        width: 29.333333333333332%;
+    }
+
+    .sap-links-page .row .sub-row-top .td.link-name {
+        text-transform: uppercase;
+    }
+
+    .sap-links-page .row .sub-row-top .td.action {
+        width: 12%;
+    }
+
+    .sap-links-page .row .sub-row-top .td span {
+        font-size: 1.5em;
+    }
+
+
+
+
+
+
+
+    body .sap-links-page .dropbox-button p{
+        font-size: 1.6em; 
+        font-weight: 600; 
+        color: #f4d56f;
+        text-transform: capitalize;
+        text-align: left;
+        width: 80%;
+    } 
+    body .sap-links-page .dropbox-button {
+        top: 8em;
+        right: 2.5em;
+        height: 4.1em;
+        width: 14.7em;
+    }
+    body .sap-links-page .fa{
+        font-size: 1.8em; 
+        font-weight: bold; 
+        color: #f4d56f;
+        position: absolute; 
+        right: .5em;
+    }
+    body .sap-links-page .dropbox-button .dropbox-list-box{
+        top: 4.1em;
+        height: 20em;
+    }
+    body .sap-links-page .dropbox-button .dropbox-list-box p{
+        font-size: 1.6em; 
+        font-weight: 600;
+        height: 4em;
+        padding-left: .9em;
+    }
+
+
+
+    body .sap-links-page .generate-link-button {
+        height: 4rem;
+        background: #f4d56f;
+        border: solid 0.2rem #E4C363;
+        color: black;
+        border-radius: 0.2rem;
+        line-height: 2.7em;
+        font-family: 'SF UI Display', sans-serif;
+        font-weight: bold;
+        padding: 0rem 2rem;
+        font-size: 1.6em;
+        position: absolute;
+        top: 8rem;
+        left: 25%;
+        transform: translateX(-50%);
+        z-index: 5;
+        min-width: 11rem;
+        text-align: center;
+    }
+
+    body .sap-links-page .generate-link-button:hover {
+        transform: translateX(-50%);
+        border-color: #E4C363;
+    }
+
+    .sap-page .top_link.right {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        top: auto;
+        bottom: 0em;
+        width: 100%;
+        height: 6em;
+        font-weight: bold; 
+        font-family: 'Source Sans Pro';
+        text-align: center;
+        line-height: 2em;
+        transition: all .2s;
+        cursor: pointer;
+        z-index: 100;
+        background: #191C1D;
+        right: 0;
+    }
+
+    .sap-page .top_link.right .link_btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+    }
+
+    .sap-page .top_link.right .link_btn_img_box,
+    .sap-page .top_link.right .link_btn_img_box_active {
+        width: 3.2em;
+        height: 3.2em;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .sap-page .top_link.right .link_btn_img_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .sap-page .top_link.right .link_btn_img_box img,
+    .sap-page .top_link.right .link_btn_img_box_active img {
+        display: none;
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(1) .link_btn_img_box {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(2) .link_btn_img_box {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(3) .link_btn_img_box {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(4) .link_btn_img_box {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+    }
+
+
+    .sap-page .top_link.right .link_btn:nth-child(1) .link_btn_img_box_active {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(2) .link_btn_img_box_active {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(3) .link_btn_img_box_active {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+    }
+
+    .sap-page .top_link.right .link_btn:nth-child(4) .link_btn_img_box_active {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+    }
+
+    .sap-page .top_link.right .link_btn_content {
+        font-size: 1.2em;
+        line-height: 1.3em;
+        margin: 0;
+        font-family: 'SF UI Display', 'sans-serif';
+        color: #757575;
+        font-weight: 400;
+    }
+
+    .row .td.link .link-content .link-address {
+        width: 98%;
+    }
+
+    .row .td.link .link-content .link-address span {
+        font-size: 1.3em;
+    }
+
+    .sap-links-page .expansion-table-row .expansion-td.country {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left;
+    }
+
+    .sap-links-page .expansion-table-row {
+        height: auto;
+        padding: 0.5em 0em 0.5em 0em;
+        box-sizing: border-box;
+    }
+    
+    .sap-links-page .expansion_table_header .expansion-th,
+    .sap-links-page .expansion-table-row .expansion-td {
+        text-align: left;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th {
+        justify-content: flex-start;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th span {
+        font-size: 0.8em;
+    }
+
+    .sap-links-page .expansion-table-row .expansion-td:first-child {
+        padding-left: 0;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th:first-child {
+        padding-left: 0;
+    }
+
+    .sap-links-page .expansion-table-row .expansion-td:last-child {
+        padding-right: 0;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th:last-child {
+        padding-right: 0;
+    }
+
+    .sap-links-page .expansion_table_header,
+    .sap-links-page .expansion-table-row {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.country,
+    .sap-links-page .expansion-table-row .expansion-td.country {
+        width: 20%;
+        width: 17.5%;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.clicks,
+    .sap-links-page .expansion-table-row .expansion-td.clicks {
+        width: 16%;
+        width: 16.5%;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.wallet,
+    .sap-links-page .expansion-table-row .expansion-td.wallet {
+        width: 16%;
+        width: 16.5%;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.players,
+    .sap-links-page .expansion-table-row .expansion-td.players {
+        width: 16%;
+        width: 16.5%;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.revenue-per-user,
+    .sap-links-page .expansion-table-row .expansion-td.revenue-per-user {
+        width: 16%;
+        width: 16.5%;
+    }
+
+    .sap-links-page .expansion_table_header .expansion-th.revenue,
+    .sap-links-page .expansion-table-row .expansion-td.revenue {
+        width: 16%;
+        width: 16.5%;
+    }
+
+    .sap-links-page .row .icon-matic {
+        margin-right: 0.3em;
+        display: inline-block;
+        position: relative;
+        padding-left: 0.9em;
+    }
+
+    .sap-links-page .row .icon-matic::before {
+        position: absolute;
+        left: 0;
+        padding-left: 0em;
+        font-size: 1em;
+        bottom: 0.2em;
+    }
+
+    .sap-dashboard .earnings-box > .amount,
+    .sap-dashboard .earnings-sub-box > .amount {
+        font-weight: 400;
+    }
+
+    .row .td.revenue svg{
+        margin-top: 0.91em;
+    }
+}`, "",{"version":3,"sources":["webpack://./src/pages/SuperAffiliates/LinksManager/LinksManager.css"],"names":[],"mappings":"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","sourcesContent":[".page.sap-links-page {\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n}\n\n.page.sap-links-page .page_header::before {\n    bottom: -6em;\n}\n\n\n\n\n\n\n\n\n\n.sap-links-page .generate-link-button {\n    position: absolute;\n    top: 0.5em;\n    left: 3.5em;\n    z-index: 5;\n    font-family: 'SF UI Display' sans-serif;\n    color: #000;\n    font-size: 1.5em;\n    line-height: 1.7em;\n    height: 1.7em;\n    padding: 0 0.8em;\n    border-radius: 0.3em;\n    font-weight: bold;\n    border: solid 0.08em #f4d56f;\n    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n    transition: all .2s;\n    cursor: pointer;\n}\n.sap-links-page .dropbox-button{\n    position: absolute;\n    display: flex; \n    align-items: center; \n    justify-content: center;\n    top: 7em; \n    right: 2em;\n    width: 12.7em;\n    height: 2.8em;\n    border-radius: .4em;\n    border: solid .1em rgba(244, 213, 111, 0.7);\n    background-color: #0c0d13cc;\n    cursor: pointer;\n    z-index: 5;\n}\n.sap-links-page .dropbox-button p{\n    font-size: 1em; \n    font-weight: bold; \n    color: #f4d56f;\n    text-transform: capitalize;\n    text-align: left;\n    width: 90%;\n}\n.fa{\n    font-size: 1.2em; \n    font-weight: bold; \n    color: #f4d56f;\n    position: absolute; \n    right: .5em;\n}\n.sap-links-page .remove-bottom-border{\n    border-bottom: hidden;\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n}\n.sap-links-page .dropbox-button .dropbox-list-box{\n    position: absolute; \n    top: 2.8em;\n    width: 100%; \n    height: 10em;\n    border-radius: .4em;\n    border: solid .1em rgba(244, 213, 111, 0.7);\n    background-color: #0c0d13cc;\n    display: flex; \n    flex-direction: column;\n    justify-content: space-evenly;\n    overflow-y: auto; \n    overflow-x: hidden;\n}\n.sap-links-page .remove-top-border{\n    border-top-left-radius: 0 !important;\n    border-top-right-radius: 0 !important;\n}\n.sap-links-page .dropbox-button .dropbox-list-box p{\n    display: flex; align-items: center;\n    font-size: 1em; \n    font-weight: bold; \n    color: #f4d56f;\n    text-transform: capitalize;\n    margin: 0;\n    padding: 0 0 0 .6em;\n    width: 100%;\n    height: 2em;\n}\n.sap-links-page .dropbox-button .dropbox-list-box p:hover{\n    background-color: #fffff033;\n}\n\n.sap-links-page .generate-link-button:hover {\n    transform: scale(1.05);\n    border-color: #f7e9bd;\n}\n\n\n\n\n\n\n.sap-links-page .counter_row {\n    position: absolute;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: flex-start;\n    left: 1em;\n    top: 7.5em;\n    z-index: 2;\n}\n\n.sap-links-page .counter_row .links_count {\n    margin-left: 0.8em;\n    font-size: 1.9em;\n    font-weight: 500;\n    line-height: 1em;\n    color: #f4d56f;\n}\n\n\n\n\n\n\n.sap-links-page .table_header {\n    top: 10.5em;\n    height: 4.4em;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: flex-start;\n    opacity: 0.8;\n    border-radius: 2em 2em 0 0;\n    background-color: #0c0d13;\n    position: absolute;\n    width: 100%;\n    left: 0;\n    right: 0;\n    overflow: hidden;\n    z-index: 2;\n}\n\n.sap-links-page .expansion_table_header {\n    height: 2.8em;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: flex-start;\n    opacity: 0.8;\n    width: 100%;\n    overflow: hidden;\n    position: static;\n    background-color: #212227;\n    border-radius: 0;\n    font-family: 'Source Sans Pro';\n    flex-shrink: 0;\n    box-sizing: border-box;\n}\n\n\n\n\n.sap-links-page .table_header .th {\n    line-height: 1.2em;\n    height: 4em;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    font-family: 'Barlow Semi Condensed', sans-serif;\n    font-size: 1em;\n    font-weight: 500;\n    color: #f4d56f;\n    transition: all .2s;\n    box-sizing: border-box;\n    padding: 0 0.5em;\n    text-align: center;\n}\n\n.sap-links-page .table_header .th span {\n    font-size: 1.1em;\n}\n\n.row .td {\n    text-align: center;\n    padding: 0 0.5em;\n    box-sizing: border-box;\n}\n\n.row .td span {\n    font-size: 1.25em;\n}\n\n.sap-links-page .table_header .th.date,\n.row .td.date {\n    width: 12%;\n}\n\n.sap-links-page .table_header .th.link,\n.row .td.link {\n    width: 28%;\n}\n\n.sap-links-page .table_header .th.link {\n    justify-content: flex-start;\n}\n\n.row .td.link {\n    text-align: left;\n    display: flex;\n    flex-direction: row;\n    overflow: hidden;\n}\n\n\n\n\n\n.row .td.link .link-content {\n    display: flex;\n    flex-direction: column;\n    flex-grow: 1;\n    overflow: hidden;\n}\n\n.row .td.link .link-content .link-name {\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n}\n\n.row .td.link .link-content .link-address {\n    width: 100%;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n}\n\n.row .td.link .copy_icon {\n    width: 3em;\n    flex-shrink: 0;\n    background-image: url('/public/media/images/copy_icon.png');\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: auto 79%;\n    cursor: pointer;\n}\n\n\n\n\n\n.row .td.link span {\n    font-size: 0.9em;\n}\n\n.sap-links-page .table_header .th.clicks,\n.row .td.clicks {\n    width: 12%;\n}\n\n.sap-links-page .table_header .th.wallet,\n.row .td.wallet {\n    width: 12%;\n}\n\n.sap-links-page .table_header .th.players,\n.row .td.players {\n    width: 12%;\n}\n\n.sap-links-page .table_header .th.conversion,\n.row .td.conversion {\n    width: 12%;\n}\n\n.sap-links-page .table_header .th.revenue,\n.row .td.revenue {\n    width: 12%;\n}\n\n.row .td.revenue {\n    display: flex;\n    justify-content: center;\n    color: #87d009;\n}\n.row .td.revenue svg{\n    width: 0.7em;\n    height: 0.7em;\n    margin-top: 0.57em;\n}\n.row .td.revenue svg path{\n    fill: #87d009;\n}\n\n.sap-links-page .table_header .th.action,\n.row .td.action {\n    width: 7%;\n}\n\n.row .td.action {\n    cursor: pointer;\n}\n\n.sap-links-page .records {\n    height: calc(100% - 15.6em);\n    margin-top: 2.9em;\n    overflow-y: scroll;\n    overflow-y: auto;\n    position: relative;\n    z-index: 2;\n}\n\n.sap-links-page .records .linkmanager_expansion_content {\n    width: 100%;\n    margin: 0;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    flex-shrink: 0;\n    height: auto;\n}\n\n.sap-links-page .expansion-table-row {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    width: 100%;\n    height: 2em;\n    flex-shrink: 0;\n    background: #0c0d13;\n}\n\n.sap-links-page .expansion-table-row:not(:last-child) {\n    border-bottom: 0.12em solid #35363A;\n}\n\n.sap-links-page .record-wrap {\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n}\n\n.sap-links-page .record-wrap:not(:last-child) {\n    margin-bottom: 0.25em;\n}\n\n.sap-links-page .row {\n    font-family: 'Barlow Semi Condensed', sans-serif;\n    font-weight: 400;\n    color: #f4d56f;\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-start;\n    align-items: center;\n    height: 3.8em;\n    background: #212936;\n}\n\n@keyframes sap_expansion_slide_open {\n    0% {height: 0}\n    100% {height: 10em}\n}\n\n.sap-links-page .record-wrap .expansion {\n    transition: all .3s;\n    overflow: hidden;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    height: 0em;\n    transition: all .3s ease-out;\n    /* overflow-y: scroll; */\n}\n\n.sap-links-page .record-wrap .expand {\n    min-width: 0.5em;\n    min-height: 1em;\n    background: transparent url('/public/media/images/chevron.svg') center no-repeat;\n    background-size: 100% 100%;\n    transform: rotate(90deg);\n    /* margin-left: 1em; */\n    cursor: pointer;\n    transition: all .2s;\n}\n\n.sap-links-page .row .expand_up {\n    transform: rotate(-90deg);\n}\n\n.sap-links-page .row .icon-matic {\n    position: relative;\n    margin-right: 0.1em;\n}\n\n.sap-links-page .row .icon-matic::before {\n    position: relative;\n    bottom: -0.66em;\n    font-size: 0.8em;\n}\n\n.sap-links-page .expansion_table_header .expansion-th,\n.sap-links-page .expansion-table-row .expansion-td {\n    text-align: center;\n    padding: 0 0.5em;\n    font-family: 'Source Sans Pro';\n}\n\n.sap-links-page .expansion_table_header .expansion-th {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.sap-links-page .expansion_table_header .expansion-th span {\n    font-size: 0.7em;\n}\n\n.sap-links-page .expansion-table-row .expansion-td {\n    color: #e7e7e7;\n}\n\n.sap-links-page .expansion-table-row .expansion-td span {\n\n}\n\n.sap-links-page .expansion_table_header .expansion-th.country,\n.sap-links-page .expansion-table-row .expansion-td.country {\n    width: 12%;\n}\n\n.sap-links-page .expansion-table-row .expansion-td.country {\n    color: #f4d56f;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.clicks,\n.sap-links-page .expansion-table-row .expansion-td.clicks {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.wallet,\n.sap-links-page .expansion-table-row .expansion-td.wallet {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.players,\n.sap-links-page .expansion-table-row .expansion-td.players {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.conversion,\n.sap-links-page .expansion-table-row .expansion-td.conversion {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.trades,\n.sap-links-page .expansion-table-row .expansion-td.trades {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.trades-per-user,\n.sap-links-page .expansion-table-row .expansion-td.trades-per-user {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.revenue-per-user,\n.sap-links-page .expansion-table-row .expansion-td.revenue-per-user {\n    width: 12%;\n}\n\n.sap-links-page .expansion_table_header .expansion-th.revenue,\n.sap-links-page .expansion-table-row .expansion-td.revenue {\n    width: 12%;\n}\n\n/* TOP RIGHT NAVIGATION PANEL */\n\n.sap-page .top_link.right {\n    display: block;\n    position: absolute;\n    display: flex;\n    align-items: flex-start;\n    justify-content: space-between;\n    top: 0.6em;\n    width: 8.6em;\n    height: 4em;\n    font-weight: bold;\n    font-family: 'Source Sans Pro';\n    text-align: center;\n    line-height: 2em;\n    transition: all .2s;\n    z-index: 1;\n    right: 5em;\n    display: flex;\n    width: 16em;\n}\n\n.sap-page .top_link.right .link_btn {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n}\n\n.sap-page .top_link.right .link_btn_img_box {\n    width: 3.5em;\n    height: 2.4em;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 0.4em;\n    border: solid 0.1em rgba(244, 213, 111, 0.7);\n    background-color: rgba(37, 31, 20, 0.5);\n}\n\n.sap-page .top_link.right .link_btn_img_box:hover {\n    scale: 1.02;\n}\n\n.sap-page .top_link.right .link_btn_img_box_active {\n    width: 3.4em;\n    height: 2.4em;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 0.4em;\n    border: solid 0.1em rgba(255, 255, 255, 0.7);\n    background-color: #251f14;\n}\n\n.sap-page .top_link.right .link_btn_img_box img {\n    height: 100%;\n}\n\n.sap-page .top_link.right .link_btn_img_box_active img {\n    height: 100%;\n}\n\n.sap-page .top_link.right .link_btn_content {\n    font-family: 'SF UI Display', sans-serif;\n    color: #ffffffb3;\n    font-size: .7em;\n    font-weight: 600;\n    line-break: auto;\n    line-height: 1em;\n    margin: 0.5em 0em 0em 0em;\n}\n\n.sap-page .link_btn_content_active {\n    font-family: 'SF UI Display', sans-serif;\n    color: #ffffff;\n    font-size: .7em;\n    font-weight: 600;\n    line-height: 1em;\n    margin: 0.5em 0em 0em 0em;\n}\n\n.sap-links-page.table_page .table_header .th.sortable,\n.sap-links-page.table_page .expansion_table_header .expansion-th.sortable {\n    cursor: pointer;\n}\n\n.sap-links-page.table_page .table_header .th.sortable::after {\n    display: inline-block;\n    content: ' ';\n    width: .45em;\n    height: .9em;\n    background: transparent url('/public/media/images/sort_arrows_empty.png') center no-repeat;\n    background-size: auto 100%;\n    vertical-align: middle;\n    margin-left: .3em;\n}\n\n.sap-links-page.table_page .table_header .th.sorter::after {\n    background: transparent url('/public/media/images/sort_arrows.png') center no-repeat;\n    background-size: auto 100%;\n}\n\n.sap-links-page.table_page .table_header .th.desc::after {\n    transform: scale(1, -1);\n}\n\n.sap-links-page.table_page .expansion_table_header .expansion-th.sortable::after {\n    display: inline-block;\n    content: ' ';\n    width: .45em;\n    height: .9em;\n    background: transparent url('/public/media/images/sort_arrows_empty.png') center no-repeat;\n    background-size: auto 100%;\n    vertical-align: middle;\n    margin-left: .3em;\n}\n\n.sap-links-page.table_page .expansion_table_header .expansion-th.sorter::after {\n    background: transparent url('/public/media/images/sort_arrows.png') center no-repeat;\n    background-size: auto 100%;\n}\n\n.sap-links-page.table_page .expansion_table_header .expansion-th.desc::after {\n    transform: scale(1, -1);\n}\n\n@media screen and (max-width: 480px) {\n\n    .sap-page .link_btn_content_active {\n        font-size: 1.2em;\n        line-height: 1.3em;\n        margin: 0;\n        font-family: 'SF UI Display', 'sans-serif';\n        color: #f4d56f;\n        font-weight: 400;\n    }\n\n    .page.sap-links-page {\n        height: calc(100% - 6em);\n    }\n\n    .page.sap-links-page .page_header {\n        height: 13em;\n    }\n\n    .page.sap-links-page .golden-title {\n        line-height: 2.8em;\n        margin: 0.5em 0 0 0;\n    }\n\n    .sap-links-page .counter_row {\n        display: none;\n    }\n\n    body .sap-links-page.table_page .table_header {\n        position: static;\n    }\n\n    .sap-links-page .records {\n        height: calc(100% - 16.2em);\n        margin-top: 0;\n        background: black;\n    }\n\n    .sap-links-page .row {\n        font-family: 'Barlow Semi Condensed', sans-serif;\n        font-weight: 400;\n        color: #f4d56f;\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n        height: auto;\n        background: #212936;\n    }\n\n    .sap-links-page .row .sub-row {\n        width: 100%;\n        display: flex;\n        align-items: center;\n        height: 4em;\n        box-sizing: border-box;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-top {\n        height: 5em;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-middle {\n        position: relative;\n        height: 5em;\n        padding-left: 1em;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-middle::before,\n    .sap-links-page .row .sub-row.sub-row-middle::after {\n        content: '';\n        position: absolute;\n        background-color: #383F49;\n        width: 87%;\n        left: 1em;\n        height: 0.1em;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-middle::before {\n        top: 0;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-middle::after {\n        bottom: 0;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-bottom {\n        height: 5em;\n        padding-left: 1em;\n    }\n\n\n    .sap-links-page .row .sub-row.sub-row-middle .td:first-child {\n        padding-left: 0;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-bottom .td:first-child {\n        padding-left: 0;\n    }\n\n\n    .sap-links-page .row .sub-row.sub-row-middle .td:last-child {\n        padding-right: 0;\n    }\n\n    .sap-links-page .row .sub-row.sub-row-bottom .td:last-child {\n        padding-right: 0;\n    }\n\n    .sub-row.sub-row-bottom .td {\n        display: flex;\n        flex-direction: column;\n        gap: 0.4em;\n        text-align: left;\n    }\n\n    .sub-row.sub-row-bottom .td .title {\n        color: white;\n        font-size: 1em;\n    }\n\n    .sap-links-page .row .sub-row-bottom .td.clicks,\n    .sap-links-page .row .sub-row-bottom .td.wallet,\n    .sap-links-page .row .sub-row-bottom .td.players,\n    .sap-links-page .row .sub-row-bottom .td.conversion {\n        width: 22%;\n    }\n\n    .sap-links-page .row .sub-row-bottom .td span.value {\n        font-size: 1.5em;\n    }\n\n    .sap-links-page .row .sub-row-bottom .td.action {\n        width: 12%;\n    }\n\n    .sap-links-page .row .sub-row-bottom .td.action .expand {\n        height: 1.5em;\n        min-height: unset;\n    }\n\n    .sap-links-page .row .sub-row-middle .td.link {\n        width: 88%;\n        height: 100%;\n        text-align: center;\n        /* font-size: inherit; */\n    }\n\n    .sap-links-page .row .sub-row-middle .td.link {\n        /* font-size: 1.3em; */\n    }\n\n    .sap-links-page .row .sub-row-middle .td.link .link-content {\n        justify-content: center;\n        align-items: flex-start;\n        gap: 0.2em;\n    }\n\n    .sap-links-page .row .sub-row-middle .td.link .link-content span.link-name {\n        color: white;\n        font-size: 1em;\n    }\n\n    .sap-links-page .row .sub-row-middle .td.link .copy_icon {\n        width: 2.5em;\n        background-size: auto 39%;\n    }\n\n    .sap-links-page .row .sub-row-middle .td.action {\n        width: 12%;\n    }\n\n    .sap-links-page .table_header .th.date,\n    .sap-links-page .table_header .th.link,\n    .sap-links-page .table_header .th.revenue {\n        width: 29.333333333333332%;\n    }\n\n    .sap-links-page .table_header .th.action {\n        width: 12%;\n    }\n\n    .sap-links-page .table_header .th.link {\n        justify-content: center;\n    }\n\n    .sap-links-page .row .sub-row-top .td.date,\n    .sap-links-page .row .sub-row-top .td.link-name,\n    .sap-links-page .row .sub-row-top .td.revenue {\n        width: 29.333333333333332%;\n    }\n\n    .sap-links-page .row .sub-row-top .td.link-name {\n        text-transform: uppercase;\n    }\n\n    .sap-links-page .row .sub-row-top .td.action {\n        width: 12%;\n    }\n\n    .sap-links-page .row .sub-row-top .td span {\n        font-size: 1.5em;\n    }\n\n\n\n\n\n\n\n    body .sap-links-page .dropbox-button p{\n        font-size: 1.6em; \n        font-weight: 600; \n        color: #f4d56f;\n        text-transform: capitalize;\n        text-align: left;\n        width: 80%;\n    } \n    body .sap-links-page .dropbox-button {\n        top: 8em;\n        right: 2.5em;\n        height: 4.1em;\n        width: 14.7em;\n    }\n    body .sap-links-page .fa{\n        font-size: 1.8em; \n        font-weight: bold; \n        color: #f4d56f;\n        position: absolute; \n        right: .5em;\n    }\n    body .sap-links-page .dropbox-button .dropbox-list-box{\n        top: 4.1em;\n        height: 20em;\n    }\n    body .sap-links-page .dropbox-button .dropbox-list-box p{\n        font-size: 1.6em; \n        font-weight: 600;\n        height: 4em;\n        padding-left: .9em;\n    }\n\n\n\n    body .sap-links-page .generate-link-button {\n        height: 4rem;\n        background: #f4d56f;\n        border: solid 0.2rem #E4C363;\n        color: black;\n        border-radius: 0.2rem;\n        line-height: 2.7em;\n        font-family: 'SF UI Display', sans-serif;\n        font-weight: bold;\n        padding: 0rem 2rem;\n        font-size: 1.6em;\n        position: absolute;\n        top: 8rem;\n        left: 25%;\n        transform: translateX(-50%);\n        z-index: 5;\n        min-width: 11rem;\n        text-align: center;\n    }\n\n    body .sap-links-page .generate-link-button:hover {\n        transform: translateX(-50%);\n        border-color: #E4C363;\n    }\n\n    .sap-page .top_link.right {\n        position: fixed;\n        display: flex;\n        align-items: center;\n        justify-content: space-evenly;\n        top: auto;\n        bottom: 0em;\n        width: 100%;\n        height: 6em;\n        font-weight: bold; \n        font-family: 'Source Sans Pro';\n        text-align: center;\n        line-height: 2em;\n        transition: all .2s;\n        cursor: pointer;\n        z-index: 100;\n        background: #191C1D;\n        right: 0;\n    }\n\n    .sap-page .top_link.right .link_btn {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        justify-content: center;\n        width: 25%;\n    }\n\n    .sap-page .top_link.right .link_btn_img_box,\n    .sap-page .top_link.right .link_btn_img_box_active {\n        width: 3.2em;\n        height: 3.2em;\n        border: 0;\n        background-color: transparent;\n        background-repeat: no-repeat;\n        background-size: contain;\n    }\n\n    .sap-page .top_link.right .link_btn_img_box {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        border-radius: 0;\n    }\n\n    .sap-page .top_link.right .link_btn_img_box img,\n    .sap-page .top_link.right .link_btn_img_box_active img {\n        display: none;\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(1) .link_btn_img_box {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-faq.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(2) .link_btn_img_box {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-manager.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(3) .link_btn_img_box {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-earnings.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(4) .link_btn_img_box {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-dashboard.svg');\n    }\n\n\n    .sap-page .top_link.right .link_btn:nth-child(1) .link_btn_img_box_active {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-faq-active.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(2) .link_btn_img_box_active {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-manager-active.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(3) .link_btn_img_box_active {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-earnings-active.svg');\n    }\n\n    .sap-page .top_link.right .link_btn:nth-child(4) .link_btn_img_box_active {\n        background-image: url('/public/media/images/mini_nav_mobile/tab-dashboard-active.svg');\n    }\n\n    .sap-page .top_link.right .link_btn_content {\n        font-size: 1.2em;\n        line-height: 1.3em;\n        margin: 0;\n        font-family: 'SF UI Display', 'sans-serif';\n        color: #757575;\n        font-weight: 400;\n    }\n\n    .row .td.link .link-content .link-address {\n        width: 98%;\n    }\n\n    .row .td.link .link-content .link-address span {\n        font-size: 1.3em;\n    }\n\n    .sap-links-page .expansion-table-row .expansion-td.country {\n        overflow: hidden;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        text-align: left;\n    }\n\n    .sap-links-page .expansion-table-row {\n        height: auto;\n        padding: 0.5em 0em 0.5em 0em;\n        box-sizing: border-box;\n    }\n    \n    .sap-links-page .expansion_table_header .expansion-th,\n    .sap-links-page .expansion-table-row .expansion-td {\n        text-align: left;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th {\n        justify-content: flex-start;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th span {\n        font-size: 0.8em;\n    }\n\n    .sap-links-page .expansion-table-row .expansion-td:first-child {\n        padding-left: 0;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th:first-child {\n        padding-left: 0;\n    }\n\n    .sap-links-page .expansion-table-row .expansion-td:last-child {\n        padding-right: 0;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th:last-child {\n        padding-right: 0;\n    }\n\n    .sap-links-page .expansion_table_header,\n    .sap-links-page .expansion-table-row {\n        padding-left: 1em;\n        padding-right: 1em;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.country,\n    .sap-links-page .expansion-table-row .expansion-td.country {\n        width: 20%;\n        width: 17.5%;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.clicks,\n    .sap-links-page .expansion-table-row .expansion-td.clicks {\n        width: 16%;\n        width: 16.5%;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.wallet,\n    .sap-links-page .expansion-table-row .expansion-td.wallet {\n        width: 16%;\n        width: 16.5%;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.players,\n    .sap-links-page .expansion-table-row .expansion-td.players {\n        width: 16%;\n        width: 16.5%;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.revenue-per-user,\n    .sap-links-page .expansion-table-row .expansion-td.revenue-per-user {\n        width: 16%;\n        width: 16.5%;\n    }\n\n    .sap-links-page .expansion_table_header .expansion-th.revenue,\n    .sap-links-page .expansion-table-row .expansion-td.revenue {\n        width: 16%;\n        width: 16.5%;\n    }\n\n    .sap-links-page .row .icon-matic {\n        margin-right: 0.3em;\n        display: inline-block;\n        position: relative;\n        padding-left: 0.9em;\n    }\n\n    .sap-links-page .row .icon-matic::before {\n        position: absolute;\n        left: 0;\n        padding-left: 0em;\n        font-size: 1em;\n        bottom: 0.2em;\n    }\n\n    .sap-dashboard .earnings-box > .amount,\n    .sap-dashboard .earnings-sub-box > .amount {\n        font-weight: 400;\n    }\n\n    .row .td.revenue svg{\n        margin-top: 0.91em;\n    }\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

@@ -1,0 +1,1209 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/entry_screens/btcbattles/btcbattles.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/entry_screens/btcbattles/certik_badge_2.jpeg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/entry_screens/btcbattles/logo-icon.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/entry_screens/btcbattles/icon_shields.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/entry_screens/btcbattles/icon_coins.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/entry_screens/btcbattles/icon_eye.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/entry_screens/btcbattles/tutorial_step_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/entry_screens/btcbattles/tutorial_step_2.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/entry_screens/btcbattles/tutorial_step_3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/entry_screens/btcbattles/tutorial_step_4.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/entry_screens/btcbattles/tutorial_step_5.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/entry_screens/btcbattles/bb_phone_placeholder.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/entry_screens/btcbattles/card_BTC_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/entry_screens/btcbattles/dxfeed-logo.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/entry_screens/btcbattles/polygon-logo.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/entry_screens/btcbattles/certik_logo.jpg", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.btcbattles-main * {
+    box-sizing: border-box;
+}
+
+.btcbattles-main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.btcbattles-main button {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: inherit;
+}
+  
+.btcbattles-main a {
+    text-decoration: none;
+}
+  
+.btcbattles-main h1,
+.btcbattles-main h2,
+.btcbattles-main h3,
+.btcbattles-main h4,
+.btcbattles-main h5,
+.btcbattles-main h6 {
+    font-size: unset;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+  
+.btcbattles-main p,
+.btcbattles-main h1,
+.btcbattles-main h2,
+.btcbattles-main h3,
+.btcbattles-main h4,
+.btcbattles-main h5,
+.btcbattles-main h6 {
+    margin: 0;
+    padding: 0;
+}
+  
+.btcbattles-main input,
+.btcbattles-main textarea {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background-color: grey;
+}
+  
+.btcbattles-main .v-hidden {
+    visibility: hidden;
+}
+  
+.btcbattles-main .hidden {
+    display: none;
+}
+
+.btcbattles-wrap {
+    font-size: 10px;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #010015;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btcbattles-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.btcbattles-main .pink-h2 {
+    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    border: 0.1em solid transparent;
+    color: #f4d56f;
+    border-radius: 0.8em;
+    max-width: 120em;
+    margin: 0em auto 0em auto;
+    padding: 1em;
+    animation: roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;
+    font-weight: 400;
+}
+
+.btcbattles-main .blue-h2 {
+    background: linear-gradient(rgba(68, 82, 120, 0.8), rgba(68, 82, 120, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(68, 82, 120, 0.5) 0%,rgba(68, 82, 120, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    border: 0.1em solid transparent;
+    color: #f4d56f;
+    border-radius: 0.8em;
+    padding: 1em;
+    text-align: left;
+    position: relative;
+    animation: roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;
+}
+
+/* HEADER */
+
+.btcbattles-main header {
+    position: relative;
+    background: #010012;
+    min-height: 8.6em;
+}
+
+.btcbattles-main header .logo {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    height: 8.6em;
+    width: 22em;
+    margin-left: 1.6em;
+    /* cursor: pointer; */
+}
+
+.btcbattles-main nav .nav-ul-wrap {
+    position: absolute;
+    top: 50%;
+    right: 2em;
+    transform: translateY(-50%);
+}
+
+.btcbattles-main nav .nav-ul-wrap ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.btcbattles-main nav .nav-ul-wrap ul li {
+    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    border: 0.2em solid rgba(244, 213, 111, 0.7);
+    height: 3.8em;
+    line-height: 3.6em;
+    padding: 0 1.4em;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+
+.btcbattles-main nav .nav-ul-wrap ul li.play-now {
+    background: linear-gradient(rgba(244, 213, 111, 0.8), rgba(244, 213, 111, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(244, 213, 111, 0.5) 0%,rgba(244, 213, 111, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    font-weight: 700;
+}
+
+.btcbattles-main nav .nav-ul-wrap ul li a {
+    color: inherit;
+}
+
+.btcbattles-main nav .nav-ul-wrap ul li a span,
+.btcbattles-main nav .nav-ul-wrap ul li div span {
+    font-size: 1.4em;
+}
+
+/* Decentralized Social Pool Prediction Gaming */
+
+.btcbattles-main section.decentralized {
+    position: relative;
+    text-align: center;
+    padding: 4.8em 3em 10.8em 3em;
+    overflow: hidden;
+}
+
+.btcbattles-main section.decentralized::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10em;
+    background: linear-gradient(177deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(1, 0, 21, 1) 51%, rgba(1, 0, 21, 1) 70%, rgba(1, 0, 21, 1) 100%);
+    z-index: 2;
+}
+
+.btcbattles-main section.decentralized div.play-now-button {
+    background: #febd00;
+    color: #694900;
+    border-bottom: 0.3em solid #be7900;
+    border-radius: 0.4em;
+    padding: 1.5em 3.6em;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 3em;
+    outline: rgba(0,0,0,0.5) solid 0.2em;
+    cursor: pointer;
+    animation-name: Boostedelementszoomup;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+    overflow: hidden;
+    position: relative;
+}
+
+.btcbattles-main section.decentralized div.play-now-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    animation: slide-effect 5s infinite 1.5s;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+}
+
+.btcbattles-main section.decentralized div.play-now-button span {
+    font-size: 1.8em;
+}
+
+.btcbattles-main section.decentralized div.certik-button {
+    background: linear-gradient(rgba(68, 82, 120, 0.8), rgba(68, 82, 120, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(68, 82, 120, 0.5) 0%,rgba(68, 82, 120, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    border: 1px solid transparent;
+    height: 8em;
+    width: 20em;
+    margin: 5em auto 0 auto;
+    border-radius: 0.7em;
+}
+
+.btcbattles-main section.decentralized div.certik-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 0.7em;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.btcbattles-main section.decentralized div.certik-button a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    animation: slide-effect 5s infinite 1.5s;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+}
+
+.btcbattles-main section.decentralized .decentralized-bg {
+    background-color: #2d256b;
+    /* background-image: url('/public/media/images/entry_screens/btcbattles/hero-bg.jpg'); */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.btcbattles-main section.decentralized .decentralized-overlay {
+    background-color: rgba(68,82,120,0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.btcbattles-main section.decentralized .decentralized-content {
+    position: relative;
+    max-width: 80em;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.btcbattles-main section.decentralized .floating-logo {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    opacity: 0.35;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.btcbattles-main section.decentralized .floating-logo.logo-1 {
+    left: 0;
+    top: 15%;
+    animation-name: floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.btcbattles-main section.decentralized .floating-logo.logo-2 {
+    right: 0;
+    top: 25%;
+    animation-name: floating-2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.btcbattles-main section.decentralized .floating-logo.logo-3 {
+    right: 25%;
+    bottom: 0;
+    animation-name: floating-3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.btcbattles-main section.decentralized .floating-logo.logo-4 {
+    left: 25%;
+    bottom: 25%;
+    animation-name: floating-2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.btcbattles-main section.decentralized .floating-logo.logo-5 {
+    left: 50%;
+    top: 35%;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.btcbattles-main section.decentralized h2 {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 10em;
+    animation-name: Boostedelementszoomup;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+}
+
+.btcbattles-main section.decentralized h2 span {
+    font-size: 8em;
+}
+
+.btcbattles-main section.decentralized p.based {
+    max-width: 800px;
+    margin: 3em auto 3.2em auto;
+    animation-name: Boostedelementszoomup;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+}
+
+.btcbattles-main section.decentralized p.based span {
+    font-size: 2.5em;
+}
+
+.btcbattles-main section.decentralized p.fully-transparent {
+    max-width: 800px;
+    margin: 0 auto;
+    animation-name: Boostedelementszoomup;
+    animation-duration: .8s;
+    animation-fill-mode: both;
+}
+
+.btcbattles-main section.decentralized p.fully-transparent span {
+    font-size: 1.8em;
+}
+
+/* THREE ICONS ON THE LEFT */
+
+.btcbattles-main section.security {
+    padding: 0 3em;
+}
+
+.btcbattles-main section.security .left-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    width: 80%;
+    margin: 5.8em auto 8.8em auto;
+    justify-content: space-around;
+    animation: shake-top 7s cubic-bezier(.455,.03,.515,.955) infinite both;
+}
+
+.btcbattles-main section.security .left-icons > div {
+    height: 6em;
+    padding-left: 6.5em;
+    background-size: 6em;
+    background-position: 0em center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.btcbattles-main section.security .left-icons div.icon-security {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.btcbattles-main section.security .left-icons div.icon-play {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+.btcbattles-main section.security .left-icons div.icon-transparent {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+.btcbattles-main section.security .left-icons > div span {
+    font-size: 1.6em;
+}
+
+/* HOW IT WORKS */
+
+.btcbattles-main section.how-it-works {
+    min-height: 15em;
+    padding: 0 3em 4.8em 3em;
+}
+
+.btcbattles-main section.how-it-works > h2 {
+    font-weight: 400;
+}
+
+.btcbattles-main section.how-it-works > h2 span {
+    font-size: 4em;
+}
+
+.btcbattles-main section.how-it-works .items-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 3em;
+    max-width: 120em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btcbattles-main section.how-it-works .items-row.top-row {
+    margin-top: 6em;
+    margin-bottom: 2em;
+}
+
+.btcbattles-main section.how-it-works .items-row.bottom-row {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.btcbattles-main section.how-it-works .items-row .item {
+    display: flex;
+    flex-direction: column;
+    width: 33.333%;
+}
+
+.btcbattles-main section.how-it-works .items-row .item h2 {
+    font-weight: 400;
+    position: relative;
+}
+
+.btcbattles-main section.how-it-works .items-row .item h2::after {
+    content: '';
+    position: absolute;
+    right: 1em;
+    top: 0em;
+    width: 9em;
+    height: 9em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: heartbeat 2s ease-in-out infinite both;
+}
+
+.btcbattles-main section.how-it-works .items-row .item.step-1 h2::after {
+    top: -1.9em;
+    right: -1em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+.btcbattles-main section.how-it-works .items-row .item.step-2 h2::after {
+    width: 10em;
+    height: 10em;
+    top: -3.9em;
+    right: -2.8em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.btcbattles-main section.how-it-works .items-row .item.step-3 h2::after {
+    top: -2.3em;
+    right: -1em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+.btcbattles-main section.how-it-works .items-row .item.step-4 h2::after {
+    width: 9em;
+    height: 9.6em;
+    top: -3.8em;
+    right: -2.4em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+}
+
+.btcbattles-main section.how-it-works .items-row .item.step-5 h2::after {
+    width: 11em;
+    height: 11em;
+    top: -3.2em;
+    right: -3.8em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+}
+
+.btcbattles-main section.how-it-works .items-row .item h2 span {
+    font-size: 2.2em;
+}
+
+.btcbattles-main section.how-it-works .items-row .item .text {
+    color: rgb(153, 150, 203);
+    margin: 15px 15px 15px 15px;
+    line-height: 2.8em;
+}
+
+.btcbattles-main section.how-it-works .items-row .item .text span {
+    font-size: 1.6em;
+}
+
+/* WHAT IS A PLAY-2-EARN GAME */
+
+.btcbattles-main section.play-to-earn {
+    background: #050322;
+    background-color: #050322;
+    background-image: url('https://poker.progressionstudios.com/wp-content/uploads/2017/07/poker-bg-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4.8em 3em;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: rgba(36,25,90,0.61);
+}
+
+.btcbattles-main section.play-to-earn .divided {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4em;
+    max-width: 120em;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.btcbattles-main section.play-to-earn .divided > div {
+    width: 49%;
+    text-align: center;
+}
+
+.btcbattles-main section.play-to-earn .image-part {
+    position: relative;
+}
+
+.btcbattles-main section.play-to-earn .image-part div {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: wobble-hor-bottom 15s infinite both;
+}
+
+.btcbattles-main section.play-to-earn .text-part p {
+    color: rgb(153, 150, 203);
+    line-height: 2.8em;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.btcbattles-main section.play-to-earn .text-part p span {
+    font-size: 1.6em;
+}
+
+.btcbattles-main section.play-to-earn .text-part h2 span {
+    font-size: 3.6em;
+}
+
+.btcbattles-main section.play-to-earn div.join-and-play-button {
+    position: relative;
+    background: #febd00;
+    color: #694900;
+    border-bottom: 0.3em solid #be7900;
+    border-radius: 0.4em;
+    padding: 1.5em 3.6em;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 2em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btcbattles-main section.play-to-earn div.join-and-play-button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    animation: slide-effect 5s infinite 1.5s;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+}
+
+.btcbattles-main section.play-to-earn div.join-and-play-button span {
+    font-size: 1.6em;
+}
+
+/* GAMEPLAY MODES */
+
+.btcbattles-main section.gameplay-modes {
+    min-height: 15em;
+    padding: 4.8em 3em;
+}
+
+.btcbattles-main section.gameplay-modes h2 span {
+    font-size: 4em;
+}
+
+.btcbattles-main section.gameplay-modes .gameplay-totem {
+    display: flex;
+    flex-direction: column;
+    width: 35em;
+    margin: 4em auto 0 auto;
+    background: rgba(255,255,255,0.11);
+}
+
+.btcbattles-main section.gameplay-modes .totem-image {
+    position: relative;
+    height: 52em;
+    background-color: rgb(47, 32, 118);
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 27em;
+    overflow: hidden;
+}
+
+.btcbattles-main section.gameplay-modes .totem-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    animation: slide-effect 5s infinite 1.5s;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+}
+
+.btcbattles-main section.gameplay-modes .totem-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em 1em 1em;
+    padding: 3em 3em 2.5em 3em;
+}
+
+.btcbattles-main section.gameplay-modes .totem-list > div {
+    text-align: center;
+    border-color: rgba(255,255,255,0.08);
+    border-bottom-width: 1px;
+    color: rgb(153, 150, 203);
+    height: 4em;
+    line-height: 4em;
+    position: relative;
+}
+
+.btcbattles-main section.gameplay-modes .totem-list > div:not(:first-child) {
+    margin-top: 0.1em;
+}
+
+.btcbattles-main section.gameplay-modes .totem-list > div:not(:first-child)::after {
+    content: '';
+    background: rgba(255,255,255,0.08);
+    height: 0.1em;
+    width: 29em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btcbattles-main section.gameplay-modes .totem-list > div span {
+    font-size: 1.6em;
+}
+
+.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button {
+    text-align: center;
+}
+
+.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div {
+    position: relative;
+    background: #febd00;
+    color: #694900;
+    border-bottom: 0.3em solid #be7900;
+    border-radius: 0.4em;
+    padding: 1.5em 3.6em;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 4em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    animation: slide-effect 5s infinite 1.5s;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);
+}
+
+.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div span {
+    font-size: 1.6em;
+}
+
+/* 100% Transparent and Secure */
+
+.btcbattles-main section.transparent {
+    min-height: 15em;
+    padding: 0 3em 4.8em 3em;
+}
+
+.btcbattles-main section.transparent h2 {
+    font-weight: 400;
+}
+
+.btcbattles-main section.transparent h2 span {
+    font-size: 3.6em;
+}
+
+.btcbattles-main section.transparent .transparent-items {
+    display: flex;
+    flex-direction: row;
+    max-width: 120em;
+    margin: 3em auto 0 auto;
+    gap: 4em;
+}
+
+.btcbattles-main section.transparent .transparent-items .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 12em;
+    margin: 2em 0;
+}
+
+.btcbattles-main section.transparent .transparent-items .item {
+    width: 33.333%;
+}
+
+.btcbattles-main section.transparent .transparent-items .item.dxfeed .image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+
+.btcbattles-main section.transparent .transparent-items .item.polygon .image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+
+.btcbattles-main section.transparent .transparent-items .item.certik .image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+
+.btcbattles-main section.transparent .transparent-items .item h2 span {
+    font-size: 2.2em;
+}
+
+.btcbattles-main section.transparent .transparent-items .item p {
+    color: #9996cb;
+    line-height: 2.8em;
+    margin-top: 2em;
+}
+
+.btcbattles-main section.transparent .transparent-items .item p a {
+    color: white !important;
+}
+
+.btcbattles-main section.transparent .transparent-items .item p span {
+    font-size: 1.6em;
+}
+
+/* FOOTER */
+
+.btcbattles-main footer {
+    position: relative;
+    min-height: 8em;
+    background: rgba(68, 82, 120, 0.67);
+    color: #6e63a9;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+    gap: 3em;
+}
+
+.btcbattles-main footer::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: rgba(255,255,255, 0.1);
+    width: 100%;
+    height: 0.2em;
+}
+
+.btcbattles-main footer .all-rights-reserved {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.btcbattles-main footer .all-rights-reserved span {
+    font-size: 1.3em;
+}
+
+.btcbattles-main footer .footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.btcbattles-main footer .footer-socials .social-icon {
+    position: relative;
+    width: 3.8em;
+    height: 3.8em;
+    color: #dddddd;
+    background: rgba(255,255,255, 0.06);
+    border-radius: 50%;
+}
+
+.btcbattles-main footer .footer-socials .social-icon:before {
+    font-size: 1.6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* STICKY SOCIALS */
+
+.btcbattles-main .sticky-socials {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    bottom: 19em;
+    right: 0.2em;
+    z-index: 3;
+}
+
+.btcbattles-main .sticky-socials .social-icon {
+    position: relative;
+    width: 4.6em;
+    height: 4.6em;
+    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;
+    border: 0.1em solid transparent;
+    color: #f4d56f;
+    border-radius: 0.8em;
+    cursor: pointer;
+    animation: heartbeat 5s ease-in-out infinite both;
+}
+
+.btcbattles-main .sticky-socials .social-icon:before {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ANIMATIONS */
+
+@keyframes roll-in-blurred-left {
+    0% {transform: translateX(-1000px) rotate(-720deg); filter: blur(50px); opacity: 0}
+    100% {transform: translateX(0) rotate(0deg); filter: blur(0); opacity: 1}
+}
+
+@keyframes slide-effect {
+    0% {transform:translateX(-100%);}
+    9% {transform:translateX(100%);}
+    100% {transform:translateX(100%);}
+}
+
+@keyframes floating {
+    0% {transform: translateY(0%)}
+    50% {transform: translateY(8%)}
+    100% {transform: translateY(0%)}
+}
+
+@keyframes floating-2 {
+    0% {transform: translateY(0%)}
+    50% {transform: translateY(20%)}
+    100% {transform: translateY(0%)}
+}
+
+@keyframes floating-3 {
+    0% {transform: translateY(0%)}
+    50% {transform: translateY(15%)}
+    100% {transform: translateY(0%)}
+}
+
+@keyframes shake-top {
+    0%,100%{transform:rotate(0deg);transform-origin:50% 0}
+    10%{transform:rotate(0.5deg)}
+    20%,40%,60%{transform:rotate(-1deg)}
+    30%,50%,70%{transform:rotate(1deg)}
+    80%{transform:rotate(-0.5deg)}
+    90%{transform:rotate(0.5deg)}
+}
+
+@keyframes wobble-hor-bottom{
+    0%,100%{transform:translateX(0);transform-origin:50% 50%}
+    15%{transform:translateX(-30px) rotate(-6deg)}
+    30%{transform:translateX(15px) rotate(6deg)}
+    45%{transform:translateX(-15px) rotate(-3.6deg)}
+    60%{transform:translateX(9px) rotate(2.4deg)}
+    75%{transform:translateX(-6px) rotate(-1.2deg)}
+}
+
+@keyframes heartbeat{
+    from { transform: scale(1); transform-origin:center center; animation-timing-function: ease-out; }
+    20% { transform: scale(.91); animation-timing-function: ease-in; }
+    30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% { transform: scale(1); animation-timing-function: ease-out; }
+}
+
+@keyframes Boostedelementszoomup {
+    0% {opacity: 0; transform: scale(1.2)}
+    100% {opacity: 1; transform: scale(1)}
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px) {
+
+    .btcbattles-main .hamburger {
+        cursor: pointer;
+        position: absolute;
+        width: 4.9em;
+        top: 1.9em;
+        right: 2em;
+        height: 4.9em;
+        z-index: 4;
+        overflow: hidden;
+    }
+
+    .btcbattles-main .hamburger div {
+        background-color: white;
+        border-radius: 0.3em;
+        height: 0.5em;
+        position: absolute;
+        right: 1em;
+        width: 3em;
+        transition: width .2s,-webkit-transform .2s;
+        transition: width .2s,transform .2s;
+        transition: width .2s,transform .2s,-webkit-transform .2s;
+    }
+
+    .btcbattles-main .hamburger div.top {
+        top: 0.9em;
+    }
+
+    .btcbattles-main .hamburger div.middle {
+        top: 2.2em;
+    }
+
+    .btcbattles-main .hamburger div.bottom {
+        top: 3.6em;
+    }
+
+    .btcbattles-main .mobile-menu-open .hamburger div.top {
+        width: 4.4em;
+        transform: translate(0.7em,1.3em) rotate(-45deg);
+    }
+
+    .btcbattles-main .mobile-menu-open .hamburger div.middle {
+        transform: translate(-4.5em);
+    }
+
+    .btcbattles-main .mobile-menu-open .hamburger div.bottom {
+        width: 4.4em;
+        transform: translate(0.7em,-1.4em) rotate(45deg);
+    }
+
+    .btcbattles-main nav {
+        position: relative;
+        transition: max-height .2s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .btcbattles-main nav .nav-ul-wrap {
+        transform: none;
+        position: static;
+        background: white;
+        color: #888888;
+    }
+
+    .btcbattles-main nav .nav-ul-wrap ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .btcbattles-main nav .nav-ul-wrap ul li {
+        background: none;
+        border: 0;
+        height: 6.2em;
+        line-height: 6.2em;
+    }
+
+    .btcbattles-main nav .nav-ul-wrap ul li a {
+        height: 100%;
+        display: block;
+    }
+
+    .btcbattles-main nav .nav-ul-wrap ul li.play-now {
+        background: none;
+        border: 0;
+        font-weight: 400;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .btcbattles-main section.decentralized h2 {
+        line-height: 5.6em;
+    }
+
+    .btcbattles-main section.decentralized h2 span {
+        font-size: 4em;
+    }
+
+    .btcbattles-main section.decentralized p.based span {
+        font-size: 1.8em;
+    }
+
+    .btcbattles-main section.decentralized p.fully-transparent {
+        line-height: 1.8em;
+    }
+
+    .btcbattles-main section.decentralized p.fully-transparent span {
+        font-size: 1.3em;
+    }
+
+    .btcbattles-main section.how-it-works .items-row .item {
+        width: 100%;
+    }
+
+    .btcbattles-main section.how-it-works .items-row {
+        flex-direction: column;
+    }
+
+    .btcbattles-main section.security {
+        padding: 0 3em 4em 3em;
+    }
+
+    .btcbattles-main section.security .left-icons {
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btcbattles-main section.play-to-earn .divided {
+        flex-direction: column;
+    }
+
+    .btcbattles-main section.play-to-earn .divided > div {
+        width: 100%;
+    }
+
+    .btcbattles-main section.play-to-earn .image-part {
+        height: 17em;
+        height: 29em;
+    }
+
+    .btcbattles-main section.transparent .transparent-items {
+        flex-direction: column;
+        margin: 5em auto 0 auto;
+    }
+
+    .btcbattles-main section.transparent .transparent-items .item {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .btcbattles-wrap {
+        font-size: 2.54453vw;
+        overflow-x: hidden;
+    }
+
+    .btcbattles-main section.gameplay-modes .gameplay-totem {
+        width: 100%;
+    }
+
+    .btcbattles-main section.play-to-earn {
+        padding: 2.8em 3em 4.8em 3em;
+    }
+
+    .btcbattles-main footer .all-rights-reserved {
+        text-align: center;
+        line-height: 2em;
+    }
+
+    .btcbattles-main section.play-to-earn .image-part {
+        height: 17em;
+    }
+
+    .btcbattles-main section.decentralized .floating-logo.logo-1 {
+        left: 0;
+        top: 3%;
+    }
+    
+    .btcbattles-main section.decentralized .floating-logo.logo-2 {
+        right: 0;
+        top: 16%;
+    }
+    
+    .btcbattles-main section.decentralized .floating-logo.logo-3 {
+        right: 25%;
+        bottom: 0;
+    }
+    .btcbattles-main section.decentralized .floating-logo.logo-4 {
+        left: -20%;
+        bottom: 25%;
+    }
+    
+    .btcbattles-main section.decentralized .floating-logo.logo-5 {
+        left: 37%;
+        top: 35%;
+    }
+
+    .btcbattles-main section.decentralized .decentralized-bg {
+        background-position: -35em center;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/EntryScreens/BTCBattles.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');\n\n.btcbattles-main * {\n    box-sizing: border-box;\n}\n\n.btcbattles-main ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n}\n  \n.btcbattles-main button {\n    border: 0;\n    outline: 0;\n    padding: 0;\n    cursor: pointer;\n    font-size: inherit;\n}\n  \n.btcbattles-main a {\n    text-decoration: none;\n}\n  \n.btcbattles-main h1,\n.btcbattles-main h2,\n.btcbattles-main h3,\n.btcbattles-main h4,\n.btcbattles-main h5,\n.btcbattles-main h6 {\n    font-size: unset;\n    text-align: center;\n    font-family: 'Oswald', sans-serif;\n}\n  \n.btcbattles-main p,\n.btcbattles-main h1,\n.btcbattles-main h2,\n.btcbattles-main h3,\n.btcbattles-main h4,\n.btcbattles-main h5,\n.btcbattles-main h6 {\n    margin: 0;\n    padding: 0;\n}\n  \n.btcbattles-main input,\n.btcbattles-main textarea {\n    margin: 0;\n    padding: 0;\n    outline: 0;\n    border: 0;\n    background-color: grey;\n}\n  \n.btcbattles-main .v-hidden {\n    visibility: hidden;\n}\n  \n.btcbattles-main .hidden {\n    display: none;\n}\n\n.btcbattles-wrap {\n    font-size: 10px;\n    width: 100%;\n    overflow: auto;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    background-color: #010015;\n    font-family: 'Montserrat', sans-serif;\n}\n\n.btcbattles-main {\n    display: flex;\n    flex-direction: column;\n}\n\n.btcbattles-main .pink-h2 {\n    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    border: 0.1em solid transparent;\n    color: #f4d56f;\n    border-radius: 0.8em;\n    max-width: 120em;\n    margin: 0em auto 0em auto;\n    padding: 1em;\n    animation: roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;\n    font-weight: 400;\n}\n\n.btcbattles-main .blue-h2 {\n    background: linear-gradient(rgba(68, 82, 120, 0.8), rgba(68, 82, 120, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(68, 82, 120, 0.5) 0%,rgba(68, 82, 120, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    border: 0.1em solid transparent;\n    color: #f4d56f;\n    border-radius: 0.8em;\n    padding: 1em;\n    text-align: left;\n    position: relative;\n    animation: roll-in-blurred-left .65s cubic-bezier(.23,1.000,.32,1.000) both;\n}\n\n/* HEADER */\n\n.btcbattles-main header {\n    position: relative;\n    background: #010012;\n    min-height: 8.6em;\n}\n\n.btcbattles-main header .logo {\n    background-image: url('/public/media/images/entry_screens/btcbattles/btcbattles.png');\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    height: 100%;\n    height: 8.6em;\n    width: 22em;\n    margin-left: 1.6em;\n    /* cursor: pointer; */\n}\n\n.btcbattles-main nav .nav-ul-wrap {\n    position: absolute;\n    top: 50%;\n    right: 2em;\n    transform: translateY(-50%);\n}\n\n.btcbattles-main nav .nav-ul-wrap ul {\n    display: flex;\n    flex-direction: row;\n    gap: 1em;\n}\n\n.btcbattles-main nav .nav-ul-wrap ul li {\n    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    border: 0.2em solid rgba(244, 213, 111, 0.7);\n    height: 3.8em;\n    line-height: 3.6em;\n    padding: 0 1.4em;\n    border-radius: 0.6em;\n    cursor: pointer;\n}\n\n.btcbattles-main nav .nav-ul-wrap ul li.play-now {\n    background: linear-gradient(rgba(244, 213, 111, 0.8), rgba(244, 213, 111, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(244, 213, 111, 0.5) 0%,rgba(244, 213, 111, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    font-weight: 700;\n}\n\n.btcbattles-main nav .nav-ul-wrap ul li a {\n    color: inherit;\n}\n\n.btcbattles-main nav .nav-ul-wrap ul li a span,\n.btcbattles-main nav .nav-ul-wrap ul li div span {\n    font-size: 1.4em;\n}\n\n/* Decentralized Social Pool Prediction Gaming */\n\n.btcbattles-main section.decentralized {\n    position: relative;\n    text-align: center;\n    padding: 4.8em 3em 10.8em 3em;\n    overflow: hidden;\n}\n\n.btcbattles-main section.decentralized::after {\n    position: absolute;\n    content: '';\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 10em;\n    background: linear-gradient(177deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(1, 0, 21, 1) 51%, rgba(1, 0, 21, 1) 70%, rgba(1, 0, 21, 1) 100%);\n    z-index: 2;\n}\n\n.btcbattles-main section.decentralized div.play-now-button {\n    background: #febd00;\n    color: #694900;\n    border-bottom: 0.3em solid #be7900;\n    border-radius: 0.4em;\n    padding: 1.5em 3.6em;\n    font-weight: 400;\n    font-family: 'Oswald', sans-serif;\n    line-height: 1;\n    text-align: center;\n    text-transform: uppercase;\n    display: inline-block;\n    margin-top: 3em;\n    outline: rgba(0,0,0,0.5) solid 0.2em;\n    cursor: pointer;\n    animation-name: Boostedelementszoomup;\n    animation-duration: .8s;\n    animation-fill-mode: both;\n    overflow: hidden;\n    position: relative;\n}\n\n.btcbattles-main section.decentralized div.play-now-button:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: translateX(100%);\n    z-index: 1;\n    animation: slide-effect 5s infinite 1.5s;\n    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);\n}\n\n.btcbattles-main section.decentralized div.play-now-button span {\n    font-size: 1.8em;\n}\n\n.btcbattles-main section.decentralized div.certik-button {\n    background: linear-gradient(rgba(68, 82, 120, 0.8), rgba(68, 82, 120, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(68, 82, 120, 0.5) 0%,rgba(68, 82, 120, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    border: 1px solid transparent;\n    height: 8em;\n    width: 20em;\n    margin: 5em auto 0 auto;\n    border-radius: 0.7em;\n}\n\n.btcbattles-main section.decentralized div.certik-button a {\n    display: block;\n    width: 100%;\n    height: 100%;\n    background-image: url('/public/media/images/entry_screens/btcbattles/certik_badge_2.jpeg');\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    border-radius: 0.7em;\n    cursor: pointer;\n    overflow: hidden;\n    position: relative;\n}\n\n.btcbattles-main section.decentralized div.certik-button a:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: translateX(100%);\n    z-index: 1;\n    animation: slide-effect 5s infinite 1.5s;\n    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);\n}\n\n.btcbattles-main section.decentralized .decentralized-bg {\n    background-color: #2d256b;\n    /* background-image: url('/public/media/images/entry_screens/btcbattles/hero-bg.jpg'); */\n    background-size: cover;\n    background-position: center center;\n    background-repeat: no-repeat;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 1;\n}\n\n.btcbattles-main section.decentralized .decentralized-overlay {\n    background-color: rgba(68,82,120,0.8);\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    z-index: 2;\n}\n\n.btcbattles-main section.decentralized .decentralized-content {\n    position: relative;\n    max-width: 80em;\n    margin: 0 auto;\n    z-index: 3;\n}\n\n.btcbattles-main section.decentralized .floating-logo {\n    position: absolute;\n    width: 10em;\n    height: 10em;\n    opacity: 0.35;\n    background-image: url('/public/media/images/entry_screens/btcbattles/logo-icon.png');\n    background-size: contain;\n    background-position: center center;\n    background-repeat: no-repeat;\n    z-index: -1;\n}\n\n.btcbattles-main section.decentralized .floating-logo.logo-1 {\n    left: 0;\n    top: 15%;\n    animation-name: floating;\n    animation-duration: 6s;\n    animation-iteration-count: infinite;\n}\n\n.btcbattles-main section.decentralized .floating-logo.logo-2 {\n    right: 0;\n    top: 25%;\n    animation-name: floating-2;\n    animation-duration: 4s;\n    animation-iteration-count: infinite;\n}\n\n.btcbattles-main section.decentralized .floating-logo.logo-3 {\n    right: 25%;\n    bottom: 0;\n    animation-name: floating-3;\n    animation-duration: 5s;\n    animation-iteration-count: infinite;\n}\n.btcbattles-main section.decentralized .floating-logo.logo-4 {\n    left: 25%;\n    bottom: 25%;\n    animation-name: floating-2;\n    animation-duration: 5s;\n    animation-iteration-count: infinite;\n}\n\n.btcbattles-main section.decentralized .floating-logo.logo-5 {\n    left: 50%;\n    top: 35%;\n    animation-name: floating;\n    animation-duration: 4s;\n    animation-iteration-count: infinite;\n}\n\n.btcbattles-main section.decentralized h2 {\n    max-width: 800px;\n    margin: 0 auto;\n    line-height: 10em;\n    animation-name: Boostedelementszoomup;\n    animation-duration: .8s;\n    animation-fill-mode: both;\n}\n\n.btcbattles-main section.decentralized h2 span {\n    font-size: 8em;\n}\n\n.btcbattles-main section.decentralized p.based {\n    max-width: 800px;\n    margin: 3em auto 3.2em auto;\n    animation-name: Boostedelementszoomup;\n    animation-duration: .8s;\n    animation-fill-mode: both;\n}\n\n.btcbattles-main section.decentralized p.based span {\n    font-size: 2.5em;\n}\n\n.btcbattles-main section.decentralized p.fully-transparent {\n    max-width: 800px;\n    margin: 0 auto;\n    animation-name: Boostedelementszoomup;\n    animation-duration: .8s;\n    animation-fill-mode: both;\n}\n\n.btcbattles-main section.decentralized p.fully-transparent span {\n    font-size: 1.8em;\n}\n\n/* THREE ICONS ON THE LEFT */\n\n.btcbattles-main section.security {\n    padding: 0 3em;\n}\n\n.btcbattles-main section.security .left-icons {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 2em;\n    width: 80%;\n    margin: 5.8em auto 8.8em auto;\n    justify-content: space-around;\n    animation: shake-top 7s cubic-bezier(.455,.03,.515,.955) infinite both;\n}\n\n.btcbattles-main section.security .left-icons > div {\n    height: 6em;\n    padding-left: 6.5em;\n    background-size: 6em;\n    background-position: 0em center;\n    background-repeat: no-repeat;\n    display: flex;\n    align-items: center;\n    font-weight: 700;\n}\n\n.btcbattles-main section.security .left-icons div.icon-security {\n    background-image: url('/public/media/images/entry_screens/btcbattles/icon_shields.svg');\n}\n\n.btcbattles-main section.security .left-icons div.icon-play {\n    background-image: url('/public/media/images/entry_screens/btcbattles/icon_coins.svg');\n}\n\n.btcbattles-main section.security .left-icons div.icon-transparent {\n    background-image: url('/public/media/images/entry_screens/btcbattles/icon_eye.svg');\n}\n\n.btcbattles-main section.security .left-icons > div span {\n    font-size: 1.6em;\n}\n\n/* HOW IT WORKS */\n\n.btcbattles-main section.how-it-works {\n    min-height: 15em;\n    padding: 0 3em 4.8em 3em;\n}\n\n.btcbattles-main section.how-it-works > h2 {\n    font-weight: 400;\n}\n\n.btcbattles-main section.how-it-works > h2 span {\n    font-size: 4em;\n}\n\n.btcbattles-main section.how-it-works .items-row {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n    gap: 3em;\n    max-width: 120em;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n.btcbattles-main section.how-it-works .items-row.top-row {\n    margin-top: 6em;\n    margin-bottom: 2em;\n}\n\n.btcbattles-main section.how-it-works .items-row.bottom-row {\n    margin-top: 0em;\n    margin-bottom: 0em;\n}\n\n.btcbattles-main section.how-it-works .items-row .item {\n    display: flex;\n    flex-direction: column;\n    width: 33.333%;\n}\n\n.btcbattles-main section.how-it-works .items-row .item h2 {\n    font-weight: 400;\n    position: relative;\n}\n\n.btcbattles-main section.how-it-works .items-row .item h2::after {\n    content: '';\n    position: absolute;\n    right: 1em;\n    top: 0em;\n    width: 9em;\n    height: 9em;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    animation: heartbeat 2s ease-in-out infinite both;\n}\n\n.btcbattles-main section.how-it-works .items-row .item.step-1 h2::after {\n    top: -1.9em;\n    right: -1em;\n    background-image: url('/public/media/images/entry_screens/btcbattles/tutorial_step_1.png');\n}\n\n.btcbattles-main section.how-it-works .items-row .item.step-2 h2::after {\n    width: 10em;\n    height: 10em;\n    top: -3.9em;\n    right: -2.8em;\n    background-image: url('/public/media/images/entry_screens/btcbattles/tutorial_step_2.png');\n}\n\n.btcbattles-main section.how-it-works .items-row .item.step-3 h2::after {\n    top: -2.3em;\n    right: -1em;\n    background-image: url('/public/media/images/entry_screens/btcbattles/tutorial_step_3.png');\n}\n\n.btcbattles-main section.how-it-works .items-row .item.step-4 h2::after {\n    width: 9em;\n    height: 9.6em;\n    top: -3.8em;\n    right: -2.4em;\n    background-image: url('/public/media/images/entry_screens/btcbattles/tutorial_step_4.png');\n}\n\n.btcbattles-main section.how-it-works .items-row .item.step-5 h2::after {\n    width: 11em;\n    height: 11em;\n    top: -3.2em;\n    right: -3.8em;\n    background-image: url('/public/media/images/entry_screens/btcbattles/tutorial_step_5.png');\n}\n\n.btcbattles-main section.how-it-works .items-row .item h2 span {\n    font-size: 2.2em;\n}\n\n.btcbattles-main section.how-it-works .items-row .item .text {\n    color: rgb(153, 150, 203);\n    margin: 15px 15px 15px 15px;\n    line-height: 2.8em;\n}\n\n.btcbattles-main section.how-it-works .items-row .item .text span {\n    font-size: 1.6em;\n}\n\n/* WHAT IS A PLAY-2-EARN GAME */\n\n.btcbattles-main section.play-to-earn {\n    background: #050322;\n    background-color: #050322;\n    background-image: url('https://poker.progressionstudios.com/wp-content/uploads/2017/07/poker-bg-1.jpg');\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    padding: 4.8em 3em;\n    border-style: solid;\n    border-width: 1px 0px 1px 0px;\n    border-color: rgba(36,25,90,0.61);\n}\n\n.btcbattles-main section.play-to-earn .divided {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    gap: 4em;\n    max-width: 120em;\n    margin: 0 auto;\n    justify-content: space-between;\n}\n\n.btcbattles-main section.play-to-earn .divided > div {\n    width: 49%;\n    text-align: center;\n}\n\n.btcbattles-main section.play-to-earn .image-part {\n    position: relative;\n}\n\n.btcbattles-main section.play-to-earn .image-part div {\n    background-image: url('/public/media/images/entry_screens/btcbattles/bb_phone_placeholder.png');\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    animation: wobble-hor-bottom 15s infinite both;\n}\n\n.btcbattles-main section.play-to-earn .text-part p {\n    color: rgb(153, 150, 203);\n    line-height: 2.8em;\n    margin-top: 2em;\n    text-align: left;\n}\n\n.btcbattles-main section.play-to-earn .text-part p span {\n    font-size: 1.6em;\n}\n\n.btcbattles-main section.play-to-earn .text-part h2 span {\n    font-size: 3.6em;\n}\n\n.btcbattles-main section.play-to-earn div.join-and-play-button {\n    position: relative;\n    background: #febd00;\n    color: #694900;\n    border-bottom: 0.3em solid #be7900;\n    border-radius: 0.4em;\n    padding: 1.5em 3.6em;\n    font-weight: 400;\n    font-family: 'Oswald', sans-serif;\n    line-height: 1;\n    text-align: center;\n    text-transform: uppercase;\n    display: inline-block;\n    margin-top: 2em;\n    cursor: pointer;\n    overflow: hidden;\n}\n\n.btcbattles-main section.play-to-earn div.join-and-play-button:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: translateX(100%);\n    z-index: 1;\n    animation: slide-effect 5s infinite 1.5s;\n    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);\n}\n\n.btcbattles-main section.play-to-earn div.join-and-play-button span {\n    font-size: 1.6em;\n}\n\n/* GAMEPLAY MODES */\n\n.btcbattles-main section.gameplay-modes {\n    min-height: 15em;\n    padding: 4.8em 3em;\n}\n\n.btcbattles-main section.gameplay-modes h2 span {\n    font-size: 4em;\n}\n\n.btcbattles-main section.gameplay-modes .gameplay-totem {\n    display: flex;\n    flex-direction: column;\n    width: 35em;\n    margin: 4em auto 0 auto;\n    background: rgba(255,255,255,0.11);\n}\n\n.btcbattles-main section.gameplay-modes .totem-image {\n    position: relative;\n    height: 52em;\n    background-color: rgb(47, 32, 118);\n    background-image: url('/public/media/images/entry_screens/btcbattles/card_BTC_1.png');\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: 27em;\n    overflow: hidden;\n}\n\n.btcbattles-main section.gameplay-modes .totem-image:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: translateX(100%);\n    z-index: 1;\n    animation: slide-effect 5s infinite 1.5s;\n    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);\n}\n\n.btcbattles-main section.gameplay-modes .totem-list {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 1em 1em 1em 1em;\n    padding: 3em 3em 2.5em 3em;\n}\n\n.btcbattles-main section.gameplay-modes .totem-list > div {\n    text-align: center;\n    border-color: rgba(255,255,255,0.08);\n    border-bottom-width: 1px;\n    color: rgb(153, 150, 203);\n    height: 4em;\n    line-height: 4em;\n    position: relative;\n}\n\n.btcbattles-main section.gameplay-modes .totem-list > div:not(:first-child) {\n    margin-top: 0.1em;\n}\n\n.btcbattles-main section.gameplay-modes .totem-list > div:not(:first-child)::after {\n    content: '';\n    background: rgba(255,255,255,0.08);\n    height: 0.1em;\n    width: 29em;\n    position: absolute;\n    top: 0;\n    left: 50%;\n    transform: translateX(-50%);\n}\n\n.btcbattles-main section.gameplay-modes .totem-list > div span {\n    font-size: 1.6em;\n}\n\n.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button {\n    text-align: center;\n}\n\n.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div {\n    position: relative;\n    background: #febd00;\n    color: #694900;\n    border-bottom: 0.3em solid #be7900;\n    border-radius: 0.4em;\n    padding: 1.5em 3.6em;\n    font-weight: 400;\n    font-family: 'Oswald', sans-serif;\n    line-height: 1;\n    text-align: center;\n    text-transform: uppercase;\n    display: inline-block;\n    margin-bottom: 4em;\n    cursor: pointer;\n    overflow: hidden;\n}\n\n.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div:after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    transform: translateX(100%);\n    z-index: 1;\n    animation: slide-effect 5s infinite 1.5s;\n    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%);\n}\n\n.btcbattles-main section.gameplay-modes .gameplay-totem .totem-button div span {\n    font-size: 1.6em;\n}\n\n/* 100% Transparent and Secure */\n\n.btcbattles-main section.transparent {\n    min-height: 15em;\n    padding: 0 3em 4.8em 3em;\n}\n\n.btcbattles-main section.transparent h2 {\n    font-weight: 400;\n}\n\n.btcbattles-main section.transparent h2 span {\n    font-size: 3.6em;\n}\n\n.btcbattles-main section.transparent .transparent-items {\n    display: flex;\n    flex-direction: row;\n    max-width: 120em;\n    margin: 3em auto 0 auto;\n    gap: 4em;\n}\n\n.btcbattles-main section.transparent .transparent-items .image {\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    width: 100%;\n    height: 12em;\n    margin: 2em 0;\n}\n\n.btcbattles-main section.transparent .transparent-items .item {\n    width: 33.333%;\n}\n\n.btcbattles-main section.transparent .transparent-items .item.dxfeed .image {\n    background-image: url('/public/media/images/entry_screens/btcbattles/dxfeed-logo.png');\n}\n\n.btcbattles-main section.transparent .transparent-items .item.polygon .image {\n    background-image: url('/public/media/images/entry_screens/btcbattles/polygon-logo.png');\n}\n\n.btcbattles-main section.transparent .transparent-items .item.certik .image {\n    background-image: url('/public/media/images/entry_screens/btcbattles/certik_logo.jpg');\n}\n\n.btcbattles-main section.transparent .transparent-items .item h2 span {\n    font-size: 2.2em;\n}\n\n.btcbattles-main section.transparent .transparent-items .item p {\n    color: #9996cb;\n    line-height: 2.8em;\n    margin-top: 2em;\n}\n\n.btcbattles-main section.transparent .transparent-items .item p a {\n    color: white !important;\n}\n\n.btcbattles-main section.transparent .transparent-items .item p span {\n    font-size: 1.6em;\n}\n\n/* FOOTER */\n\n.btcbattles-main footer {\n    position: relative;\n    min-height: 8em;\n    background: rgba(68, 82, 120, 0.67);\n    color: #6e63a9;\n    display: flex;\n    justify-content: space-between;\n    padding: 0 2em;\n    gap: 3em;\n}\n\n.btcbattles-main footer::after {\n    position: absolute;\n    top: 0;\n    left: 0;\n    content: '';\n    background: rgba(255,255,255, 0.1);\n    width: 100%;\n    height: 0.2em;\n}\n\n.btcbattles-main footer .all-rights-reserved {\n    font-weight: 400;\n    display: flex;\n    align-items: center;\n}\n\n.btcbattles-main footer .all-rights-reserved span {\n    font-size: 1.3em;\n}\n\n.btcbattles-main footer .footer-socials {\n    display: flex;\n    flex-direction: row;\n    gap: 1em;\n    align-items: center;\n}\n\n.btcbattles-main footer .footer-socials .social-icon {\n    position: relative;\n    width: 3.8em;\n    height: 3.8em;\n    color: #dddddd;\n    background: rgba(255,255,255, 0.06);\n    border-radius: 50%;\n}\n\n.btcbattles-main footer .footer-socials .social-icon:before {\n    font-size: 1.6em;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n/* STICKY SOCIALS */\n\n.btcbattles-main .sticky-socials {\n    position: fixed;\n    display: flex;\n    flex-direction: column;\n    gap: 0.3em;\n    bottom: 19em;\n    right: 0.2em;\n    z-index: 3;\n}\n\n.btcbattles-main .sticky-socials .social-icon {\n    position: relative;\n    width: 4.6em;\n    height: 4.6em;\n    background: linear-gradient(rgba(124, 77, 113, 0.8), rgba(124, 77, 113, 0.8)) padding-box padding-box, linear-gradient(206deg, rgba(124, 77, 113, 0.5) 0%,rgba(124, 77, 113, 0.5) 50%, rgb(244, 213, 111) 100%) border-box border-box;\n    border: 0.1em solid transparent;\n    color: #f4d56f;\n    border-radius: 0.8em;\n    cursor: pointer;\n    animation: heartbeat 5s ease-in-out infinite both;\n}\n\n.btcbattles-main .sticky-socials .social-icon:before {\n    font-size: 2em;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n/* ANIMATIONS */\n\n@keyframes roll-in-blurred-left {\n    0% {transform: translateX(-1000px) rotate(-720deg); filter: blur(50px); opacity: 0}\n    100% {transform: translateX(0) rotate(0deg); filter: blur(0); opacity: 1}\n}\n\n@keyframes slide-effect {\n    0% {transform:translateX(-100%);}\n    9% {transform:translateX(100%);}\n    100% {transform:translateX(100%);}\n}\n\n@keyframes floating {\n    0% {transform: translateY(0%)}\n    50% {transform: translateY(8%)}\n    100% {transform: translateY(0%)}\n}\n\n@keyframes floating-2 {\n    0% {transform: translateY(0%)}\n    50% {transform: translateY(20%)}\n    100% {transform: translateY(0%)}\n}\n\n@keyframes floating-3 {\n    0% {transform: translateY(0%)}\n    50% {transform: translateY(15%)}\n    100% {transform: translateY(0%)}\n}\n\n@keyframes shake-top {\n    0%,100%{transform:rotate(0deg);transform-origin:50% 0}\n    10%{transform:rotate(0.5deg)}\n    20%,40%,60%{transform:rotate(-1deg)}\n    30%,50%,70%{transform:rotate(1deg)}\n    80%{transform:rotate(-0.5deg)}\n    90%{transform:rotate(0.5deg)}\n}\n\n@keyframes wobble-hor-bottom{\n    0%,100%{transform:translateX(0);transform-origin:50% 50%}\n    15%{transform:translateX(-30px) rotate(-6deg)}\n    30%{transform:translateX(15px) rotate(6deg)}\n    45%{transform:translateX(-15px) rotate(-3.6deg)}\n    60%{transform:translateX(9px) rotate(2.4deg)}\n    75%{transform:translateX(-6px) rotate(-1.2deg)}\n}\n\n@keyframes heartbeat{\n    from { transform: scale(1); transform-origin:center center; animation-timing-function: ease-out; }\n    20% { transform: scale(.91); animation-timing-function: ease-in; }\n    30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% { transform: scale(1); animation-timing-function: ease-out; }\n}\n\n@keyframes Boostedelementszoomup {\n    0% {opacity: 0; transform: scale(1.2)}\n    100% {opacity: 1; transform: scale(1)}\n}\n\n/* MEDIA QUERIES */\n\n@media screen and (max-width: 960px) {\n\n    .btcbattles-main .hamburger {\n        cursor: pointer;\n        position: absolute;\n        width: 4.9em;\n        top: 1.9em;\n        right: 2em;\n        height: 4.9em;\n        z-index: 4;\n        overflow: hidden;\n    }\n\n    .btcbattles-main .hamburger div {\n        background-color: white;\n        border-radius: 0.3em;\n        height: 0.5em;\n        position: absolute;\n        right: 1em;\n        width: 3em;\n        transition: width .2s,-webkit-transform .2s;\n        transition: width .2s,transform .2s;\n        transition: width .2s,transform .2s,-webkit-transform .2s;\n    }\n\n    .btcbattles-main .hamburger div.top {\n        top: 0.9em;\n    }\n\n    .btcbattles-main .hamburger div.middle {\n        top: 2.2em;\n    }\n\n    .btcbattles-main .hamburger div.bottom {\n        top: 3.6em;\n    }\n\n    .btcbattles-main .mobile-menu-open .hamburger div.top {\n        width: 4.4em;\n        transform: translate(0.7em,1.3em) rotate(-45deg);\n    }\n\n    .btcbattles-main .mobile-menu-open .hamburger div.middle {\n        transform: translate(-4.5em);\n    }\n\n    .btcbattles-main .mobile-menu-open .hamburger div.bottom {\n        width: 4.4em;\n        transform: translate(0.7em,-1.4em) rotate(45deg);\n    }\n\n    .btcbattles-main nav {\n        position: relative;\n        transition: max-height .2s ease-out;\n        overflow: hidden;\n        max-height: 0;\n    }\n\n    .btcbattles-main nav .nav-ul-wrap {\n        transform: none;\n        position: static;\n        background: white;\n        color: #888888;\n    }\n\n    .btcbattles-main nav .nav-ul-wrap ul {\n        flex-direction: column;\n        gap: 0;\n    }\n\n    .btcbattles-main nav .nav-ul-wrap ul li {\n        background: none;\n        border: 0;\n        height: 6.2em;\n        line-height: 6.2em;\n    }\n\n    .btcbattles-main nav .nav-ul-wrap ul li a {\n        height: 100%;\n        display: block;\n    }\n\n    .btcbattles-main nav .nav-ul-wrap ul li.play-now {\n        background: none;\n        border: 0;\n        font-weight: 400;\n    }\n\n}\n\n@media screen and (max-width: 767px) {\n\n    .btcbattles-main section.decentralized h2 {\n        line-height: 5.6em;\n    }\n\n    .btcbattles-main section.decentralized h2 span {\n        font-size: 4em;\n    }\n\n    .btcbattles-main section.decentralized p.based span {\n        font-size: 1.8em;\n    }\n\n    .btcbattles-main section.decentralized p.fully-transparent {\n        line-height: 1.8em;\n    }\n\n    .btcbattles-main section.decentralized p.fully-transparent span {\n        font-size: 1.3em;\n    }\n\n    .btcbattles-main section.how-it-works .items-row .item {\n        width: 100%;\n    }\n\n    .btcbattles-main section.how-it-works .items-row {\n        flex-direction: column;\n    }\n\n    .btcbattles-main section.security {\n        padding: 0 3em 4em 3em;\n    }\n\n    .btcbattles-main section.security .left-icons {\n        flex-direction: column;\n        margin: 0 auto;\n        align-items: center;\n        width: 100%;\n    }\n\n    .btcbattles-main section.play-to-earn .divided {\n        flex-direction: column;\n    }\n\n    .btcbattles-main section.play-to-earn .divided > div {\n        width: 100%;\n    }\n\n    .btcbattles-main section.play-to-earn .image-part {\n        height: 17em;\n        height: 29em;\n    }\n\n    .btcbattles-main section.transparent .transparent-items {\n        flex-direction: column;\n        margin: 5em auto 0 auto;\n    }\n\n    .btcbattles-main section.transparent .transparent-items .item {\n        width: 100%;\n    }\n\n}\n\n@media screen and (max-width: 480px) {\n\n    .btcbattles-wrap {\n        font-size: 2.54453vw;\n        overflow-x: hidden;\n    }\n\n    .btcbattles-main section.gameplay-modes .gameplay-totem {\n        width: 100%;\n    }\n\n    .btcbattles-main section.play-to-earn {\n        padding: 2.8em 3em 4.8em 3em;\n    }\n\n    .btcbattles-main footer .all-rights-reserved {\n        text-align: center;\n        line-height: 2em;\n    }\n\n    .btcbattles-main section.play-to-earn .image-part {\n        height: 17em;\n    }\n\n    .btcbattles-main section.decentralized .floating-logo.logo-1 {\n        left: 0;\n        top: 3%;\n    }\n    \n    .btcbattles-main section.decentralized .floating-logo.logo-2 {\n        right: 0;\n        top: 16%;\n    }\n    \n    .btcbattles-main section.decentralized .floating-logo.logo-3 {\n        right: 25%;\n        bottom: 0;\n    }\n    .btcbattles-main section.decentralized .floating-logo.logo-4 {\n        left: -20%;\n        bottom: 25%;\n    }\n    \n    .btcbattles-main section.decentralized .floating-logo.logo-5 {\n        left: 37%;\n        top: 35%;\n    }\n\n    .btcbattles-main section.decentralized .decentralized-bg {\n        background-position: -35em center;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

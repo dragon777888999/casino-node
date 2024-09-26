@@ -1,0 +1,244 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/gold_x.svg", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.jackpot-history {
+    padding: 0 1em 1em 1em;
+}
+
+.jackpot-history .title {
+    color: #f4d56f;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 500;
+    line-height: 2.8em;
+    text-shadow: 0 0.2em 0.5em #030303b8;
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+    height: 5em;
+    line-height: 4.9em;
+}
+
+.jackpot-history .title span {
+    font-size: 3.1em;
+}
+
+.jackpot-history .table {
+
+}
+
+.jackpot-history .table .table-header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    padding: 0 1.4em 0 1em;
+    box-sizing: border-box;
+    height: 3em;
+    background: #20242d;
+    color: #f4d56f;
+    text-transform: uppercase;
+}
+
+.jackpot-history .table .table-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #1E1D1D;
+    overflow-y: auto;
+    height: calc(100% - 8em);
+}
+
+.jackpot-history .table .history-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    height: 3.4em;
+    flex-shrink: 0;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.jackpot-history .table .history-row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);
+}
+
+/* "table" cells (head + body) */
+
+.jackpot-history .table-header .date,
+.jackpot-history .history-row .date {
+    width: 10%;
+}
+
+.jackpot-history .table-header .player,
+.jackpot-history .history-row .player {
+    width: 20%;
+    display: flex; align-items: center; justify-content: center;
+}
+.jackpot-history .history-row .player div img{
+    width: 100%; height: 100%;
+    border-radius: 50%;
+}
+
+.jackpot-history .table-header .wallet,
+.jackpot-history .history-row .wallet {
+    width: 25%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.jackpot-history .table-header .place,
+.jackpot-history .history-row .place {
+    width: 20%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.jackpot-history .table-header .rank,
+.jackpot-history .history-row .rank {
+    width: 20%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.jackpot-history .table-header .prize,
+.jackpot-history .history-row .prize {
+    width: 32%;
+    display: flex; align-items: center; justify-content: flex-end;
+}
+.jackpot-history .history-row .prize .icon-matic{
+    margin-top: .5em;
+}
+
+.jackpot-history .history-row .prize svg{
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+}
+
+
+
+
+
+
+.jackpot-history .history-row .date {
+
+}
+
+.jackpot-history .history-row .date span {
+    font-size: 1.6em;
+}
+
+.jackpot-history .history-row .player div {
+    width: 2.2em;
+    height: 2.2em;
+    margin: 0 auto;
+    background: #747474;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.jackpot-history .history-row .wallet {
+    color: #00abfc;
+    /* text-decoration: underline;
+    cursor: pointer; */
+    text-decoration: none;
+    cursor: default;
+}
+
+.jackpot-history .history-row .wallet span {
+    font-size: 1.3em;
+}
+.jackpot-history .history-row .wallet span a{
+    color: #00abfc;
+    /* text-decoration: underline; */
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+}
+
+.jackpot-history .history-row .jackpot {
+    color: #f4d56f;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 500;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.jackpot-history .history-row .jackpot span {
+    font-size: 1.6em;
+}
+
+.jackpot-history .history-row .rank {
+
+}
+
+.jackpot-history .history-row .rank div {
+    width: 3em;
+    height: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-size: 2.8em;
+}
+.jackpot-history .history-row .rank div img{
+    width: 100%; height: 100%;
+}
+
+.jackpot-history .history-row .prize {
+    color: #f4d56f;
+}
+
+.jackpot-history .history-row .prize .icon-matic {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.2em;
+    height: 1.2em;
+}
+
+.jackpot-history .history-row .prize .icon-matic::before {
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -0.1em;
+}
+
+.jackpot-history .history-row .prize span.amount {
+    font-size: 1.6em;
+}
+
+.jackpot-history .close {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    right: 1em;
+    top: 1em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+    /* ... */
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/Jackpot/Winners/History.css"],"names":[],"mappings":"AAAA;IACI,sBAAsB;AAC1B;;AAEA;IACI,cAAc;IACd,oCAAoC;IACpC,gBAAgB;IAChB,kBAAkB;IAClB,oCAAoC;IACpC,kBAAkB;IAClB,kBAAkB;IAClB,yBAAyB;IACzB,WAAW;IACX,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;;AAEA;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,oCAAoC;IACpC,mBAAmB;IACnB,WAAW;IACX,sBAAsB;IACtB,sBAAsB;IACtB,WAAW;IACX,mBAAmB;IACnB,cAAc;IACd,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,2BAA2B;IAC3B,mBAAmB;IACnB,mBAAmB;IACnB,gBAAgB;IAChB,wBAAwB;AAC5B;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,mBAAmB;IACnB,oCAAoC;IACpC,mBAAmB;IACnB,WAAW;IACX,aAAa;IACb,cAAc;IACd,cAAc;IACd,sBAAsB;AAC1B;;AAEA;IACI,WAAW;IACX,kBAAkB;IAClB,SAAS;IACT,OAAO;IACP,QAAQ;IACR,SAAS;IACT,mDAAmD;AACvD;;AAEA,gCAAgC;;AAEhC;;IAEI,UAAU;AACd;;AAEA;;IAEI,UAAU;IACV,aAAa,EAAE,mBAAmB,EAAE,uBAAuB;AAC/D;AACA;IACI,WAAW,EAAE,YAAY;IACzB,kBAAkB;AACtB;;AAEA;;IAEI,UAAU;IACV,aAAa,EAAE,mBAAmB,EAAE,uBAAuB;AAC/D;;AAEA;;IAEI,UAAU;IACV,aAAa,EAAE,mBAAmB,EAAE,uBAAuB;AAC/D;;AAEA;;IAEI,UAAU;IACV,aAAa,EAAE,mBAAmB,EAAE,uBAAuB;AAC/D;;AAEA;;IAEI,UAAU;IACV,aAAa,EAAE,mBAAmB,EAAE,yBAAyB;AACjE;AACA;IACI,gBAAgB;AACpB;;AAEA;IACI,UAAU;IACV,WAAW;IACX,iBAAiB;AACrB;;;;;;;AAOA;;AAEA;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,cAAc;IACd,mBAAmB;IACnB,kBAAkB;IAClB,4BAA4B;IAC5B,wBAAwB;IACxB,2BAA2B;AAC/B;;AAEA;IACI,cAAc;IACd;sBACkB;IAClB,qBAAqB;IACrB,eAAe;AACnB;;AAEA;IACI,gBAAgB;AACpB;AACA;IACI,cAAc;IACd,gCAAgC;IAChC,qBAAqB;IACrB,oBAAoB;IACpB,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,cAAc;IACd,oCAAoC;IACpC,gBAAgB;IAChB,kBAAkB;IAClB,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;AACpB;;AAEA;;AAEA;;AAEA;IACI,UAAU;IACV,WAAW;IACX,4BAA4B;IAC5B,wBAAwB;IACxB,2BAA2B;IAC3B,sBAAsB;AAC1B;AACA;IACI,WAAW,EAAE,YAAY;AAC7B;;AAEA;IACI,cAAc;AAClB;;AAEA;IACI,qBAAqB;IACrB,kBAAkB;IAClB,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,kBAAkB;IAClB,OAAO;IACP,WAAW;AACf;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,kBAAkB;IAClB,YAAY;IACZ,aAAa;IACb,UAAU;IACV,QAAQ;IACR,yDAAwD;IACxD,4BAA4B;IAC5B,2BAA2B;IAC3B,wBAAwB;IACxB,eAAe;AACnB;;AAEA;;IAEI,QAAQ;;AAEZ","sourcesContent":[".jackpot-history {\n    padding: 0 1em 1em 1em;\n}\n\n.jackpot-history .title {\n    color: #f4d56f;\n    font-family: 'Barlow Semi Condensed';\n    font-weight: 500;\n    line-height: 2.8em;\n    text-shadow: 0 0.2em 0.5em #030303b8;\n    text-align: center;\n    font-style: italic;\n    text-transform: uppercase;\n    height: 5em;\n    line-height: 4.9em;\n}\n\n.jackpot-history .title span {\n    font-size: 3.1em;\n}\n\n.jackpot-history .table {\n\n}\n\n.jackpot-history .table .table-header {\n    display: flex;\n    flex-direction: row;\n    /* justify-content: space-between; */\n    align-items: center;\n    width: 100%;\n    padding: 0 1.4em 0 1em;\n    box-sizing: border-box;\n    height: 3em;\n    background: #20242d;\n    color: #f4d56f;\n    text-transform: uppercase;\n}\n\n.jackpot-history .table .table-body {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n    background: #1E1D1D;\n    overflow-y: auto;\n    height: calc(100% - 8em);\n}\n\n.jackpot-history .table .history-row {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    /* justify-content: space-between; */\n    align-items: center;\n    width: 100%;\n    height: 3.4em;\n    flex-shrink: 0;\n    padding: 0 1em;\n    box-sizing: border-box;\n}\n\n.jackpot-history .table .history-row:not(:last-child)::after {\n    content: '';\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 0;\n    border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);\n}\n\n/* \"table\" cells (head + body) */\n\n.jackpot-history .table-header .date,\n.jackpot-history .history-row .date {\n    width: 10%;\n}\n\n.jackpot-history .table-header .player,\n.jackpot-history .history-row .player {\n    width: 20%;\n    display: flex; align-items: center; justify-content: center;\n}\n.jackpot-history .history-row .player div img{\n    width: 100%; height: 100%;\n    border-radius: 50%;\n}\n\n.jackpot-history .table-header .wallet,\n.jackpot-history .history-row .wallet {\n    width: 25%;\n    display: flex; align-items: center; justify-content: center;\n}\n\n.jackpot-history .table-header .place,\n.jackpot-history .history-row .place {\n    width: 20%;\n    display: flex; align-items: center; justify-content: center;\n}\n\n.jackpot-history .table-header .rank,\n.jackpot-history .history-row .rank {\n    width: 20%;\n    display: flex; align-items: center; justify-content: center;\n}\n\n.jackpot-history .table-header .prize,\n.jackpot-history .history-row .prize {\n    width: 32%;\n    display: flex; align-items: center; justify-content: flex-end;\n}\n.jackpot-history .history-row .prize .icon-matic{\n    margin-top: .5em;\n}\n\n.jackpot-history .history-row .prize svg{\n    width: 1em;\n    height: 1em;\n    margin-top: 0.2em;\n}\n\n\n\n\n\n\n.jackpot-history .history-row .date {\n\n}\n\n.jackpot-history .history-row .date span {\n    font-size: 1.6em;\n}\n\n.jackpot-history .history-row .player div {\n    width: 2.2em;\n    height: 2.2em;\n    margin: 0 auto;\n    background: #747474;\n    border-radius: 50%;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n.jackpot-history .history-row .wallet {\n    color: #00abfc;\n    /* text-decoration: underline;\n    cursor: pointer; */\n    text-decoration: none;\n    cursor: default;\n}\n\n.jackpot-history .history-row .wallet span {\n    font-size: 1.3em;\n}\n.jackpot-history .history-row .wallet span a{\n    color: #00abfc;\n    /* text-decoration: underline; */\n    text-decoration: none;\n    pointer-events: none;\n    cursor: default;\n    user-select: none;\n}\n\n.jackpot-history .history-row .jackpot {\n    color: #f4d56f;\n    font-family: 'Barlow Semi Condensed';\n    font-weight: 500;\n    font-style: italic;\n    text-transform: uppercase;\n}\n\n.jackpot-history .history-row .jackpot span {\n    font-size: 1.6em;\n}\n\n.jackpot-history .history-row .rank {\n\n}\n\n.jackpot-history .history-row .rank div {\n    width: 3em;\n    height: 3em;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n    background-size: 2.8em;\n}\n.jackpot-history .history-row .rank div img{\n    width: 100%; height: 100%;\n}\n\n.jackpot-history .history-row .prize {\n    color: #f4d56f;\n}\n\n.jackpot-history .history-row .prize .icon-matic {\n    display: inline-block;\n    position: relative;\n    padding-left: 1.2em;\n    height: 1.2em;\n}\n\n.jackpot-history .history-row .prize .icon-matic::before {\n    font-size: 1.2em;\n    position: absolute;\n    left: 0;\n    top: -0.1em;\n}\n\n.jackpot-history .history-row .prize span.amount {\n    font-size: 1.6em;\n}\n\n.jackpot-history .close {\n    position: absolute;\n    width: 1.5em;\n    height: 1.5em;\n    right: 1em;\n    top: 1em;\n    background-image: url('/public/media/images/gold_x.svg');\n    background-repeat: no-repeat;\n    background-position: center;\n    background-size: contain;\n    cursor: pointer;\n}\n\n@media screen and (max-width: 480px) {\n\n    /* ... */\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

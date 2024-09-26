@@ -1,0 +1,2056 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/home/arrow-down.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/home/facebook-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/home/instagram-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/home/x-twitter-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/home/telegram-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/home/discord-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/home/youtube-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/home/tiktok-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/home/bitcoin-image.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/home/play-arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/home/certik.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/home/web-game.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/home/item-arrow-button.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/home/dapp-icon-select.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/home/secure-icon-select.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/home/decentralized-icon-select.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL("/public/media/images/home/doggo-icon.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL("/public/media/images/home/dapp-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL("/public/media/images/home/secure-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL("/public/media/images/home/decentralized-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL("/public/media/images/home/blockchain-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL("/public/media/images/home/blockchain-icon-select.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL("/public/media/images/home/animated-tiles/col-1_1.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_23___ = new URL("/public/media/images/home/animated-tiles/col-1_1.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_24___ = new URL("/public/media/images/home/animated-tiles/col-1_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_25___ = new URL("/public/media/images/home/animated-tiles/col-1_2.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_26___ = new URL("/public/media/images/home/animated-tiles/col-1_2.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_27___ = new URL("/public/media/images/home/animated-tiles/col-1_2.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_28___ = new URL("/public/media/images/home/animated-tiles/col-1_3.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_29___ = new URL("/public/media/images/home/animated-tiles/col-1_3.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_30___ = new URL("/public/media/images/home/animated-tiles/col-1_3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_31___ = new URL("/public/media/images/home/animated-tiles/col-1_4.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_32___ = new URL("/public/media/images/home/animated-tiles/col-1_4.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_33___ = new URL("/public/media/images/home/animated-tiles/col-1_4.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_34___ = new URL("/public/media/images/home/animated-tiles/col-1_5.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_35___ = new URL("/public/media/images/home/animated-tiles/col-1_5.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_36___ = new URL("/public/media/images/home/animated-tiles/col-1_5.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_37___ = new URL("/public/media/images/home/animated-tiles/col-1_6.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_38___ = new URL("/public/media/images/home/animated-tiles/col-1_6.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_39___ = new URL("/public/media/images/home/animated-tiles/col-1_6.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_40___ = new URL("/public/media/images/home/animated-tiles/col-1_7.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_41___ = new URL("/public/media/images/home/animated-tiles/col-1_7.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_42___ = new URL("/public/media/images/home/animated-tiles/col-1_7.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_43___ = new URL("/public/media/images/home/animated-tiles/col-1_8.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_44___ = new URL("/public/media/images/home/animated-tiles/col-1_8.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_45___ = new URL("/public/media/images/home/animated-tiles/col-1_8.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_46___ = new URL("/public/media/images/home/animated-tiles/col-1_9.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_47___ = new URL("/public/media/images/home/animated-tiles/col-1_9.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_48___ = new URL("/public/media/images/home/animated-tiles/col-1_9.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_49___ = new URL("/public/media/images/home/animated-tiles/col-2_1.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_50___ = new URL("/public/media/images/home/animated-tiles/col-2_1.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_51___ = new URL("/public/media/images/home/animated-tiles/col-2_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_52___ = new URL("/public/media/images/home/animated-tiles/col-2_2.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_53___ = new URL("/public/media/images/home/animated-tiles/col-2_2.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_54___ = new URL("/public/media/images/home/animated-tiles/col-2_2.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_55___ = new URL("/public/media/images/home/animated-tiles/col-2_3.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_56___ = new URL("/public/media/images/home/animated-tiles/col-2_3.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_57___ = new URL("/public/media/images/home/animated-tiles/col-2_3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_58___ = new URL("/public/media/images/home/animated-tiles/col-2_4.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_59___ = new URL("/public/media/images/home/animated-tiles/col-2_4.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_60___ = new URL("/public/media/images/home/animated-tiles/col-2_4.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_61___ = new URL("/public/media/images/home/animated-tiles/col-2_5.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_62___ = new URL("/public/media/images/home/animated-tiles/col-2_5.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_63___ = new URL("/public/media/images/home/animated-tiles/col-2_5.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_64___ = new URL("/public/media/images/home/animated-tiles/col-2_6.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_65___ = new URL("/public/media/images/home/animated-tiles/col-2_6.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_66___ = new URL("/public/media/images/home/animated-tiles/col-2_6.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_67___ = new URL("/public/media/images/home/animated-tiles/col-2_7.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_68___ = new URL("/public/media/images/home/animated-tiles/col-2_7.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_69___ = new URL("/public/media/images/home/animated-tiles/col-2_7.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_70___ = new URL("/public/media/images/home/animated-tiles/col-2_8.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_71___ = new URL("/public/media/images/home/animated-tiles/col-2_8.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_72___ = new URL("/public/media/images/home/animated-tiles/col-2_8.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_73___ = new URL("/public/media/images/home/animated-tiles/col-2_9.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_74___ = new URL("/public/media/images/home/animated-tiles/col-2_9.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_75___ = new URL("/public/media/images/home/animated-tiles/col-2_9.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_76___ = new URL("/public/media/images/home/animated-tiles/col-3_1.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_77___ = new URL("/public/media/images/home/animated-tiles/col-3_1.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_78___ = new URL("/public/media/images/home/animated-tiles/col-3_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_79___ = new URL("/public/media/images/home/animated-tiles/col-3_2.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_80___ = new URL("/public/media/images/home/animated-tiles/col-3_2.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_81___ = new URL("/public/media/images/home/animated-tiles/col-3_2.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_82___ = new URL("/public/media/images/home/animated-tiles/col-3_3.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_83___ = new URL("/public/media/images/home/animated-tiles/col-3_3.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_84___ = new URL("/public/media/images/home/animated-tiles/col-3_3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_85___ = new URL("/public/media/images/home/animated-tiles/col-3_4.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_86___ = new URL("/public/media/images/home/animated-tiles/col-3_4.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_87___ = new URL("/public/media/images/home/animated-tiles/col-3_4.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_88___ = new URL("/public/media/images/home/animated-tiles/col-3_5.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_89___ = new URL("/public/media/images/home/animated-tiles/col-3_5.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_90___ = new URL("/public/media/images/home/animated-tiles/col-3_5.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_91___ = new URL("/public/media/images/home/animated-tiles/col-3_6.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_92___ = new URL("/public/media/images/home/animated-tiles/col-3_6.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_93___ = new URL("/public/media/images/home/animated-tiles/col-3_6.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_94___ = new URL("/public/media/images/home/animated-tiles/col-3_7.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_95___ = new URL("/public/media/images/home/animated-tiles/col-3_7.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_96___ = new URL("/public/media/images/home/animated-tiles/col-3_7.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_97___ = new URL("/public/media/images/home/animated-tiles/col-3_8.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_98___ = new URL("/public/media/images/home/animated-tiles/col-3_8.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_99___ = new URL("/public/media/images/home/animated-tiles/col-3_8.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_100___ = new URL("/public/media/images/home/animated-tiles/col-3_9.webp", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_101___ = new URL("/public/media/images/home/animated-tiles/col-3_9.avif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_102___ = new URL("/public/media/images/home/animated-tiles/col-3_9.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_22___);
+var ___CSS_LOADER_URL_REPLACEMENT_23___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_23___);
+var ___CSS_LOADER_URL_REPLACEMENT_24___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_24___);
+var ___CSS_LOADER_URL_REPLACEMENT_25___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_25___);
+var ___CSS_LOADER_URL_REPLACEMENT_26___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_26___);
+var ___CSS_LOADER_URL_REPLACEMENT_27___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_27___);
+var ___CSS_LOADER_URL_REPLACEMENT_28___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_28___);
+var ___CSS_LOADER_URL_REPLACEMENT_29___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_29___);
+var ___CSS_LOADER_URL_REPLACEMENT_30___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_30___);
+var ___CSS_LOADER_URL_REPLACEMENT_31___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_31___);
+var ___CSS_LOADER_URL_REPLACEMENT_32___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_32___);
+var ___CSS_LOADER_URL_REPLACEMENT_33___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_33___);
+var ___CSS_LOADER_URL_REPLACEMENT_34___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_34___);
+var ___CSS_LOADER_URL_REPLACEMENT_35___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_35___);
+var ___CSS_LOADER_URL_REPLACEMENT_36___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_36___);
+var ___CSS_LOADER_URL_REPLACEMENT_37___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_37___);
+var ___CSS_LOADER_URL_REPLACEMENT_38___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_38___);
+var ___CSS_LOADER_URL_REPLACEMENT_39___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_39___);
+var ___CSS_LOADER_URL_REPLACEMENT_40___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_40___);
+var ___CSS_LOADER_URL_REPLACEMENT_41___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_41___);
+var ___CSS_LOADER_URL_REPLACEMENT_42___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_42___);
+var ___CSS_LOADER_URL_REPLACEMENT_43___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_43___);
+var ___CSS_LOADER_URL_REPLACEMENT_44___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_44___);
+var ___CSS_LOADER_URL_REPLACEMENT_45___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_45___);
+var ___CSS_LOADER_URL_REPLACEMENT_46___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_46___);
+var ___CSS_LOADER_URL_REPLACEMENT_47___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_47___);
+var ___CSS_LOADER_URL_REPLACEMENT_48___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_48___);
+var ___CSS_LOADER_URL_REPLACEMENT_49___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_49___);
+var ___CSS_LOADER_URL_REPLACEMENT_50___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_50___);
+var ___CSS_LOADER_URL_REPLACEMENT_51___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_51___);
+var ___CSS_LOADER_URL_REPLACEMENT_52___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_52___);
+var ___CSS_LOADER_URL_REPLACEMENT_53___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_53___);
+var ___CSS_LOADER_URL_REPLACEMENT_54___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_54___);
+var ___CSS_LOADER_URL_REPLACEMENT_55___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_55___);
+var ___CSS_LOADER_URL_REPLACEMENT_56___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_56___);
+var ___CSS_LOADER_URL_REPLACEMENT_57___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_57___);
+var ___CSS_LOADER_URL_REPLACEMENT_58___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_58___);
+var ___CSS_LOADER_URL_REPLACEMENT_59___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_59___);
+var ___CSS_LOADER_URL_REPLACEMENT_60___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_60___);
+var ___CSS_LOADER_URL_REPLACEMENT_61___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_61___);
+var ___CSS_LOADER_URL_REPLACEMENT_62___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_62___);
+var ___CSS_LOADER_URL_REPLACEMENT_63___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_63___);
+var ___CSS_LOADER_URL_REPLACEMENT_64___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_64___);
+var ___CSS_LOADER_URL_REPLACEMENT_65___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_65___);
+var ___CSS_LOADER_URL_REPLACEMENT_66___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_66___);
+var ___CSS_LOADER_URL_REPLACEMENT_67___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_67___);
+var ___CSS_LOADER_URL_REPLACEMENT_68___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_68___);
+var ___CSS_LOADER_URL_REPLACEMENT_69___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_69___);
+var ___CSS_LOADER_URL_REPLACEMENT_70___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_70___);
+var ___CSS_LOADER_URL_REPLACEMENT_71___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_71___);
+var ___CSS_LOADER_URL_REPLACEMENT_72___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_72___);
+var ___CSS_LOADER_URL_REPLACEMENT_73___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_73___);
+var ___CSS_LOADER_URL_REPLACEMENT_74___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_74___);
+var ___CSS_LOADER_URL_REPLACEMENT_75___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_75___);
+var ___CSS_LOADER_URL_REPLACEMENT_76___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_76___);
+var ___CSS_LOADER_URL_REPLACEMENT_77___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_77___);
+var ___CSS_LOADER_URL_REPLACEMENT_78___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_78___);
+var ___CSS_LOADER_URL_REPLACEMENT_79___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_79___);
+var ___CSS_LOADER_URL_REPLACEMENT_80___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_80___);
+var ___CSS_LOADER_URL_REPLACEMENT_81___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_81___);
+var ___CSS_LOADER_URL_REPLACEMENT_82___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_82___);
+var ___CSS_LOADER_URL_REPLACEMENT_83___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_83___);
+var ___CSS_LOADER_URL_REPLACEMENT_84___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_84___);
+var ___CSS_LOADER_URL_REPLACEMENT_85___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_85___);
+var ___CSS_LOADER_URL_REPLACEMENT_86___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_86___);
+var ___CSS_LOADER_URL_REPLACEMENT_87___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_87___);
+var ___CSS_LOADER_URL_REPLACEMENT_88___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_88___);
+var ___CSS_LOADER_URL_REPLACEMENT_89___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_89___);
+var ___CSS_LOADER_URL_REPLACEMENT_90___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_90___);
+var ___CSS_LOADER_URL_REPLACEMENT_91___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_91___);
+var ___CSS_LOADER_URL_REPLACEMENT_92___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_92___);
+var ___CSS_LOADER_URL_REPLACEMENT_93___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_93___);
+var ___CSS_LOADER_URL_REPLACEMENT_94___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_94___);
+var ___CSS_LOADER_URL_REPLACEMENT_95___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_95___);
+var ___CSS_LOADER_URL_REPLACEMENT_96___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_96___);
+var ___CSS_LOADER_URL_REPLACEMENT_97___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_97___);
+var ___CSS_LOADER_URL_REPLACEMENT_98___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_98___);
+var ___CSS_LOADER_URL_REPLACEMENT_99___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_99___);
+var ___CSS_LOADER_URL_REPLACEMENT_100___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_100___);
+var ___CSS_LOADER_URL_REPLACEMENT_101___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_101___);
+var ___CSS_LOADER_URL_REPLACEMENT_102___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_102___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.home {
+    font-family: 'Barlow';
+    background-color: transparent;
+    display: block;
+    position: static;
+    font-size: 10px;
+    overflow: auto;
+}
+
+.home * {
+    box-sizing: border-box;
+}
+
+.home .main-flex-wrap {
+    height: 100%;
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.home .main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+}
+
+.home .content {
+    /* var(--content-left-padding) */
+    --content-left-padding: 5em;
+    --content-right-padding: 5em;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4em var(--content-right-padding) 0em var(--content-left-padding);
+    z-index: 1;
+    /* height: 100vh; */
+    /* height: 100%; */
+
+    /* --column-gap: 3.2em;
+    gap: var(--column-gap); */
+}
+
+.home .home-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+
+.home .home-menu.open {
+    transform: translateX(0);
+}
+
+.home .home-menu .menu-caption {
+    font-weight: 700;
+    line-height: 7.8em;
+    margin: 0em 0em 4.4em 0em;
+}
+
+.home .home-menu .menu-caption span {
+    font-size: 10em;
+}
+
+.home .home-menu .menu-caption::before {
+    display: block;
+    content: '';
+    width: 13em;
+    height: 0.6em;
+    margin: 0em auto 1.5em auto;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.home .home-menu .menu-items-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4em;
+    margin: 0em 0em 0em 0em;
+}
+
+.home .home-menu .item {
+    color: #ffffff;
+}
+
+.home .home-menu .item.active {
+    color: #f4d56f;
+}
+
+.home .home-menu .item span {
+    font-size: 2.5em;
+}
+
+.home .home-menu .play-button {
+    margin: 5em 0em 0em 0em;
+}
+
+/* ############################################ */
+/* ############# WEB/MOBILE ONLY ############## */
+/* ############################################ */
+
+.home .mobile-only.flex {
+    display: none;
+}
+
+.home .mobile-only.block {
+    display: none;
+}
+
+.home .web-only.flex {
+    display: flex;
+}
+
+.home .web-only.block {
+    display: block;
+}
+
+/* ############################################ */
+/* ############## LANG SELECTOR ############### */
+/* ############################################ */
+
+.home .lang-selector-wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+    cursor: pointer;
+}
+
+.home .lang-selector-wrap .lang-selector-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home .lang-selector-wrap .active-lang-flag {
+    width: 3em;
+    height: 3em;
+}
+
+.home .lang-selector-wrap .home-arrow-down {
+    width: 1.5em;
+    height: auto;
+    aspect-ratio: 15 / 10;
+    margin-left: 0.8em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+.home .lang-selector-wrap .langs-wrap {
+    position: absolute;
+    right: 0;
+    top: 5em;
+    display: flex;
+    justify-content: center;
+    width: 22em;
+    height: 35em;
+    background: #17191E;
+    border: 0.1em solid #817344;
+    border-radius: 0.5em;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.home .lang-selector-wrap .langs-background {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.home .lang-selector-wrap .langs-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 98%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 2;
+    top: 0.7em;
+    bottom: 0.7em;
+}
+
+.home .lang-selector-wrap .lang-button {
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    max-height: 3.6em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 1.5em;
+    height: auto;
+}
+
+.home .lang-selector-wrap .lang-flag {
+    margin-right: 2em;
+    height: auto;
+    width: 2.8em;
+}
+
+.home .lang-selector-wrap .lang-title {
+    font-family: "SF UI Display", sans-serif;
+    color: #fff;
+    text-align: left;
+    font-weight: 300;
+}
+
+.home .lang-selector-wrap .lang-title span {
+    font-size: 1.5em;
+}
+
+/* ############################################ */
+/* ############### TOP CONTENT ################ */
+/* ############################################ */
+
+.home .content > .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home .site-logo {
+    /* width: 17.4em;
+    height: 4.2em; */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-image: url('/public/media/images/home/home-logo.svg'); */
+}
+
+/* .home .site-logo, */
+.home .site-logo img {
+    width: 30.4em;
+    height: auto;
+}
+
+.home .right-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    z-index: 3;
+}
+
+.home .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.home .socials a {
+    width: 3.2em;
+    height: 3.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.home .right-bar .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.home .right-bar .socials a {
+    width: 3.2em;
+    height: 3.2em;
+}
+
+.home .socials a.facebook {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+.home .socials a.instagram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
+.home .socials a.x-twitter {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.home .socials a.telegram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+.home .socials a.discord {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+.home .socials a.youtube {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+.home .socials a.tiktok {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.home .right-bar .sep {
+    width: 0.2em;
+    height: 3.2em;
+    background: #ffffff21;
+}
+
+/* ############################################ */
+/* ############ MENU ICON/BUTTON ############## */
+/* ############################################ */
+
+.home .menu-button {
+    /* background: #8e8e8e82; */
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block;
+    width: 3.2em;
+    height: 3.2em;
+    overflow: hidden;
+}
+
+.home .menu-button .line {
+    /* background-color: #c5ab5a; */
+    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);
+    border-radius: 0.3em;
+    height: 0.3em;
+    position: absolute;
+    right: 0.5em;
+    transition: width .2s,transform .2s;
+    width: 2.3em;
+}
+
+.home .menu-button .line.top {
+    top: 0.4em;
+}
+
+.home .menu-button .line.middle {
+    top: 1.5em;
+}
+
+.home .menu-button .line.bottom {
+    top: 2.5em;
+}
+
+.home .menu-button.open .line.top {
+    transform: translate(0.6em,1.05em) rotate(-45deg);
+    width: 3.4em;
+}
+
+.home .menu-button.open .line.middle {
+    transform: translate(-3.5em);
+}
+
+.home .menu-button.open .line.bottom {
+    transform: translate(0.6em,-1.05em) rotate(45deg);
+    width: 3.4em;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* ############# MIDDLE CONTENT ############### */
+/* ############################################ */
+
+.home .content > .middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 4.5em 0em 5em 0em;
+}
+
+.home .bitcoin {
+    width: 18.6em;
+    height: 3.8em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+.home .up-or-down {
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.home .up-or-down span {
+    font-size: 11.4em;
+}
+
+.home .web3-pool {
+    color: #6f7172;
+}
+
+.home .web3-pool span {
+    font-size: 4em;
+}
+
+.home .winnings-direct {
+    font-weight: 300;
+    color: #6f7172;
+    color: #8CD903;
+}
+
+.home .winnings-direct span {
+    font-size: 2.2em;
+}
+
+.home .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    margin: 5em 0em 2em 0em;
+}
+.home .buttons .play-btn{
+    display: flex; flex-direction: column; align-items: center;
+    width: 26em; 
+    margin-right: 1.9em;
+}
+.home .buttons .play-crypto-btn{
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 6.2em;
+    border-radius: 3.43em;
+    box-shadow: 0 3em 1.7em 0 rgba(0, 0, 0, 0.2);
+    background-color: #92e204;
+    cursor: pointer;
+}
+.home .buttons .play-crypto-btn:hover,
+.home .buttons .play-fun-btn:hover{
+    opacity: .8;
+}
+
+.home .buttons .play-fun-btn{
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 6.2em;
+    border-radius: 3.43em;
+    box-shadow: 0 3em 1.7em 0 rgba(0, 0, 0, 0.2);
+    background-color: #ff0400;
+    cursor: pointer;
+}
+.home .buttons .play-crypto-btn p{
+    color: #000;
+    font-size: 2.06em; font-family: "Barlow Semi Condensed"; font-weight: bold;
+}
+.home .buttons .play-fun-btn p{
+    color: #fff;
+    font-size: 2.06em; font-family: "Barlow Semi Condensed"; font-weight: bold;
+}
+.home .buttons .play-btn .play-fun-btn-desc{
+    color: #ff0400;
+    font-size: 1.7em; font-family: "Barlow Semi Condensed"; font-weight: bold;
+    text-align: center;
+    width: 70%;
+    padding: 0;
+    margin: .5em 0 0 0;
+}
+.home .buttons .play-btn .play-crypto-btn-desc{
+    color: #92e204;
+    font-size: 1.7em; font-family: "Barlow Semi Condensed"; font-weight: bold;
+    text-align: center;
+    width: 70%;
+    padding: 0;
+    margin: .5em 0 0 0;
+}
+
+.home .play-button {
+    font-weight: 600;
+    text-shadow: 0 0.1em 0.3em #000000a3;
+    min-width: 31.5em;
+    height: 6.7em;
+    border-radius: 8em;
+    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);
+    box-sizing: border-box;
+}
+
+.home .home-button-wrap {
+    width: 28em;
+    font-family: "Barlow Semi Condensed";
+    font-weight: bold;
+}
+
+.home .home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    /* text-shadow: 0 0.1em 0.3em #000000a3; */
+    height: 6.7em;
+    border-radius: 8em;
+    box-sizing: border-box;
+    margin: 0 0 1em 0;
+    cursor: pointer;
+}
+
+.home .crypto-button-wrap .home-button {
+    background: #92e204;
+    color: #000000;
+}
+
+.home .crypto-button-wrap .home-button a {
+    color: #000000;
+}
+
+.home .fun-button-wrap .home-button {
+    background: #ff0400;
+    color: #ffffff;
+}
+
+.home .crypto-button-wrap .home-button-desc {
+    color: #92e204;
+}
+
+.home .fun-button-wrap .home-button-desc {
+    color: #ff0400;
+    padding: 0 4em;
+}
+
+.home .home-button-wrap span {
+    font-size: 2.2em;
+}
+
+.home .home-button-wrap .home-button-desc span {
+    font-size: 1.9em;
+}
+
+/* .home .home-video-button {
+    width: 6.2em;
+    height: 6.2em;
+    margin-top: .3em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid .2em #aef83b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.home .home-video-button {
+    width: 6.2em;
+    height: 6.2em;
+    margin-top: .3em;
+    border-radius: 50%;
+    border: solid .2em #aef83b;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-image: url('/public/media/images/home/play-video-button.svg'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+}
+
+/* .home .home-video-button .triangle{
+    width: 0;
+    height: 0;
+    border-top: 1.1em solid transparent;
+    border-bottom: 1.1em solid transparent;
+    border-left: 2em solid #fff;
+    transform: translate(15%, 0%);
+} */
+
+.home .play-button a {
+    color: #ffffff;
+    padding: 0 5em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .play-button span {
+    font-size: 2.2em;
+}
+
+.home .home-video-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000080;
+    z-index: 3;
+    display: none;
+}
+
+.home .home-video-overlay.video-visible {
+    display: block;
+}
+
+.home .home-video {
+    /* position: fixed; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 16 / 9;
+    border: 0.6em solid #000;
+    box-sizing: border-box;
+    max-width: 65em;
+    width: 100%;
+    background: #000000;
+    z-index: 1;
+    display: block;
+}
+
+.home .home-video.video-visible {
+    display: block;
+}
+
+/* .home .video-black-bg {
+    background: #000000;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    bottom: 0em;
+    right: 0em;
+} */
+
+.home .home-video video {
+    display: block;
+    width: 100%;
+}
+
+.home .home-video .close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 3em;
+    height: 3em;
+    border: 0.1em solid #252533;
+    cursor: pointer;
+    background: #040404;
+}
+
+.home .home-video .close::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0.1em;
+    background: #bfbfbf;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.home .home-video .close::after {
+    content: '';
+    position: absolute;
+    height: 0.1em;
+    width: 100%;
+    background: #bfbfbf;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+
+
+
+
+
+.home .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    /* margin: 6em 0em 0em 0em; */
+    margin: 6em 0em 0em 0em;
+}
+
+.home .logo {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home .logo.certik {
+    width: 17.3em;
+    height: 5em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+}
+
+.home .logo.web3-game {
+    width: 18.2em;
+    height: 4.3em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+}
+
+.home .logos .sep {
+    width: 0.2em;
+    height: 3.7em;
+    background-color: #1F2021;
+}
+
+/* ############################################ */
+/* ############# BOTTOM CONTENT ############### */
+/* ############################################ */
+
+/* .home .content > .bottom {
+    max-width: 100%;
+    height: 12.7em;
+    border-top: 0.2em solid #ffffff21;
+} */
+
+.home .advantages {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    border-top: 0.2em solid #ffffff21;
+    --advantages-height: 12.7em;
+    height: var(--advantages-height);
+}
+
+.home .advantages .item-overlay.item-overlay-top {
+    position: absolute;
+    width: 100vw;
+    width: calc(100% + var(--content-right-padding) + var(--content-left-padding));
+    height: calc(100dvh - 9.3em);
+    bottom: calc(100% + 0.2em);
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.home .advantages .item-overlay.item-overlay-bottom {
+    position: absolute;
+    width: calc(100% + var(--content-right-padding) + var(--content-left-padding));
+    height: calc(100% + 0.2em);
+    bottom: 0em;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    display: none;
+}
+
+/* .home .advantages.active-item {
+    background: rgba(0, 0, 0, 0.8);
+} */
+
+.home .advantages.active-item .item-overlay.item-overlay-top,
+.home .advantages.active-item .item-overlay.item-overlay-bottom {
+    display: block;
+}
+
+.home .advantages .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    height: 100%;
+    cursor: pointer;
+    padding: 0em 2em;
+    /* flex-shrink: 0; */
+    flex-grow: 1;
+    color: #6f7172;
+    /* max-width: 30%; */
+}
+
+.home .advantages .item .item-content-wrap {
+    position: absolute;
+    bottom: calc(100% + 0.2em);
+    width: 55.1em;
+    /* height: 40em; */
+    padding: 0.2em 0.2em 0em 0.2em;
+    text-align: left;
+    border-radius: 5em 5em 0em 0em;
+    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);
+    overflow: hidden;
+    cursor: default;
+    display: none;
+}
+
+/* @media(hover: hover) {
+    .home .advantages .item:hover .item-content-wrap {
+        display: block;
+    }
+} */
+
+/* .home .advantages .item:hover .item-content-wrap {
+    display: block;
+} */
+
+.home .advantages .item.dapp .item-content-wrap {
+    left: 0;
+}
+
+.home .advantages .item.secure .item-content-wrap {
+    left: 8em;
+}
+
+.home .advantages .item.decentralized .item-content-wrap {
+    left: 16em;
+}
+
+.home .advantages .item.blockchain .item-content-wrap {
+    left: auto;
+    right: 0;
+}
+
+.home .advantages .item .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 4em 5em 6em 5em;
+    background: #040404;
+    border-radius: inherit;
+}
+
+.home .advantages .item .item-content .item-arrow-button {
+    width: 4.1em;
+    height: 4.1em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+    margin: 4.6em 0em 0em 0em;
+    display: none;
+}
+
+.home .advantages .item .item-content .content-icon {
+    height: 6em;
+    width: 6em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0em 0em 2.4em 0em;
+    background-position: -0.7em 0.6em;
+}
+
+.home .advantages .item.dapp .item-content .content-icon {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+    background-position: -0.7em 0.6em;
+}
+
+.home .advantages .item.secure .item-content .content-icon {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+
+.home .advantages .item.decentralized .item-content .content-icon {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+    background-position: -0.4em 0.6em;
+}
+
+.home .advantages .item.blockchain .item-content .content-icon {
+    /* background-image: url('/public/media/images/home/blockchain-icon-select.svg'); */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___}) !important;
+}
+
+.home .advantages .item .item-content .content-title {
+    
+}
+
+.home .advantages .item .item-content .content-title span {
+    font-size: 3.4em;
+}
+
+.home .advantages .item .item-content .content-list {
+    color: #88898a;
+    margin: 2.4em 0em 0em 0em;
+    padding-left: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.home .advantages .item .item-content .content-text {
+    color: #88898a;
+    margin: 2.4em 0em 0em 0em;
+}
+
+/* .home .advantages .item .item-content .content-text:last-child {
+    margin: 2.4em 0em 8.7em 0em;
+} */
+
+.home .advantages .item .item-content .content-text p {
+    margin: 0;
+    line-height: 2.8em;
+}
+
+.home .advantages .item .item-content .content-text p span {
+    font-size: 2em;
+}
+
+.home .advantages .item .item-content .content-list li {
+    
+}
+
+.home .advantages .item .item-content .content-list li::marker {
+    font-size: 2em;
+}
+
+.home .advantages .item .item-content .content-list li span {
+    font-size: 2em;
+}
+
+.home .advantages .icon-image {
+    width: 4.6em;
+    height: 4.5em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.home .advantages .item.dapp .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_17___});
+}
+
+.home .advantages .item.secure .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+}
+
+.home .advantages .item.decentralized .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+}
+
+.home .advantages .item.blockchain .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+}
+
+.home .advantages.dapp .item.dapp .item-content-wrap {
+    display: block;
+}
+.home .advantages.secure .item.secure .item-content-wrap {
+    display: block;
+}
+.home .advantages.decentralized .item.decentralized .item-content-wrap {
+    display: block;
+}
+.home .advantages.blockchain .item.blockchain .item-content-wrap {
+    display: block;
+}
+
+.home .advantages.dapp .item.dapp .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+.home .advantages.secure .item.secure .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+.home .advantages.decentralized .item.decentralized .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+.home .advantages.blockchain .item.blockchain .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+}
+    
+.home .advantages .text {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+    align-items: flex-start;
+    gap: 0.2em;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.home .advantages .text .top {
+    
+}
+
+.home .advantages .text .top span {
+    font-size: 2em;
+}
+
+.home .advantages .text .bottom {
+    color: #88898a;
+}
+
+.home .advantages .text .bottom span {
+    font-size: 1.4em;
+}
+
+/* ############################################ */
+/* ############## ANIMATED AREA ############### */
+/* ############################################ */
+
+.home .animated-tiles {
+    position: relative;
+    width: fit-content;
+    padding: 0em 4em;
+    display: flex;
+    overflow-y: clip;
+    display: flex;
+    align-items: center;
+}
+
+.home .scrolled-cols-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    --column-gap: 3.2em;
+    max-height: 100vh;
+}
+
+.home .scrolled-cols-container.regular {
+    gap: var(--column-gap);
+}
+
+.home .scrolled-cols-container.blurred {
+    position: absolute;
+    filter: blur(0.8em);
+    opacity: 0.3;
+    transform: translateX(calc(-100% - var(--column-gap)));
+}
+
+.home .scrolled-col {
+    --item-gap: 3em;
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: var(--item-gap);
+}
+
+.home .scrolled-col.col-1 {
+    animation: scroll-up-infinite 60s linear infinite;
+}
+
+.home .scrolled-col.col-2 {
+    align-self: flex-end;
+    animation: scroll-down-infinite 60s linear infinite;
+}
+
+.home .scrolled-col.col-3 {
+    animation: scroll-up-infinite 60s linear infinite;
+}
+
+.home .blurred .scrolled-col.col-3 {
+    align-self: flex-end;
+    animation: scroll-down-infinite 60s linear infinite;
+}
+
+.home .scrolled-col div {
+    width: 22.2em;
+    height: 32.3em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ############################################ */
+/* ############# COLUMN 1 IMAGES ############## */
+/* ############################################ */
+
+.home .scrolled-col.col-1 div:nth-child(1),
+.home .scrolled-col.col-1 div:nth-child(10) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_1.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_23___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_22___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_24___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(2),
+.home .scrolled-col.col-1 div:nth-child(11) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_2.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_25___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_26___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_25___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_27___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(3),
+.home .scrolled-col.col-1 div:nth-child(12) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_3.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_28___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_29___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_28___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_30___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(4),
+.home .scrolled-col.col-1 div:nth-child(13) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_4.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_31___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_32___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_31___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_33___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(5),
+.home .scrolled-col.col-1 div:nth-child(14) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_5.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_34___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_35___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_34___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_36___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(6),
+.home .scrolled-col.col-1 div:nth-child(15) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_6.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_37___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_38___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_37___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_39___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(7),
+.home .scrolled-col.col-1 div:nth-child(16) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_7.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_40___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_41___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_40___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_42___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(8),
+.home .scrolled-col.col-1 div:nth-child(17) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_8.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_43___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_44___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_43___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_45___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-1 div:nth-child(9),
+.home .scrolled-col.col-1 div:nth-child(18) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-1_9.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_46___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_47___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_46___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_48___}) type('image/png')
+    );
+}
+
+/* ############################################ */
+/* ############# COLUMN 2 IMAGES ############## */
+/* ############################################ */
+
+.home .scrolled-col.col-2 div:nth-child(1),
+.home .scrolled-col.col-2 div:nth-child(10) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_1.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_49___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_50___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_49___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_51___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(2),
+.home .scrolled-col.col-2 div:nth-child(11) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_2.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_52___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_53___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_52___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_54___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(3),
+.home .scrolled-col.col-2 div:nth-child(12) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_3.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_55___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_56___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_55___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_57___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(4),
+.home .scrolled-col.col-2 div:nth-child(13) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_4.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_58___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_59___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_58___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_60___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(5),
+.home .scrolled-col.col-2 div:nth-child(14) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_5.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_61___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_62___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_61___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_63___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(6),
+.home .scrolled-col.col-2 div:nth-child(15) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_6.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_64___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_65___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_64___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_66___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(7),
+.home .scrolled-col.col-2 div:nth-child(16) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_7.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_67___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_68___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_67___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_69___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(8),
+.home .scrolled-col.col-2 div:nth-child(17) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_8.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_70___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_71___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_70___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_72___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-2 div:nth-child(9),
+.home .scrolled-col.col-2 div:nth-child(18) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-2_9.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_73___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_74___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_73___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_75___}) type('image/png')
+    );
+}
+
+/* ############################################ */
+/* ############# COLUMN 3 IMAGES ############## */
+/* ############################################ */
+
+.home .scrolled-col.col-3 div:nth-child(1),
+.home .scrolled-col.col-3 div:nth-child(10) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_1.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_76___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_77___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_76___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_78___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(2),
+.home .scrolled-col.col-3 div:nth-child(11) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_2.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_79___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_80___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_79___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_81___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(3),
+.home .scrolled-col.col-3 div:nth-child(12) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_3.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_82___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_83___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_82___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_84___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(4),
+.home .scrolled-col.col-3 div:nth-child(13) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_4.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_85___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_86___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_85___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_87___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(5),
+.home .scrolled-col.col-3 div:nth-child(14) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_5.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_88___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_89___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_88___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_90___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(6),
+.home .scrolled-col.col-3 div:nth-child(15) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_6.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_91___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_92___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_91___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_93___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(7),
+.home .scrolled-col.col-3 div:nth-child(16) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_7.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_94___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_95___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_94___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_96___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(8),
+.home .scrolled-col.col-3 div:nth-child(17) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_8.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_97___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_98___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_97___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_99___}) type('image/png')
+    );
+}
+
+.home .scrolled-col.col-3 div:nth-child(9),
+.home .scrolled-col.col-3 div:nth-child(18) {
+    /* background-image: url('/public/media/images/home/animated-tiles/col-3_9.png'); */
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_100___});
+    background-image: image-set(
+        url(${___CSS_LOADER_URL_REPLACEMENT_101___}) type('image/avif'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_100___}) type('image/webp'),
+        url(${___CSS_LOADER_URL_REPLACEMENT_102___}) type('image/png')
+    );
+}
+
+@keyframes scroll-up-infinite {
+    to {
+        transform: translateY(calc(-50% - (var(--item-gap) / 2)));
+    }
+}
+
+@keyframes scroll-down-infinite {
+    to {
+        transform: translateY(calc(50% + (var(--item-gap) / 2)));
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    
+    .home {
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+    .home .scrolled-col div {
+        width: 18.5em;
+        height: 27em;
+    }
+
+    .home .up-or-down span {
+        font-size: 10.4em;
+    }
+
+    .home .advantages .text .top span {
+        font-size: 1.8em;
+    }
+
+    .home .advantages .text .bottom span {
+        font-size: 1.2em;
+    }
+
+    .home .logos {
+        margin: 5em 0em 0em 0em;
+    }
+
+}
+
+@media screen and (max-width: 1440px) and (max-height: 780px) {
+
+    .home .content > .middle {
+        font-size: 8px;
+    }
+
+    .home .advantages .item .item-content-wrap {
+        font-size: 9px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1256px) {
+
+    /* .home .content > .bottom {
+        height: 9.7em;
+    } */
+
+    .home .advantages {
+        height: 9.7em;
+    }
+
+    .home .advantages .text .top span {
+        font-size: 1.5em;
+    }
+
+    .home .advantages .text .bottom span {
+        font-size: 1.1em;
+    }
+
+    .home .advantages .icon-image {
+        width: 3.6em;
+        height: 3.5em;
+    }
+
+    .home .advantages .item {
+        padding: 0em 2em;
+    }
+
+    .home .advantages .item .item-content-wrap {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+}
+
+.home .advantages .item.blockchain .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___}) !important;
+}
+
+@media screen and (max-width: 480px) {
+
+    .home {
+        font-size: inherit;
+    }
+
+    /* ############################################ */
+    /* ############# WEB/MOBILE ONLY ############## */
+    /* ############################################ */
+
+    .home .web-only.flex {
+        display: none;
+    }
+
+    .home .web-only.block {
+        display: none;
+    }
+ 
+    .home .mobile-only.flex {
+        display: flex;
+    }
+
+    .home .mobile-only.block {
+        display: block;
+    }
+
+    .home .advantages .item-overlay.item-overlay-top {
+        width: 100vw;
+    }
+
+    .home .content > .top {
+        margin-top: 1.6em;
+    }
+
+    .home .content > .middle {
+        padding: 2em 0em 1em 0em;
+        font-size: unset;
+    }
+
+    .home .main-flex {
+        height: 100%;
+        height: 100dvh;
+    }
+
+    /* .home .content > .bottom {
+        height: 9.3em;
+    } */
+
+    .home .advantages {
+        height: 9.3em;
+    }
+
+    .home .right-bar .socials,
+    .home .right-bar .sep {
+        display: none;
+    }
+
+    .home .site-logo img {
+        width: 13.4em;
+    }
+
+    .home .content {
+        padding: 0em 0em 0em 0em;
+        height: 100%;
+    }
+
+    .home .up-or-down span {
+        font-size: 4.2em;
+    }
+
+    .home .bitcoin {
+        width: 9.3em;
+        height: 2.8em;
+    }
+
+    .home .advantages .item {
+        flex-direction: column;
+        padding: 0em 1em 0.3em 1em;
+        gap: 0.2em;
+    }
+
+    .home .advantages .text {
+        align-items: center;
+    }
+
+    .home .play-button {
+        min-width: 21em;
+        height: 5em;
+    }
+
+    .home .play-button a {
+        padding: 0 4em;
+    }
+
+    .home .play-button span {
+        font-size: 1.5em;
+    }
+
+    .home .web3-pool span {
+        font-size: 1.7em;
+    }
+
+    .home .animated-tiles {
+        width: 100%;
+        padding: 0;
+        flex-grow: 1;
+        overflow: hidden;
+        margin-top: 2em;
+    }
+
+    .home .scrolled-cols-container {
+        --column-gap: 2em;
+    }
+
+    .home .scrolled-cols-container.blurred {
+        display: none;
+    }
+
+    .home .scrolled-cols-container.regular {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .home .scrolled-col div {
+        width: 13.2em;
+        height: 19.3em;
+    }
+
+    .home .winnings-direct span {
+        font-size: 1.2em;
+    }
+
+    .home .logos {
+        margin-top: 2em;
+        gap: 2em;
+    }
+
+    .home .logo.certik {
+        width: 10.3em;
+        height: 3em;
+    }
+
+    .home .logo.web3-game {
+        width: 12.2em;
+        height: 3em;
+    }
+
+    /* .home .home-video-button {
+        width: 4.8em;
+        height: 4.8em;
+    } */
+
+    .home .advantages .item .item-content-wrap {
+        width: 90%;
+    }
+
+    .home .bitcoin,
+    .home .up-or-down,
+    .home .web3-pool,
+    .home .content > .top,
+    /* .home .content > .bottom, */
+    .home .buttons,
+    .home .winnings-direct,
+    .home .logos {
+        margin-left: 1.4em;
+        margin-right: 1.4em;
+    }
+
+    .home .buttons {
+        margin-top: 3em;
+        gap: 1.5em;
+    }
+
+    .home .home-button {
+        height: 4.7em;
+    }
+
+    .home .home-button-wrap {
+        width: 15em;
+    }
+
+    /* .home .fun-button-wrap {
+        width: 16em;
+    } */
+
+    /* .home .home-button-wrap .home-button span {
+        white-space: nowrap;
+    } */
+
+    .home .home-button-wrap span {
+        font-size: 1.6em;
+    }
+
+    .home .home-button-wrap .home-button-desc {
+        padding: 0;
+    }
+
+    .home .home-button-wrap .home-button-desc span {
+        font-size: 1.5em;
+    }
+
+    .home .home-video-button {
+        width: 4.2em;
+        height: 4.2em;
+        margin-top: .2em;
+    }
+
+    .home .buttons .play-btn{
+        width: 17em;
+        /* margin-right: 1em; */
+    }
+    .home .buttons .play-btn .play-crypto-btn-desc,
+    .home .buttons .play-btn .play-fun-btn-desc{
+        width: 100%;
+    }
+
+    .home .scrolled-col {
+        --item-gap: 1.6em;
+    }
+
+    .home .advantages .text .top span {
+        font-size: 1.3em;
+    }
+
+    .home .advantages .text .bottom span {
+        font-size: 1em;
+    }
+
+    .home .home-menu .menu-caption {
+        font-weight: 600;
+    }
+
+    .home .home-menu .menu-caption span {
+        font-size: 7.4em;
+    }
+
+    .home .home-menu .menu-caption::before {
+        width: 9em;
+        height: 0.4em;
+        margin: 0em auto 0.2em auto;
+    }
+
+    .home .web3-pool {
+        margin-top: 1em;
+    }
+
+    .home .home-menu .item span {
+        font-size: 2.3em;
+    }
+
+    .home .home-menu .socials {
+        margin-top: 3em;
+    }
+
+    .home .home-menu .play-button {
+        min-width: 26em;
+        height: 5.6em;
+        margin: 5em 0em 0em 0em;
+    }
+
+    .home .home-menu .play-button span {
+        font-size: 1.9em;
+    }
+
+    .home .advantages .item .item-content {
+        padding: 3em 3.6em 3em 3.6em;
+    }
+
+    .home .advantages .item .item-content .content-icon {
+        height: 5em;
+        width: 5em;
+        background-position: -0.6em 0.6em;
+        margin: 0em 0em 1.6em 0em;
+    }
+
+    .home .advantages .item .item-content .content-title span {
+        font-size: 3em;
+    }
+
+    .home .advantages .item .item-content .content-list li {
+        line-height: 2em;
+        padding-left: 0.3em;
+    }
+
+    .home .advantages .item .item-content .content-list li span {
+        font-size: 1.7em;
+    }
+
+    .home .advantages .item .item-content .content-list li::marker {
+        font-size: 1.7em;
+    }
+
+    .home .advantages .item .item-content .item-arrow-button {
+        width: 3.4em;
+        height: 3.4em;
+    }
+
+    .home .advantages .item .item-content .content-text p {
+        line-height: 2.6em;
+    }
+
+    .home .advantages .item .item-content .content-text p span {
+        font-size: 1.7em;
+    }
+
+    .home .advantages .item .item-content .content-text:last-child {
+        margin: 2.4em 0em 1em 0em;
+    }
+
+    .home .home-video {
+        max-width: unset;
+        box-shadow: 0 0 0 0.1em #737373;
+    }
+
+    .home .home-video .close {
+        border: 0.1em solid #737373;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/Home/Home.css"],"names":[],"mappings":"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","sourcesContent":[".home {\n    font-family: 'Barlow';\n    background-color: transparent;\n    display: block;\n    position: static;\n    font-size: 10px;\n    overflow: auto;\n}\n\n.home * {\n    box-sizing: border-box;\n}\n\n.home .main-flex-wrap {\n    height: 100%;\n    height: 100dvh;\n    overflow-y: auto;\n    overflow-x: hidden;\n}\n\n.home .main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n}\n\n.home .content {\n    /* var(--content-left-padding) */\n    --content-left-padding: 5em;\n    --content-right-padding: 5em;\n    position: relative;\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    padding: 4em var(--content-right-padding) 0em var(--content-left-padding);\n    z-index: 1;\n    /* height: 100vh; */\n    /* height: 100%; */\n\n    /* --column-gap: 3.2em;\n    gap: var(--column-gap); */\n}\n\n.home .home-menu {\n    position: absolute;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 0;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    background-color: rgba(0, 0, 0, 0.9);\n    width: 100%;\n    z-index: 2;\n    transform: translateX(-100%);\n    transition: transform .3s ease;\n}\n\n.home .home-menu.open {\n    transform: translateX(0);\n}\n\n.home .home-menu .menu-caption {\n    font-weight: 700;\n    line-height: 7.8em;\n    margin: 0em 0em 4.4em 0em;\n}\n\n.home .home-menu .menu-caption span {\n    font-size: 10em;\n}\n\n.home .home-menu .menu-caption::before {\n    display: block;\n    content: '';\n    width: 13em;\n    height: 0.6em;\n    margin: 0em auto 1.5em auto;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.home .home-menu .menu-items-list {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 1.4em;\n    margin: 0em 0em 0em 0em;\n}\n\n.home .home-menu .item {\n    color: #ffffff;\n}\n\n.home .home-menu .item.active {\n    color: #f4d56f;\n}\n\n.home .home-menu .item span {\n    font-size: 2.5em;\n}\n\n.home .home-menu .play-button {\n    margin: 5em 0em 0em 0em;\n}\n\n/* ############################################ */\n/* ############# WEB/MOBILE ONLY ############## */\n/* ############################################ */\n\n.home .mobile-only.flex {\n    display: none;\n}\n\n.home .mobile-only.block {\n    display: none;\n}\n\n.home .web-only.flex {\n    display: flex;\n}\n\n.home .web-only.block {\n    display: block;\n}\n\n/* ############################################ */\n/* ############## LANG SELECTOR ############### */\n/* ############################################ */\n\n.home .lang-selector-wrap {\n    display: flex;\n    flex-direction: column;\n    position: relative;\n    width: auto;\n    cursor: pointer;\n}\n\n.home .lang-selector-wrap .lang-selector-button {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    align-items: center;\n}\n\n.home .lang-selector-wrap .active-lang-flag {\n    width: 3em;\n    height: 3em;\n}\n\n.home .lang-selector-wrap .home-arrow-down {\n    width: 1.5em;\n    height: auto;\n    aspect-ratio: 15 / 10;\n    margin-left: 0.8em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/home/arrow-down.svg');\n}\n\n.home .lang-selector-wrap .langs-wrap {\n    position: absolute;\n    right: 0;\n    top: 5em;\n    display: flex;\n    justify-content: center;\n    width: 22em;\n    height: 35em;\n    background: #17191E;\n    border: 0.1em solid #817344;\n    border-radius: 0.5em;\n    overflow: hidden;\n    z-index: 1;\n}\n\n.home .lang-selector-wrap .langs-background {\n    height: 100%;\n    width: 100%;\n    display: none;\n}\n\n.home .lang-selector-wrap .langs-list {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    width: 98%;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    position: absolute;\n    z-index: 2;\n    top: 0.7em;\n    bottom: 0.7em;\n}\n\n.home .lang-selector-wrap .lang-button {\n    flex-direction: row;\n    padding: 0;\n    margin: 0;\n    max-height: 3.6em;\n    display: flex;\n    align-items: center;\n    width: 100%;\n    background: none;\n    border: none;\n    cursor: pointer;\n    box-sizing: border-box;\n    padding-left: 1.5em;\n    height: auto;\n}\n\n.home .lang-selector-wrap .lang-flag {\n    margin-right: 2em;\n    height: auto;\n    width: 2.8em;\n}\n\n.home .lang-selector-wrap .lang-title {\n    font-family: \"SF UI Display\", sans-serif;\n    color: #fff;\n    text-align: left;\n    font-weight: 300;\n}\n\n.home .lang-selector-wrap .lang-title span {\n    font-size: 1.5em;\n}\n\n/* ############################################ */\n/* ############### TOP CONTENT ################ */\n/* ############################################ */\n\n.home .content > .top {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n\n.home .site-logo {\n    /* width: 17.4em;\n    height: 4.2em; */\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    /* background-image: url('/public/media/images/home/home-logo.svg'); */\n}\n\n/* .home .site-logo, */\n.home .site-logo img {\n    width: 30.4em;\n    height: auto;\n}\n\n.home .right-bar {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n    z-index: 3;\n}\n\n.home .socials {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n.home .socials a {\n    width: 3.2em;\n    height: 3.2em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    cursor: pointer;\n}\n\n.home .right-bar .socials {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n.home .right-bar .socials a {\n    width: 3.2em;\n    height: 3.2em;\n}\n\n.home .socials a.facebook {\n    background-image: url('/public/media/images/home/facebook-icon.svg');\n}\n\n.home .socials a.instagram {\n    background-image: url('/public/media/images/home/instagram-icon.svg');\n}\n\n.home .socials a.x-twitter {\n    background-image: url('/public/media/images/home/x-twitter-icon.svg');\n}\n\n.home .socials a.telegram {\n    background-image: url('/public/media/images/home/telegram-icon.svg');\n}\n\n.home .socials a.discord {\n    background-image: url('/public/media/images/home/discord-icon.svg');\n}\n\n.home .socials a.youtube {\n    background-image: url('/public/media/images/home/youtube-icon.svg');\n}\n\n.home .socials a.tiktok {\n    background-image: url('/public/media/images/home/tiktok-icon.svg');\n}\n\n.home .right-bar .sep {\n    width: 0.2em;\n    height: 3.2em;\n    background: #ffffff21;\n}\n\n/* ############################################ */\n/* ############ MENU ICON/BUTTON ############## */\n/* ############################################ */\n\n.home .menu-button {\n    /* background: #8e8e8e82; */\n    position: relative;\n    z-index: 3;\n    cursor: pointer;\n    display: inline-block;\n    width: 3.2em;\n    height: 3.2em;\n    overflow: hidden;\n}\n\n.home .menu-button .line {\n    /* background-color: #c5ab5a; */\n    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);\n    border-radius: 0.3em;\n    height: 0.3em;\n    position: absolute;\n    right: 0.5em;\n    transition: width .2s,transform .2s;\n    width: 2.3em;\n}\n\n.home .menu-button .line.top {\n    top: 0.4em;\n}\n\n.home .menu-button .line.middle {\n    top: 1.5em;\n}\n\n.home .menu-button .line.bottom {\n    top: 2.5em;\n}\n\n.home .menu-button.open .line.top {\n    transform: translate(0.6em,1.05em) rotate(-45deg);\n    width: 3.4em;\n}\n\n.home .menu-button.open .line.middle {\n    transform: translate(-3.5em);\n}\n\n.home .menu-button.open .line.bottom {\n    transform: translate(0.6em,-1.05em) rotate(45deg);\n    width: 3.4em;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* ############# MIDDLE CONTENT ############### */\n/* ############################################ */\n\n.home .content > .middle {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    flex-grow: 1;\n    padding: 4.5em 0em 5em 0em;\n}\n\n.home .bitcoin {\n    width: 18.6em;\n    height: 3.8em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/home/bitcoin-image.svg');\n}\n\n.home .up-or-down {\n    font-weight: 700;\n    text-align: left;\n    white-space: nowrap;\n}\n\n.home .up-or-down span {\n    font-size: 11.4em;\n}\n\n.home .web3-pool {\n    color: #6f7172;\n}\n\n.home .web3-pool span {\n    font-size: 4em;\n}\n\n.home .winnings-direct {\n    font-weight: 300;\n    color: #6f7172;\n    color: #8CD903;\n}\n\n.home .winnings-direct span {\n    font-size: 2.2em;\n}\n\n.home .buttons {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 2em;\n    margin: 5em 0em 2em 0em;\n}\n.home .buttons .play-btn{\n    display: flex; flex-direction: column; align-items: center;\n    width: 26em; \n    margin-right: 1.9em;\n}\n.home .buttons .play-crypto-btn{\n    display: flex; align-items: center; justify-content: center;\n    width: 100%; height: 6.2em;\n    border-radius: 3.43em;\n    box-shadow: 0 3em 1.7em 0 rgba(0, 0, 0, 0.2);\n    background-color: #92e204;\n    cursor: pointer;\n}\n.home .buttons .play-crypto-btn:hover,\n.home .buttons .play-fun-btn:hover{\n    opacity: .8;\n}\n\n.home .buttons .play-fun-btn{\n    display: flex; align-items: center; justify-content: center;\n    width: 100%; height: 6.2em;\n    border-radius: 3.43em;\n    box-shadow: 0 3em 1.7em 0 rgba(0, 0, 0, 0.2);\n    background-color: #ff0400;\n    cursor: pointer;\n}\n.home .buttons .play-crypto-btn p{\n    color: #000;\n    font-size: 2.06em; font-family: \"Barlow Semi Condensed\"; font-weight: bold;\n}\n.home .buttons .play-fun-btn p{\n    color: #fff;\n    font-size: 2.06em; font-family: \"Barlow Semi Condensed\"; font-weight: bold;\n}\n.home .buttons .play-btn .play-fun-btn-desc{\n    color: #ff0400;\n    font-size: 1.7em; font-family: \"Barlow Semi Condensed\"; font-weight: bold;\n    text-align: center;\n    width: 70%;\n    padding: 0;\n    margin: .5em 0 0 0;\n}\n.home .buttons .play-btn .play-crypto-btn-desc{\n    color: #92e204;\n    font-size: 1.7em; font-family: \"Barlow Semi Condensed\"; font-weight: bold;\n    text-align: center;\n    width: 70%;\n    padding: 0;\n    margin: .5em 0 0 0;\n}\n\n.home .play-button {\n    font-weight: 600;\n    text-shadow: 0 0.1em 0.3em #000000a3;\n    min-width: 31.5em;\n    height: 6.7em;\n    border-radius: 8em;\n    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);\n    box-sizing: border-box;\n}\n\n.home .home-button-wrap {\n    width: 28em;\n    font-family: \"Barlow Semi Condensed\";\n    font-weight: bold;\n}\n\n.home .home-button {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-weight: 600;\n    /* text-shadow: 0 0.1em 0.3em #000000a3; */\n    height: 6.7em;\n    border-radius: 8em;\n    box-sizing: border-box;\n    margin: 0 0 1em 0;\n    cursor: pointer;\n}\n\n.home .crypto-button-wrap .home-button {\n    background: #92e204;\n    color: #000000;\n}\n\n.home .crypto-button-wrap .home-button a {\n    color: #000000;\n}\n\n.home .fun-button-wrap .home-button {\n    background: #ff0400;\n    color: #ffffff;\n}\n\n.home .crypto-button-wrap .home-button-desc {\n    color: #92e204;\n}\n\n.home .fun-button-wrap .home-button-desc {\n    color: #ff0400;\n    padding: 0 4em;\n}\n\n.home .home-button-wrap span {\n    font-size: 2.2em;\n}\n\n.home .home-button-wrap .home-button-desc span {\n    font-size: 1.9em;\n}\n\n/* .home .home-video-button {\n    width: 6.2em;\n    height: 6.2em;\n    margin-top: .3em;\n    border-radius: 50%;\n    cursor: pointer;\n    border: solid .2em #aef83b;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n} */\n\n.home .home-video-button {\n    width: 6.2em;\n    height: 6.2em;\n    margin-top: .3em;\n    border-radius: 50%;\n    border: solid .2em #aef83b;\n    cursor: pointer;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    /* background-image: url('/public/media/images/home/play-video-button.svg'); */\n    background-image: url('/public/media/images/home/play-arrow.svg');\n}\n\n/* .home .home-video-button .triangle{\n    width: 0;\n    height: 0;\n    border-top: 1.1em solid transparent;\n    border-bottom: 1.1em solid transparent;\n    border-left: 2em solid #fff;\n    transform: translate(15%, 0%);\n} */\n\n.home .play-button a {\n    color: #ffffff;\n    padding: 0 5em;\n    height: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.home .play-button span {\n    font-size: 2.2em;\n}\n\n.home .home-video-overlay {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: #00000080;\n    z-index: 3;\n    display: none;\n}\n\n.home .home-video-overlay.video-visible {\n    display: block;\n}\n\n.home .home-video {\n    /* position: fixed; */\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    aspect-ratio: 16 / 9;\n    border: 0.6em solid #000;\n    box-sizing: border-box;\n    max-width: 65em;\n    width: 100%;\n    background: #000000;\n    z-index: 1;\n    display: block;\n}\n\n.home .home-video.video-visible {\n    display: block;\n}\n\n/* .home .video-black-bg {\n    background: #000000;\n    position: absolute;\n    top: 0em;\n    left: 0em;\n    bottom: 0em;\n    right: 0em;\n} */\n\n.home .home-video video {\n    display: block;\n    width: 100%;\n}\n\n.home .home-video .close {\n    position: absolute;\n    top: 1em;\n    right: 1em;\n    width: 3em;\n    height: 3em;\n    border: 0.1em solid #252533;\n    cursor: pointer;\n    background: #040404;\n}\n\n.home .home-video .close::before {\n    content: '';\n    position: absolute;\n    height: 100%;\n    width: 0.1em;\n    background: #bfbfbf;\n    left: 50%;\n    transform: translateX(-50%) rotate(45deg);\n}\n\n.home .home-video .close::after {\n    content: '';\n    position: absolute;\n    height: 0.1em;\n    width: 100%;\n    background: #bfbfbf;\n    top: 50%;\n    transform: translateY(-50%) rotate(45deg);\n}\n\n\n\n\n\n\n\n\n.home .logos {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 3em;\n    /* margin: 6em 0em 0em 0em; */\n    margin: 6em 0em 0em 0em;\n}\n\n.home .logo {\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n\n.home .logo.certik {\n    width: 17.3em;\n    height: 5em;\n    background-image: url('/public/media/images/home/certik.svg');\n}\n\n.home .logo.web3-game {\n    width: 18.2em;\n    height: 4.3em;\n    background-image: url('/public/media/images/home/web-game.svg');\n}\n\n.home .logos .sep {\n    width: 0.2em;\n    height: 3.7em;\n    background-color: #1F2021;\n}\n\n/* ############################################ */\n/* ############# BOTTOM CONTENT ############### */\n/* ############################################ */\n\n/* .home .content > .bottom {\n    max-width: 100%;\n    height: 12.7em;\n    border-top: 0.2em solid #ffffff21;\n} */\n\n.home .advantages {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    align-items: center;\n    height: 100%;\n\n    border-top: 0.2em solid #ffffff21;\n    --advantages-height: 12.7em;\n    height: var(--advantages-height);\n}\n\n.home .advantages .item-overlay.item-overlay-top {\n    position: absolute;\n    width: 100vw;\n    width: calc(100% + var(--content-right-padding) + var(--content-left-padding));\n    height: calc(100dvh - 9.3em);\n    bottom: calc(100% + 0.2em);\n    background: rgba(0, 0, 0, 0.8);\n    display: none;\n}\n\n.home .advantages .item-overlay.item-overlay-bottom {\n    position: absolute;\n    width: calc(100% + var(--content-right-padding) + var(--content-left-padding));\n    height: calc(100% + 0.2em);\n    bottom: 0em;\n    background: rgba(0, 0, 0, 0.8);\n    z-index: -1;\n    display: none;\n}\n\n/* .home .advantages.active-item {\n    background: rgba(0, 0, 0, 0.8);\n} */\n\n.home .advantages.active-item .item-overlay.item-overlay-top,\n.home .advantages.active-item .item-overlay.item-overlay-bottom {\n    display: block;\n}\n\n.home .advantages .item {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 0.8em;\n    height: 100%;\n    cursor: pointer;\n    padding: 0em 2em;\n    /* flex-shrink: 0; */\n    flex-grow: 1;\n    color: #6f7172;\n    /* max-width: 30%; */\n}\n\n.home .advantages .item .item-content-wrap {\n    position: absolute;\n    bottom: calc(100% + 0.2em);\n    width: 55.1em;\n    /* height: 40em; */\n    padding: 0.2em 0.2em 0em 0.2em;\n    text-align: left;\n    border-radius: 5em 5em 0em 0em;\n    background-image: linear-gradient(to right, #8cd903 14%, #fb0401 83%);\n    overflow: hidden;\n    cursor: default;\n    display: none;\n}\n\n/* @media(hover: hover) {\n    .home .advantages .item:hover .item-content-wrap {\n        display: block;\n    }\n} */\n\n/* .home .advantages .item:hover .item-content-wrap {\n    display: block;\n} */\n\n.home .advantages .item.dapp .item-content-wrap {\n    left: 0;\n}\n\n.home .advantages .item.secure .item-content-wrap {\n    left: 8em;\n}\n\n.home .advantages .item.decentralized .item-content-wrap {\n    left: 16em;\n}\n\n.home .advantages .item.blockchain .item-content-wrap {\n    left: auto;\n    right: 0;\n}\n\n.home .advantages .item .item-content {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    width: 100%;\n    height: 100%;\n    padding: 4em 5em 6em 5em;\n    background: #040404;\n    border-radius: inherit;\n}\n\n.home .advantages .item .item-content .item-arrow-button {\n    width: 4.1em;\n    height: 4.1em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/home/item-arrow-button.svg');\n    margin: 4.6em 0em 0em 0em;\n    display: none;\n}\n\n.home .advantages .item .item-content .content-icon {\n    height: 6em;\n    width: 6em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    margin: 0em 0em 2.4em 0em;\n    background-position: -0.7em 0.6em;\n}\n\n.home .advantages .item.dapp .item-content .content-icon {\n    background-image: url('/public/media/images/home/dapp-icon-select.svg');\n    background-position: -0.7em 0.6em;\n}\n\n.home .advantages .item.secure .item-content .content-icon {\n    background-image: url('/public/media/images/home/secure-icon-select.svg');\n}\n\n.home .advantages .item.decentralized .item-content .content-icon {\n    background-image: url('/public/media/images/home/decentralized-icon-select.svg');\n    background-position: -0.4em 0.6em;\n}\n\n.home .advantages .item.blockchain .item-content .content-icon {\n    /* background-image: url('/public/media/images/home/blockchain-icon-select.svg'); */\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/home/doggo-icon.png') !important;\n}\n\n.home .advantages .item .item-content .content-title {\n    \n}\n\n.home .advantages .item .item-content .content-title span {\n    font-size: 3.4em;\n}\n\n.home .advantages .item .item-content .content-list {\n    color: #88898a;\n    margin: 2.4em 0em 0em 0em;\n    padding-left: 2em;\n    display: flex;\n    flex-direction: column;\n    gap: 0.6em;\n}\n\n.home .advantages .item .item-content .content-text {\n    color: #88898a;\n    margin: 2.4em 0em 0em 0em;\n}\n\n/* .home .advantages .item .item-content .content-text:last-child {\n    margin: 2.4em 0em 8.7em 0em;\n} */\n\n.home .advantages .item .item-content .content-text p {\n    margin: 0;\n    line-height: 2.8em;\n}\n\n.home .advantages .item .item-content .content-text p span {\n    font-size: 2em;\n}\n\n.home .advantages .item .item-content .content-list li {\n    \n}\n\n.home .advantages .item .item-content .content-list li::marker {\n    font-size: 2em;\n}\n\n.home .advantages .item .item-content .content-list li span {\n    font-size: 2em;\n}\n\n.home .advantages .icon-image {\n    width: 4.6em;\n    height: 4.5em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    flex-shrink: 0;\n}\n\n.home .advantages .item.dapp .icon-image {\n    background-image: url('/public/media/images/home/dapp-icon.svg');\n}\n\n.home .advantages .item.secure .icon-image {\n    background-image: url('/public/media/images/home/secure-icon.svg');\n}\n\n.home .advantages .item.decentralized .icon-image {\n    background-image: url('/public/media/images/home/decentralized-icon.svg');\n}\n\n.home .advantages .item.blockchain .icon-image {\n    background-image: url('/public/media/images/home/blockchain-icon.svg');\n}\n\n.home .advantages.dapp .item.dapp .item-content-wrap {\n    display: block;\n}\n.home .advantages.secure .item.secure .item-content-wrap {\n    display: block;\n}\n.home .advantages.decentralized .item.decentralized .item-content-wrap {\n    display: block;\n}\n.home .advantages.blockchain .item.blockchain .item-content-wrap {\n    display: block;\n}\n\n.home .advantages.dapp .item.dapp .icon-image {\n    background-image: url('/public/media/images/home/dapp-icon-select.svg');\n}\n.home .advantages.secure .item.secure .icon-image {\n    background-image: url('/public/media/images/home/secure-icon-select.svg');\n}\n.home .advantages.decentralized .item.decentralized .icon-image {\n    background-image: url('/public/media/images/home/decentralized-icon-select.svg');\n}\n.home .advantages.blockchain .item.blockchain .icon-image {\n    background-image: url('/public/media/images/home/blockchain-icon-select.svg');\n}\n    \n.home .advantages .text {\n    display: flex;\n    flex-direction: column;\n    /* align-items: center; */\n\n    align-items: flex-start;\n    gap: 0.2em;\n    white-space: nowrap;\n    text-align: left;\n}\n\n.home .advantages .text .top {\n    \n}\n\n.home .advantages .text .top span {\n    font-size: 2em;\n}\n\n.home .advantages .text .bottom {\n    color: #88898a;\n}\n\n.home .advantages .text .bottom span {\n    font-size: 1.4em;\n}\n\n/* ############################################ */\n/* ############## ANIMATED AREA ############### */\n/* ############################################ */\n\n.home .animated-tiles {\n    position: relative;\n    width: fit-content;\n    padding: 0em 4em;\n    display: flex;\n    overflow-y: clip;\n    display: flex;\n    align-items: center;\n}\n\n.home .scrolled-cols-container {\n    margin: 0 auto;\n    display: flex;\n    justify-content: space-between;\n    height: 100%;\n    --column-gap: 3.2em;\n    max-height: 100vh;\n}\n\n.home .scrolled-cols-container.regular {\n    gap: var(--column-gap);\n}\n\n.home .scrolled-cols-container.blurred {\n    position: absolute;\n    filter: blur(0.8em);\n    opacity: 0.3;\n    transform: translateX(calc(-100% - var(--column-gap)));\n}\n\n.home .scrolled-col {\n    --item-gap: 3em;\n    position: relative;\n    width: auto;\n    display: flex;\n    flex-direction: column;\n    height: fit-content;\n    gap: var(--item-gap);\n}\n\n.home .scrolled-col.col-1 {\n    animation: scroll-up-infinite 60s linear infinite;\n}\n\n.home .scrolled-col.col-2 {\n    align-self: flex-end;\n    animation: scroll-down-infinite 60s linear infinite;\n}\n\n.home .scrolled-col.col-3 {\n    animation: scroll-up-infinite 60s linear infinite;\n}\n\n.home .blurred .scrolled-col.col-3 {\n    align-self: flex-end;\n    animation: scroll-down-infinite 60s linear infinite;\n}\n\n.home .scrolled-col div {\n    width: 22.2em;\n    height: 32.3em;\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n/* ############################################ */\n/* ############# COLUMN 1 IMAGES ############## */\n/* ############################################ */\n\n.home .scrolled-col.col-1 div:nth-child(1),\n.home .scrolled-col.col-1 div:nth-child(10) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_1.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_1.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_1.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_1.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_1.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(2),\n.home .scrolled-col.col-1 div:nth-child(11) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_2.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_2.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_2.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_2.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_2.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(3),\n.home .scrolled-col.col-1 div:nth-child(12) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_3.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_3.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_3.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_3.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_3.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(4),\n.home .scrolled-col.col-1 div:nth-child(13) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_4.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_4.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_4.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_4.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_4.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(5),\n.home .scrolled-col.col-1 div:nth-child(14) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_5.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_5.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_5.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_5.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_5.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(6),\n.home .scrolled-col.col-1 div:nth-child(15) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_6.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_6.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_6.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_6.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_6.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(7),\n.home .scrolled-col.col-1 div:nth-child(16) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_7.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_7.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_7.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_7.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_7.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(8),\n.home .scrolled-col.col-1 div:nth-child(17) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_8.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_8.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_8.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_8.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_8.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-1 div:nth-child(9),\n.home .scrolled-col.col-1 div:nth-child(18) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-1_9.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-1_9.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-1_9.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-1_9.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-1_9.png') type('image/png')\n    );\n}\n\n/* ############################################ */\n/* ############# COLUMN 2 IMAGES ############## */\n/* ############################################ */\n\n.home .scrolled-col.col-2 div:nth-child(1),\n.home .scrolled-col.col-2 div:nth-child(10) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_1.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_1.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_1.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_1.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_1.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(2),\n.home .scrolled-col.col-2 div:nth-child(11) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_2.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_2.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_2.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_2.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_2.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(3),\n.home .scrolled-col.col-2 div:nth-child(12) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_3.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_3.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_3.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_3.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_3.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(4),\n.home .scrolled-col.col-2 div:nth-child(13) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_4.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_4.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_4.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_4.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_4.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(5),\n.home .scrolled-col.col-2 div:nth-child(14) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_5.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_5.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_5.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_5.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_5.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(6),\n.home .scrolled-col.col-2 div:nth-child(15) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_6.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_6.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_6.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_6.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_6.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(7),\n.home .scrolled-col.col-2 div:nth-child(16) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_7.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_7.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_7.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_7.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_7.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(8),\n.home .scrolled-col.col-2 div:nth-child(17) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_8.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_8.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_8.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_8.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_8.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-2 div:nth-child(9),\n.home .scrolled-col.col-2 div:nth-child(18) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-2_9.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-2_9.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-2_9.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-2_9.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-2_9.png') type('image/png')\n    );\n}\n\n/* ############################################ */\n/* ############# COLUMN 3 IMAGES ############## */\n/* ############################################ */\n\n.home .scrolled-col.col-3 div:nth-child(1),\n.home .scrolled-col.col-3 div:nth-child(10) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_1.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_1.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_1.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_1.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_1.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(2),\n.home .scrolled-col.col-3 div:nth-child(11) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_2.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_2.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_2.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_2.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_2.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(3),\n.home .scrolled-col.col-3 div:nth-child(12) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_3.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_3.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_3.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_3.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_3.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(4),\n.home .scrolled-col.col-3 div:nth-child(13) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_4.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_4.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_4.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_4.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_4.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(5),\n.home .scrolled-col.col-3 div:nth-child(14) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_5.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_5.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_5.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_5.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_5.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(6),\n.home .scrolled-col.col-3 div:nth-child(15) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_6.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_6.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_6.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_6.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_6.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(7),\n.home .scrolled-col.col-3 div:nth-child(16) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_7.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_7.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_7.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_7.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_7.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(8),\n.home .scrolled-col.col-3 div:nth-child(17) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_8.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_8.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_8.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_8.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_8.png') type('image/png')\n    );\n}\n\n.home .scrolled-col.col-3 div:nth-child(9),\n.home .scrolled-col.col-3 div:nth-child(18) {\n    /* background-image: url('/public/media/images/home/animated-tiles/col-3_9.png'); */\n    background-image: url('/public/media/images/home/animated-tiles/col-3_9.webp');\n    background-image: image-set(\n        url('/public/media/images/home/animated-tiles/col-3_9.avif') type('image/avif'),\n        url('/public/media/images/home/animated-tiles/col-3_9.webp') type('image/webp'),\n        url('/public/media/images/home/animated-tiles/col-3_9.png') type('image/png')\n    );\n}\n\n@keyframes scroll-up-infinite {\n    to {\n        transform: translateY(calc(-50% - (var(--item-gap) / 2)));\n    }\n}\n\n@keyframes scroll-down-infinite {\n    to {\n        transform: translateY(calc(50% + (var(--item-gap) / 2)));\n    }\n}\n\n@media screen and (min-width: 1921px) {\n    \n    .home {\n        font-size: 14px;\n    }\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@media screen and (max-width: 1440px) {\n\n    .home .scrolled-col div {\n        width: 18.5em;\n        height: 27em;\n    }\n\n    .home .up-or-down span {\n        font-size: 10.4em;\n    }\n\n    .home .advantages .text .top span {\n        font-size: 1.8em;\n    }\n\n    .home .advantages .text .bottom span {\n        font-size: 1.2em;\n    }\n\n    .home .logos {\n        margin: 5em 0em 0em 0em;\n    }\n\n}\n\n@media screen and (max-width: 1440px) and (max-height: 780px) {\n\n    .home .content > .middle {\n        font-size: 8px;\n    }\n\n    .home .advantages .item .item-content-wrap {\n        font-size: 9px;\n    }\n\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@media screen and (max-width: 1256px) {\n\n    /* .home .content > .bottom {\n        height: 9.7em;\n    } */\n\n    .home .advantages {\n        height: 9.7em;\n    }\n\n    .home .advantages .text .top span {\n        font-size: 1.5em;\n    }\n\n    .home .advantages .text .bottom span {\n        font-size: 1.1em;\n    }\n\n    .home .advantages .icon-image {\n        width: 3.6em;\n        height: 3.5em;\n    }\n\n    .home .advantages .item {\n        padding: 0em 2em;\n    }\n\n    .home .advantages .item .item-content-wrap {\n        left: 50% !important;\n        transform: translateX(-50%) !important;\n    }\n\n}\n\n.home .advantages .item.blockchain .icon-image {\n    background-image: url('/public/media/images/home/doggo-icon.png') !important;\n}\n\n@media screen and (max-width: 480px) {\n\n    .home {\n        font-size: inherit;\n    }\n\n    /* ############################################ */\n    /* ############# WEB/MOBILE ONLY ############## */\n    /* ############################################ */\n\n    .home .web-only.flex {\n        display: none;\n    }\n\n    .home .web-only.block {\n        display: none;\n    }\n \n    .home .mobile-only.flex {\n        display: flex;\n    }\n\n    .home .mobile-only.block {\n        display: block;\n    }\n\n    .home .advantages .item-overlay.item-overlay-top {\n        width: 100vw;\n    }\n\n    .home .content > .top {\n        margin-top: 1.6em;\n    }\n\n    .home .content > .middle {\n        padding: 2em 0em 1em 0em;\n        font-size: unset;\n    }\n\n    .home .main-flex {\n        height: 100%;\n        height: 100dvh;\n    }\n\n    /* .home .content > .bottom {\n        height: 9.3em;\n    } */\n\n    .home .advantages {\n        height: 9.3em;\n    }\n\n    .home .right-bar .socials,\n    .home .right-bar .sep {\n        display: none;\n    }\n\n    .home .site-logo img {\n        width: 13.4em;\n    }\n\n    .home .content {\n        padding: 0em 0em 0em 0em;\n        height: 100%;\n    }\n\n    .home .up-or-down span {\n        font-size: 4.2em;\n    }\n\n    .home .bitcoin {\n        width: 9.3em;\n        height: 2.8em;\n    }\n\n    .home .advantages .item {\n        flex-direction: column;\n        padding: 0em 1em 0.3em 1em;\n        gap: 0.2em;\n    }\n\n    .home .advantages .text {\n        align-items: center;\n    }\n\n    .home .play-button {\n        min-width: 21em;\n        height: 5em;\n    }\n\n    .home .play-button a {\n        padding: 0 4em;\n    }\n\n    .home .play-button span {\n        font-size: 1.5em;\n    }\n\n    .home .web3-pool span {\n        font-size: 1.7em;\n    }\n\n    .home .animated-tiles {\n        width: 100%;\n        padding: 0;\n        flex-grow: 1;\n        overflow: hidden;\n        margin-top: 2em;\n    }\n\n    .home .scrolled-cols-container {\n        --column-gap: 2em;\n    }\n\n    .home .scrolled-cols-container.blurred {\n        display: none;\n    }\n\n    .home .scrolled-cols-container.regular {\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n    }\n\n    .home .scrolled-col div {\n        width: 13.2em;\n        height: 19.3em;\n    }\n\n    .home .winnings-direct span {\n        font-size: 1.2em;\n    }\n\n    .home .logos {\n        margin-top: 2em;\n        gap: 2em;\n    }\n\n    .home .logo.certik {\n        width: 10.3em;\n        height: 3em;\n    }\n\n    .home .logo.web3-game {\n        width: 12.2em;\n        height: 3em;\n    }\n\n    /* .home .home-video-button {\n        width: 4.8em;\n        height: 4.8em;\n    } */\n\n    .home .advantages .item .item-content-wrap {\n        width: 90%;\n    }\n\n    .home .bitcoin,\n    .home .up-or-down,\n    .home .web3-pool,\n    .home .content > .top,\n    /* .home .content > .bottom, */\n    .home .buttons,\n    .home .winnings-direct,\n    .home .logos {\n        margin-left: 1.4em;\n        margin-right: 1.4em;\n    }\n\n    .home .buttons {\n        margin-top: 3em;\n        gap: 1.5em;\n    }\n\n    .home .home-button {\n        height: 4.7em;\n    }\n\n    .home .home-button-wrap {\n        width: 15em;\n    }\n\n    /* .home .fun-button-wrap {\n        width: 16em;\n    } */\n\n    /* .home .home-button-wrap .home-button span {\n        white-space: nowrap;\n    } */\n\n    .home .home-button-wrap span {\n        font-size: 1.6em;\n    }\n\n    .home .home-button-wrap .home-button-desc {\n        padding: 0;\n    }\n\n    .home .home-button-wrap .home-button-desc span {\n        font-size: 1.5em;\n    }\n\n    .home .home-video-button {\n        width: 4.2em;\n        height: 4.2em;\n        margin-top: .2em;\n    }\n\n    .home .buttons .play-btn{\n        width: 17em;\n        /* margin-right: 1em; */\n    }\n    .home .buttons .play-btn .play-crypto-btn-desc,\n    .home .buttons .play-btn .play-fun-btn-desc{\n        width: 100%;\n    }\n\n    .home .scrolled-col {\n        --item-gap: 1.6em;\n    }\n\n    .home .advantages .text .top span {\n        font-size: 1.3em;\n    }\n\n    .home .advantages .text .bottom span {\n        font-size: 1em;\n    }\n\n    .home .home-menu .menu-caption {\n        font-weight: 600;\n    }\n\n    .home .home-menu .menu-caption span {\n        font-size: 7.4em;\n    }\n\n    .home .home-menu .menu-caption::before {\n        width: 9em;\n        height: 0.4em;\n        margin: 0em auto 0.2em auto;\n    }\n\n    .home .web3-pool {\n        margin-top: 1em;\n    }\n\n    .home .home-menu .item span {\n        font-size: 2.3em;\n    }\n\n    .home .home-menu .socials {\n        margin-top: 3em;\n    }\n\n    .home .home-menu .play-button {\n        min-width: 26em;\n        height: 5.6em;\n        margin: 5em 0em 0em 0em;\n    }\n\n    .home .home-menu .play-button span {\n        font-size: 1.9em;\n    }\n\n    .home .advantages .item .item-content {\n        padding: 3em 3.6em 3em 3.6em;\n    }\n\n    .home .advantages .item .item-content .content-icon {\n        height: 5em;\n        width: 5em;\n        background-position: -0.6em 0.6em;\n        margin: 0em 0em 1.6em 0em;\n    }\n\n    .home .advantages .item .item-content .content-title span {\n        font-size: 3em;\n    }\n\n    .home .advantages .item .item-content .content-list li {\n        line-height: 2em;\n        padding-left: 0.3em;\n    }\n\n    .home .advantages .item .item-content .content-list li span {\n        font-size: 1.7em;\n    }\n\n    .home .advantages .item .item-content .content-list li::marker {\n        font-size: 1.7em;\n    }\n\n    .home .advantages .item .item-content .item-arrow-button {\n        width: 3.4em;\n        height: 3.4em;\n    }\n\n    .home .advantages .item .item-content .content-text p {\n        line-height: 2.6em;\n    }\n\n    .home .advantages .item .item-content .content-text p span {\n        font-size: 1.7em;\n    }\n\n    .home .advantages .item .item-content .content-text:last-child {\n        margin: 2.4em 0em 1em 0em;\n    }\n\n    .home .home-video {\n        max-width: unset;\n        box-shadow: 0 0 0 0.1em #737373;\n    }\n\n    .home .home-video .close {\n        border: 0.1em solid #737373;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

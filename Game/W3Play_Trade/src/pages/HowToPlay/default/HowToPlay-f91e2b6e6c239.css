@@ -1,0 +1,1818 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/how-to-trade/default/section-seperator.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/how-to-trade/default/real-web3.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/how-to-trade/default/orange-bitcoin.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/how-to-trade/default/connect-your-wallet.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/how-to-trade/default/gradient-bitcoin.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/how-to-trade/default/live-bitcoin-rate.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/how-to-trade/default/join-up-pool.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/how-to-trade/default/join-down-pool.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/how-to-trade/default/select-invest_2.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/how-to-trade/default/select-invest_1.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/how-to-trade/default/up-profit.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/how-to-trade/default/down-profit.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/how-to-trade/default/pool-round.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/how-to-trade/default/start-rate.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/how-to-trade/default/up-wins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/how-to-trade/default/down-wins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL("/public/media/images/how-to-trade/default/profits.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL("/public/media/images/how-to-trade/default/jackpot-weekly.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL("/public/media/images/how-to-trade/default/jackpot-monthly.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL("/public/media/images/how-to-trade/default/polygon.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL("/public/media/images/how-to-trade/default/get-matic-token.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL("/public/media/images/how-to-trade/default/sell-send-wins.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL("/public/media/images/how-to-trade/default/real-web3_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_23___ = new URL("/public/media/images/how-to-trade/default/connect-your-wallet_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_24___ = new URL("/public/media/images/how-to-trade/default/live-bitcoin-rate_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_25___ = new URL("/public/media/images/how-to-trade/default/join-up-pool_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_26___ = new URL("/public/media/images/how-to-trade/default/join-down-pool_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_27___ = new URL("/public/media/images/how-to-trade/default/select-invest_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_28___ = new URL("/public/media/images/how-to-trade/default/up-profit_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_29___ = new URL("/public/media/images/how-to-trade/default/down-profit_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_30___ = new URL("/public/media/images/how-to-trade/default/pool-round_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_31___ = new URL("/public/media/images/how-to-trade/default/start-rate_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_32___ = new URL("/public/media/images/how-to-trade/default/up-wins_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_33___ = new URL("/public/media/images/how-to-trade/default/down-wins_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_34___ = new URL("/public/media/images/how-to-trade/default/profits_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_35___ = new URL("/public/media/images/how-to-trade/default/jackpot-weekly_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_36___ = new URL("/public/media/images/how-to-trade/default/polygon_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_37___ = new URL("/public/media/images/how-to-trade/default/get-matic-token_mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_38___ = new URL("/public/media/images/how-to-trade/default/sell-send-wins_mobile.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_22___);
+var ___CSS_LOADER_URL_REPLACEMENT_23___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_23___);
+var ___CSS_LOADER_URL_REPLACEMENT_24___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_24___);
+var ___CSS_LOADER_URL_REPLACEMENT_25___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_25___);
+var ___CSS_LOADER_URL_REPLACEMENT_26___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_26___);
+var ___CSS_LOADER_URL_REPLACEMENT_27___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_27___);
+var ___CSS_LOADER_URL_REPLACEMENT_28___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_28___);
+var ___CSS_LOADER_URL_REPLACEMENT_29___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_29___);
+var ___CSS_LOADER_URL_REPLACEMENT_30___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_30___);
+var ___CSS_LOADER_URL_REPLACEMENT_31___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_31___);
+var ___CSS_LOADER_URL_REPLACEMENT_32___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_32___);
+var ___CSS_LOADER_URL_REPLACEMENT_33___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_33___);
+var ___CSS_LOADER_URL_REPLACEMENT_34___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_34___);
+var ___CSS_LOADER_URL_REPLACEMENT_35___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_35___);
+var ___CSS_LOADER_URL_REPLACEMENT_36___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_36___);
+var ___CSS_LOADER_URL_REPLACEMENT_37___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_37___);
+var ___CSS_LOADER_URL_REPLACEMENT_38___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_38___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.how-to-trade {
+    /* font-family: 'Barlow Semi Condensed'; */
+    font-family: 'Barlow';
+    background-color: transparent;
+    display: block;
+    position: static;
+    font-size: 10px;
+    overflow: auto;
+    z-index: initial;
+}
+
+.how-to-trade .how-to-trade-main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+}
+
+.how-to-trade .main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+    justify-content: center;
+    align-items: center;
+    max-width: 120em;
+    margin: 0 auto;
+}
+
+.how-to-trade section.ltr .main-flex,
+.how-to-trade section.rtl .main-flex {
+    /* justify-content: space-between; */
+    gap: 8em;
+}
+
+.how-to-trade .entry_screen_langs_indexed {
+    top: 2.2em;
+    right: 2.2em;
+}
+
+/* ############################################ */
+/* ############## MENU ICON (WEB) ############# */
+/* ############################################ */
+
+.how-to-trade .menu-icon {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+}
+
+.how-to-trade .menu-icon div {
+    background-color: #c5ab5a;
+    border-radius: 0.3em;
+    height: 0.5em;
+    position: absolute;
+    right: 1em;
+    transition: width .2s,transform .2s;
+    width: 3em;
+}
+
+.how-to-trade .menu-icon div.top {
+    top: 0.9em;
+}
+
+.how-to-trade .menu-icon div.middle {
+    top: 2.2em;
+    width: 2em;
+}
+
+.how-to-trade .menu-icon div.bottom {
+    top: 3.6em;
+}
+
+.how-to-trade .menu-icon.open div.top {
+    transform: translate(0.7em,1.3em) rotate(-45deg);
+    width: 4.4em;
+}
+
+.how-to-trade .menu-icon.open div.middle {
+    transform: translate(-4.5em);
+}
+
+.how-to-trade .menu-icon.open div.bottom {
+    transform: translate(0.7em,-1.4em) rotate(45deg);
+    width: 4.4em;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* ############## TOP MENU (WEB) ############## */
+/* ############################################ */
+
+.how-to-trade .top-menu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    margin: 5em 0em 8em 0em;
+}
+
+.how-to-trade .top-menu .item {
+    color: #ffffff;
+}
+
+.how-to-trade .top-menu .item.active {
+    color: #f4d56f;
+}
+
+.how-to-trade .top-menu .item span {
+    font-size: 2.2em;
+}
+
+/* ############################################ */
+/* ############## SIDE MENU (WEB) ############# */
+/* ############################################ */
+
+.how-to-trade .side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* padding: 0em 15em; */
+    width: 60em;
+    z-index: 2;
+    transform: translateX(60em);
+    transition: transform .3s ease;
+}
+
+.how-to-trade .side-menu.open {
+transform: translateX(0);
+}
+
+.how-to-trade .side-menu .item {
+    color: #ffffff;
+}
+
+.how-to-trade .side-menu .item.active {
+    color: #f4d56f;
+}
+
+.how-to-trade .side-menu .item span {
+    font-size: 2.5em;
+}
+
+.how-to-trade .side-menu .menu-caption {
+    font-weight: 900;
+    line-height: 7.8em;
+}
+
+.how-to-trade .side-menu .menu-caption span {
+    font-size: 8.2em;
+}
+
+.how-to-trade .side-menu .menu-caption::before {
+    display: block;
+    content: '';
+    width: 13em;
+    height: 0.6em;
+    margin: 0em auto 1.5em auto;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.how-to-trade .side-menu .play-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 1.6em 5em;
+    border-radius: 4em;
+    font-weight: 600;
+    margin: 3em 0em 0em 0em;
+    cursor: pointer;
+    min-width: 30em;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.how-to-trade .side-menu .play-now a {
+    color: inherit;
+}
+
+.how-to-trade .side-menu .play-now span {
+    font-size: 2.6em;
+}
+
+/* ############################################ */
+/* ############# WEB/MOBILE ONLY ############## */
+/* ############################################ */
+
+.how-to-trade section .mobile-only.flex {
+    display: none;
+}
+
+.how-to-trade section .mobile-only.block {
+    display: none;
+}
+
+.how-to-trade section .web-only.flex {
+    display: flex;
+}
+
+.how-to-trade section .web-only.block {
+    display: block;
+}
+
+/* ############################################ */
+/* ############## SECTIONS (WEB) ############## */
+/* ############################################ */
+
+.how-to-trade section {
+    position: relative;
+    flex-shrink: 0;
+    padding: 12em 0em 12em 0em;
+    width: 100%;
+}
+
+.how-to-trade section.seperator::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -3.7em;
+    transform: translateX(-50%);
+    width: 7.4em;
+    height: 7.4em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    z-index: 1;
+}
+
+.how-to-trade section .box {
+    position: relative;
+}
+
+.how-to-trade section .text-area {
+    text-align: left;
+}
+
+.how-to-trade section .box.text-area {
+    z-index: 2;
+}
+
+.how-to-trade section .image-wrap div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.how-to-trade section.bright {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.how-to-trade section.dark {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.how-to-trade section.ltr {
+
+}
+
+.how-to-trade section.ltr .main-flex,
+.how-to-trade section.rtl .main-flex {
+    flex-direction: row;
+}
+
+.how-to-trade section.ltr .main-flex .text-area {
+    order: 1;
+}
+
+.how-to-trade section.ltr .main-flex .image-area {
+    order: 2;
+}
+
+.how-to-trade section.rtl {
+
+}
+
+.how-to-trade section.rtl .main-flex .text-area {
+    order: 2;
+}
+
+.how-to-trade section.rtl .main-flex .image-area {
+    order: 1;
+}
+
+/* DEFAULT */
+.how-to-trade section.ttb {
+
+}
+
+.how-to-trade section.ttb .main-flex {
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* ########## SECTION CAPTION (WEB) ########### */
+/* ############################################ */
+
+.how-to-trade section .caption {
+    font-weight: 900;
+    line-height: 8em;
+    width: 100%;
+}
+
+.how-to-trade section .caption span {
+    font-size: 8.2em;
+}
+
+.how-to-trade section.ttb .caption {
+    text-align: center;
+}
+
+.how-to-trade section .stripe::before {
+    display: block;
+    content: '';
+    width: 21em;
+    height: 0.6em;
+    margin: 0em 0em 1.5em 0em;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+/* ############################################ */
+/* ######### "PLAY NOW" BUTTON (WEB) ########## */
+/* ############################################ */
+
+.how-to-trade section .button-flex-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.how-to-trade section .play-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* padding: 1.6em 5em; */
+    border-radius: 4em;
+    font-weight: 600;
+    margin: 3em 0em 0em 0em;
+    cursor: pointer;
+    min-width: 30em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.how-to-trade section.bright .play-now {
+    color: #000000;
+    background-color: #F4D56F;
+}
+
+.how-to-trade section.dark .play-now {
+    color: #ffffff;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.how-to-trade section .play-now a {
+    color: inherit;
+    padding: 1.6em 5em;
+    width: 100%;
+}
+
+.how-to-trade section .play-now span {
+    font-size: 2.6em;
+}
+
+/* ############################################ */
+/* ###### SECTION: REAL WEB3 PVP (WEB) ######## */
+/* ############################################ */
+
+.how-to-trade section.real-web3 {
+    padding: 0em 0em 13em 0em;
+}
+
+.how-to-trade section.real-web3 .button-flex-wrap {
+    justify-content: flex-end;
+}
+
+.how-to-trade section.real-web3 .back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 4em 1em 4em;
+    color: #f4d56f;
+    box-shadow: 0em 0em 0em 0.2em #f4d56f;
+    z-index: 1;
+    border-radius: 3em;
+    min-width: 17em;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 3em 3em 2em 0em;
+}
+
+.how-to-trade section.real-web3 .back-button span {
+    font-size: 2.4em;
+}
+
+.how-to-trade section.real-web3 .box.image-area {
+    z-index: 1;
+    margin: -3em 0em 0em 0em;
+}
+
+.how-to-trade section.real-web3 .caption {
+    max-width: 70em;
+    line-height: 8.1em;
+}
+
+.how-to-trade section.real-web3 .caption span {
+    font-size: 9em;
+}
+
+.how-to-trade section.real-web3::before,
+.how-to-trade section.real-web3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 75em;
+    max-width: 50%;
+}
+
+.how-to-trade section.real-web3::before {
+    left: 0;
+    background-image: linear-gradient(to right, #82c804 -86%, #181818 54%);
+    opacity: 0.5;
+}
+
+.how-to-trade section.real-web3::after {
+    right: 0;
+    background-image: linear-gradient(to left, #f30401 -86%, #181818 54%);
+    opacity: 0.9;
+}
+
+.how-to-trade section.real-web3 .image-wrap div {
+    width: 116em;
+    height: 55em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+.how-to-trade section.real-web3 .image-text-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: -2em 0em 0em 0em;
+}
+
+.how-to-trade section.real-web3 .image-text {
+    text-align: left;
+    font-weight: 600;
+    padding: 0em 0em 0em 5em;
+    background-size: 4em;
+    background-position: 0em center;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
+.how-to-trade section.real-web3 .image-text span {
+    font-size: 3.6em;
+}
+
+/* ############################################ */
+/* ### SECTION: CONNECT YOUR WALLET (WEB) ##### */
+/* ############################################ */
+
+.how-to-trade section.connect-your-wallet {
+    padding: 10em 0em 11em 0em;
+}
+
+.how-to-trade section.connect-your-wallet .caption {
+    text-align: left;
+    max-width: 114em;
+}
+
+.how-to-trade section.connect-your-wallet .box.image-area {
+    margin: 1em 0em 0em 0em;
+}
+
+.how-to-trade section.connect-your-wallet .image-wrap div {
+    width: 100em;
+    height: 58em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+/* ############################################ */
+/* #### SECTION: LIVE BITCOIN RATE (WEB) ###### */
+/* ############################################ */
+
+.how-to-trade section.live-bitcoin-rate {
+    padding: 8em 0em 10em 0em;
+}
+
+.how-to-trade section.live-bitcoin-rate .bitcoin-icon {
+    width: 7.8em;
+    height: 7.8em;
+    margin: 0em 0em 2.5em 0em;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+/* .how-to-trade section.live-bitcoin-rate .caption {
+    max-width: 53em;
+} */
+
+.how-to-trade section.live-bitcoin-rate .sub-caption {
+    font-weight: 600;
+    margin: 1em 0em 0em 0em;
+}
+
+.how-to-trade section.live-bitcoin-rate .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.live-bitcoin-rate .image-wrap div {
+    width: 55em;
+    height: 52em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+/* ############################################ */
+/* ####### SECTION: JOIN UP POOL (WEB) ######## */
+/* ############################################ */
+
+.how-to-trade section.join-up-pool {
+    padding: 10em 0em 10em 0em;
+}
+
+.how-to-trade section.join-up-pool .caption {
+    max-width: 45em;
+}
+
+.how-to-trade section.join-up-pool .image-wrap div {
+    width: 53em;
+    height: 56em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+/* ############################################ */
+/* ###### SECTION: JOIN DOWN POOL (WEB) ####### */
+/* ############################################ */
+
+.how-to-trade section.join-down-pool {
+    padding: 11em 0em 11em 0em;
+}
+
+/* .how-to-trade section.join-down-pool .caption {
+    max-width: 47em;
+} */
+
+.how-to-trade section.join-down-pool .image-wrap div {
+    width: 54em;
+    height: 54em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+/* ############################################ */
+/* ####### SECTION: SELECT INVEST (WEB) ####### */
+/* ############################################ */
+
+.how-to-trade section.select-invest {
+    
+}
+
+.how-to-trade section.select-invest .caption {
+    max-width: 72em;
+}
+
+.how-to-trade section.select-invest .bar-image {
+    width: 73em;
+    height: 21em;
+    margin: 1em 0em 0em -9em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+.how-to-trade section.select-invest .image-wrap div {
+    width: 33em;
+    height: 50em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+}
+
+/* ############################################ */
+/* ######### SECTION: UP PROFIT (WEB) ######### */
+/* ############################################ */
+
+.how-to-trade section.up-profit {
+    
+}
+
+.how-to-trade section.up-profit .caption {
+    max-width: 47em;
+}
+
+.how-to-trade section.up-profit .sub-caption {
+    font-weight: 600;
+    margin: 1em 0em 0em 0em;
+}
+
+.how-to-trade section.up-profit .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.up-profit .image-wrap div {
+    width: 54em;
+    height: 49em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+}
+
+/* ############################################ */
+/* ######## SECTION: DOWN PROFIT (WEB) ######## */
+/* ############################################ */
+
+.how-to-trade section.down-profit {
+    
+}
+
+.how-to-trade section.down-profit .caption {
+    max-width: 50em;
+}
+
+.how-to-trade section.down-profit .sub-caption {
+    font-weight: 600;
+    margin: 1em 0em 0em 0em;
+}
+
+.how-to-trade section.down-profit .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.down-profit .image-wrap div {
+    width: 54em;
+    height: 49em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+}
+
+/* ############################################ */
+/* ######## SECTION: POOL ROUND (WEB) ######### */
+/* ############################################ */
+
+.how-to-trade section.pool-round {
+    
+}
+
+/* .how-to-trade section.pool-round .caption {
+    max-width: 53em;
+} */
+
+.how-to-trade section.pool-round .sub-caption {
+    font-weight: 600;
+}
+
+.how-to-trade section.pool-round .sub-caption.time-to-place {
+    margin: 1em 0em 3em 0em;
+}
+
+.how-to-trade section.pool-round .sub-caption.knock-out {
+    margin: 1em 0em 0em 0em;
+}
+
+.how-to-trade section.pool-round .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.pool-round .image-wrap div {
+    width: 49em;
+    height: 50em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+}
+
+/* ############################################ */
+/* ######### SECTION: START RATE (WEB) ######## */
+/* ############################################ */
+
+.how-to-trade section.start-rate {
+    
+}
+
+.how-to-trade section.start-rate .caption {
+    max-width: 28em;
+}
+
+.how-to-trade section.start-rate .image-wrap div {
+    width: 65em;
+    height: 53em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+
+/* ############################################ */
+/* ########## SECTION: UP WINS (WEB) ########## */
+/* ############################################ */
+
+.how-to-trade section.up-wins {
+    
+}
+
+.how-to-trade section.up-wins .caption {
+
+}
+
+.how-to-trade section.up-wins .sub-caption {
+    font-weight: 600;
+    margin: 0em 0em 1em 0em;
+}
+
+.how-to-trade section.up-wins .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.up-wins .main-flex .text-area {
+    max-width: 26em;
+}
+
+.how-to-trade section.up-wins .image-wrap div {
+    width: 56em;
+    height: 56em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+
+/* ############################################ */
+/* ######### SECTION: DOWN WINS (WEB) ######### */
+/* ############################################ */
+
+.how-to-trade section.down-wins {
+    
+}
+
+.how-to-trade section.down-wins .caption {
+
+}
+
+.how-to-trade section.down-wins.ltr .main-flex .text-area {
+    max-width: 26em;
+}
+
+.how-to-trade section.down-wins .sub-caption {
+    font-weight: 600;
+    margin: 0em 0em 1em 0em;
+}
+
+.how-to-trade section.down-wins .sub-caption span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.down-wins .image-wrap div {
+    width: 55em;
+    height: 52em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+
+/* ############################################ */
+/* ########## SECTION: PROFITS (WEB) ########## */
+/* ############################################ */
+
+.how-to-trade section.profits {
+    
+}
+
+.how-to-trade section.profits .caption {
+
+}
+
+.how-to-trade section.profits .text-small {
+    font-weight: 300;
+    margin: 2em 0em 2em 0em;
+}
+
+.how-to-trade section.profits .text-small span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.profits .text-big {
+    font-weight: 600;
+}
+
+.how-to-trade section.profits .text-big span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.profits .image-wrap div {
+    width: 54em;
+    height: 50em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___});
+}
+
+/* ############################################ */
+/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */
+/* ############################################ */
+
+.how-to-trade section.jackpot-weekly {
+    
+}
+
+.how-to-trade section.jackpot-weekly .caption {
+
+}
+
+.how-to-trade section.jackpot-weekly .text-big {
+    font-weight: 600;
+    margin: 2em 0em 2em 0em;
+}
+
+.how-to-trade section.jackpot-weekly .text-big span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.jackpot-weekly .text-small {
+    font-weight: 300;
+}
+
+.how-to-trade section.jackpot-weekly .text-small span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.jackpot-weekly .image-wrap div {
+    width: 54em;
+    height: 57em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_17___});
+}
+
+/* ############################################ */
+/* ###### SECTION: MONTHLY JACKPOT (WEB) ###### */
+/* ############################################ */
+
+.how-to-trade section.jackpot-monthly {
+    
+}
+
+.how-to-trade section.jackpot-monthly .caption {
+
+}
+
+.how-to-trade section.jackpot-monthly .text-big {
+    font-weight: 600;
+    margin: 2em 0em 2em 0em;
+}
+
+.how-to-trade section.jackpot-monthly .text-big span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.jackpot-monthly .text-small {
+    font-weight: 300;
+}
+
+.how-to-trade section.jackpot-monthly .text-small span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.jackpot-monthly .image-wrap div {
+    width: 57em;
+    height: 50em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+}
+
+/* ############################################ */
+/* ####### SECTION: POLYGON MATIC (WEB) ####### */
+/* ############################################ */
+
+.how-to-trade section.polygon {
+    
+}
+
+.how-to-trade section.polygon .caption {
+
+}
+
+.how-to-trade section.polygon .sub-caption {
+    margin: 2em 0em 1.5em 0em;
+    font-weight: 800;
+}
+
+.how-to-trade section.polygon .sub-caption span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.polygon .items {
+
+}
+
+.how-to-trade section.polygon .item {
+    position: relative;
+    padding: 0em 0em 0em 3em;
+    font-weight: 700;
+}
+
+.how-to-trade section.polygon .item span {
+    font-size: 3.6em;
+}
+
+.how-to-trade section.polygon .item::before {
+    content: '';
+    background: #000000;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.how-to-trade section.polygon .image-wrap div {
+    width: 54em;
+    height: 57em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+}
+
+/* ############################################ */
+/* ###### SECTION: GET MATIC TOKEN (WEB) ###### */
+/* ############################################ */
+
+.how-to-trade section.get-matic-token {
+    
+}
+
+.how-to-trade section.get-matic-token .caption {
+
+}
+
+.how-to-trade section.get-matic-token .text-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin: 3em 0em 1em 0em;
+}
+
+.how-to-trade section.get-matic-token .sub-caption {
+    font-weight: 800;
+}
+
+.how-to-trade section.get-matic-token .sub-caption span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.get-matic-token .separator-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.how-to-trade section.get-matic-token .separator-flex .separator {
+    flex-grow: 1;
+}
+
+.how-to-trade section.get-matic-token .separator-flex .separator::after {
+    content: '';
+    width: 100%;
+    height: 0.3em;
+    background-color: #ffffff;
+    display: block;
+}
+
+.how-to-trade section.get-matic-token .separator-flex .text {
+    font-weight: 800;
+}
+
+.how-to-trade section.get-matic-token .separator-flex .text span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.get-matic-token .image-wrap div {
+    width: 51em;
+    height: 53em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+}
+
+/* ############################################ */
+/* ###### SECTION: SELL SEND WINS (WEB) ####### */
+/* ############################################ */
+
+.how-to-trade section.sell-send-wins {
+    
+}
+
+.how-to-trade section.sell-send-wins .caption {
+
+}
+
+.how-to-trade section.sell-send-wins .text-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin: 3em 0em 0em 0em;
+}
+
+.how-to-trade section.sell-send-wins .sub-caption {
+    font-weight: 800;
+    line-height: 3.4em;
+}
+
+.how-to-trade section.sell-send-wins .sub-caption span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.sell-send-wins .separator-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.how-to-trade section.sell-send-wins .separator-flex .separator {
+    position: relative;
+    flex-grow: 1;
+}
+
+.how-to-trade section.sell-send-wins .separator-flex .separator::after {
+    content: '';
+    width: 100%;
+    height: 0.3em;
+    background-color: #000000;
+    display: block;
+}
+
+.how-to-trade section.sell-send-wins .separator-flex .text {
+    font-weight: 800;
+}
+
+.how-to-trade section.sell-send-wins .separator-flex .text span {
+    font-size: 2.5em;
+}
+
+.how-to-trade section.sell-send-wins .image-wrap div {
+    width: 40em;
+    height: 57em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+}
+
+/* ############################################ */
+/* ########## SECTION: FOOTER (WEB) ########### */
+/* ############################################ */
+
+.how-to-trade section.footer {
+
+}
+
+.how-to-trade section.footer {
+    background-color: #181818;
+    color: #5a5a5a;
+    padding: 6em 19em 6em 19em;
+    box-sizing: border-box;
+}
+
+.how-to-trade section.footer .disclaimer {
+    line-height: 2.5em;
+    text-align: left;
+}
+
+.how-to-trade section.footer .disclaimer span {
+    font-size: 1.8em;
+}
+
+@media screen and (max-width: 1320px) {
+
+    .how-to-trade {
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+
+    .how-to-trade {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1035px) {
+
+    .how-to-trade {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 905px) {
+
+    .how-to-trade {
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 775px) {
+
+    .how-to-trade {
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .how-to-trade {
+        font-size: inherit;
+    }
+
+    body .how-to-trade .entry_screen_langs {
+        top: 2.4em;
+        right: 2em;
+    }
+
+        /* ############################################ */
+    /* ############ MENU ICON (MOBILE) ############ */
+    /* ############################################ */
+
+    .how-to-trade .menu-icon {
+        right: 1em;
+        top: 1em;
+    }
+
+    /* ############################################ */
+    /* ############ TOP MENU (MOBILE) ############# */
+    /* ############################################ */
+
+    .how-to-trade .top-menu {
+        display: none;
+    }
+
+    /* ############################################ */
+    /* ############ SIDE MENU (MOBILE) ############ */
+    /* ############################################ */
+
+    .how-to-trade .side-menu {
+        transform: translateX(100%);
+        right: auto;
+    }
+
+    .how-to-trade .side-menu .menu-caption::before {
+        width: 12em;
+        margin: 0em auto 0em auto;
+    }
+
+    .how-to-trade .side-menu .menu-caption span {
+        font-size: 6.2em;
+    }
+
+    .how-to-trade .side-menu .item span {
+        font-size: 2.3em;
+    }
+
+    .how-to-trade .side-menu.open {
+        width: 100%;
+    }
+
+    .how-to-trade .side-menu .play-now {
+        padding: 1.4em 5em;
+        min-width: 24em;
+    }
+
+    .how-to-trade .side-menu .play-now span {
+        font-size: 2.3em;
+    }
+
+    /* ############################################ */
+    /* ############# WEB/MOBILE ONLY ############## */
+    /* ############################################ */
+
+    .how-to-trade section .web-only.flex {
+        display: none;
+    }
+
+    .how-to-trade section .web-only.block {
+        display: none;
+    }
+ 
+    .how-to-trade section .mobile-only.flex {
+        display: flex;
+    }
+
+    .how-to-trade section .mobile-only.block {
+        display: block;
+    }
+
+    /* ############################################ */
+    /* ############ SECTIONS (MOBILE) ############# */
+    /* ############################################ */
+
+    .how-to-trade section {
+        padding: 6em 0em 6em 0em;
+    }
+
+    .how-to-trade section .stripe::before {
+        margin: 0em auto 1.5em auto;
+        width: 11em;
+        height: 0.4em;
+    }
+
+    .how-to-trade section.seperator::after {
+        top: -2.2em;
+        width: 4.4em;
+        height: 4.4em;
+    }
+
+    .how-to-trade section .text-area {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .how-to-trade section.ltr .main-flex,
+    .how-to-trade section.rtl .main-flex {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .how-to-trade section.ltr .main-flex .text-area,
+    .how-to-trade section.ltr .main-flex .image-area,
+    .how-to-trade section.rtl .main-flex .text-area,
+    .how-to-trade section.rtl .main-flex .image-area {
+        order: unset;
+    }
+
+    .how-to-trade section .box.image-area {
+        margin: 3em 0em 0em 0em;
+    }
+
+    /* ############################################ */
+    /* ######### SECTION CAPTION (MOBILE) ######### */
+    /* ############################################ */
+
+    .how-to-trade section .caption {
+        line-height: 4em;
+        text-align: center;
+    }
+
+    .how-to-trade section .caption span {
+        font-size: 4.4em;
+    }
+
+    /* ############################################ */
+    /* ######## "PLAY NOW" BUTTON (MOBILE) ######## */
+    /* ############################################ */
+
+    .how-to-trade section .play-now {
+        min-width: 23em;
+    }
+
+    .how-to-trade section .play-now a {
+        padding: 1.4em 5em;
+    }
+
+    .how-to-trade section .play-now span {
+        font-size: 2em;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: REAL WEB3 PVP (MOBILE) ###### */
+    /* ############################################ */
+
+    .how-to-trade section.real-web3 {
+        padding: 7em 0em 6em 0em;
+    }
+
+    .how-to-trade section.real-web3 .back-button {
+        top: 2.5em;
+        right: 2.5em;
+        padding: 0.5em 2em 0.6em 2em;
+        min-width: 11em;
+    }
+
+    .how-to-trade section.real-web3 .back-button span {
+        font-size: 1.8em;
+    }
+
+    .how-to-trade section.real-web3::before,
+    .how-to-trade section.real-web3::after {
+        display: none;
+    }
+
+    .how-to-trade section.real-web3 .caption {
+        max-width: 37em;
+        line-height: 5.4em;
+    }
+
+    .how-to-trade section.real-web3 .caption span {
+        font-size: 5.6em;
+    }
+
+    .how-to-trade section.real-web3 .box.image-area {
+        margin: -1em 0em 0em 0em;
+    }
+
+    .how-to-trade section.real-web3 .image-wrap div {
+        width: 37em;
+        height: 44em;
+        margin: 0 auto;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+    }
+
+    .how-to-trade section.real-web3 .image-text-box {
+        margin: 1em 0em 0em 0em;
+    }
+
+    .how-to-trade section.real-web3 .image-text {
+        background-size: 3em;
+        padding: 0em 0em 0em 4em;
+    }
+
+    .how-to-trade section.real-web3 .image-text span {
+        font-size: 2.3em;
+    }
+
+    /* ############################################ */
+    /* ### SECTION: CONNECT YOUR WALLET (MOBILE) ## */
+    /* ############################################ */
+
+    .how-to-trade section.connect-your-wallet .caption {
+        max-width: 34em;
+        text-align: center;
+    }
+
+    .how-to-trade section.connect-your-wallet .image-wrap div {
+        width: 35em;
+        height: 40em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_23___});
+    }
+
+    /* ############################################ */
+    /* ### SECTION: LIVE BITCOIN RATE (MOBILE) #### */
+    /* ############################################ */
+
+    .how-to-trade section.live-bitcoin-rate {
+
+    }
+
+    .how-to-trade section.live-bitcoin-rate .bitcoin-icon {
+        width: 4.8em;
+        height: 4.8em;
+        margin: 0em 0em 1.7em 0em;
+    }
+
+    .how-to-trade section.live-bitcoin-rate .image-wrap div {
+        width: 35em;
+        height: 32em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_24___});
+    }
+
+    .how-to-trade section.live-bitcoin-rate .caption {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.live-bitcoin-rate .sub-caption {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.live-bitcoin-rate .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ###### SECTION: JOIN UP POOL (MOBILE) ###### */
+    /* ############################################ */
+
+    .how-to-trade section.join-up-pool .image-wrap div {
+        width: 35em;
+        height: 31em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_25___});
+    }
+
+    .how-to-trade section.join-up-pool .caption {
+        max-width: 34em;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: JOIN DOWN POOL (MOBILE) ##### */
+    /* ############################################ */
+
+    .how-to-trade section.join-down-pool .image-wrap div {
+        width: 35em;
+        height: 31em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_26___});
+    }
+
+    .how-to-trade section.join-down-pool .caption {
+        max-width: 34em;
+    }
+
+    /* ############################################ */
+    /* ###### SECTION: SELECT INVEST (MOBILE) ##### */
+    /* ############################################ */
+
+    .how-to-trade section.select-invest .image-wrap div {
+        width: 35em;
+        height: 28em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_27___});
+    }
+
+    .how-to-trade section.select-invest .bar-image {
+        display: none;
+    }
+
+    /* ############################################ */
+    /* ######## SECTION: UP PROFIT (MOBILE) ####### */
+    /* ############################################ */
+
+    .how-to-trade section.up-profit .image-wrap div {
+        width: 35em;
+        height: 34em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_28___});
+    }
+
+    .how-to-trade section.up-profit .caption {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.up-profit .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ####### SECTION: DOWN PROFIT (MOBILE) ###### */
+    /* ############################################ */
+
+    .how-to-trade section.down-profit .image-wrap div {
+        width: 35em;
+        height: 35em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_29___});
+    }
+
+    .how-to-trade section.down-profit .caption {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.down-profit .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ####### SECTION: POOL ROUND (MOBILE) ####### */
+    /* ############################################ */
+
+    .how-to-trade section.pool-round .image-wrap div {
+        width: 35em;
+        height: 33em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_30___});
+    }
+
+    .how-to-trade section.pool-round .sub-caption.time-to-place {
+        margin: 1em 0em 2em 0em;
+    }
+
+    .how-to-trade section.pool-round .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ######## SECTION: START RATE (MOBILE) ###### */
+    /* ############################################ */
+
+    .how-to-trade section.start-rate .image-wrap div {
+        width: 35em;
+        height: 30em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_31___});
+    }
+
+    /* ############################################ */
+    /* ######### SECTION: UP WINS (MOBILE) ######## */
+    /* ############################################ */
+
+    .how-to-trade section.up-wins .main-flex .text-area {
+        max-width: 30em;
+    }
+
+    .how-to-trade section.up-wins .image-wrap div {
+        width: 35em;
+        height: 34em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_32___});
+    }
+
+    .how-to-trade section.up-wins .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ######## SECTION: DOWN WINS (MOBILE) ####### */
+    /* ############################################ */
+
+    .how-to-trade section.down-wins .image-wrap div {
+        width: 35em;
+        height: 32em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_33___});
+    }
+
+    .how-to-trade section.down-wins .sub-caption span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ######### SECTION: PROFITS (MOBILE) ######## */
+    /* ############################################ */
+
+    .how-to-trade section.profits .text-area {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.profits .image-wrap div {
+        width: 35em;
+        height: 33em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_34___});
+    }
+
+    .how-to-trade section.profits .text-big span {
+        font-size: 1.9em;
+    }
+
+    .how-to-trade section.profits .text-small {
+        font-weight: 300;
+        margin: 2em 0em 1em 0em;
+    }
+
+    .how-to-trade section.profits .text-small span {
+        font-size: 1.5em;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: WEEKLY JACKPOT (MOBILE) ##### */
+    /* ############################################ */
+
+    .how-to-trade section.jackpot-weekly .text-area {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.jackpot-weekly .image-wrap div {
+        width: 35em;
+        height: 35em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_35___});
+    }
+
+    .how-to-trade section.jackpot-weekly .text-big {
+        margin: 2em 0em 1em 0em;
+    }
+
+    .how-to-trade section.jackpot-weekly .text-big span {
+        font-size: 1.9em;
+    }
+
+    .how-to-trade section.jackpot-weekly .text-small span {
+        font-size: 1.5em;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: MONTHLY JACKPOT (MOBILE) #### */
+    /* ############################################ */
+
+    .how-to-trade section.jackpot-monthly .text-area {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.jackpot-monthly .image-wrap div {
+        width: 35em;
+        height: 32em;
+        /* background-image: url('/public/media/images/how-to-trade/default/jackpot-monthly_mobile.png'); */
+    }
+
+    .how-to-trade section.jackpot-monthly .text-big {
+        margin: 2em 0em 1em 0em;
+    }
+
+    .how-to-trade section.jackpot-monthly .text-big span {
+        font-size: 1.9em;
+    }
+
+    .how-to-trade section.jackpot-monthly .text-small span {
+        font-size: 1.5em;
+    }
+
+    /* ############################################ */
+    /* ###### SECTION: POLYGON MATIC (MOBILE) ##### */
+    /* ############################################ */
+
+    .how-to-trade section.polygon .image-wrap div {
+        width: 35em;
+        height: 38em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_36___});
+    }
+
+    .how-to-trade section.polygon .sub-caption {
+        margin: 1em 0em 1em 0em;
+    }
+
+    .how-to-trade section.polygon .sub-caption span {
+        font-size: 1.5em;
+    }
+
+    .how-to-trade section.polygon .items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .how-to-trade section.polygon .item {
+        padding: 0em 0em 0em 1.5em;
+    }
+
+    .how-to-trade section.polygon .item::before {
+        width: 1em;
+        height: 1em;
+    }
+
+    .how-to-trade section.polygon .item span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: GET MATIC TOKEN (MOBILE) #### */
+    /* ############################################ */
+
+    .how-to-trade section.get-matic-token .text-flex {
+        margin: 3em 0em 1em 0em;
+        max-width: 35em;
+    }
+
+    .how-to-trade section.get-matic-token .image-wrap div {
+        width: 35em;
+        height: 29em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_37___});
+    }
+
+    .how-to-trade section.get-matic-token .caption {
+        max-width: 34em;
+    }
+
+    .how-to-trade section.get-matic-token .sub-caption {
+        font-weight: 600;
+    }
+
+    .how-to-trade section.get-matic-token .sub-caption span {
+        font-size: 2em;
+    }
+
+    .how-to-trade section.get-matic-token .separator-flex .text {
+        font-weight: 600;
+    }
+
+    /* ############################################ */
+    /* ##### SECTION: SELL SEND WINS (MOBILE) ##### */
+    /* ############################################ */
+
+    .how-to-trade section.sell-send-wins .image-wrap div {
+        width: 35em;
+        height: 50em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_38___});
+    }
+
+    .how-to-trade section.sell-send-wins .text-flex {
+        max-width: 35em;
+        margin: 3em 0em 0em 0em;
+    }
+
+    .how-to-trade section.sell-send-wins .sub-caption {
+        line-height: 2.4em;
+        font-weight: 600;
+    }
+
+    .how-to-trade section.sell-send-wins .sub-caption span {
+        font-size: 2em;
+    }
+
+    .how-to-trade section.sell-send-wins .separator-flex .text {
+        font-weight: 600;
+    }
+
+    /* ############################################ */
+    /* ######## SECTION: FOOTER (MOBILE) ########## */
+    /* ############################################ */
+
+    .how-to-trade section.footer {
+        padding: 3em 3em 3em 3em;
+    }
+
+    .how-to-trade section.footer .disclaimer {
+        line-height: 1.5em;
+    }
+
+    .how-to-trade section.footer .disclaimer span {
+        font-size: 1.2em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/HowToPlay/default/HowToPlay.css"],"names":[],"mappings":"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","sourcesContent":[".how-to-trade {\n    /* font-family: 'Barlow Semi Condensed'; */\n    font-family: 'Barlow';\n    background-color: transparent;\n    display: block;\n    position: static;\n    font-size: 10px;\n    overflow: auto;\n    z-index: initial;\n}\n\n.how-to-trade .how-to-trade-main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n}\n\n.how-to-trade .main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n    justify-content: center;\n    align-items: center;\n    max-width: 120em;\n    margin: 0 auto;\n}\n\n.how-to-trade section.ltr .main-flex,\n.how-to-trade section.rtl .main-flex {\n    /* justify-content: space-between; */\n    gap: 8em;\n}\n\n.how-to-trade .entry_screen_langs_indexed {\n    top: 2.2em;\n    right: 2.2em;\n}\n\n/* ############################################ */\n/* ############## MENU ICON (WEB) ############# */\n/* ############################################ */\n\n.how-to-trade .menu-icon {\n    position: absolute;\n    right: 2em;\n    top: 2em;\n    z-index: 3;\n    cursor: pointer;\n    display: inline-block;\n    width: 5em;\n    height: 5em;\n    overflow: hidden;\n}\n\n.how-to-trade .menu-icon div {\n    background-color: #c5ab5a;\n    border-radius: 0.3em;\n    height: 0.5em;\n    position: absolute;\n    right: 1em;\n    transition: width .2s,transform .2s;\n    width: 3em;\n}\n\n.how-to-trade .menu-icon div.top {\n    top: 0.9em;\n}\n\n.how-to-trade .menu-icon div.middle {\n    top: 2.2em;\n    width: 2em;\n}\n\n.how-to-trade .menu-icon div.bottom {\n    top: 3.6em;\n}\n\n.how-to-trade .menu-icon.open div.top {\n    transform: translate(0.7em,1.3em) rotate(-45deg);\n    width: 4.4em;\n}\n\n.how-to-trade .menu-icon.open div.middle {\n    transform: translate(-4.5em);\n}\n\n.how-to-trade .menu-icon.open div.bottom {\n    transform: translate(0.7em,-1.4em) rotate(45deg);\n    width: 4.4em;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* ############## TOP MENU (WEB) ############## */\n/* ############################################ */\n\n.how-to-trade .top-menu {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 5em;\n    margin: 5em 0em 8em 0em;\n}\n\n.how-to-trade .top-menu .item {\n    color: #ffffff;\n}\n\n.how-to-trade .top-menu .item.active {\n    color: #f4d56f;\n}\n\n.how-to-trade .top-menu .item span {\n    font-size: 2.2em;\n}\n\n/* ############################################ */\n/* ############## SIDE MENU (WEB) ############# */\n/* ############################################ */\n\n.how-to-trade .side-menu {\n    position: fixed;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    background-color: rgba(0, 0, 0, 0.8);\n    /* padding: 0em 15em; */\n    width: 60em;\n    z-index: 2;\n    transform: translateX(60em);\n    transition: transform .3s ease;\n}\n\n.how-to-trade .side-menu.open {\ntransform: translateX(0);\n}\n\n.how-to-trade .side-menu .item {\n    color: #ffffff;\n}\n\n.how-to-trade .side-menu .item.active {\n    color: #f4d56f;\n}\n\n.how-to-trade .side-menu .item span {\n    font-size: 2.5em;\n}\n\n.how-to-trade .side-menu .menu-caption {\n    font-weight: 900;\n    line-height: 7.8em;\n}\n\n.how-to-trade .side-menu .menu-caption span {\n    font-size: 8.2em;\n}\n\n.how-to-trade .side-menu .menu-caption::before {\n    display: block;\n    content: '';\n    width: 13em;\n    height: 0.6em;\n    margin: 0em auto 1.5em auto;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.how-to-trade .side-menu .play-now {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    padding: 1.6em 5em;\n    border-radius: 4em;\n    font-weight: 600;\n    margin: 3em 0em 0em 0em;\n    cursor: pointer;\n    min-width: 30em;\n    box-sizing: border-box;\n    color: #ffffff;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.how-to-trade .side-menu .play-now a {\n    color: inherit;\n}\n\n.how-to-trade .side-menu .play-now span {\n    font-size: 2.6em;\n}\n\n/* ############################################ */\n/* ############# WEB/MOBILE ONLY ############## */\n/* ############################################ */\n\n.how-to-trade section .mobile-only.flex {\n    display: none;\n}\n\n.how-to-trade section .mobile-only.block {\n    display: none;\n}\n\n.how-to-trade section .web-only.flex {\n    display: flex;\n}\n\n.how-to-trade section .web-only.block {\n    display: block;\n}\n\n/* ############################################ */\n/* ############## SECTIONS (WEB) ############## */\n/* ############################################ */\n\n.how-to-trade section {\n    position: relative;\n    flex-shrink: 0;\n    padding: 12em 0em 12em 0em;\n    width: 100%;\n}\n\n.how-to-trade section.seperator::after {\n    content: '';\n    position: absolute;\n    left: 50%;\n    top: -3.7em;\n    transform: translateX(-50%);\n    width: 7.4em;\n    height: 7.4em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/default/section-seperator.svg');\n    z-index: 1;\n}\n\n.how-to-trade section .box {\n    position: relative;\n}\n\n.how-to-trade section .text-area {\n    text-align: left;\n}\n\n.how-to-trade section .box.text-area {\n    z-index: 2;\n}\n\n.how-to-trade section .image-wrap div {\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n.how-to-trade section.bright {\n    background-color: #ffffff;\n    color: #000000;\n}\n\n.how-to-trade section.dark {\n    background-color: #181818;\n    color: #ffffff;\n}\n\n.how-to-trade section.ltr {\n\n}\n\n.how-to-trade section.ltr .main-flex,\n.how-to-trade section.rtl .main-flex {\n    flex-direction: row;\n}\n\n.how-to-trade section.ltr .main-flex .text-area {\n    order: 1;\n}\n\n.how-to-trade section.ltr .main-flex .image-area {\n    order: 2;\n}\n\n.how-to-trade section.rtl {\n\n}\n\n.how-to-trade section.rtl .main-flex .text-area {\n    order: 2;\n}\n\n.how-to-trade section.rtl .main-flex .image-area {\n    order: 1;\n}\n\n/* DEFAULT */\n.how-to-trade section.ttb {\n\n}\n\n.how-to-trade section.ttb .main-flex {\n    flex-direction: column;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* ########## SECTION CAPTION (WEB) ########### */\n/* ############################################ */\n\n.how-to-trade section .caption {\n    font-weight: 900;\n    line-height: 8em;\n    width: 100%;\n}\n\n.how-to-trade section .caption span {\n    font-size: 8.2em;\n}\n\n.how-to-trade section.ttb .caption {\n    text-align: center;\n}\n\n.how-to-trade section .stripe::before {\n    display: block;\n    content: '';\n    width: 21em;\n    height: 0.6em;\n    margin: 0em 0em 1.5em 0em;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n/* ############################################ */\n/* ######### \"PLAY NOW\" BUTTON (WEB) ########## */\n/* ############################################ */\n\n.how-to-trade section .button-flex-wrap {\n    display: flex;\n    position: relative;\n    z-index: 1;\n}\n\n.how-to-trade section .play-now {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    /* padding: 1.6em 5em; */\n    border-radius: 4em;\n    font-weight: 600;\n    margin: 3em 0em 0em 0em;\n    cursor: pointer;\n    min-width: 30em;\n    box-sizing: border-box;\n    text-align: center;\n}\n\n.how-to-trade section.bright .play-now {\n    color: #000000;\n    background-color: #F4D56F;\n}\n\n.how-to-trade section.dark .play-now {\n    color: #ffffff;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.how-to-trade section .play-now a {\n    color: inherit;\n    padding: 1.6em 5em;\n    width: 100%;\n}\n\n.how-to-trade section .play-now span {\n    font-size: 2.6em;\n}\n\n/* ############################################ */\n/* ###### SECTION: REAL WEB3 PVP (WEB) ######## */\n/* ############################################ */\n\n.how-to-trade section.real-web3 {\n    padding: 0em 0em 13em 0em;\n}\n\n.how-to-trade section.real-web3 .button-flex-wrap {\n    justify-content: flex-end;\n}\n\n.how-to-trade section.real-web3 .back-button {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0.8em 4em 1em 4em;\n    color: #f4d56f;\n    box-shadow: 0em 0em 0em 0.2em #f4d56f;\n    z-index: 1;\n    border-radius: 3em;\n    min-width: 17em;\n    box-sizing: border-box;\n    cursor: pointer;\n    margin: 3em 3em 2em 0em;\n}\n\n.how-to-trade section.real-web3 .back-button span {\n    font-size: 2.4em;\n}\n\n.how-to-trade section.real-web3 .box.image-area {\n    z-index: 1;\n    margin: -3em 0em 0em 0em;\n}\n\n.how-to-trade section.real-web3 .caption {\n    max-width: 70em;\n    line-height: 8.1em;\n}\n\n.how-to-trade section.real-web3 .caption span {\n    font-size: 9em;\n}\n\n.how-to-trade section.real-web3::before,\n.how-to-trade section.real-web3::after {\n    content: '';\n    position: absolute;\n    top: 0;\n    height: 100%;\n    width: 75em;\n    max-width: 50%;\n}\n\n.how-to-trade section.real-web3::before {\n    left: 0;\n    background-image: linear-gradient(to right, #82c804 -86%, #181818 54%);\n    opacity: 0.5;\n}\n\n.how-to-trade section.real-web3::after {\n    right: 0;\n    background-image: linear-gradient(to left, #f30401 -86%, #181818 54%);\n    opacity: 0.9;\n}\n\n.how-to-trade section.real-web3 .image-wrap div {\n    width: 116em;\n    height: 55em;\n    background-image: url('/public/media/images/how-to-trade/default/real-web3.png');\n}\n\n.how-to-trade section.real-web3 .image-text-box {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    margin: -2em 0em 0em 0em;\n}\n\n.how-to-trade section.real-web3 .image-text {\n    text-align: left;\n    font-weight: 600;\n    padding: 0em 0em 0em 5em;\n    background-size: 4em;\n    background-position: 0em center;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-trade/default/orange-bitcoin.svg');\n}\n\n.how-to-trade section.real-web3 .image-text span {\n    font-size: 3.6em;\n}\n\n/* ############################################ */\n/* ### SECTION: CONNECT YOUR WALLET (WEB) ##### */\n/* ############################################ */\n\n.how-to-trade section.connect-your-wallet {\n    padding: 10em 0em 11em 0em;\n}\n\n.how-to-trade section.connect-your-wallet .caption {\n    text-align: left;\n    max-width: 114em;\n}\n\n.how-to-trade section.connect-your-wallet .box.image-area {\n    margin: 1em 0em 0em 0em;\n}\n\n.how-to-trade section.connect-your-wallet .image-wrap div {\n    width: 100em;\n    height: 58em;\n    background-image: url('/public/media/images/how-to-trade/default/connect-your-wallet.png');\n}\n\n/* ############################################ */\n/* #### SECTION: LIVE BITCOIN RATE (WEB) ###### */\n/* ############################################ */\n\n.how-to-trade section.live-bitcoin-rate {\n    padding: 8em 0em 10em 0em;\n}\n\n.how-to-trade section.live-bitcoin-rate .bitcoin-icon {\n    width: 7.8em;\n    height: 7.8em;\n    margin: 0em 0em 2.5em 0em;\n    background-size: 100%;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/default/gradient-bitcoin.svg');\n}\n\n/* .how-to-trade section.live-bitcoin-rate .caption {\n    max-width: 53em;\n} */\n\n.how-to-trade section.live-bitcoin-rate .sub-caption {\n    font-weight: 600;\n    margin: 1em 0em 0em 0em;\n}\n\n.how-to-trade section.live-bitcoin-rate .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.live-bitcoin-rate .image-wrap div {\n    width: 55em;\n    height: 52em;\n    background-image: url('/public/media/images/how-to-trade/default/live-bitcoin-rate.png');\n}\n\n/* ############################################ */\n/* ####### SECTION: JOIN UP POOL (WEB) ######## */\n/* ############################################ */\n\n.how-to-trade section.join-up-pool {\n    padding: 10em 0em 10em 0em;\n}\n\n.how-to-trade section.join-up-pool .caption {\n    max-width: 45em;\n}\n\n.how-to-trade section.join-up-pool .image-wrap div {\n    width: 53em;\n    height: 56em;\n    background-image: url('/public/media/images/how-to-trade/default/join-up-pool.png');\n}\n\n/* ############################################ */\n/* ###### SECTION: JOIN DOWN POOL (WEB) ####### */\n/* ############################################ */\n\n.how-to-trade section.join-down-pool {\n    padding: 11em 0em 11em 0em;\n}\n\n/* .how-to-trade section.join-down-pool .caption {\n    max-width: 47em;\n} */\n\n.how-to-trade section.join-down-pool .image-wrap div {\n    width: 54em;\n    height: 54em;\n    background-image: url('/public/media/images/how-to-trade/default/join-down-pool.png');\n}\n\n/* ############################################ */\n/* ####### SECTION: SELECT INVEST (WEB) ####### */\n/* ############################################ */\n\n.how-to-trade section.select-invest {\n    \n}\n\n.how-to-trade section.select-invest .caption {\n    max-width: 72em;\n}\n\n.how-to-trade section.select-invest .bar-image {\n    width: 73em;\n    height: 21em;\n    margin: 1em 0em 0em -9em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/how-to-trade/default/select-invest_2.png');\n}\n\n.how-to-trade section.select-invest .image-wrap div {\n    width: 33em;\n    height: 50em;\n    background-image: url('/public/media/images/how-to-trade/default/select-invest_1.png');\n}\n\n/* ############################################ */\n/* ######### SECTION: UP PROFIT (WEB) ######### */\n/* ############################################ */\n\n.how-to-trade section.up-profit {\n    \n}\n\n.how-to-trade section.up-profit .caption {\n    max-width: 47em;\n}\n\n.how-to-trade section.up-profit .sub-caption {\n    font-weight: 600;\n    margin: 1em 0em 0em 0em;\n}\n\n.how-to-trade section.up-profit .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.up-profit .image-wrap div {\n    width: 54em;\n    height: 49em;\n    background-image: url('/public/media/images/how-to-trade/default/up-profit.png');\n}\n\n/* ############################################ */\n/* ######## SECTION: DOWN PROFIT (WEB) ######## */\n/* ############################################ */\n\n.how-to-trade section.down-profit {\n    \n}\n\n.how-to-trade section.down-profit .caption {\n    max-width: 50em;\n}\n\n.how-to-trade section.down-profit .sub-caption {\n    font-weight: 600;\n    margin: 1em 0em 0em 0em;\n}\n\n.how-to-trade section.down-profit .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.down-profit .image-wrap div {\n    width: 54em;\n    height: 49em;\n    background-image: url('/public/media/images/how-to-trade/default/down-profit.png');\n}\n\n/* ############################################ */\n/* ######## SECTION: POOL ROUND (WEB) ######### */\n/* ############################################ */\n\n.how-to-trade section.pool-round {\n    \n}\n\n/* .how-to-trade section.pool-round .caption {\n    max-width: 53em;\n} */\n\n.how-to-trade section.pool-round .sub-caption {\n    font-weight: 600;\n}\n\n.how-to-trade section.pool-round .sub-caption.time-to-place {\n    margin: 1em 0em 3em 0em;\n}\n\n.how-to-trade section.pool-round .sub-caption.knock-out {\n    margin: 1em 0em 0em 0em;\n}\n\n.how-to-trade section.pool-round .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.pool-round .image-wrap div {\n    width: 49em;\n    height: 50em;\n    background-image: url('/public/media/images/how-to-trade/default/pool-round.png');\n}\n\n/* ############################################ */\n/* ######### SECTION: START RATE (WEB) ######## */\n/* ############################################ */\n\n.how-to-trade section.start-rate {\n    \n}\n\n.how-to-trade section.start-rate .caption {\n    max-width: 28em;\n}\n\n.how-to-trade section.start-rate .image-wrap div {\n    width: 65em;\n    height: 53em;\n    background-image: url('/public/media/images/how-to-trade/default/start-rate.png');\n}\n\n/* ############################################ */\n/* ########## SECTION: UP WINS (WEB) ########## */\n/* ############################################ */\n\n.how-to-trade section.up-wins {\n    \n}\n\n.how-to-trade section.up-wins .caption {\n\n}\n\n.how-to-trade section.up-wins .sub-caption {\n    font-weight: 600;\n    margin: 0em 0em 1em 0em;\n}\n\n.how-to-trade section.up-wins .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.up-wins .main-flex .text-area {\n    max-width: 26em;\n}\n\n.how-to-trade section.up-wins .image-wrap div {\n    width: 56em;\n    height: 56em;\n    background-image: url('/public/media/images/how-to-trade/default/up-wins.png');\n}\n\n/* ############################################ */\n/* ######### SECTION: DOWN WINS (WEB) ######### */\n/* ############################################ */\n\n.how-to-trade section.down-wins {\n    \n}\n\n.how-to-trade section.down-wins .caption {\n\n}\n\n.how-to-trade section.down-wins.ltr .main-flex .text-area {\n    max-width: 26em;\n}\n\n.how-to-trade section.down-wins .sub-caption {\n    font-weight: 600;\n    margin: 0em 0em 1em 0em;\n}\n\n.how-to-trade section.down-wins .sub-caption span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.down-wins .image-wrap div {\n    width: 55em;\n    height: 52em;\n    background-image: url('/public/media/images/how-to-trade/default/down-wins.png');\n}\n\n/* ############################################ */\n/* ########## SECTION: PROFITS (WEB) ########## */\n/* ############################################ */\n\n.how-to-trade section.profits {\n    \n}\n\n.how-to-trade section.profits .caption {\n\n}\n\n.how-to-trade section.profits .text-small {\n    font-weight: 300;\n    margin: 2em 0em 2em 0em;\n}\n\n.how-to-trade section.profits .text-small span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.profits .text-big {\n    font-weight: 600;\n}\n\n.how-to-trade section.profits .text-big span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.profits .image-wrap div {\n    width: 54em;\n    height: 50em;\n    background-image: url('/public/media/images/how-to-trade/default/profits.png');\n}\n\n/* ############################################ */\n/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */\n/* ############################################ */\n\n.how-to-trade section.jackpot-weekly {\n    \n}\n\n.how-to-trade section.jackpot-weekly .caption {\n\n}\n\n.how-to-trade section.jackpot-weekly .text-big {\n    font-weight: 600;\n    margin: 2em 0em 2em 0em;\n}\n\n.how-to-trade section.jackpot-weekly .text-big span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.jackpot-weekly .text-small {\n    font-weight: 300;\n}\n\n.how-to-trade section.jackpot-weekly .text-small span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.jackpot-weekly .image-wrap div {\n    width: 54em;\n    height: 57em;\n    background-image: url('/public/media/images/how-to-trade/default/jackpot-weekly.png');\n}\n\n/* ############################################ */\n/* ###### SECTION: MONTHLY JACKPOT (WEB) ###### */\n/* ############################################ */\n\n.how-to-trade section.jackpot-monthly {\n    \n}\n\n.how-to-trade section.jackpot-monthly .caption {\n\n}\n\n.how-to-trade section.jackpot-monthly .text-big {\n    font-weight: 600;\n    margin: 2em 0em 2em 0em;\n}\n\n.how-to-trade section.jackpot-monthly .text-big span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.jackpot-monthly .text-small {\n    font-weight: 300;\n}\n\n.how-to-trade section.jackpot-monthly .text-small span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.jackpot-monthly .image-wrap div {\n    width: 57em;\n    height: 50em;\n    background-image: url('/public/media/images/how-to-trade/default/jackpot-monthly.png');\n}\n\n/* ############################################ */\n/* ####### SECTION: POLYGON MATIC (WEB) ####### */\n/* ############################################ */\n\n.how-to-trade section.polygon {\n    \n}\n\n.how-to-trade section.polygon .caption {\n\n}\n\n.how-to-trade section.polygon .sub-caption {\n    margin: 2em 0em 1.5em 0em;\n    font-weight: 800;\n}\n\n.how-to-trade section.polygon .sub-caption span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.polygon .items {\n\n}\n\n.how-to-trade section.polygon .item {\n    position: relative;\n    padding: 0em 0em 0em 3em;\n    font-weight: 700;\n}\n\n.how-to-trade section.polygon .item span {\n    font-size: 3.6em;\n}\n\n.how-to-trade section.polygon .item::before {\n    content: '';\n    background: #000000;\n    position: absolute;\n    width: 1.5em;\n    height: 1.5em;\n    border-radius: 50%;\n    top: 50%;\n    transform: translateY(-50%);\n    left: 0;\n}\n\n.how-to-trade section.polygon .image-wrap div {\n    width: 54em;\n    height: 57em;\n    background-image: url('/public/media/images/how-to-trade/default/polygon.png');\n}\n\n/* ############################################ */\n/* ###### SECTION: GET MATIC TOKEN (WEB) ###### */\n/* ############################################ */\n\n.how-to-trade section.get-matic-token {\n    \n}\n\n.how-to-trade section.get-matic-token .caption {\n\n}\n\n.how-to-trade section.get-matic-token .text-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5em;\n    margin: 3em 0em 1em 0em;\n}\n\n.how-to-trade section.get-matic-token .sub-caption {\n    font-weight: 800;\n}\n\n.how-to-trade section.get-matic-token .sub-caption span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.get-matic-token .separator-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 1em;\n    width: 100%;\n}\n\n.how-to-trade section.get-matic-token .separator-flex .separator {\n    flex-grow: 1;\n}\n\n.how-to-trade section.get-matic-token .separator-flex .separator::after {\n    content: '';\n    width: 100%;\n    height: 0.3em;\n    background-color: #ffffff;\n    display: block;\n}\n\n.how-to-trade section.get-matic-token .separator-flex .text {\n    font-weight: 800;\n}\n\n.how-to-trade section.get-matic-token .separator-flex .text span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.get-matic-token .image-wrap div {\n    width: 51em;\n    height: 53em;\n    background-image: url('/public/media/images/how-to-trade/default/get-matic-token.png');\n}\n\n/* ############################################ */\n/* ###### SECTION: SELL SEND WINS (WEB) ####### */\n/* ############################################ */\n\n.how-to-trade section.sell-send-wins {\n    \n}\n\n.how-to-trade section.sell-send-wins .caption {\n\n}\n\n.how-to-trade section.sell-send-wins .text-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 0.5em;\n    margin: 3em 0em 0em 0em;\n}\n\n.how-to-trade section.sell-send-wins .sub-caption {\n    font-weight: 800;\n    line-height: 3.4em;\n}\n\n.how-to-trade section.sell-send-wins .sub-caption span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.sell-send-wins .separator-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 1em;\n    width: 100%;\n}\n\n.how-to-trade section.sell-send-wins .separator-flex .separator {\n    position: relative;\n    flex-grow: 1;\n}\n\n.how-to-trade section.sell-send-wins .separator-flex .separator::after {\n    content: '';\n    width: 100%;\n    height: 0.3em;\n    background-color: #000000;\n    display: block;\n}\n\n.how-to-trade section.sell-send-wins .separator-flex .text {\n    font-weight: 800;\n}\n\n.how-to-trade section.sell-send-wins .separator-flex .text span {\n    font-size: 2.5em;\n}\n\n.how-to-trade section.sell-send-wins .image-wrap div {\n    width: 40em;\n    height: 57em;\n    background-image: url('/public/media/images/how-to-trade/default/sell-send-wins.png');\n}\n\n/* ############################################ */\n/* ########## SECTION: FOOTER (WEB) ########### */\n/* ############################################ */\n\n.how-to-trade section.footer {\n\n}\n\n.how-to-trade section.footer {\n    background-color: #181818;\n    color: #5a5a5a;\n    padding: 6em 19em 6em 19em;\n    box-sizing: border-box;\n}\n\n.how-to-trade section.footer .disclaimer {\n    line-height: 2.5em;\n    text-align: left;\n}\n\n.how-to-trade section.footer .disclaimer span {\n    font-size: 1.8em;\n}\n\n@media screen and (max-width: 1320px) {\n\n    .how-to-trade {\n        font-size: 9px;\n    }\n\n}\n\n@media screen and (max-width: 1150px) {\n\n    .how-to-trade {\n        font-size: 8px;\n    }\n\n}\n\n@media screen and (max-width: 1035px) {\n\n    .how-to-trade {\n        font-size: 7px;\n    }\n\n}\n\n@media screen and (max-width: 905px) {\n\n    .how-to-trade {\n        font-size: 6px;\n    }\n\n}\n\n@media screen and (max-width: 775px) {\n\n    .how-to-trade {\n        font-size: 5px;\n    }\n\n}\n\n@media screen and (max-width: 480px) {\n\n    .how-to-trade {\n        font-size: inherit;\n    }\n\n    body .how-to-trade .entry_screen_langs {\n        top: 2.4em;\n        right: 2em;\n    }\n\n        /* ############################################ */\n    /* ############ MENU ICON (MOBILE) ############ */\n    /* ############################################ */\n\n    .how-to-trade .menu-icon {\n        right: 1em;\n        top: 1em;\n    }\n\n    /* ############################################ */\n    /* ############ TOP MENU (MOBILE) ############# */\n    /* ############################################ */\n\n    .how-to-trade .top-menu {\n        display: none;\n    }\n\n    /* ############################################ */\n    /* ############ SIDE MENU (MOBILE) ############ */\n    /* ############################################ */\n\n    .how-to-trade .side-menu {\n        transform: translateX(100%);\n        right: auto;\n    }\n\n    .how-to-trade .side-menu .menu-caption::before {\n        width: 12em;\n        margin: 0em auto 0em auto;\n    }\n\n    .how-to-trade .side-menu .menu-caption span {\n        font-size: 6.2em;\n    }\n\n    .how-to-trade .side-menu .item span {\n        font-size: 2.3em;\n    }\n\n    .how-to-trade .side-menu.open {\n        width: 100%;\n    }\n\n    .how-to-trade .side-menu .play-now {\n        padding: 1.4em 5em;\n        min-width: 24em;\n    }\n\n    .how-to-trade .side-menu .play-now span {\n        font-size: 2.3em;\n    }\n\n    /* ############################################ */\n    /* ############# WEB/MOBILE ONLY ############## */\n    /* ############################################ */\n\n    .how-to-trade section .web-only.flex {\n        display: none;\n    }\n\n    .how-to-trade section .web-only.block {\n        display: none;\n    }\n \n    .how-to-trade section .mobile-only.flex {\n        display: flex;\n    }\n\n    .how-to-trade section .mobile-only.block {\n        display: block;\n    }\n\n    /* ############################################ */\n    /* ############ SECTIONS (MOBILE) ############# */\n    /* ############################################ */\n\n    .how-to-trade section {\n        padding: 6em 0em 6em 0em;\n    }\n\n    .how-to-trade section .stripe::before {\n        margin: 0em auto 1.5em auto;\n        width: 11em;\n        height: 0.4em;\n    }\n\n    .how-to-trade section.seperator::after {\n        top: -2.2em;\n        width: 4.4em;\n        height: 4.4em;\n    }\n\n    .how-to-trade section .text-area {\n        text-align: center;\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .how-to-trade section.ltr .main-flex,\n    .how-to-trade section.rtl .main-flex {\n        flex-direction: column;\n        gap: 0;\n    }\n\n    .how-to-trade section.ltr .main-flex .text-area,\n    .how-to-trade section.ltr .main-flex .image-area,\n    .how-to-trade section.rtl .main-flex .text-area,\n    .how-to-trade section.rtl .main-flex .image-area {\n        order: unset;\n    }\n\n    .how-to-trade section .box.image-area {\n        margin: 3em 0em 0em 0em;\n    }\n\n    /* ############################################ */\n    /* ######### SECTION CAPTION (MOBILE) ######### */\n    /* ############################################ */\n\n    .how-to-trade section .caption {\n        line-height: 4em;\n        text-align: center;\n    }\n\n    .how-to-trade section .caption span {\n        font-size: 4.4em;\n    }\n\n    /* ############################################ */\n    /* ######## \"PLAY NOW\" BUTTON (MOBILE) ######## */\n    /* ############################################ */\n\n    .how-to-trade section .play-now {\n        min-width: 23em;\n    }\n\n    .how-to-trade section .play-now a {\n        padding: 1.4em 5em;\n    }\n\n    .how-to-trade section .play-now span {\n        font-size: 2em;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: REAL WEB3 PVP (MOBILE) ###### */\n    /* ############################################ */\n\n    .how-to-trade section.real-web3 {\n        padding: 7em 0em 6em 0em;\n    }\n\n    .how-to-trade section.real-web3 .back-button {\n        top: 2.5em;\n        right: 2.5em;\n        padding: 0.5em 2em 0.6em 2em;\n        min-width: 11em;\n    }\n\n    .how-to-trade section.real-web3 .back-button span {\n        font-size: 1.8em;\n    }\n\n    .how-to-trade section.real-web3::before,\n    .how-to-trade section.real-web3::after {\n        display: none;\n    }\n\n    .how-to-trade section.real-web3 .caption {\n        max-width: 37em;\n        line-height: 5.4em;\n    }\n\n    .how-to-trade section.real-web3 .caption span {\n        font-size: 5.6em;\n    }\n\n    .how-to-trade section.real-web3 .box.image-area {\n        margin: -1em 0em 0em 0em;\n    }\n\n    .how-to-trade section.real-web3 .image-wrap div {\n        width: 37em;\n        height: 44em;\n        margin: 0 auto;\n        background-image: url('/public/media/images/how-to-trade/default/real-web3_mobile.png');\n    }\n\n    .how-to-trade section.real-web3 .image-text-box {\n        margin: 1em 0em 0em 0em;\n    }\n\n    .how-to-trade section.real-web3 .image-text {\n        background-size: 3em;\n        padding: 0em 0em 0em 4em;\n    }\n\n    .how-to-trade section.real-web3 .image-text span {\n        font-size: 2.3em;\n    }\n\n    /* ############################################ */\n    /* ### SECTION: CONNECT YOUR WALLET (MOBILE) ## */\n    /* ############################################ */\n\n    .how-to-trade section.connect-your-wallet .caption {\n        max-width: 34em;\n        text-align: center;\n    }\n\n    .how-to-trade section.connect-your-wallet .image-wrap div {\n        width: 35em;\n        height: 40em;\n        background-image: url('/public/media/images/how-to-trade/default/connect-your-wallet_mobile.png');\n    }\n\n    /* ############################################ */\n    /* ### SECTION: LIVE BITCOIN RATE (MOBILE) #### */\n    /* ############################################ */\n\n    .how-to-trade section.live-bitcoin-rate {\n\n    }\n\n    .how-to-trade section.live-bitcoin-rate .bitcoin-icon {\n        width: 4.8em;\n        height: 4.8em;\n        margin: 0em 0em 1.7em 0em;\n    }\n\n    .how-to-trade section.live-bitcoin-rate .image-wrap div {\n        width: 35em;\n        height: 32em;\n        background-image: url('/public/media/images/how-to-trade/default/live-bitcoin-rate_mobile.png');\n    }\n\n    .how-to-trade section.live-bitcoin-rate .caption {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.live-bitcoin-rate .sub-caption {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.live-bitcoin-rate .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ###### SECTION: JOIN UP POOL (MOBILE) ###### */\n    /* ############################################ */\n\n    .how-to-trade section.join-up-pool .image-wrap div {\n        width: 35em;\n        height: 31em;\n        background-image: url('/public/media/images/how-to-trade/default/join-up-pool_mobile.png');\n    }\n\n    .how-to-trade section.join-up-pool .caption {\n        max-width: 34em;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: JOIN DOWN POOL (MOBILE) ##### */\n    /* ############################################ */\n\n    .how-to-trade section.join-down-pool .image-wrap div {\n        width: 35em;\n        height: 31em;\n        background-image: url('/public/media/images/how-to-trade/default/join-down-pool_mobile.png');\n    }\n\n    .how-to-trade section.join-down-pool .caption {\n        max-width: 34em;\n    }\n\n    /* ############################################ */\n    /* ###### SECTION: SELECT INVEST (MOBILE) ##### */\n    /* ############################################ */\n\n    .how-to-trade section.select-invest .image-wrap div {\n        width: 35em;\n        height: 28em;\n        background-image: url('/public/media/images/how-to-trade/default/select-invest_mobile.png');\n    }\n\n    .how-to-trade section.select-invest .bar-image {\n        display: none;\n    }\n\n    /* ############################################ */\n    /* ######## SECTION: UP PROFIT (MOBILE) ####### */\n    /* ############################################ */\n\n    .how-to-trade section.up-profit .image-wrap div {\n        width: 35em;\n        height: 34em;\n        background-image: url('/public/media/images/how-to-trade/default/up-profit_mobile.png');\n    }\n\n    .how-to-trade section.up-profit .caption {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.up-profit .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ####### SECTION: DOWN PROFIT (MOBILE) ###### */\n    /* ############################################ */\n\n    .how-to-trade section.down-profit .image-wrap div {\n        width: 35em;\n        height: 35em;\n        background-image: url('/public/media/images/how-to-trade/default/down-profit_mobile.png');\n    }\n\n    .how-to-trade section.down-profit .caption {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.down-profit .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ####### SECTION: POOL ROUND (MOBILE) ####### */\n    /* ############################################ */\n\n    .how-to-trade section.pool-round .image-wrap div {\n        width: 35em;\n        height: 33em;\n        background-image: url('/public/media/images/how-to-trade/default/pool-round_mobile.png');\n    }\n\n    .how-to-trade section.pool-round .sub-caption.time-to-place {\n        margin: 1em 0em 2em 0em;\n    }\n\n    .how-to-trade section.pool-round .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ######## SECTION: START RATE (MOBILE) ###### */\n    /* ############################################ */\n\n    .how-to-trade section.start-rate .image-wrap div {\n        width: 35em;\n        height: 30em;\n        background-image: url('/public/media/images/how-to-trade/default/start-rate_mobile.png');\n    }\n\n    /* ############################################ */\n    /* ######### SECTION: UP WINS (MOBILE) ######## */\n    /* ############################################ */\n\n    .how-to-trade section.up-wins .main-flex .text-area {\n        max-width: 30em;\n    }\n\n    .how-to-trade section.up-wins .image-wrap div {\n        width: 35em;\n        height: 34em;\n        background-image: url('/public/media/images/how-to-trade/default/up-wins_mobile.png');\n    }\n\n    .how-to-trade section.up-wins .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ######## SECTION: DOWN WINS (MOBILE) ####### */\n    /* ############################################ */\n\n    .how-to-trade section.down-wins .image-wrap div {\n        width: 35em;\n        height: 32em;\n        background-image: url('/public/media/images/how-to-trade/default/down-wins_mobile.png');\n    }\n\n    .how-to-trade section.down-wins .sub-caption span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ######### SECTION: PROFITS (MOBILE) ######## */\n    /* ############################################ */\n\n    .how-to-trade section.profits .text-area {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.profits .image-wrap div {\n        width: 35em;\n        height: 33em;\n        background-image: url('/public/media/images/how-to-trade/default/profits_mobile.png');\n    }\n\n    .how-to-trade section.profits .text-big span {\n        font-size: 1.9em;\n    }\n\n    .how-to-trade section.profits .text-small {\n        font-weight: 300;\n        margin: 2em 0em 1em 0em;\n    }\n\n    .how-to-trade section.profits .text-small span {\n        font-size: 1.5em;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: WEEKLY JACKPOT (MOBILE) ##### */\n    /* ############################################ */\n\n    .how-to-trade section.jackpot-weekly .text-area {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.jackpot-weekly .image-wrap div {\n        width: 35em;\n        height: 35em;\n        background-image: url('/public/media/images/how-to-trade/default/jackpot-weekly_mobile.png');\n    }\n\n    .how-to-trade section.jackpot-weekly .text-big {\n        margin: 2em 0em 1em 0em;\n    }\n\n    .how-to-trade section.jackpot-weekly .text-big span {\n        font-size: 1.9em;\n    }\n\n    .how-to-trade section.jackpot-weekly .text-small span {\n        font-size: 1.5em;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: MONTHLY JACKPOT (MOBILE) #### */\n    /* ############################################ */\n\n    .how-to-trade section.jackpot-monthly .text-area {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.jackpot-monthly .image-wrap div {\n        width: 35em;\n        height: 32em;\n        /* background-image: url('/public/media/images/how-to-trade/default/jackpot-monthly_mobile.png'); */\n    }\n\n    .how-to-trade section.jackpot-monthly .text-big {\n        margin: 2em 0em 1em 0em;\n    }\n\n    .how-to-trade section.jackpot-monthly .text-big span {\n        font-size: 1.9em;\n    }\n\n    .how-to-trade section.jackpot-monthly .text-small span {\n        font-size: 1.5em;\n    }\n\n    /* ############################################ */\n    /* ###### SECTION: POLYGON MATIC (MOBILE) ##### */\n    /* ############################################ */\n\n    .how-to-trade section.polygon .image-wrap div {\n        width: 35em;\n        height: 38em;\n        background-image: url('/public/media/images/how-to-trade/default/polygon_mobile.png');\n    }\n\n    .how-to-trade section.polygon .sub-caption {\n        margin: 1em 0em 1em 0em;\n    }\n\n    .how-to-trade section.polygon .sub-caption span {\n        font-size: 1.5em;\n    }\n\n    .how-to-trade section.polygon .items {\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .how-to-trade section.polygon .item {\n        padding: 0em 0em 0em 1.5em;\n    }\n\n    .how-to-trade section.polygon .item::before {\n        width: 1em;\n        height: 1em;\n    }\n\n    .how-to-trade section.polygon .item span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: GET MATIC TOKEN (MOBILE) #### */\n    /* ############################################ */\n\n    .how-to-trade section.get-matic-token .text-flex {\n        margin: 3em 0em 1em 0em;\n        max-width: 35em;\n    }\n\n    .how-to-trade section.get-matic-token .image-wrap div {\n        width: 35em;\n        height: 29em;\n        background-image: url('/public/media/images/how-to-trade/default/get-matic-token_mobile.png');\n    }\n\n    .how-to-trade section.get-matic-token .caption {\n        max-width: 34em;\n    }\n\n    .how-to-trade section.get-matic-token .sub-caption {\n        font-weight: 600;\n    }\n\n    .how-to-trade section.get-matic-token .sub-caption span {\n        font-size: 2em;\n    }\n\n    .how-to-trade section.get-matic-token .separator-flex .text {\n        font-weight: 600;\n    }\n\n    /* ############################################ */\n    /* ##### SECTION: SELL SEND WINS (MOBILE) ##### */\n    /* ############################################ */\n\n    .how-to-trade section.sell-send-wins .image-wrap div {\n        width: 35em;\n        height: 50em;\n        background-image: url('/public/media/images/how-to-trade/default/sell-send-wins_mobile.png');\n    }\n\n    .how-to-trade section.sell-send-wins .text-flex {\n        max-width: 35em;\n        margin: 3em 0em 0em 0em;\n    }\n\n    .how-to-trade section.sell-send-wins .sub-caption {\n        line-height: 2.4em;\n        font-weight: 600;\n    }\n\n    .how-to-trade section.sell-send-wins .sub-caption span {\n        font-size: 2em;\n    }\n\n    .how-to-trade section.sell-send-wins .separator-flex .text {\n        font-weight: 600;\n    }\n\n    /* ############################################ */\n    /* ######## SECTION: FOOTER (MOBILE) ########## */\n    /* ############################################ */\n\n    .how-to-trade section.footer {\n        padding: 3em 3em 3em 3em;\n    }\n\n    .how-to-trade section.footer .disclaimer {\n        line-height: 1.5em;\n    }\n\n    .how-to-trade section.footer .disclaimer span {\n        font-size: 1.2em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

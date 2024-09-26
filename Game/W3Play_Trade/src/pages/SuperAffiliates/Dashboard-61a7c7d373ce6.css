@@ -1,0 +1,288 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.sap-dashboard .golden-title {
+    line-height: 2.8em;
+    margin: 0.5em 0 0 0;
+}
+
+.sap-dashboard .generate-link-button {
+    position: absolute;
+    top: 0.5em;
+    left: 3.5em;
+    z-index: 5;
+    font-family: 'SF UI Display' sans-serif;
+    color: #000;
+    font-size: 1.5em;
+    line-height: 1.7em;
+    height: 1.7em;
+    padding: 0 0.8em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    border: solid 0.08em #f4d56f;
+    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.sap-dashboard .generate-link-button:hover {
+    transform: scale(1.05);
+    border-color: #f7e9bd;
+}
+
+.sap-dashboard .earnings-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    max-width: 59em;
+    margin: 0 auto;
+}
+
+.sap-dashboard .top-earnings-boxes {
+    display: flex;
+    gap: 1em;
+    position: relative;
+    z-index: 1;
+    margin-top: 0em;
+}
+
+.sap-dashboard .earnings-sub-boxes {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.sap-dashboard .earnings-sub-boxes .earnings-sub-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.sap-dashboard .earnings-sub-box > .amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #87d009;
+}
+.sap-dashboard .earnings-sub-box > .amount .icon-matic {
+    font-size: 2em;
+    margin: .6em .2em 0 0;
+}
+
+.sap-dashboard .earnings-sub-box > .amount span {
+    font-size: 3.6em;
+}
+
+
+
+
+
+
+.sap-dashboard .earnings-sub-boxes .earnings-sub-box .total {
+    font-weight: 500;
+}
+
+.sap-dashboard .earnings-sub-boxes .earnings-sub-box .total span {
+    font-size: 4em;
+}
+
+.sap-dashboard .earnings-box {
+    width: 100%;
+    border-radius: 0.8em;
+    border: solid 0.1em rgba(244, 213, 111, 0.19);
+    background-color: #18191e;
+    text-align: center;
+}
+
+.sap-dashboard .earnings-box > .amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #87d009;
+}
+.sap-dashboard .earnings-box > .amount .icon-matic{
+    font-size: 2em;
+    margin: .6em .2em 0 0;
+}
+
+.sap-dashboard .earnings-box > .amount span {
+    font-size: 3.6em;
+}
+
+.sap-dashboard .earnings-box.today,
+.sap-dashboard .earnings-box.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 29em;
+    height: calc(40vh - 4em);
+}
+
+.sap-dashboard .earnings-box.today img,
+.sap-dashboard .earnings-box.total img {
+    height: 3em;
+    width: auto;
+}
+
+.sap-dashboard .earnings-box.today {
+
+}
+
+.sap-dashboard .earnings-box.total {
+    
+}
+
+.sap-dashboard .earnings-box.friends {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: calc(40vh);
+}
+
+.sap-dashboard .earnings-box .title {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    color: #918b85;
+}
+
+.sap-dashboard .earnings-box .title span {
+    font-size: 1.1em;
+}
+
+.sap-dashboard .earnings-box.friends > .title {
+    width: 100%;
+    margin: 0 0 0.6em 0;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sap-dashboard .earnings-box.friends > .title span {
+    font-size: 1.46em;
+}
+
+.sap-dashboard .main-image-set {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .page.sap-dashboard {
+        height: calc(100% - 6em);
+        overflow-y: auto;
+    }
+
+    .sap-dashboard .golden-title {
+        margin: 1.3em 0 0 0;
+    }
+
+    .sap-dashboard .earnings-box.today,
+    .sap-dashboard .earnings-box.total {
+        height: 14em;
+    }
+
+    .sap-dashboard .earnings-boxes {
+        max-width: unset;
+        width: 100%;
+        padding: 0 1em;
+        box-sizing: border-box;
+        margin-top: 5em;
+    }
+
+    .sap-dashboard .top-earnings-boxes {
+        width: 100%;
+    }
+
+    .sap-dashboard .generate-link-button {
+        display: none;
+    }
+
+    .sap-dashboard .earnings-box.friends {
+        justify-content: flex-start;
+    }
+
+
+
+
+    .sap-dashboard .main-image-set {
+        display: flex;
+        flex-direction: row;
+        margin: 3em 0em 3em 0em;
+        align-items: center;
+    }
+    
+    .sap-dashboard .main-image-set .left-image-box {
+        /* display: flex; */
+        /* height: 13em; */
+    }
+    
+    .sap-dashboard .main-image-set .left-image-box img {
+        /* height: 100%; */
+        height: 3.5em;
+    }
+    
+    .sap-dashboard .main-image-set .middle-image-box {
+        /* display: flex; */
+        /* height: 15em; */
+    }
+    
+    .sap-dashboard .main-image-set .middle-image-box img {
+        /* height: 100%; */
+        height: 4em;
+    }
+    
+    .sap-dashboard .main-image-set .right-image-box {
+        /* display: flex; */
+        /* height: 17em; */
+    }
+    
+    .sap-dashboard .main-image-set .right-image-box img {
+        height: 100%;
+        height: 4em;
+    }
+    
+    .sap-dashboard .main-image-set .arrow-image-box {
+        display: flex;
+        align-items: center;
+        height: 4.5em;
+    }
+    
+    .sap-dashboard .main-image-set .arrow-image-box img {
+        height: 100%;
+        margin: 0em 1em;
+        height: 1.5em;
+    }
+
+    .sap-dashboard .earnings-box.friends > .title span {
+        font-size: 1.7em;
+    }
+
+    .sap-dashboard .earnings-sub-boxes {
+        position: relative;
+    }
+
+    .sap-dashboard .earnings-sub-boxes::after {
+        content: '';
+        background: #979797;
+        width: 0.1em;
+        height: 12em;
+        position: absolute;
+        top: 0em;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/SuperAffiliates/Dashboard.css"],"names":[],"mappings":"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","sourcesContent":[".sap-dashboard .golden-title {\n    line-height: 2.8em;\n    margin: 0.5em 0 0 0;\n}\n\n.sap-dashboard .generate-link-button {\n    position: absolute;\n    top: 0.5em;\n    left: 3.5em;\n    z-index: 5;\n    font-family: 'SF UI Display' sans-serif;\n    color: #000;\n    font-size: 1.5em;\n    line-height: 1.7em;\n    height: 1.7em;\n    padding: 0 0.8em;\n    border-radius: 0.3em;\n    font-weight: bold;\n    border: solid 0.08em #f4d56f;\n    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n    transition: all .2s;\n    cursor: pointer;\n}\n\n.sap-dashboard .generate-link-button:hover {\n    transform: scale(1.05);\n    border-color: #f7e9bd;\n}\n\n.sap-dashboard .earnings-boxes {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 1em;\n    max-width: 59em;\n    margin: 0 auto;\n}\n\n.sap-dashboard .top-earnings-boxes {\n    display: flex;\n    gap: 1em;\n    position: relative;\n    z-index: 1;\n    margin-top: 0em;\n}\n\n.sap-dashboard .earnings-sub-boxes {\n    display: flex;\n    justify-content: unset;\n    align-items: center;\n    gap: 1em;\n    width: 100%;\n}\n\n.sap-dashboard .earnings-sub-boxes .earnings-sub-box {\n    display: flex;\n    flex-direction: column;\n    width: 50%;\n}\n\n.sap-dashboard .earnings-sub-box > .amount {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-weight: 500;\n    color: #87d009;\n}\n.sap-dashboard .earnings-sub-box > .amount .icon-matic {\n    font-size: 2em;\n    margin: .6em .2em 0 0;\n}\n\n.sap-dashboard .earnings-sub-box > .amount span {\n    font-size: 3.6em;\n}\n\n\n\n\n\n\n.sap-dashboard .earnings-sub-boxes .earnings-sub-box .total {\n    font-weight: 500;\n}\n\n.sap-dashboard .earnings-sub-boxes .earnings-sub-box .total span {\n    font-size: 4em;\n}\n\n.sap-dashboard .earnings-box {\n    width: 100%;\n    border-radius: 0.8em;\n    border: solid 0.1em rgba(244, 213, 111, 0.19);\n    background-color: #18191e;\n    text-align: center;\n}\n\n.sap-dashboard .earnings-box > .amount {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-weight: 500;\n    color: #87d009;\n}\n.sap-dashboard .earnings-box > .amount .icon-matic{\n    font-size: 2em;\n    margin: .6em .2em 0 0;\n}\n\n.sap-dashboard .earnings-box > .amount span {\n    font-size: 3.6em;\n}\n\n.sap-dashboard .earnings-box.today,\n.sap-dashboard .earnings-box.total {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 29em;\n    height: calc(40vh - 4em);\n}\n\n.sap-dashboard .earnings-box.today img,\n.sap-dashboard .earnings-box.total img {\n    height: 3em;\n    width: auto;\n}\n\n.sap-dashboard .earnings-box.today {\n\n}\n\n.sap-dashboard .earnings-box.total {\n    \n}\n\n.sap-dashboard .earnings-box.friends {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    justify-content: center;\n    align-items: center;\n    height: calc(40vh);\n}\n\n.sap-dashboard .earnings-box .title {\n    font-family: 'Source Sans Pro';\n    font-weight: 600;\n    color: #918b85;\n}\n\n.sap-dashboard .earnings-box .title span {\n    font-size: 1.1em;\n}\n\n.sap-dashboard .earnings-box.friends > .title {\n    width: 100%;\n    margin: 0 0 0.6em 0;\n    font-weight: 600;\n    color: #fff;\n}\n\n.sap-dashboard .earnings-box.friends > .title span {\n    font-size: 1.46em;\n}\n\n.sap-dashboard .main-image-set {\n    display: none;\n}\n\n@media screen and (max-width: 480px) {\n\n    .page.sap-dashboard {\n        height: calc(100% - 6em);\n        overflow-y: auto;\n    }\n\n    .sap-dashboard .golden-title {\n        margin: 1.3em 0 0 0;\n    }\n\n    .sap-dashboard .earnings-box.today,\n    .sap-dashboard .earnings-box.total {\n        height: 14em;\n    }\n\n    .sap-dashboard .earnings-boxes {\n        max-width: unset;\n        width: 100%;\n        padding: 0 1em;\n        box-sizing: border-box;\n        margin-top: 5em;\n    }\n\n    .sap-dashboard .top-earnings-boxes {\n        width: 100%;\n    }\n\n    .sap-dashboard .generate-link-button {\n        display: none;\n    }\n\n    .sap-dashboard .earnings-box.friends {\n        justify-content: flex-start;\n    }\n\n\n\n\n    .sap-dashboard .main-image-set {\n        display: flex;\n        flex-direction: row;\n        margin: 3em 0em 3em 0em;\n        align-items: center;\n    }\n    \n    .sap-dashboard .main-image-set .left-image-box {\n        /* display: flex; */\n        /* height: 13em; */\n    }\n    \n    .sap-dashboard .main-image-set .left-image-box img {\n        /* height: 100%; */\n        height: 3.5em;\n    }\n    \n    .sap-dashboard .main-image-set .middle-image-box {\n        /* display: flex; */\n        /* height: 15em; */\n    }\n    \n    .sap-dashboard .main-image-set .middle-image-box img {\n        /* height: 100%; */\n        height: 4em;\n    }\n    \n    .sap-dashboard .main-image-set .right-image-box {\n        /* display: flex; */\n        /* height: 17em; */\n    }\n    \n    .sap-dashboard .main-image-set .right-image-box img {\n        height: 100%;\n        height: 4em;\n    }\n    \n    .sap-dashboard .main-image-set .arrow-image-box {\n        display: flex;\n        align-items: center;\n        height: 4.5em;\n    }\n    \n    .sap-dashboard .main-image-set .arrow-image-box img {\n        height: 100%;\n        margin: 0em 1em;\n        height: 1.5em;\n    }\n\n    .sap-dashboard .earnings-box.friends > .title span {\n        font-size: 1.7em;\n    }\n\n    .sap-dashboard .earnings-sub-boxes {\n        position: relative;\n    }\n\n    .sap-dashboard .earnings-sub-boxes::after {\n        content: '';\n        background: #979797;\n        width: 0.1em;\n        height: 12em;\n        position: absolute;\n        top: 0em;\n        left: 50%;\n        transform: translateX(-50%);\n        opacity: 0.2;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

@@ -1,0 +1,8 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.skins_loader_wrap_background{background:rgba(0,0,0,0);position:absolute;top:0;bottom:0;right:0;left:0;width:100%;z-index:9999;display:flex;flex:1;justify-content:center;align-items:center}.skins_loader_wrap_background img{width:8.25em;height:4.12em;filter:grayscale(1) brightness(2)}`, "",{"version":3,"sources":["webpack://./src/styles/skinsLoader.scss"],"names":[],"mappings":"AAAA,8BACI,wBAAA,CACA,iBAAA,CACA,KAAA,CACA,QAAA,CACA,OAAA,CACA,MAAA,CAEA,UAAA,CACA,YAAA,CACA,YAAA,CACA,MAAA,CACA,sBAAA,CACA,kBAAA,CAEA,kCACI,YAAA,CAAA,aAAA,CACA,iCAAA","sourcesContent":[".skins_loader_wrap_background{\n    background: rgba(0, 0, 0, 0);\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    left: 0;\n    // height: 100%;\n    width: 100%;\n    z-index: 9999;\n    display: flex;\n    flex: 1;\n    justify-content: center;\n    align-items: center;\n\n    img{\n        width: 8.25em; height: 4.12em;\n        filter: grayscale(1) brightness(2);\n    }\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

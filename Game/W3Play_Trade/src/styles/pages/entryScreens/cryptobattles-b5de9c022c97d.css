@@ -1,0 +1,321 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/entry_screens/bck-shape.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.entry_cryptobattles_wrap{
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    /* height: 100%; width: 100%; */
+    width: 100%; height: 100%;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    z-index: 20;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_content{
+    height: 100%; width: 100%;
+    display: flex; flex-direction: column; justify-content: flex-start;
+}
+.entry_cryptobattles_header{
+    height: 15%;
+    display: flex; justify-content: space-between; align-items: center; 
+    margin: 0% 5% 0% 5%;
+}
+.entry_cryptobattles_header_logo{
+    width: 3.9em; height: 3.95em;
+}
+
+.entry_cryptobattles_bottom{
+    width: 100%; height: 52%;
+    z-index: 5;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+}
+.entry_cryptobattles_bottom_play_row{
+    display: flex; justify-content: center;
+    margin: .5em 0 1.1em 0; 
+    width: 100%; height: 3.9em;
+}
+.entry_cryptobattles_bottom_play_btn{
+    height: 100%; width: 16.8em; 
+    margin: 0 3.1em;
+    cursor: pointer;
+    transition: all .3s;
+}
+.entry_cryptobattles_bottom_play_btn:hover{
+    transform: scale(.9);
+}
+.entry_cryptobattles_header_desc{
+    width: 21.4em; height: 3.95em;
+    margin-left: 6.1em;
+}
+.entry_cryptobattles_header_rights{
+    font-family: Barlow, sans-serif; font-size: .95em; color: #E1CB8F; font-weight: 300;
+    line-height: 1.25em;
+    letter-spacing: .009em;
+    text-align: right;
+}
+.entry_cryptobattles_video_row{
+    width: 100%; height: 30%;
+}
+.entry_cryptobattles_video{
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.entry_cryptobattles_bottom_header_row{
+    display: flex;
+    margin-top: -.6em;
+}
+.entry_cryptobattles_bottom_header{
+    padding: 0; 
+    margin: 0;
+    text-align: center;
+    color: #E1CB8F; font-family: Barlow, sans-serif; font-size: 2.2em; font-weight: 300;
+    line-height: 2.3em;
+    letter-spacing: .015em;
+}
+.entry_cryptobattles_bottom_header_bold{
+    padding: 0; 
+    margin: 0;
+    text-align: center;
+    color: #E1CB8F; font-family: Barlow; font-size: 2.2em; font-weight: 600;
+    line-height: 2.3em;
+    letter-spacing: .008em;
+}
+.entry_cryptobattles_wallets_row{
+    display: flex; flex-direction: column; align-items: center;
+    margin-top: -.4em;
+    position: relative;
+}
+.entry_cryptobattles_wallet_dot_anim{
+    display: flex; align-items: center;
+    position: absolute; right: -6.2em; top: 1.5em;
+}
+.entry_cryptobattles_wallet_dot{
+    display: flex;
+    width: .7em; height: .7em;
+    border-radius: 1em;
+    background: #BF0000;
+}
+.entry_cryptobattles_wallet_dot_desc{
+    margin-left: 1.2em;
+    padding: .4em .5em;
+    background-color: #f3f3f321;
+    border-radius: 5px;
+    color: #fff; font-family: Barlow; font-size: .7em; font-weight: 300;
+}
+.entry_cryptobattles_wallets_row div{
+    display: flex; justify-content: center; 
+    margin-top: -.2em;
+}
+.entry_cryptobattles_wallets_row_desc{
+    color: #E1CB8F; font-size: .95em; font-family: Barlow; font-weight: 400;
+    padding-top: .15em;
+    letter-spacing: 0.003em;
+}
+.entry_cryptobattles_wallets_row div img{
+    margin: 0 .8em;
+    transition: all .3s;
+}
+.entry_cryptobattles_wallets_row div img:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+.entry_cryptobattles_socials_row{
+    display: flex;
+    margin-top: 1em;
+}
+.entry_cryptobattles_socials_row img{
+    width: 1.05em; height: .8em; 
+    margin: 0 .7em;
+    transition: all .4s;
+    cursor: pointer;
+}
+.entry_cryptobattles_socials_row img:hover{
+    opacity: .8;
+    transform: translateY(.45em);
+}
+
+.entry_cryptobattles_bottom_img{
+    position: absolute; bottom: 0;
+    height: 11em; width: 100%;
+}
+
+
+/* Mobile Version - Portrait */
+.entry_cryptobattles_wrap_mobile{
+    width: 100%; height: 100%;
+    flex: 1;
+    overflow-y: auto; overflow-x: hidden;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    z-index: 20;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+}
+
+.entry_cryptobattles_content_mobile{
+    width: 100%;
+    flex: 1;
+    padding-bottom: 2em;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+}
+.entry_cryptobattles_header_mobile{
+    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+    width: 100%;
+    padding: 3em 0 1em 0;
+}
+
+.entry_cryptobattles_header_content_mobile{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_header_logo_mobile{
+    width: 10em; height: 10em;
+    margin-bottom: 1em;
+}
+.entry_cryptobattles_header_desc_mobile{
+    width: 25em; height: 5em; 
+    margin-bottom: 2em;
+}
+
+.entry_cryptobattles_header_rights_mobile{
+    font-family: Barlow, sans-serif; 
+    font-size: 2em; 
+    color: #E1CB8F; font-weight: 300;
+    line-height: 1.25em;
+    letter-spacing: .009em;
+    text-align: center;
+}
+.entry_cryptobattles_video_row_mobile{
+    width: 100%; height: 20em;
+    display: flex; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_video_mobile{
+    width: 120%; height: 100%;
+    object-fit: fill;
+}
+.entry_cryptobattles_bottom_header_row_mobile{
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    width: 100%;
+}
+.entry_cryptobattles_bottom_header_mobile{
+    padding: 1.2em 0; 
+    margin: 0;
+    text-align: center;
+    color: #E1CB8F; font-family: Barlow, sans-serif; 
+    font-size: 2.5em; 
+    font-weight: 300;
+}
+.entry_cryptobattles_bottom_header_bold_mobile{
+    padding: 0; 
+    margin: 0;
+    text-align: center;
+    color: #E1CB8F; font-family: Barlow; font-weight: 600;
+    letter-spacing: .008em;
+}
+.entry_cryptobattles_play_box_mobile{
+    width: 100%;
+    display: flex; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_wallets_row_mobile{
+    height: 100%; height: 6em;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_quests_link{
+    display: flex; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_wallet_dot_mobile{
+    display: flex;
+    width: 1.6em; height: 1.6em;
+    z-index: 20;
+    border-radius: 50%;
+    background: #BF0000;
+}
+.entry_cryptobattles_play_box_mobile a img{
+    height: 6.4em; width: 65vw;
+    cursor: pointer;
+    transition: all .3s;
+}
+.entry_cryptobattles_wallet_dot_desc_mobile{
+    margin-left: .5em;
+    width: 4.55em; height: 2em;
+    background-color: #f3f3f321;
+    border-radius: .5em;
+    color: #fff; font-family: Barlow; 
+    font-size: 1.5em;
+    font-weight: 400;
+    display: flex; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_wallets_desc_box_mobile{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.entry_cryptobattles_wallets_row_desc_mobile{
+    color: #E1CB8F;
+    font-size: 1.5em; 
+    line-height: 1em;
+    font-family: Barlow; font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.003em;
+    padding: .5em 0;
+    margin: 0;
+}
+.entry_cryptobattles_wallets_box_mobile{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 100%; 
+}
+.entry_cryptobattles_metamask, .entry_cryptobattles_coinbase{
+    display: flex; justify-content: center;
+    margin: .5em 0;
+}
+.entry_cryptobattles_metamask{
+    height: 9em; width: 100%;
+    display: flex; justify-content: center;
+}
+.entry_cryptobattles_coinbase{
+    height: 9em; width: 100%;
+    display: flex; justify-content: center;
+}
+.entry_cryptobattles_bottom_box_mobile{
+    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+    width: 100%; height: 4em;
+    margin-top: 1em;
+    position: relative;
+}
+.entry_cryptobattles_bottom_socials_mobile{
+    position: absolute; bottom: -1em;
+    width: 75%;
+    display: flex; flex-direction: row; justify-content: space-evenly;
+}
+.entry_cryptobattles_social_img_link_mobile{
+    width: 2.2em; height: 2.5em;
+    z-index: 20;
+}
+.entry_cryptobattles_social_img_mobile{
+    height: 2.2em; width: 2.5em;
+}
+.entry_cryptobattles_bottom_img_mobile{
+    position: absolute;
+    width: 100%; height: 9em;
+    z-index: 12;
+}
+
+
+@keyframes blink {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@media screen and (max-width: 480px){
+
+    .entry_cryptobattles_metamask, .entry_cryptobattles_coinbase {
+        width: 70%; height: 6em;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1000px){
+
+    .entry_cryptobattles_wallets_row div img{
+        height: 4.5em;
+    }
+}`, "",{"version":3,"sources":["webpack://./src/styles/pages/entryScreens/cryptobattles.css"],"names":[],"mappings":"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","sourcesContent":[".entry_cryptobattles_wrap{\n    position: fixed; top: 0; bottom: 0; left: 0; right: 0;\n    /* height: 100%; width: 100%; */\n    width: 100%; height: 100%;\n    background-image: url('/public/media/images/entry_screens/bck-shape.png');\n    z-index: 20;\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_content{\n    height: 100%; width: 100%;\n    display: flex; flex-direction: column; justify-content: flex-start;\n}\n.entry_cryptobattles_header{\n    height: 15%;\n    display: flex; justify-content: space-between; align-items: center; \n    margin: 0% 5% 0% 5%;\n}\n.entry_cryptobattles_header_logo{\n    width: 3.9em; height: 3.95em;\n}\n\n.entry_cryptobattles_bottom{\n    width: 100%; height: 52%;\n    z-index: 5;\n    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;\n}\n.entry_cryptobattles_bottom_play_row{\n    display: flex; justify-content: center;\n    margin: .5em 0 1.1em 0; \n    width: 100%; height: 3.9em;\n}\n.entry_cryptobattles_bottom_play_btn{\n    height: 100%; width: 16.8em; \n    margin: 0 3.1em;\n    cursor: pointer;\n    transition: all .3s;\n}\n.entry_cryptobattles_bottom_play_btn:hover{\n    transform: scale(.9);\n}\n.entry_cryptobattles_header_desc{\n    width: 21.4em; height: 3.95em;\n    margin-left: 6.1em;\n}\n.entry_cryptobattles_header_rights{\n    font-family: Barlow, sans-serif; font-size: .95em; color: #E1CB8F; font-weight: 300;\n    line-height: 1.25em;\n    letter-spacing: .009em;\n    text-align: right;\n}\n.entry_cryptobattles_video_row{\n    width: 100%; height: 30%;\n}\n.entry_cryptobattles_video{\n    width: 100%; height: 100%;\n    object-fit: cover;\n}\n.entry_cryptobattles_bottom_header_row{\n    display: flex;\n    margin-top: -.6em;\n}\n.entry_cryptobattles_bottom_header{\n    padding: 0; \n    margin: 0;\n    text-align: center;\n    color: #E1CB8F; font-family: Barlow, sans-serif; font-size: 2.2em; font-weight: 300;\n    line-height: 2.3em;\n    letter-spacing: .015em;\n}\n.entry_cryptobattles_bottom_header_bold{\n    padding: 0; \n    margin: 0;\n    text-align: center;\n    color: #E1CB8F; font-family: Barlow; font-size: 2.2em; font-weight: 600;\n    line-height: 2.3em;\n    letter-spacing: .008em;\n}\n.entry_cryptobattles_wallets_row{\n    display: flex; flex-direction: column; align-items: center;\n    margin-top: -.4em;\n    position: relative;\n}\n.entry_cryptobattles_wallet_dot_anim{\n    display: flex; align-items: center;\n    position: absolute; right: -6.2em; top: 1.5em;\n}\n.entry_cryptobattles_wallet_dot{\n    display: flex;\n    width: .7em; height: .7em;\n    border-radius: 1em;\n    background: #BF0000;\n}\n.entry_cryptobattles_wallet_dot_desc{\n    margin-left: 1.2em;\n    padding: .4em .5em;\n    background-color: #f3f3f321;\n    border-radius: 5px;\n    color: #fff; font-family: Barlow; font-size: .7em; font-weight: 300;\n}\n.entry_cryptobattles_wallets_row div{\n    display: flex; justify-content: center; \n    margin-top: -.2em;\n}\n.entry_cryptobattles_wallets_row_desc{\n    color: #E1CB8F; font-size: .95em; font-family: Barlow; font-weight: 400;\n    padding-top: .15em;\n    letter-spacing: 0.003em;\n}\n.entry_cryptobattles_wallets_row div img{\n    margin: 0 .8em;\n    transition: all .3s;\n}\n.entry_cryptobattles_wallets_row div img:hover{\n    transform: scale(.9);\n    cursor: pointer;\n}\n.entry_cryptobattles_socials_row{\n    display: flex;\n    margin-top: 1em;\n}\n.entry_cryptobattles_socials_row img{\n    width: 1.05em; height: .8em; \n    margin: 0 .7em;\n    transition: all .4s;\n    cursor: pointer;\n}\n.entry_cryptobattles_socials_row img:hover{\n    opacity: .8;\n    transform: translateY(.45em);\n}\n\n.entry_cryptobattles_bottom_img{\n    position: absolute; bottom: 0;\n    height: 11em; width: 100%;\n}\n\n\n/* Mobile Version - Portrait */\n.entry_cryptobattles_wrap_mobile{\n    width: 100%; height: 100%;\n    flex: 1;\n    overflow-y: auto; overflow-x: hidden;\n    background-image: url('/public/media/images/entry_screens/bck-shape.png');\n    z-index: 20;\n    display: flex; flex-direction: column; align-items: center; justify-content: space-between;\n}\n\n.entry_cryptobattles_content_mobile{\n    width: 100%;\n    flex: 1;\n    padding-bottom: 2em;\n    display: flex; flex-direction: column; align-items: center; justify-content: space-between;\n}\n.entry_cryptobattles_header_mobile{\n    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;\n    width: 100%;\n    padding: 3em 0 1em 0;\n}\n\n.entry_cryptobattles_header_content_mobile{\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_header_logo_mobile{\n    width: 10em; height: 10em;\n    margin-bottom: 1em;\n}\n.entry_cryptobattles_header_desc_mobile{\n    width: 25em; height: 5em; \n    margin-bottom: 2em;\n}\n\n.entry_cryptobattles_header_rights_mobile{\n    font-family: Barlow, sans-serif; \n    font-size: 2em; \n    color: #E1CB8F; font-weight: 300;\n    line-height: 1.25em;\n    letter-spacing: .009em;\n    text-align: center;\n}\n.entry_cryptobattles_video_row_mobile{\n    width: 100%; height: 20em;\n    display: flex; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_video_mobile{\n    width: 120%; height: 100%;\n    object-fit: fill;\n}\n.entry_cryptobattles_bottom_header_row_mobile{\n    display: flex; flex-direction: column; justify-content: center; align-items: center;\n    width: 100%;\n}\n.entry_cryptobattles_bottom_header_mobile{\n    padding: 1.2em 0; \n    margin: 0;\n    text-align: center;\n    color: #E1CB8F; font-family: Barlow, sans-serif; \n    font-size: 2.5em; \n    font-weight: 300;\n}\n.entry_cryptobattles_bottom_header_bold_mobile{\n    padding: 0; \n    margin: 0;\n    text-align: center;\n    color: #E1CB8F; font-family: Barlow; font-weight: 600;\n    letter-spacing: .008em;\n}\n.entry_cryptobattles_play_box_mobile{\n    width: 100%;\n    display: flex; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_wallets_row_mobile{\n    height: 100%; height: 6em;\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_quests_link{\n    display: flex; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_wallet_dot_mobile{\n    display: flex;\n    width: 1.6em; height: 1.6em;\n    z-index: 20;\n    border-radius: 50%;\n    background: #BF0000;\n}\n.entry_cryptobattles_play_box_mobile a img{\n    height: 6.4em; width: 65vw;\n    cursor: pointer;\n    transition: all .3s;\n}\n.entry_cryptobattles_wallet_dot_desc_mobile{\n    margin-left: .5em;\n    width: 4.55em; height: 2em;\n    background-color: #f3f3f321;\n    border-radius: .5em;\n    color: #fff; font-family: Barlow; \n    font-size: 1.5em;\n    font-weight: 400;\n    display: flex; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_wallets_desc_box_mobile{\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n}\n.entry_cryptobattles_wallets_row_desc_mobile{\n    color: #E1CB8F;\n    font-size: 1.5em; \n    line-height: 1em;\n    font-family: Barlow; font-weight: 400;\n    text-align: center;\n    letter-spacing: 0.003em;\n    padding: .5em 0;\n    margin: 0;\n}\n.entry_cryptobattles_wallets_box_mobile{\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n    width: 100%; \n}\n.entry_cryptobattles_metamask, .entry_cryptobattles_coinbase{\n    display: flex; justify-content: center;\n    margin: .5em 0;\n}\n.entry_cryptobattles_metamask{\n    height: 9em; width: 100%;\n    display: flex; justify-content: center;\n}\n.entry_cryptobattles_coinbase{\n    height: 9em; width: 100%;\n    display: flex; justify-content: center;\n}\n.entry_cryptobattles_bottom_box_mobile{\n    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;\n    width: 100%; height: 4em;\n    margin-top: 1em;\n    position: relative;\n}\n.entry_cryptobattles_bottom_socials_mobile{\n    position: absolute; bottom: -1em;\n    width: 75%;\n    display: flex; flex-direction: row; justify-content: space-evenly;\n}\n.entry_cryptobattles_social_img_link_mobile{\n    width: 2.2em; height: 2.5em;\n    z-index: 20;\n}\n.entry_cryptobattles_social_img_mobile{\n    height: 2.2em; width: 2.5em;\n}\n.entry_cryptobattles_bottom_img_mobile{\n    position: absolute;\n    width: 100%; height: 9em;\n    z-index: 12;\n}\n\n\n@keyframes blink {\n    0% {opacity: 1;}\n    100% {opacity: 0;}\n}\n\n@media screen and (max-width: 480px){\n\n    .entry_cryptobattles_metamask, .entry_cryptobattles_coinbase {\n        width: 70%; height: 6em;\n    }\n}\n\n@media screen and (min-width: 480px) and (max-width: 1000px){\n\n    .entry_cryptobattles_wallets_row div img{\n        height: 4.5em;\n    }\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

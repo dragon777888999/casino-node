@@ -1,0 +1,618 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/gold_x.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/super_affiliate_program/tutorial-background-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/contact_us/step2-envelope.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/entry-web3.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/entry-secure.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/entry-onchain.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/home/doggo-icon.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* PLACEHOLDER */
+
+.tutorial-form ::-webkit-input-placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+.tutorial-form :-moz-placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+.tutorial-form ::-moz-placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+.tutorial-form :-ms-input-placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+.tutorial-form ::-ms-input-placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+.tutorial-form ::placeholder {
+    font-family: 'SF UI Display', sans-serif;
+    color: #cecece;
+}
+
+/* PLACEHOLDER FOCUS */
+
+.tutorial-form :focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.tutorial-form :focus:-moz-placeholder {
+    color: transparent;
+}
+
+.tutorial-form :focus::-moz-placeholder {
+    color: transparent;
+}
+
+.tutorial-form :focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.tutorial-form :focus::-ms-input-placeholder {
+    color: transparent;
+}
+
+.tutorial-form :focus::placeholder {
+    color: transparent;
+}
+
+.contact_us * {
+    box-sizing: border-box;
+}
+.contact_us_close_btn {
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center no-repeat;
+    background-size: 100% 100%;
+    width: 3.3em;
+    height: 3.3em;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 5;
+    transition: opacity .2s;
+}
+.contact_us_close_btn:hover {
+    opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+.contact_us .menu_btn {
+    position: absolute;
+    width: 5em;
+    height: 4.8em;
+    background: transparent;
+    top: 1em;
+    right: 0.3em;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.contact_us .menu_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact_us ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.contact_us button {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: inherit;
+}
+  
+.contact_us a {
+    text-decoration: none;
+}
+  
+.contact_us h1, .contact_us h2, .contact_us h3, .contact_us h4, .contact_us h5, .contact_us h6 {
+    font-size: unset;
+}
+  
+.contact_us p, .contact_us h1, .contact_us h2, .contact_us h3, .contact_us h4, .contact_us h5, .contact_us h6 {
+    margin: 0;
+    padding: 0;
+}
+  
+.contact_us input,
+.contact_us textarea {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background-color: grey;
+}
+
+.contact_us {
+    font-size: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    justify-content: center;
+
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT US */
+
+.contact_us .logo-box {
+    position: absolute;
+    top: 2em;
+    left: 3em;
+}
+
+.contact_us .logo-box img {
+    width: 24em;
+}
+
+.contact_us .main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 12.5em 3em 11em 3em;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+}
+
+.contact_us .inner-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 121em;
+}
+
+.contact_us .main-flex .content-box,
+.contact_us .main-flex .form-box {
+    /* width: 51em; */
+    width: 50%;
+}
+
+.contact_us .main-flex .content-box {
+
+}
+
+.contact_us .main-title {
+    font-weight: 600;
+    color: #f4d56f;
+    max-width: 42em;
+    line-height: 5.6em;
+}
+
+.contact_us .sub-title {
+    color: #e9e6e6;
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 300;
+    margin: 1em 0 0 0;
+    max-width: 39em;
+}
+
+.contact_us .main-title span {
+    font-size: 5.8em;
+    text-transform: uppercase;
+}
+
+.contact_us .sub-title span {
+    font-size: 2.2em;
+}
+
+.contact_us .contact-you {
+    padding: 3em 0em 0em 0em;
+    font-family: 'SF UI Display', sans-serif;
+    color: #e9e6e6;
+    font-weight: 300;
+}
+
+.contact_us .contact-you span {
+    font-size: 1.5em;
+}
+
+.contact_us .brand-email-caption {
+    margin: 1em 0 0 0;
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 300;
+    color: #e9e6e6;
+}
+
+.contact_us .brand-email-address {
+    position: relative;
+    padding-left: 3.5em;
+    margin: 0.2em 0 0 0;
+    line-height: 2.8em;
+    height: 3em;
+}
+
+.contact_us .brand-email-address::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0em;
+    transform: translateY(-50%);
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 2.3em;
+    height: 100%;
+}
+
+.contact_us .brand-email-caption span {
+    font-size: 1.5em;
+}
+
+.contact_us .brand-email-address span {
+    font-size: 2.2em;
+}
+
+.contact_us .nav-buttons-row {
+    justify-content: space-between;
+}
+
+/* STEP 2 FORM */
+
+.contact_us .main-flex .form-box {
+    /* min-width: 46em;
+    min-width: 34em;
+    max-width: 48em;
+    padding: 3em;
+    background-color: rgba(0, 0, 0, 0.35); */
+    max-width: 50em;
+}
+
+.contact_us .main-flex .form-box .form-wrap {
+    /* min-width: 46em;
+    min-width: 34em;
+    max-width: 48em; */
+    padding: 3em;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.contact_us .tutorial-form {
+
+}
+
+.contact_us .tutorial-form .tutorial-form-row {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.contact_us .tutorial-form .tutorial-form-row:last-of-type {
+    margin-bottom: 0;
+}
+
+.contact_us .tutorial-form .tutorial-form-row.message-row {
+    padding-bottom: 2em;
+}
+
+.contact_us .tutorial-form .tutorial-form-row.message-row::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+    background-color: black;
+    border-radius: 0 0 0.7em 0.7em;
+    z-index: -1;
+}
+
+.contact_us .tutorial-form input,
+.contact_us .tutorial-form textarea {
+
+    width: 100%;
+    background-color: #000;
+    color: #cecece;
+    font-family: 'SF UI Display', sans-serif;
+
+    font-size: 1.6em;
+    /* padding: 1em 1.4em; */
+    padding: calc(1rem/1.6) calc(1.4rem/1.6);
+    /* border: solid 0.2em #979797; */
+    border: solid calc(0.2rem/1.6) #979797;
+    /* border-radius: 0.7em; */
+    border-radius: calc(0.7rem/1.6);
+
+}
+
+.contact_us .tutorial-form input[type="text"] {
+
+}
+
+.contact_us .tutorial-form textarea {
+    height: 8em;
+    resize: none;
+}
+
+.contact_us .apply-button {
+    width: 100%;
+    background-color: #f4d56f;
+    color: #000;
+    padding: 1.8em 2.3em;
+    margin-top: 2em;
+    border-radius: 0.7em;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+.contact_us .apply-button:disabled {
+    background: #b29944;
+    cursor: progress;
+    transition: background-color 0.3s ease-out;
+}
+
+.contact_us .apply-button span {
+    font-size: 2.1em;
+}
+
+.contact_us .tutorial-form .message-limit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 6.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    font-family: 'SF UI Display', sans-serif;
+    text-align: right;
+    color: #f4d56f;
+    color: #a5a5a5;
+    padding: 0 0.8em 0 0;
+}
+
+.contact_us .tutorial-form .message-limit span {
+    font-size: 1.1em;
+}
+
+/* STEP 2 FORM MESSAGE */
+
+.contact_us .tutorial-form .message {
+    position: relative;
+    padding: 0.9em 1.2em;
+    background: #000000;
+    border-radius: 0.7em;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+.contact_us .tutorial-form .message > span {
+    font-size: 1.5em;
+}
+
+.contact_us .tutorial-form .message.request-failure,
+.contact_us .tutorial-form .message.validation-error {
+    color: #ff7878;
+    /* border: 0.2em solid #ff7878; */
+}
+
+.contact_us .tutorial-form .message.request-success {
+    color: #97c897;
+    /* border: 0.2em solid #97c897; */
+}
+
+/* STEP 2 ICONS */
+
+.contact_us .icons-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 2em 0 0 0;
+}
+
+.contact_us .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_us .icon-box.web3 .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.contact_us .icon-box.secure .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+.contact_us .icon-box.decentralized .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+.contact_us .icon-box.blockchain .icon-image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+    background-size: 75% 75%;
+}
+
+.contact_us .icon-top-text {
+    border: 0px solid transparent;
+    text-align: center;
+    color: #f4d56f;
+}
+
+.contact_us .icon-top-text span {
+    font-size: 1.7em;
+}
+
+.contact_us .icon-image {
+    /* background: #094c09; */
+    background-position: center;
+    background-size: 6em;
+    background-repeat: no-repeat;
+    width: 6em;
+    height: 6em;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    .contact_us .tutorial-form input,
+    .contact_us .tutorial-form textarea {
+        font-weight: 300;
+        padding: 0.5em 0.5em 0.4em 0.5em;
+    }
+
+    .contact_us_close_btn{
+        width: 2.3em; height: 2.3em;
+    }
+
+    .contact_us .logo-box {
+        position: absolute;
+        top: 2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact_us .logo-box img {
+        width: 18em;
+    }
+
+    .contact_us .main-flex {
+        padding: 10.5em 3em 10.2em 3em;
+    }
+
+    .contact_us .inner-flex {
+        flex-direction: column;
+    }
+
+    .contact_us .main-title {
+        text-align: center;
+        line-height: 4.6em;
+    }
+
+    .contact_us .main-title span {
+        font-size: 4.4em;
+        text-transform: uppercase;
+    }
+
+    .contact_us .nav-buttons-row {
+        bottom: auto;
+        top: 2em;
+    }
+
+    .contact_us .icons-box {
+        gap: 1em;
+        margin: 0em 0 0 0;
+        justify-content: center;
+        font-size: .9em;
+    }
+
+    .contact_us .icon-top-text span {
+        font-size: 1.4em;
+    }
+
+    .contact_us .icon-image {
+        background-size: 5em;
+        width: 5.5em;
+        height: 5.5em;
+    }
+
+    .contact_us .apply-button {
+        position: absolute;
+        bottom: 2em;
+        max-width: 81%;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-image: linear-gradient(101deg,#d99e38 -29%,#fff585 -6%,#ebbc53 6%,#edc964 52%,#e4b54f 79%,#dfa942 95%,#dda53e 98%,#e1ac43 101%,#eebf50 107%,#fbd35e 111%,#f9d15d 116%,#f4ca58 119%,#eabd50 120%,#dcab45 122%,#c99437 123%,#b47926 125%);
+        box-shadow: inset 0 0 0 0.2em #f4d56f;
+        padding: 1.3em 1.9em;
+        font-weight: 700;
+    }
+
+    .contact_us .apply-button span {
+        font-size: 2.3em;
+    }
+
+    .contact_us .sub-title {
+        margin: 1.5em auto 2em auto;
+        text-align: center;
+        width: 90%;
+        max-width: unset;
+    }
+
+    .contact_us .sub-title span {
+        font-size: 2em;
+    }
+
+    .contact_us .contact-you {
+        padding: 2em 0em 0em 0em;
+        font-family: 'SF UI Display', sans-serif;
+        color: #e9e6e6;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .contact_us .contact-you span {
+        font-size: 1.5em;
+    }
+
+    .contact_us .tutorial-form textarea {
+        height: 6em;
+    }
+
+    .contact_us .tutorial-form .tutorial-form-row {
+        margin-bottom: 1.7em;
+    }
+
+    .contact_us .tutorial-form .tutorial-form-row.message-row {
+        margin-bottom: 0.7em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/ContactUs/ContactUs.css"],"names":[],"mappings":"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","sourcesContent":["/* PLACEHOLDER */\n\n.tutorial-form ::-webkit-input-placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n.tutorial-form :-moz-placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n.tutorial-form ::-moz-placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n.tutorial-form :-ms-input-placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n.tutorial-form ::-ms-input-placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n.tutorial-form ::placeholder {\n    font-family: 'SF UI Display', sans-serif;\n    color: #cecece;\n}\n\n/* PLACEHOLDER FOCUS */\n\n.tutorial-form :focus::-webkit-input-placeholder {\n    color: transparent;\n}\n\n.tutorial-form :focus:-moz-placeholder {\n    color: transparent;\n}\n\n.tutorial-form :focus::-moz-placeholder {\n    color: transparent;\n}\n\n.tutorial-form :focus:-ms-input-placeholder {\n    color: transparent;\n}\n\n.tutorial-form :focus::-ms-input-placeholder {\n    color: transparent;\n}\n\n.tutorial-form :focus::placeholder {\n    color: transparent;\n}\n\n.contact_us * {\n    box-sizing: border-box;\n}\n.contact_us_close_btn {\n    background: transparent url('/public/media/images/gold_x.svg') center no-repeat;\n    background-size: 100% 100%;\n    width: 3.3em;\n    height: 3.3em;\n    position: absolute;\n    top: 2em;\n    right: 2em;\n    cursor: pointer;\n    opacity: 1;\n    z-index: 5;\n    transition: opacity .2s;\n}\n.contact_us_close_btn:hover {\n    opacity: .7;\n}\n\n\n\n\n\n\n\n\n\n\n\n.contact_us .menu_btn {\n    position: absolute;\n    width: 5em;\n    height: 4.8em;\n    background: transparent;\n    top: 1em;\n    right: 0.3em;\n    cursor: pointer;\n    z-index: 1;\n}\n\n.contact_us .menu_btn img {\n    width: 100%;\n    height: 100%;\n}\n\n.contact_us ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n}\n  \n.contact_us button {\n    border: 0;\n    outline: 0;\n    padding: 0;\n    cursor: pointer;\n    font-size: inherit;\n}\n  \n.contact_us a {\n    text-decoration: none;\n}\n  \n.contact_us h1, .contact_us h2, .contact_us h3, .contact_us h4, .contact_us h5, .contact_us h6 {\n    font-size: unset;\n}\n  \n.contact_us p, .contact_us h1, .contact_us h2, .contact_us h3, .contact_us h4, .contact_us h5, .contact_us h6 {\n    margin: 0;\n    padding: 0;\n}\n  \n.contact_us input,\n.contact_us textarea {\n    margin: 0;\n    padding: 0;\n    outline: 0;\n    border: 0;\n    background-color: grey;\n}\n\n.contact_us {\n    font-size: 10px;\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    height: 100%;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    box-sizing: border-box;\n    justify-content: center;\n\n    background-image: url('/public/media/images/super_affiliate_program/tutorial-background-image.png');\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    padding: 0;\n}\n\n\n\n\n\n\n\n\n\n/* CONTACT US */\n\n.contact_us .logo-box {\n    position: absolute;\n    top: 2em;\n    left: 3em;\n}\n\n.contact_us .logo-box img {\n    width: 24em;\n}\n\n.contact_us .main-flex {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    min-height: 100%;\n    padding: 12.5em 3em 11em 3em;\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n}\n\n.contact_us .inner-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    width: 100%;\n    max-width: 121em;\n}\n\n.contact_us .main-flex .content-box,\n.contact_us .main-flex .form-box {\n    /* width: 51em; */\n    width: 50%;\n}\n\n.contact_us .main-flex .content-box {\n\n}\n\n.contact_us .main-title {\n    font-weight: 600;\n    color: #f4d56f;\n    max-width: 42em;\n    line-height: 5.6em;\n}\n\n.contact_us .sub-title {\n    color: #e9e6e6;\n    font-family: 'SF UI Display', sans-serif;\n    font-weight: 300;\n    margin: 1em 0 0 0;\n    max-width: 39em;\n}\n\n.contact_us .main-title span {\n    font-size: 5.8em;\n    text-transform: uppercase;\n}\n\n.contact_us .sub-title span {\n    font-size: 2.2em;\n}\n\n.contact_us .contact-you {\n    padding: 3em 0em 0em 0em;\n    font-family: 'SF UI Display', sans-serif;\n    color: #e9e6e6;\n    font-weight: 300;\n}\n\n.contact_us .contact-you span {\n    font-size: 1.5em;\n}\n\n.contact_us .brand-email-caption {\n    margin: 1em 0 0 0;\n    font-family: 'SF UI Display', sans-serif;\n    font-weight: 300;\n    color: #e9e6e6;\n}\n\n.contact_us .brand-email-address {\n    position: relative;\n    padding-left: 3.5em;\n    margin: 0.2em 0 0 0;\n    line-height: 2.8em;\n    height: 3em;\n}\n\n.contact_us .brand-email-address::after {\n    content: '';\n    position: absolute;\n    top: 50%;\n    left: 0em;\n    transform: translateY(-50%);\n    background-image: url('/public/media/images/contact_us/step2-envelope.svg');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n    width: 2.3em;\n    height: 100%;\n}\n\n.contact_us .brand-email-caption span {\n    font-size: 1.5em;\n}\n\n.contact_us .brand-email-address span {\n    font-size: 2.2em;\n}\n\n.contact_us .nav-buttons-row {\n    justify-content: space-between;\n}\n\n/* STEP 2 FORM */\n\n.contact_us .main-flex .form-box {\n    /* min-width: 46em;\n    min-width: 34em;\n    max-width: 48em;\n    padding: 3em;\n    background-color: rgba(0, 0, 0, 0.35); */\n    max-width: 50em;\n}\n\n.contact_us .main-flex .form-box .form-wrap {\n    /* min-width: 46em;\n    min-width: 34em;\n    max-width: 48em; */\n    padding: 3em;\n    background-color: rgba(0, 0, 0, 0.35);\n}\n\n.contact_us .tutorial-form {\n\n}\n\n.contact_us .tutorial-form .tutorial-form-row {\n    position: relative;\n    margin-bottom: 2em;\n}\n\n.contact_us .tutorial-form .tutorial-form-row:last-of-type {\n    margin-bottom: 0;\n}\n\n.contact_us .tutorial-form .tutorial-form-row.message-row {\n    padding-bottom: 2em;\n}\n\n.contact_us .tutorial-form .tutorial-form-row.message-row::before {\n    content: '';\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 4em;\n    background-color: black;\n    border-radius: 0 0 0.7em 0.7em;\n    z-index: -1;\n}\n\n.contact_us .tutorial-form input,\n.contact_us .tutorial-form textarea {\n\n    width: 100%;\n    background-color: #000;\n    color: #cecece;\n    font-family: 'SF UI Display', sans-serif;\n\n    font-size: 1.6em;\n    /* padding: 1em 1.4em; */\n    padding: calc(1rem/1.6) calc(1.4rem/1.6);\n    /* border: solid 0.2em #979797; */\n    border: solid calc(0.2rem/1.6) #979797;\n    /* border-radius: 0.7em; */\n    border-radius: calc(0.7rem/1.6);\n\n}\n\n.contact_us .tutorial-form input[type=\"text\"] {\n\n}\n\n.contact_us .tutorial-form textarea {\n    height: 8em;\n    resize: none;\n}\n\n.contact_us .apply-button {\n    width: 100%;\n    background-color: #f4d56f;\n    color: #000;\n    padding: 1.8em 2.3em;\n    margin-top: 2em;\n    border-radius: 0.7em;\n    font-family: 'SF UI Display', sans-serif;\n}\n\n.contact_us .apply-button:disabled {\n    background: #b29944;\n    cursor: progress;\n    transition: background-color 0.3s ease-out;\n}\n\n.contact_us .apply-button span {\n    font-size: 2.1em;\n}\n\n.contact_us .tutorial-form .message-limit {\n    position: absolute;\n    bottom: 0;\n    right: 0;\n    width: 6.2em;\n    height: 2.2em;\n    line-height: 2.2em;\n    font-family: 'SF UI Display', sans-serif;\n    text-align: right;\n    color: #f4d56f;\n    color: #a5a5a5;\n    padding: 0 0.8em 0 0;\n}\n\n.contact_us .tutorial-form .message-limit span {\n    font-size: 1.1em;\n}\n\n/* STEP 2 FORM MESSAGE */\n\n.contact_us .tutorial-form .message {\n    position: relative;\n    padding: 0.9em 1.2em;\n    background: #000000;\n    border-radius: 0.7em;\n    font-family: 'SF UI Display', sans-serif;\n}\n\n.contact_us .tutorial-form .message > span {\n    font-size: 1.5em;\n}\n\n.contact_us .tutorial-form .message.request-failure,\n.contact_us .tutorial-form .message.validation-error {\n    color: #ff7878;\n    /* border: 0.2em solid #ff7878; */\n}\n\n.contact_us .tutorial-form .message.request-success {\n    color: #97c897;\n    /* border: 0.2em solid #97c897; */\n}\n\n/* STEP 2 ICONS */\n\n.contact_us .icons-box {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 1.5em;\n    margin: 2em 0 0 0;\n}\n\n.contact_us .icon-box {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.contact_us .icon-box.web3 .icon-image {\n    background-image: url('/public/media/images/entry-web3.svg');\n}\n\n.contact_us .icon-box.secure .icon-image {\n    background-image: url('/public/media/images/entry-secure.svg');\n}\n\n.contact_us .icon-box.decentralized .icon-image {\n    background-image: url('/public/media/images/entry-onchain.svg');\n}\n\n.contact_us .icon-box.blockchain .icon-image {\n    background-image: url('/public/media/images/home/doggo-icon.png');\n    background-size: 75% 75%;\n}\n\n.contact_us .icon-top-text {\n    border: 0px solid transparent;\n    text-align: center;\n    color: #f4d56f;\n}\n\n.contact_us .icon-top-text span {\n    font-size: 1.7em;\n}\n\n.contact_us .icon-image {\n    /* background: #094c09; */\n    background-position: center;\n    background-size: 6em;\n    background-repeat: no-repeat;\n    width: 6em;\n    height: 6em;\n}\n\n\n\n\n\n\n\n@media screen and (max-width: 480px) {\n\n    .contact_us .tutorial-form input,\n    .contact_us .tutorial-form textarea {\n        font-weight: 300;\n        padding: 0.5em 0.5em 0.4em 0.5em;\n    }\n\n    .contact_us_close_btn{\n        width: 2.3em; height: 2.3em;\n    }\n\n    .contact_us .logo-box {\n        position: absolute;\n        top: 2em;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    .contact_us .logo-box img {\n        width: 18em;\n    }\n\n    .contact_us .main-flex {\n        padding: 10.5em 3em 10.2em 3em;\n    }\n\n    .contact_us .inner-flex {\n        flex-direction: column;\n    }\n\n    .contact_us .main-title {\n        text-align: center;\n        line-height: 4.6em;\n    }\n\n    .contact_us .main-title span {\n        font-size: 4.4em;\n        text-transform: uppercase;\n    }\n\n    .contact_us .nav-buttons-row {\n        bottom: auto;\n        top: 2em;\n    }\n\n    .contact_us .icons-box {\n        gap: 1em;\n        margin: 0em 0 0 0;\n        justify-content: center;\n        font-size: .9em;\n    }\n\n    .contact_us .icon-top-text span {\n        font-size: 1.4em;\n    }\n\n    .contact_us .icon-image {\n        background-size: 5em;\n        width: 5.5em;\n        height: 5.5em;\n    }\n\n    .contact_us .apply-button {\n        position: absolute;\n        bottom: 2em;\n        max-width: 81%;\n        margin: 0;\n        left: 50%;\n        transform: translateX(-50%);\n\n        background-image: linear-gradient(101deg,#d99e38 -29%,#fff585 -6%,#ebbc53 6%,#edc964 52%,#e4b54f 79%,#dfa942 95%,#dda53e 98%,#e1ac43 101%,#eebf50 107%,#fbd35e 111%,#f9d15d 116%,#f4ca58 119%,#eabd50 120%,#dcab45 122%,#c99437 123%,#b47926 125%);\n        box-shadow: inset 0 0 0 0.2em #f4d56f;\n        padding: 1.3em 1.9em;\n        font-weight: 700;\n    }\n\n    .contact_us .apply-button span {\n        font-size: 2.3em;\n    }\n\n    .contact_us .sub-title {\n        margin: 1.5em auto 2em auto;\n        text-align: center;\n        width: 90%;\n        max-width: unset;\n    }\n\n    .contact_us .sub-title span {\n        font-size: 2em;\n    }\n\n    .contact_us .contact-you {\n        padding: 2em 0em 0em 0em;\n        font-family: 'SF UI Display', sans-serif;\n        color: #e9e6e6;\n        font-weight: 300;\n        text-align: center;\n    }\n\n    .contact_us .contact-you span {\n        font-size: 1.5em;\n    }\n\n    .contact_us .tutorial-form textarea {\n        height: 6em;\n    }\n\n    .contact_us .tutorial-form .tutorial-form-row {\n        margin-bottom: 1.7em;\n    }\n\n    .contact_us .tutorial-form .tutorial-form-row.message-row {\n        margin-bottom: 0.7em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

@@ -1,0 +1,3167 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/loaders/loader.gif", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/new-entry-screen/default/up-bull.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/new-entry-screen/default/down-bear.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/new-entry-screen/default/play-video-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/new-entry-screen/default/x-black.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/new-entry-screen/default/v-black.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/new-entry-screen/default/x-gold.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/new-entry-screen/default/v-gold.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/sort_arrows_empty.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/gold_circle_thick.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/new-entry-screen/default/chupchik-yellow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/new-entry-screen/default/weekly-jackpot.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/new-entry-screen/default/monthly-jackpot.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/new-entry-screen/default/key_benefits-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/new-entry-screen/default/video-x.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/new-entry-screen/default/daily-income-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL("/public/media/images/new-entry-screen/default/play-affiliate.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL("/public/media/images/chevron.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL("/public/media/images/new-entry-screen/default/best-chance-image.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL("/public/media/images/new-entry-screen/default/up-down-mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL("/public/media/images/new-entry-screen/default/weekly-jackpot-mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL("/public/media/images/new-entry-screen/default/monthly-jackpot-mobile.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL("/public/media/images/new-entry-screen/default/key_benefits-image-mobile.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_22___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.trade_page .entry-screen {
+    /* font-family: 'Barlow Semi Condensed'; */
+    font-family: 'Barlow';
+    background-color: transparent;
+    display: block;
+    position: static;
+    font-size: 10px;
+    overflow: auto;
+    z-index: initial;
+}
+
+.trade_page .entry-screen .entry-main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+}
+
+.trade_page .entry-screen .entry_screen_langs_indexed {
+    top: 2.2em;
+    right: 2.2em;
+}
+
+/* ############################################ */
+/* ############## MENU ICON (WEB) ############# */
+/* ############################################ */
+
+.entry-screen .menu-icon {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+}
+
+.entry-screen .menu-icon div {
+    background-color: #c5ab5a;
+    border-radius: 0.3em;
+    height: 0.5em;
+    position: absolute;
+    right: 1em;
+    transition: width .2s,transform .2s;
+    width: 3em;
+}
+
+.entry-screen .menu-icon div.top {
+    top: 0.9em;
+}
+
+.entry-screen .menu-icon div.middle {
+    top: 2.2em;
+    width: 2em;
+}
+
+.entry-screen .menu-icon div.bottom {
+    top: 3.6em;
+}
+
+.entry-screen .menu-icon.open div.top {
+    transform: translate(0.7em,1.3em) rotate(-45deg);
+    width: 4.4em;
+}
+
+.entry-screen .menu-icon.open div.middle {
+    transform: translate(-4.5em);
+}
+
+.entry-screen .menu-icon.open div.bottom {
+    transform: translate(0.7em,-1.4em) rotate(45deg);
+    width: 4.4em;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* ############## TOP MENU (WEB) ############## */
+/* ############################################ */
+
+.entry-screen .top-menu {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    margin: 5em 0em 8em 0em;
+}
+
+.entry-screen .top-menu .item {
+    color: #ffffff;
+}
+
+.entry-screen .top-menu .item.active {
+    color: #f4d56f;
+}
+
+.entry-screen .top-menu .item span {
+    font-size: 2.2em;
+}
+
+/* ############################################ */
+/* ############## SIDE MENU (WEB) ############# */
+/* ############################################ */
+
+.entry-screen .side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* padding: 0em 15em; */
+    width: 60em;
+    z-index: 2;
+    transform: translateX(60em);
+    transition: transform .3s ease;
+}
+
+.entry-screen .side-menu.open {
+transform: translateX(0);
+}
+
+.entry-screen .side-menu .item {
+    color: #ffffff;
+}
+
+.entry-screen .side-menu .item.active {
+    color: #f4d56f;
+}
+
+.entry-screen .side-menu .item span {
+    font-size: 2.5em;
+}
+
+.entry-screen .side-menu .menu-caption {
+    font-weight: 900;
+    line-height: 7.8em;
+}
+
+.entry-screen .side-menu .menu-caption span {
+    font-size: 8.2em;
+}
+
+.entry-screen .side-menu .menu-caption::before {
+    display: block;
+    content: '';
+    width: 13em;
+    height: 0.6em;
+    margin: 0em auto 1.5em auto;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.entry-screen .side-menu .play-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 1.6em 5em;
+    border-radius: 4em;
+    font-weight: 600;
+    margin: 3em 0em 0em 0em;
+    cursor: pointer;
+    min-width: 30em;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.entry-screen .side-menu .play-now a {
+    color: inherit;
+}
+
+.entry-screen .side-menu .play-now span {
+    font-size: 2.6em;
+}
+
+/* ############################################ */
+/* ############# WEB/MOBILE ONLY ############## */
+/* ############################################ */
+
+.entry-screen .mobile-only.flex {
+    display: none;
+}
+
+.entry-screen .mobile-only.block {
+    display: none;
+}
+
+.entry-screen .web-only.flex {
+    display: flex;
+}
+
+.entry-screen .web-only.block {
+    display: block;
+}
+
+/* ############################################ */
+/* ############## SECTION LOADER ############## */
+/* ############################################ */
+
+.entry-screen .section-loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* background: #00000045; */
+    background: #0000009e;
+    z-index: 100;
+}
+
+.entry-screen .section-loader-wrap {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################################ */
+/* ##### SECTION "PLAY NOW" BUTTON (WEB) ###### */
+/* ############################################ */
+
+.entry-screen section .play-now-box {
+    display: flex;
+}
+
+.entry-screen section .styled-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4em;
+    font-weight: 600;
+    background-color: #F4D56F;
+    cursor: pointer;
+    min-width: 30em;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+.entry-screen section .styled-button a {
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    padding: 1.6em 5em;
+    box-sizing: border-box;
+}
+
+.entry-screen section .styled-button span {
+    font-size: 2.6em;
+}
+
+/* ############################################ */
+/* #### SECTION "HOW TO PLAY" BUTTON (WEB) #### */
+/* ############################################ */
+
+.entry-screen section .styled-button.how-to-play {
+    background-color: #181818;
+    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;
+    font-weight: 500;
+}
+
+.entry-screen section .styled-button.how-to-play a {
+    color: #f4d56f;
+}
+
+/* ############################################ */
+/* ###### "BE AN AFFILIATE" BUTTON (WEB) ###### */
+/* ############################################ */
+
+.entry-screen section .styled-button.be-an-affiliate {
+    background-color: #181818;
+    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;
+    font-weight: 500;
+}
+
+.entry-screen section .styled-button.be-an-affiliate a {
+    color: #f4d56f;
+}
+
+/* ############################################ */
+/* ############## SECTIONS (WEB) ############## */
+/* ############################################ */
+
+.entry-screen section {
+    position: relative;
+    flex-shrink: 0;
+    padding: 7em 0em;
+}
+
+.entry-screen section .play-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+/* ############################################ */
+/* ########## SECTION CAPTION (WEB) ########### */
+/* ############################################ */
+
+.entry-screen section .caption {
+    font-weight: 900;
+    line-height: 8em;
+    width: 100%;
+}
+
+.entry-screen section .caption span {
+    font-size: 9em;
+}
+
+.entry-screen section .caption::before {
+    display: block;
+    content: '';
+    width: 21em;
+    height: 0.6em;
+    margin: 0em auto 2em auto;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+/* ############################################ */
+/* ######## SECTION: UP OR DOWN (WEB) ######### */
+/* ############################################ */
+
+.entry-screen section.up-or-down {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #18191f;
+    padding: 0em 0em 7em 0em;
+
+    /* display: none; */
+}
+
+.entry-screen section.up-or-down::before,
+.entry-screen section.up-or-down::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 75em;
+    max-width: 50%;
+}
+
+.entry-screen section.up-or-down::before {
+    left: 0;
+    background-image: linear-gradient(to right, #82c804 -86%, #18191f 54%);
+    opacity: 0.5;
+}
+
+.entry-screen section.up-or-down::after {
+    right: 0;
+    background-image: linear-gradient(to left, #f30401 -86%, #18191f 54%);
+    opacity: 0.9;
+}
+
+.entry-screen section.up-or-down .main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.entry-screen section.up-or-down .top-title-and-big-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.up-or-down .top-title {
+    color: #f4d56f;
+    font-weight: 600;
+    line-height: 4em;
+}
+
+.entry-screen section.up-or-down .top-title span {
+    font-size: 2.8em;
+}
+
+.entry-screen section.up-or-down .big-caption {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 2em 0 0 0;
+}
+
+.entry-screen section.up-or-down .play-btns {
+    margin: 6em 0 0 0;
+}
+
+.entry-screen section.up-or-down .side-image-box {
+    width: 36em;
+    height: 43em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.entry-screen section.up-or-down .side-image-box img {
+    height: 100%;
+}
+
+.entry-screen section.up-or-down .up {
+    margin-right: -9em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+.entry-screen section.up-or-down .down {
+    margin-left: -9em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+}
+
+.entry-screen section.up-or-down .main-text-box {
+    position: relative;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 53em;
+    line-height: 10.6em;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.entry-screen section.up-or-down .main-text-box span {
+    font-size: 12.9em;
+}
+
+.entry-screen section.up-or-down .bitcoin-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.5em;
+    height: 10.5em;
+}
+
+.entry-screen section.up-or-down .bitcoin-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.up-or-down .certik-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f4d56f;
+    gap: 2em;
+    font-weight: 300;
+    margin: 5em 0 0 0;
+}
+
+.entry-screen section.up-or-down .certik-flex span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.up-or-down .certik-flex .certik-logo {
+    width: 22.2em;
+}
+
+.entry-screen section.up-or-down .certik-flex .certik-logo img {
+    width: 100%;
+}
+
+.entry-screen section.up-or-down .styled-button {
+    min-width: 24em;
+}
+
+.entry-screen section.up-or-down .styled-button a {
+    /* padding: 1.6em 5em; */
+}
+
+/* ############################################ */
+/* ###### SECTION: GENERAL STATS (WEB) ######## */
+/* ############################################ */
+
+.entry-screen section.stats {
+    background-color: #ffffff;
+    color: black;
+    padding: 5em 0em;
+    display: flex;
+    justify-content: center;
+}
+
+.entry-screen section.stats .main-flex {
+    min-width: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.entry-screen section.stats .caption {
+    max-width: 71em;
+}
+
+.entry-screen section.stats .stats-data-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3.5em 0em;
+}
+
+.entry-screen section.stats .win-box {
+    position: relative;
+    padding: 1.5em 2em;
+    min-width: 38em;
+}
+
+.entry-screen section.stats .win-box:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #b6b6b6;
+    width: 0.1em;
+    height: 100%;
+}
+
+.entry-screen section.stats .win-box .top-text {
+    color: #ff0400;
+    font-weight: 700;
+}
+
+.entry-screen section.stats .win-box.wins-paid-all .top-text {
+    color: #8ad603;
+}
+
+.entry-screen section.stats .win-box .top-text span {
+    font-size: 2.2em;
+}
+
+.entry-screen section.stats .win-box .middle-text {
+    font-weight: 600;
+}
+
+.entry-screen section.stats .win-box .middle-text span {
+    font-size: 2.8em;
+}
+
+.entry-screen section.stats .win-box .bottom-text {
+    font-weight: 900;
+    height: 7.8em;
+}
+
+.entry-screen section.stats .win-box .bottom-text span {
+    font-size: 6.5em;
+}
+
+/* ############################################ */
+/* ####### SECTION: TAKE A LOOK (WEB) ######### */
+/* ############################################ */
+
+.entry-screen section.take-a-look {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 10em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.take-a-look .main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.entry-screen section.take-a-look .box.left {
+    width: 46em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.entry-screen section.take-a-look .caption {
+    max-width: 60em;
+    text-align: left;
+}
+
+.entry-screen section.take-a-look .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.take-a-look .paragraph {
+    text-align: left;
+    line-height: 2.7em;
+    font-weight: 300;
+}
+
+.entry-screen section.take-a-look .paragraph span {
+    font-size: 2em;
+}
+
+.entry-screen section.take-a-look .play-now {
+    color: #ffffff;
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+}
+
+.entry-screen section.take-a-look .play-now a {
+    color: #ffffff;
+}
+
+.entry-screen section.take-a-look .video-parent {
+    position: relative;
+    width: 70.8em;
+    /* height: 42.6em; */
+    aspect-ratio: 16 / 9;
+}
+
+.entry-screen section.take-a-look .video-parent video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.take-a-look .video-gradient-bg {
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.take-a-look .video-black-bg {
+    background: #000000;
+    position: absolute;
+    top: 0.6em;
+    left: 0.6em;
+    bottom: 0.6em;
+    right: 0.6em;
+}
+
+.entry-screen section.take-a-look .video-black-play-bg {
+    background: #000000;
+    position: absolute;
+    top: 0.6em;
+    left: 0.6em;
+    bottom: 0.6em;
+    right: 0.6em;
+    cursor: pointer;
+}
+
+.entry-screen section.take-a-look .video-black-play-bg::after {
+    content: '';
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+/* ############################################ */
+/* ##### SECTION: COMPARISON TABLE (WEB) ###### */
+/* ############################################ */
+
+.entry-screen section.comparison-table {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.entry-screen section.comparison-table p {
+    margin: 0;
+}
+
+.entry-screen section.comparison-table .main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.comparison-table .table-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6em;
+}
+
+.entry-screen section.comparison-table .table-flex .column {
+    min-width: 34.4em;
+}
+
+.entry-screen section.comparison-table .table-flex .column.options {
+    min-width: 0;
+}
+
+.entry-screen section.comparison-table .table-flex .up-vs-down {
+    background-color: #181818;
+    color: #f4d56f;
+}
+
+.entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4d56f;
+    color: #000000;
+    font-weight: 700;
+}
+
+.entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top span {
+    font-size: 1.9em;
+}
+
+.entry-screen section.comparison-table .cell {
+    height: 7.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.entry-screen section.comparison-table .cell .option-status {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.entry-screen section.comparison-table .cell .option-status.x-sign {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.entry-screen section.comparison-table .cell .option-status.v-sign {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+    width: 2.4em;
+    height: 2em;
+}
+
+.entry-screen section.comparison-table .column.up-vs-down .cell .option-status.x-sign {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+.entry-screen section.comparison-table .column.up-vs-down .cell .option-status.v-sign {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.entry-screen section.comparison-table .cell .option-caption {
+    font-weight: 500;
+}
+
+.entry-screen section.comparison-table .cell .option-caption span {
+    font-size: 2em;
+}
+
+.entry-screen section.comparison-table .cell.extend-bottom {
+    height: 12em;
+}
+
+.entry-screen section.comparison-table .cell.border {
+    border-bottom: 0.1em solid rgba(122, 122, 122, 0.3);
+}
+
+.entry-screen section.comparison-table .cell.text {
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.entry-screen section.comparison-table .cell.extend-top {
+    height: 3em;
+}
+
+.entry-screen section.comparison-table .cell.description {
+    height: 26.1em;
+    flex-direction: column;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-top-caption {
+    font-weight: 700;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-top-caption span {
+    font-size: 3.4em;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-middle-percentage {
+    font-weight: 700;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-middle-percentage span {
+    font-size: 6.7em;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-bottom-caption {
+    font-weight: 600;
+}
+
+.entry-screen section.comparison-table .cell.description .desc-bottom-caption span {
+    font-size: 2.4em;
+}
+
+.entry-screen section.comparison-table .column.options .cell {
+    justify-content: flex-start;
+    padding: 0em 0em 0em 5em;
+    text-align: left;
+}
+
+.entry-screen section.comparison-table .column.options .cell span {
+    font-size: 2em;
+}
+
+.entry-screen section.comparison-table .play-now {
+    margin: 0;
+}
+
+/* ############################################ */
+/* ####### SECTION: TOP WINNERS (WEB) ######### */
+/* ############################################ */
+
+.entry-screen section.top-winners {
+    background-color: #181818;
+}
+
+.entry-screen section.top-winners .main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.top-winners .table-wrap {
+    width: 100%;
+    max-width: 120.2em;
+    margin: 2em 0 0 0;
+}
+
+.entry-screen section.top-winners .table-body-wrap {
+    position: relative;
+    width: 100%;
+    /* height: 45.5em; */
+    max-height: 45.5em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.entry-screen section.top-winners .table_header {
+    height: 5.8em;
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.entry-screen section.top-winners .table_header .th {
+    font-weight: 400;
+    color: #f4d56f;
+    transition: all .2s;
+    line-height: 2.2em;
+    box-sizing: border-box;
+    padding: 0 0.5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+.entry-screen section.top-winners .table_header .th span {
+    font-size: 2em;
+}
+
+.entry-screen section.top-winners .table_header .th.sortable {
+    cursor: pointer;
+}
+
+.entry-screen section.top-winners .table_header .th.sortable::after {
+    display: inline-block;
+    content: '';
+    width: 1.4em;
+    height: 1.7em;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_8___}) center no-repeat;
+    background-size: auto 100%;
+    background-size: contain;
+    vertical-align: middle;
+    margin-left: 0.3em;
+}
+
+.entry-screen section.top-winners .table_body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.entry-screen section.top-winners .table_body .tr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    height: 7.4em;
+    background: #232323;
+}
+
+.entry-screen section.top-winners .table_body .tr .data {
+    position: relative;
+    color: #f4d56f;
+    flex-shrink: 0;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 400;
+}
+
+.entry-screen section.top-winners .table_body .tr .bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #212936;
+    width: 0;
+    transition: all .3s;
+}
+
+.entry-screen section.top-winners .table_body .tr .data span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.top-winners .table_body .tr .data.rank {
+    color: #f9ba00;
+    font-weight: 600;
+    font-family: 'SF UI Display', sans-serif;
+}
+
+.entry-screen section.top-winners .table_body .tr .data.rank span {
+    font-size: 2.3em;
+}
+
+.entry-screen section.top-winners .table_body .tr .data.winrate {
+    color: #89d900;
+}
+
+.entry-screen section.top-winners .table_body .tr:not(:last-child) {
+    margin-bottom: 0.3em;
+}
+
+.entry-screen section.top-winners .table_body .tr .user {
+    /* animation: enterFromLeft .25s ease; */
+    /* width: 32%; */
+    color: #b8b9bc;
+    font-weight: 400;
+
+    position: relative;
+}
+
+/* @keyframes enterFromLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-1000px);
+    }
+    60% {
+       opacity: 1;
+    }
+    80% {
+    }
+    100% {
+       transform: translateX(0);
+    }
+} */
+
+.entry-screen section.top-winners .table_body .tr .user .user-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.entry-screen section.top-winners .table_body .tr .user .image_bubble {
+    position: relative;
+    width: 3.3em;
+    height: 3.3em;
+    margin-right: 2em;
+    flex-shrink: 0;
+}
+
+.entry-screen section.top-winners .table_body .tr .user .image_bubble img.user_avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.entry-screen section.top-winners .table_body .tr .user .image_bubble .country {
+    position: absolute;
+    top: -0.4em;
+    right: -0.4em;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.entry-screen section.top-winners .table_body .tr .user .image_bubble .country:after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+    background-size: 100% 100%;
+}
+
+.entry-screen section.top-winners .table_body .tr .user .image_bubble .country img {
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.top-winners .table_body .tr .user a.wallet-address {
+    display: flex;
+    align-items: center;
+    min-width: 5.8em;
+}
+
+.entry-screen section.top-winners .table_header .th.rank,
+.entry-screen section.top-winners .table_body .tr .data.rank {
+    width: 5%;
+}
+
+.entry-screen section.top-winners .table_header .th.user,
+.entry-screen section.top-winners .table_body .tr .data.user {
+    width: 23%;
+}
+
+.entry-screen section.top-winners .table_header .th.trades,
+.entry-screen section.top-winners .table_body .tr .data.trades {
+    width: 18%;
+}
+
+.entry-screen section.top-winners .table_header .th.wins,
+.entry-screen section.top-winners .table_body .tr .data.wins {
+    width: 18%;
+}
+
+.entry-screen section.top-winners .table_header .th.winrate,
+.entry-screen section.top-winners .table_body .tr .data.winrate {
+    width: 18%;
+}
+
+.entry-screen section.top-winners .table_header .th.profits,
+.entry-screen section.top-winners .table_body .tr .data.profits {
+    width: 18%;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter {
+    z-index: 5;
+    min-width: 29.3em;
+    position: relative;
+    height: 6.6em;
+    border-radius: 1em;
+    background-color: #232935;
+    cursor: pointer;
+    padding: 1.3em 7.1em 1.3em 2em;
+    display: inline-block;
+    margin: 4em 0em 0em 0em;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter p {
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 300;
+    color: #f4d56f;
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 4em;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter p span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .arr {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    min-width: auto;
+    min-height: auto;
+    margin-left: 0;
+    transition: transform .3s ease;
+    top: 53%;
+    transform: translateY(-50%);
+    right: 2.5em;
+    width: 2em;
+    height: 2em;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .arr[dropdown="open"] {
+    transition: transform .3s ease;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 7.5em;
+    right: 0em;
+    width: 100%;
+    border-radius: 0.5em;
+    background: #232935;
+    overflow: hidden;
+    padding: 1em 0;
+    box-shadow: 0.1em 0.1em 0.6em -0.2em black;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 300;
+    color: #ebebeb;
+    text-transform: capitalize;
+    padding: 0em 2em 0em 2em;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p span {
+    font-size: 1.6em;
+}
+
+.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p[current="true"] {
+    color: #f4d56f;
+}
+
+.entry-screen section.top-winners .play-now {
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+    margin: 6em 0em 0em 0em;
+}
+
+.entry-screen section.top-winners .play-now a {
+    color: #ffffff;
+}
+
+.entry-screen section.top-winners .error {
+    background: #232323;
+    height: 8.8em;
+    line-height: 8.7em;
+    margin: 0.3em 0em 0em 0em;
+    color: #919191;
+}
+
+.entry-screen section.top-winners .error span {
+    font-size: 2.2em;
+}
+
+/* ############################################ */
+/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */
+/* ############################################ */
+
+.entry-screen section.weekly-jackpot {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    padding: 6em 0em;
+}
+
+.entry-screen section.weekly-jackpot .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.entry-screen section.weekly-jackpot .caption {
+    text-align: left;
+}
+
+.entry-screen section.weekly-jackpot .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.weekly-jackpot .box.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 58em;
+}
+
+.entry-screen section.weekly-jackpot .box.right {
+    /* width: 61em; */
+}
+
+.entry-screen section.weekly-jackpot .play-now {
+    margin: 4em 0em 0em 0em;
+}
+
+.entry-screen section.weekly-jackpot .box.right .image-wrap div {
+    width: 55em;
+    height: 55em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+}
+
+.entry-screen section.weekly-jackpot p {
+    /* margin: 1.6em 0em 0em 0em; */
+    line-height: 2.5em;
+}
+
+.entry-screen section.weekly-jackpot p.big {
+    margin: 2.6em 0em 0em 0em;
+    font-weight: 800;
+    line-height: 3em;
+}
+
+.entry-screen section.weekly-jackpot p.big span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.weekly-jackpot p.small {
+    line-height: 2.4em;
+}
+
+.entry-screen section.weekly-jackpot p.small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* ###### SECTION: MONTHLY JACKPOT (WEB) ####### */
+/* ############################################ */
+
+.entry-screen section.monthly-jackpot {
+    background-color: #181818;
+    color: #ffffff;
+    text-align: left;
+    padding: 10em 0em;
+}
+
+.entry-screen section.monthly-jackpot .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 7em;
+}
+
+.entry-screen section.monthly-jackpot .caption {
+    text-align: left;
+}
+
+.entry-screen section.monthly-jackpot .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.monthly-jackpot .box.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 58em;
+}
+
+.entry-screen section.monthly-jackpot .box.left {
+    /* width: 61em; */
+}
+
+.entry-screen section.monthly-jackpot .play-now {
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+    margin: 4em 0em 0em 0em;
+    color: #ffffff;
+}
+
+.entry-screen section.monthly-jackpot .play-now a {
+    color: #ffffff;
+}
+
+.entry-screen section.monthly-jackpot .box.left .image-wrap div {
+    width: 55em;
+    height: 49em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+}
+
+.entry-screen section.monthly-jackpot p {
+    /* margin: 1.6em 0em 0em 0em; */
+    line-height: 2.5em;
+}
+
+.entry-screen section.monthly-jackpot p.big {
+    margin: 2.6em 0em 0em 0em;
+    font-weight: 800;
+    line-height: 3em;
+}
+
+.entry-screen section.monthly-jackpot p.big span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.monthly-jackpot p.small {
+    line-height: 2.4em;
+}
+
+.entry-screen section.monthly-jackpot p.small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* ####### SECTION: KEY BENEFITS (WEB) ######## */
+/* ############################################ */
+
+.entry-screen section.key-benefits {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.entry-screen section.key-benefits .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.key-benefits .caption {
+    max-width: 49em;
+    text-align: left;
+}
+
+.entry-screen section.key-benefits .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.key-benefits .box.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 65em;
+}
+
+.entry-screen section.key-benefits .box.right {
+    width: 48em;
+}
+
+.entry-screen section.key-benefits .benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2em 0em 0em 0em;
+}
+
+.entry-screen section.key-benefits .benefit {
+    margin: 1em 0em 1em 0em;
+    padding: 0em 0em 0em 3em;
+    text-align: left;
+    position: relative;
+    font-weight: 700;
+}
+
+.entry-screen section.key-benefits .benefit::before {
+    content: '';
+    background: #000000;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.entry-screen section.key-benefits .benefit span {
+    font-size: 2.2em;
+}
+
+.entry-screen section.key-benefits .play-now {
+    margin: 3em 0em 0em 0em;
+}
+
+/* .entry-screen section.key-benefits .box.right .image-wrap {
+
+} */
+
+.entry-screen section.key-benefits .box.right .image-wrap div {
+    width: 48em;
+    height: 58em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+
+/* section.key-benefits .box.right .image-wrap img {
+    width: 100%;
+} */
+
+/* ############################################ */
+/* ####### SECTION: DAILY INCOME (WEB) ######## */
+/* ############################################ */
+
+.entry-screen section.daily-income {
+    background-color: #181818;
+    color: #ffffff;
+    padding: 8em 0em;
+}
+
+.entry-screen section.daily-income .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6em;
+}
+
+.entry-screen section.daily-income .video-parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70.8em;
+    /* height: 42.6em; */
+    aspect-ratio: 16 / 9;
+    border: 0.6em solid #000;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.entry-screen section.daily-income .video-parent.video-visible {
+    z-index: 1;
+    visibility: visible;
+}
+
+.entry-screen section.daily-income .video-parent .close {
+    position: absolute;
+    right: -0.6em;
+    top: -0.6em;
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+    border-radius: 0em 0em 0em 1em;
+}
+
+.entry-screen section.daily-income .video-parent video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.daily-income .video-gradient-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.daily-income .video-black-bg {
+    background: #000000;
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    bottom: 0em;
+    right: 0em;
+}
+
+/* .entry-screen section.daily-income .video-black-play-bg {
+    background: #000000;
+    position: absolute;
+    top: 0.6em;
+    left: 0.6em;
+    bottom: 0.6em;
+    right: 0.6em;
+    cursor: pointer;
+} */
+
+.entry-screen section.daily-income .video-black-play-bg::after {
+    content: '';
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.entry-screen section.daily-income .caption {
+    text-align: left;
+}
+
+.entry-screen section.daily-income .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.daily-income .box {
+
+}
+
+.entry-screen section.daily-income .box.left {
+    width: 50em;
+}
+
+.entry-screen section.daily-income .box.left .image-wrap div.bg {
+    position: relative;
+    width: 47.9em;
+    height: 47.9em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+
+.entry-screen section.daily-income .box.left .image-wrap div.bg div.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22em;
+    height: 22em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___});
+    cursor: pointer;
+}
+
+.entry-screen section.daily-income .box.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 61em;
+}
+
+.entry-screen section.daily-income p.big {
+    line-height: 3.4em;
+    font-weight: 500;
+    margin: 2em 0em 0em 0em;
+}
+
+.entry-screen section.daily-income p.big span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.daily-income p {
+    margin: 0;
+}
+
+.entry-screen section.daily-income p.small {
+    margin: 1em 0em 0em 0em;
+    line-height: 2.6em;
+}
+
+.entry-screen section.daily-income p.small span {
+    font-size: 2em;
+}
+
+.entry-screen section.daily-income .play-now {
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+    margin: 3.6em 0em 0em 0em;
+    color: #ffffff;
+}
+
+.entry-screen section.daily-income .play-now a {
+    color: #ffffff;
+}
+
+/* ############################################ */
+/* ############ SECTION: FAQ (WEB) ############ */
+/* ############################################ */
+
+.entry-screen section.entry-faq {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.entry-screen section.entry-faq .main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry-screen section.entry-faq .play-now {
+    margin: 4em 0em 0em 0em;
+}
+
+.entry-screen section.entry-faq .faq-wrap {
+    margin: 4em 0 0 0;
+}
+
+.entry-screen section.entry-faq .dropdown-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.entry-screen section.entry-faq .faq-header-list {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+}
+
+.entry-screen section.entry-faq .faq-header-current-list {
+    position: relative;
+    min-width: 29.3em;
+    height: 6.6em;
+    border-radius: 1em;
+    background-color: #232935;
+    cursor: pointer;
+    padding: 1.3em 7.1em 1.3em 2em;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.entry-screen section.entry-faq .faq-header-current-list p {
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 300;
+    color: #f4d56f;
+    text-transform: capitalize;
+    margin: 0;
+    line-height: 4em;
+}
+
+.entry-screen section.entry-faq .faq-header-current-list p span {
+    font-size: 2.5em;
+}
+
+.entry-screen section.entry-faq .faq-header-current-list div {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+    cursor: pointer;
+    position: absolute;
+    min-width: auto;
+    min-height: auto;
+    margin-left: 0;
+    transition: transform .3s ease;
+    top: 53%;
+    transform: translateY(-50%);
+    right: 2.5em;
+    width: 2em;
+    height: 2em;
+}
+
+.entry-screen section.entry-faq .faq-header-current-list div[rotate="true"] {
+    transition: transform .3s ease;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.entry-screen section.entry-faq .faq-header-drop-list {
+    position: absolute;
+    top: 7.5em;
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-width: 29.3em;
+    height: auto;
+    background: #232935;
+    border-radius: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em 0;
+    box-shadow: 0.1em 0.1em 0.6em -0.2em black;
+}
+
+.entry-screen section.entry-faq .faq-header-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.entry-screen section.entry-faq .faq-header-list-item p {
+    font-family: 'SF UI Display', sans-serif;
+    color: #ebebebe6;
+    text-transform: capitalize;
+    padding: 1em 2em 1em 2em;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-weight: 300;
+}
+
+.entry-screen section.entry-faq .faq-header-list-item p:hover {
+    color: #f4d56f;
+}
+
+.entry-screen section.entry-faq .faq-header-list-item p span {
+    font-size: 1.6em;
+}
+
+.entry-screen section.entry-faq .faq-header-list-item p[activetab="true"] {
+    color: #f4d56f;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap {
+    display: flex;
+    justify-content: center;
+    width: 120.2em;
+    max-height: 45.4em;
+    overflow-y: auto;
+    margin: 2em 0 0 0;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc {
+    width: 100%;
+    border-radius: 0.9em;
+    padding: 1.5em 2em;
+    background-color: #d97976;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.please-note {
+    text-align: center;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.please-note span {
+    font-size: 1.5em;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.we-want {
+    text-align: center;
+    margin: 0.5em 0 0 0;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.we-want span {
+    font-size: 1.6em;
+}
+
+.entry-screen section.entry-faq .faq-content-wrap .faq-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.entry-screen section.entry-faq .faq-content-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.entry-screen section.entry-faq .faq-content-row:not(:last-child) {
+    margin: 0em 0em 0.6em 0em;
+}
+
+.entry-screen section.entry-faq .faq-content-header {
+    position: relative;
+    min-height: 8.6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 0 2em 0 4.5em;
+    border-radius: 0.9em;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.entry-screen section.entry-faq .faq-content-header:hover {
+    opacity: .8;
+}
+
+.entry-screen section.entry-faq .faq-content-header-desc {
+    font-family: 'SF UI Display', sans-serif;
+    color: #000000;
+    font-weight: 400;
+    width: 95%;
+    text-align: left;
+    margin: 0;
+}
+
+.entry-screen section.entry-faq .faq-content-header-desc span {
+    font-size: 2.4em;
+}
+
+.entry-screen section.entry-faq .faq-content-content-desc {
+    font-family: 'SF UI Display', sans-serif;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 300;
+    width: 95%;
+    margin: 0;
+    line-height: 3.2em;
+}
+
+.entry-screen section.entry-faq .faq-content-content-desc span {
+    font-size: 2.4em;
+}
+
+.entry-screen section.entry-faq .faq-content-header-arr {
+    position: absolute;
+    width: 1.9em;
+    height: 2.8em;
+    right: 3.6em;
+    transform: rotate(90deg);
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_17___}) center no-repeat;
+    background-size: 100% 100%;
+    transition: transform 500ms ease;
+}
+
+.entry-screen section.entry-faq .faq-content-content-arr {
+    position: absolute;
+    width: 1.9em;
+    height: 2.8em;
+    right: 3.6em;
+    transform: rotate( -90deg );
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_17___}) center no-repeat;
+    background-size: 100% 100%;
+    transition: transform 500ms ease;
+}
+
+.entry-screen section.entry-faq .faq-content-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 3em 3em 4.5em;
+    margin: 0.6em 0 0 0;
+    background-color: #232935;
+    border-radius: 0.9em;
+}
+
+/* ############################################ */
+/* ####### SECTION: BEST CHANCE (WEB) ######### */
+/* ############################################ */
+
+.entry-screen section.best-chance {
+    background-color: #181818;
+    color: #ffffff;
+    text-align: left;
+    padding: 10em 0em;
+}
+
+.entry-screen section.best-chance .main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.entry-screen section.best-chance .caption {
+    text-align: left;
+}
+
+.entry-screen section.best-chance .caption::before {
+    margin: 0em 0em 2em 0em;
+}
+
+.entry-screen section.best-chance .box.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 58em;
+}
+
+.entry-screen section.best-chance .box.right {
+    width: 61em;
+}
+
+.entry-screen section.best-chance .play-now {
+    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);
+    margin: 4em 0em 0em 0em;
+    color: #ffffff;
+}
+
+.entry-screen section.best-chance .play-now a {
+    color: #ffffff;
+}
+
+.entry-screen section.best-chance .box.right .image-wrap div {
+    width: 61em;
+    height: 43.3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+}
+
+.entry-screen section.best-chance p {
+    margin: 1.6em 0em 0em 0em;
+    line-height: 2.5em;
+}
+
+.entry-screen section.best-chance p span {
+    font-size: 1.9em;
+}
+
+/* ############################################ */
+/* #### SECTION: POLYGON BLOCKCHAIN (WEB) ##### */
+/* ############################################ */
+
+.entry-screen section.polygon-blockchain {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.entry-screen section.polygon-blockchain .main-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 96em;
+    margin: 0 auto;
+}
+
+.entry-screen section.polygon-blockchain .polygon-image {
+    width: 10.5em;
+    height: 10.5em;
+}
+
+.entry-screen section.polygon-blockchain .polygon-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.entry-screen section.polygon-blockchain .caption {
+    font-weight: 900;
+    line-height: 8em;
+    /* text-align: center; */
+    margin: 1.5em 0 0 0;
+}
+
+.entry-screen section.polygon-blockchain .caption::before {
+    display: none;
+}
+
+.entry-screen section.polygon-blockchain p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.entry-screen section.polygon-blockchain p span {
+    font-size: 2em;
+}
+
+.entry-screen section.polygon-blockchain p.the-game {
+    margin: 4em 0em 2em 0em;
+}
+
+.entry-screen section.polygon-blockchain p.our-game {
+    margin: 0em 0em 0em 0em;
+}
+
+.entry-screen section.polygon-blockchain .play-btns {
+    margin: 4em 0em 0em 0em;
+}
+
+/* ############################################ */
+/* ########## SECTION: FOOTER (WEB) ########### */
+/* ############################################ */
+
+.entry-screen section.footer {
+    background-color: #181818;
+    color: #5a5a5a;
+    padding: 6em 19em 6em 19em;
+}
+
+.entry-screen section.footer .disclaimer {
+    line-height: 2.5em;
+    text-align: left;
+}
+
+.entry-screen section.footer .disclaimer span {
+    font-size: 1.8em;
+}
+
+@media screen and (max-width: 1320px) {
+
+    .trade_page .entry-screen {
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+
+    .trade_page .entry-screen {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1035px) {
+
+    .trade_page .entry-screen {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 905px) {
+
+    .trade_page .entry-screen {
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 775px) {
+
+    .trade_page .entry-screen {
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .trade_page .entry-screen {
+        font-size: inherit;
+    }
+
+    .entry-screen section .caption {
+        font-weight: 800 !important;
+        line-height: 4.5em !important;
+        text-align: center !important;
+    }
+    
+    .entry-screen section .caption span {
+        font-size: 5em;
+    }
+
+    .entry-screen section .caption::before {
+        width: 12em;
+        height: 0.4em;
+        margin: 0em auto 1em auto !important;
+    }
+
+    /* ############################################ */
+    /* ####### "HOW TO PLAY" BUTTON (MOBILE) ###### */
+    /* ############################################ */
+
+    .entry-screen section .styled-button {
+        min-width: 25em;
+        margin: 0em auto 0em auto;
+    }
+
+    .entry-screen section .styled-button a {
+        padding: 1.4em 4em;
+    }
+
+    .entry-screen section .styled-button span {
+        font-size: 2.2em;
+    }
+
+    /* ############################################ */
+    /* ######## "PLAY NOW" BUTTON (MOBILE) ######## */
+    /* ############################################ */
+
+    /* .entry-screen section .play-now {
+        min-width: 25em;
+        margin: 0em auto 0em auto;
+    }
+
+    .entry-screen section .play-now a {
+        padding: 1.4em 4em;
+    }
+
+    .entry-screen section .play-now span {
+        font-size: 2.2em;
+    } */
+    
+    /* ############################################ */
+    /* #### "BE AN AFFILIATE" BUTTON (MOBILE) ##### */
+    /* ############################################ */
+
+    /* .entry-screen section .be-an-affiliate {
+        min-width: 25em;
+        margin: 0em auto 0em auto;
+    }
+
+    .entry-screen section .be-an-affiliate a {
+        padding: 1.4em 4em;
+    }
+
+    .entry-screen section .be-an-affiliate span {
+        font-size: 2.2em;
+    } */
+
+    /* ############################################ */
+    /* ############ MENU ICON (MOBILE) ############ */
+    /* ############################################ */
+
+    .entry-screen .menu-icon {
+        right: 1em;
+        top: 1em;
+    }
+
+    /* ############################################ */
+    /* ############ TOP MENU (MOBILE) ############# */
+    /* ############################################ */
+
+    .entry-screen .top-menu {
+        display: none;
+    }
+
+    /* ############################################ */
+    /* ############ SIDE MENU (MOBILE) ############ */
+    /* ############################################ */
+
+    .entry-screen .side-menu {
+        transform: translateX(100%);
+        right: auto;
+    }
+
+    .entry-screen .side-menu .menu-caption::before {
+        width: 12em;
+        margin: 0em auto 0em auto;
+    }
+
+    .entry-screen .side-menu .menu-caption span {
+        font-size: 6.2em;
+    }
+
+    .entry-screen .side-menu .item span {
+        font-size: 2.3em;
+    }
+
+    .entry-screen .side-menu.open {
+        width: 100%;
+    }
+
+    .entry-screen .side-menu .play-now {
+        padding: 1.4em 5em;
+        min-width: 24em;
+    }
+
+    .entry-screen .side-menu .play-now span {
+        font-size: 2.3em;
+    }
+
+    /* ############################################ */
+    /* ############# WEB/MOBILE ONLY ############## */
+    /* ############################################ */
+
+    .entry-screen .web-only.flex {
+        display: none;
+    }
+
+    .entry-screen .web-only.block {
+        display: none;
+    }
+ 
+    .entry-screen .mobile-only.flex {
+        display: flex;
+    }
+
+    .entry-screen .mobile-only.block {
+        display: block;
+    }
+
+    /* ################################################# */
+    /* ######### SECTION: UP OR DOWN (MOBILE) ########## */
+    /* ################################################# */
+
+    .entry-screen section.up-or-down {
+        padding: 4em 0em 4em 0em;
+        background-color: #181818;
+    }
+
+    .entry-screen section.up-or-down::before,
+    .entry-screen section.up-or-down::after {
+        display: none;
+    }
+
+    .entry-screen section.up-or-down .bitcoin-image {
+        width: 7.6em;
+        height: 7.6em;
+    }
+
+    .entry-screen section.up-or-down .big-caption {
+        margin: -20em 0 0 0;
+    }
+
+    .entry-screen .up-or-down .up-down-image-box div {
+        /* background: #00000078; */
+        width: 34em;
+        height: 39em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+    }
+
+    .entry-screen section.up-or-down .side-image-box {
+        display: none;
+    }
+
+    .entry-screen section.up-or-down .main-text-box {
+        max-width: 31em;
+        line-height: 6.6em;
+    }
+
+    .entry-screen section.up-or-down .main-text-box span {
+        font-size: 7.9em;
+    }
+
+    .entry-screen section.up-or-down .certik-flex {
+        flex-direction: column;
+        margin: 2em 0 0 0;
+        gap: 1em;
+    }
+
+    .entry-screen section.up-or-down .certik-flex span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.up-or-down .certik-flex .certik-logo {
+        width: 17.5em;
+    }
+
+    .entry-screen section.up-or-down .top-title {
+        margin: 1.5em 0em 0em 0em;
+    }
+
+    .entry-screen section.up-or-down .top-title span {
+        font-size: 2.5em;
+    }
+
+    .entry-screen section .play-btns {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        gap: 1.6em;
+        margin: 3.5em 0 0 0;
+        width: 32em;
+    }
+
+    .entry-screen section.up-or-down .styled-button {
+        min-width: unset;
+        margin: 0em auto 0em auto;
+    }
+
+    .entry-screen section.up-or-down .styled-button a {
+        padding: 1.4em 1.8em;
+    }
+
+    .entry-screen section.up-or-down .styled-button span {
+        font-size: 2em;
+    }
+
+    .entry-screen section.up-or-down .styled-button.play-now {
+        width: 100%;
+        font-weight: 700;
+    }
+
+    .entry-screen section.up-or-down .styled-button.how-to-play {
+        /* width: 50%; */
+    }
+
+    .entry-screen section.up-or-down .styled-button.be-an-affiliate {
+        /* width: 50%; */
+        margin: 0em 0em 0em auto;
+    }
+
+    .entry-screen section.up-or-down .styled-button.how-to-play,
+    .entry-screen section.up-or-down .styled-button.be-an-affiliate {
+        flex-grow: 1;
+    }
+
+    .entry-screen section.up-or-down .styled-button.how-to-play span,
+    .entry-screen section.up-or-down .styled-button.be-an-affiliate span {
+        font-size: 1.8em;
+    }
+
+    /* ################################################# */
+    /* ####### SECTION: GENERAL STATS (MOBILE) ######### */
+    /* ################################################# */
+
+    .entry-screen section.stats {
+        
+    }
+
+    .entry-screen section.stats .caption {
+        max-width: 34em;
+    }
+
+    .entry-screen section.stats .main-flex {
+        min-width: unset;
+    }
+
+    .entry-screen section.stats .stats-data-flex {
+        flex-direction: column;
+        margin: 2em 0em 0em 0em;
+    }
+
+    .entry-screen section.stats .win-box {
+        padding: 1.3em 3em 1.3em 3em;
+        min-width: unset;
+        height: 9.4em;
+    }
+
+    .entry-screen section.stats .win-box:not(:last-child)::after {
+        width: 23em;
+        height: 0.1em;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .entry-screen section.stats .win-box .top-text span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.stats .win-box .middle-text span {
+        font-size: 1.8em;
+    }
+
+    .entry-screen section.stats .win-box .bottom-text {
+        height: 5.2em;
+    }
+
+    .entry-screen section.stats .win-box .bottom-text span {
+        font-size: 4.3em;
+        font-weight: 700;
+    }
+
+    .entry-screen section.stats .play-now {
+        margin: 2em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ######## SECTION: TAKE A LOOK (MOBILE) ########## */
+    /* ################################################# */
+
+    .entry-screen section.take-a-look {
+        padding: 5em 0em 5em 0em;
+    }
+
+    .entry-screen section.take-a-look .main-flex {
+        flex-direction: column;
+        gap: unset;
+    }
+
+    .entry-screen section.take-a-look .box.left {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .entry-screen section.take-a-look .caption {
+        width: 26em;
+    }
+
+    .entry-screen section.take-a-look .video-parent {
+        width: 33em;
+        /* height: 19.6em; */
+    }
+
+    .entry-screen section.take-a-look .video-black-bg {
+        top: 0.4em;
+        left: 0.4em;
+        bottom: 0.4em;
+        right: 0.4em;
+    }
+
+    .entry-screen section.take-a-look .video-black-play-bg::after {
+        width: 6em;
+        height: 6em;
+    }
+
+    .entry-screen section.take-a-look .caption::before {
+        margin: 0em auto 1em auto;
+    }
+
+    .entry-screen section.take-a-look .paragraph {
+        text-align: center;
+        width: 29em;
+        margin: 2em 0em 4em 0em;
+        line-height: 2.4em;
+    }
+
+    .entry-screen section.take-a-look .paragraph span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.take-a-look .play-now {
+        margin: 5em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ###### SECTION: COMPARISON TABLE (MOBILE) ####### */
+    /* ################################################# */
+
+    .entry-screen section.comparison-table {
+        padding: 5em 0em 5em 0em;
+    }
+
+    .entry-screen section.comparison-table .table-flex {
+        width: 100%;
+        margin-top: 4em;
+    }
+
+    .entry-screen section.comparison-table .table-flex .column {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .entry-screen section.comparison-table .cell {
+        height: 9.2em;
+    }
+
+    .entry-screen section.comparison-table .cell.text {
+        gap: unset;
+    }
+
+    .entry-screen section.comparison-table .cell .option-caption {
+        font-weight: 400;
+        padding: 0em 1em;
+        line-height: 1.7em;
+    }
+
+    .entry-screen section.comparison-table .cell .option-caption span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.comparison-table .cell.description {
+        height: 14em;
+    }
+
+    .entry-screen section.comparison-table .cell.description .desc-top-caption span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.comparison-table .cell.description .desc-middle-percentage span {
+        font-size: 3.5em;
+    }
+
+    .entry-screen section.comparison-table .cell.description .desc-bottom-caption span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.comparison-table .cell.border:last-child {
+        border: 0;
+    }
+    
+    .entry-screen section.comparison-table .cell.extend-top {
+        height: 2.2em;
+    }
+
+    .entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top {
+        font-weight: 600;
+    }
+
+    .entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top span {
+        font-size: 1.4em;
+    }
+
+    .entry-screen section.comparison-table .play-now {
+        margin: 5em auto 0em auto;
+    }
+
+    .entry-screen section.comparison-table .cell .option-status.x-sign {
+        width: 1.4em;
+        height: 1.4em;
+    }
+
+    .entry-screen section.comparison-table .cell .option-status.v-sign {
+        width: 2.1em;
+        height: 1.8em;
+    }
+
+    /* ################################################# */
+    /* ######## SECTION: TOP WINNERS (MOBILE) ########## */
+    /* ################################################# */
+
+    .entry-screen section.top-winners {
+        padding: 5em 0em 5em 0em;
+    }
+
+    .entry-screen section.top-winners .table_header .th {
+        line-height: 1.8em;
+    }
+
+    .entry-screen section.top-winners .table_header .th,
+    .entry-screen section.top-winners .table_body .tr {
+        padding: 0;
+    }
+
+    .entry-screen section.top-winners .table_header .th.wins,
+    .entry-screen section.top-winners .table_body .tr .data.wins,
+    .entry-screen section.top-winners .table_header .th.winrate,
+    .entry-screen section.top-winners .table_body .tr .data.winrate,
+    .entry-screen section.top-winners .table_header .th.trades,
+    .entry-screen section.top-winners .table_body .tr .data.trades {
+        display: none;
+    }
+
+    .entry-screen section.top-winners .table_body .tr .data {
+        box-sizing: border-box;
+    }
+
+    .entry-screen section.top-winners .table_header .th.user,
+    .entry-screen section.top-winners .table_body .tr .data.user {
+        width: 56%;
+    }
+
+    .entry-screen section.top-winners .table_header .th.rank,
+    .entry-screen section.top-winners .table_body .tr .data.rank,
+    .entry-screen section.top-winners .table_header .th.profits,
+    .entry-screen section.top-winners .table_body .tr .data.profits {
+        width: 22%;
+    }
+
+    .entry-screen section.top-winners .table_header .th.rank,
+    .entry-screen section.top-winners .table_body .tr .data.rank {
+        padding: 0em 0em 0em 1.5em;
+    }
+
+    .entry-screen section.top-winners .table_header .th.profits,
+    .entry-screen section.top-winners .table_body .tr .data.profits {
+        padding: 0em 1.5em 0em 0em;
+    }
+
+
+    .entry-screen section.top-winners .table_header .th.rank {
+        justify-content: flex-start;
+    }
+
+    .entry-screen section.top-winners .table_body .tr .data.rank {
+        text-align: left;
+    }
+
+    .entry-screen section.top-winners .table_body .tr .data.rank span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.top-winners .table_header .th.profits {
+        justify-content: flex-end;
+    }
+
+    .entry-screen section.top-winners .table_body .tr .data.profits {
+        text-align: right;
+    }
+
+    .entry-screen section.top-winners .table_header {
+        height: 4.4em;
+    }
+
+    .entry-screen section.top-winners .table_header .th span {
+        font-size: 1.4em;
+    }
+
+    .entry-screen section.top-winners .table_body .tr {
+        height: 5.4em;
+    }
+
+    .entry-screen section.top-winners .table_body .tr .data span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.top-winners .table_header .th.sortable::after {
+        width: 0.8em;
+        height: 1.2em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter {
+        min-width: 18.3em;
+        height: 4.4em;
+        border-radius: 1em;
+        padding: 1.3em 4.8em 1.3em 1.5em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter p {
+        line-height: 2.3em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter p span {
+        font-size: 1.5em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter .arr {
+        width: 1.5em;
+        height: 1.5em;
+        right: 1.8em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown {
+        top: 5em;
+        padding: 0.5em 0;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p {
+        padding: 0.5em 1.5em;
+    }
+
+    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p span {
+        font-size: 1.5em;
+    }
+
+    .entry-screen section.top-winners .play-now {
+        margin: 5em auto 0em auto;
+    }
+
+    .entry-screen section.top-winners .error {
+        height: 6.8em;
+        line-height: 6.7em;
+    }
+    
+    .entry-screen section.top-winners .error span {
+        font-size: 1.9em;
+    }
+
+    /* ############################################ */
+    /* #### SECTION: WEEKLY JACKPOT (MOBILE) ###### */
+    /* ############################################ */
+
+    .entry-screen section.weekly-jackpot {
+        padding: 2em 0em 5em 0em;
+    }
+
+    .entry-screen section.weekly-jackpot .main-flex {
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .entry-screen section.weekly-jackpot p.big {
+        margin: 1.6em auto 1em auto;
+        font-weight: 800;
+        line-height: 2.5em;
+        width: 37em;
+    }
+
+    .entry-screen section.weekly-jackpot p.big span {
+        font-size: 2.1em;
+    }
+
+    .entry-screen section.weekly-jackpot p.small {
+        margin: 0em auto 0em auto;
+        line-height: 1.9em;
+        width: 37em;
+    }
+
+    .entry-screen section.weekly-jackpot p.small span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.weekly-jackpot .box.right .image-wrap div {
+        width: 37.5em;
+        height: 29em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+    }
+
+    .entry-screen section.weekly-jackpot .box.left {
+        order: 2;
+        text-align: center;
+    }
+    .entry-screen section.weekly-jackpot .box.right .image-wrap div
+    .entry-screen section.weekly-jackpot .box.right {
+        order: 1;
+    }
+
+    .entry-screen section.weekly-jackpot .play-now {
+        margin: 3em auto 0em auto;
+    }
+
+    /* ############################################ */
+    /* #### SECTION: MONTHLY JACKPOT (MOBILE) ##### */
+    /* ############################################ */
+
+    .entry-screen section.monthly-jackpot {
+        padding: 5em 0em;
+    }
+
+    .entry-screen section.monthly-jackpot .main-flex {
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .entry-screen section.monthly-jackpot p.big {
+        margin: 1.6em auto 1em auto;
+        font-weight: 800;
+        line-height: 2.5em;
+        width: 37em;
+    }
+
+    .entry-screen section.monthly-jackpot p.big span {
+        font-size: 2.1em;
+    }
+
+    .entry-screen section.monthly-jackpot p.small {
+        margin: 0em auto 0em auto;
+        line-height: 1.9em;
+        width: 37em;
+    }
+
+    .entry-screen section.monthly-jackpot p.small span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.monthly-jackpot .box.right {
+        text-align: center;
+    }
+
+    .entry-screen section.monthly-jackpot .box.left .image-wrap div {
+        width: 30em;
+        height: 27em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+    }
+
+    .entry-screen section.monthly-jackpot .play-now {
+        margin: 3em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ######## SECTION: KEY BENEFITS (MOBILE) ######### */
+    /* ################################################# */
+
+    .entry-screen section.key-benefits {
+        padding: 0.5em 0em 5em 0em;
+    }
+
+    .entry-screen section.key-benefits .main-flex {
+        flex-direction: column;
+    }
+
+    .entry-screen section.key-benefits .box.right {
+        order: 1;
+        width: auto;
+    }
+
+    .entry-screen section.key-benefits .box.left {
+        order: 2;
+    }
+
+    .entry-screen section.key-benefits .benefits {
+        margin: 2em auto 0em auto;
+        width: 88%;
+    }
+
+    .entry-screen section.key-benefits .benefit {
+        font-weight: 600;
+        line-height: 2.3em;
+        padding: 0em 0em 0em 2em;
+        margin: 0.8em 0em 0.8em 0em;
+    }
+
+    .entry-screen section.key-benefits .benefit::before {
+        width: 1em;
+        height: 1em;
+    }
+
+    .entry-screen section.key-benefits .benefit span {
+        font-size: 2em;
+    }
+
+    .entry-screen section.key-benefits .caption {
+        max-width: unset;
+        text-align: inherit;
+        width: 33em;
+        margin: 3em auto 0em auto;
+    }
+
+    .entry-screen section.key-benefits .caption::before {
+        margin: 0em auto 1em auto;
+    }
+
+    .entry-screen section.key-benefits .box.right .image-wrap div {
+        width: 41em;
+        height: 25em;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+    }
+
+    .entry-screen section.key-benefits .play-now {
+        margin: 3em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ######## SECTION: DAILY INCOME (MOBILE) ######### */
+    /* ################################################# */
+
+    .entry-screen section.daily-income {
+        padding: 5em 0em 5em 0em;
+    }
+
+    .entry-screen section.daily-income .video-parent {
+        width: 36.8em;
+        transform: translate(-50%, 0);
+        top: 6.7em;
+    }
+
+    .entry-screen section.daily-income .main-flex {
+        flex-direction: column;
+        gap: unset;
+    }
+
+    .entry-screen section.daily-income .box.left {
+        width: auto;
+    }
+
+    .entry-screen section.daily-income .box.left .image-wrap div.bg {
+        width: 25em;
+        height: 25em;
+        margin: 0 auto;
+    }
+
+    .entry-screen section.daily-income .box.left .image-wrap div.bg div.play {
+        width: 11em;
+        height: 11em;
+    }
+
+    .entry-screen section.daily-income .caption {
+        max-width: unset;
+        margin: 4em 0em 0em 0em;
+    }
+
+    .entry-screen section.daily-income p.big {
+        line-height: 2.8em;
+        margin: 2em auto 0em auto;
+        width: 35em;
+        text-align: center;
+    }
+
+    .entry-screen section.daily-income p.big span {
+        font-size: 2.1em;
+    }
+
+    .entry-screen section.daily-income p.small {
+        text-align: center;
+        width: 32em;
+        margin: 1em auto 0em auto;
+        line-height: 2.0em;
+    }
+
+    .entry-screen section.daily-income p.small span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.daily-income .caption::before {
+        margin: 0em auto 1em auto;
+    }
+
+    .entry-screen section.daily-income .play-now {
+        margin: 4em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ############# SECTION: FAQ (MOBILE) ############# */
+    /* ################################################# */
+
+    .entry-screen section.entry-faq {
+        padding: 4em 0em 4em 0em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-wrap {
+        width: 100%;
+        max-height: 44em;
+    }
+
+    .entry-screen section.entry-faq .faq-wrap {
+        width: 100%;
+    }
+
+    .entry-screen section.entry-faq .faq-header-current-list {
+        min-width: 18.3em;
+        height: 4.4em;
+        border-radius: 1em;
+        padding: 1.3em 4.8em 1.3em 1.5em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-current-list p {
+        line-height: 2.3em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-current-list p span {
+        font-size: 1.5em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-current-list div {
+        width: 1.5em;
+        height: 1.5em;
+        right: 1.8em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-drop-list {
+        top: 5em;
+        min-width: 18.3em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-list-item {
+        line-height: 2.3em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-list-item p {
+        padding: 0.5em 1.5em;
+        line-height: 2.3em;
+    }
+
+    .entry-screen section.entry-faq .faq-header-list-item p span {
+        font-size: 1.5em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-header {
+        min-height: 6.5em;
+        padding: 1em 6.5em 1em 3.5em;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .entry-screen section.entry-faq .faq-content-header-desc {
+        text-align: center;
+    }
+
+    .entry-screen section.entry-faq .faq-content-header-desc span {
+        font-size: 1.7em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-content {
+        border-radius: 0;
+        padding: 2.5em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-content-desc {
+        line-height: 2.2em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-content-desc span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-header-arr,
+    .entry-screen section.entry-faq .faq-content-content-arr {
+        width: 1.2em;
+        height: 1.8em;
+        right: 2.5em;
+    }
+
+    .entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc {
+        border-radius: 0;
+    }
+
+    .entry-screen section.entry-faq .play-now {
+        margin: 4em auto 0em auto;
+    }
+
+    /* ################################################# */
+    /* ######## SECTION: BEST CHANCE (MOBILE) ########## */
+    /* ################################################# */
+
+    .entry-screen section.best-chance {
+        padding: 4em 0em 5em 0em;
+    }
+
+    .entry-screen section.best-chance p {
+        line-height: 2.0em;
+        width: 32em;
+        margin: 2em auto 0em auto;
+        text-align: center;
+    }
+
+    .entry-screen section.best-chance p span {
+        font-size: 1.6em;
+    }
+
+    .entry-screen section.best-chance .main-flex {
+        flex-direction: column;
+    }
+
+    .entry-screen section.best-chance .box.right {
+        order: 1;
+        width: unset;
+    }
+
+    .entry-screen section.best-chance .box.left {
+        order: 2;
+    }
+
+    .entry-screen section.best-chance .box.right .image-wrap div {
+        width: 32em;
+        height: 24em;
+        margin: 0 auto;
+    }
+
+    .entry-screen section.best-chance .play-now {
+        margin: 4em auto 0 auto;
+    }
+
+    /* ################################################# */
+    /* ##### SECTION: POLYGON BLOCKCHAIN (MOBILE) ###### */
+    /* ################################################# */
+
+    .entry-screen section.polygon-blockchain {
+        padding: 4em 0em 5em 0em;
+    }
+
+    .entry-screen section.polygon-blockchain .polygon-image {
+        width: 7.5em;
+        height: 7.5em;
+    }
+
+    .entry-screen section.polygon-blockchain p {
+        width: 37em;
+    }
+
+    .entry-screen section.polygon-blockchain p.the-game {
+        margin: 2em 0em 2em 0em;
+    }
+
+    .entry-screen section.polygon-blockchain p span {
+        font-size: 1.4em;
+    }
+
+    /* ################################################# */
+    /* ########### SECTION: FOOTER (MOBILE) ############ */
+    /* ################################################# */
+
+    .entry-screen section.footer {
+        padding: 3em;
+    }
+
+    .entry-screen section.footer .disclaimer {
+        line-height: 1.8em;
+        text-align: justify;
+    }
+
+    .entry-screen section.footer .disclaimer span {
+        font-size: 1.4em;
+    }
+
+    /*  */
+
+    body .entry-screen .entry_screen_langs {
+        right: 2em;
+        top: 2.5em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/NewEntryScreen/default/NewEntryScreen.css"],"names":[],"mappings":"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","sourcesContent":[".trade_page .entry-screen {\n    /* font-family: 'Barlow Semi Condensed'; */\n    font-family: 'Barlow';\n    background-color: transparent;\n    display: block;\n    position: static;\n    font-size: 10px;\n    overflow: auto;\n    z-index: initial;\n}\n\n.trade_page .entry-screen .entry-main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n}\n\n.trade_page .entry-screen .entry_screen_langs_indexed {\n    top: 2.2em;\n    right: 2.2em;\n}\n\n/* ############################################ */\n/* ############## MENU ICON (WEB) ############# */\n/* ############################################ */\n\n.entry-screen .menu-icon {\n    position: absolute;\n    right: 2em;\n    top: 2em;\n    z-index: 3;\n    cursor: pointer;\n    display: inline-block;\n    width: 5em;\n    height: 5em;\n    overflow: hidden;\n}\n\n.entry-screen .menu-icon div {\n    background-color: #c5ab5a;\n    border-radius: 0.3em;\n    height: 0.5em;\n    position: absolute;\n    right: 1em;\n    transition: width .2s,transform .2s;\n    width: 3em;\n}\n\n.entry-screen .menu-icon div.top {\n    top: 0.9em;\n}\n\n.entry-screen .menu-icon div.middle {\n    top: 2.2em;\n    width: 2em;\n}\n\n.entry-screen .menu-icon div.bottom {\n    top: 3.6em;\n}\n\n.entry-screen .menu-icon.open div.top {\n    transform: translate(0.7em,1.3em) rotate(-45deg);\n    width: 4.4em;\n}\n\n.entry-screen .menu-icon.open div.middle {\n    transform: translate(-4.5em);\n}\n\n.entry-screen .menu-icon.open div.bottom {\n    transform: translate(0.7em,-1.4em) rotate(45deg);\n    width: 4.4em;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* ############## TOP MENU (WEB) ############## */\n/* ############################################ */\n\n.entry-screen .top-menu {\n    position: relative;\n    width: 100%;\n    z-index: 1;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 5em;\n    margin: 5em 0em 8em 0em;\n}\n\n.entry-screen .top-menu .item {\n    color: #ffffff;\n}\n\n.entry-screen .top-menu .item.active {\n    color: #f4d56f;\n}\n\n.entry-screen .top-menu .item span {\n    font-size: 2.2em;\n}\n\n/* ############################################ */\n/* ############## SIDE MENU (WEB) ############# */\n/* ############################################ */\n\n.entry-screen .side-menu {\n    position: fixed;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    background-color: rgba(0, 0, 0, 0.8);\n    /* padding: 0em 15em; */\n    width: 60em;\n    z-index: 2;\n    transform: translateX(60em);\n    transition: transform .3s ease;\n}\n\n.entry-screen .side-menu.open {\ntransform: translateX(0);\n}\n\n.entry-screen .side-menu .item {\n    color: #ffffff;\n}\n\n.entry-screen .side-menu .item.active {\n    color: #f4d56f;\n}\n\n.entry-screen .side-menu .item span {\n    font-size: 2.5em;\n}\n\n.entry-screen .side-menu .menu-caption {\n    font-weight: 900;\n    line-height: 7.8em;\n}\n\n.entry-screen .side-menu .menu-caption span {\n    font-size: 8.2em;\n}\n\n.entry-screen .side-menu .menu-caption::before {\n    display: block;\n    content: '';\n    width: 13em;\n    height: 0.6em;\n    margin: 0em auto 1.5em auto;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.entry-screen .side-menu .play-now {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    padding: 1.6em 5em;\n    border-radius: 4em;\n    font-weight: 600;\n    margin: 3em 0em 0em 0em;\n    cursor: pointer;\n    min-width: 30em;\n    box-sizing: border-box;\n    color: #ffffff;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.entry-screen .side-menu .play-now a {\n    color: inherit;\n}\n\n.entry-screen .side-menu .play-now span {\n    font-size: 2.6em;\n}\n\n/* ############################################ */\n/* ############# WEB/MOBILE ONLY ############## */\n/* ############################################ */\n\n.entry-screen .mobile-only.flex {\n    display: none;\n}\n\n.entry-screen .mobile-only.block {\n    display: none;\n}\n\n.entry-screen .web-only.flex {\n    display: flex;\n}\n\n.entry-screen .web-only.block {\n    display: block;\n}\n\n/* ############################################ */\n/* ############## SECTION LOADER ############## */\n/* ############################################ */\n\n.entry-screen .section-loader-overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    /* background: #00000045; */\n    background: #0000009e;\n    z-index: 100;\n}\n\n.entry-screen .section-loader-wrap {\n    position: absolute;\n    width: 15em;\n    height: 15em;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/loaders/loader.gif');\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* ############################################ */\n/* ##### SECTION \"PLAY NOW\" BUTTON (WEB) ###### */\n/* ############################################ */\n\n.entry-screen section .play-now-box {\n    display: flex;\n}\n\n.entry-screen section .styled-button {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-shrink: 0;\n    border-radius: 4em;\n    font-weight: 600;\n    background-color: #F4D56F;\n    cursor: pointer;\n    min-width: 30em;\n    box-sizing: border-box;\n    text-align: center;\n    overflow: hidden;\n}\n\n.entry-screen section .styled-button a {\n    color: #000000;\n    width: 100%;\n    height: 100%;\n    padding: 1.6em 5em;\n    box-sizing: border-box;\n}\n\n.entry-screen section .styled-button span {\n    font-size: 2.6em;\n}\n\n/* ############################################ */\n/* #### SECTION \"HOW TO PLAY\" BUTTON (WEB) #### */\n/* ############################################ */\n\n.entry-screen section .styled-button.how-to-play {\n    background-color: #181818;\n    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;\n    font-weight: 500;\n}\n\n.entry-screen section .styled-button.how-to-play a {\n    color: #f4d56f;\n}\n\n/* ############################################ */\n/* ###### \"BE AN AFFILIATE\" BUTTON (WEB) ###### */\n/* ############################################ */\n\n.entry-screen section .styled-button.be-an-affiliate {\n    background-color: #181818;\n    box-shadow: inset 0em 0em 0em 0.2em #f4d56f;\n    font-weight: 500;\n}\n\n.entry-screen section .styled-button.be-an-affiliate a {\n    color: #f4d56f;\n}\n\n/* ############################################ */\n/* ############## SECTIONS (WEB) ############## */\n/* ############################################ */\n\n.entry-screen section {\n    position: relative;\n    flex-shrink: 0;\n    padding: 7em 0em;\n}\n\n.entry-screen section .play-btns {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n/* ############################################ */\n/* ########## SECTION CAPTION (WEB) ########### */\n/* ############################################ */\n\n.entry-screen section .caption {\n    font-weight: 900;\n    line-height: 8em;\n    width: 100%;\n}\n\n.entry-screen section .caption span {\n    font-size: 9em;\n}\n\n.entry-screen section .caption::before {\n    display: block;\n    content: '';\n    width: 21em;\n    height: 0.6em;\n    margin: 0em auto 2em auto;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n/* ############################################ */\n/* ######## SECTION: UP OR DOWN (WEB) ######### */\n/* ############################################ */\n\n.entry-screen section.up-or-down {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    position: relative;\n    background-color: #18191f;\n    padding: 0em 0em 7em 0em;\n\n    /* display: none; */\n}\n\n.entry-screen section.up-or-down::before,\n.entry-screen section.up-or-down::after {\n    content: '';\n    position: absolute;\n    top: 0;\n    height: 100%;\n    width: 75em;\n    max-width: 50%;\n}\n\n.entry-screen section.up-or-down::before {\n    left: 0;\n    background-image: linear-gradient(to right, #82c804 -86%, #18191f 54%);\n    opacity: 0.5;\n}\n\n.entry-screen section.up-or-down::after {\n    right: 0;\n    background-image: linear-gradient(to left, #f30401 -86%, #18191f 54%);\n    opacity: 0.9;\n}\n\n.entry-screen section.up-or-down .main-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    z-index: 1;\n}\n\n.entry-screen section.up-or-down .top-title-and-big-caption {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.up-or-down .top-title {\n    color: #f4d56f;\n    font-weight: 600;\n    line-height: 4em;\n}\n\n.entry-screen section.up-or-down .top-title span {\n    font-size: 2.8em;\n}\n\n.entry-screen section.up-or-down .big-caption {\n    display: flex;\n    align-items: center;\n    flex-direction: row;\n    margin: 2em 0 0 0;\n}\n\n.entry-screen section.up-or-down .play-btns {\n    margin: 6em 0 0 0;\n}\n\n.entry-screen section.up-or-down .side-image-box {\n    width: 36em;\n    height: 43em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n.entry-screen section.up-or-down .side-image-box img {\n    height: 100%;\n}\n\n.entry-screen section.up-or-down .up {\n    margin-right: -9em;\n    background-image: url('/public/media/images/new-entry-screen/default/up-bull.png');\n}\n\n.entry-screen section.up-or-down .down {\n    margin-left: -9em;\n    background-image: url('/public/media/images/new-entry-screen/default/down-bear.png');\n}\n\n.entry-screen section.up-or-down .main-text-box {\n    position: relative;\n    font-weight: 900;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    max-width: 53em;\n    line-height: 10.6em;\n    flex-shrink: 0;\n    z-index: 1;\n}\n\n.entry-screen section.up-or-down .main-text-box span {\n    font-size: 12.9em;\n}\n\n.entry-screen section.up-or-down .bitcoin-image {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 10.5em;\n    height: 10.5em;\n}\n\n.entry-screen section.up-or-down .bitcoin-image img {\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.up-or-down .certik-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    color: #f4d56f;\n    gap: 2em;\n    font-weight: 300;\n    margin: 5em 0 0 0;\n}\n\n.entry-screen section.up-or-down .certik-flex span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.up-or-down .certik-flex .certik-logo {\n    width: 22.2em;\n}\n\n.entry-screen section.up-or-down .certik-flex .certik-logo img {\n    width: 100%;\n}\n\n.entry-screen section.up-or-down .styled-button {\n    min-width: 24em;\n}\n\n.entry-screen section.up-or-down .styled-button a {\n    /* padding: 1.6em 5em; */\n}\n\n/* ############################################ */\n/* ###### SECTION: GENERAL STATS (WEB) ######## */\n/* ############################################ */\n\n.entry-screen section.stats {\n    background-color: #ffffff;\n    color: black;\n    padding: 5em 0em;\n    display: flex;\n    justify-content: center;\n}\n\n.entry-screen section.stats .main-flex {\n    min-width: 50em;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    z-index: 1;\n}\n\n.entry-screen section.stats .caption {\n    max-width: 71em;\n}\n\n.entry-screen section.stats .stats-data-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin: 3.5em 0em;\n}\n\n.entry-screen section.stats .win-box {\n    position: relative;\n    padding: 1.5em 2em;\n    min-width: 38em;\n}\n\n.entry-screen section.stats .win-box:not(:last-child)::after {\n    content: '';\n    position: absolute;\n    top: 0;\n    right: 0;\n    background-color: #b6b6b6;\n    width: 0.1em;\n    height: 100%;\n}\n\n.entry-screen section.stats .win-box .top-text {\n    color: #ff0400;\n    font-weight: 700;\n}\n\n.entry-screen section.stats .win-box.wins-paid-all .top-text {\n    color: #8ad603;\n}\n\n.entry-screen section.stats .win-box .top-text span {\n    font-size: 2.2em;\n}\n\n.entry-screen section.stats .win-box .middle-text {\n    font-weight: 600;\n}\n\n.entry-screen section.stats .win-box .middle-text span {\n    font-size: 2.8em;\n}\n\n.entry-screen section.stats .win-box .bottom-text {\n    font-weight: 900;\n    height: 7.8em;\n}\n\n.entry-screen section.stats .win-box .bottom-text span {\n    font-size: 6.5em;\n}\n\n/* ############################################ */\n/* ####### SECTION: TAKE A LOOK (WEB) ######### */\n/* ############################################ */\n\n.entry-screen section.take-a-look {\n    background-color: #181818;\n    color: #ffffff;\n    padding: 10em 0em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.take-a-look .main-flex {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-direction: row;\n    gap: 5em;\n}\n\n.entry-screen section.take-a-look .box.left {\n    width: 46em;\n    display: flex;\n    flex-direction: column;\n    gap: 2em;\n    justify-content: flex-start;\n    align-items: flex-start;\n}\n\n.entry-screen section.take-a-look .caption {\n    max-width: 60em;\n    text-align: left;\n}\n\n.entry-screen section.take-a-look .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.take-a-look .paragraph {\n    text-align: left;\n    line-height: 2.7em;\n    font-weight: 300;\n}\n\n.entry-screen section.take-a-look .paragraph span {\n    font-size: 2em;\n}\n\n.entry-screen section.take-a-look .play-now {\n    color: #ffffff;\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n}\n\n.entry-screen section.take-a-look .play-now a {\n    color: #ffffff;\n}\n\n.entry-screen section.take-a-look .video-parent {\n    position: relative;\n    width: 70.8em;\n    /* height: 42.6em; */\n    aspect-ratio: 16 / 9;\n}\n\n.entry-screen section.take-a-look .video-parent video {\n    display: block;\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.take-a-look .video-gradient-bg {\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.take-a-look .video-black-bg {\n    background: #000000;\n    position: absolute;\n    top: 0.6em;\n    left: 0.6em;\n    bottom: 0.6em;\n    right: 0.6em;\n}\n\n.entry-screen section.take-a-look .video-black-play-bg {\n    background: #000000;\n    position: absolute;\n    top: 0.6em;\n    left: 0.6em;\n    bottom: 0.6em;\n    right: 0.6em;\n    cursor: pointer;\n}\n\n.entry-screen section.take-a-look .video-black-play-bg::after {\n    content: '';\n    position: absolute;\n    width: 10em;\n    height: 10em;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/play-video-image.png');\n}\n\n/* ############################################ */\n/* ##### SECTION: COMPARISON TABLE (WEB) ###### */\n/* ############################################ */\n\n.entry-screen section.comparison-table {\n    background-color: #ffffff;\n    color: #000000;\n}\n\n.entry-screen section.comparison-table p {\n    margin: 0;\n}\n\n.entry-screen section.comparison-table .main-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.comparison-table .table-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    margin-top: 6em;\n}\n\n.entry-screen section.comparison-table .table-flex .column {\n    min-width: 34.4em;\n}\n\n.entry-screen section.comparison-table .table-flex .column.options {\n    min-width: 0;\n}\n\n.entry-screen section.comparison-table .table-flex .up-vs-down {\n    background-color: #181818;\n    color: #f4d56f;\n}\n\n.entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background-color: #f4d56f;\n    color: #000000;\n    font-weight: 700;\n}\n\n.entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top span {\n    font-size: 1.9em;\n}\n\n.entry-screen section.comparison-table .cell {\n    height: 7.6em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    box-sizing: border-box;\n}\n\n.entry-screen section.comparison-table .cell .option-status {\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n}\n\n.entry-screen section.comparison-table .cell .option-status.x-sign {\n    background-image: url('/public/media/images/new-entry-screen/default/x-black.svg');\n    width: 1.8em;\n    height: 1.8em;\n}\n\n.entry-screen section.comparison-table .cell .option-status.v-sign {\n    background-image: url('/public/media/images/new-entry-screen/default/v-black.svg');\n    width: 2.4em;\n    height: 2em;\n}\n\n.entry-screen section.comparison-table .column.up-vs-down .cell .option-status.x-sign {\n    background-image: url('/public/media/images/new-entry-screen/default/x-gold.svg');\n}\n\n.entry-screen section.comparison-table .column.up-vs-down .cell .option-status.v-sign {\n    background-image: url('/public/media/images/new-entry-screen/default/v-gold.svg');\n}\n\n.entry-screen section.comparison-table .cell .option-caption {\n    font-weight: 500;\n}\n\n.entry-screen section.comparison-table .cell .option-caption span {\n    font-size: 2em;\n}\n\n.entry-screen section.comparison-table .cell.extend-bottom {\n    height: 12em;\n}\n\n.entry-screen section.comparison-table .cell.border {\n    border-bottom: 0.1em solid rgba(122, 122, 122, 0.3);\n}\n\n.entry-screen section.comparison-table .cell.text {\n    flex-direction: column;\n    gap: 0.5em;\n}\n\n.entry-screen section.comparison-table .cell.extend-top {\n    height: 3em;\n}\n\n.entry-screen section.comparison-table .cell.description {\n    height: 26.1em;\n    flex-direction: column;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-top-caption {\n    font-weight: 700;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-top-caption span {\n    font-size: 3.4em;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-middle-percentage {\n    font-weight: 700;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-middle-percentage span {\n    font-size: 6.7em;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-bottom-caption {\n    font-weight: 600;\n}\n\n.entry-screen section.comparison-table .cell.description .desc-bottom-caption span {\n    font-size: 2.4em;\n}\n\n.entry-screen section.comparison-table .column.options .cell {\n    justify-content: flex-start;\n    padding: 0em 0em 0em 5em;\n    text-align: left;\n}\n\n.entry-screen section.comparison-table .column.options .cell span {\n    font-size: 2em;\n}\n\n.entry-screen section.comparison-table .play-now {\n    margin: 0;\n}\n\n/* ############################################ */\n/* ####### SECTION: TOP WINNERS (WEB) ######### */\n/* ############################################ */\n\n.entry-screen section.top-winners {\n    background-color: #181818;\n}\n\n.entry-screen section.top-winners .main-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.top-winners .table-wrap {\n    width: 100%;\n    max-width: 120.2em;\n    margin: 2em 0 0 0;\n}\n\n.entry-screen section.top-winners .table-body-wrap {\n    position: relative;\n    width: 100%;\n    /* height: 45.5em; */\n    max-height: 45.5em;\n    overflow: hidden;\n    overflow-y: auto;\n}\n\n.entry-screen section.top-winners .table_header {\n    height: 5.8em;\n    background-color: #000000;\n    width: 100%;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n    overflow: hidden;\n}\n\n.entry-screen section.top-winners .table_header .th {\n    font-weight: 400;\n    color: #f4d56f;\n    transition: all .2s;\n    line-height: 2.2em;\n    box-sizing: border-box;\n    padding: 0 0.5em;\n    text-align: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100%;\n    font-family: 'SF UI Display', sans-serif;\n}\n\n.entry-screen section.top-winners .table_header .th span {\n    font-size: 2em;\n}\n\n.entry-screen section.top-winners .table_header .th.sortable {\n    cursor: pointer;\n}\n\n.entry-screen section.top-winners .table_header .th.sortable::after {\n    display: inline-block;\n    content: '';\n    width: 1.4em;\n    height: 1.7em;\n    background: transparent url('/public/media/images/sort_arrows_empty.png') center no-repeat;\n    background-size: auto 100%;\n    background-size: contain;\n    vertical-align: middle;\n    margin-left: 0.3em;\n}\n\n.entry-screen section.top-winners .table_body {\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 1;\n}\n\n.entry-screen section.top-winners .table_body .tr {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    position: relative;\n    height: 7.4em;\n    background: #232323;\n}\n\n.entry-screen section.top-winners .table_body .tr .data {\n    position: relative;\n    color: #f4d56f;\n    flex-shrink: 0;\n    font-family: 'Barlow Semi Condensed';\n    font-weight: 400;\n}\n\n.entry-screen section.top-winners .table_body .tr .bg {\n    z-index: 0;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    background-color: #212936;\n    width: 0;\n    transition: all .3s;\n}\n\n.entry-screen section.top-winners .table_body .tr .data span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.top-winners .table_body .tr .data.rank {\n    color: #f9ba00;\n    font-weight: 600;\n    font-family: 'SF UI Display', sans-serif;\n}\n\n.entry-screen section.top-winners .table_body .tr .data.rank span {\n    font-size: 2.3em;\n}\n\n.entry-screen section.top-winners .table_body .tr .data.winrate {\n    color: #89d900;\n}\n\n.entry-screen section.top-winners .table_body .tr:not(:last-child) {\n    margin-bottom: 0.3em;\n}\n\n.entry-screen section.top-winners .table_body .tr .user {\n    /* animation: enterFromLeft .25s ease; */\n    /* width: 32%; */\n    color: #b8b9bc;\n    font-weight: 400;\n\n    position: relative;\n}\n\n/* @keyframes enterFromLeft {\n    0% {\n       opacity: 0;\n       transform: translateX(-1000px);\n    }\n    60% {\n       opacity: 1;\n    }\n    80% {\n    }\n    100% {\n       transform: translateX(0);\n    }\n} */\n\n.entry-screen section.top-winners .table_body .tr .user .user-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n}\n\n.entry-screen section.top-winners .table_body .tr .user .image_bubble {\n    position: relative;\n    width: 3.3em;\n    height: 3.3em;\n    margin-right: 2em;\n    flex-shrink: 0;\n}\n\n.entry-screen section.top-winners .table_body .tr .user .image_bubble img.user_avatar {\n    width: 100%;\n    height: 100%;\n    border-radius: 50%;\n}\n\n.entry-screen section.top-winners .table_body .tr .user .image_bubble .country {\n    position: absolute;\n    top: -0.4em;\n    right: -0.4em;\n    width: 1.4em;\n    height: 1.4em;\n}\n\n.entry-screen section.top-winners .table_body .tr .user .image_bubble .country:after {\n    display: block;\n    content: ' ';\n    position: absolute;\n    top: 0;\n    right: 0;\n    left: 0;\n    bottom: 0;\n    z-index: 1;\n    background-image: url('/public/media/images/gold_circle_thick.svg');\n    background-size: 100% 100%;\n}\n\n.entry-screen section.top-winners .table_body .tr .user .image_bubble .country img {\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.top-winners .table_body .tr .user a.wallet-address {\n    display: flex;\n    align-items: center;\n    min-width: 5.8em;\n}\n\n.entry-screen section.top-winners .table_header .th.rank,\n.entry-screen section.top-winners .table_body .tr .data.rank {\n    width: 5%;\n}\n\n.entry-screen section.top-winners .table_header .th.user,\n.entry-screen section.top-winners .table_body .tr .data.user {\n    width: 23%;\n}\n\n.entry-screen section.top-winners .table_header .th.trades,\n.entry-screen section.top-winners .table_body .tr .data.trades {\n    width: 18%;\n}\n\n.entry-screen section.top-winners .table_header .th.wins,\n.entry-screen section.top-winners .table_body .tr .data.wins {\n    width: 18%;\n}\n\n.entry-screen section.top-winners .table_header .th.winrate,\n.entry-screen section.top-winners .table_body .tr .data.winrate {\n    width: 18%;\n}\n\n.entry-screen section.top-winners .table_header .th.profits,\n.entry-screen section.top-winners .table_body .tr .data.profits {\n    width: 18%;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter {\n    z-index: 5;\n    min-width: 29.3em;\n    position: relative;\n    height: 6.6em;\n    border-radius: 1em;\n    background-color: #232935;\n    cursor: pointer;\n    padding: 1.3em 7.1em 1.3em 2em;\n    display: inline-block;\n    margin: 4em 0em 0em 0em;\n    text-align: left;\n    box-sizing: border-box;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter p {\n    font-family: 'SF UI Display', sans-serif;\n    font-weight: 300;\n    color: #f4d56f;\n    text-transform: capitalize;\n    margin: 0;\n    line-height: 4em;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter p span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .arr {\n    background-image: url('/public/media/images/new-entry-screen/default/chupchik-yellow.svg');\n    background-size: 100% 100%;\n    cursor: pointer;\n    position: absolute;\n    min-width: auto;\n    min-height: auto;\n    margin-left: 0;\n    transition: transform .3s ease;\n    top: 53%;\n    transform: translateY(-50%);\n    right: 2.5em;\n    width: 2em;\n    height: 2em;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .arr[dropdown=\"open\"] {\n    transition: transform .3s ease;\n    transform: translateY(-50%) rotate(180deg);\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    align-items: center;\n    position: absolute;\n    top: 7.5em;\n    right: 0em;\n    width: 100%;\n    border-radius: 0.5em;\n    background: #232935;\n    overflow: hidden;\n    padding: 1em 0;\n    box-shadow: 0.1em 0.1em 0.6em -0.2em black;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p {\n    display: flex;\n    align-items: center;\n    justify-content: flex-start;\n    font-weight: 300;\n    color: #ebebeb;\n    text-transform: capitalize;\n    padding: 0em 2em 0em 2em;\n    width: 100%;\n    margin: 0;\n    box-sizing: border-box;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p span {\n    font-size: 1.6em;\n}\n\n.entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p[current=\"true\"] {\n    color: #f4d56f;\n}\n\n.entry-screen section.top-winners .play-now {\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n    margin: 6em 0em 0em 0em;\n}\n\n.entry-screen section.top-winners .play-now a {\n    color: #ffffff;\n}\n\n.entry-screen section.top-winners .error {\n    background: #232323;\n    height: 8.8em;\n    line-height: 8.7em;\n    margin: 0.3em 0em 0em 0em;\n    color: #919191;\n}\n\n.entry-screen section.top-winners .error span {\n    font-size: 2.2em;\n}\n\n/* ############################################ */\n/* ###### SECTION: WEEKLY JACKPOT (WEB) ####### */\n/* ############################################ */\n\n.entry-screen section.weekly-jackpot {\n    background-color: #ffffff;\n    color: #000000;\n    text-align: left;\n    padding: 6em 0em;\n}\n\n.entry-screen section.weekly-jackpot .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n.entry-screen section.weekly-jackpot .caption {\n    text-align: left;\n}\n\n.entry-screen section.weekly-jackpot .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.weekly-jackpot .box.left {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 58em;\n}\n\n.entry-screen section.weekly-jackpot .box.right {\n    /* width: 61em; */\n}\n\n.entry-screen section.weekly-jackpot .play-now {\n    margin: 4em 0em 0em 0em;\n}\n\n.entry-screen section.weekly-jackpot .box.right .image-wrap div {\n    width: 55em;\n    height: 55em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/weekly-jackpot.png');\n}\n\n.entry-screen section.weekly-jackpot p {\n    /* margin: 1.6em 0em 0em 0em; */\n    line-height: 2.5em;\n}\n\n.entry-screen section.weekly-jackpot p.big {\n    margin: 2.6em 0em 0em 0em;\n    font-weight: 800;\n    line-height: 3em;\n}\n\n.entry-screen section.weekly-jackpot p.big span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.weekly-jackpot p.small {\n    line-height: 2.4em;\n}\n\n.entry-screen section.weekly-jackpot p.small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* ###### SECTION: MONTHLY JACKPOT (WEB) ####### */\n/* ############################################ */\n\n.entry-screen section.monthly-jackpot {\n    background-color: #181818;\n    color: #ffffff;\n    text-align: left;\n    padding: 10em 0em;\n}\n\n.entry-screen section.monthly-jackpot .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 7em;\n}\n\n.entry-screen section.monthly-jackpot .caption {\n    text-align: left;\n}\n\n.entry-screen section.monthly-jackpot .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.monthly-jackpot .box.right {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 58em;\n}\n\n.entry-screen section.monthly-jackpot .box.left {\n    /* width: 61em; */\n}\n\n.entry-screen section.monthly-jackpot .play-now {\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n    margin: 4em 0em 0em 0em;\n    color: #ffffff;\n}\n\n.entry-screen section.monthly-jackpot .play-now a {\n    color: #ffffff;\n}\n\n.entry-screen section.monthly-jackpot .box.left .image-wrap div {\n    width: 55em;\n    height: 49em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/monthly-jackpot.png');\n}\n\n.entry-screen section.monthly-jackpot p {\n    /* margin: 1.6em 0em 0em 0em; */\n    line-height: 2.5em;\n}\n\n.entry-screen section.monthly-jackpot p.big {\n    margin: 2.6em 0em 0em 0em;\n    font-weight: 800;\n    line-height: 3em;\n}\n\n.entry-screen section.monthly-jackpot p.big span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.monthly-jackpot p.small {\n    line-height: 2.4em;\n}\n\n.entry-screen section.monthly-jackpot p.small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* ####### SECTION: KEY BENEFITS (WEB) ######## */\n/* ############################################ */\n\n.entry-screen section.key-benefits {\n    background-color: #ffffff;\n    color: #000000;\n}\n\n.entry-screen section.key-benefits .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.key-benefits .caption {\n    max-width: 49em;\n    text-align: left;\n}\n\n.entry-screen section.key-benefits .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.key-benefits .box.left {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 65em;\n}\n\n.entry-screen section.key-benefits .box.right {\n    width: 48em;\n}\n\n.entry-screen section.key-benefits .benefits {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    margin: 2em 0em 0em 0em;\n}\n\n.entry-screen section.key-benefits .benefit {\n    margin: 1em 0em 1em 0em;\n    padding: 0em 0em 0em 3em;\n    text-align: left;\n    position: relative;\n    font-weight: 700;\n}\n\n.entry-screen section.key-benefits .benefit::before {\n    content: '';\n    background: #000000;\n    position: absolute;\n    width: 1.5em;\n    height: 1.5em;\n    border-radius: 50%;\n    top: 50%;\n    transform: translateY(-50%);\n    left: 0;\n}\n\n.entry-screen section.key-benefits .benefit span {\n    font-size: 2.2em;\n}\n\n.entry-screen section.key-benefits .play-now {\n    margin: 3em 0em 0em 0em;\n}\n\n/* .entry-screen section.key-benefits .box.right .image-wrap {\n\n} */\n\n.entry-screen section.key-benefits .box.right .image-wrap div {\n    width: 48em;\n    height: 58em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/key_benefits-image.png');\n}\n\n/* section.key-benefits .box.right .image-wrap img {\n    width: 100%;\n} */\n\n/* ############################################ */\n/* ####### SECTION: DAILY INCOME (WEB) ######## */\n/* ############################################ */\n\n.entry-screen section.daily-income {\n    background-color: #181818;\n    color: #ffffff;\n    padding: 8em 0em;\n}\n\n.entry-screen section.daily-income .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 6em;\n}\n\n.entry-screen section.daily-income .video-parent {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 70.8em;\n    /* height: 42.6em; */\n    aspect-ratio: 16 / 9;\n    border: 0.6em solid #000;\n    z-index: -1;\n    visibility: hidden;\n}\n\n.entry-screen section.daily-income .video-parent.video-visible {\n    z-index: 1;\n    visibility: visible;\n}\n\n.entry-screen section.daily-income .video-parent .close {\n    position: absolute;\n    right: -0.6em;\n    top: -0.6em;\n    width: 4em;\n    height: 4em;\n    cursor: pointer;\n    background-size: 2em;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-color: #000;\n    background-image: url('/public/media/images/new-entry-screen/default/video-x.svg');\n    border-radius: 0em 0em 0em 1em;\n}\n\n.entry-screen section.daily-income .video-parent video {\n    display: block;\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.daily-income .video-gradient-bg {\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.daily-income .video-black-bg {\n    background: #000000;\n    position: absolute;\n    top: 0em;\n    left: 0em;\n    bottom: 0em;\n    right: 0em;\n}\n\n/* .entry-screen section.daily-income .video-black-play-bg {\n    background: #000000;\n    position: absolute;\n    top: 0.6em;\n    left: 0.6em;\n    bottom: 0.6em;\n    right: 0.6em;\n    cursor: pointer;\n} */\n\n.entry-screen section.daily-income .video-black-play-bg::after {\n    content: '';\n    position: absolute;\n    width: 10em;\n    height: 10em;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/play-video-image.png');\n}\n\n.entry-screen section.daily-income .caption {\n    text-align: left;\n}\n\n.entry-screen section.daily-income .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.daily-income .box {\n\n}\n\n.entry-screen section.daily-income .box.left {\n    width: 50em;\n}\n\n.entry-screen section.daily-income .box.left .image-wrap div.bg {\n    position: relative;\n    width: 47.9em;\n    height: 47.9em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/daily-income-image.png');\n}\n\n.entry-screen section.daily-income .box.left .image-wrap div.bg div.play {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 22em;\n    height: 22em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/play-affiliate.png');\n    cursor: pointer;\n}\n\n.entry-screen section.daily-income .box.right {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    text-align: left;\n    max-width: 61em;\n}\n\n.entry-screen section.daily-income p.big {\n    line-height: 3.4em;\n    font-weight: 500;\n    margin: 2em 0em 0em 0em;\n}\n\n.entry-screen section.daily-income p.big span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.daily-income p {\n    margin: 0;\n}\n\n.entry-screen section.daily-income p.small {\n    margin: 1em 0em 0em 0em;\n    line-height: 2.6em;\n}\n\n.entry-screen section.daily-income p.small span {\n    font-size: 2em;\n}\n\n.entry-screen section.daily-income .play-now {\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n    margin: 3.6em 0em 0em 0em;\n    color: #ffffff;\n}\n\n.entry-screen section.daily-income .play-now a {\n    color: #ffffff;\n}\n\n/* ############################################ */\n/* ############ SECTION: FAQ (WEB) ############ */\n/* ############################################ */\n\n.entry-screen section.entry-faq {\n    background-color: #ffffff;\n    color: #000000;\n}\n\n.entry-screen section.entry-faq .main-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n}\n\n.entry-screen section.entry-faq .play-now {\n    margin: 4em 0em 0em 0em;\n}\n\n.entry-screen section.entry-faq .faq-wrap {\n    margin: 4em 0 0 0;\n}\n\n.entry-screen section.entry-faq .dropdown-wrap {\n    position: relative;\n    z-index: 2;\n}\n\n.entry-screen section.entry-faq .faq-header-list {\n    position: relative;\n    z-index: 5;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n    height: 50%;\n    padding: 0;\n}\n\n.entry-screen section.entry-faq .faq-header-current-list {\n    position: relative;\n    min-width: 29.3em;\n    height: 6.6em;\n    border-radius: 1em;\n    background-color: #232935;\n    cursor: pointer;\n    padding: 1.3em 7.1em 1.3em 2em;\n    display: inline-block;\n    box-sizing: border-box;\n    text-align: left;\n}\n\n.entry-screen section.entry-faq .faq-header-current-list p {\n    font-family: 'SF UI Display', sans-serif;\n    font-weight: 300;\n    color: #f4d56f;\n    text-transform: capitalize;\n    margin: 0;\n    line-height: 4em;\n}\n\n.entry-screen section.entry-faq .faq-header-current-list p span {\n    font-size: 2.5em;\n}\n\n.entry-screen section.entry-faq .faq-header-current-list div {\n    background-size: 100% 100%;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/new-entry-screen/default/chupchik-yellow.svg');\n    cursor: pointer;\n    position: absolute;\n    min-width: auto;\n    min-height: auto;\n    margin-left: 0;\n    transition: transform .3s ease;\n    top: 53%;\n    transform: translateY(-50%);\n    right: 2.5em;\n    width: 2em;\n    height: 2em;\n}\n\n.entry-screen section.entry-faq .faq-header-current-list div[rotate=\"true\"] {\n    transition: transform .3s ease;\n    transform: translateY(-50%) rotate(180deg);\n}\n\n.entry-screen section.entry-faq .faq-header-drop-list {\n    position: absolute;\n    top: 7.5em;\n    transition: all .3s;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    min-width: 29.3em;\n    height: auto;\n    background: #232935;\n    border-radius: 0.5em;\n    left: 50%;\n    transform: translateX(-50%);\n    padding: 1em 0;\n    box-shadow: 0.1em 0.1em 0.6em -0.2em black;\n}\n\n.entry-screen section.entry-faq .faq-header-list-item {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    cursor: pointer;\n}\n\n.entry-screen section.entry-faq .faq-header-list-item p {\n    font-family: 'SF UI Display', sans-serif;\n    color: #ebebebe6;\n    text-transform: capitalize;\n    padding: 1em 2em 1em 2em;\n    width: 100%;\n    margin: 0;\n    text-align: left;\n    font-weight: 300;\n}\n\n.entry-screen section.entry-faq .faq-header-list-item p:hover {\n    color: #f4d56f;\n}\n\n.entry-screen section.entry-faq .faq-header-list-item p span {\n    font-size: 1.6em;\n}\n\n.entry-screen section.entry-faq .faq-header-list-item p[activetab=\"true\"] {\n    color: #f4d56f;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap {\n    display: flex;\n    justify-content: center;\n    width: 120.2em;\n    max-height: 45.4em;\n    overflow-y: auto;\n    margin: 2em 0 0 0;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc {\n    width: 100%;\n    border-radius: 0.9em;\n    padding: 1.5em 2em;\n    background-color: #d97976;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    box-sizing: border-box;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p {\n    text-align: center;\n    padding: 0;\n    margin: 0;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.please-note {\n    text-align: center;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.please-note span {\n    font-size: 1.5em;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.we-want {\n    text-align: center;\n    margin: 0.5em 0 0 0;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc p.we-want span {\n    font-size: 1.6em;\n}\n\n.entry-screen section.entry-faq .faq-content-wrap .faq-content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    text-align: center;\n    height: 100%;\n    overflow-y: auto;\n    position: relative;\n    width: 100%;\n    box-sizing: border-box;\n    z-index: 1;\n}\n\n.entry-screen section.entry-faq .faq-content-row {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n}\n\n.entry-screen section.entry-faq .faq-content-row:not(:last-child) {\n    margin: 0em 0em 0.6em 0em;\n}\n\n.entry-screen section.entry-faq .faq-content-header {\n    position: relative;\n    min-height: 8.6em;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background-color: #e6e6e6;\n    padding: 0 2em 0 4.5em;\n    border-radius: 0.9em;\n    cursor: pointer;\n    box-sizing: border-box;\n}\n\n.entry-screen section.entry-faq .faq-content-header:hover {\n    opacity: .8;\n}\n\n.entry-screen section.entry-faq .faq-content-header-desc {\n    font-family: 'SF UI Display', sans-serif;\n    color: #000000;\n    font-weight: 400;\n    width: 95%;\n    text-align: left;\n    margin: 0;\n}\n\n.entry-screen section.entry-faq .faq-content-header-desc span {\n    font-size: 2.4em;\n}\n\n.entry-screen section.entry-faq .faq-content-content-desc {\n    font-family: 'SF UI Display', sans-serif;\n    color: #ffffff;\n    text-align: left;\n    font-weight: 300;\n    width: 95%;\n    margin: 0;\n    line-height: 3.2em;\n}\n\n.entry-screen section.entry-faq .faq-content-content-desc span {\n    font-size: 2.4em;\n}\n\n.entry-screen section.entry-faq .faq-content-header-arr {\n    position: absolute;\n    width: 1.9em;\n    height: 2.8em;\n    right: 3.6em;\n    transform: rotate(90deg);\n    background: transparent url('/public/media/images/chevron.svg') center no-repeat;\n    background-size: 100% 100%;\n    transition: transform 500ms ease;\n}\n\n.entry-screen section.entry-faq .faq-content-content-arr {\n    position: absolute;\n    width: 1.9em;\n    height: 2.8em;\n    right: 3.6em;\n    transform: rotate( -90deg );\n    background: transparent url('/public/media/images/chevron.svg') center no-repeat;\n    background-size: 100% 100%;\n    transition: transform 500ms ease;\n}\n\n.entry-screen section.entry-faq .faq-content-content {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 3em 3em 3em 4.5em;\n    margin: 0.6em 0 0 0;\n    background-color: #232935;\n    border-radius: 0.9em;\n}\n\n/* ############################################ */\n/* ####### SECTION: BEST CHANCE (WEB) ######### */\n/* ############################################ */\n\n.entry-screen section.best-chance {\n    background-color: #181818;\n    color: #ffffff;\n    text-align: left;\n    padding: 10em 0em;\n}\n\n.entry-screen section.best-chance .main-flex {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 2em;\n}\n\n.entry-screen section.best-chance .caption {\n    text-align: left;\n}\n\n.entry-screen section.best-chance .caption::before {\n    margin: 0em 0em 2em 0em;\n}\n\n.entry-screen section.best-chance .box.left {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    max-width: 58em;\n}\n\n.entry-screen section.best-chance .box.right {\n    width: 61em;\n}\n\n.entry-screen section.best-chance .play-now {\n    background-image: linear-gradient(to right, #8cd903 23%, #fb0401 83%);\n    margin: 4em 0em 0em 0em;\n    color: #ffffff;\n}\n\n.entry-screen section.best-chance .play-now a {\n    color: #ffffff;\n}\n\n.entry-screen section.best-chance .box.right .image-wrap div {\n    width: 61em;\n    height: 43.3em;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-position: center;\n    background-image: url('/public/media/images/new-entry-screen/default/best-chance-image.png');\n}\n\n.entry-screen section.best-chance p {\n    margin: 1.6em 0em 0em 0em;\n    line-height: 2.5em;\n}\n\n.entry-screen section.best-chance p span {\n    font-size: 1.9em;\n}\n\n/* ############################################ */\n/* #### SECTION: POLYGON BLOCKCHAIN (WEB) ##### */\n/* ############################################ */\n\n.entry-screen section.polygon-blockchain {\n    background-color: #ffffff;\n    color: #000000;\n}\n\n.entry-screen section.polygon-blockchain .main-flex {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    max-width: 96em;\n    margin: 0 auto;\n}\n\n.entry-screen section.polygon-blockchain .polygon-image {\n    width: 10.5em;\n    height: 10.5em;\n}\n\n.entry-screen section.polygon-blockchain .polygon-image img {\n    width: 100%;\n    height: 100%;\n}\n\n.entry-screen section.polygon-blockchain .caption {\n    font-weight: 900;\n    line-height: 8em;\n    /* text-align: center; */\n    margin: 1.5em 0 0 0;\n}\n\n.entry-screen section.polygon-blockchain .caption::before {\n    display: none;\n}\n\n.entry-screen section.polygon-blockchain p {\n    margin: 0;\n    font-weight: 700;\n}\n\n.entry-screen section.polygon-blockchain p span {\n    font-size: 2em;\n}\n\n.entry-screen section.polygon-blockchain p.the-game {\n    margin: 4em 0em 2em 0em;\n}\n\n.entry-screen section.polygon-blockchain p.our-game {\n    margin: 0em 0em 0em 0em;\n}\n\n.entry-screen section.polygon-blockchain .play-btns {\n    margin: 4em 0em 0em 0em;\n}\n\n/* ############################################ */\n/* ########## SECTION: FOOTER (WEB) ########### */\n/* ############################################ */\n\n.entry-screen section.footer {\n    background-color: #181818;\n    color: #5a5a5a;\n    padding: 6em 19em 6em 19em;\n}\n\n.entry-screen section.footer .disclaimer {\n    line-height: 2.5em;\n    text-align: left;\n}\n\n.entry-screen section.footer .disclaimer span {\n    font-size: 1.8em;\n}\n\n@media screen and (max-width: 1320px) {\n\n    .trade_page .entry-screen {\n        font-size: 9px;\n    }\n\n}\n\n@media screen and (max-width: 1150px) {\n\n    .trade_page .entry-screen {\n        font-size: 8px;\n    }\n\n}\n\n@media screen and (max-width: 1035px) {\n\n    .trade_page .entry-screen {\n        font-size: 7px;\n    }\n\n}\n\n@media screen and (max-width: 905px) {\n\n    .trade_page .entry-screen {\n        font-size: 6px;\n    }\n\n}\n\n@media screen and (max-width: 775px) {\n\n    .trade_page .entry-screen {\n        font-size: 5px;\n    }\n\n}\n\n@media screen and (max-width: 480px) {\n\n    .trade_page .entry-screen {\n        font-size: inherit;\n    }\n\n    .entry-screen section .caption {\n        font-weight: 800 !important;\n        line-height: 4.5em !important;\n        text-align: center !important;\n    }\n    \n    .entry-screen section .caption span {\n        font-size: 5em;\n    }\n\n    .entry-screen section .caption::before {\n        width: 12em;\n        height: 0.4em;\n        margin: 0em auto 1em auto !important;\n    }\n\n    /* ############################################ */\n    /* ####### \"HOW TO PLAY\" BUTTON (MOBILE) ###### */\n    /* ############################################ */\n\n    .entry-screen section .styled-button {\n        min-width: 25em;\n        margin: 0em auto 0em auto;\n    }\n\n    .entry-screen section .styled-button a {\n        padding: 1.4em 4em;\n    }\n\n    .entry-screen section .styled-button span {\n        font-size: 2.2em;\n    }\n\n    /* ############################################ */\n    /* ######## \"PLAY NOW\" BUTTON (MOBILE) ######## */\n    /* ############################################ */\n\n    /* .entry-screen section .play-now {\n        min-width: 25em;\n        margin: 0em auto 0em auto;\n    }\n\n    .entry-screen section .play-now a {\n        padding: 1.4em 4em;\n    }\n\n    .entry-screen section .play-now span {\n        font-size: 2.2em;\n    } */\n    \n    /* ############################################ */\n    /* #### \"BE AN AFFILIATE\" BUTTON (MOBILE) ##### */\n    /* ############################################ */\n\n    /* .entry-screen section .be-an-affiliate {\n        min-width: 25em;\n        margin: 0em auto 0em auto;\n    }\n\n    .entry-screen section .be-an-affiliate a {\n        padding: 1.4em 4em;\n    }\n\n    .entry-screen section .be-an-affiliate span {\n        font-size: 2.2em;\n    } */\n\n    /* ############################################ */\n    /* ############ MENU ICON (MOBILE) ############ */\n    /* ############################################ */\n\n    .entry-screen .menu-icon {\n        right: 1em;\n        top: 1em;\n    }\n\n    /* ############################################ */\n    /* ############ TOP MENU (MOBILE) ############# */\n    /* ############################################ */\n\n    .entry-screen .top-menu {\n        display: none;\n    }\n\n    /* ############################################ */\n    /* ############ SIDE MENU (MOBILE) ############ */\n    /* ############################################ */\n\n    .entry-screen .side-menu {\n        transform: translateX(100%);\n        right: auto;\n    }\n\n    .entry-screen .side-menu .menu-caption::before {\n        width: 12em;\n        margin: 0em auto 0em auto;\n    }\n\n    .entry-screen .side-menu .menu-caption span {\n        font-size: 6.2em;\n    }\n\n    .entry-screen .side-menu .item span {\n        font-size: 2.3em;\n    }\n\n    .entry-screen .side-menu.open {\n        width: 100%;\n    }\n\n    .entry-screen .side-menu .play-now {\n        padding: 1.4em 5em;\n        min-width: 24em;\n    }\n\n    .entry-screen .side-menu .play-now span {\n        font-size: 2.3em;\n    }\n\n    /* ############################################ */\n    /* ############# WEB/MOBILE ONLY ############## */\n    /* ############################################ */\n\n    .entry-screen .web-only.flex {\n        display: none;\n    }\n\n    .entry-screen .web-only.block {\n        display: none;\n    }\n \n    .entry-screen .mobile-only.flex {\n        display: flex;\n    }\n\n    .entry-screen .mobile-only.block {\n        display: block;\n    }\n\n    /* ################################################# */\n    /* ######### SECTION: UP OR DOWN (MOBILE) ########## */\n    /* ################################################# */\n\n    .entry-screen section.up-or-down {\n        padding: 4em 0em 4em 0em;\n        background-color: #181818;\n    }\n\n    .entry-screen section.up-or-down::before,\n    .entry-screen section.up-or-down::after {\n        display: none;\n    }\n\n    .entry-screen section.up-or-down .bitcoin-image {\n        width: 7.6em;\n        height: 7.6em;\n    }\n\n    .entry-screen section.up-or-down .big-caption {\n        margin: -20em 0 0 0;\n    }\n\n    .entry-screen .up-or-down .up-down-image-box div {\n        /* background: #00000078; */\n        width: 34em;\n        height: 39em;\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n        background-image: url('/public/media/images/new-entry-screen/default/up-down-mobile.png');\n    }\n\n    .entry-screen section.up-or-down .side-image-box {\n        display: none;\n    }\n\n    .entry-screen section.up-or-down .main-text-box {\n        max-width: 31em;\n        line-height: 6.6em;\n    }\n\n    .entry-screen section.up-or-down .main-text-box span {\n        font-size: 7.9em;\n    }\n\n    .entry-screen section.up-or-down .certik-flex {\n        flex-direction: column;\n        margin: 2em 0 0 0;\n        gap: 1em;\n    }\n\n    .entry-screen section.up-or-down .certik-flex span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.up-or-down .certik-flex .certik-logo {\n        width: 17.5em;\n    }\n\n    .entry-screen section.up-or-down .top-title {\n        margin: 1.5em 0em 0em 0em;\n    }\n\n    .entry-screen section.up-or-down .top-title span {\n        font-size: 2.5em;\n    }\n\n    .entry-screen section .play-btns {\n        /* flex-direction: column; */\n        flex-wrap: wrap;\n        gap: 1.6em;\n        margin: 3.5em 0 0 0;\n        width: 32em;\n    }\n\n    .entry-screen section.up-or-down .styled-button {\n        min-width: unset;\n        margin: 0em auto 0em auto;\n    }\n\n    .entry-screen section.up-or-down .styled-button a {\n        padding: 1.4em 1.8em;\n    }\n\n    .entry-screen section.up-or-down .styled-button span {\n        font-size: 2em;\n    }\n\n    .entry-screen section.up-or-down .styled-button.play-now {\n        width: 100%;\n        font-weight: 700;\n    }\n\n    .entry-screen section.up-or-down .styled-button.how-to-play {\n        /* width: 50%; */\n    }\n\n    .entry-screen section.up-or-down .styled-button.be-an-affiliate {\n        /* width: 50%; */\n        margin: 0em 0em 0em auto;\n    }\n\n    .entry-screen section.up-or-down .styled-button.how-to-play,\n    .entry-screen section.up-or-down .styled-button.be-an-affiliate {\n        flex-grow: 1;\n    }\n\n    .entry-screen section.up-or-down .styled-button.how-to-play span,\n    .entry-screen section.up-or-down .styled-button.be-an-affiliate span {\n        font-size: 1.8em;\n    }\n\n    /* ################################################# */\n    /* ####### SECTION: GENERAL STATS (MOBILE) ######### */\n    /* ################################################# */\n\n    .entry-screen section.stats {\n        \n    }\n\n    .entry-screen section.stats .caption {\n        max-width: 34em;\n    }\n\n    .entry-screen section.stats .main-flex {\n        min-width: unset;\n    }\n\n    .entry-screen section.stats .stats-data-flex {\n        flex-direction: column;\n        margin: 2em 0em 0em 0em;\n    }\n\n    .entry-screen section.stats .win-box {\n        padding: 1.3em 3em 1.3em 3em;\n        min-width: unset;\n        height: 9.4em;\n    }\n\n    .entry-screen section.stats .win-box:not(:last-child)::after {\n        width: 23em;\n        height: 0.1em;\n        top: auto;\n        right: auto;\n        bottom: 0;\n        left: 50%;\n        transform: translateX(-50%);\n    }\n\n    .entry-screen section.stats .win-box .top-text span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.stats .win-box .middle-text span {\n        font-size: 1.8em;\n    }\n\n    .entry-screen section.stats .win-box .bottom-text {\n        height: 5.2em;\n    }\n\n    .entry-screen section.stats .win-box .bottom-text span {\n        font-size: 4.3em;\n        font-weight: 700;\n    }\n\n    .entry-screen section.stats .play-now {\n        margin: 2em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ######## SECTION: TAKE A LOOK (MOBILE) ########## */\n    /* ################################################# */\n\n    .entry-screen section.take-a-look {\n        padding: 5em 0em 5em 0em;\n    }\n\n    .entry-screen section.take-a-look .main-flex {\n        flex-direction: column;\n        gap: unset;\n    }\n\n    .entry-screen section.take-a-look .box.left {\n        justify-content: center;\n        align-items: center;\n        width: auto;\n    }\n\n    .entry-screen section.take-a-look .caption {\n        width: 26em;\n    }\n\n    .entry-screen section.take-a-look .video-parent {\n        width: 33em;\n        /* height: 19.6em; */\n    }\n\n    .entry-screen section.take-a-look .video-black-bg {\n        top: 0.4em;\n        left: 0.4em;\n        bottom: 0.4em;\n        right: 0.4em;\n    }\n\n    .entry-screen section.take-a-look .video-black-play-bg::after {\n        width: 6em;\n        height: 6em;\n    }\n\n    .entry-screen section.take-a-look .caption::before {\n        margin: 0em auto 1em auto;\n    }\n\n    .entry-screen section.take-a-look .paragraph {\n        text-align: center;\n        width: 29em;\n        margin: 2em 0em 4em 0em;\n        line-height: 2.4em;\n    }\n\n    .entry-screen section.take-a-look .paragraph span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.take-a-look .play-now {\n        margin: 5em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ###### SECTION: COMPARISON TABLE (MOBILE) ####### */\n    /* ################################################# */\n\n    .entry-screen section.comparison-table {\n        padding: 5em 0em 5em 0em;\n    }\n\n    .entry-screen section.comparison-table .table-flex {\n        width: 100%;\n        margin-top: 4em;\n    }\n\n    .entry-screen section.comparison-table .table-flex .column {\n        min-width: unset;\n        width: 100%;\n    }\n\n    .entry-screen section.comparison-table .cell {\n        height: 9.2em;\n    }\n\n    .entry-screen section.comparison-table .cell.text {\n        gap: unset;\n    }\n\n    .entry-screen section.comparison-table .cell .option-caption {\n        font-weight: 400;\n        padding: 0em 1em;\n        line-height: 1.7em;\n    }\n\n    .entry-screen section.comparison-table .cell .option-caption span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.comparison-table .cell.description {\n        height: 14em;\n    }\n\n    .entry-screen section.comparison-table .cell.description .desc-top-caption span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.comparison-table .cell.description .desc-middle-percentage span {\n        font-size: 3.5em;\n    }\n\n    .entry-screen section.comparison-table .cell.description .desc-bottom-caption span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.comparison-table .cell.border:last-child {\n        border: 0;\n    }\n    \n    .entry-screen section.comparison-table .cell.extend-top {\n        height: 2.2em;\n    }\n\n    .entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top {\n        font-weight: 600;\n    }\n\n    .entry-screen section.comparison-table .table-flex .up-vs-down .cell.extend-top span {\n        font-size: 1.4em;\n    }\n\n    .entry-screen section.comparison-table .play-now {\n        margin: 5em auto 0em auto;\n    }\n\n    .entry-screen section.comparison-table .cell .option-status.x-sign {\n        width: 1.4em;\n        height: 1.4em;\n    }\n\n    .entry-screen section.comparison-table .cell .option-status.v-sign {\n        width: 2.1em;\n        height: 1.8em;\n    }\n\n    /* ################################################# */\n    /* ######## SECTION: TOP WINNERS (MOBILE) ########## */\n    /* ################################################# */\n\n    .entry-screen section.top-winners {\n        padding: 5em 0em 5em 0em;\n    }\n\n    .entry-screen section.top-winners .table_header .th {\n        line-height: 1.8em;\n    }\n\n    .entry-screen section.top-winners .table_header .th,\n    .entry-screen section.top-winners .table_body .tr {\n        padding: 0;\n    }\n\n    .entry-screen section.top-winners .table_header .th.wins,\n    .entry-screen section.top-winners .table_body .tr .data.wins,\n    .entry-screen section.top-winners .table_header .th.winrate,\n    .entry-screen section.top-winners .table_body .tr .data.winrate,\n    .entry-screen section.top-winners .table_header .th.trades,\n    .entry-screen section.top-winners .table_body .tr .data.trades {\n        display: none;\n    }\n\n    .entry-screen section.top-winners .table_body .tr .data {\n        box-sizing: border-box;\n    }\n\n    .entry-screen section.top-winners .table_header .th.user,\n    .entry-screen section.top-winners .table_body .tr .data.user {\n        width: 56%;\n    }\n\n    .entry-screen section.top-winners .table_header .th.rank,\n    .entry-screen section.top-winners .table_body .tr .data.rank,\n    .entry-screen section.top-winners .table_header .th.profits,\n    .entry-screen section.top-winners .table_body .tr .data.profits {\n        width: 22%;\n    }\n\n    .entry-screen section.top-winners .table_header .th.rank,\n    .entry-screen section.top-winners .table_body .tr .data.rank {\n        padding: 0em 0em 0em 1.5em;\n    }\n\n    .entry-screen section.top-winners .table_header .th.profits,\n    .entry-screen section.top-winners .table_body .tr .data.profits {\n        padding: 0em 1.5em 0em 0em;\n    }\n\n\n    .entry-screen section.top-winners .table_header .th.rank {\n        justify-content: flex-start;\n    }\n\n    .entry-screen section.top-winners .table_body .tr .data.rank {\n        text-align: left;\n    }\n\n    .entry-screen section.top-winners .table_body .tr .data.rank span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.top-winners .table_header .th.profits {\n        justify-content: flex-end;\n    }\n\n    .entry-screen section.top-winners .table_body .tr .data.profits {\n        text-align: right;\n    }\n\n    .entry-screen section.top-winners .table_header {\n        height: 4.4em;\n    }\n\n    .entry-screen section.top-winners .table_header .th span {\n        font-size: 1.4em;\n    }\n\n    .entry-screen section.top-winners .table_body .tr {\n        height: 5.4em;\n    }\n\n    .entry-screen section.top-winners .table_body .tr .data span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.top-winners .table_header .th.sortable::after {\n        width: 0.8em;\n        height: 1.2em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter {\n        min-width: 18.3em;\n        height: 4.4em;\n        border-radius: 1em;\n        padding: 1.3em 4.8em 1.3em 1.5em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter p {\n        line-height: 2.3em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter p span {\n        font-size: 1.5em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter .arr {\n        width: 1.5em;\n        height: 1.5em;\n        right: 1.8em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown {\n        top: 5em;\n        padding: 0.5em 0;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p {\n        padding: 0.5em 1.5em;\n    }\n\n    .entry-screen section.top-winners .leaderboard_current_filter .leaderboard_dropdown p span {\n        font-size: 1.5em;\n    }\n\n    .entry-screen section.top-winners .play-now {\n        margin: 5em auto 0em auto;\n    }\n\n    .entry-screen section.top-winners .error {\n        height: 6.8em;\n        line-height: 6.7em;\n    }\n    \n    .entry-screen section.top-winners .error span {\n        font-size: 1.9em;\n    }\n\n    /* ############################################ */\n    /* #### SECTION: WEEKLY JACKPOT (MOBILE) ###### */\n    /* ############################################ */\n\n    .entry-screen section.weekly-jackpot {\n        padding: 2em 0em 5em 0em;\n    }\n\n    .entry-screen section.weekly-jackpot .main-flex {\n        flex-direction: column;\n        gap: 3em;\n    }\n\n    .entry-screen section.weekly-jackpot p.big {\n        margin: 1.6em auto 1em auto;\n        font-weight: 800;\n        line-height: 2.5em;\n        width: 37em;\n    }\n\n    .entry-screen section.weekly-jackpot p.big span {\n        font-size: 2.1em;\n    }\n\n    .entry-screen section.weekly-jackpot p.small {\n        margin: 0em auto 0em auto;\n        line-height: 1.9em;\n        width: 37em;\n    }\n\n    .entry-screen section.weekly-jackpot p.small span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.weekly-jackpot .box.right .image-wrap div {\n        width: 37.5em;\n        height: 29em;\n        background-image: url('/public/media/images/new-entry-screen/default/weekly-jackpot-mobile.png');\n    }\n\n    .entry-screen section.weekly-jackpot .box.left {\n        order: 2;\n        text-align: center;\n    }\n    .entry-screen section.weekly-jackpot .box.right .image-wrap div\n    .entry-screen section.weekly-jackpot .box.right {\n        order: 1;\n    }\n\n    .entry-screen section.weekly-jackpot .play-now {\n        margin: 3em auto 0em auto;\n    }\n\n    /* ############################################ */\n    /* #### SECTION: MONTHLY JACKPOT (MOBILE) ##### */\n    /* ############################################ */\n\n    .entry-screen section.monthly-jackpot {\n        padding: 5em 0em;\n    }\n\n    .entry-screen section.monthly-jackpot .main-flex {\n        flex-direction: column;\n        gap: 3em;\n    }\n\n    .entry-screen section.monthly-jackpot p.big {\n        margin: 1.6em auto 1em auto;\n        font-weight: 800;\n        line-height: 2.5em;\n        width: 37em;\n    }\n\n    .entry-screen section.monthly-jackpot p.big span {\n        font-size: 2.1em;\n    }\n\n    .entry-screen section.monthly-jackpot p.small {\n        margin: 0em auto 0em auto;\n        line-height: 1.9em;\n        width: 37em;\n    }\n\n    .entry-screen section.monthly-jackpot p.small span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.monthly-jackpot .box.right {\n        text-align: center;\n    }\n\n    .entry-screen section.monthly-jackpot .box.left .image-wrap div {\n        width: 30em;\n        height: 27em;\n        background-image: url('/public/media/images/new-entry-screen/default/monthly-jackpot-mobile.png');\n    }\n\n    .entry-screen section.monthly-jackpot .play-now {\n        margin: 3em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ######## SECTION: KEY BENEFITS (MOBILE) ######### */\n    /* ################################################# */\n\n    .entry-screen section.key-benefits {\n        padding: 0.5em 0em 5em 0em;\n    }\n\n    .entry-screen section.key-benefits .main-flex {\n        flex-direction: column;\n    }\n\n    .entry-screen section.key-benefits .box.right {\n        order: 1;\n        width: auto;\n    }\n\n    .entry-screen section.key-benefits .box.left {\n        order: 2;\n    }\n\n    .entry-screen section.key-benefits .benefits {\n        margin: 2em auto 0em auto;\n        width: 88%;\n    }\n\n    .entry-screen section.key-benefits .benefit {\n        font-weight: 600;\n        line-height: 2.3em;\n        padding: 0em 0em 0em 2em;\n        margin: 0.8em 0em 0.8em 0em;\n    }\n\n    .entry-screen section.key-benefits .benefit::before {\n        width: 1em;\n        height: 1em;\n    }\n\n    .entry-screen section.key-benefits .benefit span {\n        font-size: 2em;\n    }\n\n    .entry-screen section.key-benefits .caption {\n        max-width: unset;\n        text-align: inherit;\n        width: 33em;\n        margin: 3em auto 0em auto;\n    }\n\n    .entry-screen section.key-benefits .caption::before {\n        margin: 0em auto 1em auto;\n    }\n\n    .entry-screen section.key-benefits .box.right .image-wrap div {\n        width: 41em;\n        height: 25em;\n        background-image: url('/public/media/images/new-entry-screen/default/key_benefits-image-mobile.png');\n    }\n\n    .entry-screen section.key-benefits .play-now {\n        margin: 3em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ######## SECTION: DAILY INCOME (MOBILE) ######### */\n    /* ################################################# */\n\n    .entry-screen section.daily-income {\n        padding: 5em 0em 5em 0em;\n    }\n\n    .entry-screen section.daily-income .video-parent {\n        width: 36.8em;\n        transform: translate(-50%, 0);\n        top: 6.7em;\n    }\n\n    .entry-screen section.daily-income .main-flex {\n        flex-direction: column;\n        gap: unset;\n    }\n\n    .entry-screen section.daily-income .box.left {\n        width: auto;\n    }\n\n    .entry-screen section.daily-income .box.left .image-wrap div.bg {\n        width: 25em;\n        height: 25em;\n        margin: 0 auto;\n    }\n\n    .entry-screen section.daily-income .box.left .image-wrap div.bg div.play {\n        width: 11em;\n        height: 11em;\n    }\n\n    .entry-screen section.daily-income .caption {\n        max-width: unset;\n        margin: 4em 0em 0em 0em;\n    }\n\n    .entry-screen section.daily-income p.big {\n        line-height: 2.8em;\n        margin: 2em auto 0em auto;\n        width: 35em;\n        text-align: center;\n    }\n\n    .entry-screen section.daily-income p.big span {\n        font-size: 2.1em;\n    }\n\n    .entry-screen section.daily-income p.small {\n        text-align: center;\n        width: 32em;\n        margin: 1em auto 0em auto;\n        line-height: 2.0em;\n    }\n\n    .entry-screen section.daily-income p.small span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.daily-income .caption::before {\n        margin: 0em auto 1em auto;\n    }\n\n    .entry-screen section.daily-income .play-now {\n        margin: 4em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ############# SECTION: FAQ (MOBILE) ############# */\n    /* ################################################# */\n\n    .entry-screen section.entry-faq {\n        padding: 4em 0em 4em 0em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-wrap {\n        width: 100%;\n        max-height: 44em;\n    }\n\n    .entry-screen section.entry-faq .faq-wrap {\n        width: 100%;\n    }\n\n    .entry-screen section.entry-faq .faq-header-current-list {\n        min-width: 18.3em;\n        height: 4.4em;\n        border-radius: 1em;\n        padding: 1.3em 4.8em 1.3em 1.5em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-current-list p {\n        line-height: 2.3em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-current-list p span {\n        font-size: 1.5em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-current-list div {\n        width: 1.5em;\n        height: 1.5em;\n        right: 1.8em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-drop-list {\n        top: 5em;\n        min-width: 18.3em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-list-item {\n        line-height: 2.3em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-list-item p {\n        padding: 0.5em 1.5em;\n        line-height: 2.3em;\n    }\n\n    .entry-screen section.entry-faq .faq-header-list-item p span {\n        font-size: 1.5em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-header {\n        min-height: 6.5em;\n        padding: 1em 6.5em 1em 3.5em;\n        justify-content: center;\n        border-radius: 0;\n    }\n\n    .entry-screen section.entry-faq .faq-content-header-desc {\n        text-align: center;\n    }\n\n    .entry-screen section.entry-faq .faq-content-header-desc span {\n        font-size: 1.7em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-content {\n        border-radius: 0;\n        padding: 2.5em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-content-desc {\n        line-height: 2.2em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-content-desc span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-header-arr,\n    .entry-screen section.entry-faq .faq-content-content-arr {\n        width: 1.2em;\n        height: 1.8em;\n        right: 2.5em;\n    }\n\n    .entry-screen section.entry-faq .faq-content-wrap .faq-content .faq-bottom-desc {\n        border-radius: 0;\n    }\n\n    .entry-screen section.entry-faq .play-now {\n        margin: 4em auto 0em auto;\n    }\n\n    /* ################################################# */\n    /* ######## SECTION: BEST CHANCE (MOBILE) ########## */\n    /* ################################################# */\n\n    .entry-screen section.best-chance {\n        padding: 4em 0em 5em 0em;\n    }\n\n    .entry-screen section.best-chance p {\n        line-height: 2.0em;\n        width: 32em;\n        margin: 2em auto 0em auto;\n        text-align: center;\n    }\n\n    .entry-screen section.best-chance p span {\n        font-size: 1.6em;\n    }\n\n    .entry-screen section.best-chance .main-flex {\n        flex-direction: column;\n    }\n\n    .entry-screen section.best-chance .box.right {\n        order: 1;\n        width: unset;\n    }\n\n    .entry-screen section.best-chance .box.left {\n        order: 2;\n    }\n\n    .entry-screen section.best-chance .box.right .image-wrap div {\n        width: 32em;\n        height: 24em;\n        margin: 0 auto;\n    }\n\n    .entry-screen section.best-chance .play-now {\n        margin: 4em auto 0 auto;\n    }\n\n    /* ################################################# */\n    /* ##### SECTION: POLYGON BLOCKCHAIN (MOBILE) ###### */\n    /* ################################################# */\n\n    .entry-screen section.polygon-blockchain {\n        padding: 4em 0em 5em 0em;\n    }\n\n    .entry-screen section.polygon-blockchain .polygon-image {\n        width: 7.5em;\n        height: 7.5em;\n    }\n\n    .entry-screen section.polygon-blockchain p {\n        width: 37em;\n    }\n\n    .entry-screen section.polygon-blockchain p.the-game {\n        margin: 2em 0em 2em 0em;\n    }\n\n    .entry-screen section.polygon-blockchain p span {\n        font-size: 1.4em;\n    }\n\n    /* ################################################# */\n    /* ########### SECTION: FOOTER (MOBILE) ############ */\n    /* ################################################# */\n\n    .entry-screen section.footer {\n        padding: 3em;\n    }\n\n    .entry-screen section.footer .disclaimer {\n        line-height: 1.8em;\n        text-align: justify;\n    }\n\n    .entry-screen section.footer .disclaimer span {\n        font-size: 1.4em;\n    }\n\n    /*  */\n\n    body .entry-screen .entry_screen_langs {\n        right: 2em;\n        top: 2.5em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

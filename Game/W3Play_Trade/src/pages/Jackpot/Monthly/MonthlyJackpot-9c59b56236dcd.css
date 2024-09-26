@@ -1,0 +1,1174 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/jackpot/header-link-faq.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/jackpot/header-link-history.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/jackpot/monthly-jackpot-header-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/arrow_gold.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/jackpot/weekly-jackpot-button.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/jackpot/timer-watch.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/jackpot/row-image-white-1.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/jackpot/row-image-white-2.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/jackpot/row-image-white-3.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_9___ = new URL("/public/media/images/jackpot/row-image-white-4.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_10___ = new URL("/public/media/images/jackpot/row-image-white-5.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_11___ = new URL("/public/media/images/jackpot/row-image-green-1.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_12___ = new URL("/public/media/images/jackpot/row-image-green-2.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_13___ = new URL("/public/media/images/jackpot/row-image-green-3.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_14___ = new URL("/public/media/images/jackpot/row-image-green-4.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_15___ = new URL("/public/media/images/jackpot/row-image-green-5.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_16___ = new URL("/public/media/images/jackpot/arrow.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_17___ = new URL("/public/media/images/jackpot/monthly-jackpot-header-mobile-bg.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL("/public/media/images/jackpot/row-image-white-mobile-1.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL("/public/media/images/jackpot/row-image-white-mobile-2.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL("/public/media/images/jackpot/row-image-white-mobile-3.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL("/public/media/images/jackpot/row-image-white-mobile-4.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL("/public/media/images/jackpot/row-image-white-mobile-5.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_23___ = new URL("/public/media/images/jackpot/row-image-green-mobile-1.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_24___ = new URL("/public/media/images/jackpot/row-image-green-mobile-2.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_25___ = new URL("/public/media/images/jackpot/row-image-green-mobile-3.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_26___ = new URL("/public/media/images/jackpot/row-image-green-mobile-4.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_27___ = new URL("/public/media/images/jackpot/row-image-green-mobile-5.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_28___ = new URL("/public/media/images/jackpot/bottom-link-weekly-button.jpg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_29___ = new URL("/public/media/images/jackpot/bottom-nav-link-faq.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_30___ = new URL("/public/media/images/jackpot/bottom-nav-link-history.svg", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+var ___CSS_LOADER_URL_REPLACEMENT_9___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_9___);
+var ___CSS_LOADER_URL_REPLACEMENT_10___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_10___);
+var ___CSS_LOADER_URL_REPLACEMENT_11___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_11___);
+var ___CSS_LOADER_URL_REPLACEMENT_12___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_12___);
+var ___CSS_LOADER_URL_REPLACEMENT_13___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_13___);
+var ___CSS_LOADER_URL_REPLACEMENT_14___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_14___);
+var ___CSS_LOADER_URL_REPLACEMENT_15___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_15___);
+var ___CSS_LOADER_URL_REPLACEMENT_16___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_16___);
+var ___CSS_LOADER_URL_REPLACEMENT_17___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_22___);
+var ___CSS_LOADER_URL_REPLACEMENT_23___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_23___);
+var ___CSS_LOADER_URL_REPLACEMENT_24___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_24___);
+var ___CSS_LOADER_URL_REPLACEMENT_25___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_25___);
+var ___CSS_LOADER_URL_REPLACEMENT_26___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_26___);
+var ___CSS_LOADER_URL_REPLACEMENT_27___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_27___);
+var ___CSS_LOADER_URL_REPLACEMENT_28___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_28___);
+var ___CSS_LOADER_URL_REPLACEMENT_29___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_29___);
+var ___CSS_LOADER_URL_REPLACEMENT_30___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_30___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `/* VARIABLES */
+
+:root {
+    --expansionRowHeight: 3.4em;
+    --expansionHeadHeight: 3em;
+}
+
+.monthly_jackpot.monthly_jackpot_page {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* PAGE HEADER */
+
+.monthly_jackpot .monthly-jackpot-header {
+    position: relative;
+    width: 100%;
+    /* height: 10em; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.monthly_jackpot .header-top,
+.monthly_jackpot .header-bottom {
+    position: relative;
+    width: 100%;
+    /* height: 10em; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.monthly_jackpot .header-top {
+    height: 5em;
+}
+
+.header-top .header-links {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    left: 7em;
+}
+
+.header-top .header-links .header-link {
+    outline: 0;
+    cursor: pointer;
+}
+
+.header-top .header-link .image {
+    width: 2.5em;
+    height: 2.5em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 2.5em;
+    background-position: center;
+}
+
+.header-top .header-link.faq .image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+}
+
+.header-top .header-link.history .image {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+.header-top .header-link .text {
+    text-align: center;
+    font-family: 'SF UI Display', sans-serif;
+    font-weight: 400;
+    color: #b9b9b9;
+    margin-top: 0.2em;
+}
+
+.header-top .header-link .text span {
+    font-size: 0.8em;
+}
+
+.monthly_jackpot .header-bottom {
+    align-items: flex-end;
+    padding: 1em;
+    gap: 8em;
+}
+
+.monthly-jackpot-header::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_2___}) center no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 15.5em;
+}
+
+.monthly_jackpot .header-bottom .header-bottom-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+}
+
+.monthly-jackpot-header .back_btn {
+    display: block;
+    width: 3em;
+    height: 2.4em;
+    background: rgba(244, 213, 111, 0) url(${___CSS_LOADER_URL_REPLACEMENT_3___}) center no-repeat;
+    background-size: 80% 70%;
+    transition: all .2s;
+    border-radius: 1.2em;
+    position: absolute;
+    left: 1em;
+    z-index: 2;
+}
+
+.monthly-jackpot-header .jackpot-page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f4d56f;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 500;
+    line-height: 2.8em;
+    text-shadow: 0 0.2em 0.5em #030303b8;
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.monthly-jackpot-header .jackpot-page-title span {
+    font-size: 3.1em;
+}
+
+.monthly-jackpot-header .weekly-jackpot-button {
+    position: absolute;
+    right: 5em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #525252;
+    width: 16em;
+    height: 4em;
+    border: 0;
+    border-radius: 0.5em;
+    border: 0.1em solid #F4D56F;
+    font-size: inherit;
+}
+
+.monthly-jackpot-header .menu_btn {
+    position: absolute;
+    right: 1em;
+    width: 2.6em;
+    height: 2.4em;
+    padding: 0;
+    background: rgba(244, 213, 111, 0);
+    transition: all .2s;
+    border-radius: 1.2em;
+    border-width: 0;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.monthly-jackpot-header .menu_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.monthly_jackpot .header-bottom .player-avatar {
+    width: 3.5em;
+    height: 3.5em;
+    border: 0.2em solid #f4d56f;
+    background: #747474;
+    border-radius: 50%;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.monthly_jackpot .header-bottom .player-avatar img{
+    width: 100%; height: 100%;   
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-status {
+    /* background: #747474; */
+    /* width: 17em;
+    height: 4em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+    gap: 0.3em;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-status .title {
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0em 0 0 0;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-status .title span {
+    font-size: 0.7em;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-trades {
+    /* background: #747474; */
+    /* width: 10em;
+    height: 4em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-trades .amount {
+    width: 100%;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-trades .amount span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-trades .title {
+    text-transform: uppercase;
+    margin: 0em 0 0 0;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .header-bottom .player-monthly-trades .title span {
+    font-size: 0.7em;
+}
+
+.monthly_jackpot .header-bottom .jackpot-amt {
+    /* background: #747474; */
+    /* width: 15em;
+    height: 4em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-end;
+    gap: 0.3em;
+}
+
+.monthly_jackpot .header-bottom .jackpot-amt  {
+    color: #f4d56f;
+}
+
+.monthly_jackpot .header-bottom .jackpot-amt .amt span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .header-bottom .jackpot-amt .title {
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0em 0 0 0;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .header-bottom .jackpot-amt .title span {
+    font-size: 0.7em;
+    color: #fff;
+}
+
+.monthly_jackpot .header-bottom .jackpot-timer {
+    /* background: #747474; */
+    /* width: 12em; */
+    /* height: 4em; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.3em;
+    width: 25%;
+}
+
+.monthly_jackpot .header-bottom .jackpot-timer .timer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 2em;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+    background-repeat: no-repeat;
+    background-size: 1.9em;
+    background-position: 0 0.35em;
+    background-color: transparent;
+}
+
+.monthly_jackpot .header-bottom .jackpot-timer .timer-wrap span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .header-bottom .jackpot-timer .title {
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0em 0 0 0;
+    opacity: 0.7;
+    text-align: right;
+}
+
+.monthly_jackpot .header-bottom .jackpot-timer .title span {
+    font-size: 0.7em;
+}
+
+/* ROWS WRAP */
+
+.monthly_jackpot .rows-wrap {
+    padding: 0 1em 1em 1em;
+}
+
+/* ROW */
+
+.monthly_jackpot .row-wrap {
+    
+}
+
+.monthly_jackpot .row-wrap:not(:last-child) {
+    margin-bottom: 0.4em;
+}
+
+/* ROW TOP (VISIBLE AREA) */
+
+.monthly_jackpot .row-wrap .row-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5em;
+    border: 0.2em solid grey;
+    border-radius: 0.4em;
+    background: #191e28;
+    padding-left: 11em;
+    padding-right: 1em;
+    text-transform: uppercase;
+}
+
+.monthly_jackpot .row-wrap .row-top .participating-message {
+    position: absolute;
+    left: 50%;
+    top: -0.4em;
+    transform: translateX(-50%);
+    background-color: #89D900;
+    min-width: 16em;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    border-radius: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.monthly_jackpot .row-wrap .row-top .participating-message span {
+    font-size: 0.8em;
+    color: black;
+}
+
+/* .monthly_jackpot .row-wrap .row-top.participating .participating-message {
+    display: block;
+} */
+
+.monthly_jackpot .row-wrap .row-top::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9.4em;
+    height: 5em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+}
+
+.monthly_jackpot .row-wrap:nth-child(1) .row-top:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(2) .row-top:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(3) .row-top:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(4) .row-top:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_9___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(5) .row-top:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_10___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(1) .row-top.completed:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_11___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(2) .row-top.completed:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_12___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(3) .row-top.completed:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_13___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(4) .row-top.completed:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_14___});
+}
+
+.monthly_jackpot .row-wrap:nth-child(5) .row-top.completed:before {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_15___});
+}
+
+.monthly_jackpot .row-wrap .row-top .condition {
+    display: flex;
+    gap: 0.3em;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .content {
+    outline:0;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .title {
+    outline: 0;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .title span {
+    outline:0;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .amount {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .amount span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .monthly-trades {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .blank {
+    outline:0;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .text {
+    height: 2em;
+    line-height: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .row-wrap .row-top .condition .text span {
+    font-size: 0.9em;
+    margin-top: 2.2em;
+}
+
+.monthly_jackpot .row-wrap .row-top .participate {
+    opacity: 0.8;
+    letter-spacing: 0.1em;
+
+    max-width: 9em;
+}
+
+.monthly_jackpot .row-wrap .row-top .participate .amount {
+    color: #f4d56f;
+}
+
+.monthly_jackpot .row-wrap .row-top .players .title {
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .row-wrap .row-top .players .title span {
+
+}
+
+.monthly_jackpot .row-wrap .row-top .players .amount {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monthly_jackpot .row-wrap .row-top .players .amount span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize {
+    display: flex; flex-direction: column; align-items: flex-end;
+    width: 16%;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .title {
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .title span {
+
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .amount {
+    height: 2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #f4d56f;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .amount span {
+    font-size: 2em;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .amount .icon-matic {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.4em;
+    height: 1.6em;
+}
+
+.monthly_jackpot .row-wrap .row-top .prize .amount .icon-matic::before {
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    bottom: -0.1em;
+}
+
+.monthly_jackpot .row-wrap .row-top .arrow {
+    /* background: red; */
+    width: 2.5em;
+    height: 2.5em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_16___});
+    cursor: pointer;
+    margin-right: 1em;
+    transition: all .3s ease-out;
+}
+
+
+.monthly_jackpot .row-wrap.active-item .row-top .arrow {
+    transform: rotate(180deg);
+}
+
+
+/* ROW EXPANSION (HIDDEN AREA) */
+
+.monthly_jackpot .row-wrap .expansion {
+    /* height: 0; */
+    overflow: hidden;
+    transition: all .3s ease-out;
+}
+
+.monthly_jackpot .row-wrap:not(.active-item) .expansion {
+    height: 0 !important;
+}
+
+.monthly_jackpot .row-wrap .expansion-header {
+    display: flex;
+    height: 3em;
+    flex-direction: row;
+    align-items: center;
+    background: #20242d;
+    color: #f4d56f;
+    text-transform: uppercase;
+}
+
+.monthly_jackpot .row-wrap .expansion-body {
+    display: flex;
+    flex-direction: column;
+    background: #1E1D1D;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: calc(var(--expansionRowHeight) * 5);
+}
+
+.monthly_jackpot .expansion-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* height: 3.4em; */
+    height: var(--expansionRowHeight);
+    flex-shrink: 0;
+    z-index: 5;
+}
+
+.monthly_jackpot .row-wrap .expansion-header,
+.monthly_jackpot .expansion-row {
+    padding: 0 1em;
+}
+
+.monthly_jackpot .expansion-row:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);
+}
+
+/* COLUMN WIDTHS ONLY */
+
+.monthly_jackpot .row-wrap .expansion-header .number, 
+.monthly_jackpot .expansion-row .number {
+    width: 6%;
+    text-align: left;
+}
+
+.monthly_jackpot .row-wrap .expansion-header .player, 
+.monthly_jackpot .expansion-row .player {
+    width: 10%;
+    text-align: center;
+}
+
+.monthly_jackpot .row-wrap .expansion-header .wallet, 
+.monthly_jackpot .expansion-row .wallet {
+    width: 59%;
+    text-align: left;
+}
+
+.monthly_jackpot .row-wrap .expansion-header .cards, 
+.monthly_jackpot .expansion-row .cards {
+    width: 25%;
+    text-align: right;
+}
+
+.monthly_jackpot .expansion-row .player img {
+    width: 2.2em;
+    height: 2.2em;
+    margin: 0 auto;
+    background: #747474;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.monthly_jackpot .expansion-row .wallet a {
+    color: #00abfc;
+    text-decoration: underline;
+}
+
+.monthly_jackpot .expansion-row .number span {
+    font-size: 1.6em;
+}
+
+.monthly_jackpot .expansion-row .wallet a span {
+    font-size: 1.3em;
+}
+
+.monthly_jackpot .expansion-row .cards span {
+    font-size: 1.6em;
+}
+
+.monthly_jackpot .trades-wallet-timer-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.monthly_jackpot .bottom-nav {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    .monthly_jackpot.monthly_jackpot_page {
+        height: calc(100% - 5.4em);
+    }
+
+    body .monthly-jackpot-header .weekly-jackpot-button,
+    body .monthly_jackpot .header-top .header-links {
+        display: none;
+    }
+
+    .monthly-jackpot-header .jackpot-page-title {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .monthly-jackpot-header::before {
+        background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_17___}) center no-repeat;
+        background-size: contain;
+        background-position: top;
+        height: 39em;
+    }
+
+    .monthly_jackpot .trades-wallet-timer-wrap {
+        width: 100%;
+        flex-grow: unset;
+    }
+
+    .monthly_jackpot .header-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1em 1em 1em;
+        gap: 1em;
+    }
+
+    .monthly_jackpot .header-bottom .header-bottom-left {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-status .title {
+        order: 1;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .monthly_jackpot .trades-meter {
+        order: 2;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-trades {
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 30%;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-trades .title {
+        order: 1;
+    }
+    .monthly_jackpot .header-bottom .player-monthly-trades .title span {
+        font-size: 1em;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-trades .amount {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: 2em;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-trades .amount span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-amt {
+        justify-content: space-between;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-amt .title {
+        order: 1;
+        text-align: center;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-amt .title span {
+        font-size: 1em;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-amt .amt {
+        order: 2;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-amt .amt span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-timer {
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 30%;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-timer .title {
+        order: 1;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-timer .title span {
+        font-size: 1em;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-timer .timer-wrap {
+        order: 2;
+        padding-left: 2.1em;
+        line-height: 2em;
+        background-size: 2.2em;
+        background-position: 0 0;
+    }
+
+    .monthly_jackpot .header-bottom .jackpot-timer .timer-wrap span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .header-bottom .player-avatar {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-status {
+        gap: 0.5em;
+    }
+
+    .monthly_jackpot .header-bottom .player-monthly-status .title span {
+        font-size: 0.9em;
+    }
+
+    .monthly_jackpot .trades-meter .images .image {
+        width: 3.5em;
+        height: 3.5em;
+        background-size: 3.3em;
+    }
+
+    .monthly_jackpot .trades-meter .bars .bar {
+        width: 3.5em;
+    }
+
+    .monthly_jackpot .trades-meter .bars .bar .fill {
+        height: 0.3em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top {
+        height: 8em;
+        align-items: flex-start;
+        padding-left: 10.2em;
+        padding-top: 1.4em;
+        padding-right: .3em;
+        box-sizing: border-box;
+        border-radius: 0.8em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .prize{
+        width: 40%;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .participate {
+        max-width: unset;
+        position: absolute;
+        bottom: 0.5em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .prize .amount span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .participating-message {
+        top: -0.4em;
+        min-width: 30.5em;
+        height: 1.4em;
+        line-height: 1.4em;
+        letter-spacing: 0.1em;
+    }
+
+    .monthly_jackpot .expansion-row:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0.8em;
+        right: 0.8em;
+        height: 0;
+        border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);
+    }
+
+    .monthly_jackpot .row-wrap .row-top .participating-message span {
+        font-size: 1em;
+    }
+
+    .monthly_jackpot .row-wrap:not(:last-child) {
+        margin-bottom: 0.8em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top::before {
+        width: 10em;
+        height: 100%;
+        background-size: 10em;
+        background-position: -0.3em center;
+    }
+
+    .monthly_jackpot .row-wrap:nth-child(1) .row-top:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(2) .row-top:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(3) .row-top:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(4) .row-top:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(5) .row-top:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(1) .row-top.completed:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_23___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(2) .row-top.completed:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_24___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(3) .row-top.completed:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_25___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(4) .row-top.completed:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_26___});
+    }
+    
+    .monthly_jackpot .row-wrap:nth-child(5) .row-top.completed:before {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_27___});
+    }
+
+    .monthly_jackpot .row-wrap .row-top .condition .amount span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .players .amount span {
+        font-size: 2.2em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .condition .title {
+        margin-bottom: 0.5em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .players .title {
+        margin-bottom: 0.5em;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .prize .title {
+        margin-bottom: 0.5em;
+        justify-content: right;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .players .amount {
+        justify-content: left;
+    }
+
+    .monthly_jackpot .row-wrap .row-top .arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 3.3em;
+        height: 100%;
+        background-size: 2.5em;
+        margin: 0;
+    }
+    .monthly_jackpot .row-wrap .row-top .condition .text span {
+        margin-top: 3.6em !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .monthly_jackpot .bottom-nav {
+        display: block;
+        position: fixed;
+        bottom: 0em;
+        width: 100%;
+        height: 5.4em;
+        background: #001426;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link {
+        outline: 0;
+        cursor: pointer;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.faq,
+    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.history {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.weekly-jackpot {
+        width: 22em;
+        border-left: 0.1em solid #979797;
+        border-right: 0.1em solid #979797;
+        background: #3c2c2c;
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_28___});
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-link .image {
+        width: 3.7em;
+        height: 3.7em;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: 3.7em;
+        background-position: center;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-link.faq .image {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_29___});
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-link.history .image {
+        background-image: url(${___CSS_LOADER_URL_REPLACEMENT_30___});
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-link .text {
+        text-align: center;
+        font-family: 'SF UI Display', sans-serif;
+        font-weight: 400;
+        color: #757575;
+        margin-top: -0.3em;
+    }
+    
+    .monthly_jackpot .bottom-nav .bottom-nav-link .text span {
+        font-size: 1.1em;
+    }
+
+    .monthly-jackpot-header .menu_btn {
+        right: 0.4em;
+        width: 4em;
+        height: 3.8em;
+    }
+
+    .monthly-jackpot-header .back_btn {
+        width: 4em;
+        height: 3.4em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/Jackpot/Monthly/MonthlyJackpot.css"],"names":[],"mappings":"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","sourcesContent":["/* VARIABLES */\n\n:root {\n    --expansionRowHeight: 3.4em;\n    --expansionHeadHeight: 3em;\n}\n\n.monthly_jackpot.monthly_jackpot_page {\n    overflow-y: auto;\n    overflow-x: hidden;\n    height: 100%;\n    scroll-behavior: smooth;\n}\n\n/* PAGE HEADER */\n\n.monthly_jackpot .monthly-jackpot-header {\n    position: relative;\n    width: 100%;\n    /* height: 10em; */\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: space-between;\n}\n\n.monthly_jackpot .header-top,\n.monthly_jackpot .header-bottom {\n    position: relative;\n    width: 100%;\n    /* height: 10em; */\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n    box-sizing: border-box;\n}\n\n.monthly_jackpot .header-top {\n    height: 5em;\n}\n\n.header-top .header-links {\n    position: absolute;\n    display: flex;\n    flex-direction: row;\n    gap: 3em;\n    left: 7em;\n}\n\n.header-top .header-links .header-link {\n    outline: 0;\n    cursor: pointer;\n}\n\n.header-top .header-link .image {\n    width: 2.5em;\n    height: 2.5em;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-size: 2.5em;\n    background-position: center;\n}\n\n.header-top .header-link.faq .image {\n    background-image: url('/public/media/images/jackpot/header-link-faq.svg');\n}\n\n.header-top .header-link.history .image {\n    background-image: url('/public/media/images/jackpot/header-link-history.svg');\n}\n\n.header-top .header-link .text {\n    text-align: center;\n    font-family: 'SF UI Display', sans-serif;\n    font-weight: 400;\n    color: #b9b9b9;\n    margin-top: 0.2em;\n}\n\n.header-top .header-link .text span {\n    font-size: 0.8em;\n}\n\n.monthly_jackpot .header-bottom {\n    align-items: flex-end;\n    padding: 1em;\n    gap: 8em;\n}\n\n.monthly-jackpot-header::before {\n    content: ' ';\n    display: block;\n    position: absolute;\n    background: transparent url('/public/media/images/jackpot/monthly-jackpot-header-bg.png') center no-repeat;\n    background-size: contain;\n    top: 0;\n    left: 0;\n    right: 0;\n    z-index: -1;\n    height: 15.5em;\n}\n\n.monthly_jackpot .header-bottom .header-bottom-left {\n    display: flex;\n    flex-direction: row;\n    gap: 1.5em;\n}\n\n.monthly-jackpot-header .back_btn {\n    display: block;\n    width: 3em;\n    height: 2.4em;\n    background: rgba(244, 213, 111, 0) url('/public/media/images/arrow_gold.svg') center no-repeat;\n    background-size: 80% 70%;\n    transition: all .2s;\n    border-radius: 1.2em;\n    position: absolute;\n    left: 1em;\n    z-index: 2;\n}\n\n.monthly-jackpot-header .jackpot-page-title {\n    position: absolute;\n    left: 50%;\n    transform: translateX(-50%);\n    color: #f4d56f;\n    font-family: 'Barlow Semi Condensed';\n    font-weight: 500;\n    line-height: 2.8em;\n    text-shadow: 0 0.2em 0.5em #030303b8;\n    text-align: center;\n    font-style: italic;\n    text-transform: uppercase;\n}\n\n.monthly-jackpot-header .jackpot-page-title span {\n    font-size: 3.1em;\n}\n\n.monthly-jackpot-header .weekly-jackpot-button {\n    position: absolute;\n    right: 5em;\n    background-image: url('/public/media/images/jackpot/weekly-jackpot-button.png');\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-color: #525252;\n    width: 16em;\n    height: 4em;\n    border: 0;\n    border-radius: 0.5em;\n    border: 0.1em solid #F4D56F;\n    font-size: inherit;\n}\n\n.monthly-jackpot-header .menu_btn {\n    position: absolute;\n    right: 1em;\n    width: 2.6em;\n    height: 2.4em;\n    padding: 0;\n    background: rgba(244, 213, 111, 0);\n    transition: all .2s;\n    border-radius: 1.2em;\n    border-width: 0;\n    cursor: pointer;\n    font-size: inherit;\n}\n\n.monthly-jackpot-header .menu_btn img {\n    width: 100%;\n    height: 100%;\n}\n\n.monthly_jackpot .header-bottom .player-avatar {\n    width: 3.5em;\n    height: 3.5em;\n    border: 0.2em solid #f4d56f;\n    background: #747474;\n    border-radius: 50%;\n    align-self: center;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n.monthly_jackpot .header-bottom .player-avatar img{\n    width: 100%; height: 100%;   \n    border-radius: 50%;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-status {\n    /* background: #747474; */\n    /* width: 17em;\n    height: 4em; */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    justify-content: flex-end;\n    gap: 0.3em;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-status .title {\n    width: 100%;\n    text-transform: uppercase;\n    margin: 0em 0 0 0;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-status .title span {\n    font-size: 0.7em;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-trades {\n    /* background: #747474; */\n    /* width: 10em;\n    height: 4em; */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    gap: 0.3em;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-trades .amount {\n    width: 100%;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-trades .amount span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-trades .title {\n    text-transform: uppercase;\n    margin: 0em 0 0 0;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .header-bottom .player-monthly-trades .title span {\n    font-size: 0.7em;\n}\n\n.monthly_jackpot .header-bottom .jackpot-amt {\n    /* background: #747474; */\n    /* width: 15em;\n    height: 4em; */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    justify-content: flex-end;\n    gap: 0.3em;\n}\n\n.monthly_jackpot .header-bottom .jackpot-amt  {\n    color: #f4d56f;\n}\n\n.monthly_jackpot .header-bottom .jackpot-amt .amt span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .header-bottom .jackpot-amt .title {\n    width: 100%;\n    text-transform: uppercase;\n    margin: 0em 0 0 0;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .header-bottom .jackpot-amt .title span {\n    font-size: 0.7em;\n    color: #fff;\n}\n\n.monthly_jackpot .header-bottom .jackpot-timer {\n    /* background: #747474; */\n    /* width: 12em; */\n    /* height: 4em; */\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-end;\n    gap: 0.3em;\n    width: 25%;\n}\n\n.monthly_jackpot .header-bottom .jackpot-timer .timer-wrap {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n\n    padding-left: 2em;\n    background-image: url('/public/media/images/jackpot/timer-watch.svg');\n    background-repeat: no-repeat;\n    background-size: 1.9em;\n    background-position: 0 0.35em;\n    background-color: transparent;\n}\n\n.monthly_jackpot .header-bottom .jackpot-timer .timer-wrap span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .header-bottom .jackpot-timer .title {\n    width: 100%;\n    text-transform: uppercase;\n    margin: 0em 0 0 0;\n    opacity: 0.7;\n    text-align: right;\n}\n\n.monthly_jackpot .header-bottom .jackpot-timer .title span {\n    font-size: 0.7em;\n}\n\n/* ROWS WRAP */\n\n.monthly_jackpot .rows-wrap {\n    padding: 0 1em 1em 1em;\n}\n\n/* ROW */\n\n.monthly_jackpot .row-wrap {\n    \n}\n\n.monthly_jackpot .row-wrap:not(:last-child) {\n    margin-bottom: 0.4em;\n}\n\n/* ROW TOP (VISIBLE AREA) */\n\n.monthly_jackpot .row-wrap .row-top {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    height: 5em;\n    border: 0.2em solid grey;\n    border-radius: 0.4em;\n    background: #191e28;\n    padding-left: 11em;\n    padding-right: 1em;\n    text-transform: uppercase;\n}\n\n.monthly_jackpot .row-wrap .row-top .participating-message {\n    position: absolute;\n    left: 50%;\n    top: -0.4em;\n    transform: translateX(-50%);\n    background-color: #89D900;\n    min-width: 16em;\n    height: 1.2em;\n    line-height: 1.2em;\n    text-align: center;\n    border-radius: 0.2em;\n    text-transform: uppercase;\n    font-weight: 500;\n    box-sizing: border-box;\n}\n\n.monthly_jackpot .row-wrap .row-top .participating-message span {\n    font-size: 0.8em;\n    color: black;\n}\n\n/* .monthly_jackpot .row-wrap .row-top.participating .participating-message {\n    display: block;\n} */\n\n.monthly_jackpot .row-wrap .row-top::before {\n    content: '';\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 9.4em;\n    height: 5em;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-color: transparent;\n}\n\n.monthly_jackpot .row-wrap:nth-child(1) .row-top:before {\n    background-image: url('/public/media/images/jackpot/row-image-white-1.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(2) .row-top:before {\n    background-image: url('/public/media/images/jackpot/row-image-white-2.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(3) .row-top:before {\n    background-image: url('/public/media/images/jackpot/row-image-white-3.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(4) .row-top:before {\n    background-image: url('/public/media/images/jackpot/row-image-white-4.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(5) .row-top:before {\n    background-image: url('/public/media/images/jackpot/row-image-white-5.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(1) .row-top.completed:before {\n    background-image: url('/public/media/images/jackpot/row-image-green-1.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(2) .row-top.completed:before {\n    background-image: url('/public/media/images/jackpot/row-image-green-2.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(3) .row-top.completed:before {\n    background-image: url('/public/media/images/jackpot/row-image-green-3.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(4) .row-top.completed:before {\n    background-image: url('/public/media/images/jackpot/row-image-green-4.svg');\n}\n\n.monthly_jackpot .row-wrap:nth-child(5) .row-top.completed:before {\n    background-image: url('/public/media/images/jackpot/row-image-green-5.svg');\n}\n\n.monthly_jackpot .row-wrap .row-top .condition {\n    display: flex;\n    gap: 0.3em;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .content {\n    outline:0;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .title {\n    outline: 0;\n    height: 1em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .title span {\n    outline:0;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .amount {\n    height: 2em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .amount span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .monthly-trades {\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-end;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .blank {\n    outline:0;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .text {\n    height: 2em;\n    line-height: 0.9em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .row-wrap .row-top .condition .text span {\n    font-size: 0.9em;\n    margin-top: 2.2em;\n}\n\n.monthly_jackpot .row-wrap .row-top .participate {\n    opacity: 0.8;\n    letter-spacing: 0.1em;\n\n    max-width: 9em;\n}\n\n.monthly_jackpot .row-wrap .row-top .participate .amount {\n    color: #f4d56f;\n}\n\n.monthly_jackpot .row-wrap .row-top .players .title {\n    height: 1em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .row-wrap .row-top .players .title span {\n\n}\n\n.monthly_jackpot .row-wrap .row-top .players .amount {\n    height: 2em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.monthly_jackpot .row-wrap .row-top .players .amount span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize {\n    display: flex; flex-direction: column; align-items: flex-end;\n    width: 16%;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .title {\n    height: 1em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    opacity: 0.7;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .title span {\n\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .amount {\n    height: 2em;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    color: #f4d56f;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .amount span {\n    font-size: 2em;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .amount .icon-matic {\n    display: inline-block;\n    position: relative;\n    padding-left: 1.4em;\n    height: 1.6em;\n}\n\n.monthly_jackpot .row-wrap .row-top .prize .amount .icon-matic::before {\n    font-size: 1.2em;\n    position: absolute;\n    left: 0;\n    bottom: -0.1em;\n}\n\n.monthly_jackpot .row-wrap .row-top .arrow {\n    /* background: red; */\n    width: 2.5em;\n    height: 2.5em;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n    background-image: url('/public/media/images/jackpot/arrow.svg');\n    cursor: pointer;\n    margin-right: 1em;\n    transition: all .3s ease-out;\n}\n\n\n.monthly_jackpot .row-wrap.active-item .row-top .arrow {\n    transform: rotate(180deg);\n}\n\n\n/* ROW EXPANSION (HIDDEN AREA) */\n\n.monthly_jackpot .row-wrap .expansion {\n    /* height: 0; */\n    overflow: hidden;\n    transition: all .3s ease-out;\n}\n\n.monthly_jackpot .row-wrap:not(.active-item) .expansion {\n    height: 0 !important;\n}\n\n.monthly_jackpot .row-wrap .expansion-header {\n    display: flex;\n    height: 3em;\n    flex-direction: row;\n    align-items: center;\n    background: #20242d;\n    color: #f4d56f;\n    text-transform: uppercase;\n}\n\n.monthly_jackpot .row-wrap .expansion-body {\n    display: flex;\n    flex-direction: column;\n    background: #1E1D1D;\n    overflow: hidden;\n    overflow-y: auto;\n    max-height: calc(var(--expansionRowHeight) * 5);\n}\n\n.monthly_jackpot .expansion-row {\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    /* height: 3.4em; */\n    height: var(--expansionRowHeight);\n    flex-shrink: 0;\n    z-index: 5;\n}\n\n.monthly_jackpot .row-wrap .expansion-header,\n.monthly_jackpot .expansion-row {\n    padding: 0 1em;\n}\n\n.monthly_jackpot .expansion-row:not(:last-child)::after {\n    content: '';\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 0;\n    border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);\n}\n\n/* COLUMN WIDTHS ONLY */\n\n.monthly_jackpot .row-wrap .expansion-header .number, \n.monthly_jackpot .expansion-row .number {\n    width: 6%;\n    text-align: left;\n}\n\n.monthly_jackpot .row-wrap .expansion-header .player, \n.monthly_jackpot .expansion-row .player {\n    width: 10%;\n    text-align: center;\n}\n\n.monthly_jackpot .row-wrap .expansion-header .wallet, \n.monthly_jackpot .expansion-row .wallet {\n    width: 59%;\n    text-align: left;\n}\n\n.monthly_jackpot .row-wrap .expansion-header .cards, \n.monthly_jackpot .expansion-row .cards {\n    width: 25%;\n    text-align: right;\n}\n\n.monthly_jackpot .expansion-row .player img {\n    width: 2.2em;\n    height: 2.2em;\n    margin: 0 auto;\n    background: #747474;\n    border-radius: 50%;\n    background-repeat: no-repeat;\n    background-size: contain;\n    background-position: center;\n}\n\n.monthly_jackpot .expansion-row .wallet a {\n    color: #00abfc;\n    text-decoration: underline;\n}\n\n.monthly_jackpot .expansion-row .number span {\n    font-size: 1.6em;\n}\n\n.monthly_jackpot .expansion-row .wallet a span {\n    font-size: 1.3em;\n}\n\n.monthly_jackpot .expansion-row .cards span {\n    font-size: 1.6em;\n}\n\n.monthly_jackpot .trades-wallet-timer-wrap {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    flex-grow: 1;\n}\n\n.monthly_jackpot .bottom-nav {\n    display: none;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@media screen and (max-width: 480px) {\n\n    .monthly_jackpot.monthly_jackpot_page {\n        height: calc(100% - 5.4em);\n    }\n\n    body .monthly-jackpot-header .weekly-jackpot-button,\n    body .monthly_jackpot .header-top .header-links {\n        display: none;\n    }\n\n    .monthly-jackpot-header .jackpot-page-title {\n        position: static;\n        transform: none;\n        margin: 0 auto;\n    }\n\n    .monthly-jackpot-header::before {\n        background: transparent url('/public/media/images/jackpot/monthly-jackpot-header-mobile-bg.png') center no-repeat;\n        background-size: contain;\n        background-position: top;\n        height: 39em;\n    }\n\n    .monthly_jackpot .trades-wallet-timer-wrap {\n        width: 100%;\n        flex-grow: unset;\n    }\n\n    .monthly_jackpot .header-bottom {\n        flex-direction: column;\n        align-items: center;\n        padding: 0 1em 1em 1em;\n        gap: 1em;\n    }\n\n    .monthly_jackpot .header-bottom .header-bottom-left {\n        flex-direction: column;\n        gap: 0.5em;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-status .title {\n        order: 1;\n        text-align: center;\n        opacity: 1;\n    }\n\n    .monthly_jackpot .trades-meter {\n        order: 2;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-trades {\n        justify-content: space-between;\n        align-items: flex-start;\n        width: 30%;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-trades .title {\n        order: 1;\n    }\n    .monthly_jackpot .header-bottom .player-monthly-trades .title span {\n        font-size: 1em;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-trades .amount {\n        order: 2;\n        display: flex;\n        flex-direction: row;\n        justify-content: flex-start;\n        align-items: center;\n        line-height: 2em;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-trades .amount span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-amt {\n        justify-content: space-between;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-amt .title {\n        order: 1;\n        text-align: center;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-amt .title span {\n        font-size: 1em;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-amt .amt {\n        order: 2;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-amt .amt span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-timer {\n        justify-content: space-between;\n        align-items: flex-end;\n        width: 30%;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-timer .title {\n        order: 1;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-timer .title span {\n        font-size: 1em;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-timer .timer-wrap {\n        order: 2;\n        padding-left: 2.1em;\n        line-height: 2em;\n        background-size: 2.2em;\n        background-position: 0 0;\n    }\n\n    .monthly_jackpot .header-bottom .jackpot-timer .timer-wrap span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .header-bottom .player-avatar {\n        width: 4.5em;\n        height: 4.5em;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-status {\n        gap: 0.5em;\n    }\n\n    .monthly_jackpot .header-bottom .player-monthly-status .title span {\n        font-size: 0.9em;\n    }\n\n    .monthly_jackpot .trades-meter .images .image {\n        width: 3.5em;\n        height: 3.5em;\n        background-size: 3.3em;\n    }\n\n    .monthly_jackpot .trades-meter .bars .bar {\n        width: 3.5em;\n    }\n\n    .monthly_jackpot .trades-meter .bars .bar .fill {\n        height: 0.3em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top {\n        height: 8em;\n        align-items: flex-start;\n        padding-left: 10.2em;\n        padding-top: 1.4em;\n        padding-right: .3em;\n        box-sizing: border-box;\n        border-radius: 0.8em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .prize{\n        width: 40%;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .participate {\n        max-width: unset;\n        position: absolute;\n        bottom: 0.5em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .prize .amount span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .participating-message {\n        top: -0.4em;\n        min-width: 30.5em;\n        height: 1.4em;\n        line-height: 1.4em;\n        letter-spacing: 0.1em;\n    }\n\n    .monthly_jackpot .expansion-row:not(:last-child)::after {\n        content: '';\n        position: absolute;\n        bottom: 0;\n        left: 0.8em;\n        right: 0.8em;\n        height: 0;\n        border-bottom: 0.1em solid rgba(151, 151, 151, 0.3);\n    }\n\n    .monthly_jackpot .row-wrap .row-top .participating-message span {\n        font-size: 1em;\n    }\n\n    .monthly_jackpot .row-wrap:not(:last-child) {\n        margin-bottom: 0.8em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top::before {\n        width: 10em;\n        height: 100%;\n        background-size: 10em;\n        background-position: -0.3em center;\n    }\n\n    .monthly_jackpot .row-wrap:nth-child(1) .row-top:before {\n        background-image: url('/public/media/images/jackpot/row-image-white-mobile-1.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(2) .row-top:before {\n        background-image: url('/public/media/images/jackpot/row-image-white-mobile-2.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(3) .row-top:before {\n        background-image: url('/public/media/images/jackpot/row-image-white-mobile-3.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(4) .row-top:before {\n        background-image: url('/public/media/images/jackpot/row-image-white-mobile-4.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(5) .row-top:before {\n        background-image: url('/public/media/images/jackpot/row-image-white-mobile-5.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(1) .row-top.completed:before {\n        background-image: url('/public/media/images/jackpot/row-image-green-mobile-1.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(2) .row-top.completed:before {\n        background-image: url('/public/media/images/jackpot/row-image-green-mobile-2.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(3) .row-top.completed:before {\n        background-image: url('/public/media/images/jackpot/row-image-green-mobile-3.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(4) .row-top.completed:before {\n        background-image: url('/public/media/images/jackpot/row-image-green-mobile-4.svg');\n    }\n    \n    .monthly_jackpot .row-wrap:nth-child(5) .row-top.completed:before {\n        background-image: url('/public/media/images/jackpot/row-image-green-mobile-5.svg');\n    }\n\n    .monthly_jackpot .row-wrap .row-top .condition .amount span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .players .amount span {\n        font-size: 2.2em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .condition .title {\n        margin-bottom: 0.5em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .players .title {\n        margin-bottom: 0.5em;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .prize .title {\n        margin-bottom: 0.5em;\n        justify-content: right;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .players .amount {\n        justify-content: left;\n    }\n\n    .monthly_jackpot .row-wrap .row-top .arrow {\n        position: absolute;\n        right: 0;\n        top: 0;\n        width: 3.3em;\n        height: 100%;\n        background-size: 2.5em;\n        margin: 0;\n    }\n    .monthly_jackpot .row-wrap .row-top .condition .text span {\n        margin-top: 3.6em !important;\n    }\n\n\n\n\n\n\n\n\n\n\n\n\n    .monthly_jackpot .bottom-nav {\n        display: block;\n        position: fixed;\n        bottom: 0em;\n        width: 100%;\n        height: 5.4em;\n        background: #001426;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-links {\n        display: flex;\n        flex-direction: row;\n        justify-content: center;\n        height: 100%;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link {\n        outline: 0;\n        cursor: pointer;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.faq,\n    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.history {\n        flex-grow: 1;\n        display: flex;\n        flex-direction: column;\n        justify-content: center;\n        align-items: center;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-links .bottom-nav-link.weekly-jackpot {\n        width: 22em;\n        border-left: 0.1em solid #979797;\n        border-right: 0.1em solid #979797;\n        background: #3c2c2c;\n        background-image: url('/public/media/images/jackpot/bottom-link-weekly-button.jpg');\n        background-repeat: no-repeat;\n        background-size: contain;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-link .image {\n        width: 3.7em;\n        height: 3.7em;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-size: 3.7em;\n        background-position: center;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-link.faq .image {\n        background-image: url('/public/media/images/jackpot/bottom-nav-link-faq.svg');\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-link.history .image {\n        background-image: url('/public/media/images/jackpot/bottom-nav-link-history.svg');\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-link .text {\n        text-align: center;\n        font-family: 'SF UI Display', sans-serif;\n        font-weight: 400;\n        color: #757575;\n        margin-top: -0.3em;\n    }\n    \n    .monthly_jackpot .bottom-nav .bottom-nav-link .text span {\n        font-size: 1.1em;\n    }\n\n    .monthly-jackpot-header .menu_btn {\n        right: 0.4em;\n        width: 4em;\n        height: 3.8em;\n    }\n\n    .monthly-jackpot-header .back_btn {\n        width: 4em;\n        height: 3.4em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

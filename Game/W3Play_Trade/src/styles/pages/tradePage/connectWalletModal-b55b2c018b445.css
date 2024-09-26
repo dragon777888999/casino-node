@@ -1,0 +1,1367 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/connect_modal/loginClose.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/closebutton.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.connect-wallet-modal-background{
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+    width: 99.9%;
+    z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+    flex: 1;
+}
+
+
+/* special connect popup without social */
+.special-connect-wallet-modal-container {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    border-radius: .8em;
+    border:  solid .16em rgba(93, 93, 93, 0.72);
+    background: #050505;
+    transition: all .2s;
+    width: 25%; 
+    min-height: 18em; height: auto; max-height: 35.5em;
+    animation: bounce-in .65s ease;
+}
+.special-connect-header{
+    font-family: 'SF UI Display', sans-serif; font-size: 1.56em; font-weight: bold;
+    color: #f4d56f;
+    letter-spacing: -.022em;
+    width: 85%;
+    padding: 0;
+    margin: 1.5em 0 .8em 0;
+    text-align: center;
+}
+.special-connect-desc{
+    font-family: 'SF UI Display', sans-serif; font-size: .9em; font-weight: 400;
+    color: #fff;
+    letter-spacing: .037em;
+    width: 85%;
+    padding: 0;
+    margin: 0 0 .5em 0;
+    text-align: center;
+}
+.special-connect-sub-header{
+    font-family: 'SF UI Display', sans-serif; font-size: .74em; font-weight: 400;
+    color: #f4d56f;
+    letter-spacing: .031em;
+    text-align: center;
+    padding: 0;
+    margin-top: .8em;
+}
+.special-connect-btn{
+    position: relative;
+    width: 85%; height: 2.98em;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: .41em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    margin-bottom: .62em;
+    cursor: pointer;
+}
+.special-connect-btn img{
+    position: absolute; left: 2%;
+    transform: scale(.45, .45);
+}
+.special-connect-btn p{
+    font-family: 'Helvetica-Bold'; font-size: .93em; font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.special-connect-bottom{
+    width: 85%;
+    display: flex; flex-direction: row; justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1.12em 0 1.5em 0;
+}
+.special-connect-bottom-asset{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+    width: 30%; height: 3.2em;
+    border-radius: .38em;
+    border: solid .16em rgba(93, 93, 93, 0.72);
+    background-color: #050505;
+    margin-bottom: .8em;
+}
+.special-connect-bottom-asset img{
+    transform: scale(.9, .9);
+}
+.special-connect-bottom-asset p{
+    font-family: 'Helvetica-Bold'; font-size: .58em; color: #fff;
+    letter-spacing: .015em;
+    text-align: center;
+    padding: .65em 0 .65em 0;
+    margin: 0;
+}
+/*  */
+
+
+
+
+
+.connect-wallet-modal-container {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    border-radius: 2em;
+    border:  solid .16em rgba(93, 93, 93, 0.72);
+    background: #050505;
+    transition: all .2s;
+    width: 26.4%; 
+    min-height: 24em; height: auto; max-height: 35.5em;
+    animation: bounce-in .65s ease;
+}
+
+.connect-wallet-modal-container[old='true']{
+    height: 22.9em;
+}
+.connect-wallet-modal-header-arr-box{
+    width: 1.7em; height: 1.7em; 
+    border-radius: .4em;
+    background-color: #f1cb64;
+    display: flex; align-items: center; justify-content: center;
+}
+.connect-wallet-modal-header-arr{
+    height: .83em; width: .64em;
+}
+.connect-wallet-modal-bottom-desc{
+    position: absolute; bottom: .2em;
+    color: #fff; font-family: 'SF UI Display', sans-serif; font-size: .72em;
+    opacity: 0.51;
+    letter-spacing: -.018em;
+}
+.connect-wallet-modal-header-desc{
+    font-family: 'SF UI Display', sans-serif;                          
+    font-size: 1.7em; font-weight: 600; color: #f4d56f;
+    padding: 0;
+    margin: 1em 0 0 0;
+    letter-spacing: -.035em;
+    text-align: center;
+}
+
+/* label divider */
+.connect-wallet-modal-label{
+    width: 84%;
+    display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+    margin: .4em 0;
+}
+.connect-wallet-modal-label div{
+    width: 18%; height: .08em;
+    background: #9797974d;
+}
+.connect-wallet-modal-label p{
+    font-family: 'SF UI Display';
+    font-size: .7em; font-weight: 300; color: #ababab;
+    letter-spacing: .048em;
+}
+
+/* new magic btn */
+.connect-wallet-modal-magic-btn_{
+    position: relative;
+    display: flex; flex-direction: row; align-items: center; 
+    width: 84%; height: 4em;
+    border-radius: .54em;
+    border: solid .1em #646875;
+    background-color: #010a26; 
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+.connect-wallet-modal-magic-btn_:hover{
+    background: #000;
+    /* border: solid .15em #646875; */
+}
+.connect-wallet-new-header{
+    font-family: 'Helvetica'; font-size: .94em; color: #fff;
+}
+.new_magic_logo{
+    width: 1.7em; height: 2.2em;
+    margin: 0 1em;
+}
+.connect-wallet-new{
+    width: 2.2em; height: 1.7em;
+    position: absolute; top: 0; right: 0;
+    z-index: 2;
+}
+.connect-wallet-recomended{
+    width: 6em; height: 1.1em;
+    position: absolute; top: -.3em; left: 32%;
+    z-index: 2;
+}
+/* new social btn */
+.connect-wallet-modal-social-btn_{
+    position: relative;
+    display: flex; flex-direction: row; align-items: center;
+    width: 82%; height: 3.5em;
+    border-radius: .54em;
+    border: solid .1em #646875;
+    background-color: #010a26;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+.connect-wallet-modal-social-btn_:hover{
+    background: #000;
+    /* border: solid .15em #646875; */
+}
+.new_social_logo{
+    width: 1.44em; height: 1.5em;
+    margin: 0 1.65em 0 1.3em;
+}
+/* new crypto btns */
+.connect-wallet-modal-crypto-btn_{
+    position: relative;
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+    width: 82%; height: 2.8em;
+    border-radius: .54em;
+    border: solid .1em #646875;
+    background-color: #010a26;
+    cursor: pointer;
+    margin-bottom: .9em;
+}
+.connect-wallet-modal-crypto-btn_:hover{
+    background: #000;
+    /* border: solid .15em #646875; */
+}
+.new_coinbase_logo, .new_walletconnect_logo{
+    position: absolute; left: 1.1em;
+    width: 1.91em; height: 1.91em;
+}
+
+.new_metamask_logo{
+    position: absolute; left: 1.3em;
+    width: 1.6em; height: 1.51em;
+}
+
+
+
+
+
+.connect-wallet-modal-subheader-desc{
+    font-family: 'SF UI Display'; 
+    font-size: .8em; font-weight: 300; color: #ababab;
+    letter-spacing: .048em;
+    padding: 0;
+    margin: .8em 0 .6em 0;
+}
+/* .connect-wallet-modal-social-btn{
+    width: 85%; height: 2.5em;
+    border-radius: .3em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+/* } */
+.connect-wallet-modal-social-btn:hover,
+.connect-wallet-modal-walletconnect-btn:hover, 
+.connect-wallet-modal-apple-btn:hover{
+    opacity: .7;
+}
+
+.connect-wallet-modal-social-btn:focus,
+.connect-wallet-modal-walletconnect-btn:focus, 
+.connect-wallet-modal-walletconnect-btn:focus,
+.connect-wallet-modal-default-btn-social:focus,
+.connect-wallet-modal-apple-btn:focus{
+    background-color: #f4c56f;
+}
+.connect-wallet-modal-social-btn:active,
+.connect-wallet-modal-walletconnect-btn:active, 
+.connect-wallet-modal-walletconnect-btn:active,
+.connect-wallet-modal-default-btn-social:active,
+.connect-wallet-modal-apple-btn:active{
+    background-color: #f4c56f;
+}
+
+.connect-wallet-modal-social-img{
+    margin-left: 30%; margin-right: .5em;
+    width: 1em; height: 1em;
+}
+.connect-wallet-modal-social-desc{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .95em; font-weight: bold; color: #fff;
+    letter-spacing: -.02em;
+    padding: 0;
+    margin: 0;
+}
+
+.connect-wallet-modal-row_btn_wrap{
+    display: none;
+}
+.connect-wallet-modal-default-btn{
+    width: 46%; height: 2.9em;
+    border-radius: .4em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+}
+.connect-wallet-modal-default-btn-social{
+    width: 46%; height: 2.9em;
+    border-radius: .4em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+}
+.connect-wallet-modal-default-btn-social:hover{
+    opacity: .7;
+}
+.connect-wallet-modal-default-btn-social .ext{
+    width: 92%; height: 2.9em;
+    border-radius: .4em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+}
+.connect-wallet-modal-default-btn-social .none{
+    display: none;
+}
+
+.connect-wallet-modal-walletconnect-btn, .connect-wallet-modal-apple-btn{
+    position: relative;
+    width: 100%; height: 2.9em;
+    border-radius: .4em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    margin-top: -.5em;
+}
+.connect-wallet-modal-walletconnect-btn:hover, .connect-wallet-modal-apple-btn:hover{
+    opacity: .7;
+}
+
+
+
+/* New Magic Connect Popup */
+
+.connect_long_btn{
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    width: 82%; height: 2.8em;
+    border-radius: .45em;
+    border: solid .12em #5f5f5f;
+    background-color: #2a2a2a;
+    cursor: pointer;
+    margin-top: .5em;
+}
+.connect_long_btn:hover{
+    background: #000;
+}
+.connect_short_btn:hover{
+    border-radius: .45em;
+    background: #000;
+}
+.connect_row_short_btns{
+    display: flex; justify-content: space-between; align-items: center;
+    width: 82.8%;
+}
+.connect_short_btn{
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    width: 46%; height: 2.8em;
+    border-radius: .45em;
+    border: solid .12em #5f5f5f;
+    background-color: #2a2a2a;
+    cursor: pointer;
+}
+.connect_btn_txt{
+    font-family: 'Helvetica'; font-size: .9em; color: #fff;
+    font-weight: 600;
+}
+.connect_short_btn_txt{
+    font-family: 'Helvetica'; font-size: .9em; color: #fff;
+    font-weight: 600;
+    margin-right: -2em;
+}
+.connect_google_src{
+    position: absolute; left: .85em;
+    width: 1.4em; height: 1.45em;
+}
+.connect_apple_src{
+    position: absolute; left: .85em;
+    width: 1.25em; height: 1.5em;
+}
+.connect_facebook_src{
+    position: absolute; left: .85em;
+    width: 1.6em; height: 1.6em;
+}
+.connect_coinbase_src{
+    position: absolute; left: .85em;
+    width: 1.6em; height: 1.6em;
+}
+.connect_metamask_src{
+    position: absolute; left: .85em;
+    width: 1.7em; height: 1.6em;
+}
+.connect_email_src{
+    position: absolute; left: .85em;;
+    width: 1.7em; height: 1.15em;
+}
+.connect_walletconnect_src{
+    position: absolute; left: .85em;
+    width: 1.6em; height: 1.6em;
+}
+.connect_crypto_wallet_desc{
+    font-family: 'SF UI Display'; font-size: .8em; color: #ababab;
+    font-weight: 300;
+    letter-spacing: .048em;
+    text-align: center;
+    margin: 1em 0 0 0;
+    padding: 0;
+}
+.connect_switch_btns{
+    margin-top: .4em;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding-bottom: .6em;
+}
+.connect_switch_btns{
+    background: #000;
+}
+.connect_switch_desc {
+    font-family: 'SF UI Display'; font-size: .8em; color: #ababab;
+    font-weight: 300;
+    letter-spacing: .048em;
+    text-align: center;
+    margin: .8em 0 .6em 0;
+    padding: 0;
+}
+.connect_switch_btn{
+    font-family: Helvetica; font-size: .94em; font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+/* MAGIC CONNECT - WALLET */
+.connect_magic_wrap_background{
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 9999;
+    display: flex; justify-content: center; align-items: center;
+    flex: 1;
+    z-index: 9999;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+
+.connect_magic_container{
+    position: relative;
+    width: 18.5em; height: 18em;
+    display: flex; flex-direction: column; align-items: center;
+    border-radius: 2em;
+    border:  solid .16em rgba(93, 93, 93, 0.72);
+    background: #050505;
+    animation: bounce-in .65s ease;
+}
+.connect_magic_header{
+    font-family: 'SF UI Display';
+    font-size: 1.56em; font-weight: 500; color: #f4d56f;
+    letter-spacing: -.035em;
+    text-align: center;
+    margin-top: 1.1em;
+    padding: 0;
+}
+.connect_magic_subheader{
+    font-family: 'SF UI Display';
+    font-size: .8em; font-weight: 300; color: #ababab;
+    letter-spacing: .048em;
+    text-align: center;
+    padding: 0;
+    margin: 1em 0 .7em 0;
+}
+.connect_magic_input{
+    width: 80%; height: 3.5em;
+    border-radius: .4em;
+    border: solid .12em #b1aeae;
+    background-color: #151515;
+    outline: none;
+    font-family: Helvetica; color: #fff; font-size: .7em; font-weight: 300;
+    letter-spacing: .037em;
+    text-align: center;
+}
+.connect_magic_input::placeholder{
+    color: #fff; 
+    text-align: center;
+}
+.connect_magic_email_submit{
+    display: flex; align-items: center; justify-content: center;
+    width: 80%; height: 4.4em;
+    border-radius: .4em;
+    background: #f4c56f;
+    outline: none;
+    border: transparent;
+    margin-top: 4.7em;
+    opacity: .5;
+}
+.connect_magic_email_submit[validtosubmit="true"]{
+    opacity: 1;
+    cursor: pointer;
+}
+.connect_magic_email_submit p{
+    color: #0c0d13; font-weight: 600; font-size: 1.6em;
+}
+
+
+/*  */
+
+
+.connect-wallet-modal-login-btns-row-mobile{
+    display: none;
+}
+
+.connect-wallet-modal-social-btn{
+    width: 80%; height: 3.7em;
+    border-radius: .4em;
+    border: solid .1em #5f5f5f;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+}
+.connect-wallet-modal-default-btn:hover{
+    opacity: .7;
+}
+
+.connect-wallet-modal-login-btns-row{
+    width: 80%;
+    display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+    margin-bottom: .8em;
+}
+.connect-wallet-modal-login-btns-row[first]{
+    border-top: solid .11em #9797974d;
+    padding-top: 1.2em;
+}
+
+.connect-wallet-modal-center-desc{
+    /* background: url('../../../../public/media/images/social_icons/web3auth.svg') no-repeat center center; */
+    /* background-size: 60% 60%; */
+    /* margin-bottom: -3em; */
+    /* height: 2.8em; */
+    /* width: 80%; */
+
+    font-size: .8em; color: lightseagreen;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    margin: -1.5em 0 0 0;
+}
+/* .connect-wallet-coming-soon{
+    position: relative; left: 40%;
+    z-index: 2;
+} */
+.connect-wallet-modal-default-btn-wallet-connect{
+    width: 15.7em; height: 2.3em;
+    border-radius: 1.15em;
+    background-color: #2a2a2a;
+    display: flex; align-items: center; justify-content: flex-start;
+    cursor: pointer;
+}
+.connect-wallet-modal-default-btn-wallet-connect:hover{
+    opacity: .7;
+}
+.connect-wallet-modal-default-img{
+    margin-left: 7%; margin-right: 8%;
+    width: 1.5em; height: 1.5em;
+}
+.connect-wallet-modal-default-img-trustwallet{
+    position: absolute; left: .45em;
+    margin-right: 8%;
+    width: 1.5em; height: 1.5em;
+}
+.connect-wallet-modal-default-img-apple{
+    margin-left: 7%; margin-right: 8%;
+    width: 1.35em; height: 1.5em;
+}
+.connect-wallet-modal-default-img-tp{
+    margin-left: 30%; margin-right: .5em;
+    width: 1.35em; height: .95em;
+}
+.connect-wallet-modal-social-desc{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: 1.1em; font-weight: 600; color: #fff;
+    letter-spacing: -.02em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 60%;
+}
+.connect-wallet-modal-default-desc{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .9em; font-weight: 600; color: #fff;
+    letter-spacing: -.02em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    /* width: 60%; */
+}
+
+.topup-wallet-modal-container{
+    background: rgba(0,0,0,0.6);
+    position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    z-index: 70;
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border-radius: 1.6em;
+}
+
+.connect-wallet-modal-header{
+    width: 15.6em; 
+    height: 2.8em;
+    margin-top: 3em;
+}
+
+.connect-wallet-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70%; 
+    width: 100%; 
+    margin-top: -.5em;
+    /* padding-top: 1em; */
+}
+.connect-wallet-modal-new-content {
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    width: 100%; height: 70%; 
+    margin-top: .5em;
+    /* padding-top: 1em; */
+}
+
+.connect_wallet_modal_alert_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.connect_wallet_modal_alert_desc{
+    width: 17.4em; height: 12.4em;
+}
+
+.connect-wallet-modal-close-btn, .connect_magic_close_btn {
+    position: absolute;
+    right: -1.2em;
+    top: -1.2em;
+    outline: none;
+    background: none;
+    border: none;
+
+
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_0___}) center no-repeat;
+    background-size: 100% 100%;
+    width: 4.1em;
+    height: 4.1em;
+    /* position: absolute; */
+    z-index: 5222;
+    /* top: -1em; right: -1em; */
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+.connect-wallet-modal-close-btn:hover {
+    opacity: .7;
+}
+.connect_magic_close_btn:hover {
+    opacity: .7;
+}
+
+.connect-wallet-modal-close-btn-img {
+    width: 2.3em;
+    height: 2.3em;
+}
+
+.connect-wallet-modal-wallet-button-metamask {
+    width: 20.2em;
+    height: 3.6em;
+    cursor: pointer;
+}
+
+.connect-wallet-modal-wallet-button {
+    width: 20.2em;
+    height: 3.4em;
+    cursor: pointer;
+}
+
+.connect-wallet-modal-wallet-button-coinbase-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .3em;
+    position: relative;
+}
+
+.connect-wallet-modal-wallet-tag {
+    position: absolute;
+    top: -1.7em;
+    width: 15em;
+    height: 3em;
+}
+
+.connect-wallet-modal-wallet-button-coinbase {
+    width: 20.2em;
+    height: 6em;
+    cursor: pointer;
+}
+
+.connect-wallet-modal-wallet-button:hover {
+    opacity: .7;
+}
+
+.connect-wallet-modal-new-wallet-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-wallet-modal-new-wallet {
+    position: absolute;
+    color: #f4d56ff2;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.connect-wallet-modal-new-wallet:hover {
+    opacity: .7;
+}
+
+.refresh-page-message {
+    color: black;
+}
+
+
+/* connect wallet popup - mobile */
+.connect-wallet-modal-bg-mobile{
+    background: rgba(0, 0, 0, .6);
+    box-sizing: border-box;
+	position: absolute; bottom: 0; right: 0; top: 0; left: 0;
+	display: flex; justify-content: center; align-items: center;
+	width: 100%; height: 100vw;
+    z-index: 1000;
+    /* padding-top: 6%; */
+    overflow: hidden;
+}
+.topup-wallet-modal-portrait{
+    background: rgba(0, 0, 0, .6);
+    box-sizing: border-box;
+	position: absolute; bottom: 0; right: 0; top: 0; left: 0;
+	display: flex; justify-content: center; align-items: center;
+	width: 100%; height: 100vw;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.connect_wallet_modal_close {
+    background: transparent url(${___CSS_LOADER_URL_REPLACEMENT_1___}) center no-repeat;
+    background-size: 100% 100%;
+    width: 3.33em;
+    height: 3.33em;
+    position: absolute;
+    z-index: 5222;
+    top: -1em;
+    right: -1em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .2s;
+}
+.connect-wallet-modal-content-portrait{
+    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+    width: 18.3rem; height: 23.4rem;
+    transform: rotate(-90deg);
+    position: relative;
+    /* margin: 0 0 8em 8em; */
+    background: #050505;
+    border-radius: 1.6em;
+    border: solid .1em #393939;
+    border-bottom: .8rem solid #f1cb64 !important;
+    border-bottom-left-radius: 5em; border-bottom-right-radius: 5em;
+}
+.connect-wallet-modal-header-portrait{
+    width: 80%; height: 25%;
+    margin-top: 7%;
+    display: flex; flex-direction: column; justify-content: space-evenly;
+}
+.w3a-wallet-connect__container-desktop{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .55rem; font-weight: bold; color: #fff;
+    /* letter-spacing: .12em; */
+}
+.connect-wallet-modal-header-arr-box-portrait{
+    width: 1.7rem; height: 1.7rem; 
+    border-radius: .4rem;
+    background-color: #f1cb64;
+    display: flex; align-items: center; justify-content: center;
+}
+.connect-wallet-modal-header-arr-portrait{
+    height: .83rem; width: .64rem;
+}
+.w3a-wallet-connect__container-desktop, .w3ajs-wallet-connect__container{
+    background: transparent !important;
+}
+.connect-wallet-modal-header-desc-portrait{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: 1.45rem; font-weight: bold; color: #fff;
+    letter-spacing: -.02em;
+    padding: 0;
+    margin: 0;
+}
+.connect-wallet-modal-subheader-desc-portrait{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .7rem; font-weight: bold; color: #626262;
+    letter-spacing: -.026em;
+    padding: 0;
+    margin: 0;
+}
+.connect-wallet-modal-connect-btns{
+    display: flex; flex-direction: column; justify-content: space-evenly;
+    height: 55%;
+}
+.connect-wallet-modal-social-btn-portrait{
+    display: flex; flex-direction: row; align-items: center;
+    width: 15.7rem; height: 2.3rem;
+    border-radius: 1.15rem;
+    background-color: #f1cb64;
+}
+.connect-wallet-modal-social-img-portrait{
+    margin-left: 30%; margin-right: .5rem;
+    width: 1rem; height: 1rem;
+}
+.connect-wallet-modal-social-desc-portrait{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .75rem; font-weight: bold; color: #030303;
+    letter-spacing: .02rem;
+    padding: 0;
+    margin: 0;
+}
+.connect-wallet-modal-default-btn-portrait{
+    display: flex; flex-direction: row; align-items: center;
+    width: 15.7rem; height: 2.3rem;
+    border-radius: 1.15rem;
+    background-color: #2a2a2a;
+}
+.connect-wallet-modal-default-img-portrait{
+    margin-left: 30%; margin-right: .5rem;
+    width: 1rem; height: 1rem;
+}
+.connect-wallet-modal-default-desc-portrait{
+    font-family: Helvetica, Arial sans-serif;
+    font-size: .75rem; font-weight: bold; color: #fff;
+    letter-spacing: .021rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+.connect_wallet_modal_alert{
+    position: absolute;
+    z-index: 2;
+    width: 59.2em;
+    height: 41.4em;
+}
+
+.content_wallet_modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; height: 86vh;  */
+    transform: rotate(-90deg);
+    position: relative;
+    margin: 0 0 8em 8em;
+}
+
+.connect_wallet_modal_content_details {
+    position: absolute;
+    top: -30vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.connect_wallet_modal_recommended {
+    width: 41.6em;
+    height: 8.4em;
+    margin-bottom: -4em;
+    z-index: 2;
+}
+
+.connect_wallet_modal_coinbase {
+    width: 60.6em;
+    height: 18.8em;
+    margin-bottom: 5.5em;
+}
+
+.connect_wallet_modal_metamask {
+    width: 60.6em;
+    height: 15em;
+    margin-bottom: 5.5em;
+}
+
+.connect_wallet_modal_new_wallet {
+    width: 60.6em;
+    height: 14.4em;
+    margin-bottom: 5.5em;
+}
+
+.connect_wallet_modal_content_header {
+    margin: 7em 0 4em 0;
+    width: 45.7em;
+    height: 15em;
+}
+.connect_wallet_modal_content_bg{
+    width: 72em; height: 86em;
+}
+
+.connect_wallet_modal_input_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 16em;
+    height: 2em;
+    border-radius: 0.38em;
+    border: solid 0.1em rgba(244, 213, 111, 0.6);
+    background-color: #000;
+    margin-bottom: 0.3em;
+}
+
+.connect_wallet_modal_input{
+    height: 100%; width: 100%;
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: "Barlow Semi Condensed"; font-size: 1em; color: #fff;
+    text-align: left;
+}
+
+.confirm{
+    display: flex; align-items: center; justify-content: center;
+    width: 16em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: .46em;
+    border: solid .12em #f4d56f;
+    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+
+    /* &:hover{
+        scale: 1.02;
+    } */
+
+}
+
+.confirm p{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+
+.confirm1{
+    display: flex; align-items: center; justify-content: center;
+    width: 16em;
+    height: 2em;
+    border-radius: .46em;
+    border: solid .12em #f4d56f;
+    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+}
+
+.confirm1 p{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+}
+
+.refresh_blockchain_btn{
+    
+    
+    right: 5em;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    z-index: 5;
+    width: 16em;
+    height: 2em;
+    border-radius: .63em;
+    border: solid .1em rgba(244, 213, 111, 0.7);
+    background-color: rgba(12, 13, 19, 0.1);
+    cursor: pointer;
+
+    /* &:hover{
+        scale: 1.02;
+    } */
+
+    
+}
+
+.refresh_blockchain_btn p{
+    text-align: center;
+    color: #f4d56f;
+    line-height: 1em;
+    /*font-weight: bold;*/
+    font-size: 1em;
+}
+
+.connect-wallet-modal-default-img-walletconnect{
+    width: 2.72rem; height: 2.72rem;
+    position: absolute; left: .5em;
+}
+.connect-wallet-modal-default-img-apple{
+    width: 2.22rem; height: 2.72rem;
+    position: absolute; left: -.5em;
+}
+
+@media screen and (max-width: 480px){
+
+    .connect-wallet-modal-background{
+        font-size: 18px;
+    }
+
+    .connect-wallet-modal-default-btn-social:hover,
+    .connect-wallet-modal-default-btn-apple:hover,
+    .connect-wallet-modal-default-btn-trustwallet:hover,
+    .connect-wallet-modal-default-btn:hover{
+        background-color: #f4d56f;
+    }
+
+    /* special connect popup without social */
+    .special-connect-wallet-modal-container {
+        font-size: 16px;
+        min-height: 18em; height: auto; max-height: 31em;
+        width: 85%;
+        /* overflow-x: hidden; overflow-y: auto; */
+    }
+    .special-connect-header{
+        margin: .6em 0 .5em 0;
+    }
+    .special-connect-btn img{
+        position: absolute; left: 2%;
+        transform: scale(.35, .35);
+    }
+    .special-connect-btn p{
+        font-size: .8em;
+    }
+    .special-connect-bottom{
+        margin: .4em 0 .5em 0;
+    }
+    .special-connect-bottom-asset img{
+        transform: scale(.7, .7);
+        margin-bottom: -.1em;
+    }
+    .special-connect-bottom-asset p{
+        padding: .25em 0 .35em 0;
+    }
+    /*  */
+
+
+
+    .connect_magic_wrap_background{
+        font-size: 18px;
+    }
+    .connect-wallet-modal-container{
+        width: 90%;
+        /* min-height: 15em;  */
+        height: auto; 
+        /* height: 28.5em; */
+    }
+    .connect-wallet-modal-container[old='true']{
+        padding-top: .5em;
+        height: 27em;
+    }
+    .connect_switch_btns{
+        margin: -.1em;
+    }
+    .connect_switch_desc{
+        margin: .8em 0 .6em 0;
+    }
+    .connect_row_short_btns{
+        width: 83%;
+    }
+    /* .connect-wallet-modal-subheader-desc{
+        margin: .9em 0 1.2em 0;
+    } */
+    .connect-wallet-modal-login-btns-row{
+        display: none;
+    }
+    .connect-wallet-modal-login-btns-row-mobile{
+        width: 82%;
+        margin-bottom: .55em;
+        display: flex; flex-direction: row; justify-content: space-between;
+    }
+    /* .connect-wallet-modal-default-btn-mobile{
+        display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+        width: 45%; height: 4.6em;
+        border: solid .16em #5f5f5f;
+        background-color: #2a2a2a;
+    } */
+    .connect-wallet-modal-default-img-mobile{
+        width: 2.72rem; height: 2.72rem;
+    }
+    .connect-wallet-modal-default-img-mobile-metamask{
+        width: 2.72rem; height: 2.72rem;
+        position: absolute; left: .5em;
+    }
+    .connect-wallet-modal-default-img-mobile-coinbase{
+        width: 2.72rem; height: 2.72rem;
+        position: absolute; left: .5em;
+    }
+    .connect-wallet-modal-social-btn{
+        width: 80%; height: 5.6em;
+        border-radius: .4em;
+        border: solid .16em #5f5f5f;
+        background-color: #2a2a2a;
+        display: flex; align-items: center; justify-content: flex-start;
+        cursor: pointer;
+    }
+    .connect-wallet-modal-close-btn, .connect_magic_close_btn{
+        width: 3.04em; height: 3.04em;
+        top: -.8em; right: -.8em;
+    }
+    .connect_btn_txt{
+        font-size: .78em;
+    }
+    .connect_google_src{
+        position: absolute; left: .7em;
+        width: 1.4em; height: 1.45em;
+    }
+    .connect_apple_src{
+        position: absolute; left: .7em;
+        width: 1.25em; height: 1.5em;
+    }
+    .connect_facebook_src{
+        position: absolute; left: .7em;
+        width: 1.6em; height: 1.6em;
+    }
+    .connect_coinbase_src{
+        position: absolute; left: .7em;
+        width: 1.6em; height: 1.6em;
+    }
+    .connect_metamask_src{
+        position: absolute; left: .7em;
+        width: 1.7em; height: 1.6em;
+    }
+    .connect_email_src{
+        position: absolute; left: .7em;
+        width: 1.7em; height: 1.15em;
+    }
+    .connect_walletconnect_src{
+        position: absolute; left: .7graem;
+        width: 1.6em; height: 1.6em;
+    }
+    
+    .connect-wallet-modal-header-desc{
+        margin-top: .45em;
+    }
+    .connect-wallet-modal-default-btn{
+        position: relative;
+        width: 46%; height: 2.8em;
+        display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
+        border: solid .16em #5f5f5f;
+        background-color: #2a2a2a;
+    }
+    .connect-wallet-modal-default-btn-metamask, .connect-wallet-modal-default-btn-apple{
+        position: relative;
+        width: 100%; height: 2.8em;
+        display: flex; flex-direction: row; justify-content: center; align-items: center;
+        border: solid .16em #5f5f5f;
+        border-radius: .4em;
+        background-color: #2a2a2a;
+    }
+    .connect-wallet-coming-soon{
+        position: absolute; left: 20%;
+        z-index: 2;
+    }
+    .connect-wallet-modal-social-desc{
+        font-size: .8em;
+    }
+    .connect-wallet-modal-default-btn-coinbase, .connect-wallet-modal-default-btn-trustwallet{
+        position: relative;
+        width: 100%; height: 2.8em;
+        display: flex; flex-direction: row; justify-content: center; align-items: center;
+        border: solid .16em #5f5f5f;
+        background-color: #2a2a2a;
+        border-radius: .4em;
+        margin-bottom: .1em;
+    }
+    .connect-wallet-modal-default-img-mobile{
+        width: 1.45em; height: 1.45em;
+        /* position: absolute; left: .5em; */
+        margin: 0 .3em 0 .4em;
+    }
+    .connect-wallet-modal-center-desc{
+        margin: -.5em 0 1.5em 0;
+    }
+    .connect-wallet-modal-default-desc{
+        font-size: .82em;
+        font-family: Arial, Helvetica, sans-serif; font-weight: 600;
+        /* width: 85%; */
+    }
+    .connect-wallet-modal-login-btns-row{
+        margin-bottom: 1.2em;
+    }
+    .connect-wallet-modal-content {
+        height: 80%;
+    }
+    .connect-wallet-modal-row_btn_wrap{
+        display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+        width: 15.7em;
+    }
+    /* .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn{
+        display: flex; align-items: center; justify-content: center;
+        width: 7.55em; height: 2.3em;
+    } */
+    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn img{
+        margin: 0 .4em 0 0;
+    }
+    .connect-wallet-modal-default-btn-wallet-connect{
+        display: none;
+    }
+
+    /* new login btns */
+    .connect-wallet-modal-crypto-btn_[btn='walletconnect']{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) and (orientation: landscape) {
+
+    .connect_magic_wrap_background {
+        font-size: 16px;
+    }
+    .connect-wallet-modal-background{
+        font-size: 12px !important;
+        flex: 1;
+    }
+
+
+    /* special connect popup without social */
+    .special-connect-wallet-modal-container {
+        width: 33%;
+    }
+    .special-connect-btn img{
+        position: absolute; left: 2%;
+        transform: scale(.25, .25);
+    }
+    .special-connect-btn p{
+        font-size: .8em;
+    }
+    .special-connect-bottom-asset img{
+        transform: scale(.45, .45);
+    }
+    .special-connect-bottom-asset p{
+        padding: 0;
+    }
+    /*  */
+
+
+    .connect-wallet-modal-container{
+        overflow-y: auto; overflow-x: hidden;
+        width: 20em; 
+        /* height: 28em; */
+        /* margin-top: -3em; */
+    }
+    .connect-wallet-modal-content {
+        height: 90% !important;
+    }
+    .connect-wallet-modal-close-btn {
+        /* width: 3.14em; height: 3.14em; */
+        display: none;
+    }
+    .connect-wallet-modal-header-desc{
+        margin-top: .8em;
+    }
+    .connect_switch_desc{
+        margin: -.2em 0 .4em 0;
+    }
+    .connect-wallet-modal-row_btn_wrap{
+        display: flex; flex-direction: row; justify-content: space-between; align-items: center;
+        width: 15.7em;
+    }
+    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn{
+        display: flex; align-items: center; justify-content: center;
+        width: 7.55em; height: 2.3em;
+    }
+    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn img{
+        margin: 0 .4em 0 0;
+    }
+    .connect-wallet-modal-default-btn-wallet-connect{
+        display: none;
+    }
+    /* new login btns */
+    .connect-wallet-modal-crypto-btn_[btn='walletconnect']{
+        display: none;
+    }
+    .connect-wallet-modal-walletconnect-btn, .connect-wallet-modal-apple-btn{
+       display: none;
+    }
+}
+
+@media screen and (max-height: 330px) and (orientation: landscape) {
+    .connect-wallet-modal-background{
+        font-size: 10px !important;
+        flex: 1;
+    }
+}
+@media screen and (max-height: 300px) and (orientation: landscape) {
+    .connect-wallet-modal-background{
+        font-size: 9px !important;
+        flex: 1;
+    }
+    .connect_magic_wrap_background{
+        font-size: 14px !important;
+    }
+    .connect_magic_close_btn {
+        display: none;
+    }
+    .connect_magic_email_submit{
+        height: 3em !important;
+    }
+    .connect_magic_email_submit p{
+        font-size: 1.2em !important;
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(.25);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+}
+
+onboard-v2{
+    display: none important;
+}`, "",{"version":3,"sources":["webpack://./src/styles/pages/tradePage/connectWalletModal.css"],"names":[],"mappings":"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","sourcesContent":[".connect-wallet-modal-background{\n    background: rgba(0, 0, 0, 0.6);\n    position: absolute; top: 0; bottom: 0; right: 0; left: 0;\n    width: 99.9%;\n    z-index: 9999;\n    display: flex; justify-content: center; align-items: center;\n    flex: 1;\n}\n\n\n/* special connect popup without social */\n.special-connect-wallet-modal-container {\n    position: relative;\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n    border-radius: .8em;\n    border:  solid .16em rgba(93, 93, 93, 0.72);\n    background: #050505;\n    transition: all .2s;\n    width: 25%; \n    min-height: 18em; height: auto; max-height: 35.5em;\n    animation: bounce-in .65s ease;\n}\n.special-connect-header{\n    font-family: 'SF UI Display', sans-serif; font-size: 1.56em; font-weight: bold;\n    color: #f4d56f;\n    letter-spacing: -.022em;\n    width: 85%;\n    padding: 0;\n    margin: 1.5em 0 .8em 0;\n    text-align: center;\n}\n.special-connect-desc{\n    font-family: 'SF UI Display', sans-serif; font-size: .9em; font-weight: 400;\n    color: #fff;\n    letter-spacing: .037em;\n    width: 85%;\n    padding: 0;\n    margin: 0 0 .5em 0;\n    text-align: center;\n}\n.special-connect-sub-header{\n    font-family: 'SF UI Display', sans-serif; font-size: .74em; font-weight: 400;\n    color: #f4d56f;\n    letter-spacing: .031em;\n    text-align: center;\n    padding: 0;\n    margin-top: .8em;\n}\n.special-connect-btn{\n    position: relative;\n    width: 85%; height: 2.98em;\n    display: flex; align-items: center; justify-content: center;\n    border-radius: .41em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    margin-bottom: .62em;\n    cursor: pointer;\n}\n.special-connect-btn img{\n    position: absolute; left: 2%;\n    transform: scale(.45, .45);\n}\n.special-connect-btn p{\n    font-family: 'Helvetica-Bold'; font-size: .93em; font-weight: bold;\n    color: #fff;\n    text-align: center;\n}\n.special-connect-bottom{\n    width: 85%;\n    display: flex; flex-direction: row; justify-content: space-between;\n    flex-wrap: wrap;\n    margin: 1.12em 0 1.5em 0;\n}\n.special-connect-bottom-asset{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-end;\n    width: 30%; height: 3.2em;\n    border-radius: .38em;\n    border: solid .16em rgba(93, 93, 93, 0.72);\n    background-color: #050505;\n    margin-bottom: .8em;\n}\n.special-connect-bottom-asset img{\n    transform: scale(.9, .9);\n}\n.special-connect-bottom-asset p{\n    font-family: 'Helvetica-Bold'; font-size: .58em; color: #fff;\n    letter-spacing: .015em;\n    text-align: center;\n    padding: .65em 0 .65em 0;\n    margin: 0;\n}\n/*  */\n\n\n\n\n\n.connect-wallet-modal-container {\n    position: relative;\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n    border-radius: 2em;\n    border:  solid .16em rgba(93, 93, 93, 0.72);\n    background: #050505;\n    transition: all .2s;\n    width: 26.4%; \n    min-height: 24em; height: auto; max-height: 35.5em;\n    animation: bounce-in .65s ease;\n}\n\n.connect-wallet-modal-container[old='true']{\n    height: 22.9em;\n}\n.connect-wallet-modal-header-arr-box{\n    width: 1.7em; height: 1.7em; \n    border-radius: .4em;\n    background-color: #f1cb64;\n    display: flex; align-items: center; justify-content: center;\n}\n.connect-wallet-modal-header-arr{\n    height: .83em; width: .64em;\n}\n.connect-wallet-modal-bottom-desc{\n    position: absolute; bottom: .2em;\n    color: #fff; font-family: 'SF UI Display', sans-serif; font-size: .72em;\n    opacity: 0.51;\n    letter-spacing: -.018em;\n}\n.connect-wallet-modal-header-desc{\n    font-family: 'SF UI Display', sans-serif;                          \n    font-size: 1.7em; font-weight: 600; color: #f4d56f;\n    padding: 0;\n    margin: 1em 0 0 0;\n    letter-spacing: -.035em;\n    text-align: center;\n}\n\n/* label divider */\n.connect-wallet-modal-label{\n    width: 84%;\n    display: flex; flex-direction: row; align-items: center; justify-content: space-between;\n    margin: .4em 0;\n}\n.connect-wallet-modal-label div{\n    width: 18%; height: .08em;\n    background: #9797974d;\n}\n.connect-wallet-modal-label p{\n    font-family: 'SF UI Display';\n    font-size: .7em; font-weight: 300; color: #ababab;\n    letter-spacing: .048em;\n}\n\n/* new magic btn */\n.connect-wallet-modal-magic-btn_{\n    position: relative;\n    display: flex; flex-direction: row; align-items: center; \n    width: 84%; height: 4em;\n    border-radius: .54em;\n    border: solid .1em #646875;\n    background-color: #010a26; \n    margin-bottom: 1em;\n    cursor: pointer;\n}\n.connect-wallet-modal-magic-btn_:hover{\n    background: #000;\n    /* border: solid .15em #646875; */\n}\n.connect-wallet-new-header{\n    font-family: 'Helvetica'; font-size: .94em; color: #fff;\n}\n.new_magic_logo{\n    width: 1.7em; height: 2.2em;\n    margin: 0 1em;\n}\n.connect-wallet-new{\n    width: 2.2em; height: 1.7em;\n    position: absolute; top: 0; right: 0;\n    z-index: 2;\n}\n.connect-wallet-recomended{\n    width: 6em; height: 1.1em;\n    position: absolute; top: -.3em; left: 32%;\n    z-index: 2;\n}\n/* new social btn */\n.connect-wallet-modal-social-btn_{\n    position: relative;\n    display: flex; flex-direction: row; align-items: center;\n    width: 82%; height: 3.5em;\n    border-radius: .54em;\n    border: solid .1em #646875;\n    background-color: #010a26;\n    margin-bottom: 1em;\n    cursor: pointer;\n}\n.connect-wallet-modal-social-btn_:hover{\n    background: #000;\n    /* border: solid .15em #646875; */\n}\n.new_social_logo{\n    width: 1.44em; height: 1.5em;\n    margin: 0 1.65em 0 1.3em;\n}\n/* new crypto btns */\n.connect-wallet-modal-crypto-btn_{\n    position: relative;\n    display: flex; flex-direction: row; align-items: center; justify-content: center;\n    width: 82%; height: 2.8em;\n    border-radius: .54em;\n    border: solid .1em #646875;\n    background-color: #010a26;\n    cursor: pointer;\n    margin-bottom: .9em;\n}\n.connect-wallet-modal-crypto-btn_:hover{\n    background: #000;\n    /* border: solid .15em #646875; */\n}\n.new_coinbase_logo, .new_walletconnect_logo{\n    position: absolute; left: 1.1em;\n    width: 1.91em; height: 1.91em;\n}\n\n.new_metamask_logo{\n    position: absolute; left: 1.3em;\n    width: 1.6em; height: 1.51em;\n}\n\n\n\n\n\n.connect-wallet-modal-subheader-desc{\n    font-family: 'SF UI Display'; \n    font-size: .8em; font-weight: 300; color: #ababab;\n    letter-spacing: .048em;\n    padding: 0;\n    margin: .8em 0 .6em 0;\n}\n/* .connect-wallet-modal-social-btn{\n    width: 85%; height: 2.5em;\n    border-radius: .3em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n/* } */\n.connect-wallet-modal-social-btn:hover,\n.connect-wallet-modal-walletconnect-btn:hover, \n.connect-wallet-modal-apple-btn:hover{\n    opacity: .7;\n}\n\n.connect-wallet-modal-social-btn:focus,\n.connect-wallet-modal-walletconnect-btn:focus, \n.connect-wallet-modal-walletconnect-btn:focus,\n.connect-wallet-modal-default-btn-social:focus,\n.connect-wallet-modal-apple-btn:focus{\n    background-color: #f4c56f;\n}\n.connect-wallet-modal-social-btn:active,\n.connect-wallet-modal-walletconnect-btn:active, \n.connect-wallet-modal-walletconnect-btn:active,\n.connect-wallet-modal-default-btn-social:active,\n.connect-wallet-modal-apple-btn:active{\n    background-color: #f4c56f;\n}\n\n.connect-wallet-modal-social-img{\n    margin-left: 30%; margin-right: .5em;\n    width: 1em; height: 1em;\n}\n.connect-wallet-modal-social-desc{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .95em; font-weight: bold; color: #fff;\n    letter-spacing: -.02em;\n    padding: 0;\n    margin: 0;\n}\n\n.connect-wallet-modal-row_btn_wrap{\n    display: none;\n}\n.connect-wallet-modal-default-btn{\n    width: 46%; height: 2.9em;\n    border-radius: .4em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n}\n.connect-wallet-modal-default-btn-social{\n    width: 46%; height: 2.9em;\n    border-radius: .4em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n}\n.connect-wallet-modal-default-btn-social:hover{\n    opacity: .7;\n}\n.connect-wallet-modal-default-btn-social .ext{\n    width: 92%; height: 2.9em;\n    border-radius: .4em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n}\n.connect-wallet-modal-default-btn-social .none{\n    display: none;\n}\n\n.connect-wallet-modal-walletconnect-btn, .connect-wallet-modal-apple-btn{\n    position: relative;\n    width: 100%; height: 2.9em;\n    border-radius: .4em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: center;\n    cursor: pointer;\n    margin-top: -.5em;\n}\n.connect-wallet-modal-walletconnect-btn:hover, .connect-wallet-modal-apple-btn:hover{\n    opacity: .7;\n}\n\n\n\n/* New Magic Connect Popup */\n\n.connect_long_btn{\n    position: relative;\n    display: flex; align-items: center; justify-content: center;\n    width: 82%; height: 2.8em;\n    border-radius: .45em;\n    border: solid .12em #5f5f5f;\n    background-color: #2a2a2a;\n    cursor: pointer;\n    margin-top: .5em;\n}\n.connect_long_btn:hover{\n    background: #000;\n}\n.connect_short_btn:hover{\n    border-radius: .45em;\n    background: #000;\n}\n.connect_row_short_btns{\n    display: flex; justify-content: space-between; align-items: center;\n    width: 82.8%;\n}\n.connect_short_btn{\n    position: relative;\n    display: flex; align-items: center; justify-content: center;\n    width: 46%; height: 2.8em;\n    border-radius: .45em;\n    border: solid .12em #5f5f5f;\n    background-color: #2a2a2a;\n    cursor: pointer;\n}\n.connect_btn_txt{\n    font-family: 'Helvetica'; font-size: .9em; color: #fff;\n    font-weight: 600;\n}\n.connect_short_btn_txt{\n    font-family: 'Helvetica'; font-size: .9em; color: #fff;\n    font-weight: 600;\n    margin-right: -2em;\n}\n.connect_google_src{\n    position: absolute; left: .85em;\n    width: 1.4em; height: 1.45em;\n}\n.connect_apple_src{\n    position: absolute; left: .85em;\n    width: 1.25em; height: 1.5em;\n}\n.connect_facebook_src{\n    position: absolute; left: .85em;\n    width: 1.6em; height: 1.6em;\n}\n.connect_coinbase_src{\n    position: absolute; left: .85em;\n    width: 1.6em; height: 1.6em;\n}\n.connect_metamask_src{\n    position: absolute; left: .85em;\n    width: 1.7em; height: 1.6em;\n}\n.connect_email_src{\n    position: absolute; left: .85em;;\n    width: 1.7em; height: 1.15em;\n}\n.connect_walletconnect_src{\n    position: absolute; left: .85em;\n    width: 1.6em; height: 1.6em;\n}\n.connect_crypto_wallet_desc{\n    font-family: 'SF UI Display'; font-size: .8em; color: #ababab;\n    font-weight: 300;\n    letter-spacing: .048em;\n    text-align: center;\n    margin: 1em 0 0 0;\n    padding: 0;\n}\n.connect_switch_btns{\n    margin-top: .4em;\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n    padding-bottom: .6em;\n}\n.connect_switch_btns{\n    background: #000;\n}\n.connect_switch_desc {\n    font-family: 'SF UI Display'; font-size: .8em; color: #ababab;\n    font-weight: 300;\n    letter-spacing: .048em;\n    text-align: center;\n    margin: .8em 0 .6em 0;\n    padding: 0;\n}\n.connect_switch_btn{\n    font-family: Helvetica; font-size: .94em; font-weight: bold;\n    text-align: center;\n    color: #fff;\n    padding: 0;\n    margin: 0;\n    cursor: pointer;\n}\n\n\n/* MAGIC CONNECT - WALLET */\n.connect_magic_wrap_background{\n    background: rgba(0, 0, 0, 0.6);\n    position: absolute; top: 0; bottom: 0; right: 0; left: 0;\n    width: 100%; height: 100%;\n    z-index: 9999;\n    display: flex; justify-content: center; align-items: center;\n    flex: 1;\n    z-index: 9999;\n    overflow: hidden;\n    box-sizing: border-box;\n    font-size: 24px;\n}\n\n\n.connect_magic_container{\n    position: relative;\n    width: 18.5em; height: 18em;\n    display: flex; flex-direction: column; align-items: center;\n    border-radius: 2em;\n    border:  solid .16em rgba(93, 93, 93, 0.72);\n    background: #050505;\n    animation: bounce-in .65s ease;\n}\n.connect_magic_header{\n    font-family: 'SF UI Display';\n    font-size: 1.56em; font-weight: 500; color: #f4d56f;\n    letter-spacing: -.035em;\n    text-align: center;\n    margin-top: 1.1em;\n    padding: 0;\n}\n.connect_magic_subheader{\n    font-family: 'SF UI Display';\n    font-size: .8em; font-weight: 300; color: #ababab;\n    letter-spacing: .048em;\n    text-align: center;\n    padding: 0;\n    margin: 1em 0 .7em 0;\n}\n.connect_magic_input{\n    width: 80%; height: 3.5em;\n    border-radius: .4em;\n    border: solid .12em #b1aeae;\n    background-color: #151515;\n    outline: none;\n    font-family: Helvetica; color: #fff; font-size: .7em; font-weight: 300;\n    letter-spacing: .037em;\n    text-align: center;\n}\n.connect_magic_input::placeholder{\n    color: #fff; \n    text-align: center;\n}\n.connect_magic_email_submit{\n    display: flex; align-items: center; justify-content: center;\n    width: 80%; height: 4.4em;\n    border-radius: .4em;\n    background: #f4c56f;\n    outline: none;\n    border: transparent;\n    margin-top: 4.7em;\n    opacity: .5;\n}\n.connect_magic_email_submit[validtosubmit=\"true\"]{\n    opacity: 1;\n    cursor: pointer;\n}\n.connect_magic_email_submit p{\n    color: #0c0d13; font-weight: 600; font-size: 1.6em;\n}\n\n\n/*  */\n\n\n.connect-wallet-modal-login-btns-row-mobile{\n    display: none;\n}\n\n.connect-wallet-modal-social-btn{\n    width: 80%; height: 3.7em;\n    border-radius: .4em;\n    border: solid .1em #5f5f5f;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n}\n.connect-wallet-modal-default-btn:hover{\n    opacity: .7;\n}\n\n.connect-wallet-modal-login-btns-row{\n    width: 80%;\n    display: flex; flex-direction: row; justify-content: space-between; align-items: center;\n    margin-bottom: .8em;\n}\n.connect-wallet-modal-login-btns-row[first]{\n    border-top: solid .11em #9797974d;\n    padding-top: 1.2em;\n}\n\n.connect-wallet-modal-center-desc{\n    /* background: url('../../../../public/media/images/social_icons/web3auth.svg') no-repeat center center; */\n    /* background-size: 60% 60%; */\n    /* margin-bottom: -3em; */\n    /* height: 2.8em; */\n    /* width: 80%; */\n\n    font-size: .8em; color: lightseagreen;\n    text-decoration: underline;\n    cursor: pointer;\n    padding: 0;\n    margin: -1.5em 0 0 0;\n}\n/* .connect-wallet-coming-soon{\n    position: relative; left: 40%;\n    z-index: 2;\n} */\n.connect-wallet-modal-default-btn-wallet-connect{\n    width: 15.7em; height: 2.3em;\n    border-radius: 1.15em;\n    background-color: #2a2a2a;\n    display: flex; align-items: center; justify-content: flex-start;\n    cursor: pointer;\n}\n.connect-wallet-modal-default-btn-wallet-connect:hover{\n    opacity: .7;\n}\n.connect-wallet-modal-default-img{\n    margin-left: 7%; margin-right: 8%;\n    width: 1.5em; height: 1.5em;\n}\n.connect-wallet-modal-default-img-trustwallet{\n    position: absolute; left: .45em;\n    margin-right: 8%;\n    width: 1.5em; height: 1.5em;\n}\n.connect-wallet-modal-default-img-apple{\n    margin-left: 7%; margin-right: 8%;\n    width: 1.35em; height: 1.5em;\n}\n.connect-wallet-modal-default-img-tp{\n    margin-left: 30%; margin-right: .5em;\n    width: 1.35em; height: .95em;\n}\n.connect-wallet-modal-social-desc{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: 1.1em; font-weight: 600; color: #fff;\n    letter-spacing: -.02em;\n    padding: 0;\n    margin: 0;\n    text-align: center;\n    width: 60%;\n}\n.connect-wallet-modal-default-desc{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .9em; font-weight: 600; color: #fff;\n    letter-spacing: -.02em;\n    padding: 0;\n    margin: 0;\n    text-align: center;\n    /* width: 60%; */\n}\n\n.topup-wallet-modal-container{\n    background: rgba(0,0,0,0.6);\n    position: absolute; top: 0; bottom: 0; right: 0; left: 0;\n    width: 100%;\n    height: 100%;\n    height: 100dvh;\n    z-index: 70;\n    flex: 1;\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n    border-radius: 1.6em;\n}\n\n.connect-wallet-modal-header{\n    width: 15.6em; \n    height: 2.8em;\n    margin-top: 3em;\n}\n\n.connect-wallet-modal-content {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-evenly;\n    height: 70%; \n    width: 100%; \n    margin-top: -.5em;\n    /* padding-top: 1em; */\n}\n.connect-wallet-modal-new-content {\n    display: flex; flex-direction: column; align-items: center; justify-content: space-between;\n    width: 100%; height: 70%; \n    margin-top: .5em;\n    /* padding-top: 1em; */\n}\n\n.connect_wallet_modal_alert_box {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.connect_wallet_modal_alert_desc{\n    width: 17.4em; height: 12.4em;\n}\n\n.connect-wallet-modal-close-btn, .connect_magic_close_btn {\n    position: absolute;\n    right: -1.2em;\n    top: -1.2em;\n    outline: none;\n    background: none;\n    border: none;\n\n\n    background: transparent url('/public/media/images/connect_modal/loginClose.png') center no-repeat;\n    background-size: 100% 100%;\n    width: 4.1em;\n    height: 4.1em;\n    /* position: absolute; */\n    z-index: 5222;\n    /* top: -1em; right: -1em; */\n    cursor: pointer;\n    opacity: 1;\n    transition: opacity .2s;\n}\n\n.connect-wallet-modal-close-btn:hover {\n    opacity: .7;\n}\n.connect_magic_close_btn:hover {\n    opacity: .7;\n}\n\n.connect-wallet-modal-close-btn-img {\n    width: 2.3em;\n    height: 2.3em;\n}\n\n.connect-wallet-modal-wallet-button-metamask {\n    width: 20.2em;\n    height: 3.6em;\n    cursor: pointer;\n}\n\n.connect-wallet-modal-wallet-button {\n    width: 20.2em;\n    height: 3.4em;\n    cursor: pointer;\n}\n\n.connect-wallet-modal-wallet-button-coinbase-wrap {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    border-radius: .3em;\n    position: relative;\n}\n\n.connect-wallet-modal-wallet-tag {\n    position: absolute;\n    top: -1.7em;\n    width: 15em;\n    height: 3em;\n}\n\n.connect-wallet-modal-wallet-button-coinbase {\n    width: 20.2em;\n    height: 6em;\n    cursor: pointer;\n}\n\n.connect-wallet-modal-wallet-button:hover {\n    opacity: .7;\n}\n\n.connect-wallet-modal-new-wallet-button {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.connect-wallet-modal-new-wallet {\n    position: absolute;\n    color: #f4d56ff2;\n    font-family: 'Barlow Semi Condensed', sans-serif;\n    font-size: 2em;\n    font-weight: 500;\n    text-align: center;\n    z-index: 2;\n    cursor: pointer;\n}\n\n.connect-wallet-modal-new-wallet:hover {\n    opacity: .7;\n}\n\n.refresh-page-message {\n    color: black;\n}\n\n\n/* connect wallet popup - mobile */\n.connect-wallet-modal-bg-mobile{\n    background: rgba(0, 0, 0, .6);\n    box-sizing: border-box;\n\tposition: absolute; bottom: 0; right: 0; top: 0; left: 0;\n\tdisplay: flex; justify-content: center; align-items: center;\n\twidth: 100%; height: 100vw;\n    z-index: 1000;\n    /* padding-top: 6%; */\n    overflow: hidden;\n}\n.topup-wallet-modal-portrait{\n    background: rgba(0, 0, 0, .6);\n    box-sizing: border-box;\n\tposition: absolute; bottom: 0; right: 0; top: 0; left: 0;\n\tdisplay: flex; justify-content: center; align-items: center;\n\twidth: 100%; height: 100vw;\n    z-index: 1000;\n    overflow: hidden;\n}\n\n.connect_wallet_modal_close {\n    background: transparent url('/public/media/images/closebutton.png') center no-repeat;\n    background-size: 100% 100%;\n    width: 3.33em;\n    height: 3.33em;\n    position: absolute;\n    z-index: 5222;\n    top: -1em;\n    right: -1em;\n    outline: none;\n    border: none;\n    cursor: pointer;\n    opacity: 1;\n    transition: opacity .2s;\n}\n.connect-wallet-modal-content-portrait{\n    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;\n    width: 18.3rem; height: 23.4rem;\n    transform: rotate(-90deg);\n    position: relative;\n    /* margin: 0 0 8em 8em; */\n    background: #050505;\n    border-radius: 1.6em;\n    border: solid .1em #393939;\n    border-bottom: .8rem solid #f1cb64 !important;\n    border-bottom-left-radius: 5em; border-bottom-right-radius: 5em;\n}\n.connect-wallet-modal-header-portrait{\n    width: 80%; height: 25%;\n    margin-top: 7%;\n    display: flex; flex-direction: column; justify-content: space-evenly;\n}\n.w3a-wallet-connect__container-desktop{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .55rem; font-weight: bold; color: #fff;\n    /* letter-spacing: .12em; */\n}\n.connect-wallet-modal-header-arr-box-portrait{\n    width: 1.7rem; height: 1.7rem; \n    border-radius: .4rem;\n    background-color: #f1cb64;\n    display: flex; align-items: center; justify-content: center;\n}\n.connect-wallet-modal-header-arr-portrait{\n    height: .83rem; width: .64rem;\n}\n.w3a-wallet-connect__container-desktop, .w3ajs-wallet-connect__container{\n    background: transparent !important;\n}\n.connect-wallet-modal-header-desc-portrait{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: 1.45rem; font-weight: bold; color: #fff;\n    letter-spacing: -.02em;\n    padding: 0;\n    margin: 0;\n}\n.connect-wallet-modal-subheader-desc-portrait{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .7rem; font-weight: bold; color: #626262;\n    letter-spacing: -.026em;\n    padding: 0;\n    margin: 0;\n}\n.connect-wallet-modal-connect-btns{\n    display: flex; flex-direction: column; justify-content: space-evenly;\n    height: 55%;\n}\n.connect-wallet-modal-social-btn-portrait{\n    display: flex; flex-direction: row; align-items: center;\n    width: 15.7rem; height: 2.3rem;\n    border-radius: 1.15rem;\n    background-color: #f1cb64;\n}\n.connect-wallet-modal-social-img-portrait{\n    margin-left: 30%; margin-right: .5rem;\n    width: 1rem; height: 1rem;\n}\n.connect-wallet-modal-social-desc-portrait{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .75rem; font-weight: bold; color: #030303;\n    letter-spacing: .02rem;\n    padding: 0;\n    margin: 0;\n}\n.connect-wallet-modal-default-btn-portrait{\n    display: flex; flex-direction: row; align-items: center;\n    width: 15.7rem; height: 2.3rem;\n    border-radius: 1.15rem;\n    background-color: #2a2a2a;\n}\n.connect-wallet-modal-default-img-portrait{\n    margin-left: 30%; margin-right: .5rem;\n    width: 1rem; height: 1rem;\n}\n.connect-wallet-modal-default-desc-portrait{\n    font-family: Helvetica, Arial sans-serif;\n    font-size: .75rem; font-weight: bold; color: #fff;\n    letter-spacing: .021rem;\n    padding: 0;\n    margin: 0;\n}\n\n\n.connect_wallet_modal_alert{\n    position: absolute;\n    z-index: 2;\n    width: 59.2em;\n    height: 41.4em;\n}\n\n.content_wallet_modal_content {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    /* width: 100vw; height: 86vh;  */\n    transform: rotate(-90deg);\n    position: relative;\n    margin: 0 0 8em 8em;\n}\n\n.connect_wallet_modal_content_details {\n    position: absolute;\n    top: -30vh;\n    height: 100%;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    align-items: center;\n}\n\n.connect_wallet_modal_recommended {\n    width: 41.6em;\n    height: 8.4em;\n    margin-bottom: -4em;\n    z-index: 2;\n}\n\n.connect_wallet_modal_coinbase {\n    width: 60.6em;\n    height: 18.8em;\n    margin-bottom: 5.5em;\n}\n\n.connect_wallet_modal_metamask {\n    width: 60.6em;\n    height: 15em;\n    margin-bottom: 5.5em;\n}\n\n.connect_wallet_modal_new_wallet {\n    width: 60.6em;\n    height: 14.4em;\n    margin-bottom: 5.5em;\n}\n\n.connect_wallet_modal_content_header {\n    margin: 7em 0 4em 0;\n    width: 45.7em;\n    height: 15em;\n}\n.connect_wallet_modal_content_bg{\n    width: 72em; height: 86em;\n}\n\n.connect_wallet_modal_input_box {\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    width: 16em;\n    height: 2em;\n    border-radius: 0.38em;\n    border: solid 0.1em rgba(244, 213, 111, 0.6);\n    background-color: #000;\n    margin-bottom: 0.3em;\n}\n\n.connect_wallet_modal_input{\n    height: 100%; width: 100%;\n    position: absolute;\n    background-color: transparent;\n    outline: none;\n    border: none;\n    font-family: \"Barlow Semi Condensed\"; font-size: 1em; color: #fff;\n    text-align: left;\n}\n\n.confirm{\n    display: flex; align-items: center; justify-content: center;\n    width: 16em;\n    height: 2em;\n    cursor: pointer;\n    border-radius: .46em;\n    border: solid .12em #f4d56f;\n    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n\n    /* &:hover{\n        scale: 1.02;\n    } */\n\n}\n\n.confirm p{\n    font-size: 1.2em;\n    font-weight: bold;\n    text-align: center;\n    color: #000;\n}\n\n\n.confirm1{\n    display: flex; align-items: center; justify-content: center;\n    width: 16em;\n    height: 2em;\n    border-radius: .46em;\n    border: solid .12em #f4d56f;\n    background-image: linear-gradient(100deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n}\n\n.confirm1 p{\n    font-size: 1.2em;\n    font-weight: bold;\n    text-align: center;\n    color: #666;\n}\n\n.refresh_blockchain_btn{\n    \n    \n    right: 5em;\n    display: flex;\n    align-items: center; \n    justify-content: center;\n    z-index: 5;\n    width: 16em;\n    height: 2em;\n    border-radius: .63em;\n    border: solid .1em rgba(244, 213, 111, 0.7);\n    background-color: rgba(12, 13, 19, 0.1);\n    cursor: pointer;\n\n    /* &:hover{\n        scale: 1.02;\n    } */\n\n    \n}\n\n.refresh_blockchain_btn p{\n    text-align: center;\n    color: #f4d56f;\n    line-height: 1em;\n    /*font-weight: bold;*/\n    font-size: 1em;\n}\n\n.connect-wallet-modal-default-img-walletconnect{\n    width: 2.72rem; height: 2.72rem;\n    position: absolute; left: .5em;\n}\n.connect-wallet-modal-default-img-apple{\n    width: 2.22rem; height: 2.72rem;\n    position: absolute; left: -.5em;\n}\n\n@media screen and (max-width: 480px){\n\n    .connect-wallet-modal-background{\n        font-size: 18px;\n    }\n\n    .connect-wallet-modal-default-btn-social:hover,\n    .connect-wallet-modal-default-btn-apple:hover,\n    .connect-wallet-modal-default-btn-trustwallet:hover,\n    .connect-wallet-modal-default-btn:hover{\n        background-color: #f4d56f;\n    }\n\n    /* special connect popup without social */\n    .special-connect-wallet-modal-container {\n        font-size: 16px;\n        min-height: 18em; height: auto; max-height: 31em;\n        width: 85%;\n        /* overflow-x: hidden; overflow-y: auto; */\n    }\n    .special-connect-header{\n        margin: .6em 0 .5em 0;\n    }\n    .special-connect-btn img{\n        position: absolute; left: 2%;\n        transform: scale(.35, .35);\n    }\n    .special-connect-btn p{\n        font-size: .8em;\n    }\n    .special-connect-bottom{\n        margin: .4em 0 .5em 0;\n    }\n    .special-connect-bottom-asset img{\n        transform: scale(.7, .7);\n        margin-bottom: -.1em;\n    }\n    .special-connect-bottom-asset p{\n        padding: .25em 0 .35em 0;\n    }\n    /*  */\n\n\n\n    .connect_magic_wrap_background{\n        font-size: 18px;\n    }\n    .connect-wallet-modal-container{\n        width: 90%;\n        /* min-height: 15em;  */\n        height: auto; \n        /* height: 28.5em; */\n    }\n    .connect-wallet-modal-container[old='true']{\n        padding-top: .5em;\n        height: 27em;\n    }\n    .connect_switch_btns{\n        margin: -.1em;\n    }\n    .connect_switch_desc{\n        margin: .8em 0 .6em 0;\n    }\n    .connect_row_short_btns{\n        width: 83%;\n    }\n    /* .connect-wallet-modal-subheader-desc{\n        margin: .9em 0 1.2em 0;\n    } */\n    .connect-wallet-modal-login-btns-row{\n        display: none;\n    }\n    .connect-wallet-modal-login-btns-row-mobile{\n        width: 82%;\n        margin-bottom: .55em;\n        display: flex; flex-direction: row; justify-content: space-between;\n    }\n    /* .connect-wallet-modal-default-btn-mobile{\n        display: flex; flex-direction: row; justify-content: flex-start; align-items: center;\n        width: 45%; height: 4.6em;\n        border: solid .16em #5f5f5f;\n        background-color: #2a2a2a;\n    } */\n    .connect-wallet-modal-default-img-mobile{\n        width: 2.72rem; height: 2.72rem;\n    }\n    .connect-wallet-modal-default-img-mobile-metamask{\n        width: 2.72rem; height: 2.72rem;\n        position: absolute; left: .5em;\n    }\n    .connect-wallet-modal-default-img-mobile-coinbase{\n        width: 2.72rem; height: 2.72rem;\n        position: absolute; left: .5em;\n    }\n    .connect-wallet-modal-social-btn{\n        width: 80%; height: 5.6em;\n        border-radius: .4em;\n        border: solid .16em #5f5f5f;\n        background-color: #2a2a2a;\n        display: flex; align-items: center; justify-content: flex-start;\n        cursor: pointer;\n    }\n    .connect-wallet-modal-close-btn, .connect_magic_close_btn{\n        width: 3.04em; height: 3.04em;\n        top: -.8em; right: -.8em;\n    }\n    .connect_btn_txt{\n        font-size: .78em;\n    }\n    .connect_google_src{\n        position: absolute; left: .7em;\n        width: 1.4em; height: 1.45em;\n    }\n    .connect_apple_src{\n        position: absolute; left: .7em;\n        width: 1.25em; height: 1.5em;\n    }\n    .connect_facebook_src{\n        position: absolute; left: .7em;\n        width: 1.6em; height: 1.6em;\n    }\n    .connect_coinbase_src{\n        position: absolute; left: .7em;\n        width: 1.6em; height: 1.6em;\n    }\n    .connect_metamask_src{\n        position: absolute; left: .7em;\n        width: 1.7em; height: 1.6em;\n    }\n    .connect_email_src{\n        position: absolute; left: .7em;\n        width: 1.7em; height: 1.15em;\n    }\n    .connect_walletconnect_src{\n        position: absolute; left: .7graem;\n        width: 1.6em; height: 1.6em;\n    }\n    \n    .connect-wallet-modal-header-desc{\n        margin-top: .45em;\n    }\n    .connect-wallet-modal-default-btn{\n        position: relative;\n        width: 46%; height: 2.8em;\n        display: flex; flex-direction: row; justify-content: flex-start; align-items: center;\n        border: solid .16em #5f5f5f;\n        background-color: #2a2a2a;\n    }\n    .connect-wallet-modal-default-btn-metamask, .connect-wallet-modal-default-btn-apple{\n        position: relative;\n        width: 100%; height: 2.8em;\n        display: flex; flex-direction: row; justify-content: center; align-items: center;\n        border: solid .16em #5f5f5f;\n        border-radius: .4em;\n        background-color: #2a2a2a;\n    }\n    .connect-wallet-coming-soon{\n        position: absolute; left: 20%;\n        z-index: 2;\n    }\n    .connect-wallet-modal-social-desc{\n        font-size: .8em;\n    }\n    .connect-wallet-modal-default-btn-coinbase, .connect-wallet-modal-default-btn-trustwallet{\n        position: relative;\n        width: 100%; height: 2.8em;\n        display: flex; flex-direction: row; justify-content: center; align-items: center;\n        border: solid .16em #5f5f5f;\n        background-color: #2a2a2a;\n        border-radius: .4em;\n        margin-bottom: .1em;\n    }\n    .connect-wallet-modal-default-img-mobile{\n        width: 1.45em; height: 1.45em;\n        /* position: absolute; left: .5em; */\n        margin: 0 .3em 0 .4em;\n    }\n    .connect-wallet-modal-center-desc{\n        margin: -.5em 0 1.5em 0;\n    }\n    .connect-wallet-modal-default-desc{\n        font-size: .82em;\n        font-family: Arial, Helvetica, sans-serif; font-weight: 600;\n        /* width: 85%; */\n    }\n    .connect-wallet-modal-login-btns-row{\n        margin-bottom: 1.2em;\n    }\n    .connect-wallet-modal-content {\n        height: 80%;\n    }\n    .connect-wallet-modal-row_btn_wrap{\n        display: flex; flex-direction: row; justify-content: space-between; align-items: center;\n        width: 15.7em;\n    }\n    /* .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn{\n        display: flex; align-items: center; justify-content: center;\n        width: 7.55em; height: 2.3em;\n    } */\n    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn img{\n        margin: 0 .4em 0 0;\n    }\n    .connect-wallet-modal-default-btn-wallet-connect{\n        display: none;\n    }\n\n    /* new login btns */\n    .connect-wallet-modal-crypto-btn_[btn='walletconnect']{\n        display: none;\n    }\n}\n\n@media screen and (max-width: 960px) and (orientation: landscape) {\n\n    .connect_magic_wrap_background {\n        font-size: 16px;\n    }\n    .connect-wallet-modal-background{\n        font-size: 12px !important;\n        flex: 1;\n    }\n\n\n    /* special connect popup without social */\n    .special-connect-wallet-modal-container {\n        width: 33%;\n    }\n    .special-connect-btn img{\n        position: absolute; left: 2%;\n        transform: scale(.25, .25);\n    }\n    .special-connect-btn p{\n        font-size: .8em;\n    }\n    .special-connect-bottom-asset img{\n        transform: scale(.45, .45);\n    }\n    .special-connect-bottom-asset p{\n        padding: 0;\n    }\n    /*  */\n\n\n    .connect-wallet-modal-container{\n        overflow-y: auto; overflow-x: hidden;\n        width: 20em; \n        /* height: 28em; */\n        /* margin-top: -3em; */\n    }\n    .connect-wallet-modal-content {\n        height: 90% !important;\n    }\n    .connect-wallet-modal-close-btn {\n        /* width: 3.14em; height: 3.14em; */\n        display: none;\n    }\n    .connect-wallet-modal-header-desc{\n        margin-top: .8em;\n    }\n    .connect_switch_desc{\n        margin: -.2em 0 .4em 0;\n    }\n    .connect-wallet-modal-row_btn_wrap{\n        display: flex; flex-direction: row; justify-content: space-between; align-items: center;\n        width: 15.7em;\n    }\n    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn{\n        display: flex; align-items: center; justify-content: center;\n        width: 7.55em; height: 2.3em;\n    }\n    .connect-wallet-modal-row_btn_wrap .connect-wallet-modal-default-btn img{\n        margin: 0 .4em 0 0;\n    }\n    .connect-wallet-modal-default-btn-wallet-connect{\n        display: none;\n    }\n    /* new login btns */\n    .connect-wallet-modal-crypto-btn_[btn='walletconnect']{\n        display: none;\n    }\n    .connect-wallet-modal-walletconnect-btn, .connect-wallet-modal-apple-btn{\n       display: none;\n    }\n}\n\n@media screen and (max-height: 330px) and (orientation: landscape) {\n    .connect-wallet-modal-background{\n        font-size: 10px !important;\n        flex: 1;\n    }\n}\n@media screen and (max-height: 300px) and (orientation: landscape) {\n    .connect-wallet-modal-background{\n        font-size: 9px !important;\n        flex: 1;\n    }\n    .connect_magic_wrap_background{\n        font-size: 14px !important;\n    }\n    .connect_magic_close_btn {\n        display: none;\n    }\n    .connect_magic_email_submit{\n        height: 3em !important;\n    }\n    .connect_magic_email_submit p{\n        font-size: 1.2em !important;\n    }\n}\n\n@keyframes bounce-in {\n    0% {\n        opacity: 0;\n        transform: scale(.25);\n    }\n    50% {\n        opacity: 1;\n        transform: scale(1.1);\n    }\n    70% { transform: scale(.9); }\n    100% { transform: scale(1); }\n}\n\nonboard-v2{\n    display: none important;\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

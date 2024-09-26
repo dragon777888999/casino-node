@@ -1,0 +1,1193 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.partners_slide1{
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide_1_bg{
+    position: absolute; top: 0;
+}
+.partners_slide1_header{
+    font-family: "Barlow Semi Condensed"; font-size: 4.2em; font-weight: bold;
+    letter-spacing: .038em;
+    text-align: center;
+    color: #f4d56f;
+    margin-bottom: .5em;
+}
+.partners_slide1_content{
+    display: flex; flex-direction: column; align-items: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+.partners_slide1_header_row{
+    display: flex; justify-content: space-between;
+    width: 86%;
+    margin-bottom: 1.7em;
+}
+.partners_slide1_header_box{
+    width: 15.6em; height: 9.6em;
+    border-radius: .4em;
+    border: solid .01em #463b3c;
+    background-color: rgba(41, 39, 39, 0.7);
+}
+.partners_slide1_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 2.4em; font-weight: bold;
+    letter-spacing: -.0089em;
+    word-spacing: 100vw; 
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.2em;
+}
+.partners_slide1_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.5em; font-weight: bold;
+    letter-spacing: .032em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #f4d56f;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.partners_slide1_start_btn{
+    text-align: center;
+    width: 15.8em; height: 1.9em;
+    line-height: 1.9em;
+    border-radius: .46em;
+    border: solid .12em #f4d56f;
+    font-size: 1.85em; color: #000; font-weight: bold;
+    font-family: SF UI Display, sans-serif;
+    cursor: pointer;
+    background-image: linear-gradient(96deg, #d99e38 0%, #fff585 15%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+}
+.partners_slide1_start_btn:hover{
+    scale: 1.02;
+}
+
+
+/* slide 2 */
+.partners_slide2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide2_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold;
+    letter-spacing: .029em;
+    text-align: center;
+    color: #f4d56f;
+    margin-bottom: 1.8em;
+}
+.partners_slide_2_inner_box{
+    position: absolute; 
+    z-index: 5;
+    display: flex;  flex-direction: column; align-items: center; 
+    padding-top: 2em;
+}
+.partners_slide2_gold_partner{
+    margin-top: .5em;
+    height: 10.4em; width: 9.5em;
+}
+.partners_slide2_content{
+    display: flex; justify-content: center;
+}
+.partners_slide2_profit_box{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.partners_slide2_percent_amt{
+    height: 12.3em; width: 12.6em;
+    margin-bottom: -3.6em;
+}
+.partners_slide2_profit_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.24em; font-weight: bold;
+    letter-spacing: -1.41px;
+    text-align: center;
+    color: #f4d56f;
+}
+.partners_slide2_rocket{
+    width: 13.5em; height: 7.7em;
+}
+.partners_slide2_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 3 */
+.partners_slide3{
+    padding-top: 5.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide3_content{
+    height: 60%;
+    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+}
+.partners_slide3_img{
+    width: 13.2em; height: 7.9em;
+    margin-bottom: 1.2em;
+}
+.partners_slide3_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold; color: #f4d56f;
+    letter-spacing: 0.029em;
+    padding: 0;
+    margin: 0 0 .2em 0;
+    line-height: 1em;
+}
+.partners_slide3_desc{
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+    font-family: SF UI Display, sans-serif; font-size: 2.2em; font-weight: 600; color: #f4d56f;
+    text-align: center;
+}
+.partners_slide3_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 4  */
+.partners_slide4{
+    padding-top: 3.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide4_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold;
+    letter-spacing: .029em;
+    text-align: center;
+    color: #f4d56f;
+    margin-bottom: 1.8em;
+}
+.partners_slide4_content{
+    display: flex; justify-content: space-evenly;
+    width: 70%;
+}
+.partners_slide4_desc_box{
+    display: flex; flex-direction: column; align-items: center;
+}
+.partners_slide4_img1{
+    width: 6.9em; height: 7.7em;
+}
+.partners_slide4_img2{
+    width: 7.5em; height: 7.5em;
+}
+.partners_slide4_img3{
+    width: 9.4em; height: 7.2em;
+}
+.partners_slide4_desc{
+    margin-top: .4em;
+    font-family: "Barlow Semi Condensed"; font-size: 2.7em; font-weight: bold;
+    text-align: center;
+    color: #f4d56f;
+}
+.partners_slide4_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 5  */
+.partners_slide5{
+    padding-top: .2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide5_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold;
+    text-align: center;
+    color: #f4d56f;
+    letter-spacing: .029em;
+}
+.partners_slide5_content{
+    width: 72%;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.partners_slide5_content_img{
+    width: 13em; height: 16.3em;
+}
+.partners_slide5_desc_list{
+    display: flex; flex-direction: column;
+}
+.partners_slide5_des_row{
+    height: 3em;
+    margin: .8em 0;
+    display: flex; align-items: center;
+}
+.partners_slide5_arr{
+    width: 2em; height: 2em;
+    margin-right: 1.3em;
+}
+.partners_slide5_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 2.43em; font-weight: bold;
+    text-align: center;
+    color: #f4d56f;
+    letter-spacing: .022em;
+}
+.partners_slide5_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 6 */
+.partners_slide6{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide6_content{
+    width: 85%;
+    margin-top: 3em;
+    display: flex; justify-content: space-evenly; align-items: center;
+}
+.partners_slide6_left_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 9.21em; font-weight: bold;
+    color: #f4d56f;
+    letter-spacing: -.0401em;
+    text-align: right;
+}
+.partners_slide6_img{
+    width: 10.56em; height: 19.7em;
+}
+.partners_slide6_desc_box{
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.partners_slide6_right_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 9.21em; font-weight: bold;
+    color: #f4d56f;
+    letter-spacing: -.401em;
+    text-align: right;
+}
+.partners_slide6_desc1{
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow Semi Condensed"; font-size: 6.64em; font-weight: bold;
+    color: #f4d56f;
+    line-height: 1em;
+    letter-spacing: 0.06em;
+}
+.partners_slide6_desc2{
+    padding: 0;
+    margin: 0;
+    font-family: "Barlow Semi Condensed"; font-size: 5.27em; font-weight: bold;
+    line-height: 1em;
+    color: #f4d56f;
+    letter-spacing: 0.048em;
+}
+.partners_slide6_desc3{
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    font-family: "Barlow Semi Condensed"; font-size: 6.5em; font-weight: bold;
+    color: #f4d56f;
+    letter-spacing: 0.09em;
+}
+.partners_slide6_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 7 */
+.partners_slide7{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide7_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold;
+    color: #f4d56f;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: .029em;
+    margin-bottom: .6em;
+}
+.partners_slide7_content_img{
+    width: 45em; height: 21.6em;
+}
+.partners_slide7_tech_box{
+    display: flex; flex-direction: column; 
+    position: absolute; bottom: 2.6em; left: 2.2em; 
+    width: 9.6em;
+}
+.partners_slide7_tech_row{
+    width: 100%; 
+    display: flex; justify-content: space-between;
+}
+.partners_slide7_tech_desc{
+    font-family: SF UI Display, sans-serif; font-size: .9em; font-weight: 900; color: #f4d56f;
+    text-align: center;
+    letter-spacing: .343em;
+    color: #f4d56f;
+}
+.partners_slide7_tech_img2{
+    width: 3em; height: 2.6em;
+}
+.partners_slide7_tech_img{
+    width: 2.6em; height: 2.6em;
+}
+.partners_slide7_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 8 */
+.partners_slide8{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    padding: 0 1.9em;
+}
+.partners_slide8_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+    color: #f4d56f;
+    text-transform: uppercase;
+}
+.partners_slide8_content{
+    overflow-y: scroll;
+    width: 95%;
+}
+::-webkit-scrollbar {
+    width: .6em;
+}
+  /* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border: solid .1em #979797;
+    background-color: #d8d8d8;
+    width: .6em; height: 9.6em;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    opacity: .9;
+}
+
+.partners_slide8_desc_box{
+    width: 75%; 
+    display: flex; justify-content: flex-start; align-items: flex-start;
+    margin-bottom: 3.1em;
+}
+.partners_slide8_desc_img{
+    width: 8.7em; height: 6.6em;
+    margin-right: 1.7em;
+}
+.partners_slide8_desc_row{
+    display: flex; flex-direction: column;
+}
+.partners_slide8_desc_header{
+    font-family: "Barlow Semi Condensed"; font-size: 2.43em; color: #f4d56f; font-weight: bold;
+    letter-spacing: .022em;
+    margin: 0 0 .2em 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+.partners_slide8_desc{
+    font-family: SF UI Display, sans-serif; font-size: 1.3em; color: #eee;
+    margin: 0;
+    padding: 0;
+}
+.partners_slide8_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 9 */
+.partners_slide9{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    padding: 0 1.9em;
+}
+.partners_slide_9_top_bg{
+    height: 20.2em; width: 100%; 
+    position: absolute; top: 0;
+}
+.partners_slide9_header_content{
+    position: absolute; top: .8em;
+    display: flex; flex-direction: column; align-items: center;
+}
+.partners_slide9_header{
+    width: 52.6em; height: 3.1em;
+    margin-bottom: .5em;
+}
+.partners_slide9_header_desc{
+    font-family: SF UI Display, sans-serif; font-size: 1.2em; color: #000; font-weight: 600;
+    text-align: center;
+    margin: 0 0 .4em 0;
+    padding: 0;
+}
+.partners_slide9_input_box{
+    position: relative;
+    display: flex; align-items: center; justify-content: flex-end;
+    width: 27.4em; height: 4.3em;
+    border-radius: .38em;
+    border: solid .1em rgba(244, 213, 111, 0.6);
+    background-color: #000;
+    margin-bottom: .3em;
+}
+.partners_slide9_input_img{
+    margin-right: 1.2em;
+    width: 3.6em; height: 2em;
+}
+.partners_slide9_input{
+    height: 100%; width: 100%;
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-family: "Barlow Semi Condensed"; font-size: 2.77em; color: #fff; font-weight: 500;
+    text-align: center;
+}
+.partners_slide9_options_row{
+    display: flex; justify-content: space-between; 
+    width: 27.4em;
+}
+.partners_slide9_options_box{
+    display: flex; justify-content: flex-start; align-items: center;
+    padding-left: .28em;
+    border: solid .1em #fff; border-radius: .38em;
+    height: 1.87em; width: 17.5%;
+    cursor: pointer;
+    margin-bottom: .6em;
+}
+.partners_slide9_options_box:hover{
+    scale: 1.02;
+}
+.partners_slide9_option_amt{
+    margin-left: .5em;
+    font-family: "Barlow Semi Condensed"; font-size: 1.6em; color: #fff; font-weight: 500;
+}
+.partners_slide9_btn{
+    display: flex; align-items: center; justify-content: center;
+    width: 27.4em; height: 3.8em;
+    border-radius: .38em;
+    box-shadow: 0 0 0 .1em #000, inset 0 0 0 .1em #000, inset 0 0 0 .2em #ffedb4;
+    background-color: #f4d56f;
+    cursor: pointer;
+}
+.partners_slide9_btn:hover{
+    scale: 1.02;
+}
+.partners_slide9_btn_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 1.39em; color: #000; font-weight: bold;
+    letter-spacing: .291em;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+}
+.partners_slide9_res_box{
+    height: 50%; width: 40%;
+    position: absolute; bottom: 0;
+    display: flex; flex-direction: column; align-items: center;
+}
+.partners_slide9_res_header{
+    font-family: SF UI Display, sans-serif; font-size: 1.9em; color: #fff; font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin: .3em 0 0 0;
+}
+.partners_slide9_res_amt_row{
+    width: 75%; height: 6em;
+    padding: 0;
+    margin: 0 0 1em 0;
+    display: flex; justify-content: space-evenly; align-items: center;
+}
+.partners_slide9_res_amt{
+    font-family: "Barlow Semi Condensed"; font-size: 5.8em; color: #87d009; font-weight: 500;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.partners_slide9_res_desc{
+    font-family: 'SF UI Display', sans-serif; font-size: 1.1em; color: #ffffffe6; font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin: 0;   
+}
+.partners_slide9_res_desc_span{
+    color: #f4d56f;
+}
+.partners_slide9_res_earnings_row{
+    display: flex; justify-content: space-evenly;
+    width: 100%;
+    margin-top: .7em;
+}
+.partners_slide9_res_dailyincome_box{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    opacity: 0.6;
+    border-radius: .4em;
+    background-color: #27282f;
+    height: 5.2em; width: 14em;
+}
+.partners_slide9_res_earnings_amt{
+    font-family: "Barlow Semi Condensed"; font-size: 1.5em; color: #fff; font-weight: 500;
+    text-align: center;
+    padding: 0;
+    margin: 0; 
+}
+.partners_slide9_res_earnings_desc{
+    font-family: 'SF UI Display', sans-serif; font-size: .8em; color: #fff; font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin: 0; 
+}
+.partners_slide9_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 10 */
+.partners_slide10{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    padding: 0 1.9em;
+}
+.partners_slide10_closebtn{
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; right: 1.4em; top: 1.4em;
+    cursor: pointer;
+    width: 8.3em; height: 3.3em;
+    border-radius: .4em;
+    border: solid .2em rgba(225, 225, 225, 0.65);
+}
+.partners_slide10_closebtn_txt{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.partners_slide10_closebtn:hover{
+    opacity: .8;
+    scale: 1.02;
+}
+.partners_slide10_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 0;
+    margin: 0; 
+}
+.partners_slide10_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+    width: 100%; height: 78%;
+    padding-top: 6.2em;
+}
+.partners_slide10_desc{
+    font-family: 'SF UI Display', sans-serif; font-size: 1.6em; color: #f4d56f; font-weight: 400;
+    text-align: center;
+    letter-spacing: .015em;
+    padding: 0 0 .2em 0;
+    margin: 0; 
+}
+.partners_slide10_wallet{
+    width: 21.97em; height: 5.53em;
+    cursor: pointer;
+}
+.partners_slide10_wallet:hover{
+    scale: 1.02;
+}
+.partners_slide10_bottom{
+    display: flex; flex-direction: column; align-items: center;
+}
+.partners_slide10_bottom_wallets{
+    width: 27.52em; height: 7.1em;
+}
+
+
+/* slide 11 */
+.partners_slide11{
+    padding-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    padding: 0 1.9em;
+}
+.partners_slide11_closebtn{
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; right: 1.4em; top: 1.4em;
+    width: 8.3em; height: 3.3em;
+    border-radius: .4em;
+    border: solid .2em rgba(225, 225, 225, 0.65);
+}
+.partners_slide11_closebtn_txt{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.partners_slide11_closebtn:hover{
+    opacity: .8;
+    scale: 1.02;
+}
+.partners_slide11_disconnectbtn{
+    display: flex; align-items: center; justify-content: center;
+    position: absolute; left: 1.6em; top: 1.5em;
+    width: 14.4em; height: 3.3em;
+    cursor: pointer;
+    border-radius: .4em;
+    border: solid .2em rgba(244, 213, 111, 0.65);
+}
+.partners_slide11_disconnectbtn_txt{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.partners_slide11_disconnectbtn:hover{
+    opacity: .8;
+    scale: 1.02;
+}
+.partners_slide11_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 0;
+    margin: 0 0 .5em 0; 
+}
+.partners_slide11_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    width: 51.4em; height: 78%;
+    padding-top: 6.8em;
+}
+.partners_slide11_header{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    letter-spacing: 0.029em;
+    text-align: center;
+}
+.partners_slide11_desc1{
+    font-family: 'SF UI Display', sans-serif; font-size: 1.9em; color: #fff; font-weight: 500;
+    text-align: center;
+    letter-spacing: -.056em;
+    padding: 0;
+    margin: 0 0 .2em 0; 
+}
+.partners_slide11_desc2{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.2em; color: #ffffffc7; font-weight: 500;
+    text-align: center;
+    letter-spacing: -.056em;
+    padding: 0;
+    margin: 0 0 2em 0; 
+}
+.partners_slide11_inputbox{
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 4.9em;
+    margin-bottom: 3.2em;
+}
+.partners_slide11_input_bg{
+    width: 100%; height: 100%;
+}
+.partners_slide11_address{
+    position: absolute;
+    z-index: 1;
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin: 0; 
+}
+.partners_slide11_alert_box{
+    display: flex; align-items: center; justify-content: flex-start;
+    width: 100%; height: 4.7em;
+    opacity: 0.8;
+    background-color: #8c2420;
+    border-radius: .4em;
+}
+.partners_slide11_alert_desc{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;
+    margin: 0; 
+    padding: 0 1em;
+}
+.partners_slide11_continue_btn{
+    display: flex; align-items: center;
+    position: absolute; right: 1.4em; bottom: 1.5em;
+    width: 23.9em; height: 3.8em;
+    border-radius: .4em;
+    cursor: pointer;
+}
+.partners_slide11_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+.partners_slide11_continue_desc{
+    position: absolute; left: .65em;
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.7em; color: #000; font-weight: bold;
+    margin: 0; 
+    padding: 0;
+}
+.partners_slide11_continue_img{
+    width: 100%; height: 100%;
+}
+.partners_slide11_continue_btn:hover{
+    opacity: .9;
+    scale: 1.02;
+}
+
+
+/* slide 12 */
+.partners_slide12{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+    /* padding: 0 1.9em; */
+}
+.partners_slide12_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+.partners_slide12_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+}
+.partners_slide12_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+.partners_slide12_input_box{
+    display: flex; align-items: center;
+    width: 30em; height: 3.8em;
+    border-bottom: solid .05em #f4d56f;
+    margin-bottom: 3.3em;
+}
+.partners_slide12_input{
+    outline: none;
+    border: none;
+    width: 100%; height: 100%;
+    margin: 0 .2em 0 0;
+    padding: 0;
+    line-height: 1em;
+    background-color: transparent;
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;
+    text-align: center;
+}
+.partners_slide12_input_delete{
+    width: 1em; height: 1em;
+    color: #6d6d71;
+    cursor: pointer;
+}
+.partners_slide12_alert_box{
+    display: flex; align-items: center; justify-content: center;
+    background: #4e7527;
+    width: 29.8em; height: 2.8em;
+    border-radius: .4em;
+}
+.partners_slide12_alert_msg{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;
+    text-align: center;
+}
+
+
+/* slide 13 */
+.partners_slide13{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide13_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+.partners_slide13_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+}
+.partners_slide13_upload_btn{
+    display: flex; flex-direction: column; align-items: center;
+    margin-bottom: 2.2em;
+}
+.partners_slide13_upload{
+    width: 5.9em; height: 5.9em;
+    cursor: pointer;
+}
+.partners_slide13_upload:hover{
+    scale: 1.02;
+    opacity: .9;
+}
+.partners_slide13_upload_desc{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #f4d56f; font-weight: 500;
+    text-align: center;
+    margin: .2em 0 0 0;
+    padding: 0;
+}
+.partners_slide13_alert_box{
+    display: flex; align-items: center; justify-content: center;
+    background: #4e7527;
+    width: 29.8em; height: 4em;
+    border-radius: .4em
+}
+.partners_slide13_alert_box{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;
+    text-align: center;
+}
+.partners_slide13_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 14 */
+.partners_slide14{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide14_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+.partners_slide14_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+.partners_slide14_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+}
+.partners_slide14_input_box{
+    display: flex; align-items: center;
+    width: 30em; height: 3.8em;
+    border-bottom: solid .05em #f4d56f;
+    margin-bottom: 3.3em;
+}
+.partners_slide14_input{
+    outline: none;
+    border: none;
+    float: left;
+    width: 100%; height: 100%;
+    margin: 0 .2em 0 0;
+    padding: 0;
+    line-height: 1em;
+    background-color: transparent;
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;
+    text-align: left;
+}
+.partners_slide14_input_delete{
+    width: 1em; height: 1em;
+    color: #6d6d71;
+    cursor: pointer;
+}
+.partners_slide14_alert_box{
+    display: flex; align-items: center; justify-content: center;
+    background: #4e7527;
+    width: 35.7em; height: 4em;
+    border-radius: .4em;
+}
+.partners_slide14_alert_msg{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;
+    text-align: center;
+}
+
+/* slide 15 */
+.partners_slide15{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide15_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+.partners_slide15_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+    padding: 0;
+    margin: 0 0 .7em 0;
+}
+.partners_slide15_terms_box{
+    display: flex; align-items: center;
+    margin-bottom: 4.2em;
+}
+.partners_slide15_checkmark{
+    display: flex; align-items: center; justify-content: center;
+    width: 2.68em; height: 2.7em;
+    border-radius: .41em;
+    border: solid .1em #f4d56f;
+    margin-right: 1.14em;
+    cursor: pointer;
+}
+.partners_slide15_checkmark_img{
+    height: 100%; width: 100%;
+}
+.partners_slide15_terms{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.44em; color: #fff; font-weight: bold;
+    text-align: center;
+    letter-spacing: .013em;
+}
+.partners_slide15_terms_span{
+    font-family: 'Source Sans Pro', sans-serif; color: #429fec; font-weight: bold;
+    text-align: center;
+    letter-spacing: .013em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.partners_slide15_alert_box{
+    display: flex; align-items: center; justify-content: center;
+    background: #4e7527;
+    width: 35.7em; height: 4em;
+    border-radius: .4em;
+}
+.partners_slide15_alert_msg{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;
+    text-align: center;
+}
+.partners_slide15_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 16 */
+.partners_slide16{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide16_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    margin-top: 3em;
+}
+.partners_slide16_header_desc{
+    font-family: "Barlow Semi Condensed"; font-size: 3.2em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .029em;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 .4em 0;
+}
+.partners_slide16_header_desc2{
+    font-family: SF UI Display, sans-serif; font-size: 2em; color: #ffffffcc; font-weight: 500;
+    text-align: center;
+    letter-spacing: -.059em;
+    padding: 0;
+    margin: 0 0 1.2em 0;
+}
+.partners_slide16_copycode_row{
+    display: flex; justify-content: center; align-items: center;
+    margin-bottom: .9em;
+}
+.partners_slide16_copycode_btn{
+    width: 14.3em; height: 4.7em;
+    border-radius: .4em;
+    border: solid .3em #0095c7;
+    background-color: #0079a2;
+    margin: 0 1.5em;
+    cursor: pointer;
+}
+.partners_slide16_copycode_btn:hover{
+    scale: 1.02;
+}
+.partners_slide16_left_arr{
+    width: 2.9em; height: 2.9em;
+}
+.partners_slide16_right_arr{
+    transform: rotate(180deg);
+    width: 2.9em; height: 2.9em;
+}
+.partners_slide16_copycode_btn_desc{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #fff; font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.partners_slide16_bottom_desc{
+    font-family: 'SF UI Display', sans-serif; font-size: 1.2em; color: #ffffffb3; font-weight: 500;
+    text-align: center;
+    letter-spacing: -.036em;   
+}
+.partners_slide16_continue_arr{
+    position: absolute; right: .8em;
+    width: 1em; height: .9em;
+}
+
+
+/* slide 17 */
+.partners_slide16{
+    padding-top: 1.4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%; height: 100%;
+}
+.partners_slide17_content{
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+.partners_slide17_header_desc{
+    margin-top: 1.8em;
+    font-family: "Barlow Semi Condensed"; font-size: 5em; color: #f4d56f; font-weight: bold;
+    text-align: center;
+    letter-spacing: .045em;
+    text-transform: uppercase;
+}
+.partners_slide17_start_btn{
+    display: flex; align-items: center; justify-content: center;
+    width: 27.2em; height: 4.7em;
+    border-radius: .46em;
+    border: solid .12em #f4d56f;
+    margin-bottom: 2.2em;
+    background-image: linear-gradient(97deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);
+}
+.partners_slide17_start_btn_desc{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.85em; color: #000; font-weight: bold;
+    text-align: center;
+}
+.partners_slide17_bottom_desc{
+    font-family: SF UI Display, sans-serif; font-size: 1.2em; font-weight: 500; color: #ffffffbd;
+    letter-spacing: -.036;
+    text-align: center;
+}
+
+
+/* global */
+.partners_next_btn{
+    display: flex; align-items: center; justify-content: space-evenly;
+    position: absolute; bottom: 1.5em; right: 1.5em;
+    /* padding-left: 1.5em; */
+    font-family: SF UI Display, sans-serif; font-size: 1.7em; font-weight: bold; color: #000;
+    width: 8em; height: 2.2em;
+    border-radius: .4em;
+    border: solid .02em #f4d56f;
+    cursor: pointer;
+    background-image: linear-gradient(101deg, #d99e38 -29%, #fff585 -6%, #ebbc53 6%, #edc964 52%, #e4b54f 79%, #dfa942 95%, #dda53e 98%, #e1ac43 101%, #eebf50 107%, #fbd35e 111%, #f9d15d 116%, #f4ca58 119%, #eabd50 120%, #dcab45 122%, #c99437 123%, #b47926 125%);
+}
+.partners_next_btn_desc{
+    font-family: SF UI Display, sans-serif; font-size: 1em; font-weight: bold; color: #000;
+    margin: 0;
+    padding: 0;
+}
+.partners_next_btn:hover{
+    scale: 1.02;
+}
+
+
+/* positions bubble */
+.partners_slide_header{
+    padding: 0 1.4em 0 1.6em;
+    width: 96%; height: 3.7em;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 2.5em;
+}
+.partners_slide_backbtn{
+    /* position: absolute; left: 1.6em; top: 1.4em; */
+    display: flex; align-items: center; justify-content: center;
+    width: 7.1em; height: 3.3em;
+    border-radius: .4em;
+    border: solid .2em rgba(225, 225, 225, 0.65);
+}
+.partners_slide_backbtn_txt{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.partners_slide_backbtn:hover{
+    opacity: .8;
+    scale: 1.02;
+}
+.partners_slide_positions_row{
+    display: flex; justify-content: flex-start;
+}
+.partners_slide_position_wrap{
+    display: flex; align-items: center;
+}
+.partners_slide_header_position{
+    display: flex; align-items: center; justify-content: center;
+    width: 2.3em; height: 2.3em;
+    border-radius: 50%;
+    border: solid .14em #3f3f3f;
+    background-color: #0c0d13;
+}
+.partners_slide_pos_idx{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.15em; color: #b2b2b2; font-weight: 500;
+    text-align: center;
+    margin: 0; 
+    padding: 0;
+}
+.partners_slide_header_prog_pos{
+    width: 3.46em;
+    height: .22em;
+    border-radius: .14em;
+    background-color: #424348;
+}
+.partners_slide_closebtn{
+    display: flex; align-items: center; justify-content: center;
+    margin: 0;
+    padding: 0;
+    /* position: absolute; right: 1.4em; top: 1.4em; */
+    width: 8.3em; height: 3.3em;
+    border-radius: .4em;
+    border: solid .2em rgba(225, 225, 225, 0.65);
+    cursor: pointer;
+}
+.partners_slide_closebtn_txt{
+    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;
+    text-align: center;
+}
+.partners_slide_closebtn:hover{
+    opacity: .8;
+    scale: 1.02;
+}`, "",{"version":3,"sources":["webpack://./src/styles/pages/partners.css"],"names":[],"mappings":"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","sourcesContent":[".partners_slide1{\n    padding-top: 2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide_1_bg{\n    position: absolute; top: 0;\n}\n.partners_slide1_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 4.2em; font-weight: bold;\n    letter-spacing: .038em;\n    text-align: center;\n    color: #f4d56f;\n    margin-bottom: .5em;\n}\n.partners_slide1_content{\n    display: flex; flex-direction: column; align-items: center;\n    position: absolute;\n    z-index: 2;\n    width: 100%;\n}\n.partners_slide1_header_row{\n    display: flex; justify-content: space-between;\n    width: 86%;\n    margin-bottom: 1.7em;\n}\n.partners_slide1_header_box{\n    width: 15.6em; height: 9.6em;\n    border-radius: .4em;\n    border: solid .01em #463b3c;\n    background-color: rgba(41, 39, 39, 0.7);\n}\n.partners_slide1_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 2.4em; font-weight: bold;\n    letter-spacing: -.0089em;\n    word-spacing: 100vw; \n    text-align: center;\n    color: #fff;\n    margin-bottom: 1.2em;\n}\n.partners_slide1_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.5em; font-weight: bold;\n    letter-spacing: .032em;\n    padding: 0;\n    margin: 0;\n    text-align: center;\n    color: #f4d56f;\n    text-transform: uppercase;\n    margin-bottom: 1em;\n}\n.partners_slide1_start_btn{\n    text-align: center;\n    width: 15.8em; height: 1.9em;\n    line-height: 1.9em;\n    border-radius: .46em;\n    border: solid .12em #f4d56f;\n    font-size: 1.85em; color: #000; font-weight: bold;\n    font-family: SF UI Display, sans-serif;\n    cursor: pointer;\n    background-image: linear-gradient(96deg, #d99e38 0%, #fff585 15%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n}\n.partners_slide1_start_btn:hover{\n    scale: 1.02;\n}\n\n\n/* slide 2 */\n.partners_slide2{\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide2_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold;\n    letter-spacing: .029em;\n    text-align: center;\n    color: #f4d56f;\n    margin-bottom: 1.8em;\n}\n.partners_slide_2_inner_box{\n    position: absolute; \n    z-index: 5;\n    display: flex;  flex-direction: column; align-items: center; \n    padding-top: 2em;\n}\n.partners_slide2_gold_partner{\n    margin-top: .5em;\n    height: 10.4em; width: 9.5em;\n}\n.partners_slide2_content{\n    display: flex; justify-content: center;\n}\n.partners_slide2_profit_box{\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n}\n.partners_slide2_percent_amt{\n    height: 12.3em; width: 12.6em;\n    margin-bottom: -3.6em;\n}\n.partners_slide2_profit_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.24em; font-weight: bold;\n    letter-spacing: -1.41px;\n    text-align: center;\n    color: #f4d56f;\n}\n.partners_slide2_rocket{\n    width: 13.5em; height: 7.7em;\n}\n.partners_slide2_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 3 */\n.partners_slide3{\n    padding-top: 5.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide3_content{\n    height: 60%;\n    display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;\n}\n.partners_slide3_img{\n    width: 13.2em; height: 7.9em;\n    margin-bottom: 1.2em;\n}\n.partners_slide3_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold; color: #f4d56f;\n    letter-spacing: 0.029em;\n    padding: 0;\n    margin: 0 0 .2em 0;\n    line-height: 1em;\n}\n.partners_slide3_desc{\n    line-height: 1em;\n    padding: 0;\n    margin: 0;\n    font-family: SF UI Display, sans-serif; font-size: 2.2em; font-weight: 600; color: #f4d56f;\n    text-align: center;\n}\n.partners_slide3_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 4  */\n.partners_slide4{\n    padding-top: 3.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide4_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold;\n    letter-spacing: .029em;\n    text-align: center;\n    color: #f4d56f;\n    margin-bottom: 1.8em;\n}\n.partners_slide4_content{\n    display: flex; justify-content: space-evenly;\n    width: 70%;\n}\n.partners_slide4_desc_box{\n    display: flex; flex-direction: column; align-items: center;\n}\n.partners_slide4_img1{\n    width: 6.9em; height: 7.7em;\n}\n.partners_slide4_img2{\n    width: 7.5em; height: 7.5em;\n}\n.partners_slide4_img3{\n    width: 9.4em; height: 7.2em;\n}\n.partners_slide4_desc{\n    margin-top: .4em;\n    font-family: \"Barlow Semi Condensed\"; font-size: 2.7em; font-weight: bold;\n    text-align: center;\n    color: #f4d56f;\n}\n.partners_slide4_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 5  */\n.partners_slide5{\n    padding-top: .2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide5_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold;\n    text-align: center;\n    color: #f4d56f;\n    letter-spacing: .029em;\n}\n.partners_slide5_content{\n    width: 72%;\n    display: flex; justify-content: space-between; align-items: center;\n}\n.partners_slide5_content_img{\n    width: 13em; height: 16.3em;\n}\n.partners_slide5_desc_list{\n    display: flex; flex-direction: column;\n}\n.partners_slide5_des_row{\n    height: 3em;\n    margin: .8em 0;\n    display: flex; align-items: center;\n}\n.partners_slide5_arr{\n    width: 2em; height: 2em;\n    margin-right: 1.3em;\n}\n.partners_slide5_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 2.43em; font-weight: bold;\n    text-align: center;\n    color: #f4d56f;\n    letter-spacing: .022em;\n}\n.partners_slide5_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 6 */\n.partners_slide6{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide6_content{\n    width: 85%;\n    margin-top: 3em;\n    display: flex; justify-content: space-evenly; align-items: center;\n}\n.partners_slide6_left_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 9.21em; font-weight: bold;\n    color: #f4d56f;\n    letter-spacing: -.0401em;\n    text-align: right;\n}\n.partners_slide6_img{\n    width: 10.56em; height: 19.7em;\n}\n.partners_slide6_desc_box{\n    display: flex; flex-direction: column; justify-content: center; align-items: center;\n}\n.partners_slide6_right_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 9.21em; font-weight: bold;\n    color: #f4d56f;\n    letter-spacing: -.401em;\n    text-align: right;\n}\n.partners_slide6_desc1{\n    padding: 0;\n    margin: 0;\n    font-family: \"Barlow Semi Condensed\"; font-size: 6.64em; font-weight: bold;\n    color: #f4d56f;\n    line-height: 1em;\n    letter-spacing: 0.06em;\n}\n.partners_slide6_desc2{\n    padding: 0;\n    margin: 0;\n    font-family: \"Barlow Semi Condensed\"; font-size: 5.27em; font-weight: bold;\n    line-height: 1em;\n    color: #f4d56f;\n    letter-spacing: 0.048em;\n}\n.partners_slide6_desc3{\n    padding: 0;\n    margin: 0;\n    line-height: 1em;\n    font-family: \"Barlow Semi Condensed\"; font-size: 6.5em; font-weight: bold;\n    color: #f4d56f;\n    letter-spacing: 0.09em;\n}\n.partners_slide6_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 7 */\n.partners_slide7{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide7_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold;\n    color: #f4d56f;\n    text-align: center;\n    padding: 0;\n    margin: 0;\n    text-transform: uppercase;\n    line-height: 1em;\n    letter-spacing: .029em;\n    margin-bottom: .6em;\n}\n.partners_slide7_content_img{\n    width: 45em; height: 21.6em;\n}\n.partners_slide7_tech_box{\n    display: flex; flex-direction: column; \n    position: absolute; bottom: 2.6em; left: 2.2em; \n    width: 9.6em;\n}\n.partners_slide7_tech_row{\n    width: 100%; \n    display: flex; justify-content: space-between;\n}\n.partners_slide7_tech_desc{\n    font-family: SF UI Display, sans-serif; font-size: .9em; font-weight: 900; color: #f4d56f;\n    text-align: center;\n    letter-spacing: .343em;\n    color: #f4d56f;\n}\n.partners_slide7_tech_img2{\n    width: 3em; height: 2.6em;\n}\n.partners_slide7_tech_img{\n    width: 2.6em; height: 2.6em;\n}\n.partners_slide7_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 8 */\n.partners_slide8{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n    padding: 0 1.9em;\n}\n.partners_slide8_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n    color: #f4d56f;\n    text-transform: uppercase;\n}\n.partners_slide8_content{\n    overflow-y: scroll;\n    width: 95%;\n}\n::-webkit-scrollbar {\n    width: .6em;\n}\n  /* Track */\n::-webkit-scrollbar-track {\n    background: transparent;\n}  \n/* Handle */\n::-webkit-scrollbar-thumb {\n    border: solid .1em #979797;\n    background-color: #d8d8d8;\n    width: .6em; height: 9.6em;\n}\n  \n  /* Handle on hover */\n::-webkit-scrollbar-thumb:hover {\n    opacity: .9;\n}\n\n.partners_slide8_desc_box{\n    width: 75%; \n    display: flex; justify-content: flex-start; align-items: flex-start;\n    margin-bottom: 3.1em;\n}\n.partners_slide8_desc_img{\n    width: 8.7em; height: 6.6em;\n    margin-right: 1.7em;\n}\n.partners_slide8_desc_row{\n    display: flex; flex-direction: column;\n}\n.partners_slide8_desc_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 2.43em; color: #f4d56f; font-weight: bold;\n    letter-spacing: .022em;\n    margin: 0 0 .2em 0;\n    padding: 0;\n    text-transform: uppercase;\n}\n.partners_slide8_desc{\n    font-family: SF UI Display, sans-serif; font-size: 1.3em; color: #eee;\n    margin: 0;\n    padding: 0;\n}\n.partners_slide8_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 9 */\n.partners_slide9{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n    padding: 0 1.9em;\n}\n.partners_slide_9_top_bg{\n    height: 20.2em; width: 100%; \n    position: absolute; top: 0;\n}\n.partners_slide9_header_content{\n    position: absolute; top: .8em;\n    display: flex; flex-direction: column; align-items: center;\n}\n.partners_slide9_header{\n    width: 52.6em; height: 3.1em;\n    margin-bottom: .5em;\n}\n.partners_slide9_header_desc{\n    font-family: SF UI Display, sans-serif; font-size: 1.2em; color: #000; font-weight: 600;\n    text-align: center;\n    margin: 0 0 .4em 0;\n    padding: 0;\n}\n.partners_slide9_input_box{\n    position: relative;\n    display: flex; align-items: center; justify-content: flex-end;\n    width: 27.4em; height: 4.3em;\n    border-radius: .38em;\n    border: solid .1em rgba(244, 213, 111, 0.6);\n    background-color: #000;\n    margin-bottom: .3em;\n}\n.partners_slide9_input_img{\n    margin-right: 1.2em;\n    width: 3.6em; height: 2em;\n}\n.partners_slide9_input{\n    height: 100%; width: 100%;\n    position: absolute;\n    background-color: transparent;\n    outline: none;\n    border: none;\n    font-family: \"Barlow Semi Condensed\"; font-size: 2.77em; color: #fff; font-weight: 500;\n    text-align: center;\n}\n.partners_slide9_options_row{\n    display: flex; justify-content: space-between; \n    width: 27.4em;\n}\n.partners_slide9_options_box{\n    display: flex; justify-content: flex-start; align-items: center;\n    padding-left: .28em;\n    border: solid .1em #fff; border-radius: .38em;\n    height: 1.87em; width: 17.5%;\n    cursor: pointer;\n    margin-bottom: .6em;\n}\n.partners_slide9_options_box:hover{\n    scale: 1.02;\n}\n.partners_slide9_option_amt{\n    margin-left: .5em;\n    font-family: \"Barlow Semi Condensed\"; font-size: 1.6em; color: #fff; font-weight: 500;\n}\n.partners_slide9_btn{\n    display: flex; align-items: center; justify-content: center;\n    width: 27.4em; height: 3.8em;\n    border-radius: .38em;\n    box-shadow: 0 0 0 .1em #000, inset 0 0 0 .1em #000, inset 0 0 0 .2em #ffedb4;\n    background-color: #f4d56f;\n    cursor: pointer;\n}\n.partners_slide9_btn:hover{\n    scale: 1.02;\n}\n.partners_slide9_btn_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 1.39em; color: #000; font-weight: bold;\n    letter-spacing: .291em;\n    text-align: center;\n    color: #000;\n    text-transform: uppercase;\n}\n.partners_slide9_res_box{\n    height: 50%; width: 40%;\n    position: absolute; bottom: 0;\n    display: flex; flex-direction: column; align-items: center;\n}\n.partners_slide9_res_header{\n    font-family: SF UI Display, sans-serif; font-size: 1.9em; color: #fff; font-weight: 600;\n    text-align: center;\n    padding: 0;\n    margin: .3em 0 0 0;\n}\n.partners_slide9_res_amt_row{\n    width: 75%; height: 6em;\n    padding: 0;\n    margin: 0 0 1em 0;\n    display: flex; justify-content: space-evenly; align-items: center;\n}\n.partners_slide9_res_amt{\n    font-family: \"Barlow Semi Condensed\"; font-size: 5.8em; color: #87d009; font-weight: 500;\n    text-align: center;\n    padding: 0;\n    margin: 0;\n}\n.partners_slide9_res_desc{\n    font-family: 'SF UI Display', sans-serif; font-size: 1.1em; color: #ffffffe6; font-weight: 600;\n    text-align: center;\n    padding: 0;\n    margin: 0;   \n}\n.partners_slide9_res_desc_span{\n    color: #f4d56f;\n}\n.partners_slide9_res_earnings_row{\n    display: flex; justify-content: space-evenly;\n    width: 100%;\n    margin-top: .7em;\n}\n.partners_slide9_res_dailyincome_box{\n    display: flex; flex-direction: column; align-items: center; justify-content: center;\n    opacity: 0.6;\n    border-radius: .4em;\n    background-color: #27282f;\n    height: 5.2em; width: 14em;\n}\n.partners_slide9_res_earnings_amt{\n    font-family: \"Barlow Semi Condensed\"; font-size: 1.5em; color: #fff; font-weight: 500;\n    text-align: center;\n    padding: 0;\n    margin: 0; \n}\n.partners_slide9_res_earnings_desc{\n    font-family: 'SF UI Display', sans-serif; font-size: .8em; color: #fff; font-weight: 600;\n    text-align: center;\n    padding: 0;\n    margin: 0; \n}\n.partners_slide9_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 10 */\n.partners_slide10{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n    padding: 0 1.9em;\n}\n.partners_slide10_closebtn{\n    display: flex; align-items: center; justify-content: center;\n    position: absolute; right: 1.4em; top: 1.4em;\n    cursor: pointer;\n    width: 8.3em; height: 3.3em;\n    border-radius: .4em;\n    border: solid .2em rgba(225, 225, 225, 0.65);\n}\n.partners_slide10_closebtn_txt{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;\n    text-align: center;\n    cursor: pointer;\n}\n.partners_slide10_closebtn:hover{\n    opacity: .8;\n    scale: 1.02;\n}\n.partners_slide10_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n    text-transform: uppercase;\n    line-height: 1em;\n    padding: 0;\n    margin: 0; \n}\n.partners_slide10_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: space-between;\n    width: 100%; height: 78%;\n    padding-top: 6.2em;\n}\n.partners_slide10_desc{\n    font-family: 'SF UI Display', sans-serif; font-size: 1.6em; color: #f4d56f; font-weight: 400;\n    text-align: center;\n    letter-spacing: .015em;\n    padding: 0 0 .2em 0;\n    margin: 0; \n}\n.partners_slide10_wallet{\n    width: 21.97em; height: 5.53em;\n    cursor: pointer;\n}\n.partners_slide10_wallet:hover{\n    scale: 1.02;\n}\n.partners_slide10_bottom{\n    display: flex; flex-direction: column; align-items: center;\n}\n.partners_slide10_bottom_wallets{\n    width: 27.52em; height: 7.1em;\n}\n\n\n/* slide 11 */\n.partners_slide11{\n    padding-top: 1.2em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n    padding: 0 1.9em;\n}\n.partners_slide11_closebtn{\n    display: flex; align-items: center; justify-content: center;\n    position: absolute; right: 1.4em; top: 1.4em;\n    width: 8.3em; height: 3.3em;\n    border-radius: .4em;\n    border: solid .2em rgba(225, 225, 225, 0.65);\n}\n.partners_slide11_closebtn_txt{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;\n    text-align: center;\n    cursor: pointer;\n}\n.partners_slide11_closebtn:hover{\n    opacity: .8;\n    scale: 1.02;\n}\n.partners_slide11_disconnectbtn{\n    display: flex; align-items: center; justify-content: center;\n    position: absolute; left: 1.6em; top: 1.5em;\n    width: 14.4em; height: 3.3em;\n    cursor: pointer;\n    border-radius: .4em;\n    border: solid .2em rgba(244, 213, 111, 0.65);\n}\n.partners_slide11_disconnectbtn_txt{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    cursor: pointer;\n}\n.partners_slide11_disconnectbtn:hover{\n    opacity: .8;\n    scale: 1.02;\n}\n.partners_slide11_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n    text-transform: uppercase;\n    line-height: 1em;\n    padding: 0;\n    margin: 0 0 .5em 0; \n}\n.partners_slide11_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n    width: 51.4em; height: 78%;\n    padding-top: 6.8em;\n}\n.partners_slide11_header{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    letter-spacing: 0.029em;\n    text-align: center;\n}\n.partners_slide11_desc1{\n    font-family: 'SF UI Display', sans-serif; font-size: 1.9em; color: #fff; font-weight: 500;\n    text-align: center;\n    letter-spacing: -.056em;\n    padding: 0;\n    margin: 0 0 .2em 0; \n}\n.partners_slide11_desc2{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.2em; color: #ffffffc7; font-weight: 500;\n    text-align: center;\n    letter-spacing: -.056em;\n    padding: 0;\n    margin: 0 0 2em 0; \n}\n.partners_slide11_inputbox{\n    display: flex; align-items: center; justify-content: center;\n    width: 100%; height: 4.9em;\n    margin-bottom: 3.2em;\n}\n.partners_slide11_input_bg{\n    width: 100%; height: 100%;\n}\n.partners_slide11_address{\n    position: absolute;\n    z-index: 1;\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;\n    text-align: center;\n    padding: 0;\n    margin: 0; \n}\n.partners_slide11_alert_box{\n    display: flex; align-items: center; justify-content: flex-start;\n    width: 100%; height: 4.7em;\n    opacity: 0.8;\n    background-color: #8c2420;\n    border-radius: .4em;\n}\n.partners_slide11_alert_desc{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;\n    margin: 0; \n    padding: 0 1em;\n}\n.partners_slide11_continue_btn{\n    display: flex; align-items: center;\n    position: absolute; right: 1.4em; bottom: 1.5em;\n    width: 23.9em; height: 3.8em;\n    border-radius: .4em;\n    cursor: pointer;\n}\n.partners_slide11_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n.partners_slide11_continue_desc{\n    position: absolute; left: .65em;\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.7em; color: #000; font-weight: bold;\n    margin: 0; \n    padding: 0;\n}\n.partners_slide11_continue_img{\n    width: 100%; height: 100%;\n}\n.partners_slide11_continue_btn:hover{\n    opacity: .9;\n    scale: 1.02;\n}\n\n\n/* slide 12 */\n.partners_slide12{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n    /* padding: 0 1.9em; */\n}\n.partners_slide12_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n}\n.partners_slide12_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n}\n.partners_slide12_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n.partners_slide12_input_box{\n    display: flex; align-items: center;\n    width: 30em; height: 3.8em;\n    border-bottom: solid .05em #f4d56f;\n    margin-bottom: 3.3em;\n}\n.partners_slide12_input{\n    outline: none;\n    border: none;\n    width: 100%; height: 100%;\n    margin: 0 .2em 0 0;\n    padding: 0;\n    line-height: 1em;\n    background-color: transparent;\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;\n    text-align: center;\n}\n.partners_slide12_input_delete{\n    width: 1em; height: 1em;\n    color: #6d6d71;\n    cursor: pointer;\n}\n.partners_slide12_alert_box{\n    display: flex; align-items: center; justify-content: center;\n    background: #4e7527;\n    width: 29.8em; height: 2.8em;\n    border-radius: .4em;\n}\n.partners_slide12_alert_msg{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;\n    text-align: center;\n}\n\n\n/* slide 13 */\n.partners_slide13{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide13_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n}\n.partners_slide13_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n}\n.partners_slide13_upload_btn{\n    display: flex; flex-direction: column; align-items: center;\n    margin-bottom: 2.2em;\n}\n.partners_slide13_upload{\n    width: 5.9em; height: 5.9em;\n    cursor: pointer;\n}\n.partners_slide13_upload:hover{\n    scale: 1.02;\n    opacity: .9;\n}\n.partners_slide13_upload_desc{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #f4d56f; font-weight: 500;\n    text-align: center;\n    margin: .2em 0 0 0;\n    padding: 0;\n}\n.partners_slide13_alert_box{\n    display: flex; align-items: center; justify-content: center;\n    background: #4e7527;\n    width: 29.8em; height: 4em;\n    border-radius: .4em\n}\n.partners_slide13_alert_box{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;\n    text-align: center;\n}\n.partners_slide13_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 14 */\n.partners_slide14{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide14_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n.partners_slide14_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n}\n.partners_slide14_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n}\n.partners_slide14_input_box{\n    display: flex; align-items: center;\n    width: 30em; height: 3.8em;\n    border-bottom: solid .05em #f4d56f;\n    margin-bottom: 3.3em;\n}\n.partners_slide14_input{\n    outline: none;\n    border: none;\n    float: left;\n    width: 100%; height: 100%;\n    margin: 0 .2em 0 0;\n    padding: 0;\n    line-height: 1em;\n    background-color: transparent;\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.8em; color: #fff; font-weight: 600;\n    text-align: left;\n}\n.partners_slide14_input_delete{\n    width: 1em; height: 1em;\n    color: #6d6d71;\n    cursor: pointer;\n}\n.partners_slide14_alert_box{\n    display: flex; align-items: center; justify-content: center;\n    background: #4e7527;\n    width: 35.7em; height: 4em;\n    border-radius: .4em;\n}\n.partners_slide14_alert_msg{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;\n    text-align: center;\n}\n\n/* slide 15 */\n.partners_slide15{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide15_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n}\n.partners_slide15_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n    padding: 0;\n    margin: 0 0 .7em 0;\n}\n.partners_slide15_terms_box{\n    display: flex; align-items: center;\n    margin-bottom: 4.2em;\n}\n.partners_slide15_checkmark{\n    display: flex; align-items: center; justify-content: center;\n    width: 2.68em; height: 2.7em;\n    border-radius: .41em;\n    border: solid .1em #f4d56f;\n    margin-right: 1.14em;\n    cursor: pointer;\n}\n.partners_slide15_checkmark_img{\n    height: 100%; width: 100%;\n}\n.partners_slide15_terms{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.44em; color: #fff; font-weight: bold;\n    text-align: center;\n    letter-spacing: .013em;\n}\n.partners_slide15_terms_span{\n    font-family: 'Source Sans Pro', sans-serif; color: #429fec; font-weight: bold;\n    text-align: center;\n    letter-spacing: .013em;\n    text-decoration: underline;\n    cursor: pointer;\n}\n.partners_slide15_alert_box{\n    display: flex; align-items: center; justify-content: center;\n    background: #4e7527;\n    width: 35.7em; height: 4em;\n    border-radius: .4em;\n}\n.partners_slide15_alert_msg{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.1em; color: #fff; font-weight: 500;\n    text-align: center;\n}\n.partners_slide15_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 16 */\n.partners_slide16{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide16_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n    margin-top: 3em;\n}\n.partners_slide16_header_desc{\n    font-family: \"Barlow Semi Condensed\"; font-size: 3.2em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .029em;\n    text-transform: uppercase;\n    padding: 0;\n    margin: 0 0 .4em 0;\n}\n.partners_slide16_header_desc2{\n    font-family: SF UI Display, sans-serif; font-size: 2em; color: #ffffffcc; font-weight: 500;\n    text-align: center;\n    letter-spacing: -.059em;\n    padding: 0;\n    margin: 0 0 1.2em 0;\n}\n.partners_slide16_copycode_row{\n    display: flex; justify-content: center; align-items: center;\n    margin-bottom: .9em;\n}\n.partners_slide16_copycode_btn{\n    width: 14.3em; height: 4.7em;\n    border-radius: .4em;\n    border: solid .3em #0095c7;\n    background-color: #0079a2;\n    margin: 0 1.5em;\n    cursor: pointer;\n}\n.partners_slide16_copycode_btn:hover{\n    scale: 1.02;\n}\n.partners_slide16_left_arr{\n    width: 2.9em; height: 2.9em;\n}\n.partners_slide16_right_arr{\n    transform: rotate(180deg);\n    width: 2.9em; height: 2.9em;\n}\n.partners_slide16_copycode_btn_desc{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #fff; font-weight: bold;\n    text-align: center;\n    text-transform: uppercase;\n}\n.partners_slide16_bottom_desc{\n    font-family: 'SF UI Display', sans-serif; font-size: 1.2em; color: #ffffffb3; font-weight: 500;\n    text-align: center;\n    letter-spacing: -.036em;   \n}\n.partners_slide16_continue_arr{\n    position: absolute; right: .8em;\n    width: 1em; height: .9em;\n}\n\n\n/* slide 17 */\n.partners_slide16{\n    padding-top: 1.4em;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: flex-start;\n    width: 100%; height: 100%;\n}\n.partners_slide17_content{\n    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;\n}\n.partners_slide17_header_desc{\n    margin-top: 1.8em;\n    font-family: \"Barlow Semi Condensed\"; font-size: 5em; color: #f4d56f; font-weight: bold;\n    text-align: center;\n    letter-spacing: .045em;\n    text-transform: uppercase;\n}\n.partners_slide17_start_btn{\n    display: flex; align-items: center; justify-content: center;\n    width: 27.2em; height: 4.7em;\n    border-radius: .46em;\n    border: solid .12em #f4d56f;\n    margin-bottom: 2.2em;\n    background-image: linear-gradient(97deg, #d99e38 1%, #fff585 16%, #ebbc53 24%, #edc964 54%, #e4b54f 72%, #dfa942 82%, #dda53e 84%, #e1ac43 87%, #eebf50 90%, #fbd35e 93%, #f9d15d 97%, #f4ca58 98%, #eabd50 99%, #dcab45 100%, #c99437 101%, #b47926 102%);\n}\n.partners_slide17_start_btn_desc{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.85em; color: #000; font-weight: bold;\n    text-align: center;\n}\n.partners_slide17_bottom_desc{\n    font-family: SF UI Display, sans-serif; font-size: 1.2em; font-weight: 500; color: #ffffffbd;\n    letter-spacing: -.036;\n    text-align: center;\n}\n\n\n/* global */\n.partners_next_btn{\n    display: flex; align-items: center; justify-content: space-evenly;\n    position: absolute; bottom: 1.5em; right: 1.5em;\n    /* padding-left: 1.5em; */\n    font-family: SF UI Display, sans-serif; font-size: 1.7em; font-weight: bold; color: #000;\n    width: 8em; height: 2.2em;\n    border-radius: .4em;\n    border: solid .02em #f4d56f;\n    cursor: pointer;\n    background-image: linear-gradient(101deg, #d99e38 -29%, #fff585 -6%, #ebbc53 6%, #edc964 52%, #e4b54f 79%, #dfa942 95%, #dda53e 98%, #e1ac43 101%, #eebf50 107%, #fbd35e 111%, #f9d15d 116%, #f4ca58 119%, #eabd50 120%, #dcab45 122%, #c99437 123%, #b47926 125%);\n}\n.partners_next_btn_desc{\n    font-family: SF UI Display, sans-serif; font-size: 1em; font-weight: bold; color: #000;\n    margin: 0;\n    padding: 0;\n}\n.partners_next_btn:hover{\n    scale: 1.02;\n}\n\n\n/* positions bubble */\n.partners_slide_header{\n    padding: 0 1.4em 0 1.6em;\n    width: 96%; height: 3.7em;\n    display: flex; justify-content: space-between; align-items: center;\n    margin-bottom: 2.5em;\n}\n.partners_slide_backbtn{\n    /* position: absolute; left: 1.6em; top: 1.4em; */\n    display: flex; align-items: center; justify-content: center;\n    width: 7.1em; height: 3.3em;\n    border-radius: .4em;\n    border: solid .2em rgba(225, 225, 225, 0.65);\n}\n.partners_slide_backbtn_txt{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;\n    text-align: center;\n    cursor: pointer;\n}\n.partners_slide_backbtn:hover{\n    opacity: .8;\n    scale: 1.02;\n}\n.partners_slide_positions_row{\n    display: flex; justify-content: flex-start;\n}\n.partners_slide_position_wrap{\n    display: flex; align-items: center;\n}\n.partners_slide_header_position{\n    display: flex; align-items: center; justify-content: center;\n    width: 2.3em; height: 2.3em;\n    border-radius: 50%;\n    border: solid .14em #3f3f3f;\n    background-color: #0c0d13;\n}\n.partners_slide_pos_idx{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.15em; color: #b2b2b2; font-weight: 500;\n    text-align: center;\n    margin: 0; \n    padding: 0;\n}\n.partners_slide_header_prog_pos{\n    width: 3.46em;\n    height: .22em;\n    border-radius: .14em;\n    background-color: #424348;\n}\n.partners_slide_closebtn{\n    display: flex; align-items: center; justify-content: center;\n    margin: 0;\n    padding: 0;\n    /* position: absolute; right: 1.4em; top: 1.4em; */\n    width: 8.3em; height: 3.3em;\n    border-radius: .4em;\n    border: solid .2em rgba(225, 225, 225, 0.65);\n    cursor: pointer;\n}\n.partners_slide_closebtn_txt{\n    font-family: 'Source Sans Pro', sans-serif; font-size: 1.4em; color: #dedede; font-weight: bold;\n    text-align: center;\n}\n.partners_slide_closebtn:hover{\n    opacity: .8;\n    scale: 1.02;\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;

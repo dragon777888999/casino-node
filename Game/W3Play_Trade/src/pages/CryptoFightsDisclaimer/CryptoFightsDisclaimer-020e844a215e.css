@@ -1,0 +1,762 @@
+// Imports
+import ___CSS_LOADER_API_SOURCEMAP_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/sourceMaps.js";
+import ___CSS_LOADER_API_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/api.js";
+import ___CSS_LOADER_GET_URL_IMPORT___ from "../../../node_modules/css-loader/dist/runtime/getUrl.js";
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL("/public/media/images/how-to-aff/crypto-fights/grainy-grey.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL("/public/media/images/how-to-aff/crypto-fights/cryptofights-logo.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL("/public/media/images/crypto-fights-disclaimer/disclaimer-icon.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL("/public/media/images/how-to-aff/crypto-fights/x-twitter.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL("/public/media/images/how-to-aff/crypto-fights/instagram.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL("/public/media/images/how-to-aff/crypto-fights/telegram.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL("/public/media/images/how-to-aff/crypto-fights/discord.svg", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL("/public/media/images/how-to-aff/crypto-fights/up-arrow-white.png", import.meta.url);
+var ___CSS_LOADER_URL_IMPORT_8___ = new URL("/public/media/images/how-to-aff/crypto-fights/rezart-logo.png", import.meta.url);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;500;600;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_7___);
+var ___CSS_LOADER_URL_REPLACEMENT_8___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_8___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.cryptofights-disclaimer {
+    font-family: 'Open Sans';
+    background-color: transparent;
+    display: block;
+    position: static;
+    font-size: 10px;
+    overflow: auto;
+    z-index: initial;
+}
+
+.cryptofights-disclaimer .cryptofights-disclaimer-main-flex {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: initial;
+}
+
+.cryptofights-disclaimer section.disclaimer-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: transparent;
+    padding: 0em 0em 7em 0em;
+}
+
+.cryptofights-disclaimer section.disclaimer-main .main-flex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 107em;
+    padding: 0;
+    text-align: left;
+}
+
+.cryptofights-disclaimer .cryptofights-disclaimer-main-flex .sections {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-repeat: repeat;
+    background-position: top center;
+}
+
+/* ############################################ */
+/* ############## MENU ICON (WEB) ############# */
+/* ############################################ */
+
+.cryptofights-disclaimer .menu-icon {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block;
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+}
+
+.cryptofights-disclaimer .menu-icon {
+    display: none;
+}
+
+.cryptofights-disclaimer .menu-icon div {
+    background-color: #FFFFFF;
+    border-radius: 0;
+    height: 0.4em;
+    position: absolute;
+    right: 1em;
+    transition: width .2s,transform .2s;
+    width: 6em;
+}
+
+.cryptofights-disclaimer .menu-icon div.top {
+    top: 2.5em;
+}
+
+/* .cryptofights-disclaimer .menu-icon div.middle {
+    top: 2.2em;
+    width: 2em;
+} */
+
+.cryptofights-disclaimer .menu-icon div.bottom {
+    top: 4.8em;
+}
+
+.cryptofights-disclaimer .menu-icon.open div.top {
+    transform: translate(0.1em, 1.2em) rotate(-45deg);
+    width: 6.4em;
+}
+
+/* .cryptofights-disclaimer .menu-icon.open div.middle {
+    transform: translate(-4.5em);
+} */
+
+.cryptofights-disclaimer .menu-icon.open div.bottom {
+    transform: translate(0.1em, -1em) rotate(45deg);
+    width: 6.4em;
+    z-index: 1;
+}
+
+/* ############################################ */
+/* ############## TOP MENU (WEB) ############## */
+/* ############################################ */
+
+.cryptofights-disclaimer .menu-icon {
+    display: none;
+}
+
+.cryptofights-disclaimer .top-menu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.cryptofights-disclaimer .top-menu .item {
+    color: #B0B0B0;
+    text-transform: uppercase;
+}
+
+.cryptofights-disclaimer .top-menu .item:nth-child(1) {
+
+}
+
+.cryptofights-disclaimer .top-menu .item:nth-child(2) {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.cryptofights-disclaimer .top-menu .item:nth-child(3) {
+    color: #5FC300;
+    text-decoration: underline;
+}
+
+/* .cryptofights-disclaimer .top-menu .item.active {
+    color: #ffffff;
+} */
+
+.cryptofights-disclaimer .top-menu .item span {
+    font-size: 1.6em;
+}
+
+/* ############################################ */
+/* ############## SIDE MENU (WEB) ############# */
+/* ############################################ */
+
+.cryptofights-disclaimer .side-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    top: 0;
+    bottom: 0;
+    /* right: 0; */
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    z-index: 2;
+    transform: translateX(60em);
+    transition: transform .3s ease;
+    box-sizing: border-box;
+    display: none;
+}
+
+.cryptofights-disclaimer .side-menu.open {
+    transform: translateX(0);
+}
+
+.cryptofights-disclaimer .side-menu .item {
+    color: #ffffff;
+}
+
+.cryptofights-disclaimer .side-menu .item.active {
+    color: #f4d56f;
+}
+
+.cryptofights-disclaimer .side-menu .item span {
+    font-size: 2.5em;
+}
+
+/* ############################################ */
+/* ############# WEB/MOBILE ONLY ############## */
+/* ############################################ */
+
+.cryptofights-disclaimer .mobile-only.flex {
+    display: none !important;
+}
+
+.cryptofights-disclaimer .mobile-only.block {
+    display: none !important;
+}
+
+.cryptofights-disclaimer .web-only.flex {
+    display: flex !important;
+}
+
+.cryptofights-disclaimer .web-only.block {
+    display: block !important;
+}
+
+/*  */
+
+.cryptofights-disclaimer .top-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 161em;
+    margin: 2em 0em 11em 0em;
+    padding: 0em 3em;
+}
+
+.cryptofights-disclaimer .top-content .logo {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    height: 4em;
+    width: 29em;
+}
+
+.cryptofights-disclaimer .caption {
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 8em;
+    width: 100%;
+    font-family: 'Anton';
+    line-height: 12.1em;
+    text-align: left;
+}
+
+.cryptofights-disclaimer .caption span {
+    font-size: 13em;
+}
+
+.cryptofights-disclaimer .top-text {
+    color: #B0B0B0;
+    margin: 9em 0em 0em 0em;
+    line-height: 4em;
+}
+
+.cryptofights-disclaimer .middle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin: 5em 0em 10em 0em;
+}
+
+.cryptofights-disclaimer .top-text span {
+    font-size: 3.2em;
+}
+
+.cryptofights-disclaimer .bottom-text {
+    color: #B0B0B0;
+    line-height: 4.2em;
+}
+
+.cryptofights-disclaimer .bottom-text span {
+    font-size: 3.2em;
+}
+
+.cryptofights-disclaimer .box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.cryptofights-disclaimer .big {
+    text-transform: uppercase;
+    color: #DEDEDE;
+    padding: 0em 8em;
+
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+    background-repeat: no-repeat;
+    background-position: 0em 0.7em;
+    background-size: 4em;
+    line-height: 4.4em;
+}
+
+.cryptofights-disclaimer .big span {
+    font-size: 3.6em;
+}
+
+.cryptofights-disclaimer .small {
+    color: #B0B0B0;
+    padding: 0em 8em;
+}
+
+.cryptofights-disclaimer .small span {
+    font-size: 2em;
+}
+
+/* ############################################ */
+/* ########## SECTION: FOOTER (WEB) ########### */
+/* ############################################ */
+
+.cryptofights-disclaimer section.footer {
+    background-color: transparent;
+    color: #5a5a5a;
+    padding: 14em 0em 7em 0em;
+}
+
+.cryptofights-disclaimer section.footer .main-flex {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 161em;
+    margin: 2em auto 11em auto;
+    padding: 0em 3em;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .area {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+ /* LOGO AREA */
+
+.cryptofights-disclaimer section.footer .main-flex .logo-area {
+    align-items: flex-start;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo {
+    margin: -2.4em 0em 0em 0em;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo div {
+    width: 66.2em;
+    height: 8.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+}
+
+.cryptofights-disclaimer section.footer .main-flex .logo-area .grey-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .logo-area .grey-text span {
+    font-size: 1.6em;
+}
+
+/* LINKS AREA */
+
+.cryptofights-disclaimer section.footer .main-flex .links-area {
+    align-items: flex-start;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .links-area .grey-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .links-area .grey-text span {
+    font-size: 1.6em;
+}
+
+/* SOCIALS AREA */
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area {
+    gap: 2em;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area a {
+    width: 3.5em;
+    height: 3.5em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area a.x-twitter {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
+}
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area a.instagram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_4___});
+}
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area a.telegram {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_5___});
+}
+
+.cryptofights-disclaimer section.footer .main-flex .socials-area a.discord {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_6___});
+}
+
+/* ARROW AREA */
+
+.cryptofights-disclaimer section.footer .main-flex .arrow-area {
+    position: relative;
+    justify-content: space-between;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .arrow-area .white-arrow {
+    width: 7.6em;
+    height: 7.6em;
+    margin: -3em 0em 0em 0em;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_7___});
+}
+
+.cryptofights-disclaimer section.footer .main-flex .rezart-logo {
+
+}
+
+.cryptofights-disclaimer section.footer .main-flex .rezart-logo div {
+    width: 3.6em;
+    height: 2.2em;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_8___});
+}
+
+/*  FOOTER BOTTOM MENU (WEB) */
+
+.cryptofights-disclaimer section.footer .bottom-menu {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.2em;
+}
+
+.cryptofights-disclaimer section.footer .bottom-menu .item {
+    color: #EEEEEE;
+    text-transform: uppercase;
+}
+
+.cryptofights-disclaimer section.footer .bottom-menu .item:nth-child(1) {
+    color: #5FC300;
+}
+
+/* .cryptofights-disclaimer section.footer .bottom-menu .item.active {
+    color: #5FC300;
+} */
+
+.cryptofights-disclaimer section.footer .bottom-menu .item span {
+    font-size: 3em;
+}
+
+.cryptofights-disclaimer section.footer .main-flex .grey-text,
+.cryptofights-disclaimer section.footer .main-flex .grey-text a {
+    color: #5a5a5a;
+}
+
+@media screen and (max-width: 1680px) {
+
+    .cryptofights-disclaimer {
+        font-size: 9px;
+    }
+
+}
+
+@media screen and (max-width: 1560px) {
+
+    .cryptofights-disclaimer {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .cryptofights-disclaimer {
+        font-size: 7.5px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .cryptofights-disclaimer {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 1190px) {
+
+    .cryptofights-disclaimer {
+        font-size: 6.5px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .cryptofights-disclaimer {
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 1010px) {
+
+    .cryptofights-disclaimer {
+        font-size: 5.5px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    .cryptofights-disclaimer {
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /* ############################################ */
+    /* ############# WEB/MOBILE ONLY ############## */
+    /* ############################################ */
+
+    .cryptofights-disclaimer .web-only.flex {
+        display: none !important;
+    }
+
+    .cryptofights-disclaimer .web-only.block {
+        display: none !important;
+    }
+ 
+    .cryptofights-disclaimer .mobile-only.flex {
+        display: flex !important;
+    }
+
+    .cryptofights-disclaimer .mobile-only.block {
+        display: block !important;
+    }
+
+    /* ############################################ */
+    /* ############ MENU ICON (MOBILE) ############ */
+    /* ############################################ */
+
+    .cryptofights-disclaimer .menu-icon {
+        display: flex;
+        right: 3em;
+        top: 2em;
+    }
+
+    /* ############################################ */
+    /* ############ TOP MENU (MOBILE) ############# */
+    /* ############################################ */
+
+    .cryptofights-disclaimer .top-menu {
+        display: none;
+    }
+
+    /* ############################################ */
+    /* ############ SIDE MENU (MOBILE) ############ */
+    /* ############################################ */
+
+    .cryptofights-disclaimer .side-menu {
+        display: flex;
+        transform: translateX(100em);
+        padding: 0em 3.5em;
+    }
+
+    .cryptofights-disclaimer .side-menu .item {
+        text-transform: uppercase;
+    }
+
+    .cryptofights-disclaimer .side-menu .item:nth-child(1) {
+        color: #ffffff;
+    }
+
+    .cryptofights-disclaimer .side-menu .item:nth-child(2) {
+        color: #B0B0B0;
+    }
+
+    .cryptofights-disclaimer .side-menu .item:nth-child(3) {
+        color: #5FC300;
+        text-decoration: underline;
+    }
+
+    .cryptofights-disclaimer .side-menu .menu-caption::before {
+        
+    }
+
+    .cryptofights-disclaimer .side-menu .menu-caption span {
+        
+    }
+
+    .cryptofights-disclaimer .side-menu .item span {
+        font-size: 5em;
+    }
+
+    .cryptofights-disclaimer .side-menu.open {
+        
+    }
+
+    .cryptofights-disclaimer section.disclaimer-main {
+        padding: 0em 3.5em 7em 3.5em;
+    }
+
+    .cryptofights-disclaimer .top-content {
+        padding: 0;
+        margin: 3.6em 0em 9em 0em;
+    }
+
+    .cryptofights-disclaimer .top-content .logo {
+        height: 5em;
+        width: 45em;
+    }
+
+    .cryptofights-disclaimer .top-text {
+        line-height: 4.6em;
+    }
+
+    .cryptofights-disclaimer .top-text span {
+        font-size: 3.7em;
+    }
+
+    .cryptofights-disclaimer .bottom-text {
+        line-height: 4.4em;
+    }
+
+    .cryptofights-disclaimer .bottom-text span {
+        font-size: 3.7em;
+    }
+
+    .cryptofights-disclaimer .big {
+        padding: 0em 0em 0em 6em;
+    }
+
+    .cryptofights-disclaimer .small {
+        padding: 0em 0em 0em 6em;
+        line-height: 3.8em;
+    }
+
+    .cryptofights-disclaimer .small span {
+        font-size: 3em;
+    }
+
+    .cryptofights-disclaimer .box {
+        gap: 1.6em;
+    }
+
+    /* ################################################# */
+    /* ########### SECTION: FOOTER (MOBILE) ############ */
+    /* ################################################# */
+
+    .cryptofights-disclaimer section.footer {
+        padding: 13em 3.5em 11em 3.5em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex {
+        flex-direction: column;
+        width: unset;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .grey-text-area {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2em;
+        margin: 10em 0em 10em 0em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .socials-area {
+        flex-direction: row;
+        gap: 4em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .arrow-area {
+        flex-direction: row-reverse;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo div {
+        width: 50.2em;
+        height: 6.2em;
+    }
+
+    .cryptofights-disclaimer section.footer .bottom-menu .item span {
+        font-size: 5.6em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .links-area {
+        margin: 9em 0em 9em 0em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .socials-area a {
+        width: 6.5em;
+        height: 6.5em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .rezart-logo div {
+        width: 7em;
+        height: 4.6em;
+    }
+
+    .cryptofights-disclaimer section.footer .main-flex .arrow-area .white-arrow {
+        width: 5.6em;
+        height: 5.6em;
+        margin: -1em 0em 0em 0em;
+    }
+    
+    .cryptofights-disclaimer section.footer .main-flex .grey-text span {
+        font-size: 3em;
+    }
+
+}`, "",{"version":3,"sources":["webpack://./src/pages/CryptoFightsDisclaimer/CryptoFightsDisclaimer.css"],"names":[],"mappings":"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","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300;400;500;600;700&display=swap');\n\n.cryptofights-disclaimer {\n    font-family: 'Open Sans';\n    background-color: transparent;\n    display: block;\n    position: static;\n    font-size: 10px;\n    overflow: auto;\n    z-index: initial;\n}\n\n.cryptofights-disclaimer .cryptofights-disclaimer-main-flex {\n    position: relative;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    height: 100%;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    -o-user-select: none;\n    user-select: none;\n    z-index: initial;\n}\n\n.cryptofights-disclaimer section.disclaimer-main {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    position: relative;\n    background-color: transparent;\n    padding: 0em 0em 7em 0em;\n}\n\n.cryptofights-disclaimer section.disclaimer-main .main-flex {\n    position: relative;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    z-index: 1;\n    width: 100%;\n    max-width: 107em;\n    padding: 0;\n    text-align: left;\n}\n\n.cryptofights-disclaimer .cryptofights-disclaimer-main-flex .sections {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/grainy-grey.png');\n    background-repeat: repeat;\n    background-position: top center;\n}\n\n/* ############################################ */\n/* ############## MENU ICON (WEB) ############# */\n/* ############################################ */\n\n.cryptofights-disclaimer .menu-icon {\n    position: absolute;\n    right: 2em;\n    top: 2em;\n    z-index: 3;\n    cursor: pointer;\n    display: inline-block;\n    width: 8em;\n    height: 8em;\n    overflow: hidden;\n}\n\n.cryptofights-disclaimer .menu-icon {\n    display: none;\n}\n\n.cryptofights-disclaimer .menu-icon div {\n    background-color: #FFFFFF;\n    border-radius: 0;\n    height: 0.4em;\n    position: absolute;\n    right: 1em;\n    transition: width .2s,transform .2s;\n    width: 6em;\n}\n\n.cryptofights-disclaimer .menu-icon div.top {\n    top: 2.5em;\n}\n\n/* .cryptofights-disclaimer .menu-icon div.middle {\n    top: 2.2em;\n    width: 2em;\n} */\n\n.cryptofights-disclaimer .menu-icon div.bottom {\n    top: 4.8em;\n}\n\n.cryptofights-disclaimer .menu-icon.open div.top {\n    transform: translate(0.1em, 1.2em) rotate(-45deg);\n    width: 6.4em;\n}\n\n/* .cryptofights-disclaimer .menu-icon.open div.middle {\n    transform: translate(-4.5em);\n} */\n\n.cryptofights-disclaimer .menu-icon.open div.bottom {\n    transform: translate(0.1em, -1em) rotate(45deg);\n    width: 6.4em;\n    z-index: 1;\n}\n\n/* ############################################ */\n/* ############## TOP MENU (WEB) ############## */\n/* ############################################ */\n\n.cryptofights-disclaimer .menu-icon {\n    display: none;\n}\n\n.cryptofights-disclaimer .top-menu {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    gap: 5em;\n}\n\n.cryptofights-disclaimer .top-menu .item {\n    color: #B0B0B0;\n    text-transform: uppercase;\n}\n\n.cryptofights-disclaimer .top-menu .item:nth-child(1) {\n\n}\n\n.cryptofights-disclaimer .top-menu .item:nth-child(2) {\n    color: #ffffff;\n    font-weight: 500;\n}\n\n.cryptofights-disclaimer .top-menu .item:nth-child(3) {\n    color: #5FC300;\n    text-decoration: underline;\n}\n\n/* .cryptofights-disclaimer .top-menu .item.active {\n    color: #ffffff;\n} */\n\n.cryptofights-disclaimer .top-menu .item span {\n    font-size: 1.6em;\n}\n\n/* ############################################ */\n/* ############## SIDE MENU (WEB) ############# */\n/* ############################################ */\n\n.cryptofights-disclaimer .side-menu {\n    position: fixed;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 2em;\n    top: 0;\n    bottom: 0;\n    /* right: 0; */\n    background-color: rgba(0, 0, 0, 0.85);\n    width: 100%;\n    z-index: 2;\n    transform: translateX(60em);\n    transition: transform .3s ease;\n    box-sizing: border-box;\n    display: none;\n}\n\n.cryptofights-disclaimer .side-menu.open {\n    transform: translateX(0);\n}\n\n.cryptofights-disclaimer .side-menu .item {\n    color: #ffffff;\n}\n\n.cryptofights-disclaimer .side-menu .item.active {\n    color: #f4d56f;\n}\n\n.cryptofights-disclaimer .side-menu .item span {\n    font-size: 2.5em;\n}\n\n/* ############################################ */\n/* ############# WEB/MOBILE ONLY ############## */\n/* ############################################ */\n\n.cryptofights-disclaimer .mobile-only.flex {\n    display: none !important;\n}\n\n.cryptofights-disclaimer .mobile-only.block {\n    display: none !important;\n}\n\n.cryptofights-disclaimer .web-only.flex {\n    display: flex !important;\n}\n\n.cryptofights-disclaimer .web-only.block {\n    display: block !important;\n}\n\n/*  */\n\n.cryptofights-disclaimer .top-content {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    width: 100%;\n    max-width: 161em;\n    margin: 2em 0em 11em 0em;\n    padding: 0em 3em;\n}\n\n.cryptofights-disclaimer .top-content .logo {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/cryptofights-logo.svg');\n    background-repeat: no-repeat;\n    background-position: left bottom;\n    background-size: contain;\n    height: 4em;\n    width: 29em;\n}\n\n.cryptofights-disclaimer .caption {\n    color: #ffffff;\n    font-weight: 400;\n    line-height: 8em;\n    width: 100%;\n    font-family: 'Anton';\n    line-height: 12.1em;\n    text-align: left;\n}\n\n.cryptofights-disclaimer .caption span {\n    font-size: 13em;\n}\n\n.cryptofights-disclaimer .top-text {\n    color: #B0B0B0;\n    margin: 9em 0em 0em 0em;\n    line-height: 4em;\n}\n\n.cryptofights-disclaimer .middle-text {\n    display: flex;\n    flex-direction: column;\n    gap: 4em;\n    margin: 5em 0em 10em 0em;\n}\n\n.cryptofights-disclaimer .top-text span {\n    font-size: 3.2em;\n}\n\n.cryptofights-disclaimer .bottom-text {\n    color: #B0B0B0;\n    line-height: 4.2em;\n}\n\n.cryptofights-disclaimer .bottom-text span {\n    font-size: 3.2em;\n}\n\n.cryptofights-disclaimer .box {\n    display: flex;\n    flex-direction: column;\n    gap: 1em;\n}\n\n.cryptofights-disclaimer .big {\n    text-transform: uppercase;\n    color: #DEDEDE;\n    padding: 0em 8em;\n\n    background-image: url('/public/media/images/crypto-fights-disclaimer/disclaimer-icon.svg');\n    background-repeat: no-repeat;\n    background-position: 0em 0.7em;\n    background-size: 4em;\n    line-height: 4.4em;\n}\n\n.cryptofights-disclaimer .big span {\n    font-size: 3.6em;\n}\n\n.cryptofights-disclaimer .small {\n    color: #B0B0B0;\n    padding: 0em 8em;\n}\n\n.cryptofights-disclaimer .small span {\n    font-size: 2em;\n}\n\n/* ############################################ */\n/* ########## SECTION: FOOTER (WEB) ########### */\n/* ############################################ */\n\n.cryptofights-disclaimer section.footer {\n    background-color: transparent;\n    color: #5a5a5a;\n    padding: 14em 0em 7em 0em;\n}\n\n.cryptofights-disclaimer section.footer .main-flex {\n    display: flex;\n    box-sizing: border-box;\n    justify-content: space-between;\n    width: 100%;\n    max-width: 161em;\n    margin: 2em auto 11em auto;\n    padding: 0em 3em;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .area {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n    align-items: center;\n}\n\n /* LOGO AREA */\n\n.cryptofights-disclaimer section.footer .main-flex .logo-area {\n    align-items: flex-start;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo {\n    margin: -2.4em 0em 0em 0em;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo div {\n    width: 66.2em;\n    height: 8.2em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/cryptofights-logo.svg');\n}\n\n.cryptofights-disclaimer section.footer .main-flex .logo-area .grey-text {\n    flex-grow: 1;\n    display: flex;\n    align-items: flex-end;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .logo-area .grey-text span {\n    font-size: 1.6em;\n}\n\n/* LINKS AREA */\n\n.cryptofights-disclaimer section.footer .main-flex .links-area {\n    align-items: flex-start;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .links-area .grey-text {\n    flex-grow: 1;\n    display: flex;\n    align-items: flex-end;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .links-area .grey-text span {\n    font-size: 1.6em;\n}\n\n/* SOCIALS AREA */\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area {\n    gap: 2em;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area a {\n    width: 3.5em;\n    height: 3.5em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area a.x-twitter {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/x-twitter.svg');\n}\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area a.instagram {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/instagram.svg');\n}\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area a.telegram {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/telegram.svg');\n}\n\n.cryptofights-disclaimer section.footer .main-flex .socials-area a.discord {\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/discord.svg');\n}\n\n/* ARROW AREA */\n\n.cryptofights-disclaimer section.footer .main-flex .arrow-area {\n    position: relative;\n    justify-content: space-between;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .arrow-area .white-arrow {\n    width: 7.6em;\n    height: 7.6em;\n    margin: -3em 0em 0em 0em;\n    cursor: pointer;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/up-arrow-white.png');\n}\n\n.cryptofights-disclaimer section.footer .main-flex .rezart-logo {\n\n}\n\n.cryptofights-disclaimer section.footer .main-flex .rezart-logo div {\n    width: 3.6em;\n    height: 2.2em;\n    background-position: center;\n    background-size: contain;\n    background-repeat: no-repeat;\n    background-image: url('/public/media/images/how-to-aff/crypto-fights/rezart-logo.png');\n}\n\n/*  FOOTER BOTTOM MENU (WEB) */\n\n.cryptofights-disclaimer section.footer .bottom-menu {\n    position: relative;\n    z-index: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 0.2em;\n}\n\n.cryptofights-disclaimer section.footer .bottom-menu .item {\n    color: #EEEEEE;\n    text-transform: uppercase;\n}\n\n.cryptofights-disclaimer section.footer .bottom-menu .item:nth-child(1) {\n    color: #5FC300;\n}\n\n/* .cryptofights-disclaimer section.footer .bottom-menu .item.active {\n    color: #5FC300;\n} */\n\n.cryptofights-disclaimer section.footer .bottom-menu .item span {\n    font-size: 3em;\n}\n\n.cryptofights-disclaimer section.footer .main-flex .grey-text,\n.cryptofights-disclaimer section.footer .main-flex .grey-text a {\n    color: #5a5a5a;\n}\n\n@media screen and (max-width: 1680px) {\n\n    .cryptofights-disclaimer {\n        font-size: 9px;\n    }\n\n}\n\n@media screen and (max-width: 1560px) {\n\n    .cryptofights-disclaimer {\n        font-size: 8px;\n    }\n\n}\n\n@media screen and (max-width: 1400px) {\n\n    .cryptofights-disclaimer {\n        font-size: 7.5px;\n    }\n\n}\n\n@media screen and (max-width: 1280px) {\n\n    .cryptofights-disclaimer {\n        font-size: 7px;\n    }\n\n}\n\n@media screen and (max-width: 1190px) {\n\n    .cryptofights-disclaimer {\n        font-size: 6.5px;\n    }\n\n}\n\n@media screen and (max-width: 1100px) {\n\n    .cryptofights-disclaimer {\n        font-size: 6px;\n    }\n\n}\n\n@media screen and (max-width: 1010px) {\n\n    .cryptofights-disclaimer {\n        font-size: 5.5px;\n    }\n\n}\n\n@media screen and (max-width: 920px) {\n\n    .cryptofights-disclaimer {\n        font-size: 5px;\n    }\n\n}\n\n@media screen and (max-width: 480px) {\n\n    /* ############################################ */\n    /* ############# WEB/MOBILE ONLY ############## */\n    /* ############################################ */\n\n    .cryptofights-disclaimer .web-only.flex {\n        display: none !important;\n    }\n\n    .cryptofights-disclaimer .web-only.block {\n        display: none !important;\n    }\n \n    .cryptofights-disclaimer .mobile-only.flex {\n        display: flex !important;\n    }\n\n    .cryptofights-disclaimer .mobile-only.block {\n        display: block !important;\n    }\n\n    /* ############################################ */\n    /* ############ MENU ICON (MOBILE) ############ */\n    /* ############################################ */\n\n    .cryptofights-disclaimer .menu-icon {\n        display: flex;\n        right: 3em;\n        top: 2em;\n    }\n\n    /* ############################################ */\n    /* ############ TOP MENU (MOBILE) ############# */\n    /* ############################################ */\n\n    .cryptofights-disclaimer .top-menu {\n        display: none;\n    }\n\n    /* ############################################ */\n    /* ############ SIDE MENU (MOBILE) ############ */\n    /* ############################################ */\n\n    .cryptofights-disclaimer .side-menu {\n        display: flex;\n        transform: translateX(100em);\n        padding: 0em 3.5em;\n    }\n\n    .cryptofights-disclaimer .side-menu .item {\n        text-transform: uppercase;\n    }\n\n    .cryptofights-disclaimer .side-menu .item:nth-child(1) {\n        color: #ffffff;\n    }\n\n    .cryptofights-disclaimer .side-menu .item:nth-child(2) {\n        color: #B0B0B0;\n    }\n\n    .cryptofights-disclaimer .side-menu .item:nth-child(3) {\n        color: #5FC300;\n        text-decoration: underline;\n    }\n\n    .cryptofights-disclaimer .side-menu .menu-caption::before {\n        \n    }\n\n    .cryptofights-disclaimer .side-menu .menu-caption span {\n        \n    }\n\n    .cryptofights-disclaimer .side-menu .item span {\n        font-size: 5em;\n    }\n\n    .cryptofights-disclaimer .side-menu.open {\n        \n    }\n\n    .cryptofights-disclaimer section.disclaimer-main {\n        padding: 0em 3.5em 7em 3.5em;\n    }\n\n    .cryptofights-disclaimer .top-content {\n        padding: 0;\n        margin: 3.6em 0em 9em 0em;\n    }\n\n    .cryptofights-disclaimer .top-content .logo {\n        height: 5em;\n        width: 45em;\n    }\n\n    .cryptofights-disclaimer .top-text {\n        line-height: 4.6em;\n    }\n\n    .cryptofights-disclaimer .top-text span {\n        font-size: 3.7em;\n    }\n\n    .cryptofights-disclaimer .bottom-text {\n        line-height: 4.4em;\n    }\n\n    .cryptofights-disclaimer .bottom-text span {\n        font-size: 3.7em;\n    }\n\n    .cryptofights-disclaimer .big {\n        padding: 0em 0em 0em 6em;\n    }\n\n    .cryptofights-disclaimer .small {\n        padding: 0em 0em 0em 6em;\n        line-height: 3.8em;\n    }\n\n    .cryptofights-disclaimer .small span {\n        font-size: 3em;\n    }\n\n    .cryptofights-disclaimer .box {\n        gap: 1.6em;\n    }\n\n    /* ################################################# */\n    /* ########### SECTION: FOOTER (MOBILE) ############ */\n    /* ################################################# */\n\n    .cryptofights-disclaimer section.footer {\n        padding: 13em 3.5em 11em 3.5em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex {\n        flex-direction: column;\n        width: unset;\n        padding: 0;\n        margin: 0;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .grey-text-area {\n        display: flex;\n        flex-direction: column;\n        align-items: flex-start;\n        gap: 1.2em;\n        margin: 10em 0em 10em 0em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .socials-area {\n        flex-direction: row;\n        gap: 4em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .arrow-area {\n        flex-direction: row-reverse;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .logo-area .bottom-logo div {\n        width: 50.2em;\n        height: 6.2em;\n    }\n\n    .cryptofights-disclaimer section.footer .bottom-menu .item span {\n        font-size: 5.6em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .links-area {\n        margin: 9em 0em 9em 0em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .socials-area a {\n        width: 6.5em;\n        height: 6.5em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .rezart-logo div {\n        width: 7em;\n        height: 4.6em;\n    }\n\n    .cryptofights-disclaimer section.footer .main-flex .arrow-area .white-arrow {\n        width: 5.6em;\n        height: 5.6em;\n        margin: -1em 0em 0em 0em;\n    }\n    \n    .cryptofights-disclaimer section.footer .main-flex .grey-text span {\n        font-size: 3em;\n    }\n\n}"],"sourceRoot":""}]);
+// Exports
+export default ___CSS_LOADER_EXPORT___;
