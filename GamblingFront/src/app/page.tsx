@@ -14,6 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
   let title = 'Epic Play to Earn Experience';
   let description = 'Epic Play to Earn Experience on Solana, Xrpl, Tron, Oraichain ...';
 
+  title = 'RebelGames by SunRebels on XRP';
+  description = 'The #1 gaming platform on the XRPL, with rev share to SunRebels holders!';
+
   if (host.includes('rebelgames.io')) {
     title = 'RebelGames by SunRebels on XRP';
     description = 'The #1 gaming platform on the XRPL, with rev share to SunRebels holders!';
