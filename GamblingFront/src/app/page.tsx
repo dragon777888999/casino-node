@@ -7,7 +7,7 @@ import { headers } from 'next/headers';
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = headers();
-  const host = headersList.get('host') || '';
+  const host = headersList.get('origin') || '';
 
   console.log("***************", host);
 
