@@ -9,6 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const headersList = headers();
   const host = headersList.get('host') || '';
 
+  console.log("***************", host);
+
   let title = 'Epic Play to Earn Experience';
   let description = 'Epic Play to Earn Experience on Solana, Xrpl, Tron, Oraichain ...';
 
