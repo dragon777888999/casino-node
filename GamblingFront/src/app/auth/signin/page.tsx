@@ -4,9 +4,6 @@ import Image from "next/image";
 
 import DefaultLayout from "@/components/layouts/DefaultLayout";
 
-import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
-export const metadata = MainPageMetadata;
-
 
 const SignIn: React.FC = () => {
   return (

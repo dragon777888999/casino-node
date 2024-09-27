@@ -13,8 +13,6 @@ import { toast } from "react-toastify";
 // import { ReferralInfo } from "@/types/referralinfo";
 // import { useRouter } from "next/router";
 
-// import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
-// export const metadata = MainPageMetadata;
 interface Props {
   info: AffiliaterInfo;
 }

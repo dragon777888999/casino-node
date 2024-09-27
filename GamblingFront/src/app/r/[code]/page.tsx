@@ -3,8 +3,6 @@ import Main from "@/components/main/page";
 import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { useAppContext } from "@/hooks/AppContext";
-// import { metadata as MainPageMetadata } from "@/components/metadata/MainPageMetaData";
-// export const metadata = MainPageMetadata;
 
 export default function ReferralPage() {
   const { setAffiliaterCode } = useAppContext();

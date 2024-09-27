@@ -321,6 +321,36 @@ function TradeButton({ dir, isMobile }) {
     const { wallet /*, authenticate*/ } = useContext(WalletContext);
 
     function _makeBet(demo_mode) {
+        (async function () {
+            if (can_place_trade) {
+                setButtonClassName(prev => {
+                    if (!prev.includes('click-trade-animation'))
+                        return [...prev, 'click-trade-animation'];
+                    return prev;
+                });
+                var bid = APP.state.get('selected_investment');
+                try {
+                    const response = await fetch(`${location.origin}/trade/PlaceBet?dir=${dir}&poolId=${poolId}&bid=${bid}`);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+                    if (data.status == 0)
+                        APP.state.set('contract_signed_' + dir, true);
+                    else 
+                    { APP.state.set('global_bet_failed', true); APP.state.set('round_closing_bet_fail', true); }
+                } catch (err) {
+                    { APP.state.set('global_bet_failed', true); APP.state.set('round_closing_bet_fail', true); }
+                }
+            }
+            else if (!phase_valid) {
+                setPhaseMes(true)
+                if (phase === 'pending') {
+                    dispatch(set_alert_msg({ type: 'info', content: 'alert_msg_round_progress' }))
+                }
+            }
+        })();
+        return;
 
         if (!account || !wallet_address) {
             dispatch(set_connect_wallet_popup(true));
