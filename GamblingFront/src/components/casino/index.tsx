@@ -30,7 +30,8 @@ const Casino = () => {
   useEffect(() => {
     const getLaunchUrl = async () => {
       try {
-        if (accessToken == "") return router.push("/");
+        if (accessToken == "") 
+          return router.push("/");
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
 
@@ -56,10 +57,11 @@ const Casino = () => {
         if (result.status === 0) {
           setLaunchUrl(result.launchUrl || []);
         } else {
-          throw new Error("Unexpected status code");
+          return router.push("/");
         }
       } catch (error) {
         console.error("Error fetching game data:", error);
+        return router.push("/");
       } finally {
         setLoading(false);
       }

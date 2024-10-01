@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import WalletModal from "../modal/WalletModal";
-
 import { useAppContext } from "../../hooks/AppContext";
 
 import { backendUrl } from "@/anchor/global";
@@ -16,10 +15,7 @@ import ChatButton from "./ChatButton";
 
 // Modal.setAppElement("#root");
 const MenuBar = () => {
-  const domain = window.location.host;
-
   const { siteInfo, userInfo, loginStep, accessToken } = useAppContext();
-
   const [showWalletModal, setShowWalletModal] = useState(false);
 
   const [selectedKey, setSelectedKey] = useState<string>(
@@ -77,7 +73,7 @@ const MenuBar = () => {
               onClick={() => openWalletModal()}
             >
               <div className=" flex gap-1">
-                <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>
+                {<span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>}
                 <span>{userInfo?.selectedCoinType}</span>
               </div>
             </button>

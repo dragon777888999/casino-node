@@ -13,7 +13,7 @@ const Header = (props: {
   sidebarOpen: string | boolean | undefined;
   setSidebarOpen: (arg0: boolean) => void;
 }) => {
-  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } =    useAppContext();
+  const { loginStep, siteInfo, userInfo, setUserInfo, socketData } = useAppContext();
   useEffect(() => {
     try {
       if (socketData == "")
@@ -35,13 +35,14 @@ const Header = (props: {
       console.error("Failed to parse JSON:", error);
     }
   }, [socketData]);
+  
   let logoImgSrc = "/default/images/logo.png";
   let logoWidth = 45;
   let logoHeight = 45;
   if (siteInfo.themeMap?.logo) {
     logoImgSrc = `/${siteInfo.themeMap.logo}/images/logo.png`;
   }
-
+  
   return (
     <>
       <header

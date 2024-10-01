@@ -26,6 +26,10 @@ exports.entry = async (req, res) => {
       case "SendCoin":
         await sendCoinFunc_tron(req, res);
         break;
+      case "GetBalance":
+        res.send({ status: 0, balance: 0 });
+        return;
+
       default:
         res.send({ status: 1, msg: "Invalid method" });
     }

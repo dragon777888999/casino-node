@@ -25,6 +25,10 @@ exports.entry = async (req, res) => {
       case "SendCoin":
         await sendCoinFunc_orai(req, res);
         break;
+      case "GetBalance":
+        res.send({ status:0, balance: 0 });
+        return;
+        break;
       default:
         res.send({ status: 1, msg: "Invalid method" });
     }

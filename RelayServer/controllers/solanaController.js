@@ -22,6 +22,10 @@ exports.entry = async (req, res) => {
             case "SendFee":
                 await sendFeeFunc_solana(req, res);
                 break;
+            case "GetBalance":
+                res.send({ status: 0, balance: 0 });
+                return;
+
             default:
                 res.send({ status: 1, msg: "Invalid method" });
         }
@@ -105,7 +109,7 @@ getUserTransaction_solana = async (req, res) => {
                         if (ixs[i].programId.toBase58() != "11111111111111111111111111111111")
                             continue;
                         if (ixs[i].parsed && ixs[i].parsed.type == "transfer" && ixs[i].parsed.info && ixs[i].parsed.info.destination == data.walletAddress) {
-                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.lamports/ (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.lamports / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
                         }
                     }
                 }

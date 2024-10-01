@@ -8,7 +8,7 @@ exports.entry = async (req, res) => {
     const method = data.method;
     switch (method) {
       case "GetBlock":
-          await getBlockFunc_xrpl(req, res);
+        await getBlockFunc_xrpl(req, res);
         break;
       case "CreateAddress":
         await createAddressFunc_xrpl(req, res);
@@ -16,6 +16,9 @@ exports.entry = async (req, res) => {
       case "SendCoin":
         await sendCoinFunc_xrpl(req, res);
         break;
+      case "GetBalance":
+        res.send({ status: 0, balance: 0 });
+        return;
 
       default:
         res.send({ status: 1, msg: "Invalid method" });

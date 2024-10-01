@@ -91,7 +91,6 @@ const Footer = (props: {
 
   let communityEntries: [string, string][] = [];
   if (siteInfo.communityMap) {
-    console.log(siteInfo.communityMap);
     communityEntries = Object.entries(siteInfo.communityMap);
   }
   return (
