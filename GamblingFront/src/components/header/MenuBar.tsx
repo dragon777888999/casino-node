@@ -43,7 +43,7 @@ const MenuBar = () => {
   const closeModal = () => {
     setShowWalletModal(false);
   };
-
+  const playingStatus = location.pathname.indexOf("casino") >= 0;
   return (
     <>
       <div className="balance flex ">
@@ -73,7 +73,7 @@ const MenuBar = () => {
               onClick={() => openWalletModal()}
             >
               <div className=" flex gap-1">
-                {<span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>}
+                {!playingStatus && <span>{userInfo?.balances[userInfo?.selectedCoinType]}</span>}
                 <span>{userInfo?.selectedCoinType}</span>
               </div>
             </button>
