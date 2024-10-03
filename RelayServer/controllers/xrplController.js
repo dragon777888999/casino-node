@@ -17,7 +17,7 @@ exports.entry = async (req, res) => {
         await sendCoinFunc_xrpl(req, res);
         break;
       case "GetBalance":
-        res.send({ status: 0, balance: 0 });
+        await getBalance(req, res);
         return;
 
       default:
@@ -32,6 +32,36 @@ exports.entry = async (req, res) => {
     res.send({ status: 1, err });
   }
 };
+
+const getBalance = async (req, res) => {
+  const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
+  const data = req.body;
+
+  try {
+    // Connect to the network
+    await client.connect();
+
+    // Prepare the request
+    const accountInfo = await client.request({
+      command: 'account_info',
+      account: data.address,
+      ledger_index: 'validated'
+    });
+
+    // Extract the balance (in drops, where 1 XRP = 1,000,000 drops)
+    const balanceInDrops = accountInfo.result.account_data.Balance;
+    const balanceInXRP = xrpl.dropsToXrp(balanceInDrops);
+
+    console.log(`Balance for account ${data.address}: ${balanceInXRP} XRP`);
+
+    // Disconnect from the client
+    await client.disconnect();
+
+    res.send({ status: 0, balance: balanceInXRP });
+  } catch (error) {
+    console.error('Error fetching account balance:', error);
+  }
+}
 
 const createAddressFunc_xrpl = async (req, res) => {
   try {
