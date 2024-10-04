@@ -84,6 +84,7 @@ getUserTransaction_solana = async (req, res) => {
             try {
                 const ixs = txData.transaction.message.instructions;
                 for (let i = 0; i < ixs.length; i++) {
+                    //console.log("&&&&", ixs[i]);
                     if (ixs[i]['parsed'] && !txData.meta.err) {
                         if (ixs[i].programId.toBase58() != "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
                             continue;
