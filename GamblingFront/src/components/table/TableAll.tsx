@@ -144,7 +144,7 @@ const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
                     <p
                       style={info.payoutAmount >= info.betAmount ? { color: "#7DD934" }:{ color: "gray" }}
                     >
-                      {info.payoutAmount.toFixed(2)}
+                      {info.payoutAmount}
                     </p>
                   </div>
                   {/* SVG icons or other elements */}

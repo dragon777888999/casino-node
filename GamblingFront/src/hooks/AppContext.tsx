@@ -42,6 +42,8 @@ export interface SiteInfo {
   title: string;
   description: string;
   showProvider: boolean;
+  treasuryWalletAddress: string;
+  treasuryWalletAddressUrl: string;
 }
 export interface UserInfo {
   status: number;
@@ -128,6 +130,8 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     showProvider: true,
     checkBalance: false,
     featureMap: {},
+    treasuryWalletAddress:"",
+    treasuryWalletAddressUrl:""
   });
   const [loginStep, setLoginStep] = useState<number>(0);
   const [accessToken, setAccessToken] = useState<string>("");

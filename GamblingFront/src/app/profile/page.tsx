@@ -13,7 +13,7 @@ import { timeZonesData } from "@/anchor/global";
 import { backendUrl } from "@/anchor/global";
 
 const Profile = () => {
-  const { userInfo, setUserInfo, walletAddress, loginStep, accessToken } = useAppContext();
+  const { userInfo, setUserInfo, walletAddress, loginStep, accessToken, siteInfo } = useAppContext();
   const [nickName, setNickName] = useState(userInfo.nickName);
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -35,6 +35,9 @@ const Profile = () => {
 
   const closeNickNameEditModal = () => {
     setShowNickNameEditModal(false);
+  };
+  const onVisit = ()=>{
+    window.open(siteInfo.treasuryWalletAddressUrl);
   };
 
   const openAvatarEditModal = () => {
@@ -157,7 +160,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="card-detail-row">
+            {/* <div className="card-detail-row">
               <div className="card-detail-row-title">
                 <span>Avatar</span>
               </div>
@@ -188,13 +191,13 @@ const Profile = () => {
                         width: "12px",
                       }}
                     ></i>
-                    {/* <i className="fa-regular fa-copy" /> */}
+                     <i className="fa-regular fa-copy" />
                     <span>Upload</span>
                   </button>
                 </div>
               </div>
 
-            </div>
+            </div> */}
             <div className="card-detail-row">
               <div className="card-detail-row-title">
                 <span>Wallet</span>
@@ -210,16 +213,44 @@ const Profile = () => {
                     className="card-detail-row-content-right-inner"
                     onClick={handleCopy}
                   >
-                    <i
+                    {/* <i
                       className="fa-sharp fa-solid fa-copy"
                       style={{
                         height: "12px",
                         marginRight: "5px",
                         width: "12px",
                       }}
-                    ></i>
+                    ></i> */}
                     {/* <i className="fa-regular fa-copy" /> */}
                     <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="card-detail-row">
+              <div className="card-detail-row-title">
+                <span>Treasury Wallet</span>
+              </div>
+              <div className="card-detail-row-content">
+                <div className="card-detail-row-content-left">
+                  <div className="card-detail-row-content-left-inner">
+                    <p>{siteInfo.treasuryWalletAddress}</p>
+                  </div>
+                </div>
+                <div className="card-detail-row-content-right">
+                  <button
+                    className="card-detail-row-content-right-inner"
+                    onClick={onVisit}
+                  >
+                    {/* <i
+                      className="fa-sharp fa-solid fa-copy"
+                      style={{
+                        height: "12px",
+                        marginRight: "5px",
+                        width: "12px",
+                      }}
+                    ></i> */}
+                    <span>Visit</span>
                   </button>
                 </div>
               </div>
