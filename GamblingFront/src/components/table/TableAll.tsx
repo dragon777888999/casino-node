@@ -108,7 +108,7 @@ const TableAll: React.FC<TableAllProps> = ({ tableData }) => {
               </div>
               <div className="col-span-1 hidden items-center justify-center md:flex">
                 <p className="truncate  text-black dark:text-white">
-                  {info.nickName}
+                  {info.userCode}
                 </p>
               </div>
               <div className="col-span-2 flex hidden items-center justify-center gap-2 md:flex">
