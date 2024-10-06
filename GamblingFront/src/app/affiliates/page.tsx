@@ -167,7 +167,7 @@ const Affiliates = () => {
   //   setAffiliateCode(info?.referralInfos[0]);
 
   return (
-    <div className="mx-auto max-w-270">
+    <div className="mx-auto">
       <div className="grid gap-8">
         <div className="rounded-sm border border-stroke  dark:border-strokedark dark:bg-boxdark">
           <div className="flex items-center justify-between border-b border-stroke px-7 py-4 dark:border-strokedark">

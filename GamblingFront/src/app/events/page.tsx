@@ -4,8 +4,9 @@ import { ToastContainer, toast } from "react-toastify";
 import Link from "next/link";
 
 import { Tabs, Tab } from "@nextui-org/react";
-
-const Transactions = () => {
+import Image from "next/image";
+const Bets = () => {
+  let currencyDir = "/default/images/currency/USD.png";
   return (
     <>
       {" "}
@@ -14,9 +15,7 @@ const Transactions = () => {
         <div className="grid gap-8">
           <div className="rounded-sm border border-stroke  dark:border-strokedark dark:bg-boxdark">
             <div className="flex items-center justify-between border-b border-stroke px-7 py-4 dark:border-strokedark">
-              <h3 className="font-medium text-black dark:text-white">
-                Transactions
-              </h3>
+              <h3 className="font-medium text-black dark:text-white">Events</h3>
               <Link href="/">
                 <div className="close-button">
                   <svg width={16} height={16}>
@@ -25,15 +24,8 @@ const Transactions = () => {
                 </div>
               </Link>
             </div>
-            <div>
-              <div className="p-7">
-                <div
-                  className="flex flex w-full items-center justify-center rounded py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none  dark:text-white dark:focus:border-primary"
-                  style={{ height: "200px" }}
-                >
-                  <span>No data to display</span>
-                </div>
-              </div>
+            <div className="px-7">
+              
             </div>
           </div>
         </div>
@@ -42,4 +34,4 @@ const Transactions = () => {
   );
 };
 
-export default Transactions;
+export default Bets;
