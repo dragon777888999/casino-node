@@ -25,51 +25,8 @@ const Bets = () => {
               </Link>
             </div>
             <div className="px-7">
-              {/* <Tabs
-                aria-label="Options"
-                color={"primary"}
-                variant={"light"}
-                // disabledKeys={isUserInfoEmpty ? ["MyBets"] : []}
-              >
-                <Tab
-                  key="All Bets"
-                  title="Casino"
-                  style={{
-                    width: "80px",
-                    backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
-                  }}
-                >
-                  <div className="">
-                    <div
-                      className="flex flex w-full items-center justify-center rounded  py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:text-white dark:focus:border-primary"
-                      style={{ height: "200px" }}
-                    >
-                      <span>No data to display</span>
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  key="MyBets"
-                  title="Sports"
-                  style={{
-                    width: "80px",
-                    backgroundColor: "rgb(36 48 63 / var(--tw-bg-opacity))",
-                  }}
-                >
-                  <div className="">
-                    <div
-                      className="flex flex w-full items-center justify-center   py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none  dark:text-white dark:focus:border-primary"
-                      style={{ height: "200px" }}
-                    >
-                      <span>No data to display</span>
-                    </div>
-                  </div>
-                </Tab>
-              </Tabs> */}
+             
               <Tabs
-                // style={{
-                //   backgroundColor: "#313d4a",
-                // }}
                 aria-label="Options"
                 color={"primary"}
                 variant={"bordered"}
@@ -77,7 +34,6 @@ const Bets = () => {
                 classNames={{
                   tabList: "border-custom",
                 }}
-                // disabledKeys={isUserInfoEmpty ? ["MyBets"] : []}
               >
                 <Tab
                   key="All Bets"

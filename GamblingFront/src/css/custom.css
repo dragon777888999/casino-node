@@ -1014,7 +1014,7 @@ input[type="number"] {
 }
 .profile-card {
   /* background-color: #1a2028; */
-  border: 1px solid #2a353e;
+  /* border: 1px solid #2a353e; */
   border-radius: 8px;
   margin-top: 10px;
   padding: 20px;
