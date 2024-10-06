@@ -89,9 +89,9 @@ getUserTransaction_solana = async (req, res) => {
                         if (ixs[i].programId.toBase58() != "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
                             continue;
                         if (ixs[i].parsed?.type == "transferChecked" && ata.toBase58() == ixs[i].parsed.info.destination) {
-                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.tokenAmount.uiAmount });
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.tokenAmount.uiAmount, txHash:txHash });
                         } else if (ixs[i].parsed?.type == "transfer" && ata.toBase58() == ixs[i].parsed.info.destination) {
-                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.amount / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
+                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, txHash:txHash, amount: ixs[i].parsed.info.amount / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
                         }
                     }
                 }
@@ -125,7 +125,7 @@ getUserTransaction_solana = async (req, res) => {
                         if (ixs[i].programId.toBase58() != "11111111111111111111111111111111")
                             continue;
                         if (ixs[i].parsed && ixs[i].parsed.type == "transfer" && ixs[i].parsed.info && ixs[i].parsed.info.destination == data.walletAddress) {
-                            results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.lamports / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
+                            results.push({ txHash:txHash,walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: ixs[i].parsed.info.lamports / (10 ** config.digits[`${data.chain}_${data.coinType}`]) });
                         }
                     }
                 }
