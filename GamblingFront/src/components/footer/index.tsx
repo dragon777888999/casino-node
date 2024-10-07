@@ -48,6 +48,7 @@ const Footer = (props: {
       }
     }
   }, [socketData]);
+  
   useEffect(() => {
     const fetchGameData = async () => {
       if (!socket || loginStep == 0)

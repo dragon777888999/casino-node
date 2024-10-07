@@ -2,11 +2,49 @@
 
 import { ToastContainer, toast } from "react-toastify";
 import Link from "next/link";
+import EventList from "./eventlist";
+import { useState, useEffect } from "react";
+import { EventsInfo } from "@/types/eventListInfo";
+import { backendUrl } from "@/anchor/global";
+import { useAppContext } from "@/hooks/AppContext";
 
-import { Tabs, Tab } from "@nextui-org/react";
-import Image from "next/image";
-const Bets = () => {
-  let currencyDir = "/default/images/currency/USD.png";
+const Events = () => {
+  const { accessToken, userInfo, loginStep } = useAppContext();
+
+  useEffect(() => {
+    const fetchEventData = async () => {
+      if (loginStep < 3)
+        return;
+      try {
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+          method: "POST",
+          headers: {
+            "X-Access-Token": accessToken,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            method: "GetEventList",
+            currencyCode: userInfo.selectedCoinType
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+
+        setTotalTableData(result.data);
+
+      } catch (error) {
+        console.error("Error fetching game data:", error);
+      }
+    };
+    fetchEventData(); // Fetch for original games
+  }, []);
+  const [totalTableData, setTotalTableData] = useState<EventsInfo[]>([]);
+
+
   return (
     <>
       {" "}
@@ -25,7 +63,7 @@ const Bets = () => {
               </Link>
             </div>
             <div className="px-7">
-              
+              <EventList tableData={totalTableData}></EventList>
             </div>
           </div>
         </div>
@@ -34,4 +72,4 @@ const Bets = () => {
   );
 };
 
-export default Bets;
+export default Events;
