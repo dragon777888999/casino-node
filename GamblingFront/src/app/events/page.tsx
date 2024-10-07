@@ -5,12 +5,41 @@ import Link from "next/link";
 import EventList from "./eventlist";
 import { useState, useEffect } from "react";
 import { EventsInfo } from "@/types/eventListInfo";
+import { backendUrl } from "@/anchor/global";
 
-import { Tabs, Tab } from "@nextui-org/react";
-import Image from "next/image";
+
 const Bets = () => {
-  let currencyDir = "/default/images/currency/USD.png";
+
+  useEffect(() => {
+    const fetchEventData = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/backend/unauthorizeapi`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            method: "GetEventList"
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const result = await response.json();
+     
+            setTotalTableData(result.events);
+        
+      } catch (error) {
+        console.error("Error fetching game data:", error);
+      }
+    };
+    fetchEventData(); // Fetch for original games
+  });
   const [totalTableData, setTotalTableData] = useState<EventsInfo[]>([]);
+
+
   return (
     <>
       {" "}
