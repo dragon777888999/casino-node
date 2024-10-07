@@ -33,100 +33,50 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   const currencyDir = siteInfo.themeMap.currency ? siteInfo.themeMap.currency : "default";
   return (
     <>
-      <div className="style-table-row rounded-sm   dark:border-strokedark dark:bg-boxdark" style={{ fontSize: "14px", color: "#7b808e" }}>
-    {/* Table Header */}
-        <div className="style-th-row flex grid grid-cols-6 justify-around border-t border-stroke px-4 py-3 dark:border-strokedark sm:grid-cols-8 md:px-6 2xl:px-7.5">
-          <div className="col-span-1 flex items-center" >
-            <p>Id </p>
-          </div>
-          <div className="col-span-1 flex items-center">
-            <p>Title</p>
-          </div>
-          <div className="col-span-1 flex items-center">
-            <p>Content</p>
-          </div>
-          {/* <div className="col-span-1 flex items-center">
-            <p>Created At</p>
-          </div> */}
-          <div className="col-span-1 flex items-center ">
-            <p>Status</p>
-          </div>
-          <div className="col-span-1 flex items-center ">
-            <p>Start Time</p>
-          </div>
-          <div className="col-span-1 flex items-center ">
-            <p>End Time</p>
-          </div>
-          <div className="col-span-1 flex items-center ">
-            <p>Type</p>
-          </div>
-          <div className="col-span-1 flex items-center">
-            <p>BonusList</p>
-          </div>
-        </div>
-       
-        {tableData.map((info, index) => {
-          if (!info.id)
-            info.title = `{"en":"unknown"}`;
-         
-          return (
-            <div className={`flex grid grid-cols-6  gap-1 px-4  py-3 sm:grid-cols-8 sm:justify-between md:px-6 2xl:px-7.5`} key={index}>             
-              {/* <div className="col-span-2 flex items-center">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">                
-                  <p className="text-black dark:text-white">
-                    <a
-                      type="button"
-                      onClick={() => handleRowClick(info)}
-                      style={{ cursor: "pointer" }}
-                    >                     
-                    </a>
-                  </p>
-                </div>
-              </div> */}
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white" onClick={() => EventClick(info)}>
-                  {info.id}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.title}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.content}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.status}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.startTime.toDateString()}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.endTime.toDateString()}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  {info.type}
-                </p>
-              </div>
-              <div className="col-span-1 hidden items-center justify-center md:flex">
-                <p className="truncate  text-black dark:text-white">
-                  
-                </p>
-              </div>
+      {tableData.map((info, index) => {
+        if (!info.id)
+          info.title = `{"en":"unknown"}`;
+
+        if (info.status == 0){
+          var status = "Pending"
+        }
+        else if(info.status == 1){
+          status = "End"
+        }
+        else if (info.status == 2){
+          status = "Cancel"
+        }
+        else {
+          status = "Fake"
+        }
+        
+        return (
+          <div onClick={() => EventClick(info)} className="box-border my-5 p-4 border-1 rounded-md shadow-2xl shadow-blue-500/50 cursor-pointer">
+            <div className="text-center underline">
+              {info.title}
+            </div>   
+            <div className="text-center border-b-1 my-5">
+              {info.content}
             </div>
-          );
-        })}
-      </div>
+            <div className="columns-2 text-center my-5 border-b-1">
+              <div>Start Time: {info.startTime.toLocaleString()}</div>
+              <div>End Time: {info.endTime.toLocaleString()}</div>
+            </div>    
+            <div className="text-center columns-3 my-5">
+              <div>
+                Status : {status}
+              </div>
+              <div>
+                Created Time : {info.createdAt.toLocaleString()}
+              </div>
+              <div>
+                Bonus List : {info.result}
+              </div>
+            </div>      
+          </div>
+        );
+      })}
+
       {/* {selectedRow && (
         <DispalyGameInfoModal
           showModal={showModal}

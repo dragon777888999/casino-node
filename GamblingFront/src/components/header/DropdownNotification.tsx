@@ -23,7 +23,7 @@ const DropdownNotification = () => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = (id: number) => {
-    GetNotifyContent(id);
+    // GetNotifyContent(id);
     setShowModal(true);
   };
 
@@ -46,7 +46,7 @@ const DropdownNotification = () => {
         }),
       });
 
-      console.log("userinfo", userInfo.status);
+      // console.log("userinfo", userInfo.status);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -67,51 +67,53 @@ const DropdownNotification = () => {
     } catch (error) {
       console.error("Error fetching game data:", error);
     } finally {
-      console.log(Response);
+      // console.log(Response);
     }
   };
-  const GetNotifyContent = async (id: number) => {
-    try {
-      if (accessToken == "") return;
-      // alert(accessToken);
-      const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
-        method: "POST",
+  
+  // const GetNotifyContent = async (id: number) => {
+  //   try {
+  //     if (accessToken == "") return;
+  //     // alert(accessToken);
+  //     const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+  //       method: "POST",
 
-        headers: {
-          "X-Access-Token": accessToken,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          method: "ReadNotice",
-          id: id,
-        }),
-      });
+  //       headers: {
+  //         "X-Access-Token": accessToken,
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         method: "ReadNotice",
+  //         id: id,
+  //       }),
+  //     });
 
-      console.log("userinfocontent", userInfo.status);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+  //     console.log("userinfocontent", userInfo.status);
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok");
+  //     }
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (result.status === 0) {
-        setSeletedData(result.data);
-        console.log("notifycontentt", result.data);
-        toast.success("success:fetch data");
-      } else {
-        toast.warn("Operation failed");
-        throw new Error("Unexpected status code");
-      }
-    } catch (error) {
-      console.error("Error fetching game data:", error);
-    } finally {
-      console.log(Response);
-    }
-  };
+  //     if (result.status === 0) {
+  //       setSeletedData(result.data);
+  //       console.log("notifycontentt", result.data);
+  //       toast.success("success:fetch data");
+  //     } else {
+  //       toast.warn("Operation failed");
+  //       throw new Error("Unexpected status code");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching game data:", error);
+  //   } finally {
+  //     console.log(Response);
+  //   }
+  // };
+
   useEffect(() => {
     GetNotify();
   }, [accessToken]);
-  console.log("notify", notifyData);
+  // console.log("notify", notifyData);
   return (
     <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
       <li>

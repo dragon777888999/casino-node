@@ -145,21 +145,12 @@ const DropdownUser = () => {
             
               
               <li>
-                <Link
+                <Link onClick={() => setDropdownOpen(!dropdownOpen)}
                   href="/events"
                   className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M14.5 8.50016C14.4998 9.11078 14.3398 9.71072 14.036 10.2404C13.7322 10.7701 13.2951 11.211 12.7681 11.5195C12.2412 11.828 11.6427 11.9932 11.0321 11.9988C10.4215 12.0044 9.82004 11.8502 9.2875 11.5514L9.97875 13.8564C10.0012 13.9311 10.0058 14.0099 9.99232 14.0867C9.97883 14.1634 9.94758 14.236 9.90107 14.2985C9.85456 14.3611 9.79407 14.4119 9.72443 14.4469C9.6548 14.4819 9.57794 14.5001 9.5 14.5002H6.5C6.42206 14.5001 6.3452 14.4819 6.27557 14.4469C6.20593 14.4119 6.14544 14.3611 6.09893 14.2985C6.05242 14.236 6.02117 14.1634 6.00768 14.0867C5.9942 14.0099 5.99884 13.9311 6.02125 13.8564L6.7125 11.5514C6.17996 11.8502 5.57853 12.0044 4.96793 11.9988C4.35734 11.9932 3.75883 11.828 3.23186 11.5195C2.70489 11.211 2.26779 10.7701 1.96397 10.2404C1.66016 9.71072 1.50021 9.11078 1.5 8.50016C1.5 6.50016 2.60313 4.57266 4.6875 2.92079C5.64446 2.1661 6.69194 1.53391 7.80562 1.03891C7.86655 1.01323 7.93201 1 7.99813 1C8.06424 1 8.1297 1.01323 8.19063 1.03891C9.30562 1.53364 10.3544 2.16583 11.3125 2.92079C13.3969 4.57266 14.5 6.50016 14.5 8.50016Z"
-                      fill="#E8E5FF"
-                    ></path>
+                   <svg aria-hidden="true" focusable="false" className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="13px" height="13px" enable-background="new 0 0 320 100" fill="#fff">
+                  <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
                   </svg>
                   
                   <p style={{ fontSize: "12px" }}> Events</p>
@@ -168,7 +159,7 @@ const DropdownUser = () => {
            
               {siteInfo.featureMap && siteInfo.featureMap.transactions && (
                 <li>
-                  <Link
+                  <Link onClick={() => setDropdownOpen(!dropdownOpen)}
                     href="/transactions"
                     className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
                   >

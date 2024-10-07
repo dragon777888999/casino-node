@@ -67,7 +67,7 @@ const Affiliates = () => {
           setAffiliateCode(result.affiliateCodes[0]);
           setReferralLink(`${window.location.origin}/r/${result.affiliateCodes[0]}`);
         }
-        toast.success("success");
+        // toast.success("success");
       } else {
         toast.warn("Operation failed");
         throw new Error("Unexpected status code");
@@ -106,7 +106,7 @@ const Affiliates = () => {
 
       const result = await response.json();
       if (result.status === 0) {
-        toast.success("success");
+        // toast.success("success");
         await GetAffiliaterInfo();
       } else {
         toast.warn("Operation failed");

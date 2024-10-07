@@ -3,11 +3,12 @@ export interface EventsInfo {
     id: number;
     title: string;
     content: string;
-    created: Date;
+    createdAt: Date;
     status: number;
     startTime: Date;
     endTime: Date; 
     type: number; 
     bonusList: number;
+    result: string;
   }
   

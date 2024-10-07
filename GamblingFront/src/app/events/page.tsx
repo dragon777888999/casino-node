@@ -12,10 +12,14 @@ const Events = () => {
   const { accessToken, userInfo, loginStep } = useAppContext();
 
   useEffect(() => {
+    
     const fetchEventData = async () => {
       if (loginStep < 3)
         return;
       try {
+
+        console.log("events start")
+
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
           headers: {
@@ -32,8 +36,9 @@ const Events = () => {
           throw new Error("Network response was not ok");
         }
 
+        
         const result = await response.json();
-
+        console.log(result.data)
         setTotalTableData(result.data);
 
       } catch (error) {
