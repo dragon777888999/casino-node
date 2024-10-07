@@ -2,11 +2,15 @@
 
 import { ToastContainer, toast } from "react-toastify";
 import Link from "next/link";
+import EventList from "./eventlist";
+import { useState, useEffect } from "react";
+import { EventsInfo } from "@/types/eventListInfo";
 
 import { Tabs, Tab } from "@nextui-org/react";
 import Image from "next/image";
 const Bets = () => {
   let currencyDir = "/default/images/currency/USD.png";
+  const [totalTableData, setTotalTableData] = useState<EventsInfo[]>([]);
   return (
     <>
       {" "}
@@ -25,7 +29,7 @@ const Bets = () => {
               </Link>
             </div>
             <div className="px-7">
-              
+              <EventList tableData={totalTableData}></EventList>
             </div>
           </div>
         </div>
