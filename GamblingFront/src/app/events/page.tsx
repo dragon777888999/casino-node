@@ -6,20 +6,25 @@ import EventList from "./eventlist";
 import { useState, useEffect } from "react";
 import { EventsInfo } from "@/types/eventListInfo";
 import { backendUrl } from "@/anchor/global";
-
+import { useAppContext } from "@/hooks/AppContext";
 
 const Bets = () => {
+  const { accessToken, userInfo, loginStep } = useAppContext();
 
   useEffect(() => {
     const fetchEventData = async () => {
+      if (loginStep < 3)
+        return;
       try {
-        const response = await fetch(`${backendUrl}/backend/unauthorizeapi`, {
+        const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
           headers: {
+            "X-Access-Token": accessToken,
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            method: "GetEventList"
+            method: "GetEventList",
+            currencyCode: userInfo.selectedCoinType
           }),
         });
 
@@ -28,15 +33,15 @@ const Bets = () => {
         }
 
         const result = await response.json();
-     
-            setTotalTableData(result.events);
-        
+
+        setTotalTableData(result.data);
+
       } catch (error) {
         console.error("Error fetching game data:", error);
       }
     };
     fetchEventData(); // Fetch for original games
-  });
+  }, []);
   const [totalTableData, setTotalTableData] = useState<EventsInfo[]>([]);
 
 
