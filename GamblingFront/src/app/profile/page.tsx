@@ -156,7 +156,7 @@ const Profile = () => {
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="text-white">{userInfo.nickName}</div>
+                  <div className="text-white text-sm">{userInfo.nickName}</div>
                 </div>
                 <div className="card-detail-row-content-right">
                   <button
@@ -168,51 +168,14 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="card-detail-row">
-              <div className="card-detail-row-title">
-                <span>Avatar</span>
-              </div>
-              <div className="card-detail-row-content">
-                <div className="card-detail-row-content-left">
-                  <div className="card-detail-row-content-left-inner">
-                    {" "}
-                    <Image
-                      style={{ borderRadius: "50%" }}
-                      width={32}
-                      height={32}
-                      src={avatarImgUrl}
-                      alt="Logo"
-                      priority
-                    />
-                  </div>
-                </div>
-                <div className="card-detail-row-content-right">
-                  <button
-                    className="card-detail-row-content-right-inner"
-                    onClick={openAvatarEditModal}
-                  >
-                    <i
-                      className="fa-sharp fa-solid fa-copy"
-                      style={{
-                        height: "12px",
-                        marginRight: "5px",
-                        width: "12px",
-                      }}
-                    ></i>
-                     <i className="fa-regular fa-copy" />
-                    <span>Upload</span>
-                  </button>
-                </div>
-              </div>
-
-            </div> */}
+            
             <div className="card-detail-row">
               <div className="card-detail-row-title">
                 <span>Wallet</span>
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="text-white">
+                  <div className="text-white text-sm">
                     <p>{walletAddress}</p>
                   </div>
                 </div>
@@ -241,7 +204,7 @@ const Profile = () => {
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="text-white">
+                  <div className="text-white text-sm">
                     <p>{siteInfo.treasuryWalletAddress}</p>
                   </div>
                 </div>

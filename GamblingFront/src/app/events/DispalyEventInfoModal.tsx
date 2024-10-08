@@ -25,22 +25,18 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
   // const {siteInfo, loginStep } = useAppContext();
   const { accessToken, userInfo, loginStep } = useAppContext();
   const [eData, setEData] = useState<EventInfo[]>([]);
-  // const [eventData, setEventData] = useState<EventsInfo[]>([]);
 
+  
   useEffect(() => {
     const fetchEventData = async () => {
       if (loginStep < 3)
         return;
       try {
-
-        console.log("events start")
-        console.log(eventData.id)
-
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
           headers: {
             "X-Access-Token": accessToken,
-            "Content-Type": "application/json",
+            "Content-Type": "apmxication/json",
           },
           body: JSON.stringify({
             method: "GetEvent",
@@ -48,13 +44,18 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
           }),
         });
 
+        console.log(eventData.id)
+
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
 
         const result = await response.json();
-        console.log(result)
-        // setEData(result.data);
+       
+        console.log(result.data.type1);
+        setEData(result.data.type1)
+       
+        
 
       } catch (error) {
         console.error("Error fetching game data:", error);
@@ -63,91 +64,47 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
     fetchEventData(); // Fetch for original games
   }, []);
 
-  
+  if (!showModal) return null;
   return(
-    <>
-      {/* {eventtData.map((event, index) => {
-        return (
-        
-            <Modal id="modal" className="modal" isOpen={showModal} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000, marginTop : 300 }}}>
-
-              <div className="custom-modal" style={{zIndex: "1000"}}>
-              
-                  <div
-                    className="custom-modal-wrapper"
-                    style={{
-                      padding: "25px",
-                      backgroundColor: "#141a2b",
-                      maxWidth: "400px",
-                    }}
-                  >
-                    <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
-                      <div className="row">
-                        <h3 style={{fontSize: "18px", fontWeight: "700",  color: "white", }}>Event</h3>
-                        <button
-                          className="wallet-adapter-modal-button-close"
-                          style={{ backgroundColor: "#181f33" }}
-                          onClick={() => {
-                            onRequestClose();
-                          }}
-                        >
-                          <svg width={14} height={14}>
-                            <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  
-                    <div className="BetResult-detail-content">{event.nickName}</div>
-                </div>
-                <div className="fixed inset-0 z-40 opacity-25"></div>
-              </div>
-
-            </Modal>
-        
-        )
-      })} */}
-
-
-      <Modal id="modal" className="modal" isOpen={showModal} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000, marginTop : 300 }}}>
-
-        <div className="custom-modal" style={{zIndex: "1000"}}>
-
-            <div
-              className="custom-modal-wrapper"
-              style={{
-                padding: "25px",
-                backgroundColor: "#141a2b",
-                maxWidth: "400px",
-              }}
-            >
-              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
-                <div className="row">
-                  <h3 style={{fontSize: "18px", fontWeight: "700",  color: "white", }}>Event</h3>
-                  <button
-                    className="wallet-adapter-modal-button-close"
-                    style={{ backgroundColor: "#181f33" }}
-                    onClick={() => {
-                      onRequestClose();
-                    }}
-                  >
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            
-              <div className="BetResult-detail-content">{event.nickName}</div>
+    <Modal id="modal" className="modal" isOpen={showModal} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000 }}}>
+             
+             <div id="event" className="fixed top-50 right-110 left-100 bg-sky-500/20 rounded-lg overflow-hidden z-1000 shadow-2xl" style={{width : "65rem", display : "block"}}>
+      <div className="flex flex-nowrap overflow-scroll no-scrollbar text-white mt-3 mb-1 ml-10 mr-10">
+        <div className="w-50">rank</div>
+        <div className="w-100">gameCode</div>
+        <div className="w-100">vendorCode</div>
+        <div className="w-100">betAmount</div>
+        <div className="w-100">payoutAmount</div>
+        <div className="w-1">
+              <button
+                className="wallet-adapter-modal-button-close"
+                style={{ backgroundColor: "#181f33" }}
+                onClick={() => {
+                  onRequestClose();
+                }}
+              >
+                <svg width={14} height={14}>
+                  <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                </svg>
+              </button>
+        </div>                    
+      </div>
+      {eData.map((event, index) => {
+              return (
+          <div className="flex flex-nowrap overflow-scroll no-scrollbar text-white">
+            <div className="w-50">{event.rank}</div>
+            <div className="w-100">{event.gameCode}</div>
+            <div className="w-100">{event.vendorCode}</div>
+            <div className="w-100">{event.betAmount}</div>
+            <div className="w-100">{event.payoutAmount}</div>
           </div>
-          <div className="fixed inset-0 z-40 opacity-25"></div>
-        </div>
-
-      </Modal>
-    </>
+          )
+          })}
+    </div>
+    
+  </Modal>
+    
   )
-
-  
 };
 
 export default DispalyEventInfoModal;
