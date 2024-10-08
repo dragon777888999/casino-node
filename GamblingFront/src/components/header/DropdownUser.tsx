@@ -100,8 +100,7 @@ const DropdownUser = () => {
             <ul className="flex flex-col gap-2 border-b border-stroke px-3 py-3 dark:border-strokedark">
               {siteInfo.featureMap && siteInfo.featureMap.profile && (
                 <li>
-                  <Link onClick={() => setDropdownOpen(!dropdownOpen)}
-                    href="/profile"
+                  <Link href="/profile" 
                     className="flex items-center gap-2 px-2 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
                   >
                     <svg
@@ -116,7 +115,7 @@ const DropdownUser = () => {
                         fill="#E8E5FF"
                       ></path>
                     </svg>
-                    <p style={{ fontSize: "12px" }}> Profile</p>
+                    <p onClick={() => setDropdownOpen(!dropdownOpen)} style={{ fontSize: "14px" }}> Profile</p>
                   </Link>
                 </li>
               )}
@@ -128,8 +127,8 @@ const DropdownUser = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
+                      width="14"
+                      height="14"
                       viewBox="0 0 16 16"
                       fill="none"
                     >
@@ -138,7 +137,7 @@ const DropdownUser = () => {
                         fill="#E8E5FF"
                       ></path>
                     </svg>
-                    <p style={{ fontSize: "12px" }}> Bets</p>
+                    <p style={{ fontSize: "14px" }}> Bets</p>
                   </Link>
                 </li>
               )}
@@ -153,7 +152,7 @@ const DropdownUser = () => {
                     <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" />
                   </svg>
 
-                  <p style={{ fontSize: "12px" }}> Events</p>
+                  <p style={{ fontSize: "14px" }}> Events</p>
                 </Link>
               </li>)}
 
@@ -165,9 +164,9 @@ const DropdownUser = () => {
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 10 12"
                       fill="none"
                     >
                       <path
@@ -175,7 +174,7 @@ const DropdownUser = () => {
                         fill="#E8E5FF"
                       ></path>
                     </svg>
-                    <p style={{ fontSize: "12px" }}> Transactions</p>
+                    <p style={{ fontSize: "14px" }}> Transactions</p>
                   </Link>
                 </li>
               )}
@@ -197,7 +196,7 @@ const DropdownUser = () => {
                         fill="#E8E5FF"
                       ></path>
                     </svg>
-                    <p style={{ fontSize: "12px" }}>Affiliates</p>
+                    <p style={{ fontSize: "14px" }}>Affiliates</p>
                   </Link>
                 </li>
               )}
@@ -219,7 +218,7 @@ const DropdownUser = () => {
                         fill="#E8E5FF"
                       ></path>
                     </svg>
-                    <p style={{ fontSize: "12px" }} onClick={() => setDropdownOpen(!dropdownOpen)}>Vault</p>
+                    <p style={{ fontSize: "14px" }} onClick={() => setDropdownOpen(!dropdownOpen)}>Vault</p>
                   </button>
                 </li>
               )}

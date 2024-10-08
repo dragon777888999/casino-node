@@ -24,7 +24,7 @@ const Bets = () => {
                 </div>
               </Link>
             </div>
-            <div className="px-7">
+            <div className="px-7 py-5">
              
               <Tabs
                 aria-label="Options"

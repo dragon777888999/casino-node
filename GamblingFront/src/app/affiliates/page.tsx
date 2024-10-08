@@ -304,7 +304,7 @@ const Affiliates = () => {
                     </svg>
                   </div>
                   <div className="affiliates-text">
-                    <h3>Total Referrals</h3>
+                    <h3 className="mb-3 block text-sm font-medium dark:text-green">Total Referrals</h3>
                     <div className="flex items-center gap-3">
                       <Image
                         src={`/default/images/currency/${userInfo.selectedCoinType}.png`} // Adjust path and naming if needed
@@ -402,7 +402,7 @@ const Affiliates = () => {
                     </svg>
                   </div>
                   <div className="affiliates-text">
-                    <h3>Total Wagered</h3>
+                    <h3 className="mb-3 block text-sm font-medium dark:text-green">Total Wagered</h3>
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
@@ -467,7 +467,7 @@ const Affiliates = () => {
                     </svg>
                   </div>
                   <div className="affiliates-text">
-                    <h3>Total Earnings</h3>
+                    <h3 className="mb-3 block text-sm font-medium dark:text-green">Total Earnings</h3>
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
@@ -530,7 +530,7 @@ const Affiliates = () => {
                     </svg>
                   </div>
                   <div className="affiliates-text">
-                    <h3>Income</h3>
+                    <h3 className="mb-3 block text-sm font-medium dark:text-green">Income</h3>
                     <div className="value-display">
                       <div className="display-icon">
                         <Image
@@ -565,7 +565,7 @@ const Affiliates = () => {
                   className="flex flex w-full items-center justify-center rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
                   style={{ height: "200px" }}
                 > */}
-                {!info?.referralInfos && <span>No Referrals</span>}
+                {!info?.referralInfos && <span></span>}
                 {/* <span>{info?.referralInfos}</span> */}
                 <AffiliateTable
                   data={info?.referralInfos ?? null}

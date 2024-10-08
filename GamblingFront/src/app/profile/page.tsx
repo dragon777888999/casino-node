@@ -134,15 +134,22 @@ const Profile = () => {
   return (
     <>
     {" "}
-      <div className="mx-auto ">
+      <div className="mx-auto">
         {/* <div className="overflow-hidden rounded-sm border border-stroke  dark:border-strokedark dark:bg-boxdark"> */}
-        <div className="profile-card">
-          <div className="card-title">
-            <div className="card-title-inner">
+        <div className="profile-card dark:bg-boxdark">
+          <div className="flex items-center justify-between border-b border-stroke pb-3 dark:border-strokedark">
+            <div className="text-white">
               <span>Profile</span>
             </div>
+            <Link href="/">
+              <div className="close-button">
+                <svg width={16} height={16}>
+                  <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                </svg>
+              </div>
+            </Link>
           </div>
-          <div className="card-content">
+          <div className="">
             <div className="card-detail-row">
               <div className="card-detail-row-title">
                 <span>Nickname</span>

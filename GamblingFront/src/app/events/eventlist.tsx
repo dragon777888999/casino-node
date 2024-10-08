@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-// import DispalyGameInfoModal from "./DispalyGameInfoModal";
+import DispalyEventInfoModal from "./DispalyEventInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
 import { EventsInfo } from "@/types/eventListInfo";
+import { EventInfo} from "@/types/eventInfo";
 
 interface TableAllProps {
   tableData: EventsInfo[];
@@ -13,6 +14,7 @@ interface TableAllProps {
 const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   const { siteInfo } = useAppContext();
   const [selectedRow, setSelectedRow] = useState<EventsInfo | null>(null);
+  const [selecteddRow, setSelecteddRow] = useState<EventInfo | null>(null);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -25,9 +27,9 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   };
 
   const EventClick = (info: EventsInfo) => {
-    // setSelectedRow(info);
-    // openModal();
-    alert("Show each events");
+    setSelectedRow(info);
+    openModal();
+    // alert("Show each events");
   };
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
   const currencyDir = siteInfo.themeMap.currency ? siteInfo.themeMap.currency : "default";
@@ -38,52 +40,45 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
           info.title = `{"en":"unknown"}`;
 
         if (info.status == 0){
-          var status = "Pending"
+          var status = "~" //pending
         }
         else if(info.status == 1){
-          status = "End"
+          status = "#" //End
         }
         else if (info.status == 2){
-          status = "Cancel"
+          status = "X"  //Cancel
         }
         else {
           status = "Fake"
         }
         
         return (
-          <div onClick={() => EventClick(info)} className="box-border my-5 p-4 border-1 rounded-md shadow-2xl shadow-blue-500/50 cursor-pointer">
-            <div className="text-center underline">
+          <div onClick={() => EventClick(info)} className="box-border my-5 p-4 rounded-md shadow-2xl cursor-pointer bg-black">
+            {/* <div className="text-sm">
+              {status} Event
+            </div> */}
+            <div className="text-lg p-1 font-bold">
               {info.title}
-            </div>   
-            <div className="text-center border-b-1 my-5">
+            </div>
+            <div className="text-md p-2">
               {info.content}
             </div>
-            <div className="columns-2 text-center my-5 border-b-1">
-              <div>Start Time: {info.startTime.toLocaleString()}</div>
-              <div>End Time: {info.endTime.toLocaleString()}</div>
-            </div>    
-            <div className="text-center columns-3 my-5">
-              <div>
-                Status : {status}
-              </div>
-              <div>
-                Created Time : {info.createdAt.toLocaleString()}
-              </div>
-              <div>
-                Bonus List : {info.result}
-              </div>
-            </div>      
+            <div className="text-sm p-2">
+              <div className="float-left mr-5">{status}</div>
+              <div>{info.startTime.toLocaleString()} ~ {info.endTime.toLocaleString()}</div> 
+              
+            </div>
           </div>
         );
       })}
 
-      {/* {selectedRow && (
-        <DispalyGameInfoModal
+      {selectedRow && (
+        <DispalyEventInfoModal
           showModal={showModal}
-          gameData={selectedRow}
+          eventData={selectedRow}
           onRequestClose={closeModal}
         />
-      )} */}
+      )}
     </>
   );
 };
