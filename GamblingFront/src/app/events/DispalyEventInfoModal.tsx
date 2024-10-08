@@ -44,7 +44,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetEvent",
-            id: eventData.id
+            eventId: eventData.id
           }),
         });
 

@@ -32,6 +32,8 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   };
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
   const currencyDir = siteInfo.themeMap.currency ? siteInfo.themeMap.currency : "default";
+  if (!tableData)
+    return (<></>);
   return (
     <>
       {tableData.map((info, index) => {
