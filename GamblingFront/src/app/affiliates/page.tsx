@@ -158,7 +158,7 @@ const Affiliates = () => {
     }
   };
 
-  console.log("parse", info);
+  //console.log("parse", info);
   const totalBetAmount: number = info?.totalBetAmount ?? 0; // Default to 0 if undefined
   const totalPayoutAmount: number = info?.totalPayoutAmount ?? 0;
   //const totalEarning: number = totalBetAmount - totalPayoutAmount;
@@ -412,7 +412,7 @@ const Affiliates = () => {
                           alt={userInfo.selectedCoinType}
                         />
                       </div>
-                      <span>{info?.totalBetCount?.toString()}</span>
+                      <span>{info?.totalBetAmount?.toFixed(4)}</span>
                     </div>
                   </div>
                 </div>
