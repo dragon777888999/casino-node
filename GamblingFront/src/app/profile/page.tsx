@@ -156,7 +156,7 @@ const Profile = () => {
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="card-detail-row-content-left-inner">{userInfo.nickName}</div>
+                  <div className="text-white">{userInfo.nickName}</div>
                 </div>
                 <div className="card-detail-row-content-right">
                   <button
@@ -212,7 +212,7 @@ const Profile = () => {
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="card-detail-row-content-left-inner">
+                  <div className="text-white">
                     <p>{walletAddress}</p>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ const Profile = () => {
               </div>
               <div className="card-detail-row-content">
                 <div className="card-detail-row-content-left">
-                  <div className="card-detail-row-content-left-inner">
+                  <div className="text-white">
                     <p>{siteInfo.treasuryWalletAddress}</p>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ interface VendorName {
 
 interface DispalyEventInfoModalProps {
   showModal: boolean;
-  eventData: EventsInfo[];
+  eventData: EventsInfo;
   onRequestClose: () => void;
 }
 const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
@@ -24,7 +24,8 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
 }) => {
   // const {siteInfo, loginStep } = useAppContext();
   const { accessToken, userInfo, loginStep } = useAppContext();
-  const [eventtData, setEventData] = useState<EventInfo[]>([]);
+  const [eData, setEData] = useState<EventInfo[]>([]);
+  // const [eventData, setEventData] = useState<EventsInfo[]>([]);
 
   useEffect(() => {
     const fetchEventData = async () => {
@@ -33,6 +34,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
       try {
 
         console.log("events start")
+        console.log(eventData.id)
 
         const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
           method: "POST",
@@ -42,7 +44,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
           },
           body: JSON.stringify({
             method: "GetEvent",
-            currencyCode: userInfo.selectedCoinType
+            id: eventData.id
           }),
         });
 
@@ -51,8 +53,8 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
         }
 
         const result = await response.json();
-        console.log(result.data)
-        setEventData(result.data);
+        console.log(result)
+        // setEData(result.data);
 
       } catch (error) {
         console.error("Error fetching game data:", error);

@@ -4,7 +4,6 @@ import DispalyEventInfoModal from "./DispalyEventInfoModal";
 // Adjust import as needed
 import { useAppContext } from "@/hooks/AppContext";
 import { EventsInfo } from "@/types/eventListInfo";
-import { EventInfo} from "@/types/eventInfo";
 
 interface TableAllProps {
   tableData: EventsInfo[];
@@ -14,7 +13,7 @@ interface TableAllProps {
 const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   const { siteInfo } = useAppContext();
   const [selectedRow, setSelectedRow] = useState<EventsInfo | null>(null);
-  const [selecteddRow, setSelecteddRow] = useState<EventInfo | null>(null);
+ 
 
   const [showModal, setShowModal] = useState(false);
 
