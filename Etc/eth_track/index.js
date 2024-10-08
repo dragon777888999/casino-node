@@ -6,7 +6,7 @@ const address = '0x5f7f643a410dcd0468d3ade08d91de3860152223';
 const bananaGun = '0x3328F7f4A1D1C57c35df56bBf0c9dCAFCA309C49';
 const digits = 18;
 const f = 10 ** digits;
-const lastCheckedBlock = 20921556;
+const lastCheckedBlock = 20911556;
 const url = `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=${lastCheckedBlock}&endblock=99999999&sort=asc&apikey=${apiKey}`;
 
 var provider = `https://mainnet.infura.io/v3/${apiKey}`;
@@ -24,16 +24,25 @@ axios.get(url)
             if (tx.from.toLowerCase() == address.toLowerCase()) {
                 if (tx.to.toLowerCase() == bananaGun.toLowerCase()) {
                     //console.log(`${tx.blockNumber}, send to ${tx.to}, value:${tx.value / f}`);
-                    try{
-                    procTranaction("trade", tx);}
-                    catch(err){
+                    try {
+                        procTranaction("buy", tx);
+                    }
+                    catch (err) {
                         console.log(err);
                     }
                 }
             }
             else {
-                if (tx.from.toLowerCase() == bananaGun.toLowerCase())
+                if (tx.from.toLowerCase() == bananaGun.toLowerCase()) {
                     console.log(`<<<<<< ${tx.blockNumber}, recieve from ${tx.from}, value:${tx.value / f}`);
+                    try {
+                        procTranaction("sell", tx);
+                    }
+                    catch (err) {
+                        console.log(err);
+                    }
+
+                }
                 //console.log(tx);
             }
             // console.log("from = ", tx.from);
@@ -54,8 +63,9 @@ procTranaction = async (type, txn) => {
     if (response.data.result) {
         const txnDetails = response.data.result;
         console.log(`${type} in ${txn.blockNumber}, eth:${txn.value / f}`);
-        var amount = txnDetails.value - txnDetails.gasPrice;
-        console.log("amount", amount / f);
+        //console.log(txn);
+        //var amount = txnDetails.value - txnDetails.gasPrice;
+        //console.log("amount", amount / f);
 
         // Decode input data to get token addresses and other parameters
         const decodedInput = web3.eth.abi.decodeParameters(
@@ -63,9 +73,13 @@ procTranaction = async (type, txn) => {
             txn.input.slice(10) // Remove the first 10 characters (function selector)
         );
 
-        const tokenAddress = decodedInput[0];
-        const tokenAmountRaw = decodedInput[1]; // Assuming the second parameter is the token amount in raw units
-        console.log(tokenAddress, tokenAmountRaw);
+        const tokenAddress1 = decodedInput[0];
+        const tokenAmountRaw1 = decodedInput[1]; // Assuming the second parameter is the token amount in raw units
+        const tokenAddress2 = decodedInput[2];
+        const tokenAmountRaw2 = decodedInput[3]; // Assuming the second parameter is the token amount in raw units
+        //console.log("                      tokenAddress=",tokenAddress1, ",tokenAmount=",tokenAmountRaw1);
+        //console.log("tokenAddress=",tokenAddress2, ",tokenAmount=",tokenAmountRaw2);
+        return;
         // Get token name, symbol, and decimals
         const abi = [
             // Read-Only Functions
@@ -96,15 +110,16 @@ procTranaction = async (type, txn) => {
                 "type": "function"
             }
         ], tokenAddress);
-        try{
-        const tokenName = await tokenContract.methods.name().call();
-        const tokenSymbol = await tokenContract.methods.symbol().call();
-        const tokenDecimals = await tokenContract.methods.decimals().call();
+        try {
+            const tokenName = await tokenContract.methods.name().call();
+            const tokenSymbol = await tokenContract.methods.symbol().call();
+            const tokenDecimals = await tokenContract.methods.decimals().call();
 
-        // Calculate the human-readable token amount
-        const tokenAmount = tokenAmountRaw / (10 ** tokenDecimals);
-        console.log(`Token: ${tokenName} (${tokenSymbol}), Amount: ${tokenAmount}`);}
-        catch(err){
+            // Calculate the human-readable token amount
+            const tokenAmount = tokenAmountRaw / (10 ** tokenDecimals);
+            console.log(`Token: ${tokenName} (${tokenSymbol}), Amount: ${tokenAmount}`);
+        }
+        catch (err) {
             console.log(err);
         }
     } else {
