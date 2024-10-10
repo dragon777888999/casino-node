@@ -1,16 +1,16 @@
 {
-  "name": "eth_track",
+  "name": "wallet-tracker",
   "version": "1.0.0",
+  "description": "Node.js project to track a wallet's buy/sell activity on several DEXs using subgraph",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "axios": "^1.7.7",
-    "ethers": "^6.13.3",
-    "web3": "^4.13.0"
-  }
+    "axios": "^1.0.0",
+    "graphql": "^16.0.0",
+    "graphql-request": "^4.0.0"
+  },
+  "author": "User",
+  "license": "ISC"
 }
