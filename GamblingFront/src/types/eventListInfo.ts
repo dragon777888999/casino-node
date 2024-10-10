@@ -7,7 +7,7 @@ export interface EventsInfo {
     status: number;
     startTime: Date;
     endTime: Date; 
-    type: number; 
+    type: string; 
     bonusList: number;
     result: string;
   }

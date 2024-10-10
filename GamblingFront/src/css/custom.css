@@ -148,8 +148,8 @@
   justify-content: center;
   background-color: #10141f;
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 2px;
+  right: 4px;
   padding: 12px;
   cursor: pointer;
   /* background-color: rgb(255, 149, 21); */
@@ -804,7 +804,6 @@
   align-items: center;
   flex-direction: column;
   z-index: 1050;
-  max-width: 500px;
   border-radius: 10px;
   border: 1px solid #1c2d32;
   background: #141a2b;

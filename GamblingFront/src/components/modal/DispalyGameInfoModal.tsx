@@ -84,6 +84,7 @@ const DispalyGameInfoModal: React.FC<DispalyGameInfoModalProps> = ({
                 >
                   Bet
                 </h3>
+                
                 <button
                   className="wallet-adapter-modal-button-close"
                   style={{ backgroundColor: "#181f33" }}
