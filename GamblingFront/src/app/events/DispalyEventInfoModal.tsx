@@ -36,7 +36,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
           method: "POST",
           headers: {
             "X-Access-Token": accessToken,
-            "Content-Type": "apmxication/json",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             method: "GetEvent",
