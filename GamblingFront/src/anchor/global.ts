@@ -1,4 +1,4 @@
-export const backendUrl = "https://api.roogsino.io";
+export const backendUrl = "https://localhost:7020";
 export const solanaNetworkUrl = "https://api.devnet.solana.com";
 
 export const timeZonesData = [

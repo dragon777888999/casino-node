@@ -44,7 +44,7 @@ const getBalance = async (req, res) => {
     // Prepare the request
     const accountInfo = await client.request({
       command: 'account_info',
-      account: data.address,
+      account: data.walletAddress,
       ledger_index: 'validated'
     });
 
@@ -52,7 +52,7 @@ const getBalance = async (req, res) => {
     const balanceInDrops = accountInfo.result.account_data.Balance;
     const balanceInXRP = xrpl.dropsToXrp(balanceInDrops);
 
-    console.log(`Balance for account ${data.address}: ${balanceInXRP} XRP`);
+    //console.log(`Balance for account ${data.address}: ${balanceInXRP} XRP`);
 
     // Disconnect from the client
     await client.disconnect();
@@ -148,11 +148,23 @@ const sendCoinFunc_xrpl = async (req, res) => {
 
   let wallet;
 
-  const amount = Math.floor(
-    parseFloat(data.amount) *
-    10 ** config.digits[`${data.chain}_${data.coinType}`] -
-    fees
-  ).toString();
+  let amount;
+  if (data.tokenAddress) {
+    const s = data.tokenAddress.split("_");
+    // Sending token (IOU)
+    amount = {
+      currency: s[1], // The token's currency code, e.g., "USD", "EUR", "TOKEN"
+      issuer: s[0], // The issuer's (token creator's) XRP address
+      value: data.amount.toString(), // The amount of the token to send
+    };
+  } else {
+    // Sending XRP
+    amount = Math.floor(
+      parseFloat(data.amount) *
+        10 ** config.digits[`${data.chain}_${data.coinType}`] - 
+        fees
+    ).toString();
+  }
   try {
     if (data.mnemonic && data.mnemonic.trim().length > 0) {
       console.log("Using seed for wallet creation");

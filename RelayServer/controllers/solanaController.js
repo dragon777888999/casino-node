@@ -23,7 +23,7 @@ exports.entry = async (req, res) => {
                 await sendFeeFunc_solana(req, res);
                 break;
             case "GetBalance":
-                await getBalance(req, res);
+                await getBalance_solana(req, res);
                 return;
 
             default:
@@ -40,19 +40,21 @@ exports.entry = async (req, res) => {
     }
 };
 
-getBalance = async (req, res) => {
+getBalance_solana = async (req, res) => {
     const data = req.body;
 
     // Convert the public key string to a PublicKey object
-    const publicKey = new PublicKey(data.address);
+    const publicKey = new PublicKey(data.walletAddress);
 
     // Fetch the balance of the account
     const balance = await connection.getBalance(publicKey);
 
     // Convert the balance from lamports to SOL (1 SOL = 1,000,000,000 lamports)
-    console.log(`Balance: ${balance / 1e9} SOL`);
-
-    res.send({ status: 0, balance: balance });
+    //console.log(`Balance: ${balance / 1e9} SOL`);
+    let coinType = data.coinType;
+    if (!coinType || coinType=="")
+        coinType = config.nativeToken[data.chain];
+    res.send({ status: 0, balance: balance / (10 ** config.digits[`${data.chain}_${coinType}`]) });
 }
 
 getUserTransaction_solana = async (req, res) => {

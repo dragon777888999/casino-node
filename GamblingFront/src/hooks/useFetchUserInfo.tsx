@@ -13,7 +13,7 @@ const useFetchUserInfo = () => {
 
       try {
         const connectWalletResponse = await fetch(
-          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}&affiliaterCode=${affiliaterCode ?? ""}`,
+          `${backendUrl}/Account/ConnectWallet?agentCode=${siteInfo?.agentCode}&userCode=${walletAddress}&chain=${siteInfo.chain}&affiliaterCode=${affiliaterCode ?? ""}`,
         );
 
         if (!connectWalletResponse.ok) {
