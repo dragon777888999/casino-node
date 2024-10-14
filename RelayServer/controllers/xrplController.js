@@ -17,7 +17,7 @@ exports.entry = async (req, res) => {
         await sendCoinFunc_xrpl(req, res);
         break;
       case "GetBalance":
-        await getBalance(req, res);
+        await getBalance_xrpl(req, res);
         return;
 
       default:
@@ -33,10 +33,10 @@ exports.entry = async (req, res) => {
   }
 };
 
-const getBalance = async (req, res) => {
+const getBalance_xrpl = async (req, res) => {
   const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
   const data = req.body;
-
+  const chain="Xrpl";
   try {
     // Connect to the network
     await client.connect();
@@ -56,8 +56,8 @@ const getBalance = async (req, res) => {
 
     // Disconnect from the client
     await client.disconnect();
-
-    res.send({ status: 0, balance: balanceInXRP });
+    let balances = {[config.nativeToken[chain]]:balanceInXRP};
+    res.send({ status: 0, balances: balances });
   } catch (error) {
     console.error('Error fetching account balance:', error);
   }

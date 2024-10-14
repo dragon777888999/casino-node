@@ -6,8 +6,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const headersList = headers();
   const host = headersList.get('origin') || '';
 
-  let title = 'RebelGames by SunRebels on XRP';
-  let description = 'The #1 gaming platform on the XRPL, with rev share to SunRebels holders!';
+  let title = 'Epic Play to Earn Experience';
+  let description = 'Epic Play to Earn Experience on Blockchain';
 
   if (host.includes('rebelgames.io')) {
     title = 'RebelGames by SunRebels on XRP';
@@ -18,6 +18,9 @@ export async function generateMetadata(): Promise<Metadata> {
   } else if (host.includes('tronquest.com')) {
     title = 'Epic Play to Earn Experience';
     description = 'Epic Play to Earn Experience on Tron';
+  } else if (host.includes('oraicasino.io')) {
+    title = 'Epic Play to Earn Experience';
+    description = 'Epic Play to Earn Experience on Oraichain';
   }
 
   return {

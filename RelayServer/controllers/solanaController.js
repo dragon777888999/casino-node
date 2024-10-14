@@ -42,7 +42,7 @@ exports.entry = async (req, res) => {
 
 getBalance_solana = async (req, res) => {
     const data = req.body;
-
+    const chain="Solana";
     // Convert the public key string to a PublicKey object
     const publicKey = new PublicKey(data.walletAddress);
 
@@ -51,10 +51,9 @@ getBalance_solana = async (req, res) => {
 
     // Convert the balance from lamports to SOL (1 SOL = 1,000,000,000 lamports)
     //console.log(`Balance: ${balance / 1e9} SOL`);
-    let coinType = data.coinType;
-    if (!coinType || coinType=="")
-        coinType = config.nativeToken[data.chain];
-    res.send({ status: 0, balance: balance / (10 ** config.digits[`${data.chain}_${coinType}`]) });
+    let coinType = config.nativeToken[chain];
+    let balances = {[coinType]:balance / (10 ** config.digits[`${chain}_${coinType}`])};
+    res.send({ status: 0, balances: balances });
 }
 
 getUserTransaction_solana = async (req, res) => {
