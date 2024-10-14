@@ -17,22 +17,35 @@ interface DispalyEventInfoModalProps {
   onRequestClose: () => void;
 }
 
-const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
-  showModal,
-  eventData,
-  onRequestClose,
-}) => {
+const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal, eventData, onRequestClose}) => {
   const { accessToken, loginStep } = useAppContext();
   const [eData, setEData] = useState<EventInfo[]>([]);
+
+  const [res, setRes] = useState<number>(1); // Default to mobile case
+
   
   let i = 1;
   // var ratio:number[];
   let ratio;
   let bonuslist;
   let unit;
-  let color = "black";
   
   useEffect(() => {
+    const updateRes = () => {
+      if (window.innerWidth >= 768) {
+        setRes(2); // Windows (desktop) case
+      } else {
+        setRes(1); // Mobile case
+      }
+    };
+
+    // Initial check on load
+    updateRes();
+
+    // Add event listener to track window resize
+    window.addEventListener('resize', updateRes);
+
+    
     const fetchEventData = async () => {
       if (loginStep < 3)
         return;
@@ -56,11 +69,9 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
         const result = await response.json();
         
         if (eventData.type == "type1"){
-          console.log("1")
           setEData(result.data.type1);
         }
         else if (eventData.type == "type2"){
-          console.log("2")
           setEData(result.data.type2);
         }
         else {
@@ -76,146 +87,62 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
 
   if (!showModal) return null;
 
-  if (eventData.type == "type1"){
+  if (eventData.type == "type1" && res == 2){
     return(
-      <Modal
-      id="modal"
-      className="modal"
-      isOpen={showModal}
-      onRequestClose={onRequestClose}
-      contentLabel="Example Modal"
-      ariaHideApp={false}
-      style={{
-        overlay: {
-          backgroundColor: "#141a2b",
-          zIndex: 1000,
-        },
-      }}
-    >
-      <div
-        className="custom-modal"
-        style={{
-          zIndex: "1000",
-  
-        }}
-      >
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}, }}>
+      <div className="custom-modal" style={{zIndex: "1000"}}>
         <div className="wallet-adapter-modal-container">
-          <div
-            className="custom-modal-wrapper"
-            style={{
-              padding: "25px",
-              backgroundColor: "#141a2b",
-            }}
-          >
+          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b",}}>
   
-            <div
-              className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
-              style={{ marginBottom: "10px", width: "100%" }}
-            >
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
               <div className="row">
                 <div className="float-left ml-1 w-10 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
-                    Rank
-                  </h3>
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
                 </div>
                 
                 <div className="float-left ml-5 w-100 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     Name
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-70 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     VendorName
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-40 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     GameName
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     Bet
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     Payout
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     Ratio
                   </h3>
                 </div>
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
                     Bonus
                   </h3>
                 </div>
                 
                 <div className="ml-10">
-                  <button
-                    className="wallet-adapter-modal-button-close"
-                    style={{ backgroundColor: "#181f33" }}
-                    onClick={() => {
-                      onRequestClose();
-                    }}
-                  >
+                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
                     <svg width={14} height={14}>
                       <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
                     </svg>
@@ -226,9 +153,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
             </div>
   
             
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">
-             
-              
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">             
               { eData.map((event, index) =>{
                 ratio = event.payoutAmount /event.betAmount;
                 if (event.bonus){
@@ -239,10 +164,9 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
                   bonuslist = "NO";
                   unit = "";
                 }
-                
-                
-                return (
-                  <div id={i} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                               
+                return (                  
+                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
                       <h3
                         style={{
@@ -330,8 +254,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
                       >
                         {bonuslist} {unit}
                       </h3>
-                    </div>
-                    
+                    </div>          
                   </div>
                   
                 )
@@ -344,10 +267,115 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
         </div>
         <div className="fixed inset-0 z-40 opacity-25"></div>
       </div>
-    </Modal>
+      </Modal>
     )
   }
-  else if (eventData.type == "type2"){
+  else if(eventData.type == "type1" && res == 1){
+    return(
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
+      <div className="custom-modal" style={{zIndex: "1000"}}>
+        <div className="wallet-adapter-modal-container">
+          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
+  
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
+              <div className="row">
+                <div className="float-left ml-1 w-10 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
+                </div>
+                
+                
+  
+                <div className="float-left ml-5 w-45 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                    UserName
+                  </h3>
+                </div>
+  
+                
+                <div className="float-left ml-5 w-20 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                    Bonus
+                  </h3>
+                </div>
+                
+                <div className="ml-10">
+                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </button>
+                </div>
+               
+              </div>
+            </div>
+  
+            
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
+              { eData.map((event, index) =>{
+                ratio = event.payoutAmount /event.betAmount;
+                if (event.bonus){
+                  bonuslist = event.bonus.value;
+                  unit = event.bonus.currencyCode;
+                }
+                else{
+                  bonuslist = "NO";
+                  unit = "";
+                }
+                               
+                return (                  
+                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                    <div className="ml-1 w-10 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {i++}
+                      </h3>
+                    </div>
+                   
+                    <div className="ml-5 w-70 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {event.nickName.slice(0, 10)}...
+                      </h3>
+                    </div>
+                    
+                    <div className="ml-5 w-20 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {bonuslist} {unit}
+                      </h3>
+                    </div>          
+                  </div>
+                  
+                )
+                
+              })}   
+              
+            </div>
+           
+          </div>
+        </div>
+        <div className="fixed inset-0 z-40 opacity-25"></div>
+      </div>
+      </Modal>
+    )
+    
+  }
+  else if (eventData.type == "type2" && res == 2){
     return(
       <Modal
       id="modal"
@@ -553,7 +581,112 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({
       </div>
     </Modal>
     )
-  } else {
+  }
+  else if (eventData.type == "type2" && res == 1){
+    return(
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
+      <div className="custom-modal" style={{zIndex: "1000"}}>
+        <div className="wallet-adapter-modal-container">
+          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
+  
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
+              <div className="row">
+                <div className="float-left ml-1 w-10 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
+                </div>
+                
+                
+  
+                <div className="float-left ml-5 w-45 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                    UserName
+                  </h3>
+                </div>
+  
+                
+                <div className="float-left ml-5 w-20 text-center">
+                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                    Bonus
+                  </h3>
+                </div>
+                
+                <div className="ml-10">
+                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </button>
+                </div>
+               
+              </div>
+            </div>
+  
+            
+            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
+              { eData.map((event, index) =>{
+                ratio = event.payoutAmount /event.betAmount;
+                if (event.bonus){
+                  bonuslist = event.bonus.value;
+                  unit = event.bonus.currencyCode;
+                }
+                else{
+                  bonuslist = "NO";
+                  unit = "";
+                }
+                               
+                return (                  
+                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                    <div className="ml-1 w-10 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {i++}
+                      </h3>
+                    </div>
+                   
+                    <div className="ml-5 w-70 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {event.nickName.slice(0, 10)}...
+                      </h3>
+                    </div>
+                    
+                    <div className="ml-5 w-20 text-center">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "700",
+                          color: "white",
+                        }}
+                      >
+                        {bonuslist} {unit}
+                      </h3>
+                    </div>          
+                  </div>
+                  
+                )
+                
+              })}   
+              
+            </div>
+           
+          </div>
+        </div>
+        <div className="fixed inset-0 z-40 opacity-25"></div>
+      </div>
+      </Modal>
+    )
+  } 
+  else {
     return(
       <div>NO Data Coming</div>
     )
