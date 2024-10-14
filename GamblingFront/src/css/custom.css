@@ -225,6 +225,12 @@
   );
 } */
 
+/* @media (min-width:200px){
+  .custom-modal-wrapper{
+    margin-top: 55%;
+  }
+} */
+
 @media (max-width: 480px) {
   .wallet-adapter-modal-container {
     margin-top: 15%;
