@@ -97,46 +97,46 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
               <div className="row">
                 <div className="float-left ml-1 w-10 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
+                  <p>Rank</p>
                 </div>
                 
                 <div className="float-left ml-5 w-100 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Name
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-70 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     VendorName
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-40 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     GameName
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Bet
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Payout
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Ratio
                   </h3>
                 </div>
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Bonus
                   </h3>
                 </div>
@@ -168,92 +168,44 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 return (                  
                   <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {i++}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-100 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.nickName}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-70 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {JSON.parse(event.vendorName).en}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-40 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {JSON.parse(event.gameName).en}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.betAmount}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.payoutAmount}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {Math.round(ratio)}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {bonuslist} {unit}
-                      </h3>
+                      </p>
                     </div>          
                   </div>
                   
@@ -280,20 +232,20 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
               <div className="row">
                 <div className="float-left ml-1 w-10 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
+                  <h3>Rank</h3>
                 </div>
                 
                 
   
                 <div className="float-left ml-5 w-45 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     UserName
                   </h3>
                 </div>
   
                 
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Bonus
                   </h3>
                 </div>
@@ -325,39 +277,21 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 return (                  
                   <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {i++}
-                      </h3>
+                      </p>
                     </div>
                    
                     <div className="ml-5 w-70 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.nickName.slice(0, 10)}...
-                      </h3>
+                      </p>
                     </div>
                     
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {bonuslist} {unit}
-                      </h3>
+                      </p>
                     </div>          
                   </div>
                   
@@ -413,62 +347,32 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             >
               <div className="row">
                 <div className="float-left ml-1 w-10 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3>
                     Rank
                   </h3>
                 </div>
                 <div className="float-left ml-5 w-100 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3>
                     UserCode
                   </h3>
                 </div>
                
   
                 <div className="float-left ml-5 w-50 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3>
                     Bet
                   </h3>
                 </div>
   
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3>
                     Payout
                   </h3>
                 </div>
                
                 
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "700",
-                      color: "white",
-                    }}
-                  >
+                  <h3>
                     Bonus
                   </h3>
                 </div>
@@ -508,64 +412,34 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 return (
                   <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {i++}
-                      </h3>
+                      </p>
                     </div>
 
                     <div className="ml-1 w-100 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.userCode}
-                      </h3>
+                      </p>
                     </div>
                     
                     <div className="ml-5 w-50 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.betAmount}
-                      </h3>
+                      </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.payoutAmount}
-                      </h3>
+                      </p>
                     </div>
 
                    
                     
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {bonuslist} {unit}
-                      </h3>
+                      </p>
                     </div>
                     
                   </div>
@@ -592,20 +466,20 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
               <div className="row">
                 <div className="float-left ml-1 w-10 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>Rank</h3>
+                  <h3>Rank</h3>
                 </div>
                 
                 
   
                 <div className="float-left ml-5 w-45 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     UserName
                   </h3>
                 </div>
   
                 
                 <div className="float-left ml-5 w-20 text-center">
-                  <h3 style={{fontSize: "18px", fontWeight: "700", color: "white",}}>
+                  <h3>
                     Bonus
                   </h3>
                 </div>
@@ -637,39 +511,21 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 return (                  
                   <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {i++}
-                      </h3>
+                      </p>
                     </div>
                    
                     <div className="ml-5 w-70 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {event.nickName.slice(0, 10)}...
-                      </h3>
+                      </p>
                     </div>
                     
                     <div className="ml-5 w-20 text-center">
-                      <h3
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "700",
-                          color: "white",
-                        }}
-                      >
+                      <p className="truncate  text-white dark:text-white">
                         {bonuslist} {unit}
-                      </h3>
+                      </p>
                     </div>          
                   </div>
                   
