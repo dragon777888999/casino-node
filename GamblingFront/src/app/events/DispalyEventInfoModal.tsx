@@ -83,7 +83,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
       }
     };
     fetchEventData(); // Fetch for original games
-  }, []);
+  }, [eventData]);
 
   if (!showModal) return null;
 
@@ -199,7 +199,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                     </div>
                     <div className="ml-5 w-20 text-center">
                       <p className="truncate  text-white dark:text-white">
-                        {Math.round(ratio)}
+                        {ratio.toFixed(2)}
                       </p>
                     </div>
                     <div className="ml-5 w-20 text-center">
@@ -419,7 +419,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
 
                     <div className="ml-1 w-100 text-center">
                       <p className="truncate  text-white dark:text-white">
-                        {event.userCode}
+                        {event.nickName}
                       </p>
                     </div>
                     

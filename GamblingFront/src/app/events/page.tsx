@@ -46,7 +46,7 @@ const Events = () => {
       }
     };
     fetchEventData(); // Fetch for original games
-  }, []);
+  },[loginStep]);
   const [totalTableData, setTotalTableData] = useState<EventsInfo[]>([]);
 
 
