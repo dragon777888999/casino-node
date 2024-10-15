@@ -54,7 +54,7 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
         }
         
         return (
-          <div onClick={() => EventClick(info)} className="box-border my-5 p-4 rounded-md shadow-2xl cursor-pointer bg-black">
+          <div key={index} onClick={() => EventClick(info)} className="box-border my-5 p-4 rounded-md shadow-2xl cursor-pointer bg-black">
             {/* <div className="text-sm">
               {status} Event
             </div> */}

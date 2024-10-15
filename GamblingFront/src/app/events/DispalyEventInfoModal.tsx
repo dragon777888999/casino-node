@@ -166,7 +166,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 }
                                
                 return (                  
-                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {i++}
@@ -275,7 +275,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 }
                                
                 return (                  
-                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {i++}
@@ -410,7 +410,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 }
   
                 return (
-                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                  <div  key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {i++}
@@ -509,7 +509,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 }
                                
                 return (                  
-                  <div className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
                     <div className="ml-1 w-10 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {i++}
