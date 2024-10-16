@@ -1136,19 +1136,20 @@ input[type="number"] {
 }
 .card-detail-row-content-right-inner {
   align-items: center;
-  background-color: #09f219;
-  border-radius: 6px;
-  color: #22262f;
+  background: linear-gradient(90deg, #5fa5ea, #2f71de);
+  border-radius: 3px;
+  /* color: #22262f; */
   cursor: pointer;
   display: flex;
   flex: none;
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 14px;
-  font-weight: 700;
+  /* font-weight: 700; */
   height: 26px;
   justify-content: center;
   min-width: 80px;
+  color: white;
 }
 .balance-label p {
   margin-left: 30px;

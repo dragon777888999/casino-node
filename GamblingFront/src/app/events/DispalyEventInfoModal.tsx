@@ -106,7 +106,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                   </h3>
                 </div>
   
-                <div className="float-left ml-5 w-70 text-center">
+                <div className="float-left ml-5 text-center">
                   <h3>
                     VendorName
                   </h3>
@@ -177,7 +177,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                         {event.nickName}
                       </p>
                     </div>
-                    <div className="ml-5 w-70 text-center">
+                    <div className="ml-5 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {JSON.parse(event.vendorName).en}
                       </p>
@@ -237,9 +237,15 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                 
                 
   
-                <div className="float-left ml-5 w-45 text-center">
+                <div className="float-left ml-5 w-25 text-center">
                   <h3>
                     UserName
+                  </h3>
+                </div>
+
+                <div className="float-left ml-1 w-20 text-center">
+                  <h3>
+                    XXX
                   </h3>
                 </div>
   
@@ -282,9 +288,15 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
                       </p>
                     </div>
                    
-                    <div className="ml-5 w-70 text-center">
+                    <div className="ml-5 w-25 text-center">
                       <p className="truncate  text-white dark:text-white">
                         {event.nickName.slice(0, 10)}...
+                      </p>
+                    </div>
+
+                    <div className="ml-1 w-20 text-center">
+                      <p className="truncate  text-white dark:text-white">
+                        ...
                       </p>
                     </div>
                     

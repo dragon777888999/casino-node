@@ -251,95 +251,7 @@ const Profile = () => {
               </div> */}
             </div>
           </div>
-          {/* <div className="profile-card">
-            <div className="card-title">
-              <div className="card-title-inner">
-                <span>Regional Settings</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="card-detail-row">
-                <div className="card-detail-row-title">
-                  <span>Time Zone</span>
-                </div>
-                <div className="card-detail-row-content">
-                  <div className="card-detail-row-content-left">
-                    <div className="card-detail-row-content-left-inner">
-                      <div
-                        className="timezone-selector sm:gap-5"
-                        style={{
-                          borderRadius: "5px",
-                        }}
-                      >
-                        <div>
-                          <label>{timeZone}</label>
-                        </div>
-  
-                        {!isHidden && (
-                          <div className="select-wrapper">
-                            <select
-                              value={timeZone}
-                              onChange={handleTimeZoneChange}
-                              disabled={isCurrentZone}
-                            >
-                              {timeZonesData.map((tz) => (
-                                <option key={tz} value={tz}>
-                                  {tz}
-                                </option>
-                              ))}
-                            </select>
-                          </div>
-                        )}
-                        <div className="gap-2">
-                          <Switch
-                            size="sm"
-                            isSelected={isSelected}
-                            onValueChange={() => {
-                              setIsSelected(!isSelected);
-                              handleToggle();
-                              setIsHidden(true);
-                            }}
-                          >
-                            <label style={{ color: "#89899f" }}>
-                              Current Time Zone
-                            </label>
-                          </Switch>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-detail-row-content-right">
-                    <button
-                      className="card-detail-row-content-right-inner"
-                      onClick={() => setIsHidden(!isHidden)}
-                    >
-                      <span>{isHidden ? `Edit` : `Cancel`}</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-          </div>
-          <div className="profile-card">
-            <div className="card-title">
-              <div className="card-title-inner">
-                <span>Link Account</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="card-detail-row">
-                <div className="card-detail-row-title">
-                  <span>Telegram</span>
-                </div>
-                <div className="card-detail-row-content">
-                  <div className="card-detail-row-content-left">
-                    <div className="card-detail-row-content-left-inner">khk</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+          
         </div>
         <Modal
           id="modal"
@@ -360,13 +272,18 @@ const Profile = () => {
                 
                 <div
                   className="jusfity-start flex pb-8"
-                  style={{ minWidth: "350px" }}
+                  style={{ minWidth: "350px", justifyContent:"center" }}
                 >
                   <h1
-                    style={{ color: "#fff", fontWeight: "700", fontSize: "20px" }}
+                    style={{ color: "#fff", fontSize: "18px" }}
                   >
                     Change Nickname
                   </h1>
+                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33", marginTop:"5px" }} onClick={() => {closeNickNameEditModal();}}>
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </button>
                 </div>
                 <div className="flex w-full justify-start">
                   <input
@@ -383,14 +300,14 @@ const Profile = () => {
                     }}
                   />
                 </div>
-                <div className="flex w-full">
+                <div className="flex w-full justify-center">
                   <button
                     className="card-detail-row-content-right-inner h-5 w-full"
                     style={{
-                      height: "40px",
-                      fontSize: "20px",
-                      fontWeight: "500",
+                      height: "30px",
+                      fontSize: "18px",
                       marginTop: "50px",
+                      width: "50px",
                     }}
                     onClick={() => {
                       updateNickName();
@@ -545,7 +462,7 @@ const Profile = () => {
                 <div className="card-detail-row-content">
                   <div className="card-detail-row-content-left">
                     <div className="text-white text-sm">
-                      <p>{siteInfo.treasuryWalletAddress}</p>
+                      <p>{siteInfo.treasuryWalletAddress.slice(0, 20)}...</p>
                     </div>
                   </div>
                   <div className="card-detail-row-content-right">
@@ -559,107 +476,10 @@ const Profile = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="card-detail-row">
-                <div className="card-detail-row-title">
-                  <span>Email</span>
-                </div>
-                <div className="card-detail-row-content">
-                  <div className="card-detail-row-content-left">
-                    <div className="card-detail-row-content-left-inner">khk</div>
-                  </div>
-                </div>
-              </div> */}
+             
             </div>
           </div>
-          {/* <div className="profile-card">
-            <div className="card-title">
-              <div className="card-title-inner">
-                <span>Regional Settings</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="card-detail-row">
-                <div className="card-detail-row-title">
-                  <span>Time Zone</span>
-                </div>
-                <div className="card-detail-row-content">
-                  <div className="card-detail-row-content-left">
-                    <div className="card-detail-row-content-left-inner">
-                      <div
-                        className="timezone-selector sm:gap-5"
-                        style={{
-                          borderRadius: "5px",
-                        }}
-                      >
-                        <div>
-                          <label>{timeZone}</label>
-                        </div>
-  
-                        {!isHidden && (
-                          <div className="select-wrapper">
-                            <select
-                              value={timeZone}
-                              onChange={handleTimeZoneChange}
-                              disabled={isCurrentZone}
-                            >
-                              {timeZonesData.map((tz) => (
-                                <option key={tz} value={tz}>
-                                  {tz}
-                                </option>
-                              ))}
-                            </select>
-                          </div>
-                        )}
-                        <div className="gap-2">
-                          <Switch
-                            size="sm"
-                            isSelected={isSelected}
-                            onValueChange={() => {
-                              setIsSelected(!isSelected);
-                              handleToggle();
-                              setIsHidden(true);
-                            }}
-                          >
-                            <label style={{ color: "#89899f" }}>
-                              Current Time Zone
-                            </label>
-                          </Switch>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-detail-row-content-right">
-                    <button
-                      className="card-detail-row-content-right-inner"
-                      onClick={() => setIsHidden(!isHidden)}
-                    >
-                      <span>{isHidden ? `Edit` : `Cancel`}</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-          </div>
-          <div className="profile-card">
-            <div className="card-title">
-              <div className="card-title-inner">
-                <span>Link Account</span>
-              </div>
-            </div>
-            <div className="card-content">
-              <div className="card-detail-row">
-                <div className="card-detail-row-title">
-                  <span>Telegram</span>
-                </div>
-                <div className="card-detail-row-content">
-                  <div className="card-detail-row-content-left">
-                    <div className="card-detail-row-content-left-inner">khk</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
+          
         </div>
         <Modal
           id="modal"
@@ -680,13 +500,18 @@ const Profile = () => {
                 
                 <div
                   className="jusfity-start flex pb-8"
-                  style={{ minWidth: "350px" }}
+                  style={{ minWidth: "350px", justifyContent:"center" }}
                 >
                   <h1
-                    style={{ color: "#fff", fontWeight: "700", fontSize: "20px" }}
+                    style={{ color: "#fff", fontSize: "18px" }}
                   >
                     Change Nickname
                   </h1>
+                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33", marginTop:"5px" }} onClick={() => {closeNickNameEditModal();}}>
+                    <svg width={14} height={14}>
+                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                    </svg>
+                  </button>
                 </div>
                 <div className="flex w-full justify-start">
                   <input
@@ -703,14 +528,14 @@ const Profile = () => {
                     }}
                   />
                 </div>
-                <div className="flex w-full">
+                <div className="flex w-full justify-center">
                   <button
                     className="card-detail-row-content-right-inner h-5 w-full"
                     style={{
-                      height: "40px",
-                      fontSize: "20px",
-                      fontWeight: "500",
+                      height: "30px",
+                      fontSize: "18px",
                       marginTop: "50px",
+                      width : "50px"
                     }}
                     onClick={() => {
                       updateNickName();
