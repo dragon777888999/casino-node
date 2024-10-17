@@ -22,6 +22,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   const [eData, setEData] = useState<EventInfo[]>([]);
 
   const [res, setRes] = useState<number>(1); // Default to mobile case
+  const [eventType, setEventType] = useState<string>(""); // Default to mobile case
 
   
   let i = 1;
@@ -70,7 +71,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
         }
 
         const result = await response.json();
-        
+        setEventType(eventData.type);
         if (eventData.type == "type1"){
           setEData(result.data.type1);
         }
@@ -90,7 +91,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
 
   if (!showModal) return null;
 
-  if (eventData.type == "type1" && res == 2){
+  if (eventType == "type1" && res == 2){
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}, }}>
       <div className="custom-modal" style={{zIndex: "1000"}}>
@@ -225,7 +226,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
       </Modal>
     )
   }
-  else if(eventData.type == "type1" && res == 1){
+  else if(eventType == "type1" && res == 1){
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
       <div className="custom-modal" style={{zIndex: "1000"}}>
@@ -324,7 +325,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     )
     
   }
-  else if (eventData.type == "type2" && res == 2){
+  else if (eventType == "type2" && res == 2){
     return(
       <Modal
       id="modal"
@@ -471,7 +472,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     </Modal>
     )
   }
-  else if (eventData.type == "type2" && res == 1){
+  else if (eventType == "type2" && res == 1){
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
       <div className="custom-modal" style={{zIndex: "1000"}}>
