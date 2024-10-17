@@ -23,7 +23,6 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   const [eventType, setEventType] = useState<string>("");
 
   const [res, setRes] = useState<number>(1); // Default to mobile case
-  const [eventType, setEventType] = useState<string>(""); // Default to mobile case
 
   
   let i = 1;
@@ -32,16 +31,10 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   let bonuslist;
   let unit;
 
-<<<<<<< HEAD
   const win = JSON.parse(eventData.info);
   const winType = win.winType;
 
   
-=======
-  const eventInfo = JSON.parse(eventData.info);
-  console.log("wintype",eventInfo,eventInfo.winType);
-
->>>>>>> d5349229f2a4e45362aa54dddad650e87a391c45
   useEffect(() => {
     const updateRes = () => {
       if (window.innerWidth >= 768) {
@@ -79,13 +72,9 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
         }
 
         const result = await response.json();
-<<<<<<< HEAD
 
         setEventType(eventData.type);
-
-=======
-        setEventType(eventData.type);
->>>>>>> d5349229f2a4e45362aa54dddad650e87a391c45
+        
         if (eventData.type == "type1"){
           setEData(result.data.type1);
         }
@@ -241,11 +230,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
       </Modal>
     )
   }
-<<<<<<< HEAD
   else if(eventType == "type1" && res == 1 && winType == 1){
-=======
-  else if(eventType == "type1" && res == 1){
->>>>>>> d5349229f2a4e45362aa54dddad650e87a391c45
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
       <div className="custom-modal" style={{zIndex: "1000"}}>
@@ -339,7 +324,6 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
       </Modal>
     )
   }
-<<<<<<< HEAD
   else if(eventType == "type1" && res == 1 && winType == 2){
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
@@ -434,8 +418,6 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
       </Modal>
     )
   }
-=======
->>>>>>> d5349229f2a4e45362aa54dddad650e87a391c45
   else if (eventType == "type2" && res == 2){
     return(
       <Modal
@@ -583,11 +565,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     </Modal>
     )
   }
-<<<<<<< HEAD
   else if (eventType == "type2" && res == 1 && winType == 1){
-=======
-  else if (eventType == "type2" && res == 1){
->>>>>>> d5349229f2a4e45362aa54dddad650e87a391c45
     return(
       <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
       <div className="custom-modal" style={{zIndex: "1000"}}>
