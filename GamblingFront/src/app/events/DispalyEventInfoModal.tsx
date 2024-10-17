@@ -29,7 +29,10 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   let ratio;
   let bonuslist;
   let unit;
-  
+
+  const eventInfo = JSON.parse(eventData.info);
+  console.log("wintype",eventInfo,eventInfo.winType);
+
   useEffect(() => {
     const updateRes = () => {
       if (window.innerWidth >= 768) {

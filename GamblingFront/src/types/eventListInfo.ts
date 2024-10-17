@@ -10,5 +10,6 @@ export interface EventsInfo {
     type: string; 
     bonusList: number;
     result: string;
+    info: string;
   }
   
