@@ -28,7 +28,6 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
   const EventClick = (info: EventsInfo) => {
     setSelectedRow(info);
     openModal();
-    // alert("Show each events");
   };
   const style = siteInfo.themeMap.style ? siteInfo.themeMap.style : "";
   const currencyDir = siteInfo.themeMap.currency ? siteInfo.themeMap.currency : "default";
@@ -52,12 +51,9 @@ const EventList: React.FC<TableAllProps> = ({ tableData }) => {
         else {
           status = "Fake"
         }
-        
+       
         return (
           <div key={index} onClick={() => EventClick(info)} className="box-border my-5 p-4 rounded-md shadow-2xl cursor-pointer bg-black">
-            {/* <div className="text-sm">
-              {status} Event
-            </div> */}
             <div className="text-lg p-1 font-bold">
               {info.title}
             </div>

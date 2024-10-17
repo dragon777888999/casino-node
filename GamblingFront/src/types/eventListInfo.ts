@@ -8,7 +8,7 @@ export interface EventsInfo {
     startTime: Date;
     endTime: Date; 
     type: string; 
-    bonusList: number;
     result: string;
+    info: string;
   }
   
