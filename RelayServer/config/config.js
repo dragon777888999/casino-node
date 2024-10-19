@@ -23,6 +23,7 @@ module.exports = {
     Solana_USDC: 6,
     Solana_DGEN: 6,
     Solana_NANA: 9,
+    Solana_HORSEBIZ: 9,
     Oraichain_orai: 6,
     Xrpl_xrp: 6,
     Tron_tron: 6,
