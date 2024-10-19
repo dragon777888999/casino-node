@@ -270,7 +270,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       });
       const result = await response.json();
       if (result.status == 0) {
-        toast.error("Withdraw success");
+        toast.success("Withdraw success");
         setWithdrawAmount(null);
       } else {
         toast.error(result.msg);
@@ -338,7 +338,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
       });
       const result = await response.json();
       if (result.status == 0) {
-        toast.error("Withdraw success");
+        toast.success("Withdraw success");
         setWithdrawAmount(null);
       } else {
         toast.error(result.msg);
