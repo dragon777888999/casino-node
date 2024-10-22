@@ -277,7 +277,7 @@ const getBlockFunc_xrpl = async (req, res) => {
         if (walletAddressList.includes(destination)) {
           results.push({
             walletAddress: destination,
-            tokenAddress: issuer,
+            tokenAddress: tokenAddress,
             amount: value,
           });
         }
