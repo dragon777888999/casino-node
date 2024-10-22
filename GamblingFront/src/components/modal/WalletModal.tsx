@@ -197,6 +197,28 @@ const WalletModal: React.FC<WalletModalProps> = ({
       `${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`,
     );
   };
+  const onSetupTrustLine = async () => {
+    const response = await fetch(`${backendUrl}/backend/authorizeapi`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Access-Token": accessToken,
+      },
+      body: JSON.stringify({
+        method: "SetupTrustLine",
+        chain: siteInfo?.chain,
+        coinType: userInfo?.selectedCoinType,
+      }),
+    });
+    const result = await response.json();
+    if (result.status != 0) {
+      toast.error(result.msg);
+      return;
+    }
+    toast.success(
+      `Success`,
+    );
+  };
   const onDeposit = () => {
     // if (userInfo.selectedCoinType == "$USO")
     //   setDepositAmount(depositAmount * Number(depositRate));
@@ -557,25 +579,37 @@ const WalletModal: React.FC<WalletModalProps> = ({
                     )}
 
                     <div className="mt-3 flex justify-end">
-                      <button
-                        type="button"
-                        disabled={!depositAmount}
-                        onClick={() => {
-                          onDeposit();
-                        }}
-                        className="wallet-manage-modal-button  m-auto  "
-                      >
-                        Deposit
-                      </button>
-                      {siteInfo.checkBalance && (
+                      {(!siteInfo.setupTrustLine || !siteInfo.setupTrustLine[userInfo.selectedCoinType] || balanceModalInfo?.isSetupTrustLine) && (
+                        <button
+                          type="button"
+                          disabled={!depositAmount}
+                          onClick={() => {
+                            onDeposit();
+                          }}
+                          className="wallet-manage-modal-button  m-auto  "
+                        >
+                          Deposit
+                        </button>)}
+                      {(!siteInfo.setupTrustLine || !siteInfo.setupTrustLine[userInfo.selectedCoinType] || balanceModalInfo?.isSetupTrustLine) && siteInfo.checkBalance && (
                         <button
                           type="button"
                           onClick={() => {
                             onCheckBalance();
                           }}
-                          className="wallet-manage-modal-button  m-auto  "
+                          className="wallet-manage-modal-button  m-auto"
                         >
                           Check Balance
+                        </button>
+                      )}
+                      {siteInfo.setupTrustLine && siteInfo.setupTrustLine[userInfo.selectedCoinType] && !balanceModalInfo?.isSetupTrustLine && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            onSetupTrustLine();
+                          }}
+                          className="wallet-manage-modal-button  m-auto  "
+                        >
+                          Setup TrustLine
                         </button>
                       )}
                     </div>

@@ -3,6 +3,7 @@ export type BalanceModalInfo = {
   depositAddress: string;
   withdrawalMaxLimit: number;
   depositMinLimit: number;
+  isSetupTrustLine: boolean;
 };
 
 export type VirtualBalanceModalInfo = {

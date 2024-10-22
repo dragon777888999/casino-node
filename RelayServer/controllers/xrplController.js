@@ -7,6 +7,12 @@ exports.entry = async (req, res) => {
   try {
     const method = data.method;
     switch (method) {
+      case "SetupTrustLine":
+        await setupTrustLine_xrpl(req, res);
+        break;
+      case "GetUserTransaction":
+        await getUserTransaction_xrpl(req, res);
+        break;
       case "GetBlock":
         await getBlockFunc_xrpl(req, res);
         break;
@@ -33,30 +39,174 @@ exports.entry = async (req, res) => {
   }
 };
 
-const getBalance_xrpl = async (req, res) => {
-  const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
+getUserTransaction_xrpl = async (req, res) => {
   const data = req.body;
-  const chain="Xrpl";
+  const walletAddress = data.walletAddress;
+  const beforeSignature = data.beforeSignature ? Number(data.beforeSignature) : 0;
+  const coinType = data.coinType;
+  const tokenAddress = data.tokenAddress;
+  const split = tokenAddress.split("_");
+  const tokenCurrency = split[0];
+  var results = [];
+  var lastSignature = null;
+  const chain = "Xrpl";
+  let tokenIssuer = "";
+  if (split.length > 1)
+    tokenIssuer = split[1];
+
+  const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
+  await client.connect();
+  try {
+    // Get the transaction history for the account
+    let response = {};
+    if (beforeSignature == 0) {
+      response = await client.request({
+        "command": "account_tx",
+        "account": walletAddress,
+
+        "limit": 10 // Limit the number of transactions to retrieve
+      });
+    }
+    else {
+      response = await client.request({
+        "command": "account_tx",
+        "account": walletAddress,
+        "ledger_index_min": beforeSignature + 1,
+        "limit": 10 // Limit the number of transactions to retrieve
+      });
+    }
+
+    for (const tx of response.result.transactions) {
+      const txHash = tx.tx_json.TxnSignature;
+      if (!lastSignature)
+        lastSignature = tx.ledger_index;
+      if (tx.ledger_index == beforeSignature) {
+        break;
+      }
+      if (
+        tx.tx_json.TransactionType === "Payment" &&
+        tx.meta.TransactionResult === "tesSUCCESS"
+      ) {
+        console.log(tx);
+        const amount = tx.tx_json.DeliverMax;
+        if (tokenAddress!="" && (amount.currency != tokenCurrency || amount.issuer != tokenIssuer))
+          continue;
+
+        const value = amount.value || amount / 10 ** config.digits[`${chain}_${coinType}`]; // Convert drops to XRP if necessary
+        results.push({ walletAddress: data.walletAddress, tokenAddress: tokenAddress, amount: value, txHash: txHash });
+
+      }
+    }
+
+    res.send({ status: 0, lastSignature, data: results });
+  } catch (error) {
+    console.error("Error fetching ledger data:", error);
+    res.send({ status: 1 });
+  } finally {
+    await client.disconnect();
+  }
+};
+
+const setupTrustLine_xrpl = async (req, res) => {
+  const data = req.body;
+  const chain = "Xrpl";
+  const tokenAddress = data.tokenAddress; //issuerAddress_tokenCurrency
+  const split = tokenAddress.split("_");
+  const tokenCurrency = split[0];
+  let issuerAddress = "";
+  if (split.length > 1)
+    issuerAddress = split[1];
+
+  const maxAmount = data.maxAmount; // Issuer address
+
+  // Define the account credentials (test account or mainnet)
+  const account = {
+    address: data.address, // XRP account address
+    secret: data.mnemonic // Secret key
+  };
+
+  const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
+
   try {
     // Connect to the network
     await client.connect();
 
-    // Prepare the request
-    const accountInfo = await client.request({
-      command: 'account_info',
-      account: data.walletAddress,
-      ledger_index: 'validated'
+    // Prepare the TrustSet transaction
+    const trustSetTransaction = {
+      "TransactionType": "TrustSet",
+      "Account": account.address,
+      "LimitAmount": {
+        "currency": tokenCurrency,
+        "issuer": issuerAddress,
+        "value": "999966399" // Max amount of the token to trust
+      }
+    };
+
+    // Sign the transaction
+    const signedTx = await client.submitAndWait(trustSetTransaction, {
+      wallet: xrpl.Wallet.fromSeed(account.secret)
     });
 
-    // Extract the balance (in drops, where 1 XRP = 1,000,000 drops)
-    const balanceInDrops = accountInfo.result.account_data.Balance;
-    const balanceInXRP = xrpl.dropsToXrp(balanceInDrops);
+    console.log(`Transaction result: ${signedTx.result.meta.TransactionResult}`);
+    console.log(`Transaction hash: ${signedTx.result.tx_json.hash}`);
 
-    //console.log(`Balance for account ${data.address}: ${balanceInXRP} XRP`);
+    // Disconnect from the XRP Ledger
+    await client.disconnect();
+    res.send({ status: 0 });
+  } catch (error) {
+    console.error('Error fetching account balance:', error);
+    res.send({ status: 1 });
+  }
+}
+const getBalance_xrpl = async (req, res) => {
+  const client = new xrpl.Client("wss://s1.ripple.com"); // Public XRPL server
+  const data = req.body;
+  const chain = "Xrpl";
+  const coinType = data.coinType;
+  const tokenAddress = data.tokenAddress; //issuerAddress_tokenCurrency
+  try {
+    let balances = {};
+    // Connect to the network
+    await client.connect();
+    if (!tokenAddress) {
+      // Prepare the request
+      const accountInfo = await client.request({
+        command: 'account_info',
+        account: data.walletAddress,
+        ledger_index: 'validated'
+      });
 
+      // Extract the balance (in drops, where 1 XRP = 1,000,000 drops)
+      const balanceInDrops = accountInfo.result.account_data.Balance;
+      const balanceInXRP = xrpl.dropsToXrp(balanceInDrops);
+      balances = { [config.nativeToken[chain]]: balanceInXRP };
+      //console.log(`Balance for account ${data.address}: ${balanceInXRP} XRP`);
+    }
+    else {
+      // Query the account's trustlines (which include token balances)
+      const response = await client.request({
+        command: "account_lines",
+        account: data.walletAddress
+      });
+
+      // Find the specific trustline for the given token
+      const trustlines = response.result.lines;
+      const split = tokenAddress.split("_");
+      const tokenCurrency = split[0];
+      let tokenIssuer = "";
+      if (split.length > 1)
+        tokenIssuer = split[1];
+      const tokenTrustline = trustlines.find(line => line.currency === tokenCurrency && line.account === tokenIssuer);
+
+      // if (tokenTrustline) {
+      //   console.log(`Token balance for ${coinType}: ${tokenTrustline.balance}`);
+      // } else {
+      //   console.log(`No trustline found for ${coinType} from issuer ${issuerAddress}`);
+      // }
+      balances = { [data.coinType]: tokenTrustline.balance };
+    }
     // Disconnect from the client
     await client.disconnect();
-    let balances = {[config.nativeToken[chain]]:balanceInXRP};
     res.send({ status: 0, balances: balances });
   } catch (error) {
     console.error('Error fetching account balance:', error);
@@ -161,8 +311,8 @@ const sendCoinFunc_xrpl = async (req, res) => {
     // Sending XRP
     amount = Math.floor(
       parseFloat(data.amount) *
-        10 ** config.digits[`${data.chain}_${data.coinType}`] - 
-        fees
+      10 ** config.digits[`${data.chain}_${data.coinType}`] -
+      fees
     ).toString();
   }
   try {

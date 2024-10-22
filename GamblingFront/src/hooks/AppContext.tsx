@@ -37,6 +37,7 @@ export interface SiteInfo {
   mark: string;
   copyrightText: string;
   checkBalance: boolean;
+  setupTrustLine: { [key: string]: boolean };
   walletModalMessageMap: { [key: string]: string };
   themeCode: string;
   title: string;
@@ -123,6 +124,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     themeMap: {}, // empty object for token addresses
     mark: "", // empty string for mark
     copyrightText:"",
+    setupTrustLine: {}, // empty string for wallet modal message
     walletModalMessageMap: {}, // empty string for wallet modal message
     themeCode: "", // empty string for theme code
     title: "",
