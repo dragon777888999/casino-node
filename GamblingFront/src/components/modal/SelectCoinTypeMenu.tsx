@@ -45,6 +45,7 @@ const SelectCoinTypeMenu: React.FC<DropdownProps> = ({
 
   return (
     <div ref={dropdownRef} className="dropdown-container">
+      <div className="gap-2  rounded-md px-3 py-1 text-center font-medium">Choose ⤵️</div>
       <div
         className="dropdown-button  gap-2  rounded-md border px-3 py-1 text-center font-medium"
         onClick={handleToggle}
