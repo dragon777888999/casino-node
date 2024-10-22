@@ -305,8 +305,8 @@ const sendCoinFunc_xrpl = async (req, res) => {
     const s = data.tokenAddress.split("_");
     // Sending token (IOU)
     amount = {
-      currency: s[1], // The token's currency code, e.g., "USD", "EUR", "TOKEN"
-      issuer: s[0], // The issuer's (token creator's) XRP address
+      currency: s[0], // The token's currency code, e.g., "USD", "EUR", "TOKEN"
+      issuer: s[1], // The issuer's (token creator's) XRP address
       value: data.amount.toString(), // The amount of the token to send
     };
   } else {
