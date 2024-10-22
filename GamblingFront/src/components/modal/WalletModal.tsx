@@ -173,6 +173,11 @@ const WalletModal: React.FC<WalletModalProps> = ({
       toast.success(
         `${userInfo.selectedCoinType} ${result.depositAmount} has been credited to your account.`,
       );
+
+      let r=balanceModalInfo;
+      if (r) 
+        r.isSetupTrustLine = true;
+      setBalanceModalInfo(r);
     }
   };
   const onCheckBalance = async () => {

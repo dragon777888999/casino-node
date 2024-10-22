@@ -20,25 +20,56 @@ const useXrplFunction = () => {
     setQrcode: (qr_png: any) => void,
     setJumpLink: (link: any) => void
   ) => {
-    console.log(walletType, depositAddress, depositAmount);
+    const tokenAddress = siteInfo?.tokenAddressMap[userInfo.selectedCoinType];
+    console.log(walletType, depositAddress, tokenAddress, depositAmount);
+    const split = tokenAddress.split("_");
+    const tokenCurrency = split[0];
+    let tokenIssuer = null;
+    if (split.length > 1)
+      tokenIssuer = split[1];
+
     try {
       if (walletType == WalletType.Crossmark) {
-        const response = sdk.sync.signAndSubmit({
-          TransactionType: "Payment",
-          Destination: depositAddress,
-          Amount: (
-            depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
-          ).toString(), // XRP in drops
-        });
+        let payment = {};
+        if (tokenCurrency && tokenIssuer)
+          payment = {
+            TransactionType: "Payment",
+            Destination: depositAddress,
+            Amount: {
+              currency: tokenCurrency, // Replace with the token symbol
+              issuer: tokenIssuer, // Replace with the actual issuer's XRP address
+              value: depositAmount.toString(), // Convert the amount to a string
+            }
+          };
+        else
+          payment = {
+            TransactionType: "Payment",
+            Destination: depositAddress,
+            Amount: (
+              depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+            ).toString(), // XRP in drops
+          };
+        sdk.sync.signAndSubmit(payment);
         setStatus(0);
         resultCallback(0);
       } else if (walletType == WalletType.Gem) {
-        const payment = {
-          amount: (
-            depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
-          ).toString(),
-          destination: depositAddress,
-        };
+        let payment = null;
+        if (tokenCurrency && tokenIssuer)
+          payment = {
+            amount: {
+              currency: tokenCurrency, // Replace with the token symbol
+              issuer: tokenIssuer, // Replace with the actual issuer's XRP address
+              value: depositAmount.toString(), // Convert the amount to a string
+            },
+            destination: depositAddress, // Replace with the recipient's address
+          };
+        else
+          payment = {
+            amount: (
+              depositAmount * 10 ** siteInfo?.digitsMap[userInfo?.selectedCoinType]
+            ).toString(),
+            destination: depositAddress,
+          };
 
         sendPayment(payment)
           .then((trHash) => {
@@ -53,9 +84,10 @@ const useXrplFunction = () => {
             resultCallback(1);
           });
       } else if (walletType == WalletType.Xumm) {
-        const payload = await fetch(
-          `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`,
-        );
+        let query = `/api/auth/xumm/sendtransaction?depositAddress=${depositAddress}&depositAmount=${depositAmount}`;
+        if (tokenCurrency && tokenIssuer)
+          query += `&currency=${tokenCurrency}&issuer=${tokenIssuer}`;
+        const payload = await fetch(query);
         const data = await payload.json();
 
         setQrcode(data.payload.refs.qr_png);

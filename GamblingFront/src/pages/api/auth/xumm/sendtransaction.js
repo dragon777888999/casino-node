@@ -6,13 +6,29 @@ export default async function handler(req, res) {
             process.env.XUMM_KEY,
             process.env.XUMM_KEY_SECRET
         );
-        const trans = {
-            txjson: {
-                TransactionType: "Payment",
-                Amount: (req.query.depositAmount * (10 ** 6)).toString(),
-                Destination: req.query.depositAddress,
-            },
-        };
+        let trans = {};
+        if (req.query.issuer && req.query.currency) {
+            trans = {
+                txjson: {
+                    TransactionType: "Payment",
+                    Amount: {
+                        currency: req.query.currency, // The token symbol
+                        issuer: req.query.issuer, // The issuer address of ARTIE token
+                        value: req.query.depositAmount.toString(), // The amount of ARTIE tokens to send
+                    },
+                    Destination: req.query.depositAddress,
+                },
+            };
+        }
+        else {
+            trans = {
+                txjson: {
+                    TransactionType: "Payment",
+                    Amount: (req.query.depositAmount * (10 ** 6)).toString(),
+                    Destination: req.query.depositAddress,
+                },
+            };
+        }
         const payload = await xumm.payload.create(trans, true);
         res.status(200).json({ payload: payload });
     } catch (error) {
