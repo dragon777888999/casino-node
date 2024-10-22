@@ -21,12 +21,15 @@ const useXrplFunction = () => {
     setJumpLink: (link: any) => void
   ) => {
     const tokenAddress = siteInfo?.tokenAddressMap[userInfo.selectedCoinType];
-    console.log(walletType, depositAddress, tokenAddress, depositAmount);
-    const split = tokenAddress.split("_");
-    const tokenCurrency = split[0];
+    //console.log(walletType, depositAddress, tokenAddress, depositAmount);
+    let tokenCurrency=null;
     let tokenIssuer = null;
-    if (split.length > 1)
-      tokenIssuer = split[1];
+    if (tokenAddress){
+      const split = tokenAddress.split("_");
+      tokenCurrency = split[0];
+      if (split.length > 1)
+        tokenIssuer = split[1]; 
+    }
 
     try {
       if (walletType == WalletType.Crossmark) {
