@@ -205,7 +205,7 @@ const WalletModal: React.FC<WalletModalProps> = ({
         "X-Access-Token": accessToken,
       },
       body: JSON.stringify({
-        method: "SetupTrustLine",
+        method: "SetupTrustLineOnXrp",
         chain: siteInfo?.chain,
         coinType: userInfo?.selectedCoinType,
       }),
