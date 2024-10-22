@@ -266,10 +266,12 @@ const getBlockFunc_xrpl = async (req, res) => {
       ) {
         const destination = tx.tx_json.Destination;
         const amount = tx.tx_json.DeliverMax;
-        const issuer = amount.issuer || "";
-        if (!tokenAddress2CoinType || !tokenAddress2CoinType.hasOwnProperty(issuer))
+        let tokenAddress = "";
+        if (amount.issuer)
+          tokenAddress = `${amount.currency}_${amount.issuer}`;
+        if (!tokenAddress2CoinType || !tokenAddress2CoinType.hasOwnProperty(tokenAddress))
           continue;
-        const coinType = tokenAddress2CoinType[issuer];
+        const coinType = tokenAddress2CoinType[tokenAddress];
         const value = amount.value || amount / 10 ** config.digits[`${chain}_${coinType}`]; // Convert drops to XRP if necessary
 
         if (walletAddressList.includes(destination)) {
