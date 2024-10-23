@@ -163,13 +163,13 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">             
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
                 }
                 else{
-                  bonuslist = "NO";
+                  bonuslist = "";
                   unit = "";
                 }
                                
@@ -274,7 +274,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
@@ -368,7 +368,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
@@ -508,7 +508,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
              
               
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
@@ -612,7 +612,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
@@ -709,7 +709,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
             
             <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
               { eData.map((event, index) =>{
-                ratio = event.payoutAmount /event.betAmount;
+                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
                 if (event.bonus){
                   bonuslist = event.bonus.value;
                   unit = event.bonus.currencyCode;
@@ -760,9 +760,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     )
   }
   else {
-    return(
-      <div>NO Data Coming</div>
-    )
+    return null;
   }
   
 };
