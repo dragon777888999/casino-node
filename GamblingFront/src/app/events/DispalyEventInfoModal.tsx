@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import { useAppContext } from "../../hooks/AppContext";
 import { EventsInfo } from "@/types/eventListInfo";
-import { EventInfo} from "@/types/eventInfo";
+import { EventInfo } from "@/types/eventInfo";
 import { backendUrl } from "@/anchor/global";
 import { env } from "process";
 
@@ -17,14 +17,14 @@ interface DispalyEventInfoModalProps {
   onRequestClose: () => void;
 }
 
-const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal, eventData, onRequestClose}) => {
+const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({ showModal, eventData, onRequestClose }) => {
   const { accessToken, loginStep } = useAppContext();
   const [eData, setEData] = useState<EventInfo[]>([]);
   const [eventType, setEventType] = useState<string>("");
 
   const [res, setRes] = useState<number>(1); // Default to mobile case
 
-  
+
   let i = 1;
   // var ratio:number[];
   let ratio;
@@ -34,7 +34,9 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
   const win = JSON.parse(eventData.info);
   const winType = win.winType;
 
-  
+  const getStringFromNumber = (input : number) =>{
+      return input > 0 ? input : "";
+  }
   useEffect(() => {
     const updateRes = () => {
       if (window.innerWidth >= 768) {
@@ -50,7 +52,7 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     // Add event listener to track window resize
     window.addEventListener('resize', updateRes);
 
-    
+
     const fetchEventData = async () => {
       if (loginStep < 3)
         return;
@@ -74,11 +76,11 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
         const result = await response.json();
 
         setEventType(eventData.type);
-        
-        if (eventData.type == "type1"){
+
+        if (eventData.type == "type1") {
           setEData(result.data.type1);
         }
-        else if (eventData.type == "type2"){
+        else if (eventData.type == "type2") {
           setEData(result.data.type2);
         }
         else {
@@ -92,677 +94,670 @@ const DispalyEventInfoModal: React.FC<DispalyEventInfoModalProps> = ({showModal,
     fetchEventData(); // Fetch for original games
   }, [eventData]);
 
-  
+
   if (!showModal) return null;
 
-  if (eventType == "type1" && res == 2){
-    return(
-      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}, }}>
-      <div className="custom-modal" style={{zIndex: "1000"}}>
-        <div className="wallet-adapter-modal-container">
-          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b",}}>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <p>Rank</p>
-                </div>
-                
-                <div className="float-left ml-5 w-30 text-center">
-                  <h3>
-                    Name
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 text-center">
-                  <h3>
-                    VendorName
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 w-40 text-center">
-                  <h3>
-                    GameName
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bet
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Payout
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Ratio
-                  </h3>
-                </div>
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
-              </div>
-            </div>
-  
-            
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">             
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "";
-                  unit = "";
-                }
-                               
-                return (                  
-                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-30 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0,10)}
-                      </p>
-                    </div>
-                    <div className="ml-5 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {JSON.parse(event.vendorName).en}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-40 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {JSON.parse(event.gameName).en}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.betAmount}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.payoutAmount}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {ratio.toFixed(2)}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>          
+  if (eventType == "type1" && res == 2) {
+    return (
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{ overlay: { backgroundColor: "#141a2b", zIndex: 1000 }, }}>
+        <div className="custom-modal" style={{ zIndex: "1000" }}>
+          <div className="wallet-adapter-modal-container">
+            <div className="custom-modal-wrapper" style={{ padding: "25px", backgroundColor: "#141a2b", }}>
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" style={{ marginBottom: "10px", width: "100%" }}>
+                <div className="row">
+                  <div className="float-left ml-1 w-10 text-center">
+                    <p>Rank</p>
                   </div>
-                  
-                )
-                
-              })}   
-              
+
+                  <div className="float-left ml-5 w-30 text-center">
+                    <h3>
+                      Name
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 text-center">
+                    <h3>
+                      VendorName
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-40 text-center">
+                    <h3>
+                      GameName
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bet
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Payout
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Ratio
+                    </h3>
+                  </div>
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+
+                  <div className="ml-10">
+                    <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => { onRequestClose(); }}>
+                      <svg width={14} height={14}>
+                        <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-10 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-30 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+                      <div className="ml-5 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {JSON.parse(event.vendorName).en}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-40 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {JSON.parse(event.gameName).en}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.betAmount)}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.payoutAmount)}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {ratio.toFixed(2)}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
+                    </div>
+
+                  )
+
+                })}
+
+              </div>
+
             </div>
-           
           </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
         </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
       </Modal>
     )
   }
-  else if(eventType == "type1" && res == 1 && winType == 1){
-    return(
-      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
-      <div className="custom-modal" style={{zIndex: "1000"}}>
-        <div className="wallet-adapter-modal-container">
-          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <h3>Rank</h3>
-                </div>
-                
-                <div className="float-left ml-5 w-25 text-center">
-                  <h3>
-                    Name
-                  </h3>
-                </div>
+  else if (eventType == "type1" && res == 1 && winType == 1) {
+    return (
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{ overlay: { backgroundColor: "#141a2b", zIndex: 1000 } }}>
+        <div className="custom-modal" style={{ zIndex: "1000" }}>
+          <div className="wallet-adapter-modal-container">
+            <div className="custom-modal-wrapper" style={{ padding: "25px", backgroundColor: "#141a2b" }}>
 
-                <div className="float-left ml-1 w-20 text-center">
-                  <h3>
-                    Payout
-                  </h3>
-                </div>
-                
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
-              </div>
-            </div>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "NO";
-                  unit = "";
-                }
-                               
-                return (                  
-                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
-                   
-                    <div className="ml-5 w-25 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0, 10)}
-                      </p>
-                    </div>
-
-                    <div className="ml-1 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.payoutAmount}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>          
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px" }}>
+                <div className="row">
+                  <div className="float-left ml-1 w-10 text-center">
+                    <h3>Rank</h3>
                   </div>
-                  
-                )
-                
-              })}   
-              
+
+                  <div className="float-left ml-5 w-25 text-center">
+                    <h3>
+                      Name
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-1 w-20 text-center">
+                    <h3>
+                      Payout
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+
+                  <div className="ml-10">
+                    <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => { onRequestClose(); }}>
+                      <svg width={14} height={14}>
+                        <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "NO";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-10 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-25 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+
+                      <div className="ml-1 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.payoutAmount)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
+                    </div>
+
+                  )
+
+                })}
+
+              </div>
+
             </div>
-           
           </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
         </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
       </Modal>
     )
   }
-  else if(eventType == "type1" && res == 1 && winType == 2){
-    return(
-      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
-      <div className="custom-modal" style={{zIndex: "1000"}}>
-        <div className="wallet-adapter-modal-container">
-          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <h3>Rank</h3>
-                </div>
-                
-                <div className="float-left ml-5 w-25 text-center">
-                  <h3>
-                    Name
-                  </h3>
-                </div>
+  else if (eventType == "type1" && res == 1 && winType == 2) {
+    return (
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{ overlay: { backgroundColor: "#141a2b", zIndex: 1000 } }}>
+        <div className="custom-modal" style={{ zIndex: "1000" }}>
+          <div className="wallet-adapter-modal-container">
+            <div className="custom-modal-wrapper" style={{ padding: "25px", backgroundColor: "#141a2b" }}>
 
-                <div className="float-left ml-1 w-20 text-center">
-                  <h3>
-                    Ratio
-                  </h3>
-                </div>
-                
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
-              </div>
-            </div>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "NO";
-                  unit = "";
-                }
-                               
-                return (                  
-                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
-                   
-                    <div className="ml-5 w-25 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0, 10)}
-                      </p>
-                    </div>
-
-                    <div className="ml-1 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {ratio.toFixed(2)}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>          
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px" }}>
+                <div className="row">
+                  <div className="float-left ml-1 w-10 text-center">
+                    <h3>Rank</h3>
                   </div>
-                  
-                )
-                
-              })}   
-              
+
+                  <div className="float-left ml-5 w-25 text-center">
+                    <h3>
+                      Name
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-1 w-20 text-center">
+                    <h3>
+                      Ratio
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+
+                  <div className="ml-10">
+                    <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => { onRequestClose(); }}>
+                      <svg width={14} height={14}>
+                        <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "NO";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-10 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-25 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+
+                      <div className="ml-1 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {ratio.toFixed(2)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
+                    </div>
+
+                  )
+
+                })}
+
+              </div>
+
             </div>
-           
           </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
         </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
       </Modal>
     )
   }
-  else if (eventType == "type2" && res == 2){
-    return(
+  else if (eventType == "type2" && res == 2) {
+    return (
       <Modal
-      id="modal"
-      className="modal"
-      isOpen={showModal}
-      onRequestClose={onRequestClose}
-      contentLabel="Example Modal"
-      ariaHideApp={false}
-      style={{
-        overlay: {
-          backgroundColor: "#141a2b",
-          zIndex: 1000,
-        },
-      }}
-    >
-      <div
-        className="custom-modal"
+        id="modal"
+        className="modal"
+        isOpen={showModal}
+        onRequestClose={onRequestClose}
+        contentLabel="Example Modal"
+        ariaHideApp={false}
         style={{
-          zIndex: "1000",
-  
+          overlay: {
+            backgroundColor: "#141a2b",
+            zIndex: 1000,
+          },
         }}
       >
-        <div className="wallet-adapter-modal-container">
-          <div
-            className="custom-modal-wrapper"
-            style={{
-              padding: "25px",
-              backgroundColor: "#141a2b",
-            }}
-          >
-  
+        <div
+          className="custom-modal"
+          style={{
+            zIndex: "1000",
+
+          }}
+        >
+          <div className="wallet-adapter-modal-container">
             <div
-              className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
-              style={{ marginBottom: "10px", width: "100%" }}
+              className="custom-modal-wrapper"
+              style={{
+                padding: "25px",
+                backgroundColor: "#141a2b",
+              }}
             >
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <h3>
-                    Rank
-                  </h3>
-                </div>
-                <div className="float-left ml-5 w-30 text-center">
-                  <h3>
-                    User
-                  </h3>
-                </div>
-               
-  
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bet
-                  </h3>
-                </div>
-  
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Payout
-                  </h3>
-                </div>
-               
-                
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button
-                    className="wallet-adapter-modal-button-close"
-                    style={{ backgroundColor: "#181f33" }}
-                    onClick={() => {
-                      onRequestClose();
-                    }}
-                  >
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
-              </div>
-            </div>
-  
-            
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">
-             
-              
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "NO";
-                  unit = "";
-                }
-  
-                return (
-                  <div  key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
 
-                    <div className="ml-5 w-30 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0, 10)}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.betAmount}
-                      </p>
-                    </div>
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.payoutAmount}
-                      </p>
-                    </div>
-
-                   
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>
-                    
+              <div
+                className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4"
+                style={{ marginBottom: "10px", width: "100%" }}
+              >
+                <div className="row">
+                  <div className="float-left ml-1 w-10 text-center">
+                    <h3>
+                      Rank
+                    </h3>
                   </div>
-                )
-                
-              })}   
-              
-            </div>
-           
-          </div>
-        </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
-    </Modal>
-    )
-  }
-  else if (eventType == "type2" && res == 1 && winType == 1){
-    return(
-      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
-      <div className="custom-modal" style={{zIndex: "1000"}}>
-        <div className="wallet-adapter-modal-container">
-          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <h3>Rank</h3>
-                </div>
-                          
-  
-                <div className="float-left ml-5 w-25 text-center">
-                  <h3>
-                    User
-                  </h3>
-                </div>
-
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bet
-                  </h3>
-                </div>
-  
-                
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
-              </div>
-            </div>
-  
-            
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "NO";
-                  unit = "";
-                }
-                               
-                return (                  
-                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
-                   
-                    <div className="ml-5 w-25 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0, 10)}
-                      </p>
-                    </div>
-
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.betAmount}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>          
+                  <div className="float-left ml-5 w-30 text-center">
+                    <h3>
+                      User
+                    </h3>
                   </div>
-                  
-                )
-                
-              })}   
-              
+
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bet
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Payout
+                    </h3>
+                  </div>
+
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+
+                  <div className="ml-10">
+                    <button
+                      className="wallet-adapter-modal-button-close"
+                      style={{ backgroundColor: "#181f33" }}
+                      onClick={() => {
+                        onRequestClose();
+                      }}
+                    >
+                      <svg width={14} height={14}>
+                        <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4">
+
+
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "NO";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-10 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-30 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.betAmount)}
+                        </p>
+                      </div>
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.payoutAmount)}
+                        </p>
+                      </div>
+
+
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
+
+                    </div>
+                  )
+
+                })}
+
+              </div>
+
             </div>
-           
           </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
         </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
       </Modal>
     )
-  } 
-  else if (eventType == "type2" && res == 1 && winType == 2){
-    return(
-      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{overlay: {backgroundColor: "#141a2b", zIndex: 1000}}}>
-      <div className="custom-modal" style={{zIndex: "1000"}}>
-        <div className="wallet-adapter-modal-container">
-          <div className="custom-modal-wrapper" style={{padding: "25px", backgroundColor: "#141a2b"}}>
-  
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px"}}>
-              <div className="row">
-                <div className="float-left ml-1 w-10 text-center">
-                  <h3>Rank</h3>
-                </div>
-                          
-  
-                <div className="float-left ml-5 w-25 text-center">
-                  <h3>
-                    User
-                  </h3>
-                </div>
-
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Payout
-                  </h3>
-                </div>
-  
-                
-                <div className="float-left ml-5 w-20 text-center">
-                  <h3>
-                    Bonus
-                  </h3>
-                </div>
-                
-                <div className="ml-10">
-                  <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => {onRequestClose();}}>
-                    <svg width={14} height={14}>
-                      <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
-                    </svg>
-                  </button>
-                </div>
-               
+  }
+  else if (eventType == "type2" && res == 1 && winType == 1) {
+    return (
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{ overlay: { backgroundColor: "#141a2b", zIndex: 1000 } }}>
+        <div className="custom-modal" style={{ zIndex: "1000" }}>
+          <div className="wallet-adapter-modal-container">
+            <div className="custom-modal-wrapper" style={{ padding: "25px", backgroundColor: "#141a2b" }}>
+              <div className="ml-10">
+                <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => { onRequestClose(); }}>
+                  <svg width={14} height={14}>
+                    <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                  </svg>
+                </button>
               </div>
-            </div>
-  
-            
-            <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">             
-              { eData.map((event, index) =>{
-                ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
-                if (event.bonus){
-                  bonuslist = event.bonus.value;
-                  unit = event.bonus.currencyCode;
-                }
-                else{
-                  bonuslist = "NO";
-                  unit = "";
-                }
-                               
-                return (                  
-                  <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
-                    <div className="ml-1 w-10 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {i++}
-                      </p>
-                    </div>
-                   
-                    <div className="ml-5 w-25 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.nickName.slice(0, 10)}
-                      </p>
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px" }}>
+                <div className="row">
+                  <div className="float-left ml-1 w-5 text-center">
+                    <h3>Rank</h3>
+                  </div>
+                  <div className="float-left ml-5 w-25 text-center">
+                    <h3>
+                      User
+                    </h3>
+                  </div>
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bet
+                    </h3>
+                  </div>
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "NO";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-5 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-25 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.betAmount)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {event.payoutAmount}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-5 w-20 text-center">
-                      <p className="truncate  text-white dark:text-white">
-                        {bonuslist} {unit}
-                      </p>
-                    </div>          
-                  </div>
-                  
-                )
-                
-              })}   
-              
+                  )
+
+                })}
+
+              </div>
+
             </div>
-           
           </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
         </div>
-        <div className="fixed inset-0 z-40 opacity-25"></div>
-      </div>
+      </Modal>
+    )
+  }
+  else if (eventType == "type2" && res == 1 && winType == 2) {
+    return (
+      <Modal id="modal" className="modal" isOpen={showModal} onRequestClose={onRequestClose} contentLabel="Example Modal" ariaHideApp={false} style={{ overlay: { backgroundColor: "#141a2b", zIndex: 1000 } }}>
+        <div className="custom-modal" style={{ zIndex: "1000" }}>
+          <div className="wallet-adapter-modal-container">
+            <div className="custom-modal-wrapper" style={{ padding: "25px", backgroundColor: "#141a2b" }}>
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4" w-100 style={{ marginBottom: "10px" }}>
+                <div className="row">
+                  <div className="float-left ml-1 w-10 text-center">
+                    <h3>Rank</h3>
+                  </div>
+
+
+                  <div className="float-left ml-5 w-25 text-center">
+                    <h3>
+                      User
+                    </h3>
+                  </div>
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Payout
+                    </h3>
+                  </div>
+
+
+                  <div className="float-left ml-5 w-20 text-center">
+                    <h3>
+                      Bonus
+                    </h3>
+                  </div>
+
+                  <div className="ml-10">
+                    <button className="wallet-adapter-modal-button-close" style={{ backgroundColor: "#181f33" }} onClick={() => { onRequestClose(); }}>
+                      <svg width={14} height={14}>
+                        <path d="M14 12.461 8.3 6.772l5.234-5.233L12.006 0 6.772 5.234 1.54 0 0 1.539l5.234 5.233L0 12.006l1.539 1.528L6.772 8.3l5.69 5.7L14 12.461z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div className="border-blueGray-200 items-start justify-between rounded-t pb-2 pt-4 w-90">
+                {eData.map((event, index) => {
+                  ratio = event.betAmount == 0 ? 0 : event.payoutAmount / event.betAmount;
+                  if (event.bonus) {
+                    bonuslist = event.bonus.value;
+                    unit = event.bonus.currencyCode;
+                  }
+                  else {
+                    bonuslist = "NO";
+                    unit = "";
+                  }
+
+                  return (
+                    <div key={index} className="flex flex-nowrap overflow-scroll no-scrollbar bg-black border-b-1 mb-2">
+                      <div className="ml-1 w-10 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {i++}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-25 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {event.nickName.slice(0, 10)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {getStringFromNumber(event.payoutAmount)}
+                        </p>
+                      </div>
+
+                      <div className="ml-5 w-20 text-center">
+                        <p className="truncate  text-white dark:text-white">
+                          {bonuslist} {unit}
+                        </p>
+                      </div>
+                    </div>
+
+                  )
+
+                })}
+
+              </div>
+
+            </div>
+          </div>
+          <div className="fixed inset-0 z-40 opacity-25"></div>
+        </div>
       </Modal>
     )
   }
   else {
     return null;
   }
-  
+
 };
 
 export default DispalyEventInfoModal;
